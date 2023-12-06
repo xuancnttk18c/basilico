@@ -1,0 +1,130 @@
+.primary-color {
+    color: $primary_color;
+}
+
+.secondary-color {
+    color: $secondary_color;
+}
+
+.heading-color {
+    color: $heading_color;
+}
+
+.heading-font-family {
+    font-family: $heading-font-family !important;
+}
+
+.body-font-family {
+    font-family: $body-font-family !important;
+}
+
+.position-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+}
+
+.basilico-border .elementor-widget-container {
+    position: relative;
+    z-index: 2;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -21px;
+        bottom: -21px;
+        left: 25px;
+        right: 25px;
+        border: 1px solid $primary_color;
+        z-index: -1;
+    }
+}
+
+.basilico-border-left .elementor-widget-container {
+    position: relative;
+    z-index: 2;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -27px;
+        bottom: 46px;
+        left: -28px;
+        right: 50px;
+        border: 1px solid $primary_color;
+        z-index: -1;
+    }
+}
+
+.basilico-border-right .elementor-widget-container {
+    position: relative;
+    z-index: 2;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -28px;
+        bottom: 47px;
+        left: 50px;
+        right: -28px;
+        border: 1px solid $primary_color;
+        z-index: -1;
+    }
+}
+
+.basilico-border-column .elementor-container {
+    position: relative;
+    z-index: 2;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -21px;
+        bottom: -21px;
+        left: 25px;
+        right: 25px;
+        border: 1px solid $primary_color;
+        z-index: -1;
+    }
+}
+
+.btn-location-btn-custom {
+    a {
+        span {
+            align-items: center;
+            &:after {
+                margin-left: 8px;
+                content: '\e9ab';
+                font-family: $pxli_font;
+                line-height: 1;
+                max-width: 0px;
+                overflow: hidden;
+                transition: all 300ms ease;
+            }
+        }
+        &:before {
+            content: none;
+        }
+        &:hover {
+            span::after {
+                max-width: 24px;
+            }
+        }
+    }
+}
+
+.pxl-text-editor-hyphens {
+    .pxl-text-editor-wrap {
+        .pxl-text-editor {
+            hyphens: auto;
+        }
+    }
+}
+
+.hide-below-1650px {
+    @media (max-width: 1649px) {
+        display: none;
+    }
+}
+
+.elementor-btn-fullwidth {
+    .btn, button, .button, input[type="submit"], input[type="button"], .added_to_cart, .btn {
+        width: 100%;
+    }
+}
