@@ -3,7 +3,6 @@
  * @package Basilico
  */
 get_header();
-echo 'hjkdhafjkhasjfhsafjk';
 
 $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'page', 'content_col'=> '8']); // type: blog, post, page, shop, product
 
