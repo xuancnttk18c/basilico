@@ -234,7 +234,7 @@ $slider-outer-space: 0;
             @include transform(translate(-50%, -50%));
             @include transition( all .3s linear);
             border-radius: 50%;
-            background-color: rgba($secondary_color_rgb, 0.3);;
+            background-color: $primary_color;
         }
         &:after {
             content: "";
@@ -245,10 +245,10 @@ $slider-outer-space: 0;
             left: 50%;
             @include transform(translate(-50%, -50%));
             @include transition( all .3s linear);
+            opacity: 1;
             border: 1px solid;
             border-color: rgba($secondary_color_rgb, 0.4);
             border-radius: 50%;
-            opacity: 0;
         }
         &:first-child{
             margin-left: 0;

@@ -53,10 +53,10 @@ select.orderby{
 			display: none;
 			padding-right: 18px;
 		}
-		a{
+		a {
 			font-size: 18px;
 			color: $heading_color;
-			i{
+			i {
 				line-height: 1;
 			}
 		}
@@ -67,7 +67,14 @@ select.orderby{
 			margin-right: 18px;
 		}
 	}
+}
 
+.pxl-luxury .pxl-view-layout {
+	li {
+		a {
+			color: $primary_color;
+		}
+	}
 }
 
 .number-result {
@@ -108,8 +115,13 @@ select.orderby{
 		bottom: 40px;
 		left: 40px;
 		right: 40px;
-		transform: rotateY(-90deg);
-		@include transition(transform 400ms linear);
+		transform-origin: top;
+		@include transform(scaleY(0));
+		@include transition(.35s cubic-bezier(.48,.57,.33,.89));
+		.pxl-icon {
+			opacity: 0;
+			@include transition(all 200ms ease-out 250ms);
+		}
 	}
 	&:hover {
 		.pxl-featured,
@@ -120,8 +132,19 @@ select.orderby{
 		.button.product_type_grouped,
 		.product_type_external,
 		.added_to_cart {
-			transform: rotateY(0deg);
+			@include transform(scaleY(1));
+			.pxl-icon {
+				opacity: 1;
+			}
 		}
+	}
+}
+.pxl-luxury .pxl-products-thumb {
+	.add_to_cart_button,
+	.button.product_type_grouped,
+	.product_type_external,
+	.added_to_cart {
+		background-color: $secondary_color;
 	}
 }
 .pxl-shop-item-wrap {
@@ -187,7 +210,7 @@ select.orderby{
 			right: 30px;
 			left: 30px;
 			top: 30px;
-			border: 1px solid rgba(var(--secondary-color-rgb), 0.4);
+			border: 1px solid rgba($primary_color_rgb, 0.4);
 			overflow: hidden;
 		}
 	}
@@ -226,6 +249,32 @@ select.orderby{
 		}
 	}
 }
+.pxl-luxury .pxl-shop-item-wrap {
+	.pxl-product-title {
+		font-size: 23px;
+		font-weight: 600;
+		margin-bottom: 10px;
+		a {
+			@include multiline-hover-underline($heading_color);
+		}
+	}
+	.price {
+		color: $primary_color;
+		del {
+			color: #786c55;
+		}
+	}
+	.add_to_cart_button,
+	.product_type_grouped,
+	.product_type_external {
+		+ .added_to_cart{
+			&:before {
+				background-color: transparent;
+				@include transform(scale(1));
+			}
+		}
+	}
+}
 
 .pxl-featured, .onsale{
 	position: absolute;
@@ -253,6 +302,12 @@ select.orderby{
 	top: 65px;
 }
 
+.pxl-luxury .pxl-featured,
+.pxl-luxury .onsale {
+	background-color: $primary_color;
+	color: $heading_color;
+}
+
 /* Content Grid view */
 .pxl-products-content {
 	padding: 20px 0 11px;
@@ -268,7 +323,7 @@ select.orderby{
 	.pxl-shop-woosmart-wrap {
 		overflow: hidden;
 		.woosw-btn {
-			transform: translateX(calc(100% - 17px));
+			transform: translateX(calc(100% - 18px));
 			@media (max-width: $xs_max) {
 				transform: none;
 			}
@@ -330,6 +385,15 @@ select.orderby{
 	&:hover {
 		.woosw-btn {
 			transform: translateX(0);
+		}
+	}
+}
+
+.pxl-luxury .pxl-shop-woosmart-wrap {
+	.woosw-btn {
+		&:before {
+			background-color: transparent;
+			@include transform(scale(1));
 		}
 	}
 }
@@ -459,6 +523,62 @@ select.orderby{
 			bottom: 0;
 			left: 15px;
 			right: 15px;
+		}
+	}
+}
+
+.pxl-luxury .products.shop-view-list {
+	.pxl-products-content-list-view {
+		.add_to_cart_button,
+		.button.product_type_grouped,
+		.product_type_external,
+		.added_to_cart {
+			overflow: visible;
+            background-color: transparent;
+            border: 1px solid $primary_color;
+            @include transition();
+			.pxl-icon {
+				@include transition();
+			}
+			&:before,
+			&:after {
+				content: '';
+			}
+			&:before {
+				background-color: $primary_color;
+			}
+			&:after {
+                left: auto;
+                right: -10px;
+                bottom: -10px;
+                top: 8px;
+                border-top: none;
+                border-left: none;
+                border-right: 1px solid $primary_color;
+                border-bottom: 1px solid $primary_color;
+                background-color: transparent;
+                width: 100%;
+                height: auto;
+                @include transition(all 0.3s ease);
+            }
+			&:hover {
+				color: $secondary_color;
+				transition-delay: 0.25s;
+				.pxl-icon {
+					transition-delay: 0.15s;
+					color: $secondary_color;
+				}
+				&:before {
+                    transition-delay: 0.15s;
+                    @include transform(scale(1));
+                }
+                &:after {
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    opacity: 1;
+                }
+			}
 		}
 	}
 }

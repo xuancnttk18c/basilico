@@ -38,6 +38,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 4', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-4.jpg'
                                 ],
+                                '5' => [
+                                    'label' => esc_html__( 'Layout 5', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-5.jpg'
+                                ],
                             ],
                             'prefix_class' => 'pxl-testimonial-carousel-layout-',
                         ),
@@ -197,10 +201,33 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                     'controls' => array(
                         array(
-                            'name' => 'quote_icon',
+                            'name' => 'quote_icon_type',
+                            'label' => esc_html__('Select Icon Type', 'basilico'),
+                            'type' => 'select',
+                            'options' => [
+                                'text' => esc_html__('Default', 'basilico'),
+                                'icon' => esc_html__('Icon', 'basilico'),
+                            ],
+                            'default' => 'text' 
+                        ),
+                        array(
+                            'name' => 'selected_icon',
                             'label' => esc_html__('Quote Icon', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::ICONS,
                             'fa4compatibility' => 'icon',
+                            'condition' => [
+                                'quote_icon_type' => 'icon'
+                            ]                            
+                        ),
+                        array(
+                            'name' => 'quote_typography',
+                            'label' => esc_html__('Icon Typography', 'basilico' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}} .pxl-testimonial-carousel .item-quote-icon',
+                            'condition' => [
+                                'quote_icon_type' => 'text'
+                            ]
                         ),
                         array(
                             'name' => 'quote_color',

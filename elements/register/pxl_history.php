@@ -22,6 +22,10 @@ pxl_add_custom_widget(
                                 '1' => [
                                     'label' => esc_html__('Layout 1', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_history-1.jpg'
+                                ],
+                                '2' => [
+                                    'label' => esc_html__('Layout 2', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_history-1.jpg'
                                 ]
                             ],
                             'prefix_class' => 'pxl-history-layout-'
@@ -76,8 +80,92 @@ pxl_add_custom_widget(
                             ),
                             'default' => [],
                             'title_field' => '{{{ year }}}',
+                        ),
+                        array(
+                            'name' => 'icon_background',
+                            'label' => esc_html__('Diamond Icon Background', 'basilico' ),
+                            'type' => 'color',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-history .diamond-icon:before' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-history .diamond-icon:after' => 'background-color: {{VALUE}};'
+                            ],
+                        ),
+                        array(
+                            'name' => 'icon_space',
+                            'label' => esc_html__('Diamond Icon Space Color', 'basilico' ),
+                            'type' => 'color',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-history .diamond-icon:before' => 'background-color: {{VALUE}};',
+                            ],
+                        ),
+                    ),
+                ),
+                array(
+                    'name' => 'carousel_setting',
+                    'label' => esc_html__('Carousel Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
+                    'condition' => [
+                        'layout' => '2'
+                    ],
+                    'controls' => array_merge(
+                        basilico_carousel_column_settings(),
+                        array(
+                            array(
+                                'name' => 'slides_to_scroll',
+                                'label' => esc_html__('Slides to scroll', 'basilico' ),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'default' => '1',
+                                'options' => [
+                                    '1' => '1',
+                                    '2' => '2',
+                                    '3' => '3',
+                                    '4' => '4',
+                                    '5' => '5',
+                                    '6' => '6',
+                                ],
+                            ),
+                            array(
+                                'name' => 'arrows',
+                                'label' => esc_html__('Show Arrows', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                            ),
+                            array(
+                                'name' => 'dots',
+                                'label' => esc_html__('Show Dots', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                            ),
+                            array(
+                                'name' => 'pause_on_hover',
+                                'label' => esc_html__('Pause on Hover', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                            ),
+                            array(
+                                'name' => 'autoplay',
+                                'label' => esc_html__('Autoplay', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                            ),
+                            array(
+                                'name' => 'autoplay_speed',
+                                'label' => esc_html__('Autoplay Speed', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::NUMBER,
+                                'default' => 5000,
+                                'condition' => [
+                                    'autoplay' => 'true'
+                                ]
+                            ),
+                            array(
+                                'name' => 'infinite',
+                                'label' => esc_html__('Infinite Loop', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                            ),
+                            array(
+                                'name' => 'speed',
+                                'label' => esc_html__('Animation Speed', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::NUMBER,
+                                'default' => 400,
+                            ),
                         )
-                    )
+                    ),
                 ),
             )
         )

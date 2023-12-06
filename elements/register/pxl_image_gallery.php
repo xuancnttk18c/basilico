@@ -184,6 +184,17 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-grid .grid-sizer' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px;',
                             ],
                         ),
+                        array(
+                            'name' => 'hover_background',
+                            'label' => esc_html__('Hover Background Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-grid .grid-item .item-inner .icon-wrapper' => 'background-color: {{VALUE}};'
+                            ],
+                            'condition' => [
+                                'layout' => '4'
+                            ]
+                        ),
                     ),
                 ),
                 array(

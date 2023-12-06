@@ -12,6 +12,8 @@ if (!function_exists('basilico_elements_scripts')) {
         wp_enqueue_script('basilico-elements', get_template_directory_uri() . '/elements/assets/js/pxl-elements.js', [ 'jquery' ], basilico()->get_version(), true);
         wp_register_script('basilico-tabs', get_template_directory_uri() . '/elements/assets/js/pxl-tabs.js', ['jquery'], basilico()->get_version(), true);
         wp_register_script('basilico-typewrite', get_template_directory_uri() . '/elements/assets/js/pxl-typewrite.js', ['jquery'], basilico()->get_version(), true);
+        wp_enqueue_script('pxl-parallax-scroll', get_template_directory_uri() . '/elements/assets/js/parallax-scroll.js', [ 'jquery' ], basilico()->get_version(), true);
+        wp_enqueue_script('pxl-parallax-background', get_template_directory_uri() . '/elements/assets/js/parallax-background.js', [ 'jquery' ], basilico()->get_version(), true);
 
         wp_register_script('basilico-post-grid', get_template_directory_uri() . '/elements/assets/js/pxl-post-grid.js', ['isotope', 'jquery'], basilico()->get_version(), true);
         wp_localize_script('basilico-post-grid', 'main_data', array('ajax_url' => admin_url('admin-ajax.php')));
@@ -403,6 +405,18 @@ function basilico_get_carousel_layout_options($posttype_name){
                     'label' => esc_html__('Layout 8', 'basilico'),
                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-8.jpg'
                 ],
+                'pxl-portfolio-9' => [
+                    'label' => esc_html__('Layout 9', 'basilico'),
+                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-7.jpg'
+                ],
+            ];
+            break;
+        case 'pxl-service':
+            $option_layouts = [
+                'pxl-service-1' => [
+                    'label' => esc_html__('Layout 1', 'basilico'),
+                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-1.jpg'
+                ],
             ];
             break;
     }
@@ -665,7 +679,6 @@ function basilico_elementor_animation_opts($args = []){
                 'fast'   => esc_html__( 'Fast', 'basilico' ),
             ],
             'condition'   => array_merge($args['condition'], [ $args['name'].'_animation!' => '' ]),
-            
         ),
         array(
             'name'      => $args['name'].'_animation_delay',
@@ -823,4 +836,22 @@ function basilico_gradient_option($args = []){
         )
     );
     return $options;
+}
+
+function basilico_get_img_link_url( $settings ) {
+    if ( 'none' === $settings['link_to'] ) {
+        return false;
+    }
+
+    if ( 'custom' === $settings['link_to'] ) {
+        if ( empty( $settings['link']['url'] ) ) {
+            return false;
+        }
+
+        return $settings['link'];
+    }
+
+    return [
+        'url' => $settings['image']['url'],
+    ];
 }

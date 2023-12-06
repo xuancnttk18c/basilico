@@ -119,6 +119,16 @@ pxl_add_custom_widget(
                             'selector' => '{{WRAPPER}} .pxl-dropdown-links .container-label',
                         ),
                         array(
+                            'name' => 'icon_color',
+                            'label' => esc_html__('Icon Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'control_type' => 'responsive',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-dropdown-links .box-icon i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-dropdown-links .box-icon svg' => 'fill: {{VALUE}};',
+                            ],
+                        ),
+                        array(
                             'name' => 'dropdown_icon_color',
                             'label' => esc_html__('Dropdown Icon Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,

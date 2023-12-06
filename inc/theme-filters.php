@@ -31,6 +31,7 @@ function basilico_custom_register_folder($folder_path){
 add_filter( 'pxl_add_cpt_support', 'basilico_add_cpt_support' );
 function basilico_add_cpt_support($cpt_support) {
     $cpt_support[] = 'pxl-portfolio';
+    $cpt_support[] = 'pxl-service';
     return $cpt_support;
 }
 
@@ -75,6 +76,36 @@ function basilico_add_posttype( $postypes ) {
 
     );
 
+    $service_slug = basilico()->get_theme_opt('pxl_service_slug', 'service');
+    $service_label = basilico()->get_theme_opt('pxl_service_label', 'Service');
+    $postypes['pxl-service'] = array(
+        'status'     => true,
+        'item_name'  => esc_html__('Services', 'basilico'),
+        'items_name' => esc_html__('Services', 'basilico'),
+        'args'       => array(
+            'menu_icon'          => 'dashicons-image-filter',
+            'supports'           => array(
+                'title',
+                'thumbnail',
+                'editor',
+                'excerpt',
+            ),
+            'public'             => true,
+            'publicly_queryable' => true,
+            'has_archive' => true,
+            'rewrite'             => array(
+                'slug'       => $service_slug
+            ),
+        ),
+        'labels'     => array(
+            'name' =>  $service_label,
+            'add_new_item' => esc_html__('Add New Service', 'basilico'),
+            'edit_item' => esc_html__('Edit Service', 'basilico'),
+            'view_item' => esc_html__('View Service', 'basilico'),
+        )
+
+    );
+
 	return $postypes;
 }
 
@@ -93,6 +124,14 @@ function basilico_add_tax( $taxonomies ) {
         'post_type'  => array( 'pxl-portfolio' ),
         'taxonomy'   => 'Tags',
         'taxonomies' => 'Tags',
+        'args' => array(),
+        'labels'     => array()
+    );
+    $taxonomies['pxl-service-category'] = array(
+        'status'     => true,
+        'post_type'  => array( 'pxl-service' ),
+        'taxonomy'   => 'Categories',
+        'taxonomies' => 'Categories',
         'args' => array(),
         'labels'     => array()
     );
@@ -279,6 +318,8 @@ function basilico_custom_fonts($fonts){
             '\'Cerebri Sans\', sans-serif' => '\'Cerebri Sans\', sans-serif',
             '\'Cormorant Infant\', serif' => '\'Cormorant Infant\', serif',
             '\'PS Demo\', sans-serif' => '\'PS Demo\', sans-serif',
+            '\'Rowdies\', sans-serif' => '\'Rowdies\', sans-serif',
+            '\'IBM Plex Mono\', monospace' => '\'IBM Plex Mono\', monospace',
         ]
     ];
     return $fonts;

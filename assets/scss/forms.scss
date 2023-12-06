@@ -11,7 +11,7 @@ $ff_background_hover: #fff;
 
 // Variable Form Colors Theme Luxury
 $place_holder_color_luxury: #fff;
-$ff_color_luxury: #fff;
+$ff_color_luxury: $heading_color;
 $ff_height_luxury: 50px;
 $ff_padding_luxury: 0 20px;
 $ff_border_luxury: 1px solid $divider_color;
@@ -641,6 +641,7 @@ textarea{
         select,
         textarea,
         .nice-select {
+            //overflow: hidden;
             color: #fff;
             border: 1px solid $primary_color;
             background-color: transparent;

@@ -90,6 +90,15 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'icon_position',
+                            'label' => esc_html__('Icon Position Y', 'basilico' ),
+                            'description' => esc_html__('Vertical deviation from the original position (Unit: px)', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::NUMBER,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-list-content .pxl-list-icon' => 'bottom: {{VALUE}}px;',
+                            ],
+                        ),
+                        array(
                             'name' => 'content_color',
                             'label' => esc_html__('Content Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,

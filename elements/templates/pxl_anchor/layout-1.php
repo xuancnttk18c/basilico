@@ -24,7 +24,13 @@ $custom_cls = $widget->get_setting('custom_class','');
 	    }
 	    if($widget->get_setting('icon_type','none') == 'custom'){
 	    	echo '<div class="pxl-icon pxl-anchor-icon custom"><span></span><span></span><span></span></div>';
-	    } 
+	    }
+	    if($widget->get_setting('icon_type', 'none') == 'custom-2'){
+	    	echo '<div class="pxl-icon pxl-anchor-icon custom-2"><span></span><span></span><span></span><span></span></div>';
+	    }
+	    if($widget->get_setting('icon_type', 'none') == 'custom-3'){
+	    	echo '<div class="pxl-icon pxl-anchor-icon custom-3"></div>';
+	    }
 	    if(!empty($widget->get_setting('title',''))){
 	    	echo '<span class="anchor-title d-inline-flex">'.$widget->get_setting('title', '').'</span>';
 	    } ?>

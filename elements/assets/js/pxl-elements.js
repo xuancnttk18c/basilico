@@ -15,10 +15,13 @@
             }
         });
         elementorFrontend.waypoint($scope.find('.pxl-scroll'), function () {
-            var $scroll_el = $(this);
-            setTimeout(function () {
-                $scroll_el.addClass('scroll-animated ');
-            }, 300);
+            $(this).addClass('pxl-animated');
+        });
+        elementorFrontend.waypoint($scope.find('.pxl-image-wg.draw-from-top'), function () {
+            $(this).addClass('pxl-animated');
+        });
+        elementorFrontend.waypoint($scope.find('.pxl-image-wg.draw-from-left'), function () {
+            $(this).addClass('pxl-animated');
         });
     };
     function pxlMouseDirection(){
@@ -92,10 +95,37 @@
         }, 400);
     }
 
+    function pxl_parallax_bg(){
+        $(document).find('.pxl-parallax-background').parallaxBackground({
+            event: 'mouse_move',
+            animation_type: 'shift',
+            animate_duration: 2
+        });
+        $(document).find('.pxl-pll-basic').parallaxBackground();
+        $(document).find('.pxl-pll-rotate').parallaxBackground({
+            animation_type: 'rotate',
+            zoom: 50,
+            rotate_perspective: 500
+        });
+        $(document).find('.pxl-pll-mouse-move').parallaxBackground({
+            event: 'mouse_move',
+            animation_type: 'shift',
+            animate_duration: 2
+        });
+        $(document).find('.pxl-pll-mouse-move-rotate').parallaxBackground({
+            event: 'mouse_move',
+            animation_type: 'rotate',
+            animate_duration: 1,
+            zoom: 70,
+            rotate_perspective: 1000
+        });
+    }
+
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {
         elementorFrontend.hooks.addAction( 'frontend/element_ready/global', Pxl_Global_Animation_Handler );
         pxlMouseDirection();
         pxlParticles();
+        pxl_parallax_bg();
     } );
 } )( jQuery );

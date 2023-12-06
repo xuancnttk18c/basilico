@@ -211,6 +211,16 @@
 		"chef-hat",
 		"eating",
 		"mailbox",
-		"phone-rotary"
+		"phone-rotary",
+		"dish",
+		"meat",
+		"trumpet",
+		"chef-hat1",
+		"goblet",
+		"cutlery",
+		"wine-bottle",
+		"wedding-rings",
+		"fork",
+		"serving-dish"
     ]
 }

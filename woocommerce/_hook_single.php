@@ -231,6 +231,16 @@ function basilico_variable_add_to_cart(){
 	$attribute_keys  = array_keys( $attributes );
 	$variations_json = wp_json_encode( $available_variations );
 	$variations_attr = function_exists( 'wc_esc_json' ) ? wc_esc_json( $variations_json ) : _wp_specialchars( $variations_json, ENT_QUOTES, 'UTF-8', true );
+
+	$theme_style = basilico()->get_theme_opt('theme_style', 'default');
+	switch ($theme_style) {
+		case 'pxl-luxury':
+		$single_btn_cls = 'pxl-btn btn-outline single_add_to_cart_button button alt';
+		break;
+		default:
+		$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt';
+	}
+
 	do_action( 'woocommerce_before_add_to_cart_form' );
 	?>
 		<form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo esc_attr($variations_attr); ?>">
@@ -290,7 +300,7 @@ function basilico_variable_add_to_cart(){
 						</div>
 						<div class="pxl-addtocart-btn-wrap">
                             <div class="pxl-atc-btn">
-                                <button type="submit" class="pxl-btn btn-outline-secondary single_add_to_cart_button button alt">
+                                <button type="submit" class="<?php echo esc_attr($single_btn_cls); ?>">
                                     <span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span>
                                 </button>
                             </div>
@@ -316,13 +326,23 @@ function basilico_external_add_to_cart(){
  
 	$product_url = $product->add_to_cart_url();
 	$button_text = $product->single_add_to_cart_text();
+
+	$theme_style = basilico()->get_theme_opt('theme_style', 'default');
+	switch ($theme_style) {
+		case 'pxl-luxury':
+		$single_btn_cls = 'pxl-btn btn-outline single_add_to_cart_button button alt';
+		break;
+		default:
+		$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt';
+	}
+
 	do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 	<form class="cart external" action="<?php echo esc_url( $product_url ); ?>" method="get">
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 		<div class="pxl-addtocart-btn-wrap">
 			<div class="pxl-atc-btn">
-				<button type="submit" class="pxl-btn btn-outline-secondary single_add_to_cart_button button alt"><span><?php echo esc_html( $button_text ); ?></span></button>
+				<button type="submit" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $button_text ); ?></span></button>
 			</div>
 		</div>
 		 
@@ -338,6 +358,15 @@ function basilico_external_add_to_cart(){
 function basilico_grouped_add_to_cart(){
 	global $product, $post;
 	$products = array_filter( array_map( 'wc_get_product', $product->get_children() ), 'wc_products_array_filter_visible_grouped' );
+
+	$theme_style = basilico()->get_theme_opt('theme_style', 'default');
+	switch ($theme_style) {
+		case 'pxl-luxury':
+		$single_btn_cls = 'pxl-btn btn-outline single_add_to_cart_button button alt';
+		break;
+		default:
+		$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt';
+	}
 	if ( $products ) {
 		$grouped_product = $product;
 		$grouped_products = $products;
@@ -434,7 +463,7 @@ function basilico_grouped_add_to_cart(){
 				<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 				<div class="pxl-addtocart-btn-wrap">
 					<div class="pxl-atc-btn">
-						<button type="submit" class="pxl-btn btn-outline-secondary single_add_to_cart_button button alt"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
+						<button type="submit" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
 					</div>
 				</div>
 				<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
@@ -470,7 +499,17 @@ function basilico_simple_add_to_cart(){
                 ?>
                 <div class="pxl-addtocart-btn-wrap">
                     <div class="pxl-atc-btn">
-                        <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="pxl-btn btn-outline-secondary single_add_to_cart_button button alt"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
+                    	<?php
+                    	$theme_style = basilico()->get_theme_opt('theme_style', 'default');
+                    	switch ($theme_style) {
+                    		case 'pxl-luxury':
+                    		$single_btn_cls = 'pxl-btn btn-outline single_add_to_cart_button button alt';
+                    		break;
+                    		default:
+                    		$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt';
+                    	}
+                    	?>
+                        <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
                     </div>
                 </div>
             </form>

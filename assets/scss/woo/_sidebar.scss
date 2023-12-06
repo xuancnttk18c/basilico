@@ -237,7 +237,35 @@
 		}
 	}
 }
-
+.pxl-luxury .pxl-sidebar-area {
+	.widget_shopping_cart {
+		.remove {
+			color: $primary_color;
+		}
+		.total{
+			strong {
+				font-family: $heading_font_family;
+				font-size: 19px;
+				font-weight: 600;
+				letter-spacing: 0.02em;
+				text-transform: capitalize;
+				color: $heading_color;
+			}
+			.amount {
+				color: $primary_color;
+			}
+		}
+		.buttons {
+			.button {
+				margin-bottom: -11px;
+				color: $heading_color;
+				&:after {
+					color: $primary_color;
+				}
+			}
+		}
+	}
+}
 
 /* Widget Product Category */
 .widget_product_categories{
@@ -310,7 +338,6 @@
 		z-index: 1;
 		background-color: $secondary_color;
 	}
-
 	.price_slider_wrapper .ui-widget-content{
 		&:before {
 			content: '';
@@ -340,6 +367,22 @@
 		right: 0px;
 	}
 }
+
+.pxl-luxury .widget_price_filter {
+	.ui-widget-content:before {
+		background-color: rgba(200, 200, 200, 0.25);
+	}
+	.price_slider_amount .price_label {
+		color: $primary_color;
+		letter-spacing: 0.02em;
+	}
+	.ui-slider .ui-slider-handle,
+	.ui-slider .ui-slider-range,
+	.price_slider_amount button:before {
+		background-color: $primary_color;
+	}
+}
+
 .widget_rating_filter{
 	li.wc-layered-nav-rating{
 		>a{
@@ -488,3 +531,67 @@ ul.product_list_widget {
 	}
 }
 
+.pxl-luxury ul.product_list_widget {
+	li {
+		border-bottom: 1px solid $divider_color;
+		&:first-child {
+			padding-top: 5px;
+		}
+		&:last-child {
+			padding-bottom: 25px;
+		}
+		a {
+			font-weight: 600;
+			color: $heading_color;
+			text-transform: capitalize;
+			font-size: 20px;
+			line-height: 26px;
+			letter-spacing: 0.02em;
+			flex-shrink: 0;
+			&:hover {
+				color: $primary_color;
+			}
+		}
+		.product-title {
+			font-weight: 600;
+			color: $heading_color;
+			text-transform: capitalize;
+			font-size: 20px;
+			line-height: 26px;
+			letter-spacing: 0.02em;
+			flex-shrink: 0;
+			&:hover {
+				color: $primary_color;
+			}
+		}
+		.amount {
+			margin-left: -1px;
+			font-size: 17px;
+			letter-spacing: 0.02em;
+			color: $primary_color;
+			font-weight: 400;
+		}
+		.quantity {
+			margin-bottom: 2px;
+		}
+		del .amount{
+			color: #786c55;
+		}
+	}
+}
+
+.pxl-luxury .widget_products {
+	ul li {
+		&:last-child {
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+	}
+	.product-price del {
+		display: none;
+	}
+	.star-rating {
+		display: inline-block;
+		margin-left: 11px;
+	}
+}

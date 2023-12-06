@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'pxli';
   src:
-    url('fonts/pxli.ttf?m6yta6') format('truetype'),
-    url('fonts/pxli.woff?m6yta6') format('woff'),
-    url('fonts/pxli.svg?m6yta6#pxli') format('svg');
+    url('fonts/pxli.ttf?mn6hcz') format('truetype'),
+    url('fonts/pxli.woff?mn6hcz') format('woff'),
+    url('fonts/pxli.svg?mn6hcz#pxli') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pxli-serving-dish:before {
+  content: "\e9d5";
+}
+.pxli-fork:before {
+  content: "\e9d6";
+}
+.pxli-wedding-rings:before {
+  content: "\e9d7";
+}
+.pxli-wine-bottle:before {
+  content: "\e9d8";
+}
+.pxli-cutlery:before {
+  content: "\e9d4";
+}
+.pxli-dish:before {
+  content: "\e9d3";
+}
+.pxli-meat:before {
+  content: "\e9cf";
+}
+.pxli-goblet:before {
+  content: "\e9d0";
+}
+.pxli-chef-hat1:before {
+  content: "\e9d1";
+}
+.pxli-trumpet:before {
+  content: "\e9d2";
+}
 .pxli-phone-rotary:before {
   content: "\e9ce";
 }

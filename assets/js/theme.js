@@ -51,6 +51,7 @@
         setTimeout(function() {
             $('#pxl-loadding').remove();
             $('.pxl-cursor').css("visibility", "visible");
+
             if ($('.animation').length > 0) {
                 const observer = new IntersectionObserver(entries => {
                     entries.forEach(entry => {
@@ -75,6 +76,7 @@
         lastScrollTop = scroll_top;
         basilico_header_sticky();
         basilico_scroll_to_top();
+        basilico_sticky_position();
     });
     jQuery( document ).on( 'updated_wc_div', function() {
         basilico_quantity_plus_minus();
@@ -91,7 +93,7 @@
 
             var offset_top_nimation = header_height + 150;
 
-            if (scroll_top > offset_top_nimation) {
+            if (scroll_top > offset_top_nimation && scroll_status == 'up') {
                 $(document).find('.pxl-header-sticky').addClass('h-fixed');
             }else{
                 $(document).find('.pxl-header-sticky').removeClass('h-fixed');
@@ -124,7 +126,19 @@
                 $(document).find('.pxl-header-mobile-main-sticky').removeClass('mh-fixed');
             }
         }
-
+    }
+    function basilico_sticky_position(){
+        if ($('.pxl-header-sticky.h-fixed').length > 0) {
+            var headerStickyHeight = $(document).find('.pxl-header-sticky.h-fixed').height();
+            if ($('body.admin-bar').length > 0)
+                $(document).find('.sidebar-sticky .sidebar-sticky-wrap').css('top', headerStickyHeight + 60 + 'px');
+            else 
+                $(document).find('.sidebar-sticky .sidebar-sticky-wrap').css('top', headerStickyHeight + 30 + 'px');           
+        }
+        else if ($('body.admin-bar').length > 0)
+            $(document).find('.sidebar-sticky .sidebar-sticky-wrap').css('top', 60 + 'px');
+        else
+            $(document).find('.sidebar-sticky .sidebar-sticky-wrap').css('top', 30 + 'px');    
     }
     function basilico_open_menu_toggle(){
         'use strict';

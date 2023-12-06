@@ -222,7 +222,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Divider Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-list .pxl-menu-item .pxl-separator' => 'border-color: {{VALUE}}; background-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-menu-list .pxl-menu-item .pxl-separator' => 'border-color: {{VALUE}};',
                             ],
                         ),
                         array(

@@ -22,6 +22,13 @@
     position: -webkit-sticky;
     position: sticky;
     top: 100px;
+    @include transition();
+}
+
+body:has(.pxl-header-sticky.h-fixed) {
+    .position-sticky {
+        top: 200px;
+    }
 }
 
 .basilico-border .elementor-widget-container {
@@ -126,5 +133,24 @@
 .elementor-btn-fullwidth {
     .btn, button, .button, input[type="submit"], input[type="button"], .added_to_cart, .btn {
         width: 100%;
+    }
+}
+
+//* Image Transition Delay
+.transition-delay-200ms {
+    .pxl-image-wg {
+        transition-delay: 200ms;
+    }
+}
+
+.transition-delay-400ms {
+    .pxl-image-wg {
+        transition-delay: 400ms;
+    }
+}
+
+.transition-delay-600ms {
+    .pxl-image-wg {
+        transition-delay: 600ms;
     }
 }

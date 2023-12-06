@@ -72,7 +72,6 @@ if ( ! empty( $settings['loadmore_link']['url'] ) ) {
     $widget->add_render_attribute( 'loadmore', 'class', 'btn');
 }
 
-
 $data_settings = $item_anm_cls = '';
 if ( !empty( $item_animation) ) {
 

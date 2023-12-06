@@ -34,6 +34,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 3', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
                                 ],
+                                '4' => [
+                                    'label' => esc_html__( 'Layout 4', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
+                                ],
                             ],
                             'prefix_class' => 'pxl-tabs-layout-',
                         ),
@@ -148,6 +152,28 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-tabs .tabs-title .title-wrap' => 'gap: {{SIZE}}{{UNIT}};'
                             ],
+                        ),
+                        array(
+                            'name' => 'tab_background',
+                            'label' => esc_html__('Tab Background', 'basilico' ),
+                            'type' => 'color',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-tabs.layout-4' => 'background-color: {{VALUE}};'
+                            ],
+                            'condition' => [
+                                'layout' => '4'
+                            ]
+                        ),
+                        array(
+                            'name' => 'title_divider_color',
+                            'label' => esc_html__('Title Divider Color', 'basilico' ),
+                            'type' => 'color',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-tabs.layout-4 .tabs-title:after' => 'border-color: {{VALUE}};'
+                            ],
+                            'condition' => [
+                                'layout' => '4'
+                            ]
                         ),
                         array(
                             'name' => 'title_typography',

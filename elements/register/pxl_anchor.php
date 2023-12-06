@@ -30,7 +30,9 @@ pxl_add_custom_widget(
                             'options' => [
                                 'none' => esc_html__('None', 'basilico'),
                                 'lib' => esc_html__('Library', 'basilico'),
-                                'custom' => esc_html__('Custom', 'basilico'),
+                                'custom' => esc_html__('Custom 1', 'basilico'),
+                                'custom-2' => esc_html__('Custom 2', 'basilico'),
+                                'custom-3' => esc_html__('Custom 3', 'basilico'),
                             ],
                             'default' => 'lib' 
                         ),
@@ -93,6 +95,7 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-anchor' => 'color: {{VALUE}};',
                                 '{{WRAPPER}} .pxl-anchor-wrap .pxl-anchor-icon.custom span' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-anchor-wrap .pxl-anchor-icon.custom-2 span' => 'background-color: {{VALUE}};',
                                 '{{WRAPPER}} .pxl-anchor-icon svg' => 'fill: {{VALUE}};',
                             ],
                         ), 
@@ -103,6 +106,7 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-anchor:hover' => 'color: {{VALUE}};',
                                 '{{WRAPPER}} .pxl-anchor-wrap .pxl-anchor-icon.custom.pxl-bars:hover span' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-anchor-wrap .pxl-anchor-icon.custom-2.pxl-bars:hover span' => 'background-color: {{VALUE}};',
                                 '{{WRAPPER}} .pxl-anchor:hover pxl-anchor-icon svg' => 'fill: {{VALUE}};',
                             ],
                         ),

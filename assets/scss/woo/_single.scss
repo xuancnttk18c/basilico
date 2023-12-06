@@ -207,6 +207,10 @@
 	letter-spacing: 0.05em;
 	margin-bottom: 10px;
 }
+.pxl-luxury .product_title {
+	font-size: 35px;
+	font-weight: 600;
+}
 .flex-direction-nav{
 	padding: 0;
 	margin: 0;
@@ -428,10 +432,10 @@
 		font-weight: 500;
 		color: $heading_color;
 	}
-	.quantity .lbl{
+	.quantity .lbl {
 		margin-bottom: 22px;
 	}
-	.product_meta{
+	.product_meta {
 		padding-top: 18px;
 		margin-top: 12px;
 		border-top: 1px solid rgba(#c8c8c8, 0.6);
@@ -555,6 +559,55 @@
 	}
 }
 
+.pxl-luxury .pxl-single-product-summary-wrap {
+	margin-top: 25px;
+	.price {
+		color: $primary_color;
+		margin-bottom: 13px;
+	}
+	.woocommerce-product-details__short-description {
+		border-top-color: $divider_color;
+		letter-spacing: 0;
+		color: $body_color;
+	}
+	.woocommerce-product-rating .woocommerce-review-link {
+		display: none;
+	}
+	.product_meta, .post-shares, form.cart {
+		border-top-color: $divider_color;
+	}
+	.quantity {
+		max-width: 136px;
+		.lbl {
+			font-family: $body_font_family;
+			font-size: 17px;
+			font-weight: 400;
+			letter-spacing: 0;
+			text-transform: none;
+		}
+	}
+	.product_meta {
+		font-size: 17px;
+		line-height: 33px;
+		> span {
+			margin-top: 0;
+		}
+		.lbl {
+			font-weight: 400;
+			color: $primary_color;
+		}
+	}
+	.post-shares {
+		.label {
+			font-family: 'Jost';
+			font-weight: 400;
+			font-size: 17px;
+			letter-spacing: 0.08em;
+			color: $primary_color;
+		}
+	}
+}
+
 .stock-wishlist{
 	display: flex;
 	align-items: center;
@@ -609,9 +662,9 @@
 }
 input.qty[type="number"] {
 	background-color: $secondary_color;
-	width: 66px !important;
-	height: 50px !important;
-	line-height: 50px !important;
+	width: 66px;
+	height: 50px;
+	line-height: 50px;
 	padding-left: 0;
 	text-align: center;
 	font-size: 15px;
@@ -622,6 +675,41 @@ input.qty[type="number"] {
 	  -webkit-appearance: none;
 	  margin: 0;
 	}
+}
+
+.pxl-luxury .pxl-quantity{
+	.quantity-down, .quantity-up{
+		&:before {
+			font-family: 'Material-Design-Iconic-Font';
+			font-size: 16px;
+			width: auto;
+    		height: auto;
+			color: $primary_color;
+			top: 50%;
+			@include transform(translateY(-50%));
+		}
+	}
+	.quantity-up {
+		&:before {
+			content: '\f278';
+			right: 15px;
+			bottom: auto;
+		}
+	}
+	.quantity-down{
+		&:before {
+			content: '\f273';
+			left: 15px;
+			right: auto;
+			bottom: auto;
+		}
+	}
+}
+.pxl-luxury input.qty[type="number"] {
+	width: 136px;
+	padding: 0 40px;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 .pxl-addtocart-btn-wrap{
@@ -899,6 +987,27 @@ table.shop_attributes{
 		}
 	}
 }
+.pxl-luxury .woocommerce-tabs {
+	margin-top: 5px;
+	ul.wc-tabs {
+		li {
+			a {
+				font-family: $heading_font_family;
+				font-size: 20px;
+				font-weight: 600;
+				line-height: 60px;
+				letter-spacing: 0.05em;
+			}
+		}
+	}
+	.woocommerce-Tabs-panel {
+		.shop_attributes {
+			th, td {
+				color: $heading_color;
+			}
+		}
+	}
+}
 
 
 /** ------------------------------------------------
@@ -950,5 +1059,65 @@ table.shop_attributes{
 	    margin: 0 0 62px 0;
 	    text-align: center;
 	}
+	.pxl-divider {
+		display: none;
+	}
 }
 
+.pxl-luxury .products.related,
+.pxl-luxury .products.upsells,
+.pxl-luxury .cross-sells {
+	.related_subtitle {
+		font-family: $heading_font_family;
+		font-size: 27px;
+		font-weight: 600;
+		font-style: italic;
+		line-height: 32px;
+		letter-spacing: 0.02em;
+		text-transform: capitalize;
+		color: $primary_color;
+		text-align: center;
+		margin-bottom: 13px;
+		span {
+			position: relative;
+			&:before,
+			&:after {
+				content: none;
+			}
+		}
+	}
+	.related_title {
+	    font-weight: 600;
+	    font-size: 45px;
+	    line-height: 60px;
+	    letter-spacing: 0.05em;
+	    margin: 0;
+	    text-align: center;
+	}
+	.pxl-divider {
+		display: block;
+		margin: 28px auto 65px;
+		background-color: $primary_color;
+		&:before, &:after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%, -50%) rotate(45deg));
+		}
+		&:before {
+			width: 18px;
+			height: 18px;
+			background-color: $secondary_color;
+			border: 1px solid $primary_color;
+			z-index: 1;
+		}
+		&:after {
+			background-color: $primary_color;
+			width: 8px;
+			height: 8px;
+			z-index: 2;
+		}
+	}
+}

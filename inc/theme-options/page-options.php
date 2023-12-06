@@ -404,6 +404,40 @@ function basilico_page_options_register( $metabox ) {
                         )
                     )
                 ],
+                'additional_data' => [
+                    'title'  => esc_html__( 'Additional Data', 'basilico' ),
+                    'icon'   => 'el el-list-alt',
+                    'fields' => array(
+                        array(
+                            'id'       => 'area_icon_type',
+                            'type'     => 'button_set',
+                            'title'    => esc_html__('Icon Type', 'basilico'),
+                            'desc'     => esc_html__( 'This image icon will display in post grid or carousel', 'basilico' ),
+                            'options'  => array(
+                                'icon'  => esc_html__('Icon', 'basilico'),
+                                'image'  => esc_html__('Image', 'basilico'),
+                            ),
+                            'default'  => 'image'
+                        ),
+                        array(
+                            'id'       => 'area_icon',
+                            'type'     => 'pxl_iconpicker',
+                            'title'    => esc_html__( 'Select Icon', 'basilico' ),
+                            'default'  => '',
+                            'required' => array( 0 => 'area_icon_type', 1 => 'equals', 2 => 'icon' ),
+                        ),
+                        array(
+                            'id'       => 'area_img',
+                            'type'     => 'media',
+                            'title'    => esc_html__('Select Image', 'basilico'),
+                            'default' => '',
+                            'required' => array( 0 => 'area_icon_type', 1 => 'equals', 2 => 'image' ),
+                            'force_output' => true
+                        ),
+
+                    ),
+
+                ],
             ]
         ],
 		'pxl-template' => [ //post_type

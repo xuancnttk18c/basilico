@@ -1,5 +1,5 @@
 <?php
-$pt_supports = ['post','pxl-portfolio'];
+$pt_supports = ['post', 'pxl-portfolio', 'pxl-service'];
 pxl_add_custom_widget(
     array(
         'name' => 'pxl_post_carousel',

@@ -255,6 +255,9 @@ function basilico_fonts_url()
     if ( 'off' !== _x( 'on', 'Cormorant Infant font: on or off', 'basilico' ) ) {
         $fonts[] = 'Cormorant+Infant:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900';
     }
+    if ( 'off' !== _x( 'on', 'Rowdies font: on or off', 'basilico' ) ) {
+        $fonts[] = 'Rowdies:wght@300;400;700';
+    }
     if ($fonts) {
         $fonts_url = add_query_arg(array(
             'display' => 'swap',

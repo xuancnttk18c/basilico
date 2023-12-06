@@ -27,6 +27,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 2', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-1.jpg'
                                 ],
+                                '3' => [
+                                    'label' => esc_html__( 'Layout 3', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-1.jpg'
+                                ],
                             ],
                         )
                     )
@@ -57,7 +61,7 @@ pxl_add_custom_widget(
                             ],
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box .box-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon svg' => 'width: {{SIZE}}{{UNIT}} !important;',
+                                '{{WRAPPER}} .pxl-fancy-box .box-icon > svg' => 'width: {{SIZE}}{{UNIT}} !important;',
                             ],
                         ),
                         array(

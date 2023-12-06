@@ -51,12 +51,19 @@ pxl_add_custom_widget(
                                 array(
                                     'name' => 'title_text',
                                     'label' => esc_html__('Title', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::TEXTAREA,
+                                    'type' => \Elementor\Controls_Manager::TEXT,
                                     'default' => esc_html__('This is the heading', 'basilico'),
                                     'placeholder' => esc_html__('Enter your title', 'basilico'),
-                                    'rows' => 3,
                                     'show_label' => false,
                                 ),
+                                array(
+                                    'name' => 'sub_title_text',
+                                    'label' => esc_html__('Sub Title', 'basilico'),
+                                    'type' => \Elementor\Controls_Manager::TEXT,
+                                    'default' => esc_html__('Sub Title', 'basilico'),
+                                    'placeholder' => esc_html__('Sub Title', 'basilico'),
+                                    'show_label' => false,
+                                ),  
                                 array(
                                     'name' => 'description_text',
                                     'label' => esc_html__('Description', 'basilico'),
@@ -70,7 +77,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'icon_size',
-                            'label' => esc_html__('Icon Size', 'basilico' ),
+                            'label' => esc_html__('Image Size (px)', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SLIDER,
                             'control_type' => 'responsive',
                             'size_units' => [ 'px' ],
@@ -81,7 +88,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-icon img' => 'height: {{SIZE}}{{UNIT}}; width: auto;',
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-image img' => 'height: {{SIZE}}{{UNIT}}; width: 100%; object-fit: cover;',
                             ],
                         ),
                         array(
@@ -98,6 +105,28 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box-carousel .item-title' => 'color: {{VALUE}};',
                             ],
+                        ),
+                        array(
+                            'name' => 'sub_title_typography',
+                            'label' => esc_html__('Sub Title', 'basilico' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}} .pxl-fancy-box-carousel .item-sub-title',
+                        ),
+                        array(
+                            'name' => 'sub_title_color',
+                            'label' => esc_html__('Sub Title Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-sub-title' => 'color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'desc_typography',
+                            'label' => esc_html__('Description', 'basilico' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}} .pxl-fancy-box-carousel .item-description',
                         ),
                         array(
                             'name' => 'desc_color',

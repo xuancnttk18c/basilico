@@ -1,20 +1,10 @@
 /* Sticky Sidebar */
+
 .sidebar-sticky .sidebar-sticky-wrap {
     position: -webkit-sticky;
     position: sticky;
     top: 30px;
-}
-
-.admin-bar .sidebar-sticky .sidebar-sticky-wrap {
-    top: 150px;
-}
-
-.header-sticky .sidebar-sticky .sidebar-sticky-wrap {
-    top: 200px;
-}
-
-.admin-bar.header-sticky .sidebar-sticky .sidebar-sticky-wrap {
-    top: 230px;
+    @include transition(all 0.55s cubic-bezier(0.39, 0.58, 0.57, 1));
 }
 
 //* Sidebar widget
@@ -181,7 +171,7 @@
             top: 50%;
             left: 50%;
             @include transform(translate(-50%, -50%));
-            border: 1px solid $primary_color;
+            border: 1px solid $divider_color;
             border-radius: 50%;
         }
     }

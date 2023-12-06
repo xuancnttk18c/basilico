@@ -167,6 +167,12 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-divider' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ),
+                        array(
+                            'name'  => 'draw',
+                            'label' => esc_html__('Draw Animation', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                            'separator' => 'before',
+                        ),
                     ),
                 ),
             ),

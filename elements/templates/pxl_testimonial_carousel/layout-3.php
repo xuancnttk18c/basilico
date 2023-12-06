@@ -62,7 +62,7 @@ $widget->add_render_attribute('carousel', [
                     ?>
                         <div class="pxl-swiper-slide swiper-slide">
                             <div class="item-inner relative">
-                                <?php if (!empty($settings['quote_icon']['value'])) : ?>
+                                <?php if ($quote_icon_type === 'icon' && !empty($settings['quote_icon']['value'])) : ?>
                                     <?php \Elementor\Icons_Manager::render_icon($settings['quote_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
                                 <?php else : ?>
                                     <div class="item-quote-icon">“</div>

@@ -20,7 +20,7 @@ $opts = [
     'slides_to_show_sm'             => $widget->get_setting('col_sm', '1'),
     'slides_to_show_xs'             => $widget->get_setting('col_xs', '1'), 
     'slides_to_scroll'              => $widget->get_setting('slides_to_scroll', '1'), 
-    'slides_gutter'                 => 0,
+    'slides_gutter'                 => 30,
     'arrow'                         => $arrows,
     'dots'                          => $dots,
     'dots_style'                    => 'bullets',
@@ -44,7 +44,7 @@ $widget->add_render_attribute( 'carousel', [
         <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
                 <div class="pxl-swiper-wrapper swiper-wrapper">
-                <?php foreach ($boxs as  $box): ?>
+                <?php foreach ($boxs as $box): ?>
                     <div class="pxl-swiper-slide swiper-slide">
                         <div class="item-inner">
                             <?php
@@ -56,26 +56,57 @@ $widget->add_render_attribute( 'carousel', [
                                 ) );
                                 $thumbnail = $img['thumbnail'];
                                 ?>
-                                <div class="item-icon">
+                                <div class="item-image">
                                     <?php echo wp_kses_post($thumbnail); ?>
                                 </div>
                                 <?php
                             }
-                            if (!empty($box['title_text'])){
-                                ?>
-                                <h3 class="item-title">
-                                    <?php echo pxl_print_html($box['title_text']); ?>
-                                </h3>
-                                <?php
-                            }
-                            if (!empty($box['description_text'])){
-                                ?>
-                                <div class="item-description">
-                                    <?php echo esc_html($box['description_text']); ?>
-                                </div>
-                                <?php
-                            }
                             ?>
+                            <div class="item-content">
+                                <div class="content-inner">
+                                    <?php
+                                    if (!empty($box['title_text'])){
+                                        ?>
+                                        <h3 class="item-title">
+                                            <span><?php echo pxl_print_html($box['title_text']); ?></span>
+                                        </h3>
+                                        <?php
+                                    }
+                                    if (!empty($box['sub_title_text'])){
+                                        ?>
+                                        <span class="item-sub-title">
+                                            <?php echo pxl_print_html($box['sub_title_text']); ?>
+                                        </span>
+                                        <?php
+                                    }
+                                    if (!empty($box['description_text'])){
+                                        ?>
+                                        <div class="item-description">
+                                            <?php echo esc_html($box['description_text']); ?>
+                                        </div>
+                                        <?php
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                            <div class="item-title-wrap">
+                                <?php
+                                if (!empty($box['title_text'])){
+                                    ?>
+                                    <h3 class="item-title">
+                                        <span><?php echo pxl_print_html($box['title_text']); ?></span>
+                                    </h3>
+                                    <?php
+                                }
+                                if (!empty($box['sub_title_text'])){
+                                    ?>
+                                    <span class="item-sub-title">
+                                        <?php echo pxl_print_html($box['sub_title_text']); ?>
+                                    </span>
+                                    <?php
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
                 <?php endforeach; ?>

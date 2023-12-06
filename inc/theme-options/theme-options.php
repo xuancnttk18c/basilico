@@ -132,6 +132,7 @@ Redux::setSection($opt_name, array(
             'options'  => array(
                 'default' => esc_html__('Default', 'basilico'),
                 'pxl-luxury' => esc_html__('Luxury', 'basilico'),
+                'pxl-pizza' => esc_html__('Pizza', 'basilico'),
             ),
             'default'     => 'default',
         ),

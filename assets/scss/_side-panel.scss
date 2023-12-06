@@ -28,8 +28,8 @@
         .panel-header-inner{
             @include d-inline-flex();
             position: absolute;
-            right: 15px;
-            top: 15px;
+            right: 38px;
+            top: 42px;
             z-index: 9;
         }
     }
@@ -108,6 +108,16 @@
         &:after{
             @include transform(rotate(0deg));
         }
+    }
+}
+.pxl-luxury .pxl-close {
+    border: none;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    &:before,
+    &:after {
+        height: 1px;
     }
 }
 

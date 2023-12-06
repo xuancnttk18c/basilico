@@ -164,3 +164,68 @@
 		}
 	}
 }
+
+.pxl-anchor-icon.custom-2 {
+	position: relative;
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	cursor: pointer;	
+	span {
+		width: 8px;
+		height: 8px;
+		display: inline-block;
+		border-radius: 50%;
+		position: absolute;
+		background-color: $primary_color;
+		transition: all 300ms ease 0s;
+		&:nth-child(1) {
+			left: 2px;
+			top: 2px;
+		}
+		&:nth-child(2) {
+			right: 2px;
+			top: 2px;
+		}
+		&:nth-child(3) {
+			left: 2px;
+			bottom: 2px;
+		}
+		&:nth-child(4) {
+			right: 2px;
+			bottom: 2px;
+		}
+	}
+	&:hover span {
+		&:nth-child(1){
+			-webkit-transform: translate(-1px,-1px);
+			-moz-transform: translate(-1px,-1px);
+			transform: translate(-1px,-1px);
+		}
+		&:nth-child(2) {
+			-webkit-transform: translate(1px,-1px);
+			-moz-transform: translate(1px,-1px);
+			transform: translate(1px,-1px);
+		}
+		&:nth-child(3) {
+			-webkit-transform: translate(-1px,1px);
+			-moz-transform: translate(-1px,1px);
+			transform: translate(-1px,1px);
+		}
+		&:nth-child(4) {
+			-webkit-transform: translate(1px,1px);
+			-moz-transform: translate(1px,1px);
+			transform: translate(1px,1px);
+		}
+	}
+}
+
+.pxl-anchor-icon.custom-3 {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-image: url(../images/search-1.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}

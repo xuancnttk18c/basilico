@@ -303,12 +303,12 @@ function basilico_header_popup_cart(){
         <div class="pxl-hidden-template-wrap">
             <div class="pxl-panel-header">
                 <div class="panel-header-inner">
-                    <a href="#" class="pxl-close" title="<?php echo esc_attr__( 'Close', 'salepush' ) ?>"></a>
+                    <a href="#" class="pxl-close" title="<?php echo esc_attr__( 'Close', 'basilico' ) ?>"></a>
                 </div>
             </div>
             <div class="pxl-side-panel-content widget_shopping_cart custom_scroll">
                 <div class="cart-title">
-                    <h3><?php echo esc_html__( 'Shopping Cart', 'salepush' ) ?></h3>
+                    <h3><?php echo esc_html__( 'Shopping Cart', 'basilico' ) ?></h3>
                 </div>
                 <div class="widget_shopping_cart_content">
                     <?php woocommerce_mini_cart(); ?>

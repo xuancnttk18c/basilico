@@ -358,6 +358,10 @@ if (!class_exists('Basilico_Comment')) {
                 'comment_author_email' => '',
                 'comment_subject' => ''
             ];
+
+            $theme_style = basilico()->get_theme_opt('theme_style', 'default');
+            if ($theme_style == 'pxl-luxury') $btn_style = 'btn-outline';
+            else $btn_style = 'btn-outline-secondary';
             $pxl_comment_fields = array(
                 'id_form'              => 'commentform',
                 'title_reply'          => esc_attr__( 'Leave a Review', 'basilico'),
@@ -366,7 +370,7 @@ if (!class_exists('Basilico_Comment')) {
                 'title_reply_before'   => '<h4 id="reply-title" class="comment-reply-title">',
                 'title_reply_after'    => '</h4>',
                 'id_submit'            => 'submit',
-                'class_submit'         => 'btn pxl-btn btn-outline-secondary',
+                'class_submit'         => 'btn pxl-btn '.$btn_style,
                 'label_submit'         =>  esc_attr__( 'Post Comment', 'basilico'),
                 'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s" /><span>%4$s</span></button>',
                 'comment_notes_before' => '',

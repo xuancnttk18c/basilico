@@ -130,6 +130,15 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'border_color',
+                            'label' => esc_html__('Border Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'default' => '',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-media-popup .media-play-button:before' => 'border: 1px solid {{VALUE}};',
+                            ],
+                        ),
+                        array(
                             'name' => 'icon_color',
                             'label' => esc_html__('Icon Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
