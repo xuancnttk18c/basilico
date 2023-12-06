@@ -245,7 +245,7 @@ $slider-outer-space: 0;
             left: 50%;
             @include transform(translate(-50%, -50%));
             @include transition( all .3s linear);
-            opacity: 1;
+            opacity: 0;
             border: 1px solid;
             border-color: rgba($secondary_color_rgb, 0.4);
             border-radius: 50%;
