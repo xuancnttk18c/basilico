@@ -212,16 +212,8 @@ pxl_add_custom_widget(
                     ],
                     'controls' => array(
                         array(
-                            'name' => 'sub_background',
-                            'label' => esc_html__('Background Color', 'basilico' ),
-                            'type' => 'color',
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .sub-menu' => 'background-color: {{VALUE}};',
-                            ],
-                        ),
-                        array(
                             'name' => 'sub_color',
-                            'label' => esc_html__('Color', 'basilico' ),
+                            'label' => esc_html__('Text Color', 'basilico' ),
                             'type' => 'color',
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu li .sub-menu a' => 'color: {{VALUE}};',
@@ -243,6 +235,22 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu li .sub-menu a, {{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu li .sub-menu a',
+                        ),
+                        array(
+                            'name' => 'sub_background',
+                            'label' => esc_html__('Background Color', 'basilico' ),
+                            'type' => 'color',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-nav-menu .sub-menu' => 'background-color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'sub_divider_color',
+                            'label' => esc_html__('Divider Color', 'basilico' ),
+                            'type' => 'color',
+                            'selectors' => [
+                                '{{WRAPPER}} ..pxl-primary-menu .sub-menu li a' => 'border-color: {{VALUE}};',
+                            ],
                         ),
                     ),
                 ),
