@@ -470,6 +470,11 @@
                             background-color: $secondary_color;
                             li.menu-item-has-children:after {
                                 color: $heading_color;
+                                &:after {
+                                    content: '\e97c';
+                                    font-family: $pxli_font;
+                                    font-size: 15px;
+                                }
                             }
                             > li {
                                 @include transition(none);
