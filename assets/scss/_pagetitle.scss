@@ -92,6 +92,22 @@
 			}
 		}
 	}
+	&.layout-3 {
+		.main-title {
+			color: #fff;
+			letter-spacing: 0.1em;
+			margin: 0 0 5px;
+			text-transform: uppercase;
+			> span {
+				display: inline-block;
+				position: relative;
+			}
+			@media (max-width: $sm_max) {
+				font-size: 50px;
+				line-height: 1;
+			}
+		}
+	}
 }
 .pxl-breadcrumb {
 	.br-item {
