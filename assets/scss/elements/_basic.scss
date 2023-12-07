@@ -452,6 +452,8 @@
             @media (min-width: $xl_min) {
                 .pxl-primary-menu {
                     > li {
+                        margin: 0;
+                        padding: 0 $menu_item_space / 2;
                         &:before {
                             top: auto;
                             bottom: 0;
