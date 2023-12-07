@@ -1280,7 +1280,7 @@
             i {
                 color: $primary_color;
             }
-            svg {
+            &:not(.custom-cart-icon) svg {
                 fill: $primary_color;
                 width: 25px;
             }
