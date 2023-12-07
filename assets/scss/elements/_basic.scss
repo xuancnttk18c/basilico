@@ -483,9 +483,10 @@
                                 &.current-menu-ancestor,
                                 &:hover {
                                     background-color: $primary_color;
+                                    &:after,
                                     > a {
                                         color: #fff;
-                                    }   
+                                    }
                                 }
                             }
                             a, span {
