@@ -244,14 +244,6 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-nav-menu .sub-menu' => 'background-color: {{VALUE}};',
                             ],
                         ),
-                        array(
-                            'name' => 'sub_divider_color',
-                            'label' => esc_html__('Divider Color', 'basilico' ),
-                            'type' => 'color',
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-primary-menu .sub-menu li a' => 'border-color: {{VALUE}};',
-                            ],
-                        ),
                     ),
                 ),
 
