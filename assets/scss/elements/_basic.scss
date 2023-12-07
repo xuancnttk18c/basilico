@@ -470,7 +470,7 @@
                         }
                     }
                     .sub-menu {
-                        box-shadow: none;
+                        @include box-shadow(none);
                         border: 1px solid $divider_color;
                     }
                 }
