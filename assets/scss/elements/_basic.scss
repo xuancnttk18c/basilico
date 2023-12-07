@@ -469,6 +469,10 @@
                             overflow: hidden;
                         }
                     }
+                    .sub-menu {
+                        box-shadow: none;
+                        border: 1px solid $divider_color;
+                    }
                 }
             }
         }
