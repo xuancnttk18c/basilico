@@ -1280,7 +1280,7 @@
             i {
                 color: $primary_color;
             }
-            &:not(.custom-cart-icon) svg {
+            svg {
                 fill: $primary_color;
                 width: 25px;
             }
@@ -1295,6 +1295,7 @@
         }
         .custom-cart-icon {
             svg {
+                width: 31px;
                 .st0 {
                     fill: $primary_color;
                 }
