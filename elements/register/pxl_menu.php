@@ -264,7 +264,7 @@ pxl_add_custom_widget(
                                 'dashed' => esc_html__( 'Dashed', 'basilico' ),
                                 'groove' => esc_html__( 'Groove', 'basilico' ),
                             ],
-                            'separator' => 'before'
+                            'separator' => 'before',
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-primary-menu .sub-menu' => 'border-style: {{VALUE}};',
                             ],
