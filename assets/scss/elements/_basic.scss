@@ -456,7 +456,7 @@
                             top: auto;
                             bottom: 0;
                         }
-                        &:after {
+                        &:not(:last-child):after {
                             content: '/';
                             position: absolute;
                             top: 50%;
