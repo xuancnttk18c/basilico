@@ -1284,14 +1284,6 @@
                 fill: $primary_color;
                 width: 25px;
             }
-            .pxl-cart-count {
-                &:before {
-                    content: '(';
-                }
-                &:after {
-                    content: ')';
-                }
-            }
         }
         .custom-cart-icon {
             svg {
@@ -1310,6 +1302,14 @@
             font-size: 15px;
             font-weight: 500;
             letter-spacing: 0.02em;
+            .pxl-cart-count {
+                &:before {
+                    content: '(';
+                }
+                &:after {
+                    content: ')';
+                }
+            }
         }
     }
 }
