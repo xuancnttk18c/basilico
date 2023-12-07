@@ -452,19 +452,15 @@
             @media (min-width: $xl_min) {
                 .pxl-primary-menu {
                     > li {
-                        margin: 0;
-                        padding: 0 $menu_item_space / 2;
                         &:before {
                             top: auto;
                             bottom: 0;
-                            left: $menu_item_space / 2;
-                            right: $menu_item_space / 2;
                         }
                         &:after {
                             content: '/';
                             position: absolute;
                             top: 50%;
-                            right: 0;
+                            right: $menu_item_space / 2;
                             @include transform(translateY(-50%));
                         }
                         > a {
