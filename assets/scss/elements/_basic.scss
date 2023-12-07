@@ -468,11 +468,14 @@
                             @include box-shadow(none);
                             border: 1px solid $divider_color;
                             background-color: $secondary_color;
-                            > a {
-                                color: $heading_color;
-                            }
                             > li {
                                 @include transition();
+                                + li {
+                                    border-top: 1px solid $divider_color;
+                                }
+                                > a {
+                                    color: $heading_color;
+                                }
                                 &.active,
                                 &.current-menu-item,
                                 &.current-menu-ancestor,
