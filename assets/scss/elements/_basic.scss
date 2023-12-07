@@ -458,6 +458,9 @@
                             top: auto;
                             bottom: 0;
                         }
+                        &:after {
+                            content: '/';
+                        }
                         > a {
                             color: $heading_color;
                             font-weight: 500;
