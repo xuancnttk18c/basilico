@@ -448,6 +448,23 @@
                 }
             }
         }
+        &.style-4 {
+            @media (min-width: $xl_min) {
+                .pxl-primary-menu {
+                    > li {
+                        &:before {
+                            top: auto;
+                            bottom: 0;
+                        }
+                        > a {
+                            color: $heading_color;
+                            font-weight: 500;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
     }
     &.pxl-nav-menu-inner {
         .menu-item > a {
