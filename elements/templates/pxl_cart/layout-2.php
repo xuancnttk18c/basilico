@@ -35,7 +35,7 @@ $cart_text = $widget->get_setting('cart_text', 'Your Cart');
                     <path class="st1" d="M432,368H176c-7.3,0-13.6-4.9-15.5-11.9L78.3,48H16C7.2,48,0,40.8,0,32s7.2-16,16-16h74.6   c7.3,0,13.6,4.9,15.5,11.9L188.3,336H432c8.8,0,16,7.2,16,16S440.8,368,432,368z"/>
                     </g>
                     </svg>
-                </i>';
+                </div>';
                 if(!is_admin()): ?>
                     <div class="pxl-cart-text">
                         <?php echo esc_html($cart_text); ?>
