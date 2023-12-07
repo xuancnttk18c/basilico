@@ -249,7 +249,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Divider Color', 'basilico' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} ..pxl-primary-menu .sub-menu li a' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-primary-menu .sub-menu li a' => 'border-color: {{VALUE}};',
                             ],
                         ),
                     ),
