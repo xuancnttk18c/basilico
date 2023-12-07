@@ -85,7 +85,7 @@ pxl_add_custom_widget(
                             ],
                             'condition' => ['icon_type' => 'custom'],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-cart-wrap.layout-2 .custom-cart-icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-cart-wrap.layout-2 .custom-cart-icon svg' => 'width: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(
