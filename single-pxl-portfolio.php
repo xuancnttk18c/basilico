@@ -3,6 +3,7 @@
  * @package Basilico
  */
 get_header();
+echo 'dasfasfsafasf';
 if(class_exists('\Elementor\Plugin')){
     $id = get_the_ID();
     if ( is_singular() && \Elementor\Plugin::$instance->documents->get( $id )->is_built_with_elementor()) {
