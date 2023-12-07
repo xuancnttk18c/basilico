@@ -460,7 +460,7 @@
                             content: '/';
                             position: absolute;
                             top: 50%;
-                            right: $menu_item_space / 2;
+                            right: ($menu_item_space / 2) * -1;
                             @include transform(translateY(-50%));
                         }
                         > a {
