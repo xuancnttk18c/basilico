@@ -23,8 +23,10 @@ $cart_text = $widget->get_setting('cart_text', 'Your Cart');
             echo '<div class="pxl-cart-icon d-inline-flex">';
                 echo '<i class="custom-cart-icon"></i>';
                 if(!is_admin()): ?>
-                    <span class="pxl-cart-text"><?php echo esc_html($cart_text); ?></span>
-                    <span class="pxl-cart-count cart_total"><?php echo esc_attr($count) ?></span>
+                    <div class="pxl-cart-text">
+                        <?php echo esc_html($cart_text); ?>
+                        <span class="pxl-cart-count cart_total"><?php echo esc_attr($count) ?></span>
+                    </div>
                 <?php endif;
             echo '</div>';
         }
