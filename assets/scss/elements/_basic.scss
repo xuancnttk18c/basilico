@@ -1298,7 +1298,8 @@
             width: 31px;
             height: 31px;
             background-image: url(../images/custom-cart1.png);
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
             background-position: center center;
         }
         .pxl-cart-text,
