@@ -5340,7 +5340,7 @@ blockquote {
       -ms-transition: all 0.3s linear;
       -o-transition: all 0.3s linear;
       transition: all 0.3s linear;
-      opacity: 1;
+      opacity: 0;
       border: 1px solid;
       border-color: rgba(var(--secondary-color-rgb), 0.4);
       border-radius: 50%; }
