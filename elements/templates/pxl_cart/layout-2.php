@@ -15,7 +15,7 @@ $cart_text = $widget->get_setting('cart_text', 'Your Cart');
                 \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'pxli'], 'i');
                 if(!is_admin()): ?>
                     <span class="pxl-cart-text"><?php echo esc_html($cart_text); ?></span>
-                    <span class="pxl-cart-count cart_total"><?php echo esc_attr($count) ?></span>
+                    <span class="pxl-cart-count cart_total"><?php echo ' ' . esc_attr($count) ?></span>
                 <?php endif;
             echo '</div>';
         }
