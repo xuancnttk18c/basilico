@@ -1277,8 +1277,11 @@
             cursor: pointer;
             position: relative;
             display: inline-flex;
+            i {
+                color: $primary_color;
+            }
             svg {
-                fill: red;
+                fill: $primary_color;
                 width: 25px;
             }
             .pxl-cart-count {
