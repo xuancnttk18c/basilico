@@ -21,7 +21,7 @@ $cart_text = $widget->get_setting('cart_text', 'Your Cart');
             <?php endif; ?>
         <?php endif;
         if ( $widget->get_setting('icon_type','none') == 'custom') : ?>
-            <div class="pxl-cart-icon">
+            <div class="pxl-cart-icon d-flex align-items-center">
                 <div class="custom-cart-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                         <path class="st0" d="M508.3,85.8c-3-3.6-7.6-5.8-12.3-5.8H107.5c-5,0-9.7,2.3-12.7,6.2c-3,4-4,9.1-2.8,13.9l51.2,191.4  c1.9,7,8.2,11.9,15.5,11.9c0.3,0,0.5,0,0.8,0L464.8,288c7.4-0.4,13.6-5.8,14.9-13.1l32-176C512.6,94.2,511.3,89.4,508.3,85.8z   M224,224c0,8.8-7.2,16-16,16s-16-7.2-16-16v-64c0-8.8,7.2-16,16-16s16,7.2,16,16V224z M320,224c0,8.8-7.2,16-16,16s-16-7.2-16-16  v-64c0-8.8,7.2-16,16-16s16,7.2,16,16V224z M416,224c0,8.8-7.2,16-16,16s-16-7.2-16-16v-64c0-8.8,7.2-16,16-16s16,7.2,16,16V224z"/>
