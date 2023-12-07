@@ -252,6 +252,53 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-primary-menu .sub-menu li a' => 'border-color: {{VALUE}};',
                             ],
                         ),
+                        array(
+                            'name' => 'sub_border_type',
+                            'label' => esc_html__( 'Border Type', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'options' => [
+                                '' => esc_html__( 'None', 'basilico' ),
+                                'solid' => esc_html__( 'Solid', 'basilico' ),
+                                'double' => esc_html__( 'Double', 'basilico' ),
+                                'dotted' => esc_html__( 'Dotted', 'basilico' ),
+                                'dashed' => esc_html__( 'Dashed', 'basilico' ),
+                                'groove' => esc_html__( 'Groove', 'basilico' ),
+                            ],
+                            'separator' => 'before'
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-primary-menu .sub-menu' => 'border-style: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'sub_border_width',
+                            'label' => esc_html__( 'Border Width', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-primary-menu .sub-menu' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                            'responsive' => true,
+                        ),
+                        array(
+                            'name' => 'sub_border_color',
+                            'label' => esc_html__( 'Border Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'default' => '',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-primary-menu .sub-menu' => 'border-color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'border_type!' => '',
+                            ],
+                        ),
+                        array(
+                            'name' => 'sub_border_radius',
+                            'label' => esc_html__('Border Radius', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'size_units' => [ 'px' ],
+                            'selectors' => [
+                                '{{WRAPPER}} ..pxl-primary-menu .sub-menu' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                        ),
                     ),
                 ),
 
