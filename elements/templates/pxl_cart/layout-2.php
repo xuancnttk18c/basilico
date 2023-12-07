@@ -20,7 +20,7 @@ $cart_text = $widget->get_setting('cart_text', 'Your Cart');
             echo '</div>';
         }
         else if ( $widget->get_setting('icon_type','none') == 'custom') {
-            echo '<div class="pxl-cart-icon d-inline-flex">';
+            echo '<div class="pxl-cart-icon d-inline-flex align-items-center">';
                 echo '<i class="custom-cart-icon"></i>';
                 if(!is_admin()): ?>
                     <div class="pxl-cart-text">
