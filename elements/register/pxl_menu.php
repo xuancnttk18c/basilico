@@ -212,6 +212,14 @@ pxl_add_custom_widget(
                     ],
                     'controls' => array(
                         array(
+                            'name' => 'sub_background',
+                            'label' => esc_html__('Background Color', 'basilico' ),
+                            'type' => 'color',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-nav-menu .sub-menu' => 'background-color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
                             'name' => 'sub_color',
                             'label' => esc_html__('Color', 'basilico' ),
                             'type' => 'color',
