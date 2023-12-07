@@ -11,7 +11,7 @@ $cart_text = $widget->get_setting('cart_text', 'Your Cart');
         $count = WC()->cart->get_cart_contents_count();
         if( $widget->get_setting('icon_type','none') == 'lib') : ?>
             <div class="pxl-cart-icon d-inline-flex">
-                <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'pxli'], 'i');
+                <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'pxli'], 'i'); ?>
             </div>
         <?php endif;
         if ( $widget->get_setting('icon_type','none') == 'custom') : ?>
