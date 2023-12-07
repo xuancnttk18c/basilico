@@ -457,6 +457,8 @@
                         &:before {
                             top: auto;
                             bottom: 0;
+                            left: $menu_item_space / 2;
+                            right: $menu_item_space / 2;
                         }
                         &:after {
                             content: '/';
