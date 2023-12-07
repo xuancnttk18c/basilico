@@ -468,19 +468,22 @@
                             @include box-shadow(none);
                             border: 1px solid $divider_color;
                             background-color: $secondary_color;
+                            > li {
+                                &.active,
+                                &.current-menu-item,
+                                &.current-menu-ancestor,
+                                &:hover{
+                                    background-color: $primary_color;
+                                    > a {
+
+                                    }
+                                }
+                            }
                         }
                         > a {
                             color: $heading_color;
                             font-weight: 500;
                             overflow: hidden;
-                        }
-                        &.active,
-                        &.current-menu-item,
-                        &.current-menu-ancestor,
-                        &:hover{
-                            > a {
-                                
-                            }
                         }
                     }
                 }
