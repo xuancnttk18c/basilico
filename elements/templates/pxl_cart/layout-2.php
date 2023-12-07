@@ -32,13 +32,13 @@ $cart_text = $widget->get_setting('cart_text', 'Your Cart');
                         </g>
                     </svg>
                 </div>
+                <?php if (!is_admin()) : ?>
+                    <div class="pxl-cart-text">
+                        <?php echo esc_attr($cart_text); ?>
+                        <span class="pxl-cart-count cart_total"><?php echo esc_attr($count) ?></span>
+                    </div>
+                <?php endif; ?>
             </div>
-            <?php if (!is_admin()) : ?>
-                <div class="pxl-cart-text">
-                    <?php echo esc_attr($cart_text); ?>
-                    <span class="pxl-cart-count cart_total"><?php echo esc_attr($count) ?></span>
-                </div>
-            <?php endif; ?>
         <?php endif; ?>
     </div>
 </div>
