@@ -472,6 +472,7 @@
                                 color: $heading_color;
                             }
                             > li {
+                                @include transition(none);
                                 + li {
                                     border-top: 1px solid $divider_color;
                                 }
