@@ -19,6 +19,15 @@ $cart_text = $widget->get_setting('cart_text', 'Your Cart');
                 <?php endif;
             echo '</div>';
         }
+        else if ( $widget->get_setting('icon_type','none') == 'custom') {
+            echo '<div class="pxl-cart-icon d-inline-flex">';
+                echo '<i class="custom-cart-icon"></i>';
+                if(!is_admin()): ?>
+                    <span class="pxl-cart-text"><?php echo esc_html($cart_text); ?></span>
+                    <span class="pxl-cart-count cart_total"><?php echo esc_attr($count) ?></span>
+                <?php endif;
+            echo '</div>';
+        }
         ?>
     </div>
 </div>
