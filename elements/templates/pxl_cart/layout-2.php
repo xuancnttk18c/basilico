@@ -12,10 +12,6 @@ $cart_text = $widget->get_setting('cart_text', 'Your Cart');
         if( $widget->get_setting('icon_type','none') == 'lib') : ?>
             <div class="pxl-cart-icon d-inline-flex">
                 <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'pxli'], 'i');
-                if(!is_admin()): ?>
-                    <span class="pxl-cart-text"><?php echo esc_html($cart_text); ?></span>
-                    <span class="pxl-cart-count cart_total"><?php echo esc_attr($count) ?></span>
-                <?php endif; ?>
             </div>
         <?php endif;
         if ( $widget->get_setting('icon_type','none') == 'custom') : ?>
@@ -30,9 +26,11 @@ $cart_text = $widget->get_setting('cart_text', 'Your Cart');
                 </svg>
             </div>
         <?php endif; ?>
-        <div class="pxl-cart-text">
-            <?php echo esc_attr($cart_text); ?>
-            <span class="pxl-cart-count cart_total"><?php echo esc_attr($count) ?></span>
-        </div>
+        <?php if (!is_admin()) : ?>
+            <div class="pxl-cart-text">
+                <?php echo esc_attr($cart_text); ?>
+                <span class="pxl-cart-count cart_total"><?php echo esc_attr($count) ?></span>
+            </div>
+        <?php endif; ?>
     </div>
 </div>
