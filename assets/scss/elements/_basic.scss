@@ -469,7 +469,6 @@
                             border: 1px solid $divider_color;
                             background-color: $secondary_color;
                             > li {
-                                @include transition();
                                 + li {
                                     border-top: 1px solid $divider_color;
                                 }
@@ -485,6 +484,9 @@
                                         color: #fff;
                                     }
                                 }
+                            }
+                            a, span {
+                                @include transition(none);
                             }
                         }
                         > a {
