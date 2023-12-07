@@ -72,7 +72,21 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-cart-icon' => 'font-size: {{SIZE}}{{UNIT}};',
                                 '{{WRAPPER}} .pxl-cart-icon svg' => 'width: {{SIZE}}{{UNIT}};',
                             ],
-
+                        ),
+                        array(
+                            'name'  => 'icon_size_custom',
+                            'label' => esc_html__( 'Icon Size(px)', 'basilico' ),
+                            'type'  => 'slider',
+                            'range' => [
+                                'px' => [
+                                    'min' => 15,
+                                    'max' => 300,
+                                ],
+                            ],
+                            'condition' => ['icon_type' => 'custom'],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-cart-wrap.layout-2 .custom-cart-icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                            ],
                         ),
                         array(
                             'name' => 'icon_margin',
