@@ -324,6 +324,7 @@
         &.btn-default {
             overflow: visible;
             &:after {
+                content: '';
                 top: 4px;
                 right: -5px;
                 bottom: -6px;
