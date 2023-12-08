@@ -1,6 +1,5 @@
 <?php
 // Register PXL Widget
-$theme_style = basilico()->get_theme_opt('theme_style', 'default');
 pxl_add_custom_widget(
     array(
         'name'       => 'pxl_button',
@@ -239,18 +238,6 @@ pxl_add_custom_widget(
                                 ],
                                 'condition' => [
                                     'style!' => ['btn-gradient'],
-                                ],
-                            ),
-                            array(
-                                'name' => 'btn_bg_color_2',
-                                'label' => esc_html__('Background Color 2', 'basilico' ),
-                                'type' => \Elementor\Controls_Manager::COLOR,
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'background-image: none; background-color: {{VALUE}}; border-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn::after' => 'background-image: none; background-color: {{VALUE}};'
-                                ],
-                                'condition' => [
-                                    $theme_style => 'pxl-pizza',
                                 ],
                             ),
                             array(
