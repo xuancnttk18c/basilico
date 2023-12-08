@@ -338,6 +338,7 @@
                 height: 100%;
                 background-color: #000;
                 z-index: -1;
+                @include transition();
             }
             &:hover {
                 &:after {
