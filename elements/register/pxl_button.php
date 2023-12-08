@@ -246,7 +246,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'border-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn:hover:before' => 'background-color: {{VALUE}};',
+                                    'body:not(.pxl-pizza) {{WRAPPER}} .pxl-button-wrapper .btn:hover:before' => 'background-color: {{VALUE}};',
                                     'body.pxl-pizza {{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'background-color: {{VALUE}};'
                                 ],
                                 'condition' => [
