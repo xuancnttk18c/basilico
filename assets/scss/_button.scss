@@ -325,10 +325,6 @@
         &.btn-default {
             overflow: visible;
             &:before {
-                background-color: $primary_color;
-                height: 100%;
-            }
-            &:after {
                 content: '';
                 position: absolute;
                 top: 4px;
@@ -338,10 +334,10 @@
                 height: 100%;
                 background-color: #000;
                 z-index: -1;
-                @include transition(all 300ms);
+                //@include transition(all 300ms);
             }
             &:hover {
-                &:after {
+                &:before {
                     top: 0;
                     left: 0;
                     right: 0;

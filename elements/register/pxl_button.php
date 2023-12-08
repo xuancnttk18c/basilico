@@ -234,7 +234,6 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-button-wrapper .btn' => 'background-image: none; background-color: {{VALUE}}; border-color: {{VALUE}};',
-                                    '.pxl-pizza {{WRAPPER}} .pxl-button-wrapper .btn:before' => 'background-image: none; background-color: {{VALUE}}; border-color: {{VALUE}};',
                                     '{{WRAPPER}} .pxl-button-wrapper .btn::after' => 'background-image: none; background-color: {{VALUE}};'
                                 ],
                                 'condition' => [
