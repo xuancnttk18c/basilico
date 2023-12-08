@@ -316,8 +316,9 @@
     .btn, button, .button, input[type="submit"], input[type="button"], .added_to_cart, .btn {
         font-family: $body_font_family;
         border-color: #fff;
-        //background-color: $primary_color;
+        background: inherit;
         line-height: 50px;
+        height: 50px;
         &:hover {
             color: #fff;
         }
@@ -325,14 +326,17 @@
             overflow: visible;
             &:before {
                 background-color: $primary_color;
+                height: 100%;
             }
             &:after {
                 content: '';
+                position: absolute;
                 top: 4px;
                 right: -5px;
                 bottom: -6px;
                 left: 4px;
                 height: 100%;
+                background-color: #000;
                 z-index: -1;
             }
             &:hover {
