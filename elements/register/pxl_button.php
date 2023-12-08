@@ -247,6 +247,7 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'border-color: {{VALUE}};',
                                     '{{WRAPPER}} .pxl-button-wrapper .btn:hover::before' => 'background-color: {{VALUE}};',
+                                    'body.pxl-pizza {{WRAPPER}} .pxl-button-wrapper .btn:hover:before' => 'background-color: {{VALUE}};'
                                 ],
                                 'condition' => [
                                     'style!' => ['btn-gradient'],
