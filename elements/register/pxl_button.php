@@ -293,6 +293,7 @@ pxl_add_custom_widget(
                                 'default' => '',
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-color: {{VALUE}};',
+                                    'body.pxl-pizza {{WRAPPER}} .pxl-button-wrapper .btn::before' => 'background-color: {{VALUE}};',
                                 ],
                                 'condition' => [
                                     'border_type!' => '',
