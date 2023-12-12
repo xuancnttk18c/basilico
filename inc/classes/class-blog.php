@@ -247,7 +247,7 @@ if (!class_exists('Basilico_Blog')) {
                     <div class="meta-inner d-flex align-items-center">
                         <?php if ($post_date_on) : ?>
                             <span class="post-date">
-                                <?php echo get_the_date() . esc_html(' at ', 'basilico') . get_the_time(); ?>
+                                <?php echo get_the_date(); ?>
                             </span>
                         <?php endif; ?>
                         <?php if ($post_author_on) : ?>
