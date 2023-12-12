@@ -253,7 +253,7 @@ if (!class_exists('Basilico_Blog')) {
                         <?php endif; ?>
                         <?php if ($post_author_on) : ?>
                             <div class="post-author col-auto d-flex">
-                                <div class="i pxli pxli-user"></div>
+                                <i class="pxli pxli-user"></i>
                                 <span><?php echo esc_html__('By', 'basilico'); ?> <?php the_author_posts_link(); ?></span>
                             </div>
                         <?php endif; ?>
