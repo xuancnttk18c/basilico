@@ -2746,10 +2746,10 @@
             @include transition(all 250ms linear 0ms);
             background-color: $secondary_color;
             padding: 15px 30px 15px 72px;
-            font-size: 15px;
-            letter-spacing: 0.02em;
-            font-weight: 500;
-            color: #fff;
+            color: $heading_color;
+            font-size: 20px;
+            letter-spacing: 0.03em;
+            font-weight: 400;
             text-transform: uppercase;
             position: relative;
             text-transform: none !important;
@@ -2783,6 +2783,8 @@
                 z-index: 2;
             }
             &.active {
+                color: #fff;
+                background-color: $primary_color;
                 &:after {
                     @include transform(translate(0, -50%) rotate(0deg));
                 }
