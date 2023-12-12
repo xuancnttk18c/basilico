@@ -12,6 +12,7 @@ if (!class_exists('Basilico_Blog')) {
             } else {
                 $thumbnail_size = 'size-post-single';
             }
+            var_dump($thumbnail_size);
             the_post_thumbnail($thumbnail_size);
         }
 
