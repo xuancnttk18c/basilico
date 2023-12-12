@@ -221,6 +221,7 @@
 		"wine-bottle",
 		"wedding-rings",
 		"fork",
-		"serving-dish"
+		"serving-dish",
+		"calendar-week"
     ]
 }
