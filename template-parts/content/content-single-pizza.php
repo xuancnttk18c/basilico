@@ -58,13 +58,7 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
         }
         basilico()->blog->get_post_metas_pizza();
         $custom_post_title = basilico()->get_theme_opt('single_post_title_layout', '0');
-        if ($custom_post_title == '1') :
         ?>
-            <h2 class="post-title">
-                <?php echo get_the_title(); ?>
-            </h2>
-            <div class="pxl-post-divider"></div>
-        <?php endif; ?>
         <div class="post-content overflow-hidden">
             <div class="content-inner clearfix <?php echo esc_attr($post_content_classes); ?>">
                 <?php the_content(); ?>
