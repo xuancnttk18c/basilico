@@ -61,7 +61,7 @@ if(!function_exists('basilico_configs')){
                 ],
             ],
             'custom_sizes' => [
-                'size-post-single'      => [1200, 576, true],
+                'size-post-single'      => [800, 442, true],
                 'size-recent-post'      => [400, 432, true],
             ],
             'body' => [
