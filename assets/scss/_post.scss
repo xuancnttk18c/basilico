@@ -195,10 +195,16 @@
 }
 
 .pxl-pizza .post-metas {
+	@include d-flex();
+	justify-content: center;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 670px;
 	border: 1px solid $divider_color;
+	font-size: 15px;
+	line-height: 26px;
+	color: $heading_color;
+	letter-spacing: 0;
 }
 
 /* Tag & Share block */
