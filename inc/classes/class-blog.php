@@ -252,7 +252,7 @@ if (!class_exists('Basilico_Blog')) {
                             </div>
                         <?php endif; ?>
                         <?php if ($post_author_on) : ?>
-                            <div class="post-author col-auto d-flex">
+                            <div class="post-author d-flex align-items-center">
                                 <i class="pxli pxli-user"></i>
                                 <span><?php echo esc_html__('By', 'basilico'); ?> <?php the_author_posts_link(); ?></span>
                             </div>
@@ -266,7 +266,7 @@ if (!class_exists('Basilico_Blog')) {
                         <?php
                         $posttags = get_the_tags(get_the_ID());
                         if ($post_tags_on && $posttags) : ?>
-                            <div class="post-tags">
+                            <div class="post-tags d-flex align-items-center">
                                 <i class="pxli pxli-tag1"></i>
                                 <?php if ($posttags) {
                                     $last_key = array_key_last($posttags);
