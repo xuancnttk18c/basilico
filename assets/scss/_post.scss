@@ -203,7 +203,7 @@
 	border: 1px solid $divider_color;
 	font-size: 15px;
 	font-weight: 500;
-	line-height: 26px;
+	line-height: 24px;
 	color: $heading_color;
 	a {
 		color: $heading_color;
@@ -222,6 +222,11 @@
 			&:after {
 				content: none;
 			}
+		}
+	}
+	.post-tags {
+		a + a {
+			margin-left: 3px;
 		}
 	}
 }
