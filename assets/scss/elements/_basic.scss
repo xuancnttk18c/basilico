@@ -2747,7 +2747,7 @@
             border: 1px solid $divider_color;
             background-color: $secondary_color;
             font-family: $heading_font_family;
-            padding: 15px 30px 15px 72px;
+            padding: 21px 70px 21px 33px;
             color: $heading_color;
             font-size: 20px;
             letter-spacing: 0.03em;
@@ -2765,10 +2765,11 @@
             &:before {
                 content: "";
                 position: absolute;
-                left: 0;
+                right: 0;
                 bottom: 0;
                 top: 0;
                 width: 50px;
+                border-right: 1px solid $divider_color;
                 background-color: $primary_color;
                 z-index: 1;
                 @include transition(all 250ms linear 0ms);
@@ -2776,10 +2777,10 @@
             &:after {
                 content: "\f2fc";
                 font-family: "Material-Design-Iconic-Font";
-                font-size: 25px;
+                font-size: 32px;
                 position: absolute;
                 top: 50%;
-                left: 20px;
+                right: 25px;
                 @include transform(translate(0, -50%) rotate(180deg));
                 @include transition();
                 color: $heading_color;
@@ -2789,6 +2790,7 @@
                 color: #fff;
                 background-color: $primary_color;
                 &:before {
+                    color: #fff;
                     background-color: $secondary_color;
                 }
                 &:after {
