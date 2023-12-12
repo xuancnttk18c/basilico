@@ -12,7 +12,7 @@ if (!class_exists('Basilico_Blog')) {
             } else {
                 $thumbnail_size = basilico_configs('custom_sizes')['size-post-single'][0] . 'x' . basilico_configs('custom_sizes')['size-post-single'][1];
             }
-            var_dump(basilico_configs('custom_sizes')['size-post-single'][0]);
+            var_dump($thumbnail_size);
             the_post_thumbnail($thumbnail_size);
         }
 
