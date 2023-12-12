@@ -27,9 +27,8 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
 <article id="post-<?php the_ID(); ?>" <?php post_class('pxl-single-post'); ?>>
     <div class="<?php echo esc_attr($content_inner_cls); ?>">
         <?php
-        if (has_post_thumbnail()) {
-            //* thumbnail size is set full or custom
-        ?>
+        basilico()->blog->get_post_metas_pizza();
+        if (has_post_thumbnail()) : ?>
             <div class="post-image post-featured">
                 <?php
                 basilico()->blog->get_post_feature();
@@ -54,11 +53,7 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
                     </div>
                 <?php endif ?>
             </div>
-        <?php
-        }
-        basilico()->blog->get_post_metas_pizza();
-        $custom_post_title = basilico()->get_theme_opt('single_post_title_layout', '0');
-        ?>
+        <?php endif; ?>
         <div class="post-content overflow-hidden">
             <div class="content-inner clearfix <?php echo esc_attr($post_content_classes); ?>">
                 <?php the_content(); ?>
