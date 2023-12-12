@@ -2745,6 +2745,7 @@
         .pxl-ac-title {
             @include transition(all 250ms linear 0ms);
             background-color: $secondary_color;
+            font-family: $heading_font_family;
             padding: 15px 30px 15px 72px;
             color: $heading_color;
             font-size: 20px;
