@@ -2768,14 +2768,15 @@
                 right: 0;
                 bottom: 0;
                 top: 0;
-                width: 50px;
-                border-right: 1px solid $divider_color;
+                width: 70px;
+                border-left: 1px solid $divider_color;
                 background-color: $primary_color;
                 z-index: 1;
                 @include transition(all 250ms linear 0ms);
             }
             &:after {
                 content: "\f2fc";
+                color: #fff;
                 font-family: "Material-Design-Iconic-Font";
                 font-size: 32px;
                 position: absolute;
@@ -2790,10 +2791,10 @@
                 color: #fff;
                 background-color: $primary_color;
                 &:before {
-                    color: #fff;
                     background-color: $secondary_color;
                 }
                 &:after {
+                    color: $heading_color;
                     @include transform(translate(0, -50%) rotate(0deg));
                 }
             }
