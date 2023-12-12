@@ -204,7 +204,12 @@
 	font-size: 15px;
 	line-height: 26px;
 	color: $heading_color;
-	//letter-spacing: 0;
+	a {
+		color: $heading_color;
+		&:hover {
+			color: $primary_color;
+		}
+	}
 }
 
 /* Tag & Share block */
