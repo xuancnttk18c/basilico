@@ -247,7 +247,7 @@ if (!class_exists('Basilico_Blog')) {
                     <div class="meta-inner d-flex">
                         <?php if ($post_date_on) : ?>
                             <div class="post-date d-flex align-items-center">
-                                <i class="pxli pxli-calendar-week"></i>
+                                <i class="pxli pxli-calendar-minus"></i>
                                 <span><?php echo get_the_date(); ?></span>
                             </div>
                         <?php endif; ?>

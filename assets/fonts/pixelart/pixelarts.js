@@ -222,6 +222,6 @@
 		"wedding-rings",
 		"fork",
 		"serving-dish",
-		"calendar-week"
+		"calendar-minus"
     ]
 }
