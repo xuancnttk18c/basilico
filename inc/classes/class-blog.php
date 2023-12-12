@@ -10,9 +10,8 @@ if (!class_exists('Basilico_Blog')) {
             if ($post_feature_image_type == 'full') {
                 $thumbnail_size = 'full';
             } else {
-                $thumbnail_size = basilico_configs('custom_sizes');
+                $thumbnail_size = basilico_configs('custom_sizes')['size-post-single'];
             }
-            var_dump($thumbnail_size);
             the_post_thumbnail($thumbnail_size);
         }
 
