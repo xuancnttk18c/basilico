@@ -234,6 +234,53 @@ if (!class_exists('Basilico_Blog')) {
             <?php endif;
         }
 
+        public function get_post_metas_pizza()
+        {
+            $post_author_on = basilico()->get_theme_opt('post_author_on', true);
+            $post_date_on = basilico()->get_theme_opt('post_date_on', true);
+            $post_comments_on = basilico()->get_theme_opt('post_comments_on', true);
+            $post_categories_on = basilico()->get_theme_opt('post_categories_on', true);
+            $post_tags_on = basilico()->get_theme_opt('post_tag', false);
+            
+            if ($post_author_on || $post_date_on || $post_categories_on || $post_comments_on) : ?>
+                <div class="post-metas hover-underline">
+                    <div class="meta-inner d-flex align-items-center">
+                        <?php if ($post_date_on) : ?>
+                            <span class="post-date">
+                                <?php echo get_the_date() . esc_html(' at ', 'basilico') . get_the_time(); ?>
+                            </span>
+                        <?php endif; ?>
+                        <?php if ($post_author_on) : ?>
+                            <span class="post-author col-auto d-flex">
+                                <span><?php echo esc_html__('By', 'basilico'); ?> <?php the_author_posts_link(); ?></span>
+                            </span>
+                        <?php endif; ?>
+                        <?php if ($post_categories_on && has_category()) : ?>
+                            <span class="post-category d-flex align-items-center">
+                                <span><?php the_terms(get_the_ID(), 'category', '', ', '); ?></span>
+                            </span>
+                        <?php endif; ?>
+                        <?php
+                        $posttags = get_the_tags(get_the_ID());
+                        if ($post_tags_on && $posttags) : ?>
+                            <span class="post-tags">
+                                <span class="label"><?php echo esc_html('Tags: ', 'basilico'); ?></span>
+                                <?php if ($posttags) {
+                                    $last_key = array_key_last($posttags);
+                                    foreach ($posttags as $key => $tag) {
+                                        echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                                        if ($key != $last_key) {
+                                            echo ', ';
+                                        }
+                                    }
+                                }; ?>
+                            </span>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            <?php endif;
+        }
+
         public function get_post_tags()
         {
             $post_tag = basilico()->get_theme_opt('post_tag', true);
