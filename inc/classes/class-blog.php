@@ -244,9 +244,9 @@ if (!class_exists('Basilico_Blog')) {
             
             if ($post_author_on || $post_date_on || $post_categories_on || $post_comments_on) : ?>
                 <div class="post-metas">
-                    <div class="meta-inner d-flex align-items-center">
+                    <div class="meta-inner d-flex">
                         <?php if ($post_date_on) : ?>
-                            <div class="post-date">
+                            <div class="post-date d-flex align-items-center">
                                 <i class="pxli pxli-calendar-week"></i>
                                 <span><?php echo get_the_date(); ?></span>
                             </div>

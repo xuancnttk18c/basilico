@@ -211,6 +211,9 @@
 			color: $primary_color;
 		}
 	}
+	i {
+		color: $heading_color;
+	}
 	.meta-inner {
 		column-gap: 40px;
 		> span {
