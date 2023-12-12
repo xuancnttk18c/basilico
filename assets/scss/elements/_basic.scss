@@ -2744,6 +2744,7 @@
     &.style5 {
         .pxl-ac-title {
             @include transition(all 250ms linear 0ms);
+            border: 1px solid $divider_color;
             background-color: $secondary_color;
             font-family: $heading_font_family;
             padding: 15px 30px 15px 72px;
@@ -2770,6 +2771,7 @@
                 width: 50px;
                 background-color: $primary_color;
                 z-index: 1;
+                @include transition(all 250ms linear 0ms);
             }
             &:after {
                 content: "\f2fc";
@@ -2798,7 +2800,7 @@
             overflow-wrap: break-word;
             hyphens: auto;
             padding: 44px 110px 43px 30px;
-            border: 1px solid rgba($divider_color, 0.6);
+            border: 1px solid $divider_color;
             border-top: none;
             @media (max-width: $xs_max) {
                 padding: 34px 40px 33px 30px;
@@ -2811,14 +2813,6 @@
             background-color: #fff;
             padding: 0;
             @include transition(all 300ms linear 0ms);
-            & + .pxl-ac-item {
-                .pxl-ac-title {
-                    border-top: none;
-                }
-            }
-            &:not(:last-child) {
-                margin-bottom: 17px;
-            }
         }
     }
 }
