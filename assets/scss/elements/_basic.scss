@@ -2815,6 +2815,11 @@
             background-color: transparent;
             padding: 0;
             @include transition(all 300ms linear 0ms);
+            + .pxl-ac-item {
+                .pxl-ac-title {
+                    border-top: none;
+                }
+            }
         }
     }
 }
