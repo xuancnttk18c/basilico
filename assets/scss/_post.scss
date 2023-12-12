@@ -212,8 +212,9 @@
 		}
 	}
 	.meta-inner {
+		column-gap: 40px;
 		> span {
-			padding: 0 30px 0 0;
+			padding: 0;
 			&:after {
 				content: none;
 			}
