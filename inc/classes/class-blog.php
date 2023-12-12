@@ -259,7 +259,7 @@ if (!class_exists('Basilico_Blog')) {
                         <?php endif; ?>
                         <?php if ($post_categories_on && has_category()) : ?>
                             <div class="post-category d-flex align-items-center">
-                                <i class="pxli pxli-folder"></i>
+                                <i class="pxli pxli-folder1"></i>
                                 <span><?php the_terms(get_the_ID(), 'category', '', ', '); ?></span>
                             </div>
                         <?php endif; ?>
