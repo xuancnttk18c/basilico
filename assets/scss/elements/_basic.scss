@@ -2741,6 +2741,80 @@
             }
         }
     }
+    &.style5 {
+        .pxl-ac-title {
+            @include transition(all 250ms linear 0ms);
+            background-color: $secondary_color;
+            padding: 15px 30px 15px 72px;
+            font-size: 15px;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            text-transform: none !important;
+            cursor: pointer;
+            -webkit-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            .pxl-ac-title-text {
+                transition: none;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                top: 0;
+                width: 50px;
+                background-color: $primary_color;
+                z-index: 1;
+            }
+            &:after {
+                content: "\f2fc";
+                font-family: "Material-Design-Iconic-Font";
+                font-size: 25px;
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                @include transform(translate(0, -50%) rotate(180deg));
+                @include transition();
+                color: $heading_color;
+                z-index: 2;
+            }
+            &.active {
+                &:after {
+                    @include transform(translate(0, -50%) rotate(0deg));
+                }
+            }
+        }
+        .pxl-ac-content {
+            overflow-wrap: break-word;
+            hyphens: auto;
+            padding: 44px 110px 43px 30px;
+            border: 1px solid rgba($divider_color, 0.6);
+            border-top: none;
+            @media (max-width: $xs_max) {
+                padding: 34px 40px 33px 30px;
+            }
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .pxl-ac-item {
+            background-color: #fff;
+            padding: 0;
+            @include transition(all 300ms linear 0ms);
+            & + .pxl-ac-item {
+                .pxl-ac-title {
+                    border-top: none;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 17px;
+            }
+        }
+    }
 }
 
 //* Progressbar
