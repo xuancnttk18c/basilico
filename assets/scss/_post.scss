@@ -202,12 +202,20 @@
 	max-width: 670px;
 	border: 1px solid $divider_color;
 	font-size: 15px;
+	font-weight: 500;
 	line-height: 26px;
 	color: $heading_color;
 	a {
 		color: $heading_color;
 		&:hover {
 			color: $primary_color;
+		}
+	}
+	.meta-inner {
+		> span {
+			&:after {
+				content: none;
+			}
 		}
 	}
 }
