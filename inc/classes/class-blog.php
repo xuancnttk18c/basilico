@@ -252,19 +252,22 @@ if (!class_exists('Basilico_Blog')) {
                             </div>
                         <?php endif; ?>
                         <?php if ($post_author_on) : ?>
-                            <span class="post-author col-auto d-flex">
+                            <div class="post-author col-auto d-flex">
+                                <div class="i pxli pxli-user"></div>
                                 <span><?php echo esc_html__('By', 'basilico'); ?> <?php the_author_posts_link(); ?></span>
-                            </span>
+                            </div>
                         <?php endif; ?>
                         <?php if ($post_categories_on && has_category()) : ?>
-                            <span class="post-category d-flex align-items-center">
+                            <div class="post-category d-flex align-items-center">
+                                <i class="pxli pxli-folder"></i>
                                 <span><?php the_terms(get_the_ID(), 'category', '', ', '); ?></span>
-                            </span>
+                            </div>
                         <?php endif; ?>
                         <?php
                         $posttags = get_the_tags(get_the_ID());
                         if ($post_tags_on && $posttags) : ?>
-                            <span class="post-tags">
+                            <div class="post-tags">
+                                <i class="pxli pxli-tag"></i>
                                 <span class="label"><?php echo esc_html('Tags: ', 'basilico'); ?></span>
                                 <?php if ($posttags) {
                                     $last_key = array_key_last($posttags);
@@ -275,7 +278,7 @@ if (!class_exists('Basilico_Blog')) {
                                         }
                                     }
                                 }; ?>
-                            </span>
+                            </div>
                         <?php endif; ?>
                     </div>
                 </div>
