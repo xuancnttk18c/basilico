@@ -246,10 +246,10 @@ if (!class_exists('Basilico_Blog')) {
                 <div class="post-metas">
                     <div class="meta-inner d-flex align-items-center">
                         <?php if ($post_date_on) : ?>
-                            <span class="post-date">
+                            <div class="post-date">
                                 <i class="pxli pxli-calendar-week"></i>
-                                <?php echo get_the_date(); ?>
-                            </span>
+                                <span><?php echo get_the_date(); ?></span>
+                            </div>
                         <?php endif; ?>
                         <?php if ($post_author_on) : ?>
                             <span class="post-author col-auto d-flex">
