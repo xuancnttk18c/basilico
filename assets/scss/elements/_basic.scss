@@ -2786,6 +2786,9 @@
             &.active {
                 color: #fff;
                 background-color: $primary_color;
+                &:before {
+                    background-color: $secondary_color;
+                }
                 &:after {
                     @include transform(translate(0, -50%) rotate(0deg));
                 }
