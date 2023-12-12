@@ -268,7 +268,6 @@ if (!class_exists('Basilico_Blog')) {
                         if ($post_tags_on && $posttags) : ?>
                             <div class="post-tags">
                                 <i class="pxli pxli-tag1"></i>
-                                <span class="label"><?php echo esc_html('Tags: ', 'basilico'); ?></span>
                                 <?php if ($posttags) {
                                     $last_key = array_key_last($posttags);
                                     foreach ($posttags as $key => $tag) {
