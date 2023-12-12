@@ -223,5 +223,6 @@
 		"fork",
 		"serving-dish",
 		"calendar-minus"
+		"tag1"
     ]
 }
