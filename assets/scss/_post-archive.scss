@@ -300,6 +300,8 @@
 		background-color: #fff;
 		.post-image, img {
 			height: 100%;
+		}
+		.post-image {
 			border: 1px solid $divider_color;
 		}
 	}
