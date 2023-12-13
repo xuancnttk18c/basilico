@@ -323,6 +323,9 @@
         font-size: 15px;
         font-weight: 700;
         letter-spacing: 0.1em;
+        span {
+            margin: 0 13px;
+        }
         &:hover {
             color: #fff;
             i {
