@@ -99,7 +99,7 @@ if (!class_exists('Basilico_Blog')) {
             <?php endif;
         }
 
-        public function get_post_metas_pizza($post_id = 0)
+        public function get_archive_metas_pizza($post_id = 0)
         {
             $post_author_on = basilico()->get_theme_opt('post_author_on', true);
             $post_date_on = basilico()->get_theme_opt('post_date_on', true);
