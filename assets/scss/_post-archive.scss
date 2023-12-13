@@ -305,11 +305,19 @@
 			border: 1px solid $divider_color;
 		}
 	}
+	.main-content {
+		margin-left: 43px;
+		margin-right: 85px;
+		margin-bottom: 52px;
+	}
 	.post-metas {
 		max-width: none;
 		border-color: $secondary_color;
 		border-bottom-color: $divider_color;
 		margin-bottom: 0;
+	}
+	.post-title {
+		text-transform: none;
 	}
 }
 
