@@ -232,7 +232,7 @@ textarea, select,
             letter-spacing: 0;
             font-weight: 500;
         }
-        &:hover, &:focus,&:active {
+        &:hover, &:focus, &:active {
             border-color: $divider_color;
         }
         [dir="rtl"] &{
