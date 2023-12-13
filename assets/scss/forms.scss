@@ -226,10 +226,11 @@ textarea, select,
     textarea, select,
     .select2-container.select2-container--default .select2-selection--single {
         font-size: 15px;
+        font-weight: 500;
         &::placeholder {
             font-size: 15px;
             letter-spacing: 0;
-            font-weight: 500 !important;
+            font-weight: 500;
         }
         &:hover, &:focus,&:active {
             border-color: $divider_color;
