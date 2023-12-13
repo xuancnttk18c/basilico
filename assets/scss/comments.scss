@@ -19,6 +19,11 @@
         border-bottom: 1px solid $divider_color;
     }
 }
+
+.pxl-pizza .comments-area {
+    max-width: 770px;
+    margin: 0 auto;
+}
  
 .comments-title, .comment-reply-title {
     font-size: 30px;
