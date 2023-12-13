@@ -326,6 +326,9 @@
         span + i, i + span {
             margin-left: 13px;
         }
+        i {
+            font-size: 13px;
+        }
         &:hover {
             color: #fff;
             i {
