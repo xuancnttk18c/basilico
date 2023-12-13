@@ -30,7 +30,6 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
                 <?php the_title(); ?>
             </a>
         </h2>
-        <div class="pxl-post-divider"></div>
         <div class="post-excerpt">
             <?php
             basilico()->blog->get_excerpt(40);
