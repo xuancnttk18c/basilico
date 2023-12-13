@@ -43,18 +43,14 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
         </div>
         <?php if ($archive_readmore == '1') : ?>
             <div class="button-share d-flex align-items-center">
-                <?php
-                if ($archive_readmore == '1') {
-                    ?>
+                <?php if ($archive_readmore == '1') : ?>
                     <div class="post-btn-wrap pxl-button-wrapper col-sm-6">
-                        <a class="btn btn-primary" href="<?php echo esc_url(get_permalink()); ?>">
+                        <a class="btn btn-default" href="<?php echo esc_url(get_permalink()); ?>">
                             <span><?php echo esc_html($archive_readmore_text); ?></span>
                             <i class="zmdi zmdi-long-arrow-right"></i>
                         </a>
                     </div>
-                    <?php
-                }
-                ?>
+                <?php endif; ?>
             </div>
         <?php endif; ?>
     </div>
