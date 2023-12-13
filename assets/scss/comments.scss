@@ -193,9 +193,11 @@
     .comment-content {
         .comment-title {
             font-size: 17px;
-            line-height: 55px;
             font-weight: 700;
-
+        }
+        .comment-reply-link {
+            background-color: $heading_color;
+            color: $secondary_color;
         }
     }
 }
