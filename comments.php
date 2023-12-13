@@ -17,7 +17,7 @@ if($post_comment == '1'):
         <?php
         if ( have_comments() ) : ?>
             <div class="comment-list-wrap">
-                <h4 class="comments-title">COMMENTS</h4>
+                <h4 class="comments-title"><?php esc_html_e('Comments', 'basilico'); ?></h4>
                   
                 <ol class="commentlist">
                     <?php
