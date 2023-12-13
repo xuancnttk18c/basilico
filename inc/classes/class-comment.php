@@ -256,8 +256,17 @@ if (!class_exists('Basilico_Comment')) {
             ];
 
             $theme_style = basilico()->get_theme_opt('theme_style', 'default');
-            if ($theme_style == 'pxl-luxury') $btn_style = 'btn-outline';
-            else $btn_style = 'btn-outline-secondary';
+
+            switch ($theme_style) {
+                case 'pxl-luxury':
+                    $btn_style = 'btn-outline';
+                    break;
+                case 'pxl-pizza':
+                    $btn_style = 'btn-primary';
+                    break;
+                default:
+                    $btn_style = 'btn-outline-secondary';
+            }
 
             $pxl_comment_fields = array(
                 'id_form'              => 'commentform',
