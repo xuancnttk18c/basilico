@@ -324,7 +324,9 @@
         font-weight: 700;
         letter-spacing: 0.1em;
         &:hover {
-            color: #fff;
+            i {
+                color: #fff;
+            }
         }
         &.btn-default {
             overflow: visible;
