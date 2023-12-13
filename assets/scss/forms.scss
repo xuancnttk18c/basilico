@@ -207,6 +207,37 @@ textarea, select,
     }
 }
 
+.pxl-pizza {
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="range"],
+    input[type="date"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="color"],
+    textarea, select,
+    .select2-container.select2-container--default .select2-selection--single {
+        &::placeholder {
+            font-size: 15px;
+        }
+        &:hover, &:focus,&:active {
+            background-color: transparent;
+            border-color: $primary_color;
+        }
+        [dir="rtl"] &{
+            @include border-radius($ff_border_radius_rtl);
+        }
+    }
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
