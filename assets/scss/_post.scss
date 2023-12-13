@@ -39,6 +39,10 @@
 
 .pxl-pizza .post-featured {
 	border: 1px solid $divider_color;
+	img {
+		max-height: 576px;
+		object-fit: cover;
+	}
 }
 
 .post-title {
