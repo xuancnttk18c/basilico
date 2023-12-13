@@ -228,10 +228,10 @@ textarea, select,
         &::placeholder {
             font-size: 15px;
             letter-spacing: 0;
-            font-weight: inherit;
+            font-weight: 500;
         }
         &:hover, &:focus,&:active {
-            border-color: $primary_color;
+            border-color: $divider_color;
         }
         [dir="rtl"] &{
             @include border-radius($ff_border_radius_rtl);
