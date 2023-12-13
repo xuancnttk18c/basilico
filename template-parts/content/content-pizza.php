@@ -32,7 +32,7 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
         </h2>
         <div class="post-excerpt">
             <?php
-            basilico()->blog->get_excerpt(40);
+            basilico()->blog->get_excerpt(25);
             wp_link_pages(array(
                 'before'      => '<div class="page-links">',
                 'after'       => '</div>',
