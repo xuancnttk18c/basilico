@@ -307,6 +307,9 @@
 	}
 	.post-metas {
 		max-width: none;
+		border-color: $secondary_color;
+		border-bottom-color: $divider_color;
+		margin-bottom: 0;
 	}
 }
 
