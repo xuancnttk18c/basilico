@@ -9,9 +9,9 @@
         padding-bottom: 37px;
         border-bottom: 1px solid $divider_color;
     }
-    a {
-        @include multiline-hover-underline($heading_color);
-    }
+    // a {
+    //     @include multiline-hover-underline($heading_color);
+    // }
 }
 
 .pxl-luxury .comments-area {

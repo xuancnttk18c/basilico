@@ -264,6 +264,14 @@
 .pxl-pizza .post-tags-share {
 	max-width: 770px;
 	margin: 0 auto;
+	.label {
+		font-family: $heading_font_family;
+		text-transform: capitalize;
+		font-size: 17px;
+		margin-right: 8px;
+		letter-spacing: 0.03em;
+		color: $heading_color;
+	}
 }
 
 .post-tags-wrap {
