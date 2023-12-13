@@ -227,9 +227,10 @@ textarea, select,
     .select2-container.select2-container--default .select2-selection--single {
         &::placeholder {
             font-size: 15px;
+            letter-spacing: 0;
+            font-weight: inherit;
         }
         &:hover, &:focus,&:active {
-            background-color: transparent;
             border-color: $primary_color;
         }
         [dir="rtl"] &{
