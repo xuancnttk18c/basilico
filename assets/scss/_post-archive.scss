@@ -305,6 +305,9 @@
 			border: 1px solid $divider_color;
 		}
 	}
+	.post-content {
+		border: 1px solid $divider_color;
+	}
 	.main-content {
 		margin-left: 43px;
 		margin-right: 85px;
@@ -318,6 +321,8 @@
 	}
 	.post-title {
 		text-transform: none;
+		font-weight: 400;
+		@include text-truncate-multi-line(30, 1.33, 2);
 	}
 }
 
