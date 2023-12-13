@@ -298,6 +298,7 @@
 	.post-featured {
 		padding: 15px;
 		background-color: #fff;
+		border-right: none;
 		.post-image, img {
 			height: 100%;
 		}
@@ -309,9 +310,7 @@
 		border: 1px solid $divider_color;
 	}
 	.main-content {
-		margin-left: 43px;
-		margin-right: 85px;
-		margin-bottom: 52px;
+		padding: 41px 85px 52px 43px;
 	}
 	.post-metas {
 		max-width: none;
