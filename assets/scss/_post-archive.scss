@@ -296,12 +296,10 @@
 
 .pxl-pizza .pxl-archive-post {
 	.post-featured {
+		padding: 15px;
+		background-color: #fff;
 		.post-image, img {
 			height: 100%;
-		}
-		.post-image {
-			padding: 15px;
-			background-color: #fff;
 			border: 1px solid $divider_color;
 		}
 	}
