@@ -384,13 +384,11 @@
 
 .pxl-pizza .social-share {
 	.pxl-icon {
-		.pxl-icon {
-			border: 1px solid $divider_color;
-			color: $heading_color;
-			&.icon-facebook {
-				&:after {
-					background-color: $facebook_color;
-				}
+		border: 1px solid $divider_color;
+		color: $heading_color;
+		&.icon-facebook {
+			&:after {
+				background-color: $facebook_color;
 			}
 		}
 	}
