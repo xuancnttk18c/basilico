@@ -23,6 +23,9 @@
 .pxl-pizza .comments-area {
     max-width: 770px;
     margin: 62px auto 0;
+    .comment-list-wrap {
+        margin-bottom: 40px;
+    }
 }
  
 .comments-title, .comment-reply-title {
