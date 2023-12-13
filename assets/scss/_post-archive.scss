@@ -305,6 +305,9 @@
 		.post-image {
 			border: 1px solid $divider_color;
 		}
+		img {
+			max-height: none;
+		}
 	}
 	.post-content {
 		border: 1px solid $divider_color;
