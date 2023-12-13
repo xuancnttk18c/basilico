@@ -262,7 +262,7 @@ if (!class_exists('Basilico_Comment')) {
                     $btn_style = 'btn-outline';
                     break;
                 case 'pxl-pizza':
-                    $btn_style = 'btn-primary';
+                    $btn_style = 'btn-default';
                     break;
                 default:
                     $btn_style = 'btn-outline-secondary';
