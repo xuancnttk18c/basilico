@@ -21,7 +21,7 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
         </div>
     <?php } ?>
     <div class="post-content <?php echo has_post_thumbnail() ? 'col-7' : ''; ?>">
-        <?php basilico()->blog->get_archive_meta_pizza(); ?>
+        <?php basilico()->blog->get_archive_metas_pizza(); ?>
         <h2 class="post-title">
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php the_title_attribute(); ?>">
                 <?php if (is_sticky()) { ?>
