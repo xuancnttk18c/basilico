@@ -390,6 +390,37 @@
 			&:after {
 				background-color: $facebook_color;
 			}
+			&:hover {
+				border-color: $facebook_color;
+				color: #fff;
+			}
+		}
+		&.icon-twitter {
+			&:after {
+				background-color: $twitter_color;
+			}
+			&:hover {
+				border-color: $twitter_color;
+				color: #fff;
+			}
+		}
+		&.icon-linkedin {
+			&:after {
+				background-color: $linkedin_color;
+			}
+			&:hover {
+				border-color: $linkedin_color;
+				color: #fff;
+			}
+		}
+		&.icon-pinterest {
+			&:after {
+				background-color: $pinterest_color;
+			}
+			&:hover {
+				border-color: $pinterest_color;
+				color: #fff;
+			}
 		}
 	}
 }
