@@ -255,9 +255,15 @@
 	}
 }
 
-.pxl-luxury .post-tags-share {
+.pxl-luxury .post-tags-share,
+.pxl-pizza .post-tags-share {
 	border-top: 1px solid $divider_color;
 	border-bottom: 1px solid $divider_color;
+}
+
+.pxl-pizza .post-tags-share {
+	max-width: 770px;
+	margin: 0 auto;
 }
 
 .post-tags-wrap {
