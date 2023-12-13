@@ -10,7 +10,7 @@ $post_social_share = basilico()->get_theme_opt('post_social_share', false);
 $featured_video = get_post_meta(get_the_ID(), 'featured-video-url', true);
 $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('pxl-archive-post row'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('pxl-archive-post row gx-0'); ?>>
     <?php if (has_post_thumbnail()) { ?>
         <div class="post-featured col-5">
             <div class="post-image">
