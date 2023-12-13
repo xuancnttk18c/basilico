@@ -295,6 +295,9 @@
 }
 
 .pxl-pizza .pxl-archive-post {
+	&:not(:last-child) {
+		margin-bottom: 35px;
+	}
 	.post-featured {
 		padding: 15px;
 		background-color: #fff;
