@@ -772,15 +772,8 @@
             }
         }
         .item-title {
-            font-size: 25px;
-            line-height: 32px;
-            text-transform: uppercase;
-            a {
-                @include multiline-hover-underline($heading_color);                
-            }
-            @media (max-width: $sm_max) {
-                font-size: 22px;
-            }
+            font-size: 30px;
+            line-height: 40px;
         }
         .item-excerpt {
             margin-top: 17px;
