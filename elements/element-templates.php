@@ -980,7 +980,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
                                 <?php endif; ?>
                                 <?php ?>
                                 <span class="post-share">
-                                    <span class="label"><?php echo esc_html('SHARE:', 'basilico'); ?></span>
+                                    <span class="label"><?php echo esc_html('SHARE POST:', 'basilico'); ?></span>
                                     <?php basilico()->blog->get_post_share($post->ID); ?>
                                 </span>
                                 <?php ?>
