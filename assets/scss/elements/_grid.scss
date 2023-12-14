@@ -795,6 +795,9 @@
             @media (max-width: $xs_max) {
                 padding: 60px 30px 60px 20px;
             }
+            &:after {
+                content: none;
+            }
             .quote-inner,
             .link-inner {
                 .quote-text,
@@ -807,7 +810,7 @@
                 }
                 .pxl-divider {
                     margin: 22px 0 7px;
-                    width: 811px;
+                    width: 114px;
                     &:before {
                         width: 100%;
                     }
