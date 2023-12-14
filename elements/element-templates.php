@@ -833,7 +833,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
                                     if (!empty($quote_cite)) {
                                         ?>
                                         <p class="quote-cite">
-                                            <?php echo esc_html($quote_cite) . esc_html(' - Quote', 'basilico'); ?>
+                                            <?php echo esc_html($quote_cite); ?>
                                         </p>
                                         <?php
                                     }
@@ -863,7 +863,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
                                     <div class="pxl-divider"></div>
                                     <?php if (!empty($link_cite)) : ?>
                                         <p class="link-cite">
-                                            <?php echo esc_attr($link_cite) . esc_html(' - Quote', 'basilico'); ?>
+                                            <?php echo esc_attr($link_cite); ?>
                                         </p>
                                     <?php endif; ?>
                                 </div>
