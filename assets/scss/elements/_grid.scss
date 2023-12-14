@@ -75,9 +75,6 @@
 /* Pxl Post Grid */
 .pxl-post-grid {
     &.layout-post-1 {
-        .post-metas .meta-inner > span:before {
-            content: none;
-        }
         .grid-item {
             margin-bottom: 20px;
         }
@@ -380,7 +377,7 @@
                         transform: translateY(-50%);
                     }
                 }
-                &:after {
+                &:before, &:after {
                     content: none;
                 }
                 &:not(:last-child) {
