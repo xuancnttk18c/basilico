@@ -807,6 +807,10 @@
                 }
                 .pxl-divider {
                     margin: 22px 0 7px;
+                    width: 811px;
+                    &:before {
+                        width: 100%;
+                    }
                 }
                 .quote-cite,
                 .link-cite {
