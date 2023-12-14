@@ -815,24 +815,16 @@
             }
         }
         .format-quote {
-            .format-wrap {
-                &:after {
-                    background-image: url('../images/quote-overlay.png');
-                }
-            }
             .quote-inner {
                 .quote-text {
-                    font-size: 17px;
-                    line-height: 33px;
+                    font-size: 25px;
+                    font-weight: 600;
+                    line-height: 35px;
+                    letter-spacing: 0.05em;
                 }
             }
         }
         .format-link {
-            .format-wrap {
-                &:after {
-                    background-image: url('../images/link-overlay.png');
-                }
-            }
             .link-inner {
                 .link-text {
                     font-size: 25px;
