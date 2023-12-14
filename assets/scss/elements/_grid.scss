@@ -636,6 +636,7 @@
             }
         }
         .post-metas {
+            background-color: $additional_color01;
             margin-top: 6px;
             padding: 26px 0 30px 28px;
             @media (max-width: $sm_max) {
@@ -774,6 +775,7 @@
         .item-title {
             font-size: 30px;
             line-height: 40px;
+            letter-spacing: 0.02em;
             text-transform: none;
         }
         .item-excerpt {
