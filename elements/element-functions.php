@@ -234,7 +234,7 @@ function basilico_get_list_layout_options($posttype_name){
                 ],
                 'post-list-3' => [
                     'label' => esc_html__('Layout 3', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-layout1.jpg'
+                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-layout3.jpg'
                 ],
             ];
             break;
