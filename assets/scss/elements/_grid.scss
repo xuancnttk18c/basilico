@@ -796,7 +796,12 @@
                 padding: 60px 30px 60px 20px;
             }
             &:after {
-                content: none;
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0px;
+                border-bottom: 1px solid #4e4a3d;
             }
             .quote-inner,
             .link-inner {
@@ -822,6 +827,10 @@
             }
         }
         .format-quote {
+            .quote-icon {
+                font-size: 150px;
+                max-height: 100px;
+            }
             .quote-inner {
                 .quote-text {
                     font-size: 25px;
