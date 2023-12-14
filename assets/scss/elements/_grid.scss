@@ -608,6 +608,241 @@
             }
         }
     }
+    &.layout-post-list-3 {
+        .pxl-archive-post {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-color: transparent;
+            &.format-link,
+            &.format-quote {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        .grid-item {
+            .grid-item-inner {
+                padding-bottom: 45px;
+            }
+            &:last-child {
+                .grid-item-inner {
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                    border-color: transparent;
+                }
+                .format-link,
+                .format-quote {
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+        .post-metas {
+            margin-top: 6px;
+            padding: 26px 0 30px 28px;
+            @media (max-width: $sm_max) {
+                margin-top: 30px;
+            }
+        }
+        .meta-inner {
+            .post-tags,
+            .post-author,
+            .post-comments {
+                a {
+                    position: relative;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        background-color: $primary_color;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        max-width: 0;
+                        height: 1px;
+                        @include transition(all 300ms linear);
+                    }
+                    &:hover {
+                        color: $primary_color;
+                        &::before {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+            .post-tags {
+                a {
+                    &:not(:last-child) {
+                        margin-right: 3px;
+                        &:after {
+                            content: ",";
+                        }
+                    }
+                }
+            }
+            > span {
+                position: relative;
+                display: block;
+                font-family: $body_font_family;
+                font-size: 15px;
+                font-weight: 400;
+                color: #fff;
+                letter-spacing: 0.01em;
+                @media (max-width: $sm_max) {
+                    font-size: 14px;
+                }
+                a {
+                    font-size: inherit;
+                    color: inherit;
+                }
+                .label {
+                    position: relative;
+                    padding-left: 15px;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 4px;
+                        height: 4px;
+                        background-color: $primary_color;
+                        border-radius: 50%;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+                &:before, &:after {
+                    content: none;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                    @media (max-width: $sm_max) {
+                        margin-bottom: 18px;
+                    }
+                }
+            }
+            .post-share {
+                display: flex;
+                .post-shares .label {
+                    display: none;
+                }
+                .social-share {
+                    margin-left: 11px;
+                    .pxl-icon {
+                        width: 36px;
+                        height: 36px;
+                        border: 1px solid $primary_color;
+                        color: white;
+                        font-size: 12px;
+                        &:after {
+                            background-color: $primary_color;
+                        }
+                        &:hover {
+                            color: $heading_color;
+                        }
+                    }
+                }
+            }
+        }
+        .item-featured .post-image {
+            position: relative;
+            margin-bottom: 30px;
+            overflow: hidden;
+            .post-date {
+                background-color: $secondary_color;
+                display: inline-block;
+                padding: 22px 18px 18px;
+                position: absolute;
+                bottom: 20px;
+                right: 26px;
+                text-align: center;
+                @media (max-width: $xl_max) {
+                    display: none;
+                }
+                .post-day {
+                    font-family: $heading_font_family;
+                    color: $primary_color;
+                    font-size: 35px;
+                    line-height: 1;
+                    letter-spacing: 0.01em;
+                }
+                .post-month-year {
+                    margin-top: 1px;
+                    font-size: 13px;
+                    letter-spacing: 0.1em;
+                    color: #fff;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .item-title {
+            font-size: 25px;
+            line-height: 32px;
+            text-transform: uppercase;
+            a {
+                @include multiline-hover-underline($heading_color);                
+            }
+            @media (max-width: $sm_max) {
+                font-size: 22px;
+            }
+        }
+        .item-excerpt {
+            margin-top: 17px;
+            margin-bottom: 43px;
+        }
+        .format-wrap {
+            padding: 73px 44px 76px 70px;
+            @media (max-width: $xs_max) {
+                padding: 60px 30px 60px 20px;
+            }
+            .quote-inner,
+            .link-inner {
+                .quote-text,
+                .link-text {
+                    margin: 0;
+                    text-align: left;
+                    @media (min-width: $xl_min) {
+                        max-width: 95%;
+                    }
+                }
+                .pxl-divider {
+                    margin: 22px 0 7px;
+                }
+                .quote-cite,
+                .link-cite {
+                    text-align: left;
+                }
+            }
+        }
+        .format-quote {
+            .format-wrap {
+                &:after {
+                    background-image: url('../images/quote-overlay.png');
+                }
+            }
+            .quote-inner {
+                .quote-text {
+                    font-size: 17px;
+                    line-height: 33px;
+                }
+            }
+        }
+        .format-link {
+            .format-wrap {
+                &:after {
+                    background-image: url('../images/link-overlay.png');
+                }
+            }
+            .link-inner {
+                .link-text {
+                    font-size: 25px;
+                    line-height: 1.6;
+                    @media (max-width: $sm_max) {
+                        font-size: 22px;
+                    }
+                }
+                .link-cite {
+                    margin-top: 29px;
+                }
+            }
+        }
+    }
 }
 
 /* Pxl Portfolio Grid */
