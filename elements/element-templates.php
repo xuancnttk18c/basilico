@@ -841,7 +841,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
                                 </div>
                                 <div class="inner-right col-2 d-flex justify-content-center align-items-center">
                                     <div class="quote-icon">
-                                        <span>"</span>
+                                        <span>“</span>
                                     </div>
                                 </div>
                             </div>
