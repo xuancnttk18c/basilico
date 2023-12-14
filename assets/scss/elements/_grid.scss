@@ -75,6 +75,9 @@
 /* Pxl Post Grid */
 .pxl-post-grid {
     &.layout-post-1 {
+        .post-metas .meta-inner > span:before {
+            content: none;
+        }
         .grid-item {
             margin-bottom: 20px;
         }
