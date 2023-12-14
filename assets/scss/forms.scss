@@ -713,6 +713,14 @@ textarea{
             }
         }
     }
+    &.style-4 {
+        input,
+        select,
+        textarea,
+        .nice-select {
+            background-color: #fff;
+        }
+    }
 }
   
 .pxl-search-form-popup{

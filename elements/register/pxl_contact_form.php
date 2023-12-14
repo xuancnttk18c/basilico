@@ -47,6 +47,7 @@ if(class_exists('WPCF7')) {
                                     'style-df' => esc_html__( 'Default', 'basilico' ),
                                     'style-2' => esc_html__( 'Style 2', 'basilico' ),
                                     'style-3' => esc_html__( 'Style 3', 'basilico' ),
+                                    'style-4' => esc_html__( 'Style 3', 'basilico' ),
                                 ],
                                 'default' => 'style-df',
                             ),
