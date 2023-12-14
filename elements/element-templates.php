@@ -337,6 +337,9 @@ if (!function_exists('basilico_get_post_grid')) {
             case 'post-list-3':
             basilico_get_post_list_layout3($posts, $settings, $args_m);
             break;
+            case 'post-list-4':
+            basilico_get_post_list_layout4($posts, $settings, $args_m);
+            break;
             case 'pxl-portfolio-list-1':
             basilico_get_pxl_portfolio_list_layout1($posts, $settings, $args_m);
             break;
