@@ -721,11 +721,13 @@
             }
             .post-share {
                 display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 18px;
                 .post-shares .label {
                     display: none;
                 }
                 .social-share {
-                    margin-left: 11px;
                     .pxl-icon {
                         width: 36px;
                         height: 36px;
