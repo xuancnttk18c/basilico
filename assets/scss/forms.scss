@@ -719,6 +719,10 @@ textarea{
         textarea,
         .nice-select {
             background-color: #fff;
+            &:hover,
+            &:focus {
+                border-color: $divider_color;
+            }
         }
     }
 }
