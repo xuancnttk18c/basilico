@@ -3353,11 +3353,12 @@
             background-color: $heading_color;
             font-size: 15px;
             font-weight: 700;
-            color: $heading_color;
+            color: $secondary_color;
             text-transform: uppercase;
-            line-height: 40px;
+            line-height: normal;
             border: 1px solid $heading_color;
             display: inline-flex;
+            align-items: center;
             letter-spacing: 0.1em;
             padding: 0 28px;
             flex-grow: 1;
