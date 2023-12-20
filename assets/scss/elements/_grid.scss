@@ -1529,10 +1529,10 @@
         .pxl-grid-inner {
             background-color: #fff;
             border: solid $divider_color;
-            border-width: 1px 0 0 1px;
+            border-width: 1px 0 1px 1px;
             .grid-item {
                 border: solid $divider_color;
-                border-width: 0 1px 1px 0;
+                border-width: 0 1px 0px 0;
                 .item-inner {
                     border: 1px solid $divider_color;
                 }
