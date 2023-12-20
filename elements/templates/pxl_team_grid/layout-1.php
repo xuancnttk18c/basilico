@@ -50,7 +50,7 @@ else
                 $link     = isset($value['link']) ? $value['link'] : '';  
                 $thumbnail = '';
                 if(!empty($image)) {
-        			$img = pxl_get_image_by_size( array(
+                    $img = pxl_get_image_by_size( array(
                         'attach_id'  => $image['id'],
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -86,10 +86,10 @@ else
                     ]);
                     $data_settings = 'data-settings="'.esc_attr($data_animation).'"';
                 }
-            	?>
+                ?>
                 <div class="<?php echo esc_attr($item_class.' '.$animate_cls); ?>" <?php pxl_print_html($data_settings); ?>>
                     <div class="item-inner">
-                    	<?php if(!empty($thumbnail)) { ?>
+                        <?php if(!empty($thumbnail)) { ?>
                             <div class="item-image">
                                 <div class="image-wrap scale-hover-x">
                                     <?php if ( ! empty( $link['url'] ) ): ?><a <?php echo implode( ' ', [ $link_attributes ] ); ?>><?php endif; ?>
