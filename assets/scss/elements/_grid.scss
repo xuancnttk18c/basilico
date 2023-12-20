@@ -1535,7 +1535,7 @@
             background-color: $secondary_color;
             border-radius: 50%;
             a i {
-                font-size: 17px;
+                font-size: 17px !important;
                 color: $heading_color;
             }
         }
