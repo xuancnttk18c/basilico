@@ -26,7 +26,7 @@ pxl_add_custom_widget(
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_team_grid-1.jpg'
                                 ],
                             ],
-                            'prefix_class' => 'pxl-team-grid-layout-',
+                            'prefix_class' => 'pxl-team-list-layout-',
                         ),
                     ),
                 ),
