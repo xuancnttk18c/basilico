@@ -298,9 +298,13 @@ body .mfp-image-holder .mfp-close, body .mfp-iframe-holder .mfp-close {
     top: -40px;
     width: 40px;
     height: 40px;
+    font-size: 35px;
+    line-height: 1;
+    display: flex;
+    text-align: center;
     font-weight: 400;
     color: #fff;
-    padding-right: 7px;
+    padding-right: 0;
     &:before {
         content: none;
     }
