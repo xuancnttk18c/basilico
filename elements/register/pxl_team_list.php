@@ -69,11 +69,30 @@ pxl_add_custom_widget(
                                     'type' => \Elementor\Controls_Manager::URL,
                                     'label_block' => true,
                                 ),
+                                // array(
+                                //     'name' => 'social',
+                                //     'label' => esc_html__( 'Social', 'basilico' ),
+                                //     'type' => 'pxl_icons',
+                                // ),
                                 array(
-                                    'name' => 'social',
+                                    'name' => 'social_2',
                                     'label' => esc_html__( 'Social', 'basilico' ),
-                                    'type' => 'pxl_icons',
+                                    'type' => \Elementor\Controls_Manager::REPEATER,
+                                    'controls' => array(
+                                        array(
+                                            'name' => 'social_text',
+                                            'label' => esc_html__('Text', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::TEXT,
+                                        ),
+                                        array(
+                                            'name' => 'social_link',
+                                            'label' => esc_html__('Link', 'basilico'),
+                                            'type' => \Elementor\Controls_Manager::TEXT,
+                                            'label_block' => true,
+                                        ),
+                                    ),
                                 ),
+
                             ),
                             'title_field' => '{{{ title }}}',
                         ),
