@@ -70,7 +70,7 @@ $img_size = !empty( $img_size ) ? $img_size : '570x630';
             $data_settings = 'data-settings="'.esc_attr($data_animation).'"';
         }
         ?>
-        <div class="<?php echo esc_attr($item_class.' '.$animate_cls); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($animate_cls); ?>" <?php pxl_print_html($data_settings); ?>>
             <div class="item-inner">
                 <?php if(!empty($thumbnail)) { ?>
                     <div class="item-image">
