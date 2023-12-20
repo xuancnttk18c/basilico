@@ -185,6 +185,7 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-grid .pxl-grid-inner' => 'margin-left: -{{VALUE}}px; margin-right: -{{VALUE}}px;',
                                 '{{WRAPPER}} .pxl-grid .grid-item' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px; margin-top: {{VALUE}}px; margin-bottom: {{VALUE}}px;',
+                                '{{WRAPPER}} .layout-5 .pxl-grid .grid-item' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px; padding-top: {{VALUE}}px; padding-bottom: {{VALUE}}px;',
                                 '{{WRAPPER}} .pxl-grid .grid-sizer' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px;',
                             ],
                         ),
