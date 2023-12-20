@@ -518,7 +518,7 @@ pxl_add_custom_widget(
                             'name' => 'image_border',
                             'type' => \Elementor\Group_Control_Border::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} img, {{WRAPPER}} .pxl-bg-parallax',
+                            'selector' => '{{WRAPPER}} .pxl-image-wg, {{WRAPPER}} .pxl-bg-parallax',
                             'separator' => 'before',
                         ],
                         [
