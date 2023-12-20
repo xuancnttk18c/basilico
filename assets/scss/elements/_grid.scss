@@ -1526,9 +1526,13 @@
         }
     }
     &.layout-5 {
+        .pxl-grid-inner {
+            border: solid $divider_color;
+            border-width: 1px 0 0 1px;
+        }
         .grid-item {
-            border: 1px solid black;
-            margin: 0 -1px -1px 0;
+            border: solid $divider_color;
+            border-width: 0 1px 1px 0;
         }
         .up-icon {
             display: inline-flex;
