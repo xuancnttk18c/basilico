@@ -104,8 +104,10 @@
 
             if (scroll_top > header_height) {
                 $(document).find('.pxl-header-main-sticky').addClass('h-fixed');
+                $(document).find('.pxl-header-sticky').addClass('h-fixed');
             }else{
                 $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
+                $(document).find('.pxl-header-sticky').removeClass('h-fixed');
             }
         }
         if ( $(document).find('.pxl-header-mobile-sticky').length > 0 && window_width < 1200  ) {
