@@ -16,7 +16,7 @@ if(class_exists('\Elementor\Plugin')){
     $classes = 'container';
 }
 ?>
-<div class="<?php echo esc_attr($classes);?> pxl-content-container">
+<div class="<?php echo esc_attr($classes);?> pxl-content-container container">
     <div class="row">
         <div id="pxl-content-area" class="col-12">
             <main id="pxl-content-main" class="pxl-content-main">
