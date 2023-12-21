@@ -12,7 +12,6 @@
 }
 
 .pxl-header-sticky,
-.pxl-header-main-sticky,
 .pxl-header-mobile-sticky {
 	position: fixed;
 	top: 0;
@@ -30,6 +29,7 @@
 	}
 }
 
+.pxl-header-main-sticky,
 .pxl-header-mobile-main-sticky{
 	&.h-fixed, &.mh-fixed {
 		position: fixed;
