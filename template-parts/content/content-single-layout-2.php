@@ -24,7 +24,7 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
 }
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(array('pxl-single-post', 'layout-2')); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('pxl-single-post'); ?>>
     <div class="<?php echo esc_attr($content_inner_cls); ?>">
         <?php
         if (has_post_thumbnail()) {
