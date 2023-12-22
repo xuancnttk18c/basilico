@@ -341,15 +341,17 @@ Redux::setSection($opt_name, array(
     'subsection' => true,
     'fields'     => array_merge(
         array(
-            'id'          => 'theme_style',
-            'type'        => 'select',
-            'title'       => esc_html__('Archive Style', 'basilico'),
-            'options'  => array(
-                'default' => esc_html__('Default', 'basilico'),
-                'pxl-luxury' => esc_html__('Style Luxury', 'basilico'),
-                'pxl-pizza' => esc_html__('Style Pizza', 'basilico'),
+            array(
+                'id'          => 'theme_style',
+                'type'        => 'select',
+                'title'       => esc_html__('Archive Style', 'basilico'),
+                'options'  => array(
+                    'default' => esc_html__('Default', 'basilico'),
+                    'pxl-luxury' => esc_html__('Style Luxury', 'basilico'),
+                    'pxl-pizza' => esc_html__('Style Pizza', 'basilico'),
+                ),
+                'default'     => 'default',
             ),
-            'default'     => 'default',
         ),
         basilico_sidebar_pos_opts([ 'prefix' => 'blog_']),
         array(
