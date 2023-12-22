@@ -11,11 +11,6 @@ if(count($tabs_list) > 0){
             </div>
         <?php endif; ?>
         <div class="tabs-title">
-            <div class="title-icon">
-                <?php if(! empty( $settings['selected_icon']['value'] )): ?>
-                    <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
-                <?php endif; ?>
-            </div> 
             <div class="title-wrap">
                 <?php foreach ($tabs_list as $key => $tab) :
                     $title_key = $widget->get_repeater_setting_key( 'tab_title', 'tabs_list', $key );
@@ -29,6 +24,11 @@ if(count($tabs_list) > 0){
                         $widget->add_render_attribute( $title_key, 'class', 'active');
                     }
                     ?>
+                    <div class="title-icon">
+                        <?php if(! empty( $settings['selected_icon']['value'] )): ?>
+                            <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
+                        <?php endif; ?>
+                    </div> 
                     <span <?php pxl_print_html($widget->get_render_attribute_string( $title_key )); ?> data-slide="<?php echo esc_attr($key); ?>">
                         <span><?php echo pxl_print_html($tab['tab_title']); ?></span>
                     </span>
