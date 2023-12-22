@@ -126,6 +126,17 @@ Redux::setSection($opt_name, array(
     'icon'   => 'el-icon-home',
     'fields' => array(
         array(
+            'id'          => 'theme_style',
+            'type'        => 'select',
+            'title'       => esc_html__('Theme Style', 'basilico'),
+            'options'  => array(
+                'default' => esc_html__('Default', 'basilico'),
+                'pxl-luxury' => esc_html__('Luxury', 'basilico'),
+                'pxl-pizza' => esc_html__('Pizza', 'basilico'),
+            ),
+            'default'     => 'default',
+        ),
+        array(
             'id'       => 'favicon',
             'type'     => 'media',
             'title'    => esc_html__('Favicon', 'basilico'),
@@ -340,19 +351,6 @@ Redux::setSection($opt_name, array(
     'icon'  => 'el-icon-list',
     'subsection' => true,
     'fields'     => array_merge(
-        array(
-            array(
-                'id'          => 'theme_style',
-                'type'        => 'select',
-                'title'       => esc_html__('Archive Style', 'basilico'),
-                'options'  => array(
-                    'default' => esc_html__('Default', 'basilico'),
-                    'pxl-luxury' => esc_html__('Style Luxury', 'basilico'),
-                    'pxl-pizza' => esc_html__('Style Pizza', 'basilico'),
-                ),
-                'default'     => 'default',
-            ),
-        ),
         basilico_sidebar_pos_opts([ 'prefix' => 'blog_']),
         array(
             array(

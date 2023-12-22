@@ -13,6 +13,16 @@ $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'post', 'content_col' => 
                     <?php while (have_posts()) {
                         the_post();
                         get_template_part('template-parts/content/content-single', get_post_format());
+                        switch ($theme_style) {
+                            case 'pxl-luxury':
+                                get_template_part( 'template-parts/content/content-single-luxury', 'luxury' );
+                                break;
+                            case 'pxl-pizza':
+                                get_template_part( 'template-parts/content/content-single-pizza', get_post_format() );
+                                break;
+                            default:
+                                get_template_part( 'template-parts/content/content-single', get_post_format());
+                        }
                         if (comments_open() || get_comments_number()) {
                             comments_template();
                         }
