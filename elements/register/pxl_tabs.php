@@ -318,7 +318,7 @@ pxl_add_custom_widget(
                             ],
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-tabs .tabs-title' => 'justify-content: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-tabs .title-wrap' => 'align-items: {{VALUE}};'
+                                '{{WRAPPER}} .pxl-tabs .title-wrap' => 'align-items: {{VALUE}};',
                                 '{{WRAPPER}} .pxl-tabs.layout-6 .title-wrap .tab-title' => 'align-items: {{VALUE}};'
                             ],
                         ),
