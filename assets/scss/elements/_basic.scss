@@ -3400,7 +3400,6 @@
             .title-icon {
                 opacity: 0;
                 line-height: 1;
-                @include transition(all 300ms linear 0ms);
             }
             &.active {
                 color: $primary_color;
