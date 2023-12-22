@@ -9,8 +9,10 @@ $archive_readmore_text = basilico()->get_theme_opt('archive_readmore_text', esc_
 $post_social_share = basilico()->get_theme_opt('post_social_share', false);
 $featured_video = get_post_meta(get_the_ID(), 'featured-video-url', true);
 $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
+
+$theme_style = basilico()->get_theme_opt('theme_style', 'default');
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('pxl-archive-post'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(array('pxl-archive-post', $theme_style)); ?>>
 
     <?php if (has_post_thumbnail()) { ?>
         <div class="post-featured">
