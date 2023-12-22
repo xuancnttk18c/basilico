@@ -512,7 +512,6 @@ pxl_add_custom_widget(
                                     ]
                                 ]
                             ],
-                             
                         ], 
                         [
                             'name' => 'image_border',
