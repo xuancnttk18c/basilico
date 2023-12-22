@@ -4,7 +4,6 @@
  */
 get_header();
 
-$theme_style = basilico()->get_theme_opt('theme_style', 'default');
 $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'post', 'content_col' => '8']); // type: blog, post, page, shop, product
 ?>
     <div class="container">
