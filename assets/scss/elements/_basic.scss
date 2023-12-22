@@ -3397,6 +3397,9 @@
             flex-grow: 1;
             cursor: pointer;
             @include transition(all 300ms linear 0ms);
+            .title-icon i {
+                line-height: 28px;
+            }
             &.active {
                 color: $primary_color;
             }
