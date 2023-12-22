@@ -1,6 +1,6 @@
 <?php
 /* 
- * Template Name: Layout 2
+ * Template Name: Post Layout 2
  * Template Post Type: post
  */
 
