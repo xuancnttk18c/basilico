@@ -188,7 +188,7 @@ if (!class_exists('Basilico_Blog')) {
             $post_tags_on = basilico()->get_theme_opt('post_tag', false);
             
             if ($post_author_on || $post_date_on || $post_categories_on || $post_comments_on) : ?>
-                <div class="post-metas <?php echo $theme_style == 'pxl-luxury' ? 'hover-underline' : ''; ?>">
+                <div class="post-metas <?php echo esc_attr($theme_style) == 'pxl-luxury' ? 'hover-underline' : ''; ?>">
                     <div class="meta-inner d-flex align-items-center">
                         <?php if ($post_author_on) : ?>
                             <span class="post-author d-flex align-items-center">

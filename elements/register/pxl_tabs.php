@@ -42,6 +42,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 5', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
                                 ],
+                                '6' => [
+                                    'label' => esc_html__( 'Layout 5', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
+                                ],
                             ],
                             'prefix_class' => 'pxl-tabs-layout-',
                         ),
@@ -52,6 +56,18 @@ pxl_add_custom_widget(
                     'label'    => esc_html__( 'Content', 'basilico' ),
                     'tab'      => 'content',
                     'controls' => array(
+                        array(
+                            'name'             => 'selected_icon',
+                            'label'            => esc_html__( 'Icon', 'basilico' ),
+                            'type'             => 'icons',
+                            'default'          => [
+                                'library' => 'flaticon',
+                                'value'   => 'flaticon-calling'
+                            ],
+                            'condition' => [
+                                'layout' => '6'
+                            ]
+                        ),
                         array(
                             'name' => 'sub_title',
                             'label' => esc_html__('Sub Title', 'basilico'),
