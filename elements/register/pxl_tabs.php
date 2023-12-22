@@ -61,8 +61,8 @@ pxl_add_custom_widget(
                             'label'            => esc_html__( 'Icon', 'basilico' ),
                             'type'             => 'icons',
                             'default'          => [
-                                'library' => 'flaticon',
-                                'value'   => 'flaticon-calling'
+                                'library' => 'fas',
+                                'value'   => 'fa-pizza-slice'
                             ],
                             'condition' => [
                                 'layout' => '6'

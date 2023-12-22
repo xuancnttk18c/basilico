@@ -3397,7 +3397,6 @@
             flex-grow: 1;
             cursor: pointer;
             @include transition(all 300ms linear 0ms);
-            
             &.active {
                 color: $primary_color;
             }
