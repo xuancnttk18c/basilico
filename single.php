@@ -12,10 +12,9 @@ $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'post', 'content_col' => 
                 <main id="pxl-content-main" class="pxl-content-main">
                     <?php while (have_posts()) {
                         the_post();
-                        get_template_part('template-parts/content/content-single', get_post_format());
                         switch ($theme_style) {
                             case 'pxl-luxury':
-                                get_template_part( 'template-parts/content/content-single-luxury', 'luxury' );
+                                get_template_part( 'template-parts/content/content-single-luxury', get_post_format() );
                                 break;
                             case 'pxl-pizza':
                                 get_template_part( 'template-parts/content/content-single-pizza', get_post_format() );
