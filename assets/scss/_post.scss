@@ -35,7 +35,8 @@
 	position: relative;
 }
 
-.template-post-layout-3 .post-featured {
+.template-post-layout-3 .post-featured,
+.pxl-pizza .post-featured {
 	border: 1px solid $divider_color;
 	img {
 		max-height: 576px;
