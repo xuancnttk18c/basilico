@@ -95,14 +95,14 @@
 
             if (scroll_top > offset_top_nimation && scroll_status == 'up') {
                 $(document).find('.pxl-header-sticky').addClass('h-fixed');
-            } else {
+            } else{
                 $(document).find('.pxl-header-sticky').removeClass('h-fixed');
             }
         }
         if($(document).find('.pxl-header-main-sticky').length > 0 && window_width >= 1200){
             var header_height = $('.pxl-header-desktop').outerHeight();
 
-            if (scroll_top > header_height) {
+            if (scroll_top > header_height && scroll_status == 'up') {
                 $(document).find('.pxl-header-main-sticky').addClass('h-fixed');
             }else{
                 $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
