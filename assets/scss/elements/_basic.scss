@@ -2120,6 +2120,15 @@
     }
 }
 
+.framed-image .pxl-image-wg {
+    padding: 13px;
+    border: 1px solid #000;
+    background-color: #FFF;
+    img {
+        border: 1px solid #000;
+    }
+}
+
 //* Fancy Box
 .pxl-fancy-box {
     text-align: center;
