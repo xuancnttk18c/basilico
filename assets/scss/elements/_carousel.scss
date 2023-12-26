@@ -486,9 +486,13 @@
             color: $heading_color;
             padding-bottom: 15px;
         }
+        .item-info {
+            gap: 28px;
+        }
         .item-rating-star {
             .item-rating i {
-                font-size: 12px;
+                font-size: 15px;
+                margin-right: 0;
                 color: $secondary_color;
             }
         }
