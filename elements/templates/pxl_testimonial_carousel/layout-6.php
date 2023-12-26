@@ -89,41 +89,43 @@ $widget->add_render_attribute( 'carousel', [
                 <div class="pxl-swiper-dots"></div>
             <?php endif; ?>
         </div>
-        <div class="pxl-swiper-thumbs-wrap">
-            <div class="pxl-swiper-thumbs overflow-hidden" data-item ="5" data-gutter ="20">
-                <div class="pxl-thumbs-wrapper swiper-wrapper ">
-                    <?php
-                    $idx = 0;
-                    foreach ($content_list as $key => $value):
-                        $idx++;
-                        $image       = isset($value['image']) ? $value['image'] : [];
-                        $thumbnail = '';
-                        if(!empty($image['id'])) {
-                            $img = pxl_get_image_by_size( array(
-                                'attach_id'  => $image['id'],
-                                'thumb_size' => '250x250',
-                                'class' => 'no-lazyload',
-                            ));
-                            $thumbnail = $img['thumbnail'];
-                        }
-                        ?>
-                        <div class="thumb-item swiper-slide">
-                            <div class="thumbs-wrap">
-                                <div class="item-wrap">
-                                    <?php if(!empty($thumbnail)) :?>
-                                        <div class="item-image col-auto">
-                                            <span class="img-outer">
-                                                <?php echo wp_kses_post($thumbnail); ?>
-                                            </span>
-                                        </div>
-                                    <?php endif; ?>
+        <div class="d-flex">
+            <div class="pxl-swiper-thumbs-wrap">
+                <div class="pxl-swiper-thumbs overflow-hidden" data-item ="5" data-gutter ="20">
+                    <div class="pxl-thumbs-wrapper swiper-wrapper ">
+                        <?php
+                        $idx = 0;
+                        foreach ($content_list as $key => $value):
+                            $idx++;
+                            $image       = isset($value['image']) ? $value['image'] : [];
+                            $thumbnail = '';
+                            if(!empty($image['id'])) {
+                                $img = pxl_get_image_by_size( array(
+                                    'attach_id'  => $image['id'],
+                                    'thumb_size' => '250x250',
+                                    'class' => 'no-lazyload',
+                                ));
+                                $thumbnail = $img['thumbnail'];
+                            }
+                            ?>
+                            <div class="thumb-item swiper-slide">
+                                <div class="thumbs-wrap">
+                                    <div class="item-wrap">
+                                        <?php if(!empty($thumbnail)) :?>
+                                            <div class="item-image col-auto">
+                                                <span class="img-outer">
+                                                    <?php echo wp_kses_post($thumbnail); ?>
+                                                </span>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
-                    <a class="btn-circle-more" href="#">...</a>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
+            <a class="btn-circle-more">...</a>
         </div>
     </div>
 <?php endif; ?>
