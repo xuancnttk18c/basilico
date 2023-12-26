@@ -928,6 +928,11 @@
                 min-height: 173px;
                 display: flex;
                 align-items: center;
+                &:hover {
+                    .item-image {
+                        @include transform(translateY(-10px));
+                    }
+                }
             }
             .item-image {
                 position: relative;
