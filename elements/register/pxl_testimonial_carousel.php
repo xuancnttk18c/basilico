@@ -109,6 +109,14 @@ pxl_add_custom_widget(
                             ),
                             'title_field' => '{{{ title }}}',
                         ),
+                        array(
+                            'name' => 'show_button',
+                            'label' => esc_html__('Show Button', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                            'condition' => [
+                                'layout' => '6'
+                            ]
+                        ),
                     ),
                 ),
                 array(
