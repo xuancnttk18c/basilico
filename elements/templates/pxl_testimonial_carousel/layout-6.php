@@ -125,7 +125,7 @@ $widget->add_render_attribute( 'carousel', [
                     </div>
                 </div>
             </div>
-            <a class="btn-circle-more">...</a>
+            <a class="btn-circle-more" href="#">...</a>
         </div>
     </div>
 <?php endif; ?>

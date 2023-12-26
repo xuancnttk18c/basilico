@@ -482,6 +482,7 @@
             }
             img{
                 width: 100%;
+                filter: grayscale(0);
                 @include border-radius(50%);
             }
         }
@@ -523,11 +524,15 @@
                 &.swiper-slide-thumb-active {
                     .img-outer {
                         border-color: $secondary_color;
+                        img {
+                            filter: grayscale(1);
+                        }
                     }
                 }
             }
         }
         .btn-circle-more {
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -537,6 +542,8 @@
             border-radius: 50%;
             font-family: Myriad-Pro;
             font-size: 50px;
+            line-height: 42px;
+            text-align: center;
             letter-spacing: 0.03em;
         }
     }
