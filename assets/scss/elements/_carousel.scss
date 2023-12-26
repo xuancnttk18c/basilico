@@ -461,6 +461,12 @@
                 max-width: 885px;
             }
         }
+        .icon-wrapper {
+            svg {
+                width: 79px;
+                fill: $secondary_color;
+            }   
+        }
         .item-quote-icon {
             font-family: $heading_font_family;
             color: $primary_color;
