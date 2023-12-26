@@ -1600,6 +1600,10 @@
                         &:before {
                             @include transform(scaleY(1));
                         }
+                        &:after {
+                            opacity: 1;
+                            visibility: visible;
+                        }
                     }
                 }
             }
