@@ -4,8 +4,8 @@ $default_settings = [
 ];
 $settings = array_merge($default_settings, $settings);
 extract($settings);
-$arrows = $widget->get_setting('arrows','false');  
-$dots = $widget->get_setting('dots','false');  
+$arrows = $widget->get_setting('arrows', 'false');  
+$dots = $widget->get_setting('dots', 'false');  
 
 $opts = [
     'slide_direction'               => 'horizontal',
