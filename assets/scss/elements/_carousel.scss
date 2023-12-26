@@ -532,15 +532,14 @@
             }
         }
         .btn-circle-more {
+            margin-top: 42px;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             width: 68px;
             height: 68px;
             background-color: $heading_color;
             border-radius: 50%;
             font-family: Myriad-Pro;
+            color: #fff;
             font-size: 50px;
             line-height: 42px;
             text-align: center;
