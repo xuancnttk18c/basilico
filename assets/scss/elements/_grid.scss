@@ -1631,7 +1631,19 @@
 }
 
 @keyframes pxl-bg-scroll-x {
-    to {
-        background-position: 0 -100%;
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: -50% 0;
+    }
+    50% {
+        background-position: 0 0;
+    }
+    75% {
+        background-position: 50% 0;
+    }
+    100% {
+        background-position: 0 0;
     }
 }
