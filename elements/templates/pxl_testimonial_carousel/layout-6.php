@@ -67,7 +67,6 @@ $widget->add_render_attribute( 'carousel', [
                                             <span class="img-outer">
                                                 <?php echo wp_kses_post($thumbnail); ?>
                                             </span>
-                                            <span class="image-icon"><i class="fas fa-quote-right"></i></span>
                                         </div>
                                     <?php endif; ?>
                                 </div>
