@@ -62,10 +62,14 @@ $widget->add_render_attribute('carousel', [
                     ?>
                         <div class="pxl-swiper-slide swiper-slide">
                             <div class="item-inner relative text-center">
-                                <?php if ($quote_icon_type === 'icon' && !empty($settings['quote_icon']['value'])) : ?>
-                                    <?php \Elementor\Icons_Manager::render_icon($settings['quote_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
-                                <?php else : ?>
+                                <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) : ?>
+                                    <div class="icon-wrapper">
+                                        <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
+                                    </div>
+                                <?php if ($quote_icon_type == 'text') : ?>
                                     <div class="item-quote-icon">“</div>
+                                <?php endif; ?>
+                                <?php else : ?>
                                 <?php endif; ?>
                                 <?php if (!empty($testimonial_title)) { ?>
                                 <h4 class="testimonial-title"><?php echo esc_html($testimonial_title); ?></h4>
