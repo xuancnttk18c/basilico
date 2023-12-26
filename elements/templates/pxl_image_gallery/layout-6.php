@@ -71,7 +71,7 @@ if ($layout_mode == 'masonry') {
     }
 }
 ?>
-<div class="pxl-grid pxl-image-gallery images-light-box layout-5" data-layout-mode="<?php echo esc_attr($layout_mode); ?>">
+<div class="pxl-grid pxl-image-gallery images-light-box layout-6" data-layout-mode="<?php echo esc_attr($layout_mode); ?>">
     <div class="<?php echo esc_attr($grid_class) ?>">
         <?php foreach ($randGallery as $key => $value) :
             $image = isset($value['id']) ? $value['id'] : '';
