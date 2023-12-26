@@ -480,9 +480,10 @@
             }
         }
         .item-desc {
-            font-family: $heading_font_family;
-            font-size: 17px;
-            line-height: 30px;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 35px;
+            letter-spacing: 0.01em;
             color: $heading_color;
             padding-bottom: 15px;
         }
@@ -497,8 +498,10 @@
             }
         }
         .item-title {
+            font-family: $body_font_family;
             font-size: 17px;
-            letter-spacing: 0.1em;
+            font-weight: 700;
+            letter-spacing: 0.03em;
             margin-bottom: 3px;
         }
         .item-position {
