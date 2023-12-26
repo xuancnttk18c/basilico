@@ -455,6 +455,12 @@
         }
     }
     &.layout-6 {
+        .swiper-slide {
+            justify-content: left;
+            .item-inner {
+                max-width: 885px;
+            }
+        }
         .testimonial-title {
             font-size: 22px;
             font-weight: 500;
