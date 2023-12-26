@@ -930,7 +930,7 @@
                 align-items: center;
                 &:hover {
                     .item-image {
-                        @include transform(translateY(-10px));
+                        @include transform(translateY(-5px));
                     }
                 }
             }
