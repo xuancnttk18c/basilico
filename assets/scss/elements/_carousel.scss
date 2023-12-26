@@ -914,10 +914,19 @@
         }   
     }
     &.layout-2 {
+        .pxl-swiper-wrapper {
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            .pxl-swiper-slide {
+                + .pxl-swiper-slide {
+                    border-left: 1px solid #000;
+                }
+            }
+        }
         .item-image {
             position: relative;
             @include transition(all 300ms linear 0s);
-            margin: 30px 0;
+            margin: 49px 0;
             a {
                 text-align: center;
                 display: block;
