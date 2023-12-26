@@ -57,7 +57,7 @@ $widget->add_render_attribute( 'carousel', [
                     <div class="pxl-swiper-slide swiper-slide">
                         <div class="item-inner">
                             <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
-                            <div class="item-info d-flex">
+                            <div class="item-info d-flex align-items-center">
                                 <div class="item-info-wrapper">
                                     <h4 class="item-title"><?php echo esc_html($title); ?></h4>
                                     <div class="item-position"><?php echo esc_html($position); ?></div>

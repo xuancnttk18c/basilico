@@ -487,8 +487,10 @@
             padding-bottom: 15px;
         }
         .item-rating-star {
-            margin-top: 5px;
-            margin-bottom: 24px;
+            .item-rating i {
+                font-size: 12px;
+                color: $secondary_color;
+            }
         }
         .item-title {
             font-size: 17px;
