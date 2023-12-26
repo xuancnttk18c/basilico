@@ -465,7 +465,7 @@
         .icon-wrapper {
             position: absolute;
             top: 0;
-            left: 0;
+            left: -50px;
             @include transform(translateX(-100%));
             svg {
                 width: 79px;
