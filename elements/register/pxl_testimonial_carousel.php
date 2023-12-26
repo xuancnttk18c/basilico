@@ -126,6 +126,10 @@ pxl_add_custom_widget(
                                 'url'         => '#',
                                 'is_external' => 'on'
                             ],
+                            'condition' => [
+                                'layout' => '6',
+                                'show_button' => 'true'
+                            ]
                         ),
                     ),
                 ),
