@@ -156,7 +156,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Icon', 'basilico' ),
                             'type' => 'icons',
                             'condition' => [
-                                'layout' => ['2', '3', '5']
+                                'layout' => ['2', '3', '5', '6']
                             ]
                         ),
                         array(
@@ -172,6 +172,9 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-image-gallery .up-icon i' => 'font-size: {{SIZE}}{{UNIT}} !important;',
                             ],
+                            'condition' => [
+                                'layout' => ['2', '3', '5', '6']
+                            ]
                         ),
                     ),
                 ),
