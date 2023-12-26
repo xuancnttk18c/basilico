@@ -43,6 +43,7 @@ $widget->add_render_attribute( 'carousel', [
     <div class="pxl-swiper-slider pxl-testimonial-carousel layout-<?php echo esc_attr($settings['layout'])?>">
         <div class="pxl-swiper-thumbs-wrap d-flex justify-content-center">
             <div class="pxl-swiper-thumbs overflow-hidden" data-drag = "false" data-center = "true" data-item ="5" data-gutter ="30" data-loop ="<?php echo esc_html($widget->get_setting('infinite','true'));?>">
+                <?php var_dump(esc_html($widget->get_setting('infinite','true'))); ?>
                 <div class="pxl-thumbs-wrapper swiper-wrapper ">
                     <?php
                     $idx = 0;
