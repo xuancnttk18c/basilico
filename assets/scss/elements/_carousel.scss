@@ -455,6 +455,7 @@
         }
     }
     &.layout-6 {
+        position: relative;
         .swiper-slide {
             justify-content: left;
             .item-inner {
@@ -462,6 +463,10 @@
             }
         }
         .icon-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include transform(translateX(-100%));
             svg {
                 width: 79px;
                 fill: $secondary_color;
