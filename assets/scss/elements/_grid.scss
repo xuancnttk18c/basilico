@@ -1596,6 +1596,20 @@
                         visibility: hidden;
                         @include transition();
                     }
+                    .up-icon {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 60px;
+                        height: 60px;
+                        background-color: $secondary_color;
+                        border-radius: 50%;
+                        z-index: 3;
+                        a i {
+                            font-size: 21px !important;
+                            color: $heading_color;
+                        }
+                    }
                     &:hover {
                         &:before {
                             @include transform(scaleY(1));
@@ -1612,20 +1626,6 @@
             margin-top: 19px;
             margin-bottom: 9px;
             color: $heading_color;
-        }
-        .up-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background-color: $secondary_color;
-            border-radius: 50%;
-            z-index: 3;
-            a i {
-                font-size: 21px !important;
-                color: $heading_color;
-            }
         }
     }
 }
