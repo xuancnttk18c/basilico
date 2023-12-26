@@ -491,7 +491,7 @@
             line-height: 35px;
             letter-spacing: 0.01em;
             color: $heading_color;
-            padding-bottom: 15px;
+            padding-bottom: 34px;
         }
         .item-info {
             gap: 28px;
@@ -520,7 +520,7 @@
         .pxl-thumbs-wrapper {
             .thumb-item {
                 cursor: pointer;
-                padding-top: 50px;
+                padding-top: 42px;
                 &.swiper-slide-thumb-active {
                     .img-outer {
                         border-color: $secondary_color;
