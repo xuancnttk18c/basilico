@@ -1589,8 +1589,9 @@
                         right: 0;
                         bottom: 0;
                         background-image: url(../images/dot-bg-overlay.png);
-                        background-repeat: no-repeat;
-                        background-position: 0 0;
+                        background-repeat: repeat-x;
+                        background-size: 50%;
+                        animation: pxl-bg-scroll-x 15s linear infinite;
                         z-index: 2;
                         opacity: 0;
                         visibility: hidden;
@@ -1627,5 +1628,11 @@
                 color: $heading_color;
             }
         }
+    }
+}
+
+@keyframes pxl-bg-scroll-x {
+    to {
+        background-position: -100% 0;
     }
 }
