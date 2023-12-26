@@ -4,17 +4,16 @@ $default_settings = [
 ];
 
 if(!empty($settings['button_link']['url'])){
-    $widget->add_render_attribute( 'link', 'href', $settings['link']['url'] );
-    $widget->add_render_attribute( 'link', 'class', 'btn '.$settings['style'] );
-    if ( $settings['link']['is_external'] ) {
+    $widget->add_render_attribute( 'link', 'href', $settings['button_link']['url'] );
+    if ( $settings['button_link']['is_external'] ) {
         $widget->add_render_attribute( 'link', 'target', '_blank' );
     }
-    if ( $settings['link']['nofollow'] ) {
+    if ( $settings['button_link']['nofollow'] ) {
         $widget->add_render_attribute( 'link', 'rel', 'nofollow' );
     }
-    if ( ! empty( $settings['link']['custom_attributes'] ) ) {
+    if ( ! empty( $settings['button_link']['custom_attributes'] ) ) {
         // Custom URL attributes should come as a string of comma-delimited key|value pairs
-        $custom_attributes = Utils::parse_custom_attributes( $settings['link']['custom_attributes'] );
+        $custom_attributes = Utils::parse_custom_attributes( $settings['button_link']['custom_attributes'] );
         $widget->add_render_attribute( 'link', $custom_attributes);
     }
 }
@@ -144,7 +143,7 @@ $widget->add_render_attribute( 'carousel', [
                 </div>
             </div>
             <?php if ($show_button == 'true') : ?>
-                <a class="btn-circle-more" <?php implode( ' ', [ $link_attributes ] ) ?>>...</a>
+                <a class="btn-circle-more">...</a>
             <?php endif; ?>
         </div>
     </div>
