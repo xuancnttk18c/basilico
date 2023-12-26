@@ -1589,8 +1589,8 @@
                         right: 0;
                         bottom: 0;
                         background-image: url(../images/dot-bg-overlay.png);
-                        background-repeat: repeat-y;
-                        animation: pxl-bg-scroll-y 15s linear infinite;
+                        background-repeat: repeat-x;
+                        animation: pxl-bg-scroll-x 15s linear infinite;
                         z-index: 2;
                         opacity: 0;
                         visibility: hidden;
@@ -1630,7 +1630,7 @@
     }
 }
 
-@keyframes pxl-bg-scroll-y {
+@keyframes pxl-bg-scroll-x {
     to {
         background-position: 0 -100%;
     }
