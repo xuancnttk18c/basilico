@@ -461,6 +461,18 @@
                 max-width: 885px;
             }
         }
+        .item-quote-icon {
+            font-family: $heading_font_family;
+            color: $primary_color;
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .pxl-icon {
+            font-size: 20px;
+            color: $secondary_color;
+            @include transition(transform 0.3s linear);
+        }
         .testimonial-title {
             font-size: 22px;
             font-weight: 500;
@@ -532,7 +544,7 @@
             }
         }
         .btn-circle-more {
-            margin-top: 42px;
+            margin-top: 44px;
             cursor: pointer;
             width: 68px;
             height: 68px;
