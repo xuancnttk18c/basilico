@@ -261,7 +261,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-testimonial-carousel .item-quote-icon' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-testimonial-carousel .icon-wrapper' => 'fill: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-testimonial-carousel .icon-wrapper svg' => 'fill: {{VALUE}};',
                             ],
                         ),
                         array(
