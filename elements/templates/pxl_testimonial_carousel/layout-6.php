@@ -2,6 +2,23 @@
 $default_settings = [
     'content_list' => [],
 ];
+
+if(!empty($settings['button_link']['url'])){
+    $widget->add_render_attribute( 'link', 'href', $settings['link']['url'] );
+    $widget->add_render_attribute( 'link', 'class', 'btn '.$settings['style'] );
+    if ( $settings['link']['is_external'] ) {
+        $widget->add_render_attribute( 'link', 'target', '_blank' );
+    }
+    if ( $settings['link']['nofollow'] ) {
+        $widget->add_render_attribute( 'link', 'rel', 'nofollow' );
+    }
+    if ( ! empty( $settings['link']['custom_attributes'] ) ) {
+        // Custom URL attributes should come as a string of comma-delimited key|value pairs
+        $custom_attributes = Utils::parse_custom_attributes( $settings['link']['custom_attributes'] );
+        $widget->add_render_attribute( 'link', $custom_attributes);
+    }
+}
+$link_attributes = $widget->get_render_attribute_string( 'link' );
    
 $settings = array_merge($default_settings, $settings);
 extract($settings);
@@ -92,7 +109,7 @@ $widget->add_render_attribute( 'carousel', [
         </div>
         <div class="d-flex">
             <div class="pxl-swiper-thumbs-wrap">
-                <div class="pxl-swiper-thumbs overflow-hidden" data-item ="5" data-gutter ="20">
+                <div class="pxl-swiper-thumbs overflow-hidden" data-item="5" data-gutter="20">
                     <div class="pxl-thumbs-wrapper swiper-wrapper ">
                         <?php
                         $idx = 0;
@@ -127,7 +144,7 @@ $widget->add_render_attribute( 'carousel', [
                 </div>
             </div>
             <?php if ($show_button == 'true') : ?>
-                <a class="btn-circle-more" href="#">...</a>
+                <a class="btn-circle-more" <?php implode( ' ', [ $link_attributes ] ) ?>>...</a>
             <?php endif; ?>
         </div>
     </div>

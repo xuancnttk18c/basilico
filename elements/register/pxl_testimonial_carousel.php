@@ -117,6 +117,20 @@ pxl_add_custom_widget(
                                 'layout' => '6'
                             ]
                         ),
+                        rray(
+                            'name'        => 'button_link',
+                            'label'       => esc_html__( 'Button Link', 'basilico' ),
+                            'type'        => 'url',
+                            'placeholder' => esc_html__( 'https://your-link.com', 'basilico' ),
+                            'default'     => [
+                                'url'         => '#',
+                                'is_external' => 'on'
+                            ],
+                            'condition' => [
+                                'layout' => '6',
+                                'show_button' => 'true'
+                            ],
+                        ),
                     ),
                 ),
                 array(
