@@ -189,7 +189,7 @@
                 var itemView = parseInt(carousel_thumb.data("item"));
                 var galleryThumbs = new Swiper(carousel_thumb, {
                     spaceBetween: 0,
-                    slidesPerView: 5,
+                    slidesPerView: 3,
                     freeMode: true,
                     watchSlidesProgress: true,
                     centeredSlides: center,
