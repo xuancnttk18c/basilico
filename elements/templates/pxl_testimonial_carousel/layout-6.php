@@ -6,7 +6,7 @@ $default_settings = [
 $settings = array_merge($default_settings, $settings);
 extract($settings);
 
-$show_button = $widget->get_setting('show_button', 'true');
+$show_button = $widget->get_setting('show_button', 'false');
 $arrows = $widget->get_setting('arrows','false');
 $dots = $widget->get_setting('dots','false');  
 
@@ -126,7 +126,7 @@ $widget->add_render_attribute( 'carousel', [
                     </div>
                 </div>
             </div>
-            <?php if ($show_button == true) : ?>
+            <?php if ($show_button == 'true') : ?>
                 <a class="btn-circle-more" href="#">...</a>
             <?php endif; ?>
         </div>
