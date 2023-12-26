@@ -1526,6 +1526,11 @@
         }
     }
     &.layout-5 {
+        &:has(.image-caption) {
+            .item-inner {
+                border: 1px solid $divider_color;
+            }
+        }
         .pxl-grid-inner {
             background-color: #fff;
             border: solid $divider_color;
@@ -1533,9 +1538,6 @@
             .grid-item {
                 border: solid $divider_color;
                 border-width: 0 1px 1px 0;
-                .item-inner {
-                    border: 1px solid $divider_color;
-                }
             }
         }
         .image-caption {
