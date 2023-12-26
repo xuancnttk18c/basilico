@@ -482,7 +482,7 @@
             }
             img{
                 width: 100%;
-                filter: grayscale(0);
+                filter: grayscale(1);
                 @include border-radius(50%);
             }
         }
@@ -525,7 +525,7 @@
                     .img-outer {
                         border-color: $secondary_color;
                         img {
-                            filter: grayscale(1);
+                            filter: grayscale(0);
                         }
                     }
                 }
