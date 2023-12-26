@@ -143,7 +143,7 @@ $widget->add_render_attribute( 'carousel', [
                 </div>
             </div>
             <?php if ($show_button == 'true') : ?>
-                <a class="btn-circle-more">...</a>
+                <a class="btn-circle-more" <?php implode( ' ', [ $link_attributes ] ) ?>>...</a>
             <?php endif; ?>
         </div>
     </div>
