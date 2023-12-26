@@ -526,6 +526,18 @@
                     }
                 }
             }
+            .btn-circle-more {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 68px;
+                height: 68px;
+                background-color: $heading_color;
+                border-radius: 50%;
+                font-family: Myriad-Pro;
+                font-size: 50px;
+                letter-spacing: 0.03em;
+            }
         }
     }
 }
