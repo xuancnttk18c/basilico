@@ -41,6 +41,54 @@ $widget->add_render_attribute( 'carousel', [
 ?>
 <?php if(isset($content_list) && !empty($content_list) && count($content_list)): ?>
     <div class="pxl-swiper-slider pxl-testimonial-carousel layout-<?php echo esc_attr($settings['layout'])?>">
+        <?php
+        if (!empty($settings['testimonial_title'])){
+            ?><h4 class="testimonial-title"><?php echo esc_html($settings['testimonial_title']); ?></h4><?php
+        }
+        ?>
+        <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
+            <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+                <div class="pxl-swiper-wrapper swiper-wrapper">
+                <?php foreach ($content_list as $key => $value):
+                    $description = isset($value['description']) ? $value['description'] : '';
+                    $title       = isset($value['title']) ? $value['title'] : '';
+                    $position    = isset($value['position']) ? $value['position'] : '';
+                    ?>
+                    <div class="pxl-swiper-slide swiper-slide">
+                        <div class="item-inner">
+                            <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
+                            <div class="item-info d-flex">
+                                <div class="item-info-wrapper">
+                                    <h4 class="item-title"><?php echo esc_html($title); ?></h4>
+                                    <div class="item-position"><?php echo esc_html($position); ?></div>
+                                </div>
+                                <?php if(!empty($value['rating']) && $value['rating'] != 'none') : ?>
+                                    <div class="item-rating-star">
+                                        <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
+                                            <i class="pxli-star1"></i>
+                                            <i class="pxli-star1"></i>
+                                            <i class="pxli-star1"></i>
+                                            <i class="pxli-star1"></i>
+                                            <i class="pxli-star1"></i>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+                </div>
+            </div>
+            <?php if($arrows !== 'false'): ?>
+                <div class="pxl-swiper-arrows style-default nav-vertical-out">
+                    <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxli-arrow-left"></span></div>
+                    <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxli-arrow-right"></span></div>
+                </div>
+            <?php endif; ?>
+            <?php if($dots !== 'false'): ?>
+                <div class="pxl-swiper-dots"></div>
+            <?php endif; ?>
+        </div>
         <div class="pxl-swiper-thumbs-wrap">
             <div class="pxl-swiper-thumbs overflow-hidden" data-item ="5" data-gutter ="20">
                 <div class="pxl-thumbs-wrapper swiper-wrapper ">
@@ -75,52 +123,6 @@ $widget->add_render_attribute( 'carousel', [
                     <?php endforeach; ?>
                 </div>
             </div>
-        </div>
-        <?php
-        if (!empty($settings['testimonial_title'])){
-            ?><h4 class="testimonial-title"><?php echo esc_html($settings['testimonial_title']); ?></h4><?php
-        }
-        ?>
-        <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
-            <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-                <div class="pxl-swiper-wrapper swiper-wrapper">
-                <?php foreach ($content_list as $key => $value):
-                    $description = isset($value['description']) ? $value['description'] : '';
-                    $title       = isset($value['title']) ? $value['title'] : '';
-                    $position    = isset($value['position']) ? $value['position'] : '';
-                    ?>
-                    <div class="pxl-swiper-slide swiper-slide">
-                        <div class="item-inner">
-                            <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
-                            <div class="item-info">
-                                <?php if(!empty($value['rating']) && $value['rating'] != 'none') : ?>
-                                    <div class="item-rating-star">
-                                        <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
-                                            <i class="pxli-star1"></i>
-                                            <i class="pxli-star1"></i>
-                                            <i class="pxli-star1"></i>
-                                            <i class="pxli-star1"></i>
-                                            <i class="pxli-star1"></i>
-                                        </div>
-                                    </div>
-                                <?php endif; ?>
-                                <h4 class="item-title"><?php echo esc_html($title); ?></h4>
-                                <div class="item-position"><?php echo esc_html($position); ?></div>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-                </div>
-            </div>
-            <?php if($arrows !== 'false'): ?>
-                <div class="pxl-swiper-arrows style-default nav-vertical-out">
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxli-arrow-left"></span></div>
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxli-arrow-right"></span></div>
-                </div>
-            <?php endif; ?>
-            <?php if($dots !== 'false'): ?>
-                <div class="pxl-swiper-dots"></div>
-            <?php endif; ?>
         </div>
     </div>
 <?php endif; ?>
