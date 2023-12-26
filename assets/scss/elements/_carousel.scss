@@ -923,19 +923,25 @@
                 }
             }
         }
-        .item-image {
-            position: relative;
-            @include transition(all 300ms linear 0s);
-            margin: 49px 0;
-            a {
-                text-align: center;
-                display: block;
+        .pxl-swiper-slide {
+            .item-inner {
+                min-height: 173px;
+                display: flex;
+                align-items: center;
             }
-            img {
-                display: inline-block;
-                max-height: 95px;
-                width: auto !important;
+            .item-image {
+                position: relative;
                 @include transition(all 300ms linear 0s);
+                a {
+                    text-align: center;
+                    display: block;
+                }
+                img {
+                    display: inline-block;
+                    max-height: 95px;
+                    width: auto !important;
+                    @include transition(all 300ms linear 0s);
+                }
             }
         }
     }
