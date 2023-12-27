@@ -8,6 +8,7 @@ extract($settings);
 
 $arrows = $widget->get_setting('arrows', 'false');
 $dots = $widget->get_setting('dots', 'false');
+$quote_icon_type = $widget->get_setting('quote_icon_type', 'text');
 
 $opts = [
     'slide_direction'               => 'horizontal',
@@ -61,15 +62,14 @@ $widget->add_render_attribute('carousel', [
                     ?>
                         <div class="pxl-swiper-slide swiper-slide">
                             <div class="item-inner relative text-center">
-                                <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) : ?>
+                                <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) { ?>
                                     <div class="icon-wrapper">
                                         <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
                                     </div>
-                                <?php if ($quote_icon_type == 'text') : ?>
+                                <?php } ?>
+                                <?php if ($quote_icon_type == 'text') { ?>
                                     <div class="item-quote-icon">“</div>
-                                <?php endif; ?>
-                                <?php else : ?>
-                                <?php endif; ?>
+                                <?php } ?>
                                 <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
                                 <div class="pxl-divider"></div>
                                 <div class="item-wrap row gx-20 justify-content-center">
