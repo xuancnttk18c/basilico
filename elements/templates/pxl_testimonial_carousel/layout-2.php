@@ -8,6 +8,7 @@ extract($settings);
 
 $arrows = $widget->get_setting('arrows', 'false');
 $dots = $widget->get_setting('dots', 'false');
+$quote_icon_type = $widget->get_setting('quote_icon_type', 'text');
 
 $opts = [
     'slide_direction'               => 'horizontal',
@@ -68,8 +69,6 @@ $widget->add_render_attribute('carousel', [
                                     </div>
                                 <?php if ($quote_icon_type == 'text') : ?>
                                     <div class="item-quote-icon">“</div>
-                                <?php endif; ?>
-                                <?php else : ?>
                                 <?php endif; ?>
                                 <?php if (!empty($testimonial_title)) { ?>
                                 <h4 class="testimonial-title"><?php echo esc_html($testimonial_title); ?></h4>
