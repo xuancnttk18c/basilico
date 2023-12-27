@@ -158,68 +158,39 @@ function basilico_get_post_grid_layout($pt_supports = []){
 function basilico_get_grid_layout_options($posttype_name){
     $option_layouts = [];
     $theme_style = basilico()->get_theme_opt('theme_style', 'default');
-    if ($theme_style == 'pxl-pizza') {
-        switch ($posttype_name) {
-            case 'pxl-portfolio':
-            $option_layouts = [
-                'pxl-portfolio-5' => [
-                    'label' => esc_html__('Layout 5', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-2.jpg'
-                ],
-            ];
-            break;
-            case 'post':
-            $option_layouts = [];
-            break;
-        }    
-    }
-    elseif ($theme_style == 'pxl-luxury') {
-        switch ($posttype_name) {
-            case 'pxl-portfolio':
-            $option_layouts = [
-                'pxl-portfolio-3' => [
-                    'label' => esc_html__('Layout 3', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-3.jpg'
-                ],
-                'pxl-portfolio-4' => [
-                    'label' => esc_html__('Layout 4', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-4.jpg'
-                ],
-            ];
-            break;
-            case 'post':
-            $option_layouts = [
-                'post-1' => [
-                    'label' => esc_html__('Layout 1', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-layout1.jpg'
-                ],
-            ];
-            break;
-        }
-    }
-    else {
-        switch ($posttype_name) {
-            case 'pxl-portfolio':
-            $option_layouts = [
-                'pxl-portfolio-1' => [
-                    'label' => esc_html__('Layout 1', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-1.jpg'
-                ],
-                'pxl-portfolio-2' => [
-                    'label' => esc_html__('Layout 2', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-2.jpg'
-                ],
-            ];
-            break;
-            case 'post':
-            $option_layouts = [
-                'post-1' => [
-                    'label' => esc_html__('Layout 1', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-layout1.jpg'
-                ],
-            ];
-            break;
-        }
+    switch ($posttype_name) {
+        case 'pxl-portfolio':
+        $option_layouts = [
+            'pxl-portfolio-1' => [
+                'label' => esc_html__('Layout 1', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-1.jpg'
+            ],
+            'pxl-portfolio-2' => [
+                'label' => esc_html__('Layout 2', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-2.jpg'
+            ],
+            'pxl-portfolio-3' => [
+                'label' => esc_html__('Layout 3', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-3.jpg'
+            ],
+            'pxl-portfolio-4' => [
+                'label' => esc_html__('Layout 4', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-4.jpg'
+            ],
+            'pxl-portfolio-5' => [
+                'label' => esc_html__('Layout 5', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-2.jpg'
+            ],
+        ];
+        break;
+        case 'post':
+        $option_layouts = [
+            'post-1' => [
+                'label' => esc_html__('Layout 1', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-layout1.jpg'
+            ],
+        ];
+        break;
     }
     return $option_layouts;
 }
