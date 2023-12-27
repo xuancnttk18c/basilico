@@ -601,6 +601,9 @@
     .col-lg-12 {
       flex: 0 0 auto;
       width: 100%; }
+      .col-md-24 {
+      flex: 0 0 auto;
+      width: 20%; }
     .offset-lg-0 {
       margin-left: 0; }
     .offset-lg-1 {
@@ -725,6 +728,9 @@
     .col-xl-12 {
       flex: 0 0 auto;
       width: 100%; }
+    .col-xl-24 {
+      flex: 0 0 auto;
+      width: 20%; }
     .offset-xl-0 {
       margin-left: 0; }
     .offset-xl-1 {
@@ -849,6 +855,9 @@
     .col-xxl-12 {
       flex: 0 0 auto;
       width: 100%; }
+      .col-xxl-24 {
+      flex: 0 0 auto;
+      width: 20%; }
     .offset-xxl-0 {
       margin-left: 0; }
     .offset-xxl-1 {
