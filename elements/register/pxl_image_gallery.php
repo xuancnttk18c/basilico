@@ -101,7 +101,7 @@ pxl_add_custom_widget(
                                 'label'     => esc_html__('Custom Items URL', 'basilico'),
                                 'type'      => \Elementor\Controls_Manager::REPEATER,
                                 'condition' => [
-                                    'layout' => ['2', '3']
+                                    'layout' => ['2', '3', '6']
                                 ],
                                 'controls' => array_merge(
                                     array(
