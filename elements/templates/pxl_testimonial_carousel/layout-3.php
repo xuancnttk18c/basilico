@@ -8,6 +8,7 @@ extract($settings);
 
 $arrows = $widget->get_setting('arrows', 'false');
 $dots = $widget->get_setting('dots', 'false');
+$quote_icon_type = $widget->get_setting('quote_icon_type', 'text');
 
 $opts = [
     'slide_direction'               => 'vertical',
