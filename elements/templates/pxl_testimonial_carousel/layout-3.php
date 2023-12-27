@@ -67,6 +67,7 @@ $widget->add_render_attribute('carousel', [
                                     <div class="icon-wrapper">
                                         <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
                                     </div>
+                                <?php endif; ?>
                                 <?php if ($quote_icon_type == 'text') : ?>
                                     <div class="item-quote-icon">“</div>
                                 <?php endif; ?>
