@@ -358,6 +358,9 @@ if (!function_exists('basilico_get_post_grid')) {
             case 'pxl-portfolio-4':
             basilico_get_post_grid_pxl_portfolio2($posts, $settings, $args_m);
             break;
+            case 'pxl-portfolio-5':
+            basilico_get_post_grid_pxl_portfolio1($posts, $settings, $args_m);
+            break;
             default:
             return false;
             break;

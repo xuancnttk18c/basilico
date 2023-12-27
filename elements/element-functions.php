@@ -157,8 +157,25 @@ function basilico_get_post_grid_layout($pt_supports = []){
 
 function basilico_get_grid_layout_options($posttype_name){
     $option_layouts = [];
-    switch ($posttype_name) {
-        case 'pxl-portfolio':
+    $theme_style = basilico()->get_theme_opt('theme_style', 'default');
+    if ($theme_style = 'pxl-pizza') {
+        switch ($posttype_name) {
+            case 'pxl-portfolio':
+            $option_layouts = [
+                'pxl-portfolio-5' => [
+                    'label' => esc_html__('Layout 5', 'basilico'),
+                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-2.jpg'
+                ],
+            ];
+            break;
+            case 'post':
+            $option_layouts = [];
+            break;
+        }    
+    }
+    else {
+        switch ($posttype_name) {
+            case 'pxl-portfolio':
             $option_layouts = [
                 'pxl-portfolio-1' => [
                     'label' => esc_html__('Layout 1', 'basilico'),
@@ -178,7 +195,7 @@ function basilico_get_grid_layout_options($posttype_name){
                 ],
             ];
             break;
-        case 'post':
+            case 'post':
             $option_layouts = [
                 'post-1' => [
                     'label' => esc_html__('Layout 1', 'basilico'),
@@ -186,6 +203,7 @@ function basilico_get_grid_layout_options($posttype_name){
                 ],
             ];
             break;
+        }
     }
     return $option_layouts;
 }
