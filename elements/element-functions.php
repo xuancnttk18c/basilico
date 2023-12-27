@@ -173,6 +173,30 @@ function basilico_get_grid_layout_options($posttype_name){
             break;
         }    
     }
+    elseif ($theme_style == 'pxl-luxury') {
+        switch ($posttype_name) {
+            case 'pxl-portfolio':
+            $option_layouts = [
+                'pxl-portfolio-3' => [
+                    'label' => esc_html__('Layout 3', 'basilico'),
+                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-1.jpg'
+                ],
+                'pxl-portfolio-4' => [
+                    'label' => esc_html__('Layout 4', 'basilico'),
+                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-2.jpg'
+                ],
+            ];
+            break;
+            case 'post':
+            $option_layouts = [
+                'post-1' => [
+                    'label' => esc_html__('Layout 1', 'basilico'),
+                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-layout1.jpg'
+                ],
+            ];
+            break;
+        }
+    }
     else {
         switch ($posttype_name) {
             case 'pxl-portfolio':
