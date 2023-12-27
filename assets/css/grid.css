@@ -222,6 +222,9 @@
   .col-12 {
     flex: 0 0 auto;
     width: 100%; }
+    .col-24 {
+      flex: 0 0 auto;
+      width: 20%; }
   .offset-1 {
     margin-left: 8.33333333%; }
   .offset-2 {
@@ -344,6 +347,9 @@
     .col-sm-12 {
       flex: 0 0 auto;
       width: 100%; }
+      .col-sm-24 {
+      flex: 0 0 auto;
+      width: 20%; }
     .offset-sm-0 {
       margin-left: 0; }
     .offset-sm-1 {
@@ -468,6 +474,9 @@
     .col-md-12 {
       flex: 0 0 auto;
       width: 100%; }
+      .col-md-24 {
+      flex: 0 0 auto;
+      width: 20%; }
     .offset-md-0 {
       margin-left: 0; }
     .offset-md-1 {
