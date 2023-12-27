@@ -114,7 +114,7 @@ if ($layout_mode == 'masonry') {
                         <div class="up-icon">
                             <?php
                                 if (!empty($grid_custom_items_url[$key]['item_url'])) {
-                                    $link_attributes = 'href='.esc_url($grid_custom_items_url[$key]['item_url']).' target="_blank" class="gallery-image-popup"';
+                                    $link_attributes = 'href='.esc_url($grid_custom_items_url[$key]['item_url']).' target="_blank"';
                                 }
                                 else {
                                     $link_attributes = 'class="light-box" data-elementor-open-lightbox="no" href='.esc_url(wp_get_attachment_image_url($image, 'full')).' title='.esc_attr($image_title);
