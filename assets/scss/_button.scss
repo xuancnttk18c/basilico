@@ -93,6 +93,9 @@
         margin-bottom: 8px;
         &:before {
             content: '';
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
             background-color: $primary_color;
             transition: all 0.3s ease;
             transition-delay: 0ms;
