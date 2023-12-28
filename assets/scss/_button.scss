@@ -74,7 +74,7 @@
                 color: $heading_color;
             }
             &:before {
-                height: 100%;
+                height: calc(100% + 1px);
             }
         }
     }
@@ -103,7 +103,7 @@
         }
         &.hover-bg-secondary {
             &:before {
-                background-color: $secondary_color;
+                background-color: $secondary_color; 
             }
         }
         &:after {
