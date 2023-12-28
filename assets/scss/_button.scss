@@ -97,6 +97,11 @@
             transition: all 0.3s ease;
             transition-delay: 0ms;
         }
+        &.hover-bg-secondary {
+            &:before {
+                background-color: $secondary_color;
+            }
+        }
         &:after {
             content: "";
             position: absolute;
