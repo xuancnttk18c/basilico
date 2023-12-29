@@ -1045,6 +1045,20 @@
 		transform: scale(1.1);
 	}
 }
+@keyframes draw-from-top-half-delay {
+	0% {
+		clip-path: inset(0 0 100% 0);
+	}
+	50% {
+		clip-path: inset(0 0 50% 0);
+	}
+	60% {
+		clip-path: inset(0 0 50% 0);
+	}
+	100% {
+		clip-path: inset(0 0 0 0);
+	}
+}
 
 .shape-animate1 {
 	animation: animationFramesTwo 12s infinite linear alternate;
