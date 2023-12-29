@@ -1047,16 +1047,16 @@
 }
 @keyframes draw-from-top-half-delay {
 	0% {
-		transform: scale(0);
+		transform: scaleY(0);
 	}
 	50% {
-		transform: scale(0.5);
+		transform: scaleY(0.5);
 	}
 	60% {
-		transform: scale(0.5);	
+		transform: scaleY(0.5);	
 	}
 	100% {
-		transform: scale(1);	
+		transform: scaleY(1);	
 	}
 }
 
