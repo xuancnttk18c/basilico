@@ -238,8 +238,11 @@
         &:before {
             height: 100%;
             background-color: #fff;
-            transform-origin: bottom right;
+            transform-origin: bottom;
             @include transform(scale(0));
+        }
+        &:after {
+            content: none;
         }
         &.btn-default {
             &:hover {
@@ -270,6 +273,7 @@
                 @include transform(scale(0));
             }
             &:after {
+                content: '';
                 left: auto;
                 right: -10px;
                 bottom: -10px;
@@ -304,6 +308,7 @@
                 @include transform(scale(0));
             }
             &:after {
+                content: '';
                 left: auto;
                 right: -10px;
                 bottom: -10px;
