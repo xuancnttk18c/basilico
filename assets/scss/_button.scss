@@ -234,15 +234,15 @@
         &:before {
             content: '';
             background-color: #fff;
-            transform-origin: bottom;
-            @include transform(scaleY(0));
+            transform-origin: bottom right;
+            @include transform(scale(0));
             height: 100%;
         }
         &:hover {
             color: $secondary_color;
             transition-delay: 0.15s;
             &:before {
-                @include transform(scaleY(1));
+                @include transform(scale(1));
             }
         }
     }
@@ -252,15 +252,15 @@
         &:before {
             content: '';
             background-color: #fff;
-            transform-origin: bottom;
-            @include transform(scaleY(0));
+            transform-origin: bottom right;
+            @include transform(scale(0));
             height: 100%;
         }
         &:hover {
             color: $secondary_color;
             transition-delay: 0.15s;
             &:before {
-                @include transform(scaleY(1));
+                @include transform(scale(1));
             }
         }
     }
