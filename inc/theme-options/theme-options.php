@@ -570,6 +570,24 @@ Redux::setSection($opt_name, array(
     )
 ));
 
+//* Sidebar
+Redux::setSection($opt_name, array(
+    'title'  => esc_html__('Footer', 'basilico'),
+    'icon'   => 'el el-website',
+    'fields' => array(
+        array(
+            'id'          => 'sidebar_style',
+            'type'        => 'select',
+            'title'       => esc_html__('Sidebar Style', 'basilico'),
+            'options'  => array(
+                'default' => esc_html__('Default', 'basilico'),
+                'pxl-luxury' => esc_html__('Layout 2', 'basilico'),
+            ),
+            'default'     => 'default',
+        ),
+    ),
+));
+
 //* Footer
 Redux::setSection($opt_name, array(
     'title'  => esc_html__('Footer', 'basilico'),
