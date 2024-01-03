@@ -87,7 +87,6 @@
         border: 1px solid $primary_color;
         background-color: transparent;
         color: $secondary_color;
-        position: relative;
         overflow: visible;
         transition: all 0.3s ease;
         margin-bottom: 8px;
@@ -269,6 +268,7 @@
         color: $heading_color;
         border: 1px solid $primary_color;
         background-color: transparent;
+        overflow: visible;
         &:before {
             content: '';
             @include transform(scale(0));
@@ -288,6 +288,7 @@
             background-color: transparent;
             width: 100%;
             height: auto;
+            @include transition(all 0.3s ease);
         }
         &:hover {
             transition-delay: 0.25s;
