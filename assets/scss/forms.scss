@@ -8,7 +8,7 @@ $ff_border_color: $input_border_color;
 $ff_border_radius: 0;
 $ff_border_radius_rtl: 0;
 $ff_background: $input_bg;
-$ff_background_hover: #fff;
+$ff_background_hover: $input_bg_hover;
 
 // Variable Form Colors Theme Luxury
 $place_holder_color_luxury: #fff;
@@ -161,7 +161,7 @@ textarea, select,
     @include border-radius($ff_border_radius);
     @include transition();
     &::placeholder {
-        font-size: 13px;
+        font-size: $input_font_size;
     }
     &:hover,&:focus,&:active {
         background-color: $ff_background_hover;

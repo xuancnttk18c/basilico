@@ -581,6 +581,13 @@ Redux::setSection($opt_name, array(
             'title'       => esc_html__('Input Background Color', 'basilico'),
             'transparent' => false,
             'default'     => '#fff'
+        ),
+        array(
+            'id'          => 'input_bg_hover',
+            'type'        => 'color',
+            'title'       => esc_html__('Input Background Color (Hover)', 'basilico'),
+            'transparent' => false,
+            'default'     => '#fff'
         ), 
         array(
             'id'          => 'input_border',
