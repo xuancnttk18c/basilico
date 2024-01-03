@@ -165,13 +165,14 @@ class Basilico_CSS_Generator {
         $heading                         = basilico_configs('heading');
         $heading_font_size               = basilico_configs('heading_font_size');
         $menu                            = basilico_configs('menu');
-        $submenu                        = basilico_configs('dropdown');
+        $submenu                         = basilico_configs('dropdown');
         $mobile_menu                     = basilico_configs('mobile_menu');
         $mobile_submenu                  = basilico_configs('mobile_submenu');
         $border                          = basilico_configs('border');
         $divider                         = basilico_configs('divider');
         $logo                            = basilico_configs('logo');
         $button                          = basilico_configs('button');
+        $input                           = basilico_configs('input');
 
 		ob_start();
         foreach ($theme_colors as $key => $value) {
@@ -225,6 +226,9 @@ class Basilico_CSS_Generator {
         }
         foreach ($button as $key => $value) {
             printf('$button_%1$s: %2$s;', str_replace('-', '_', $key), $value);
+        }
+        foreach ($input as $key => $value) {
+            printf('$input_%1$s: %2$s;', str_replace('-', '_', $key), 'var(--input-'.$key.')');
         }
 		return ob_get_clean();
 	}
