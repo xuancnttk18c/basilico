@@ -7,6 +7,7 @@
 get_header();
 
 $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'post', 'content_col' => '8']); // type: blog, post, page, shop, product
+$pxl_sidebar_style = basilico()->get_theme_opt('sidebar_style', 'default');
 ?>
     <div class="container single-layout-1">
         <div class="row <?php echo esc_attr($pxl_sidebar['wrap_class']) ?>">
@@ -22,7 +23,7 @@ $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'post', 'content_col' => 
                 </main>
             </div>
             <?php if ($pxl_sidebar['sidebar_class']) : ?>
-                <div id="pxl-sidebar-area" class="<?php echo esc_attr($pxl_sidebar['sidebar_class']) ?>">
+                <div id="pxl-sidebar-area" class="<?php echo esc_attr($pxl_sidebar['sidebar_class']); ?> <?php echo esc_attr($pxl_sidebar_style); ?>">
                     <div class="sidebar-sticky-wrap">
                         <?php get_sidebar(); ?>
                     </div>
