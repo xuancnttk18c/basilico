@@ -573,7 +573,7 @@ Redux::setSection($opt_name, array(
 //* Sidebar
 Redux::setSection($opt_name, array(
     'title'  => esc_html__('Sidebar', 'basilico'),
-    'icon'   => 'el el-website',
+    'icon'   => 'el el-indent-right',
     'fields' => array(
         array(
             'id'          => 'sidebar_style',
