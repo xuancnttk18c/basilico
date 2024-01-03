@@ -8,7 +8,7 @@ $display_type = isset($_GET['type']) ? sanitize_text_field($_GET['type']) : basi
 if ($woocommerce_loop['name'] == 'related') {
     $row_cols_class = basilico_get_shop_loop_row_column_class([
         'col_xs'  => '1',
-        'col_sm'  => '1',  
+        'col_sm'  => '1',
         'col_md'  => '2', 
         'col_lg'  => '2',
         'col_xl'  => '3',  

@@ -256,7 +256,7 @@ function basilico_body_classes( $classes )
     if(get_option( 'woosw_page_id', 0) == get_the_ID())
         $classes[] = 'pxl-wishlist-page';
 
-    if ($theme_style != 'default') $classes[] = $theme_style;
+    //if ($theme_style != 'default') $classes[] = $theme_style;
     return $classes;
 }
 
@@ -318,8 +318,6 @@ function basilico_custom_fonts($fonts){
             '\'Cerebri Sans\', sans-serif' => '\'Cerebri Sans\', sans-serif',
             '\'Cormorant Infant\', serif' => '\'Cormorant Infant\', serif',
             '\'PS Demo\', sans-serif' => '\'PS Demo\', sans-serif',
-            '\'Rowdies\', sans-serif' => '\'Rowdies\', sans-serif',
-            '\'IBM Plex Mono\', monospace' => '\'IBM Plex Mono\', monospace',
         ]
     ];
     return $fonts;
