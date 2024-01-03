@@ -233,10 +233,11 @@
         background-color: $primary_color;
         border-color: $primary_color;
         &:before {
+            content: '';
             height: 100%;
             background-color: #fff;
             transform-origin: bottom;
-            @include transform(scale(0));
+            @include transform(scaleY(0));
         }
         &:after {
             content: none;
