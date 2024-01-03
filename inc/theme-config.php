@@ -154,7 +154,7 @@ if(!function_exists('basilico_configs')){
             ],
             //* Input
             'input' => [
-                'bg'                => basilico()->get_opt('input_bg', '#fff'),
+                'bg'                => basilico()->get_opt('input_bg_color', '#fff'),
                 'border-color'      => basilico()->get_opt('input_border', '#fff'),
                 'font-family'       => basilico()->get_theme_opt('font_input', ['font-family' => $body_font], 'font-family'),
                 'font-size'         => basilico()->get_theme_opt('font_input', ['font-size' => '15px'], 'font-size'),
