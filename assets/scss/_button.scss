@@ -234,13 +234,28 @@
         border-color: $primary_color;
         &:before {
             content: '';
-            height: 100%;
             background-color: #fff;
             transform-origin: bottom;
             @include transform(scaleY(0));
+            height: 100%;
         }
-        &:after {
-            content: none;
+        &:hover {
+            color: $secondary_color;
+            transition-delay: 0.15s;
+            &:before {
+                @include transform(scaleY(1));
+            }
+        }
+    }
+    &.btn-additional-2 {
+        background-color: transparent;
+        border-color: #fff;
+        &:before {
+            content: '';
+            background-color: #fff;
+            transform-origin: bottom;
+            @include transform(scaleY(0));
+            height: 100%;
         }
         &:hover {
             color: $secondary_color;
