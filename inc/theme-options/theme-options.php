@@ -581,7 +581,7 @@ Redux::setSection($opt_name, array(
             'title'       => esc_html__('Sidebar Style', 'basilico'),
             'options'  => array(
                 'default' => esc_html__('Default', 'basilico'),
-                'pxl-luxury' => esc_html__('Layout 2', 'basilico'),
+                'style-2' => esc_html__('Style 2', 'basilico'),
             ),
             'default'     => 'default',
         ),
