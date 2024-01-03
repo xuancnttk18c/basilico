@@ -7,7 +7,6 @@
 get_header();
 
 $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'post', 'content_col' => '8']); // type: blog, post, page, shop, product
-var_dump($pxl_sidebar_style);
 ?>
     <div class="container single-layout-1">
         <div class="row <?php echo esc_attr($pxl_sidebar['wrap_class']) ?>">
