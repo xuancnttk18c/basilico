@@ -482,6 +482,7 @@ Redux::setSection($opt_name, array(
                     'btn-additional-2' => esc_html__('Additional Button 02', 'basilico' ),
                     'btn-additional-3' => esc_html__('Additional Button 03', 'basilico' ),
                 ),
+                'default' => 'btn-outline',
                 'required' => [
                    'post_comments_on',
                    'equals',
@@ -647,6 +648,7 @@ Redux::setSection($opt_name, array(
             'id'          => 'sidebar_style',
             'type'        => 'select',
             'title'       => esc_html__('Sidebar Style', 'basilico'),
+            'description' => esc_html__('Style 2 is suitable for dark theme.', 'basilico'),
             'options'  => array(
                 'default' => esc_html__('Default', 'basilico'),
                 'style-2' => esc_html__('Style 2', 'basilico'),
