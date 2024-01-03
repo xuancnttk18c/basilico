@@ -267,16 +267,18 @@
     }
     &.btn-additional-3 {
         color: $heading_color;
+        border: 1px solid $primary_color;
         background-color: transparent;
         &:before {
             content: '';
-            @include transform(scaleY(0));
+            @include transform(scale(0));
             height: 100%;
             background-color: $primary_color;
             transform-origin: bottom right;
         }
         &:after {
             content: '';
+            position: absolute;
             left: auto;
             right: -10px;
             bottom: -10px;
