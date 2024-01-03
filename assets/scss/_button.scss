@@ -245,22 +245,28 @@
             content: none;
         }
         &.btn-default {
+            &:before {
+                @include transform(scaleY(0));
+            }
             &:hover {
                 color: $secondary_color;
                 transition-delay: 0.15s;
                 &:before {
-                    @include transform(scale(1));
+                    @include transform(scaleY(1));
                 }
             }
         }
         &.btn-white {
             background-color: transparent;
             border-color: #fff;
+            &:before {
+                @include transform(scaleY(0));
+            }
             &:hover {
                 color: $secondary_color;
                 transition-delay: 0.15s;
                 &:before {
-                    @include transform(scale(1));
+                    @include transform(scaleY(1));
                 }
             }
         }
@@ -270,7 +276,6 @@
             &:before {
                 background-color: $primary_color;
                 transform-origin: bottom right;
-                @include transform(scale(0));
             }
             &:after {
                 content: '';
@@ -301,7 +306,6 @@
         &.btn-outline-secondary {
             color: $heading_color;
             background-color: transparent;
-            border-color: $secondary_color;
             &:before {
                 background-color: $secondary_color;
                 transform-origin: bottom right;
