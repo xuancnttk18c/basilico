@@ -576,9 +576,9 @@ Redux::setSection($opt_name, array(
     'icon'   => 'el el-indent-right',
     'fields' => array(
         array(
-            'id'          => 'input_color',
+            'id'          => 'input_bg_color',
             'type'        => 'color',
-            'title'       => esc_html__('Input Color', 'basilico'),
+            'title'       => esc_html__('Input Background Color', 'basilico'),
             'transparent' => false,
             'default'     => '#fff'
         ), 
