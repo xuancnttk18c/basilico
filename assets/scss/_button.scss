@@ -346,39 +346,39 @@
         //         }
         //     }
         // }
-        &.btn-outline {
-            color: $heading_color;
-            background-color: transparent;
-            &:before {
-                background-color: $primary_color;
-                transform-origin: bottom right;
-            }
-            &:after {
-                content: '';
-                left: auto;
-                right: -10px;
-                bottom: -10px;
-                top: 8px;
-                border-right: 1px solid $primary_color;
-                border-bottom: 1px solid $primary_color;
-                background-color: transparent;
-                width: 100%;
-                height: auto;
-            }
-            &:hover {
-                transition-delay: 0.25s;
-                &:before {
-                    transition-delay: 0.15s;
-                    @include transform(scale(1));
-                }
-                &:after {
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    opacity: 1;
-                }
-            }
-        }
+        // &.btn-outline {
+        //     color: $heading_color;
+        //     background-color: transparent;
+        //     &:before {
+        //         background-color: $primary_color;
+        //         transform-origin: bottom right;
+        //     }
+        //     &:after {
+        //         content: '';
+        //         left: auto;
+        //         right: -10px;
+        //         bottom: -10px;
+        //         top: 8px;
+        //         border-right: 1px solid $primary_color;
+        //         border-bottom: 1px solid $primary_color;
+        //         background-color: transparent;
+        //         width: 100%;
+        //         height: auto;
+        //     }
+        //     &:hover {
+        //         transition-delay: 0.25s;
+        //         &:before {
+        //             transition-delay: 0.15s;
+        //             @include transform(scale(1));
+        //         }
+        //         &:after {
+        //             top: 0;
+        //             right: 0;
+        //             bottom: 0;
+        //             opacity: 1;
+        //         }
+        //     }
+        // }
         &.btn-outline-secondary {
             color: $heading_color;
             background-color: transparent;

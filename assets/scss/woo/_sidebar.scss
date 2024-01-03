@@ -237,7 +237,7 @@
 		}
 	}
 }
-.pxl-luxury .pxl-sidebar-area {
+.pxl-sidebar-area.style-2 {
 	.widget_shopping_cart {
 		.remove {
 			color: $primary_color;
@@ -368,7 +368,7 @@
 	}
 }
 
-.pxl-luxury .widget_price_filter {
+.pxl-sidebar-area.style-2 .widget_price_filter {
 	.ui-widget-content:before {
 		background-color: rgba(200, 200, 200, 0.25);
 	}
@@ -531,7 +531,7 @@ ul.product_list_widget {
 	}
 }
 
-.pxl-luxury ul.product_list_widget {
+.pxl-sidebar-area.style-2 ul.product_list_widget {
 	li {
 		border-bottom: 1px solid $divider_color;
 		&:first-child {
@@ -580,7 +580,7 @@ ul.product_list_widget {
 	}
 }
 
-.pxl-luxury .widget_products {
+.pxl-sidebar-area.style-2 .widget_products {
 	ul li {
 		&:last-child {
 			padding-bottom: 0;
