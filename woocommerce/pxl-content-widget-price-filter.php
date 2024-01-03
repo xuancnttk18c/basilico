@@ -29,7 +29,7 @@ wp_localize_script(
 			<label class="screen-reader-text" for="max_price"><?php esc_html_e( 'Max price', 'woocommerce' ); ?></label>
 			<input type="text" id="max_price" name="max_price" value="<?php echo esc_attr( $current_max_price ); ?>" data-max="<?php echo esc_attr( $max_price ); ?>" placeholder="<?php echo esc_attr__( 'Max price', 'woocommerce' ); ?>" />
 			<?php /* translators: Filter: verb "to filter" */ ?>
-			<button type="submit" class="pxl-btn btn-default button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>"><span><?php echo esc_html__( 'Filter', 'woocommerce' ); ?></span></button>
+			<button type="submit" class="pxl-btn btn-additional-1 button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>"><span><?php echo esc_html__( 'Filter', 'woocommerce' ); ?></span></button>
 			<div class="price_label" style="display:none;">
 				<span class="from"></span> &ndash; <span class="to"></span>
 			</div>
