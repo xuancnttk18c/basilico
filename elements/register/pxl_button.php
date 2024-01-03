@@ -20,7 +20,6 @@ pxl_add_custom_widget(
                             'default' => 'btn-default',
                             'options' => [
                                 'btn-default' => esc_html__('Default', 'basilico' ),
-                                'btn-gradient' => esc_html__('Gradient', 'basilico' ),
                                 'btn-white' => esc_html__('White', 'basilico' ),
                                 'btn-fullwidth' => esc_html__('Full Width', 'basilico' ),
                                 'btn-outline' => esc_html__('Out Line', 'basilico' ),

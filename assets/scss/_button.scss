@@ -250,6 +250,17 @@
                 }
             }
         }
+        &.btn-white {
+            background-color: #fff;
+            border-color: #fff;
+            &:hover {
+                color: $secondary_color;
+                transition-delay: 0.15s;
+                &:before {
+                    @include transform(scale(1));
+                }
+            }
+        }
         &.btn-outline {
             color: $heading_color;
             background-color: transparent;
