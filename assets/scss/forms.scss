@@ -3,10 +3,11 @@ $place_holder_color: $heading_color;
 $ff_color: $heading_color;
 $ff_height: 46px;
 $ff_padding: 0 20px;
-$ff_border: 1px solid $heading_color;
+$ff_border: 1px solid;
+$ff_border_color: $input_border_color;
 $ff_border_radius: 0;
 $ff_border_radius_rtl: 0;
-$ff_background: #fff;
+$ff_background: $input_bg;
 $ff_background_hover: #fff;
 
 // Variable Form Colors Theme Luxury
@@ -147,13 +148,14 @@ textarea, select,
 .select2-container.select2-container--default .select2-selection--single {
     background-color: $ff_background;
     border: $ff_border;
+    border-color: $ff_border_color;
     color: $ff_color;
     padding: $ff_padding;
     height: $ff_height;
     line-height: $ff_height;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 0.02em;
+    font-size: $input_font_size;
+    font-weight: $input_font_weight;
+    letter-spacing: $input_letter_spacing;
     text-align: start;
     outline: none;
     @include border-radius($ff_border_radius);
