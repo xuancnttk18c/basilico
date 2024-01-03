@@ -24,7 +24,7 @@ var_dump($pxl_sidebar_style);
                 </main>
             </div>
             <?php if ($pxl_sidebar['sidebar_class']) : ?>
-                <div id="pxl-sidebar-area" class="<?php echo esc_attr($pxl_sidebar['sidebar_class']); ?> <?php echo esc_attr($pxl_s); ?>">
+                <div id="pxl-sidebar-area" class="<?php echo esc_attr($pxl_sidebar['sidebar_class']); ?> <?php echo esc_attr($pxl_sidebar_style); ?>">
                     <div class="sidebar-sticky-wrap">
                         <?php get_sidebar(); ?>
                     </div>
