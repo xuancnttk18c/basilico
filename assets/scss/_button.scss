@@ -265,47 +265,83 @@
             }
         }
     }
+    &.btn-additional-3 {
+        color: $heading_color;
+        background-color: transparent;
+        &:before {
+            content: '';
+            @include transform(scaleY(0));
+            height: 100%;
+            background-color: $primary_color;
+            transform-origin: bottom right;
+        }
+        &:after {
+            content: '';
+            left: auto;
+            right: -10px;
+            bottom: -10px;
+            top: 8px;
+            border-right: 1px solid $primary_color;
+            border-bottom: 1px solid $primary_color;
+            background-color: transparent;
+            width: 100%;
+            height: auto;
+        }
+        &:hover {
+            transition-delay: 0.25s;
+            &:before {
+                transition-delay: 0.15s;
+                @include transform(scale(1));
+            }
+            &:after {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 1;
+            }
+        }
+    }
 }
 
 .pxl-luxury {
     .btn, button, .button, input[type="submit"], input[type="button"], .added_to_cart, .btn {
         background-color: $primary_color;
         border-color: $primary_color;
-        &:before {
-            height: 100%;
-            background-color: #fff;
-            transform-origin: bottom;
-            @include transform(scale(0));
-        }
-        &:after {
-            content: none;
-        }
-        &.btn-default {
-            &:before {
-                @include transform(scaleY(0));
-            }
-            &:hover {
-                color: $secondary_color;
-                transition-delay: 0.15s;
-                &:before {
-                    @include transform(scaleY(1));
-                }
-            }
-        }
-        &.btn-white {
-            background-color: transparent;
-            border-color: #fff;
-            &:before {
-                @include transform(scaleY(0));
-            }
-            &:hover {
-                color: $secondary_color;
-                transition-delay: 0.15s;
-                &:before {
-                    @include transform(scaleY(1));
-                }
-            }
-        }
+        // &:before {
+        //     height: 100%;
+        //     background-color: #fff;
+        //     transform-origin: bottom;
+        //     @include transform(scale(0));
+        // }
+        // &:after {
+        //     content: none;
+        // }
+        // &.btn-default {
+        //     &:before {
+        //         @include transform(scaleY(0));
+        //     }
+        //     &:hover {
+        //         color: $secondary_color;
+        //         transition-delay: 0.15s;
+        //         &:before {
+        //             @include transform(scaleY(1));
+        //         }
+        //     }
+        // }
+        // &.btn-white {
+        //     background-color: transparent;
+        //     border-color: #fff;
+        //     &:before {
+        //         @include transform(scaleY(0));
+        //     }
+        //     &:hover {
+        //         color: $secondary_color;
+        //         transition-delay: 0.15s;
+        //         &:before {
+        //             @include transform(scaleY(1));
+        //         }
+        //     }
+        // }
         &.btn-outline {
             color: $heading_color;
             background-color: transparent;

@@ -573,7 +573,7 @@ Redux::setSection($opt_name, array(
 //* Input
 Redux::setSection($opt_name, array(
     'title'  => esc_html__('Input Form', 'basilico'),
-    'icon'   => 'el el-indent-right',
+    'icon'   => 'el el-italic',
     'fields' => array(
         array(
             'id'          => 'input_bg_color',

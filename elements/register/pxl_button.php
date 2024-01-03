@@ -24,6 +24,9 @@ pxl_add_custom_widget(
                                 'btn-fullwidth' => esc_html__('Full Width', 'basilico' ),
                                 'btn-outline' => esc_html__('Out Line', 'basilico' ),
                                 'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
+                                'btn-additional-1' => esc_html__('Additional Button 01', 'basilico' ),
+                                'btn-additional-2' => esc_html__('Additional Button 02', 'basilico' ),
+                                'btn-additional-3' => esc_html__('Additional Button 03', 'basilico' ),
                             ],
                         ),
                         array(
