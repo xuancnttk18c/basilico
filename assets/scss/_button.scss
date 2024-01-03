@@ -229,6 +229,26 @@
             }
         }
     }
+    &.btn-additional-1 {
+        background-color: $primary_color;
+        border-color: $primary_color;
+        &:before {
+            height: 100%;
+            background-color: #fff;
+            transform-origin: bottom;
+            @include transformY(scale(0));
+        }
+        &:after {
+            content: none;
+        }
+        &:hover {
+            color: $secondary_color;
+            transition-delay: 0.15s;
+            &:before {
+                @include transform(scaleY(1));
+            }
+        }
+    }
 }
 
 .pxl-luxury {
