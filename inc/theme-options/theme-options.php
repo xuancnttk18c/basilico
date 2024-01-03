@@ -597,6 +597,13 @@ Redux::setSection($opt_name, array(
             'default'     => '#e6c9a2'
         ),
         array(
+            'id'          => 'input_border_hover',
+            'type'        => 'color',
+            'title'       => esc_html__('Input Border Hover', 'basilico'),
+            'transparent' => false,
+            'default'     => '#e6c9a2'
+        ),
+        array(
             'id'          => 'font_input',
             'type'        => 'typography',
             'title'       => esc_html__('Input Typography', 'basilico'),
