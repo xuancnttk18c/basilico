@@ -255,18 +255,7 @@ if (!class_exists('Basilico_Comment')) {
                 'comment_subject' => ''
             ];
 
-            $theme_style = basilico()->get_theme_opt('theme_style', 'default');
-
-            switch ($theme_style) {
-                case 'pxl-luxury':
-                    $btn_style = 'btn-outline';
-                    break;
-                case 'pxl-pizza':
-                    $btn_style = 'btn-default';
-                    break;
-                default:
-                    $btn_style = 'btn-outline-secondary';
-            }
+            $button_style = basilico()->get_theme_opt('post_comments_button', 'default');
 
             $pxl_comment_fields = array(
                 'id_form'              => 'commentform',
@@ -276,7 +265,7 @@ if (!class_exists('Basilico_Comment')) {
                 'title_reply_before'   => '<h4 id="reply-title" class="comment-reply-title">',
                 'title_reply_after'    => '</h4>',
                 'id_submit'            => 'submit',
-                'class_submit'         => 'btn '.$btn_style,
+                'class_submit'         => 'btn ' . esc_attr($button_style),
                 'label_submit'         =>  esc_attr__( 'Post Comment', 'basilico'),
                 'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s" /><span>%4$s</span></button>',
                 'comment_notes_before' => '<label>'.esc_html__( 'Your email address will not be published. Required fields are marked *', 'basilico' ).'</label>',
@@ -368,9 +357,7 @@ if (!class_exists('Basilico_Comment')) {
                 'comment_subject' => ''
             ];
 
-            $theme_style = basilico()->get_theme_opt('theme_style', 'default');
-            if ($theme_style == 'pxl-luxury') $btn_style = 'btn-outline';
-            else $btn_style = 'btn-outline-secondary';
+            $button_style = basilico()->get_theme_opt('post_comments_button', 'btn-outline');
             $pxl_comment_fields = array(
                 'id_form'              => 'commentform',
                 'title_reply'          => esc_attr__( 'Leave a Review', 'basilico'),
@@ -379,7 +366,7 @@ if (!class_exists('Basilico_Comment')) {
                 'title_reply_before'   => '<h4 id="reply-title" class="comment-reply-title">',
                 'title_reply_after'    => '</h4>',
                 'id_submit'            => 'submit',
-                'class_submit'         => 'btn pxl-btn '.$btn_style,
+                'class_submit'         => 'btn pxl-btn ' . $button_style,
                 'label_submit'         =>  esc_attr__( 'Post Comment', 'basilico'),
                 'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s" /><span>%4$s</span></button>',
                 'comment_notes_before' => '',
