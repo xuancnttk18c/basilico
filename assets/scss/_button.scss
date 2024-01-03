@@ -309,7 +309,6 @@
             &:before {
                 background-color: $secondary_color;
                 transform-origin: bottom right;
-                @include transform(scale(0));
             }
             &:after {
                 content: '';
