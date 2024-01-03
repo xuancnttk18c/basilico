@@ -570,6 +570,39 @@ Redux::setSection($opt_name, array(
     )
 ));
 
+//* Input
+Redux::setSection($opt_name, array(
+    'title'  => esc_html__('Input Form', 'basilico'),
+    'icon'   => 'el el-indent-right',
+    'fields' => array(
+        array(
+            'id'          => 'input_color',
+            'type'        => 'color',
+            'title'       => esc_html__('Input Color', 'basilico'),
+            'transparent' => false,
+            'default'     => '#fff'
+        ), 
+        array(
+            'id'          => 'input_border',
+            'type'        => 'color',
+            'title'       => esc_html__('Input Border Color', 'basilico'),
+            'transparent' => false,
+            'default'     => '#e6c9a2'
+        ),
+        array(
+            'id'          => 'font_input',
+            'type'        => 'typography',
+            'title'       => esc_html__('Input Typography', 'basilico'),
+            'google'      => true,
+            'line-height' => true,
+            'font-size'   => true,
+            'text-align'  => false,
+            'letter-spacing' => true,
+            'units'       => 'px',
+        ),
+    ),
+));
+
 //* Sidebar
 Redux::setSection($opt_name, array(
     'title'  => esc_html__('Sidebar', 'basilico'),

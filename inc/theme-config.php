@@ -71,7 +71,6 @@ if(!function_exists('basilico_configs')){
                 'font-weight'       => basilico()->get_theme_opt('font_body',['font-weight' => '400'], 'font-weight'),
                 'line-height'       => basilico()->get_theme_opt('font_body',['line-height' => '1.66666666667'], 'line-height'),
                 'letter-spacing'    => basilico()->get_theme_opt('font_body',['letter-spacing' => '0.01em'], 'letter-spacing'),
-
             ],
             'heading' => [
                 'font-family'       => basilico()->get_theme_opt('font_heading',['font-family' => $heading_font], 'font-family'),
@@ -110,7 +109,7 @@ if(!function_exists('basilico_configs')){
                 'font_size'   => '15px',
                 'font_weight' => 400,
                 'font_family' => $heading_font
-            ] ,
+            ],
             'dropdown' => [
                 'bg'            => 'var(--secondary-color)',
                 'shadow'        => '0 0 4px rgba(0, 0, 0, 0.8)',
@@ -153,6 +152,16 @@ if(!function_exists('basilico_configs')){
                 'radius'             => '0',
                 'radius-rtl'         => '0',
             ],
+            //* Input
+            'input' => [
+                'bg'                => basilico()->get_opt('input_color', '#fff'),
+                'border-color'      => basilico()->get_opt('input_border', '#fff'),
+                'font-family'       => basilico()->get_theme_opt('font_input', ['font-family' => $body_font], 'font-family'),
+                'font-size'         => basilico()->get_theme_opt('font_input', ['font-size' => '15px'], 'font-size'),
+                'font-weight'       => basilico()->get_theme_opt('font_input', ['font-weight' => '400'], 'font-weight'),
+                'line-height'       => basilico()->get_theme_opt('font_input', ['line-height' => '1.66666666667'], 'line-height'),
+                'letter-spacing'    => basilico()->get_theme_opt('font_input', ['letter-spacing' => '0.01em'], 'letter-spacing'),
+            ],
         ];
 
         return $configs[$value];
@@ -166,6 +175,7 @@ if(!function_exists('basilico_inline_styles')){
         $gradient_colors   = basilico_configs('gradient');
         $heading           = basilico_configs('heading');
         $heading_font_size = basilico_configs('heading_font_size');
+        $input             = basilico_configs('input');
         $logo              = basilico_configs('logo');
         ob_start();
         echo ':root{';
@@ -194,6 +204,9 @@ if(!function_exists('basilico_inline_styles')){
         }
         foreach ($logo as $key => $value) {
             printf('--logo-%1$s: %2$s;', $key, $value);
+        }
+        foreach ($input as $key => $value) {
+            printf('--input-%1$s: %2$s;', $key, $value);
         }
         echo '}';
         return ob_get_clean();
