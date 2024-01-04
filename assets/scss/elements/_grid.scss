@@ -909,13 +909,16 @@
                         line-height: 30px;
                         letter-spacing: 0.05em;
                         text-transform: none;
+                        @media (max-width: $xl_min) {
+                            max-width: 85%;
+                        }
                     }
                     .quote-cite {
                         margin-top: 20px;
                         font-size: 15px;
                         text-transform: uppercase;
                         letter-spacing: 0.1em;
-                    }
+                    }                
                 }
             }
             .format-link {
