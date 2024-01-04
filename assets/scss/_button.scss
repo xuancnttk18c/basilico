@@ -334,6 +334,7 @@
         }
         &:hover {
             transition-delay: 0.25s;
+            color: #fff;
             &:before {
                 transition-delay: 0.15s;
                 @include transform(scale(1));

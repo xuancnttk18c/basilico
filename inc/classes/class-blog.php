@@ -24,7 +24,7 @@ if (!class_exists('Basilico_Blog')) {
             
             if ($archive_author || $archive_category || $post_comments_on) : ?>
                 <div class="post-metas">
-                    <div class="meta-inner d-flex align-items-center hover-underline">
+                    <div class="meta-inner d-flex align-items-center">
                         <?php if ($archive_author) : ?>
                             <span class="post-author col-auto d-flex"><span><?php echo esc_html__('Written by', 'basilico'); ?> <?php the_author_posts_link(); ?></span></span>
                         <?php endif; ?>

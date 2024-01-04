@@ -414,7 +414,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         a {
-            @include multiline-hover-underline($body_color);
+            //@include multiline-hover-underline($body_color);
         }
     }
     .pxl-wg-post-title {
@@ -425,7 +425,7 @@
         margin-bottom: 0;
         letter-spacing: 0.02em;
         a {
-            @include multiline-hover-underline($heading_color);
+            //@include multiline-hover-underline($heading_color);
         }
     }
 }
