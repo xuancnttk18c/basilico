@@ -854,6 +854,9 @@
         }
     }
     &.layout-post-list-4 {
+        .grid-item {
+            margin-bottom: 75px;
+        }
         .grid-item-inner {
             .post-metas {
                 margin-bottom: 0;
