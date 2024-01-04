@@ -473,15 +473,14 @@
             max-width: 20px;
         }
     }
-}
-
-.pxl-luxury .btn-more {
-    &:after {
-        bottom: -7px;
-        background-color: $primary_color;
-    }
-    &:hover {
-        color: $heading_color;
+    &.style-2 {
+        &:after {
+            bottom: -7px;
+            background-color: $primary_color;
+        }
+        &:hover {
+            color: $heading_color;
+        }
     }
 }
 
