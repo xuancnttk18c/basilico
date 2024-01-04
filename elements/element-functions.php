@@ -241,6 +241,10 @@ function basilico_get_list_layout_options($posttype_name){
                     'label' => esc_html__('Layout 3', 'basilico'),
                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-layout3.jpg'
                 ],
+                'post-list-4' => [
+                    'label' => esc_html__('Layout 4', 'basilico'),
+                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-layout3.jpg'
+                ],
             ];
             break;
     }
