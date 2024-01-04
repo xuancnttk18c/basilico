@@ -12,10 +12,7 @@ $pagination_type = isset( $pagination_type ) ? $pagination_type : basilico()->ge
 $pagination_style = basilico()->get_theme_opt('archive_pagination_style', 'style-df');
  
 $class = isset( $class ) ? $class : '';
-if( !empty($page_base_url) )
-	$shop_base_url = $page_base_url;
-else
-	$shop_base_url = basilico()->woo->get_shop_active_filters_url();
+$shop_base_url = $page_base_url;
  
 $base  = esc_url_raw( add_query_arg( 'product-page', '%#%', $shop_base_url ) );
 
