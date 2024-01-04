@@ -891,6 +891,9 @@
             .format-quote {
                 .quote-inner {
                     .quote-icon {
+                        font-weight: 700;
+                        color: var(--primary-color);
+                        line-height: 1;
                         margin-top: -3px;
                         margin-bottom: 11px;
                         font-family: 'Cirka';
@@ -898,6 +901,8 @@
                         max-height: 60px;
                     }
                     .quote-text {
+                        margin: 0 auto 24px;;
+                        font-family: $heading_font_family;
                         font-size: 23px;
                         font-weight: 600;
                         font-style: italic;
