@@ -11,17 +11,6 @@ $ff_border_radius_rtl: 0;
 $ff_background: $input_bg;
 $ff_background_hover: $input_bg_hover;
 
-// Variable Form Colors Theme Luxury
-$place_holder_color_luxury: #fff;
-$ff_color_luxury: $heading_color;
-$ff_height_luxury: 50px;
-$ff_padding_luxury: 0 20px;
-$ff_border_luxury: 1px solid $divider_color;
-$ff_border_radius_luxury: 0;
-$ff_border_radius_rtl_luxury: 0;
-$ff_background_luxury: transparent;
-$ff_background_hover_luxury: transparent;
-
 form {
     label{
         color: $heading_color;
@@ -170,43 +159,6 @@ textarea, select,
     }
     [dir="rtl"] &{
         @include border-radius($ff_border_radius_rtl);
-    }
-}
-
-.pxl-luxury {
-    input[type="text"],
-    input[type="email"],
-    input[type="url"],
-    input[type="password"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="number"],
-    input[type="range"],
-    input[type="date"],
-    input[type="month"],
-    input[type="week"],
-    input[type="time"],
-    input[type="datetime"],
-    input[type="datetime-local"],
-    input[type="color"],
-    textarea, select,
-    .select2-container.select2-container--default .select2-selection--single {
-        background-color: $ff_background_luxury;
-        border: $ff_border_luxury;
-        color: $ff_color_luxury;
-        padding: $ff_padding_luxury;
-        height: $ff_height_luxury;
-        line-height: $ff_height_luxury;
-        &::placeholder {
-            font-size: 15px;
-        }
-        &:hover,&:focus,&:active {
-            background-color: transparent;
-            border-color: #fff;
-        }
-        [dir="rtl"] &{
-            @include border-radius($ff_border_radius_rtl);
-        }
     }
 }
 

@@ -12,15 +12,12 @@ $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'blog', 'content_col'=> '
         <div id="pxl-content-area" class="<?php echo esc_attr($pxl_sidebar['content_class']) ?>">
             <?php if ( have_posts() ): ?>
             <main id="pxl-content-main" class="pxl-content-main content-archive">
-                <?php  
+                <?php
                     while ( have_posts() ) {
                         the_post();
                         switch ($theme_style) {
                             case 'pxl-pizza':
                                 get_template_part( 'template-parts/content/content', 'pizza' );
-                                break;
-                            case 'pxl-luxury':
-                                get_template_part( 'template-parts/content/content', 'luxury' );
                                 break;
                             default:
                                 get_template_part( 'template-parts/content/content' );

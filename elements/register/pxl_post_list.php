@@ -244,7 +244,7 @@ pxl_add_custom_widget(
                             'default'   => 'true',
                             'condition' => [
                                 'post_type' => 'post',
-                                'layout!' => ['4']
+                                'layout!' => ['post-list-4']
                             ]
                         ),
                         array(
@@ -252,7 +252,10 @@ pxl_add_custom_widget(
                             'label'     => esc_html__('Show Tag', 'basilico' ),
                             'type'      => \Elementor\Controls_Manager::SWITCHER,
                             'default'   => 'true',
-                            'condition' => ['post_type' => 'pxl-portfolio']
+                            'condition' => [
+                                'layout!' => ['post-list-1', 'post-list-2', 'post-list-3']
+                            ]
+
                         ),
                         array(
                             'name'      => 'show_author',
