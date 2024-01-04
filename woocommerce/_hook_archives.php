@@ -9,7 +9,7 @@ function basilico_loop_shop_per_page( $limit ) {
 //* dkjafjfaklfjkl
 remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
 add_action( 'woocommerce_after_shop_loop', 'basilico_shop_pagination', 10 );
-function utero_shop_pagination(){
+function basilico_shop_pagination(){
     $is_shortcode_pagin = utero_wc_shortcode_products_has_paginate();
     if( $is_shortcode_pagin ){
         woocommerce_pagination();
@@ -24,6 +24,10 @@ function utero_shop_pagination(){
   
         wc_get_template( 'loop/pagination-custom.php', $args );
     }
+}
+
+function utero_wc_shortcode_products_has_paginate(){
+    return wc_get_loop_prop( 'is_shortcode' ) && wc_get_loop_prop( 'is_paginated' );
 }
 
 /* Remove page title on archive page */
