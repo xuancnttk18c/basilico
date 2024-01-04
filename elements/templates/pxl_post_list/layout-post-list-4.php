@@ -104,7 +104,6 @@ if( count($posts) <= 0){
     <div <?php pxl_print_html($widget->get_render_attribute_string('grid')); ?>> 
         <?php basilico_get_post_grid($posts, $load_more); ?>
     </div>
-    
 
     <?php if ($pagination_type == 'pagination') { ?>
         <div class="pxl-grid-pagination d-flex" data-loadmore="<?php echo esc_attr(json_encode($load_more)); ?>" data-query="<?php echo esc_attr(json_encode($args)); ?>">

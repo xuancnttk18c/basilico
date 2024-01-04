@@ -19,6 +19,9 @@ $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'blog', 'content_col'=> '
                             case 'pxl-pizza':
                                 get_template_part( 'template-parts/content/content', 'pizza' );
                                 break;
+                            case 'pxl-luxury':
+                                get_template_part( 'template-parts/content/content', 'luxury' );
+                                break;
                             default:
                                 get_template_part( 'template-parts/content/content' );
                         }

@@ -1006,6 +1006,223 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
 endforeach;
 }
 
+function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [])
+{
+    extract($settings);
+    foreach ($posts as $key => $post) :
+        $str_item_class = !empty($args_m[$key]['item_class']) ? $args_m[$key]['item_class'] : $item_class;
+        if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
+            $img_id = get_post_thumbnail_id($post->ID);
+            if ($img_id) {
+                $img = pxl_get_image_by_size(array(
+                    'attach_id'  => $img_id,
+                    'thumb_size' => $img_size,
+                    'class' => 'no-lazyload',
+                ));
+                $thumbnail = $img['thumbnail'];
+            } else {
+                $thumbnail = get_the_post_thumbnail($post->ID, $img_size);
+            }
+        }
+        $filter_class = '';
+        if ($select_post_by === 'term_selected' && $filter == "true")
+            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+        $button_text = !empty($button_text) ? $button_text : esc_html__('Continue reading', 'basilico');
+        $increase = $key + 1;
+        $data_settings = '';
+        $animate_cls = '';
+        if (!empty($item_animation)) {
+            $animate_cls = ' pxl-animate pxl-invisible animated-' . $item_animation_duration;
+            $data_animation =  json_encode([
+                'animation'      => $item_animation,
+                'animation_delay' => ((float)$item_animation_delay * $increase)
+            ]);
+            $data_settings = 'data-settings="' . esc_attr($data_animation) . '"';
+        }
+        if (!empty($args_m[$key]['data_setting']))
+            $data_settings = $args_m[$key]['data_setting'];
+        $author = get_user_by('id', $post->post_author);
+        ?>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+            <div class="grid-item-inner">
+                <?php
+                if (has_post_format('quote', $post->ID)) {
+                    $quote_text = get_post_meta($post->ID, 'featured-quote-text', true);
+                    $quote_cite = get_post_meta($post->ID, 'featured-quote-cite', true);
+                    ?>
+                    <div class="pxl-archive-post format-quote">
+                        <div class="format-wrap">
+                            <div class="quote-inner">
+                                <div class="quote-icon">
+                                    <span>“</span>
+                                </div>
+                                <div class="quote-text">
+                                    <a href="<?php echo esc_url(get_permalink()); ?>"><?php echo esc_html($quote_text); ?></a>
+                                </div>
+                                <div class="pxl-divider"></div>
+                                <?php
+                                if (!empty($quote_cite)) {
+                                    ?>
+                                    <p class="quote-cite">
+                                        <?php echo esc_html($quote_cite); ?>
+                                    </p>
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                } elseif (has_post_format('link', $post->ID)) {
+                    $link_url = get_post_meta($post->ID, 'featured-link-url', true);
+                    $link_text = get_post_meta($post->ID, 'featured-link-text', true);
+                    $link_cite = get_post_meta($post->ID, 'featured-link-cite', true);
+                    ?>
+                    <div class="pxl-archive-post format-link">
+                        <div class="format-wrap">
+                            <div class="link-inner">
+                                <div class="link-icon">
+                                    <a target="_blank" href="<?php echo esc_url($link_url); ?>"><span class="pxli-link"></span></a>
+                                </div>
+                                <div class="link-text">
+                                    <a class="link-text" target="_blank" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_text); ?></a>
+                                </div>
+                                <?php if (!empty($link_cite)) : ?>
+                                    <div class="pxl-divider"></div>
+                                    <p class="link-cite">
+                                        <?php echo esc_attr($link_cite); ?>
+                                    </p>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                } elseif (has_post_format('video', $post->ID)) {
+                    $featured_video = get_post_meta($post->ID, 'featured-video-url', true);
+                    if (isset($thumbnail)) {
+                        ?>
+                        <div class="post-image">
+                            <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
+                        </div>
+                        <?php
+                        if (!empty($featured_video)) { ?>
+                            <div class="pxl-media-popup">
+                                <div class="content-inner">
+                                    <a class="media-play-button video-default" href="<?php echo esc_url($featured_video); ?>">
+                                        <i class="pxli-play-2 pxl-icon-outline"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    }
+                } elseif (has_post_format('audio', $post->ID)) {
+                    $audio_url = get_post_meta($post->ID, 'featured-audio-url', true);
+                    if (isset($thumbnail)) { ?>
+                        <div class="post-image">
+                            <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
+                        </div>
+                    <?php }
+                    if (!empty($audio_url)) {
+                        $filetype = wp_check_filetype($audio_url)['type'];
+                        if ($filetype == 'audio/mpeg') { ?>
+                            <div class="pxl-media-popup">
+                                <div class="content-inner">
+                                    <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
+                                        <i class="pxli-volume"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        <?php }
+                    } else {
+                        global $wp_embed;
+                        pxl_print_html($wp_embed->run_shortcode('[embed]' . $audio_url . '[/embed]'));
+                    }
+                } elseif (isset($thumbnail)) { ?>
+                    <div class="item-featured">
+                        <div class="post-image">
+                            <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
+            <?php
+            if (!has_post_format('link', $post->ID) && !has_post_format('quote', $post->ID)) {
+            ?>
+                <div class="item-content">
+                    <?php
+                    if ($show_author == 'true' || $show_comment == 'true') {
+                        ?>
+                        <div class="post-metas">
+                            <div class="meta-inner">
+                                <?php if ($show_author == 'true') : ?>
+                                    <span class="post-author">
+                                        <span class="label"><?php echo esc_html__('Written By', 'basilico'); ?>&nbsp;<a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->display_name); ?></a></span>
+                                    </span>
+                                <?php endif; ?>
+                                <?php
+                                $posttags = get_the_tags($post->ID);
+                                ?>
+                                <span class="post-tags">
+                                    <span class="label"><?php echo esc_html('TAGS:', 'basilico'); ?></span>
+                                    <?php if ($posttags) {
+                                        foreach ($posttags as $tag) {
+                                            echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                                        }
+                                    }; ?>
+                                </span>
+                                <?php if ($show_comment == 'true') : ?>
+                                    <span class="post-comments">
+                                        <span class="label"><?php echo esc_html('COMMENTS:', 'basilico'); ?></span>
+                                        <a href="<?php echo get_comments_link($post->ID); ?>">
+                                            <span><?php comments_number(esc_html__('No Comments', 'basilico'), esc_html__(' 1 Comment', 'basilico'), esc_html__(' % Comments', 'basilico'), $post->ID); ?></span>
+                                        </a>
+                                    </span>
+                                <?php endif; ?>
+                                <?php ?>
+                                <span class="post-share">
+                                    <span class="label"><?php echo esc_html('SHARE POST:', 'basilico'); ?></span>
+                                    <?php basilico()->blog->get_post_share($post->ID); ?>
+                                </span>
+                                <?php ?>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                    <h3 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
+                    <?php if ($show_excerpt == 'true') : ?>
+                        <div class="pxl-divider"></div>
+                        <div class="item-excerpt">
+                            <?php
+                            if (!empty($post->post_excerpt)) {
+                                echo wp_trim_words($post->post_excerpt, $num_words, null);
+                            } else {
+                                $content = strip_shortcodes($post->post_content);
+                                $content = apply_filters('the_content', $content);
+                                $content = str_replace(']]>', ']]&gt;', $content);
+                                echo wp_trim_words($content, $num_words, null);
+                            }
+                            ?>
+                        </div>
+                        <?php if ($show_button == 'true') : ?>
+                            <div class="item-readmore pxl-button-wrapper">
+                                <a class="btn-more" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                    <span><?php echo pxl_print_html($button_text); ?></span>
+                                    <i class="zmdi zmdi-long-arrow-right"></i>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    <?php
+    endforeach;
+}
+
+
 function basilico_get_post_grid_layout1($posts = [], $settings = [], $args_m = [])
 {
     extract($settings);
