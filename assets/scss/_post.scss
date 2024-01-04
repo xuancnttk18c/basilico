@@ -657,7 +657,7 @@
 			color: $primary_color;
 		}
 	}
-	.next,.prev{
+	.next, .prev{
         span{
 			font-size: 17px;
         }
@@ -680,8 +680,8 @@
 	}
 }
 
-.comment-list-wrap{
-	.navigation{
+.comment-list-wrap {
+	.navigation {
 		justify-content: flex-end;
 	}
 }

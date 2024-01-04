@@ -158,6 +158,7 @@ if(!function_exists('basilico_configs')){
                 'bg-hover'          => basilico()->get_opt('input_bg_hover', '#fff'),
                 'border-color'      => basilico()->get_opt('input_border', '#0e1618'),
                 'border-hover'      => basilico()->get_opt('input_border_hover', '#0e1618'),
+                'height'            => basilico()->get_opt('input_height', ['height' => '44px', 'units' => 'px'])['height'],
                 'font-family'       => basilico()->get_theme_opt('font_input', ['font-family' => $body_font], 'font-family'),
                 'font-size'         => basilico()->get_theme_opt('font_input', ['font-size' => '15px'], 'font-size'),
                 'font-weight'       => basilico()->get_theme_opt('font_input', ['font-weight' => '400'], 'font-weight'),
