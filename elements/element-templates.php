@@ -1050,7 +1050,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                     $quote_text = get_post_meta($post->ID, 'featured-quote-text', true);
                     $quote_cite = get_post_meta($post->ID, 'featured-quote-cite', true);
                     ?>
-                    <div class="pxl-archive-post format-quote">
+                    <div class="format-quote">
                         <div class="format-wrap">
                             <div class="quote-inner">
                                 <div class="quote-icon">
@@ -1078,7 +1078,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                     $link_text = get_post_meta($post->ID, 'featured-link-text', true);
                     $link_cite = get_post_meta($post->ID, 'featured-link-cite', true);
                     ?>
-                    <div class="pxl-archive-post format-link">
+                    <div class="format-link">
                         <div class="format-wrap">
                             <div class="link-inner">
                                 <div class="link-icon">
