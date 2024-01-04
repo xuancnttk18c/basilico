@@ -1022,6 +1022,7 @@
                         font-size: 25px;
                         font-weight: 600;
                         line-height: 40px;
+                        letter-spacing: 0.05em;
                         font-style: italic;
                         text-transform: none;
                         @media (min-width: $xl_min) {
@@ -1029,9 +1030,19 @@
                         }
                     }
                     .link-cite {
+                        margin-top: 22px;
                         text-transform: uppercase;
                         font-size: 15px;
-                        letter-spacing: 0.1;
+                        letter-spacing: 0.1em;
+                        line-height: 26px;
+                        color: $primary_color;
+                    }
+                    .pxl-divider {
+                        margin: 30px auto 0;
+                        width: 75px;
+                        &:before {
+                            width: 100%;
+                        }
                     }
                 }
             }
