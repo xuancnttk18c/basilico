@@ -6,6 +6,10 @@ function basilico_loop_shop_per_page( $limit ) {
     return $limit;
 }
 
+function utero_wc_shortcode_products_has_paginate(){
+    return wc_get_loop_prop( 'is_shortcode' ) && wc_get_loop_prop( 'is_paginated' );
+}
+
 /* Remove page title on archive page */
 add_filter('woocommerce_show_page_title', function(){ return false;});
 

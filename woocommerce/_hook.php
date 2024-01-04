@@ -44,6 +44,9 @@ function basilico_wc_update_get_template($template, $template_name, $args, $temp
         case 'content-widget-price-filter.php':
             $template = get_template_directory().'/'.WC()->template_path().'pxl-content-widget-price-filter.php';
             break;
+        case 'loop/pagination.php':
+            $template = get_template_directory().'/'.WC()->template_path().'loop/pxl-pagination.php';
+            break;
     }
 
     return $template;
