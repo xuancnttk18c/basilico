@@ -1155,37 +1155,45 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                         if ($show_author == 'true' || $show_comment == 'true') {
                             ?>
                             <div class="post-metas">
-                                <div class="meta-inner">
-                                    <?php if ($show_author == 'true') : ?>
-                                        <span class="post-author">
-                                            <span class="label"><?php echo esc_html__('Written By', 'basilico'); ?>&nbsp;<a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->display_name); ?></a></span>
+                                <div class="meta-inner d-flex align-items-center">
+                                    <div class="author-date-wrapper d-flex">
+                                        <?php if ($show_author) : ?>
+                                            <span class="post-author col-auto d-flex">
+                                                <span><?php echo esc_html__('Written by', 'basilico'); ?> <?php the_author_posts_link(); ?></span>
+                                            </span>
+                                        <?php endif; ?>
+                                        <?php //if ($archive_date && $archive_author) : ?>
+                                            <span><?php echo '&nbsp;-&nbsp;'; ?></span>
+                                        <?php //endif ?>
+                                        <?php //if ($archive_date) : ?>
+                                            <span class="post-date">
+                                                <?php echo get_the_date($post_id) . esc_html(' at ', 'basilico') . get_the_time($post_id); ?>
+                                            </span>
+                                        <?php //endif; ?>
+                                    </div>
+                                    <?php //if ($archive_category && has_category('', $post_id)) : ?>
+                                        <span class="post-category col-auto d-flex">
+                                            <span>
+                                                <?php the_terms($post_id, 'category', '', ', ', ''); ?>
+                                            </span>
                                         </span>
-                                    <?php endif; ?>
+                                    <?php //endif; ?>
                                     <?php
-                                    $posttags = get_the_tags($post->ID);
-                                    ?>
-                                    <span class="post-tags">
-                                        <span class="label"><?php echo esc_html('TAGS:', 'basilico'); ?></span>
-                                        <?php if ($posttags) {
-                                            foreach ($posttags as $tag) {
-                                                echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
-                                            }
-                                        }; ?>
-                                    </span>
-                                    <?php if ($show_comment == 'true') : ?>
-                                        <span class="post-comments">
-                                            <span class="label"><?php echo esc_html('COMMENTS:', 'basilico'); ?></span>
-                                            <a href="<?php echo get_comments_link($post->ID); ?>">
-                                                <span><?php comments_number(esc_html__('No Comments', 'basilico'), esc_html__(' 1 Comment', 'basilico'), esc_html__(' % Comments', 'basilico'), $post->ID); ?></span>
-                                            </a>
+                                    $posttags = get_the_tags($post_id);
+                                    if ($posttags) : ?>
+                                        <span class="post-tags">
+                                            <span class="label"><?php echo esc_html('Tags: ', 'basilico'); ?></span>
+                                            <?php if ($posttags) {
+                                                $last_key = array_key_last($posttags);
+                                                foreach ($posttags as $key => $tag) {
+                                                    echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                                                    if ($key != $last_key) {
+                                                        echo ', ';
+                                                    }
+                                                }
+                                            }; ?>
                                         </span>
                                     <?php endif; ?>
-                                    <?php ?>
-                                    <span class="post-share">
-                                        <span class="label"><?php echo esc_html('SHARE POST:', 'basilico'); ?></span>
-                                        <?php basilico()->blog->get_post_share($post->ID); ?>
-                                    </span>
-                                    <?php ?>
                                 </div>
                             </div>
                             <?php
