@@ -858,15 +858,15 @@
             .post-metas {
                 margin-bottom: 0;
             }
-            .post-title {
+            .item-title {
                 font-size: 30px;
                 text-transform: none;
             }
             .button-share {
                 margin-top: 34px;
             }
-            &.format-quote,
-            &.format-link {
+            .format-quote,
+            .format-link {
                 position: relative;
                 padding-bottom: 13px;
                 &:after {
@@ -881,7 +881,7 @@
                     border-color: $divider_color;
                 }
             }
-            &.format-quote {
+            .format-quote {
                 .quote-inner {
                     .quote-icon {
                         margin-top: -3px;
@@ -906,7 +906,7 @@
                     }
                 }
             }
-            &.format-link {
+            .format-link {
                 .link-inner {
                     .link-icon {
                         margin-bottom: 6px 0 3px;
