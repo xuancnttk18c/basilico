@@ -1216,7 +1216,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                         <?php endif; ?>
                     <?php endif; ?>
                 </div>
-            <?php endif; ?>
+            <?php } ?>
         </div>
     <?php
     endforeach;
