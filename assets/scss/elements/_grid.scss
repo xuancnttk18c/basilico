@@ -909,7 +909,7 @@
                         line-height: 30px;
                         letter-spacing: 0.05em;
                         text-transform: none;
-                        @media (max-width: $xl_min) {
+                        @media (min-width: $xl_min) {
                             max-width: 85%;
                         }
                     }
@@ -924,6 +924,9 @@
                     .pxl-divider {
                         margin: 0 auto;
                         width: 75px;
+                        &:before {
+                            width: 100%;
+                        }                        
                     }                
                 }
             }
