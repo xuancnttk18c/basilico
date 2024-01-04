@@ -1,5 +1,6 @@
 <?php
 
+die('dasfasfsaf');
 defined( 'ABSPATH' ) || exit;
  
 $total   = isset( $total ) ? $total : wc_get_loop_prop( 'total_pages' );  

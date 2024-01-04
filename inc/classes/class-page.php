@@ -91,7 +91,7 @@ if (!class_exists('Basilico_Page')) {
             }
             $links = paginate_links( $paginate_links_args );
 
-            $pagination_style = $this->get_theme_opt('archive_pagination_style', 'style-df');
+            $pagination_style = basilico()->get_theme_opt('archive_pagination_style', 'style-df');
             if ( $links ):
             ?>
             <nav class="posts-pagination <?php echo esc_attr($ajax?'ajax':'') <?php echo esc_attr($pagination_style); ?>">
