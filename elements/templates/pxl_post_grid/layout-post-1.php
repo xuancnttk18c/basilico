@@ -125,7 +125,7 @@ if( count($posts) <= 0){
         <div class="pxl-load-more d-flex" data-loadmore="<?php echo esc_attr(json_encode($load_more)); ?>">
             <span class="btn btn-grid-loadmore btn-outline <?php echo esc_attr($icon_pos)?>">
                 <?php 
-                if(!empty($settings['loadmore_icon']))   
+                if(!empty($settings['loadmore_icon']))
                     \Elementor\Icons_Manager::render_icon( $settings['loadmore_icon'], [ 'aria-hidden' => 'true', 'class' => 'btn-icon '.$icon_pos ], 'span' ); 
                 ?>
                 <span class="btn-text"><?php echo esc_html($settings['loadmore_text']); ?></span>
