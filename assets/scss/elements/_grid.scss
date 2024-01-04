@@ -886,6 +886,20 @@
                     padding: 32px 15px 42px;
                     position: relative;
                     overflow: hidden;
+                    border: 1px solid $divider_color;
+                    background-color: $secondary_color;
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-size: cover;
+                        background-position: top right;
+                        background-repeat: no-repeat;
+                    }
                 }
             }
             .format-quote {
