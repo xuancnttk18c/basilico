@@ -914,10 +914,16 @@
                         }
                     }
                     .quote-cite {
+                        color: $primary_color;
                         margin-top: 20px;
                         font-size: 15px;
+                        line-height: 26px;
                         text-transform: uppercase;
                         letter-spacing: 0.1em;
+                    }
+                    .pxl-divider {
+                        margin: 0 auto;
+                        width: 75px;
                     }                
                 }
             }
