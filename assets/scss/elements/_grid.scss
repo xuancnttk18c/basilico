@@ -854,7 +854,7 @@
         }
     }
     &.layout-post-list-4 {
-        .grid-item {
+        .grid-item:not(:last-child) {
             margin-bottom: 75px;
         }
         .grid-item-inner {

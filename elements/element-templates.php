@@ -1103,41 +1103,43 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                         ?>
                         <div class="post-image">
                             <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
+                            <?php
+                            if (!empty($featured_video)) { ?>
+                                <div class="pxl-media-popup">
+                                    <div class="content-inner">
+                                        <a class="media-play-button video-default" href="<?php echo esc_url($featured_video); ?>">
+                                            <i class="pxli-play-2 pxl-icon-outline"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <?php
+                            } ?>
                         </div>
                         <?php
-                        if (!empty($featured_video)) { ?>
-                            <div class="pxl-media-popup">
-                                <div class="content-inner">
-                                    <a class="media-play-button video-default" href="<?php echo esc_url($featured_video); ?>">
-                                        <i class="pxli-play-2 pxl-icon-outline"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <?php
-                        }
                     }
                 } elseif (has_post_format('audio', $post->ID)) {
                     $audio_url = get_post_meta($post->ID, 'featured-audio-url', true);
                     if (isset($thumbnail)) { ?>
                         <div class="post-image">
                             <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
+                            <?php }
+                            if (!empty($audio_url)) {
+                                $filetype = wp_check_filetype($audio_url)['type'];
+                                if ($filetype == 'audio/mpeg') { ?>
+                                    <div class="pxl-media-popup">
+                                        <div class="content-inner">
+                                            <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
+                                                <i class="pxli-volume"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <?php }
+                            } else {
+                                global $wp_embed;
+                                pxl_print_html($wp_embed->run_shortcode('[embed]' . $audio_url . '[/embed]'));
+                            } ?>
                         </div>
-                    <?php }
-                    if (!empty($audio_url)) {
-                        $filetype = wp_check_filetype($audio_url)['type'];
-                        if ($filetype == 'audio/mpeg') { ?>
-                            <div class="pxl-media-popup">
-                                <div class="content-inner">
-                                    <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
-                                        <i class="pxli-volume"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        <?php }
-                    } else {
-                        global $wp_embed;
-                        pxl_print_html($wp_embed->run_shortcode('[embed]' . $audio_url . '[/embed]'));
-                    }
+                    <?php
                 } elseif (isset($thumbnail)) { ?>
                     <div class="item-featured">
                         <div class="post-image">
