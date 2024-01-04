@@ -862,7 +862,10 @@
                 font-size: 30px;
                 text-transform: none;
             }
-            .button-share {
+            .item-excerpt {
+                margin-top: 18px;
+            }
+            .item-readmore {
                 margin-top: 34px;
             }
             .format-quote,
@@ -879,6 +882,10 @@
                 }
                 .format-wrap {
                     border-color: $divider_color;
+                    text-align: center;
+                    padding: 32px 15px 42px;
+                    position: relative;
+                    overflow: hidden;
                 }
             }
             .format-quote {
