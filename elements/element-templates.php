@@ -1164,7 +1164,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                                                 <span><?php echo esc_html__('Written by', 'basilico'); ?> <?php the_author_posts_link(); ?></span>
                                             </span>
                                         <?php endif; ?>
-                                        <?php if ($show_date && $archive_author) : ?>
+                                        <?php if ($show_date && $show_author) : ?>
                                             <span><?php echo '&nbsp;-&nbsp;'; ?></span>
                                         <?php endif ?>
                                         <?php if ($show_date) : ?>
