@@ -862,7 +862,63 @@
                 position: relative;
             }
             .post-metas {
+                color: #fff;
+                padding: 20px 0 12px;
                 margin-bottom: 0;
+                text-transform: none;
+                a {
+                    color: #fff;
+                    &:hover {
+                        color: $primary_color;
+                    }
+                }
+                &.hover-underline a, 
+                &a.hover-underline {
+                    &:after {
+                        border-color: $primary_color;
+                    }
+                }
+                .meta-inner {
+                    > span {
+                        padding: 0 0 0 11px;
+                        margin: 5px 10px 5px 0;
+                        &:before {
+                            content: '';
+                            display: inline-block;
+                            position: absolute;
+                            width: 4px;
+                            height: 4px;
+                            background-color: $primary_color;
+                            border-radius: 5px;
+                            left: 0;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                        }
+                        &:after {
+                            content: none;
+                        }
+                    }
+                    .author-date-wrapper {
+                        position: relative;
+                        margin: 5px 27px 5px 0;
+                        padding: 0 0 0 11px;
+                        &:before {
+                            content: '';
+                            display: inline-block;
+                            position: absolute;
+                            width: 4px;
+                            height: 4px;
+                            background-color: $primary_color;
+                            border-radius: 5px;
+                            left: 0;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                        }
+                    }
+                    .post-author {
+                        margin-right: 0;
+                    }
+                }
             }
             .item-title {
                 font-size: 30px;
