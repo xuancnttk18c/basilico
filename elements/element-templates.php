@@ -1167,19 +1167,19 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                                         <?php //endif ?>
                                         <?php //if ($archive_date) : ?>
                                             <span class="post-date">
-                                                <?php echo get_the_date($post_id) . esc_html(' at ', 'basilico') . get_the_time($post_id); ?>
+                                                <?php echo get_the_date($post->ID) . esc_html(' at ', 'basilico') . get_the_time($post->ID); ?>
                                             </span>
                                         <?php //endif; ?>
                                     </div>
                                     <?php //if ($archive_category && has_category('', $post_id)) : ?>
                                         <span class="post-category col-auto d-flex">
                                             <span>
-                                                <?php the_terms($post_id, 'category', '', ', ', ''); ?>
+                                                <?php the_terms($post->ID, 'category', '', ', ', ''); ?>
                                             </span>
                                         </span>
                                     <?php //endif; ?>
                                     <?php
-                                    $posttags = get_the_tags($post_id);
+                                    $posttags = get_the_tags($post->ID);
                                     if ($posttags) : ?>
                                         <span class="post-tags">
                                             <span class="label"><?php echo esc_html('Tags: ', 'basilico'); ?></span>
