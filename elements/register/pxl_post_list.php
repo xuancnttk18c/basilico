@@ -242,7 +242,10 @@ pxl_add_custom_widget(
                             'label'     => esc_html__('Show Category', 'basilico' ),
                             'type'      => \Elementor\Controls_Manager::SWITCHER,
                             'default'   => 'true',
-                            'condition' => ['post_type' => 'post']
+                            'condition' => [
+                                'post_type' => 'post',
+                                'layout!' => ['4']
+                            ]
                         ),
                         array(
                             'name'      => 'show_tag',
@@ -263,7 +266,11 @@ pxl_add_custom_widget(
                             'label'     => esc_html__('Show Comment', 'basilico' ),
                             'type'      => \Elementor\Controls_Manager::SWITCHER,
                             'default'   => 'true',
-                            'condition' => ['post_type' => 'post']
+                            'condition' => ['post_type' => 'post'],
+                            'condition' => [
+                                'post_type' => 'post',
+                                'layout!' => ['4']
+                            ]
                         ),
                         array(
                             'name'      => 'show_excerpt',

@@ -1154,7 +1154,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                     ?>
                     <div class="item-content">
                         <?php
-                        if ($show_author == 'true' || $show_comment == 'true') {
+                        if ($show_author == 'true' || $show_date == 'true') {
                             ?>
                             <div class="post-metas">
                                 <div class="meta-inner d-flex align-items-center">
@@ -1164,22 +1164,15 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                                                 <span><?php echo esc_html__('Written by', 'basilico'); ?> <?php the_author_posts_link(); ?></span>
                                             </span>
                                         <?php endif; ?>
-                                        <?php //if ($archive_date && $archive_author) : ?>
+                                        <?php if ($show_date && $archive_author) : ?>
                                             <span><?php echo '&nbsp;-&nbsp;'; ?></span>
-                                        <?php //endif ?>
-                                        <?php //if ($archive_date) : ?>
+                                        <?php endif ?>
+                                        <?php if ($show_date) : ?>
                                             <span class="post-date">
                                                 <?php echo get_the_date(get_option('date_format'), $post->ID) . esc_html(' at ', 'basilico') . get_the_time(get_option('time_format'), $post->ID); ?>
                                             </span>
-                                        <?php //endif; ?>
+                                        <?php endif; ?>
                                     </div>
-                                    <?php //if ($archive_category && has_category('', $post_id)) : ?>
-                                        <span class="post-category col-auto d-flex">
-                                            <span>
-                                                <?php the_terms($post->ID, 'category', '', ', ', ''); ?>
-                                            </span>
-                                        </span>
-                                    <?php //endif; ?>
                                     <?php
                                     $posttags = get_the_tags($post->ID);
                                     if ($posttags) : ?>

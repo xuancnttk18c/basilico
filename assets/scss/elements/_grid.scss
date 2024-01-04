@@ -879,7 +879,8 @@
                     }
                 }
                 .meta-inner {
-                    > span {
+                    > span,
+                    .author-date-wrapper {
                         padding: 0 0 0 11px;
                         margin: 5px 10px 5px 0;
                         &:before {
@@ -900,20 +901,6 @@
                     }
                     .author-date-wrapper {
                         position: relative;
-                        margin: 5px 27px 5px 0;
-                        padding: 0 0 0 11px;
-                        &:before {
-                            content: '';
-                            display: inline-block;
-                            position: absolute;
-                            width: 4px;
-                            height: 4px;
-                            background-color: $primary_color;
-                            border-radius: 5px;
-                            left: 0;
-                            top: 50%;
-                            @include transform(translateY(-50%));
-                        }
                     }
                     .post-author {
                         margin-right: 0;
