@@ -1167,7 +1167,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                                         <?php //endif ?>
                                         <?php //if ($archive_date) : ?>
                                             <span class="post-date">
-                                                <?php echo get_the_date('', $post->ID) . esc_html(' at ', 'basilico') . get_the_time('', $post->ID); ?>
+                                                <?php echo get_the_date(get_option('date_format'), $post->ID) . esc_html(' at ', 'basilico') . get_the_time(get_option('time_format'), $post->ID); ?>
                                             </span>
                                         <?php //endif; ?>
                                     </div>
