@@ -8,7 +8,7 @@ function basilico_loop_shop_per_page( $limit ) {
 
 //* dkjafjfaklfjkl
 remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
-add_action( 'woocommerce_after_shop_loop', 'utero_shop_pagination', 10 );
+add_action( 'woocommerce_after_shop_loop', 'basilico_shop_pagination', 10 );
 function utero_shop_pagination(){
     $is_shortcode_pagin = utero_wc_shortcode_products_has_paginate();
     if( $is_shortcode_pagin ){
