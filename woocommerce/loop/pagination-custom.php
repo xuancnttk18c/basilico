@@ -8,6 +8,7 @@ $base    = isset( $base ) ? $base : esc_url_raw( str_replace( 999999999, '%#%', 
 $format  = isset( $format ) ? $format : '';
 
 $pagination_type = isset( $pagination_type ) ? $pagination_type : basilico()->get_theme_opt('shop_archive_pagin_type', '');
+$pagination_style = basilico()->get_theme_opt('archive_pagination_style', 'style-df');
  
 $class = isset( $class ) ? $class : '';
 if( !empty($page_base_url) )
@@ -19,7 +20,7 @@ $base  = esc_url_raw( add_query_arg( 'product-page', '%#%', $shop_base_url ) );
 
 ?>
 
-<nav class="woocommerce-pagination <?php echo esc_attr( $pagination_type ); ?> <?php echo esc_attr( $class ); ?>" data-type="<?php echo esc_attr( $pagination_type ); ?>">
+<nav class="woocommerce-pagination <?php echo esc_attr( $pagination_type ); ?> <?php echo esc_attr( $pagination_style ); ?> <?php echo esc_attr( $class ); ?>" data-type="<?php echo esc_attr( $pagination_type ); ?>">
 	<?php if ( $pagination_type == 'loadmore' ) :  
 		$limit = isset( $limit ) ? $limit : basilico()->get_theme_opt('shop_archive_product_per_page', 9);
 		$limit = isset( $_GET['product_per_page'] ) ? wc_clean( $_GET['product_per_page'] ) : $limit;

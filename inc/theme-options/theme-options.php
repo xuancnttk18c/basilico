@@ -395,6 +395,16 @@ Redux::setSection($opt_name, array(
                 'default' => '',
                 'subtitle' => esc_html__('Default: Read more', 'basilico'),
                 'required' => array('archive_readmore', '=', true)
+            ),
+            array(
+                'id'      => 'archive_pagination_style',
+                'type'    => 'select',
+                'title'   => esc_html__('Pagination Style', 'basilico'),
+                'options'  => array(
+                    'style-df' => esc_html__('Default', 'basilico'),
+                    'style-2' => esc_html__('Style 2', 'basilico'),
+                ),
+                'default' => 'style-df'
             )
         )
     )
