@@ -910,6 +910,8 @@
             }
             .format-quote {
                 .quote-inner {
+                    position: relative;
+                    z-index: 1;
                     .quote-icon {
                         font-weight: 700;
                         color: var(--primary-color);
