@@ -28,7 +28,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'hide_icon',
-                            'label' => esc_html__('Input Text Color', 'basilico' ),
+                            'label' => esc_html__('Hide Icon', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SWITCHER,
                             'default' => false
                         ),
