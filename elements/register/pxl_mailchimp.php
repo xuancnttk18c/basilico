@@ -27,6 +27,12 @@ pxl_add_custom_widget(
                             'default' => 'style-default',
                         ),
                         array(
+                            'name' => 'hide_icon',
+                            'label' => esc_html__('Input Text Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                            'default' => false
+                        ),
+                        array(
                             'name' => 'input_background',
                             'label' => esc_html__('Input Background', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
