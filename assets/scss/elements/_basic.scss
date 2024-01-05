@@ -1312,6 +1312,11 @@
             }
         }
     }
+    &.hide-icon {
+        i {
+            display: none;
+        }
+    }
 }
 
 //* Pxl Cart
