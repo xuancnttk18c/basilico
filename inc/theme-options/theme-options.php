@@ -640,8 +640,10 @@ Redux::setSection($opt_name, array(
             'type'        => 'dimensions',
             'title'       => esc_html__('Input Height', 'basilico'),
             'width' => false,
+            'unit'     => 'px',
             'default'  => array(
-                'Height'  => '44'
+                'height'  => '44',
+                'unit' => 'px'
             ),
         ),
         array(
