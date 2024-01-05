@@ -1263,6 +1263,8 @@
                 color: $heading_color;
                 overflow: visible;
                 i {
+                    position: relative;
+                    z-index: 1;
                     margin-left: 8px;
                 }
                 &:before {
