@@ -1124,7 +1124,7 @@
                 color: $primary_color;
                 @include transition();
                 &:before {
-                    //content: none;
+                    content: none;
                 }
                 &:hover {
                     i {
