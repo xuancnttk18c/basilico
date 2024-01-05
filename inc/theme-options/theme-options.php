@@ -402,7 +402,7 @@ Redux::setSection($opt_name, array(
                 'title'   => esc_html__('Pagination Style', 'basilico'),
                 'options'  => array(
                     'style-df' => get_template_directory_uri() . '/assets/images/pagination_layout/p1.jpg',
-                    'style-2'  => get_template_directory_uri() . '/assets/images/pagination_layout/p1.jpg',
+                    'style-2'  => get_template_directory_uri() . '/assets/images/pagination_layout/p2.jpg',
                 ),
                 'default' => 'style-df'
             )
