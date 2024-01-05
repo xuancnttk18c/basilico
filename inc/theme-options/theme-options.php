@@ -398,11 +398,11 @@ Redux::setSection($opt_name, array(
             ),
             array(
                 'id'      => 'archive_pagination_style',
-                'type'    => 'select',
+                'type'    => 'image_select',
                 'title'   => esc_html__('Pagination Style', 'basilico'),
                 'options'  => array(
-                    'style-df' => esc_html__('Default', 'basilico'),
-                    'style-2' => esc_html__('Style 2', 'basilico'),
+                    'style-df' => get_template_directory_uri() . '/assets/images/pagination_layout/p1.jpg',
+                    'style-2'  => get_template_directory_uri() . '/assets/images/pagination_layout/p1.jpg',
                 ),
                 'default' => 'style-df'
             )
