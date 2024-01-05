@@ -341,6 +341,26 @@ Redux::setSection($opt_name, array(
                 '1' => esc_html__('Sticky', 'basilico'),
             ),
             'default'  => '1'
+        ),
+        array(
+            'id'      => 'archive_pagination_style',
+            'type'    => 'image_select',
+            'title'   => esc_html__('Pagination Style', 'basilico'),
+            'options'  => array(
+                'style-df' => get_template_directory_uri() . '/assets/images/pagination_layout/p1.jpg',
+                'style-2'  => get_template_directory_uri() . '/assets/images/pagination_layout/p2.jpg',
+            ),
+            'default' => 'style-df'
+        ),
+        array(
+            'id'      => 'tab_style',
+            'type'    => 'image_select',
+            'title'   => esc_html__('Tab Style', 'basilico'),
+            'options'  => array(
+                'style-df' => get_template_directory_uri() . '/assets/images/tabs_layout/t1.jpg',
+                'style-2'  => get_template_directory_uri() . '/assets/images/tabs_layout/t2.jpg',
+            ),
+            'default' => 'style-df'
         )
     )
 ));
@@ -396,26 +416,6 @@ Redux::setSection($opt_name, array(
                 'subtitle' => esc_html__('Default: Read more', 'basilico'),
                 'required' => array('archive_readmore', '=', true)
             ),
-            array(
-                'id'      => 'archive_pagination_style',
-                'type'    => 'image_select',
-                'title'   => esc_html__('Pagination Style', 'basilico'),
-                'options'  => array(
-                    'style-df' => get_template_directory_uri() . '/assets/images/pagination_layout/p1.jpg',
-                    'style-2'  => get_template_directory_uri() . '/assets/images/pagination_layout/p2.jpg',
-                ),
-                'default' => 'style-df'
-            ),
-            array(
-                'id'      => 'tab_style',
-                'type'    => 'image_select',
-                'title'   => esc_html__('Tab Style', 'basilico'),
-                'options'  => array(
-                    'style-df' => get_template_directory_uri() . '/assets/images/tabs_layout/t1.jpg',
-                    'style-2'  => get_template_directory_uri() . '/assets/images/tabs_layout/t2.jpg',
-                ),
-                'default' => 'style-df'
-            )
         )
     )
 ));
