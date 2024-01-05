@@ -17,7 +17,7 @@ $limit = $widget->get_setting('limit', -1);
 $num_words = $widget->get_setting('num_words', 17);
 $settings['layout']    = $settings['layout_' . $settings['post_type']];
 
-$tab_style = basilico()->get_theme_opt('tabs_style', 'style-df');
+$tab_style = basilico()->get_theme_opt('tab_style', 'style-df');
 
 extract(pxl_get_posts_of_grid(
     'post',
