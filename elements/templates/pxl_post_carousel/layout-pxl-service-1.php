@@ -18,6 +18,8 @@ $num_words = $widget->get_setting('num_words', 24);
 
 $settings['layout']    = $settings['layout_'.$settings['post_type']];
 
+$tab_style = basilico()->get_theme_opt('tabs_style', 'style-df');
+
 extract(pxl_get_posts_of_grid(
     'pxl-service',
     ['source' => $source, 'orderby' => $orderby, 'order' => $order, 'limit' => $limit, 'post_ids' => $post_ids],
@@ -84,7 +86,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('READ MORE', 'po
 <?php if(!empty($posts) && count($posts)): ?>
     <div class="pxl-swiper-slider pxl-service-carousel layout-<?php echo esc_attr($settings['layout']);?> ">
         <?php if ($select_post_by === 'term_selected' && $filter == "true"): ?>
-            <div class="swiper-filter-wrap d-flex <?php echo esc_html($settings['filter_alignment']);?>">
+            <div class="swiper-filter-wrap <?php echo esc_attr($tab_style); ?> d-flex <?php echo esc_html($settings['filter_alignment']);?>">
                 <?php if(!empty($filter_default_title)): ?>
                     <span class="filter-item active" data-filter-target="all">
                         <span class="cat-name"><?php echo esc_html($filter_default_title); ?></span>

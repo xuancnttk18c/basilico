@@ -17,6 +17,8 @@ $limit = $widget->get_setting('limit', -1);
 $num_words = $widget->get_setting('num_words', 17);
 $settings['layout']    = $settings['layout_' . $settings['post_type']];
 
+$tab_style = basilico()->get_theme_opt('tabs_style', 'style-df');
+
 extract(pxl_get_posts_of_grid(
     'post',
     ['source' => $source, 'orderby' => $orderby, 'order' => $order, 'limit' => $limit, 'post_ids' => $post_ids],
@@ -64,7 +66,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('READ MORE', 'ba
 
     <div class="pxl-swiper-slider pxl-post-carousel layout-<?php echo esc_attr($settings['layout']); ?> center-mode-<?php echo esc_attr($opts['center_slide']); ?>">
         <?php if ($select_post_by === 'term_selected' && $filter == "true") : ?>
-            <div class="swiper-filter-wrap">
+            <div class="swiper-filter-wrap <?php echo esc_attr($tab_style); ?>">
                 <?php if (!empty($filter_default_title)) : ?>
                     <span class="filter-item active" data-filter-target="all"><?php echo esc_html($filter_default_title); ?></span>
                 <?php endif; ?>
