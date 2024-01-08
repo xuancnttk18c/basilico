@@ -57,9 +57,9 @@
         &:before {            
             content: '';
             position: absolute;
-            left: 0;
-            bottom: 0;
-            right: 0;
+            left: -1px;
+            bottom: -1px;
+            right: -1px;
             height: 0;
             background-color: #fff;
             @include transition(all 250ms linear 0s);
@@ -195,11 +195,12 @@
         margin-bottom: 8px;
         &:before {
             content: '';
+            position: absolute;
             background-color: $primary_color;
             top: auto;
-            left: 0;
-            bottom: 0;
-            width: 100%;
+            left: -1px;
+            bottom: -1px;
+            right: -1px;
             height: 0;
             transition: all 0.3s ease;
             transition-delay: 0ms;
