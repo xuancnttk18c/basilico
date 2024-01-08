@@ -421,7 +421,7 @@ function basilico_get_post_list_layout1($posts = [], $settings = [], $args_m = [
                             <div class="quote-inner row">
                                 <div class="inner-left col-10">
                                     <div class="quote-text">
-                                        <a href="<?php echo esc_url(get_permalink()); ?>"><?php echo esc_html($quote_text); ?></a>
+                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html($quote_text); ?></a>
                                     </div>
                                     <div class="pxl-divider"></div>
                                     <?php
@@ -647,7 +647,7 @@ function basilico_get_post_list_layout2($posts = [], $settings = [], $args_m = [
                                     <span>"</span>
                                 </div>
                                 <div class="quote-text">
-                                    <a href="<?php echo esc_url(get_permalink()); ?>"><?php echo esc_html($quote_text); ?></a>
+                                    <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html($quote_text); ?></a>
                                 </div>
                                 <div class="pxl-divider"></div>
                                 <?php
@@ -832,7 +832,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
                             <div class="quote-inner row">
                                 <div class="inner-left col-10">
                                     <div class="quote-text">
-                                        <a href="<?php echo esc_url(get_permalink()); ?>"><?php echo esc_html($quote_text); ?></a>
+                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html($quote_text); ?></a>
                                     </div>
                                     <div class="pxl-divider"></div>
                                     <?php
