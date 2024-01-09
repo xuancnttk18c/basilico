@@ -304,18 +304,11 @@ Redux::setSection($opt_name, array(
             array(
                 'id'             => 'content_padding',
                 'type'           => 'spacing',
-                'output'         => array('.pxl-main'),
+                'output'         => array('.pxl-pagetitle'),
                 'mode'           => 'padding',
                 'units'          => array('px'),
                 'units_extended' => 'false',
                 'title'          => esc_html__('Content Padding', 'basilico'),
-                'default'        => array(
-                    'padding-top'    => '',
-                    'padding-bottom' => '',
-                    'padding-left'    => '',
-                    'padding-right'    => '',
-                    'units'          => 'px',
-                ),
             )
         ),
     )
