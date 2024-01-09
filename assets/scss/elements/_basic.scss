@@ -529,6 +529,7 @@
                         border-radius: 25px;
                         background-color: $primary_color;
                         a {
+                            text-transform: capitalize;
                             &:hover {
                                 color: #fff;
                             }
