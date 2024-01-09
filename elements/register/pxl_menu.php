@@ -60,6 +60,7 @@ pxl_add_custom_widget(
                                 '2' => esc_html__('Style 2', 'basilico'),
                                 '3' => esc_html__('Style 3', 'basilico'),
                                 '4' => esc_html__('Style 4', 'basilico'),
+                                '5' => esc_html__('Style 5', 'basilico'),
                             ],
                             'default' => '1',
                             'condition' => [

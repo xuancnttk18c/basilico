@@ -508,6 +508,30 @@
                 }
             }
         }
+        &.style-5 {
+            @media (min-width: $xl_min) {
+                .pxl-primary-menu {
+                    > li {
+                        &:before {
+                            background-color: $secondary_color;
+                            top: auto;
+                            bottom: 0;
+                        }
+                        > a {
+                            color: $heading_color;
+                            font-weight: 500;
+                            letter-spacing: 0;
+                            text-transform: uppercase;
+                            overflow: hidden;
+                        }
+                    }
+                    .sub-menu {
+                        border-radius: 25px;
+                        background-color: $primary_color;
+                    }
+                }
+            }
+        }
     }
     &.pxl-nav-menu-inner {
         .menu-item > a {
