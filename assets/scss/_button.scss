@@ -366,6 +366,31 @@
             }
         }
     }
+    &.btn-additional-5 {
+        background-color: $primary_color;
+        @include border-radius(25px);
+        color: #fff;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $secondary_color;
+            @include transform(scaleX(0));
+            @include transition(all 250ms linear 0s);
+        }
+        &:hover {
+            color: $heading_color;
+            i, .pxl-button-icon {
+                color: $heading_color;
+            }
+            &:before {
+                @include transform(scaleX(1));
+            }
+        }
+    }
 }
 
 .pxl-pizza {
