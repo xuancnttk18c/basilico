@@ -296,19 +296,19 @@ Redux::setSection($opt_name, array(
 
 //* Page Title
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('Page Title 2', 'basilico'),
+    'title'  => esc_html__('Page Title', 'basilico'),
     'icon'   => 'el el-indent-left',
     'fields' => array_merge(
         basilico_page_title_opts(),
         array(
             array(
-                'id'             => 'content_padding',
+                'id'             => 'page_title_margin',
                 'type'           => 'spacing',
                 'output'         => array('.pxl-pagetitle'),
                 'mode'           => 'padding',
                 'units'          => array('px'),
                 'units_extended' => 'false',
-                'title'          => esc_html__('Content Padding', 'basilico'),
+                'title'          => esc_html__('Margin', 'basilico'),
                 'default'        => array(
                     'padding-top'    => '',
                     'padding-bottom' => '',
