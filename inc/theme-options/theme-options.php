@@ -296,7 +296,7 @@ Redux::setSection($opt_name, array(
 
 //* Page Title
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('Page Title', 'basilico'),
+    'title'  => esc_html__('Page Title 2', 'basilico'),
     'icon'   => 'el el-indent-left',
     'fields' => array_merge(
         basilico_page_title_opts(),
