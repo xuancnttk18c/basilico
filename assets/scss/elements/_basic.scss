@@ -528,6 +528,11 @@
                     .sub-menu {
                         border-radius: 25px;
                         background-color: $primary_color;
+                        a {
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
                     }
                 }
             }
