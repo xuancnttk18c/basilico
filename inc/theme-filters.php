@@ -318,7 +318,6 @@ function basilico_custom_fonts($fonts){
             '\'Cerebri Sans\', sans-serif' => '\'Cerebri Sans\', sans-serif',
             '\'Cormorant Infant\', serif' => '\'Cormorant Infant\', serif',
             '\'PS Demo\', sans-serif' => '\'PS Demo\', sans-serif',
-            '\'Kanit\', sans-serif' => '\'Kanit\', sans-serif',
         ]
     ];
     return $fonts;
@@ -343,6 +342,5 @@ function basilico_update_elementor_font_control($additional_fonts){
     $additional_fonts['Cormorant Infant'] = 'pxlfonts';
     $additional_fonts['PS Demo'] = 'pxlfonts';
     $additional_fonts['Cirka'] = 'pxlfonts';
-    $additional_fonts['Kanit'] = 'pxlfonts';
     return $additional_fonts;
 }
