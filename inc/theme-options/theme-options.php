@@ -305,7 +305,7 @@ Redux::setSection($opt_name, array(
                 'id'             => 'page_title_margin',
                 'type'           => 'spacing',
                 'output'         => array('.pxl-pagetitle'),
-                'mode'           => 'padding',
+                'mode'           => 'margin',
                 'units'          => array('px'),
                 'units_extended' => 'false',
                 'title'          => esc_html__('Margin', 'basilico'),
