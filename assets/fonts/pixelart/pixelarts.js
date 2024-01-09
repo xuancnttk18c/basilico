@@ -222,7 +222,7 @@
 		"wedding-rings",
 		"fork",
 		"serving-dish",
-		"calendar-minus"
+		"calendar-minus",
 		"tag1"
     ]
 }
