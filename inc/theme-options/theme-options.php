@@ -299,11 +299,12 @@ Redux::setSection($opt_name, array(
     'title'  => esc_html__('Page Title', 'basilico'),
     'icon'   => 'el el-indent-left',
     'fields' => array_merge(
+        basilico_page_title_opts(),
         array(
             array(
                 'id'             => 'content_padding',
                 'type'           => 'spacing',
-                'output'         => array('.pxl-pagetitle'),
+                'output'         => array('.pxl-main'),
                 'mode'           => 'padding',
                 'units'          => array('px'),
                 'units_extended' => 'false',
@@ -317,7 +318,6 @@ Redux::setSection($opt_name, array(
                 ),
             )
         ),
-        basilico_page_title_opts(),
     )
 ));
 
