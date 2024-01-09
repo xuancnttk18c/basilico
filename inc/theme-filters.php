@@ -317,7 +317,7 @@ function basilico_custom_fonts($fonts){
             '\'Audrey\', sans-serif' => '\'Audrey\', sans-serif',
             '\'Cerebri Sans\', sans-serif' => '\'Cerebri Sans\', sans-serif',
             '\'Cormorant Infant\', serif' => '\'Cormorant Infant\', serif',
-            '\'PS Demo\', sans-serif' => '\'PS Demo\', sans-serif',
+            '\'PS Demo\', sans-serif' => '\'PS Demo\', sans-serif'
         ]
     ];
     return $fonts;
