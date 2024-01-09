@@ -166,3 +166,35 @@
 .additional-font-2 {
     font-family: 'Cirka' !important;
 }
+
+@font-face {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/font-face/Kanit-Bold.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Kanit';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/font-face/Kanit-BoldItalic.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/font-face/Kanit-ExtraBold.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Kanit';
+    font-style: italic;
+    font-weight: 600;
+    src: url('../fonts/font-face/Kanit-ExtraBoldItalic.woff') format('woff')
+}
+
+.additional-font-2 {
+    font-family: 'Kanit' !important;
+}
