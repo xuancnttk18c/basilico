@@ -211,6 +211,7 @@
 		background-color: $primary_color;
 		color: #fff;
 		@include border-radius(21.5px);
+		margin-bottom: 17px;
 		i {
 			font-size: 13px;
 			margin-right: 6px;
@@ -254,10 +255,11 @@
 			max-width: max-content;
 			margin-left: auto;
 			margin-right: auto;
-			margin-bottom: 17px;
 		}
 		.post-title {
 			max-width: 770px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 }
