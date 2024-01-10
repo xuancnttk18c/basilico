@@ -54,7 +54,9 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
                 <?php endif ?>
             </div>
         <?php endif; ?>
-        <?php if ($custom_post_title == '1') : ?>
+        <?php
+        $custom_post_title = basilico()->get_theme_opt('single_post_title_layout', '0');
+        if ($custom_post_title == '1') : ?>
             <h2 class="post-title">
                 <?php echo get_the_title(); ?>
             </h2>
