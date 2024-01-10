@@ -389,10 +389,12 @@
 }
 
 .single-layout-2 {
-	.post-tags{
-		margin: -3.5px;
-		> * {
-			margin: 3.5px;
+	.post-shares {
+		.post-tags{
+			margin: -3.5px;
+			> * {
+				margin: 3.5px;
+			}
 		}
 	}
 	.post-tags-wrap a {
