@@ -27,7 +27,7 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
 <article id="post-<?php the_ID(); ?>" <?php post_class('pxl-single-post'); ?>>
     <div class="<?php echo esc_attr($content_inner_cls); ?>">
         <?php
-        basilico()->blog->get_post_metas_pizza();
+        basilico()->blog->get_post_metas_fastfood();
         if (has_post_thumbnail()) : ?>
             <div class="post-image post-featured">
                 <?php
