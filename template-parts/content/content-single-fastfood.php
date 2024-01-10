@@ -54,6 +54,11 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
                 <?php endif ?>
             </div>
         <?php endif; ?>
+        <?php if ($custom_post_title == '1') : ?>
+            <h2 class="post-title">
+                <?php echo get_the_title(); ?>
+            </h2>
+        <?php endif; ?>
         <div class="post-content overflow-hidden">
             <div class="content-inner clearfix <?php echo esc_attr($post_content_classes); ?>">
                 <?php the_content(); ?>
