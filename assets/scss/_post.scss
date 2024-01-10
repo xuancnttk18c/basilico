@@ -481,7 +481,7 @@
 .single-layout-1 .social-share {
 	.pxl-icon {
 		border: 1px solid rgba($primary_color_rgb, 0.7);
-		color: $body_color;
+		color: #fff;
 		&:after {
 			background-color: $primary_color;
 		}
@@ -499,7 +499,7 @@
 	}
 	.pxl-icon {
 		border: none;
-		color: #fff;
+		color: $body_color;
 		&:after {
 			background-color: $primary_color;
 		}
