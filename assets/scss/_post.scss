@@ -481,9 +481,22 @@
 .single-layout-1 .social-share {
 	.pxl-icon {
 		border: 1px solid rgba($primary_color_rgb, 0.7);
+		color: $body_color;
+		&:after {
+			background-color: $primary_color;
+		}
+	}
+}
+
+.single-layout-2 .social-share {
+	.pxl-icon {
+		border: none;
 		color: #fff;
 		&:after {
 			background-color: $primary_color;
+		}
+		&:hover {
+			color: #fff;
 		}
 	}
 }
