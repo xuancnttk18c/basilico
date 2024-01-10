@@ -226,6 +226,11 @@
 				color: $secondary_color;
 			}
 		}
+		.post-tags {
+			a + a {
+				margin-left: 5px;
+			}
+		}
 	}
 }
 
