@@ -247,15 +247,9 @@
 		text-transform: none;
 		margin-bottom: 33px;
 	}
-	.post-tags-share {
-		border: none;
-		@include border-radius(36px);
-		@include gradient-x($gradient01_angle, $gradient01_color_to, $gradient01_color_from);
-	}
 	.no-sidebar {
 		.post-metas,
-		.post-title,
-		.post-tags-share {
+		.post-title {
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -263,9 +257,6 @@
 			max-width: max-content;
 		}
 		.post-title {
-			max-width: 770px;
-		}
-		.post-tags-share {
 			max-width: 770px;
 		}
 	}
@@ -330,6 +321,19 @@
 .pxl-pizza .post-tags-share {
 	border-top: 1px solid $divider_color;
 	border-bottom: 1px solid $divider_color;
+}
+
+.single-layout-2 {
+	.post-tags-share {
+		border: none;
+		@include border-radius(36px);
+		@include gradient-x($gradient01_angle, $gradient01_color_to, $gradient01_color_from);
+	}
+	.no-sidebar {
+		.post-tags-share {
+			max-width: 770px;
+		}	
+	}
 }
 
 .pxl-pizza .post-tags-share {
