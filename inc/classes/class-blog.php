@@ -149,6 +149,56 @@ if (!class_exists('Basilico_Blog')) {
             <?php endif;
         }
 
+        public function get_archive_metas_fastfood($post_id = 0)
+        {
+            $post_author_on = basilico()->get_theme_opt('post_author_on', true);
+            $post_date_on = basilico()->get_theme_opt('post_date_on', true);
+            $post_comments_on = basilico()->get_theme_opt('post_comments_on', true);
+            $post_categories_on = basilico()->get_theme_opt('post_categories_on', true);
+            $post_tags_on = basilico()->get_theme_opt('post_tag', false);
+            
+            if ($post_author_on || $post_date_on || $post_categories_on || $post_comments_on) : ?>
+                <div class="post-metas">
+                    <div class="meta-inner d-flex">
+                        <?php if ($post_date_on) : ?>
+                            <div class="post-date d-flex align-items-center">
+                                <i class="pxli pxli-calendar-minus"></i>
+                                <span><?php echo get_the_date($post_id); ?></span>
+                            </div>
+                        <?php endif; ?>
+                        <?php
+                        $posttags = get_the_tags($post_id);
+                        if ($post_tags_on && $posttags) : ?>
+                            <div class="post-tags d-flex align-items-center">
+                                <i class="pxli pxli-tag1"></i>
+                                <?php if ($posttags) {
+                                    $last_key = array_key_last($posttags);
+                                    foreach ($posttags as $key => $tag) {
+                                        echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                                        if ($key != $last_key) {
+                                            echo ', ';
+                                        }
+                                    }
+                                }; ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($post_categories_on && has_category()) : ?>
+                            <div class="post-category d-flex align-items-center">
+                                <i class="pxli pxli-folder1"></i>
+                                <span><?php the_terms($post_id, 'category', '', ', '); ?></span>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($post_author_on) : ?>
+                            <div class="post-author d-flex align-items-center">
+                                <i class="pxli pxli-user"></i>
+                                <span><?php echo esc_html__('By', 'basilico'); ?> <?php the_author_posts_link(); ?></span>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            <?php endif;
+        }
+
         public function get_excerpt($length = 25)
         {
             $pxl_the_excerpt = get_the_excerpt();
