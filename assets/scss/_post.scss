@@ -207,11 +207,6 @@
 }
 
 .single-layout-2 {
-	&:not(.pxl-sidebar-area) {
-		.post-metas {
-			max-width: 510px;
-		}
-	}
 	.post-metas {
 		background-color: $primary_color;
 		color: #fff;
@@ -235,6 +230,11 @@
 				}
 			}
 		}
+	}
+}
+.no-sidebar .single-layout-2 {
+	.post-metas {
+		max-width: 510px;
 	}
 }
 
