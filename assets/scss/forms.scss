@@ -6,8 +6,8 @@ $ff_padding: 0 20px;
 $ff_border: 1px solid;
 $ff_border_color: $input_border_color;
 $ff_border_hover: $input_border_hover;
-$ff_border_radius: 0;
-$ff_border_radius_rtl: 0;
+$ff_border_radius: $input_border_radius;
+$ff_border_radius_rtl: $input_border_radius;
 $ff_background: $input_bg;
 $ff_background_hover: $input_bg_hover;
 
