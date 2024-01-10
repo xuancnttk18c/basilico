@@ -191,7 +191,7 @@
     }
 }
 
-.pxl-luxury .commentlist {
+.single-layout-1 .commentlist {
     .comment-content {
         .comment-title {
             font-family: $heading_font_family;
@@ -204,6 +204,24 @@
             &:hover {
                 background-size: 0;
             }
+        }
+    }
+}
+
+.single-layout-2 .commentlist {
+    .comment-avatar {
+        img {
+            border-color: $secondary_color;
+        }
+    }
+    .comment-content {
+        .comment-title {
+            font-family: $heading_font_family;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        .comment-date {
+            letter-spacing: 0;
         }
     }
 }
