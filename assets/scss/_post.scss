@@ -207,6 +207,7 @@
 }
 
 .single-layout-2 .post-metas {
+	max-width: 510px;
 	background-color: $primary_color;
 	color: #fff;
 	@include border-radius(21.5px);
@@ -218,6 +219,7 @@
 		padding-left: 15px;
 		padding-right: 15px;
 		justify-content: center;
+		gap: 22px;
 		a {
 			color: #fff;
 			&:hover {
