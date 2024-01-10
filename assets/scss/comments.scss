@@ -218,11 +218,16 @@
         .comment-title {
             font-family: $heading_font_family;
             font-weight: 600;
-            letter-spacing: 0.05em;
         }
         .comment-date {
+            font-weight: 500;
             letter-spacing: 0;
         }
+    }
+    .comment-reply-link {
+        background-color: $primary_color;
+        color: #fff;
+        @include border-radius(5px);
     }
 }
 
