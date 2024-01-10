@@ -35,7 +35,7 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
                 <?php echo get_the_title(); ?>
             </h2>
         <?php endif; ?>
-        if (has_post_thumbnail()) : ?>
+        <?php if (has_post_thumbnail()) : ?>
             <div class="post-image post-featured">
                 <?php
                 basilico()->blog->get_post_feature();
