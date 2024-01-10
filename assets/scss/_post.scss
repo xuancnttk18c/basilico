@@ -247,16 +247,26 @@
 		text-transform: none;
 		margin-bottom: 33px;
 	}
+	.post-tags-title {
+		border: none;
+		@include border-radius(36px);
+		@include gradient-x($gradient01_angle, $gradient01_color_to, $gradient01_color_from);
+	}
 	.no-sidebar {
-		.post-metas {
-			max-width: max-content;
+		.post-metas,
+		.post-title,
+		.post-tags-share {
 			margin-left: auto;
 			margin-right: auto;
 		}
+		.post-metas {
+			max-width: max-content;
+		}
 		.post-title {
 			max-width: 770px;
-			margin-left: auto;
-			margin-right: auto;
+		}
+		.post-tags-share {
+			max-width: 770px;
 		}
 	}
 }

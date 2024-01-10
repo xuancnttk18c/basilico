@@ -220,9 +220,9 @@ Redux::setSection($opt_name, array(
             'transparent' => false,
             'gradient-angle' => true,
             'default'  => array(
-                'from' => '#e8411d',
-                'to'   => '#faac52',
-                'gradient-angle' => 51,
+                'from' => '#121212',
+                'to'   => '#3c3c3c',
+                'gradient-angle' => 90,
             ),
         ),
         array(
