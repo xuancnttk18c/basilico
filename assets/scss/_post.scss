@@ -208,7 +208,8 @@
 
 .single-layout-2 {
 	.no-sidebar .post-metas {
-		max-width: 510px;
+		max-width: max-content;
+		margin: 0 auto;
 	}
 	.post-metas {
 		background-color: $primary_color;
@@ -216,6 +217,7 @@
 		@include border-radius(21.5px);
 		i {
 			font-size: 13px;
+			margin-right: 6px;
 			color: #fff;
 		}
 		.meta-inner {
