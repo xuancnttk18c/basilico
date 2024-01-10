@@ -28,6 +28,13 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
     <div class="<?php echo esc_attr($content_inner_cls); ?>">
         <?php
         basilico()->blog->get_post_metas_fastfood();
+        <?php
+        $custom_post_title = basilico()->get_theme_opt('single_post_title_layout', '0');
+        if ($custom_post_title == '1') : ?>
+            <h2 class="post-title">
+                <?php echo get_the_title(); ?>
+            </h2>
+        <?php endif; ?>
         if (has_post_thumbnail()) : ?>
             <div class="post-image post-featured">
                 <?php
@@ -53,13 +60,6 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
                     </div>
                 <?php endif ?>
             </div>
-        <?php endif; ?>
-        <?php
-        $custom_post_title = basilico()->get_theme_opt('single_post_title_layout', '0');
-        if ($custom_post_title == '1') : ?>
-            <h2 class="post-title">
-                <?php echo get_the_title(); ?>
-            </h2>
         <?php endif; ?>
         <div class="post-content overflow-hidden">
             <div class="content-inner clearfix <?php echo esc_attr($post_content_classes); ?>">
