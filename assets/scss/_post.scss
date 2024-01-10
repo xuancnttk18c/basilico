@@ -333,17 +333,12 @@
 		.label {
 			font-family: $heading_font_family;
 			font-size: 17px;
-			line-height: 55px;
+			line-height: 25px;
 			font-weight: 600;
 			letter-spacing: 0.03em;
 			color: #fff;
 			text-transform: none;
 		}
-	}
-	.post-tags-wrap a {
-		line-height: 55px;
-		letter-spacing: 0.03em;
-		color: #fff;
 	}
 	.no-sidebar {
 		.post-tags-share {
@@ -390,6 +385,15 @@
 				content: ', ';
 			}
 		}
+	}
+}
+
+.single-layout-2 {
+	.post-tags-wrap a {
+		line-height: 25px;
+		letter-spacing: 0.03em;
+		color: #fff;
+		@include multiline-hover-underline(#fff);
 	}
 }
 
