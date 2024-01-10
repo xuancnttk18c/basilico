@@ -207,11 +207,6 @@
 }
 
 .single-layout-2 {
-	.no-sidebar .post-metas {
-		max-width: max-content;
-		margin-left: auto;
-		margin-right: auto;
-	}
 	.post-metas {
 		background-color: $primary_color;
 		color: #fff;
@@ -252,6 +247,18 @@
 		font-weight: 600;
 		text-align: center;
 		text-transform: none;
+		margin-bottom: 33px;
+	}
+	.no-sidebar {
+		.post-metas {
+			max-width: max-content;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 17px;
+		}
+		.post-title {
+			max-width: 770px;
+		}
 	}
 }
 
