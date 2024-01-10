@@ -808,7 +808,7 @@
 		justify-content: flex-end;
 	}
 }
-.navigation.page-links{
+.navigation.page-links:not(.empty-none){
     margin-top: 26px;
     margin-bottom: 20px;
 }
