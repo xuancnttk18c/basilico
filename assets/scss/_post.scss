@@ -325,9 +325,25 @@
 
 .single-layout-2 {
 	.post-tags-share {
+		padding-left: 38px;
+    	padding-right: 38px;
 		border: none;
 		@include border-radius(36px);
 		@include gradient-x($gradient01_angle, $gradient01_color_to, $gradient01_color_from);
+		.label {
+			font-family: $heading_font_family;
+			font-size: 17px;
+			line-height: 55px;
+			font-weight: 600;
+			letter-spacing: 0.03em;
+			color: #fff;
+			text-transform: none;
+		}
+	}
+	.post-tags-wrap a {
+		line-height: 55px;
+		letter-spacing: 0.03em;
+		color: #fff;
 	}
 	.no-sidebar {
 		.post-tags-share {
