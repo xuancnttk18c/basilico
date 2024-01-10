@@ -210,11 +210,20 @@
 	background-color: $primary_color;
 	color: #fff;
 	@include border-radius(21.5px);
+	i {
+		color: #fff;
+	}
 	.meta-inner {
 		margin: 0 auto;
 		padding-left: 15px;
 		padding-right: 15px;
 		justify-content: center;
+		a {
+			color: #fff;
+			&:hover {
+				color: $secondary_color;
+			}
+		}
 	}
 }
 
