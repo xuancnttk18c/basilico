@@ -39,9 +39,16 @@
 	}
 }
 
-.pxl-luxury .comments-title,
-.pxl-luxury .comment-reply-title {
+.single-layout-1 .comments-title,
+.single-layout-1 .comment-reply-title {
     letter-spacing: 0.05em;
+}
+
+.single-layout-2 .comments-title,
+.single-layout-2 .comment-reply-title {
+    font-size: 30px;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
 }
 
 .pxl-pizza .comments-title,
