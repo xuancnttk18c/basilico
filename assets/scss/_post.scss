@@ -489,6 +489,14 @@
 }
 
 .single-layout-2 .social-share {
+	.d-flex {
+		margin-left: -2px;
+		margin-right: -2px;
+		> * {
+			margin-left: 2px;
+			margin-right: 2px;
+		}
+	}
 	.pxl-icon {
 		border: none;
 		color: #fff;
