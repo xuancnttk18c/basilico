@@ -678,6 +678,14 @@ Redux::setSection($opt_name, array(
             ),
         ),
         array(
+            'id'          => 'input_border_radius',
+            'type'        => 'text',
+            'title'       => esc_html__('Border Radius', 'basilico'),
+            'unit'     => 'px',
+            'default'  => '25',
+            'validate' => array( 'numeric', 'not_empty' )
+        ),
+        array(
             'id'          => 'font_input',
             'type'        => 'typography',
             'title'       => esc_html__('Input Typography', 'basilico'),

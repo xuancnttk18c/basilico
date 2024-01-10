@@ -227,6 +227,7 @@
     .comment-reply-link {
         background-color: $primary_color;
         color: #fff;
+        letter-spacing: 0;
         @include border-radius(5px);
     }
 }
