@@ -810,6 +810,7 @@
 	.post-page-numbers {
 		border: none;
 		background-color: $heading_color;
+		color: #fff;
 		@include border-radius(50%);
 		&:hover,
 		&.current {
