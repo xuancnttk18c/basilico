@@ -1433,7 +1433,6 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                                     $posttags = get_the_tags($post->ID);
                                     if ($posttags && $show_category == 'true') : ?>
                                         <span class="post-tags">
-                                            <span class="label"><?php echo esc_html('Tags: ', 'basilico'); ?></span>
                                             <?php if ($posttags) {
                                                 $last_key = array_key_last($posttags);
                                                 foreach ($posttags as $key => $tag) {
