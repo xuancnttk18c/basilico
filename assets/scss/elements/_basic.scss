@@ -1361,6 +1361,12 @@
                     align-items: center;
                     justify-content: center;
                     background-color: $secondary_color;
+                    i {
+                        font-size: 15px;
+                        &.pxli-send2 {
+                            margin-right: -3px;
+                        }
+                    }
                     [dir="rtl"] & {
                         right: auto;
                         left: 4px;
