@@ -302,28 +302,28 @@
                     bottom: 24px;
                 }
             }
-        }
-        .post-metas {
-            background-color: $primary_color;
-            color: #fff;
-            @include border-radius(21.5px);
-            margin-bottom: 17px;
-            i {
-                font-size: 13px;
-                margin-right: 6px;
+            .post-metas {
+                background-color: $primary_color;
                 color: #fff;
-            }
-            .meta-inner {
-                padding-left: 6px;
-                padding-right: 6px;
-                justify-content: center;
-                gap: 22px;
-                a {
+                @include border-radius(21.5px);
+                margin-bottom: 17px;
+                i {
+                    font-size: 13px;
+                    margin-right: 6px;
                     color: #fff;
                 }
-                .post-tags {
-                    a + a {
-                        margin-left: 5px;
+                .meta-inner {
+                    padding-left: 6px;
+                    padding-right: 6px;
+                    justify-content: center;
+                    gap: 22px;
+                    a {
+                        color: #fff;
+                    }
+                    .post-tags {
+                        a + a {
+                            margin-left: 5px;
+                        }
                     }
                 }
             }
