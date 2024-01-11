@@ -223,7 +223,7 @@
             // });
 
             $(this).find('.grid-item-inner').hover(function() {
-                $(this).find('.grid-item-inner').toggleClass('item-hovered');
+                $(this).toggleClass('item-hovered');
             });
         });
     }
