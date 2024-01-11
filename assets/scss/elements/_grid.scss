@@ -303,10 +303,15 @@
                 }
             }
             .post-metas {
+                position: absolute;
+                left: 13px;
+                right: 13px;
+                bottom: 11px;
+                margin-bottom: 0;
+                padding: 10px;
                 background-color: $primary_color;
                 color: #fff;
                 @include border-radius(21.5px);
-                margin-bottom: 17px;
                 i {
                     font-size: 13px;
                     margin-right: 6px;
@@ -316,7 +321,7 @@
                     padding-left: 6px;
                     padding-right: 6px;
                     justify-content: center;
-                    gap: 22px;
+                    column-gap: 22px;
                     a {
                         color: #fff;
                     }
