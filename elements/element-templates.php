@@ -1429,11 +1429,9 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                                             <?php echo get_the_date(get_option('date_format'), $post->ID); ?>
                                         </div>
                                     <?php endif; ?>
-                                    <?php 
-                                    if ($posttags && $show_category == 'true') : 
-                                        $posttags = get_the_tags($post->ID);
-                                        var_dump($posttags);
-                                    ?>
+                                    <?php
+                                    $posttags = get_the_tags($post->ID);
+                                    if ($posttags && $show_category == 'true') : ?>
                                         <span class="post-tags">
                                             <span class="label"><?php echo esc_html('Tags: ', 'basilico'); ?></span>
                                             <?php if ($posttags) {
