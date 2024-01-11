@@ -210,9 +210,9 @@
 
     if ($('.pxl-post-grid.layout-post-2 .grid-item').length > 0) {
         $('.pxl-post-grid.layout-post-2 .grid-item').each(function() {
-            var excerptHeight = $(this).find('.item-excerpt').outerHeight();
+            var excerptHeight = $(this).find('.item-excerpt').get(0).scrollHeight;
             var imageHeight = $(this).find('.post-image').outerHeight();
-            $(this).find('.item-excerpt').css('max-height', '0px');
+            //$(this).find('.item-excerpt').css('max-height', '0px');
 
             $(this).hover(function() {
                 $(this).find('.item-excerpt').css('max-height', excerptHeight + 'px');

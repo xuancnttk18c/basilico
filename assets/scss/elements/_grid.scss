@@ -329,6 +329,7 @@
             overflow: hidden;
             @include text-truncate-multi-line(15px, 1.666666666666667, 3);
             text-align: center;
+            max-height: 0px;
             transition: all 400ms ease-out;
         }
         .item-readmore {
