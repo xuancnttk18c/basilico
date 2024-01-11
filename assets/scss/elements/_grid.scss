@@ -325,6 +325,7 @@
             margin-bottom: 0;
         }
         .item-excerpt {
+            overflow: hidden;
             text-align: center;
             margin-top: 14px;
             transition: all 400ms ease-out;
@@ -339,6 +340,7 @@
             &:hover {
                 .item-excerpt {
                     max-height: 0px;
+                    margin-top: 0;
                 }
             }
         }
