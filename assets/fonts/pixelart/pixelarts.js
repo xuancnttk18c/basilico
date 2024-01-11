@@ -223,6 +223,7 @@
 		"fork",
 		"serving-dish",
 		"calendar-minus",
-		"tag1"
+		"tag1",
+		"bell"
     ]
 }

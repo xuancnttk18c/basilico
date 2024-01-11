@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'pxli';
   src:
-    url('fonts/pxli.ttf?v57na2') format('truetype'),
-    url('fonts/pxli.woff?v57na2') format('woff'),
-    url('fonts/pxli.svg?v57na2#pxli') format('svg');
+    url('fonts/pxli.ttf?5ymowe') format('truetype'),
+    url('fonts/pxli.woff?5ymowe') format('woff'),
+    url('fonts/pxli.svg?5ymowe#pxli') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pxli-bell:before {
+  content: "\e9dc";
+}
 .pxli-calendar-days:before {
   content: "\e9db";
 }
