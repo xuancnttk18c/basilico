@@ -223,9 +223,10 @@
             // });
 
             $(this).find('.grid-item-inner').hover(function() {
-                $(this).addClass('item-hovered');
+                alert('Test');
+                $(this).find('.grid-item-inner').addClass('item-hovered');
             }, function() {
-                $(this).removeClass('item-hovered');
+                $(this).find('.grid-item-inner').removeClass('item-hovered');
             });
         });
     }
