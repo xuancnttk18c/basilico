@@ -212,7 +212,8 @@
         $('.pxl-post-grid.layout-post-2 .grid-item').each(function() {
             var excerptHeight = $(this).find('.item-excerpt').get(0).scrollHeight;
             var imageHeight = $(this).find('.post-image').outerHeight();
-            //$(this).find('.item-excerpt').css('max-height', '0px');
+            $(this).find('.item-excerpt').css('max-height', '0px');
+            $(this).find('.post-image').css('max-height', imageHeight + 'px');
 
             $(this).hover(function() {
                 $(this).find('.item-excerpt').css('max-height', excerptHeight + 'px');
