@@ -212,12 +212,11 @@
         $('.pxl-post-grid.layout-post-2 .grid-item').each(function() {
             var excerptHeight = $(this).find('.item-excerpt').outerHeight() + 14;
             var imageHeight = $(this).find('.post-image').outerHeight();
+            console.log(excerptHeight, imageHeight);
             $(this).find('.item-excerpt').css('max-height', '0px');
             $(this).hover(function() {
                 $(this).find('.item-excerpt').css('max-height', excerptHeight + 'px');
                 $(this).find('.post-image').css('max-height', (imageHeight - excerptHeight) + 'px');
-                console.log($(this).find('.post-image').outerHeight());
-                console.log($(this).find('.item-excerpt').outerHeight());
             }, function() {
                 $(this).find('.item-excerpt').css('max-height', '0px');
                 $(this).find('.post-image').css('max-height', imageHeight + 'px');
