@@ -317,12 +317,18 @@
         }
         .item-title {
             @include text-truncate-multi-line(22px, 1.363636363636364, 2);
+            font-weight: 600;
+            text-transform: none;
             text-align: center;
             letter-spacing: 0.02em;
+            margin-bottom: 0;
         }
         .item-excerpt {
+            text-align: center;
             margin-top: 18px;
-            margin-bottom: 15px;
+        }
+        .item-readmore {
+            margin-top: 15px;
         }
         .posts-pagination {
             padding-top: 30px;

@@ -1420,7 +1420,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                             </a>
                         </div>
                         <?php if ($show_category == 'true' || $show_author == 'true') : ?>
-                            <div class="post-metas">
+                            <div class="post-metas hover-underline">
                                 <div class="meta-inner d-flex">
                                     <?php
                                     if ($show_date == 'true') : ?>
