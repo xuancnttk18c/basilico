@@ -327,7 +327,7 @@
         }
         .item-excerpt {
             overflow: hidden;
-            max-height: 0;
+            //max-height: 0;
             text-align: center;
             transition: all 400ms ease-out;
         }
@@ -340,11 +340,11 @@
         .grid-item-inner {
             &:hover {
                 .post-image {
-                    max-height: 278px;
+                    //max-height: 278px;
                 }
                 .item-excerpt {
-                    max-height: 75px;
-                    margin-top: 14px;
+                    //max-height: 75px;
+                    //margin-top: 14px;
                 }
             }
         }

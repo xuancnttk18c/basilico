@@ -209,10 +209,11 @@
     });
 
     if ($('.pxl-post-grid.layout-post-2 .grid-item').length > 0) {
-        $('.pxl-post-grid.layout-post-2 .grid-item').hover(function() {
-            $excerptHeight = $(this).find('.item-excerpt').outerHeight();
-            console.log($excerptHeight);
-        })
+        for (let i = 0; i < $('.pxl-post-grid.layout-post-2 .grid-item').length; i++) {
+            var excerptHeight = $('.pxl-post-grid.layout-post-2 .grid-item')[i].find('.item-excerpt').outerHeight();
+            $('.pxl-post-grid.layout-post-2 .grid-item .item-excerpt').css('max-height', '0px');
+            console.log(excerptHeight);
+        }
     }
 
     // Make sure you run this code under Elementor.
