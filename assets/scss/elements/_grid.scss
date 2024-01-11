@@ -284,24 +284,6 @@
                 overflow: hidden;
                 @include border-radius(20px);
             }
-            .item-title {
-                position: absolute;
-                z-index: 3;
-                padding: 0 49px 0 30px;
-                left: 0;
-                bottom: 32px;
-                margin-bottom: 0;
-                color: $white;
-                font-size: 20px;
-                line-height: 1.5;
-                letter-spacing: 0.05em;
-                text-transform: uppercase;
-                @include text-truncate-multi-line(20px, 1.5, 2);
-                @media (max-width: $xl_max) {
-                    padding: 0 15px;
-                    bottom: 24px;
-                }
-            }
             .post-metas {
                 position: absolute;
                 left: 13px;
@@ -333,9 +315,13 @@
                 }
             }
         }
+        .item-title {
+            @include text-truncate-multi-line(22px, 1,363636363636364, 2);
+            text-align: center;
+            letter-spacing: 0.02em;
+        }
         .item-excerpt {
             margin-top: 18px;
-            margin-bottom: 15px;
         }
         .posts-pagination {
             padding-top: 30px;
