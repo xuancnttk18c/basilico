@@ -804,6 +804,21 @@
 	}
 }
 
+.posts-pagination.style-3,
+.woocommerce-pagination.style-3 {
+	.page-numbers,
+	.post-page-numbers {
+		border: none;
+		background-color: $heading_color;
+		@include border-radius(50%);
+		&:hover,
+		&.current {
+			background-color: $primary_color;
+			color: #fff;
+		}
+	}
+}
+
 .comment-list-wrap {
 	.navigation {
 		justify-content: flex-end;
