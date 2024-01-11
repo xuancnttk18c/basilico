@@ -213,10 +213,6 @@
             var excerptHeight = $(this).find('.item-excerpt').outerHeight();
             var imageHeight = $(this).find('.post-image').outerHeight();
             $(this).find('.item-excerpt').css('max-height', '0px');
-
-            $(this).find('.item-hovered .item-excerpt').css('max-height', excerptHeight + 'px');
-            $(this).find('.item-hovered .post-image').css('max-height', (imageHeight - (excerptHeight  + 14)) + 'px');
-
             //     $(this).find('.item-excerpt').css('max-height', excerptHeight + 'px');
             //     $(this).find('.post-image').css('max-height', (imageHeight - (excerptHeight  + 14)) + 'px');
             // });
@@ -224,6 +220,9 @@
             $(this).find('.grid-item-inner').hover(function() {
                 $(this).toggleClass('item-hovered');
             });
+            $(this).find('.item-hovered .item-excerpt').css('max-height', excerptHeight + 'px');
+            $(this).find('.item-hovered .post-image').css('max-height', (imageHeight - (excerptHeight  + 14)) + 'px');
+
         });
     }
 
