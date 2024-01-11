@@ -215,10 +215,12 @@
             $(this).find('.item-excerpt').css('max-height', '0px');
             $(this).hover(function() {
                 $(this).find('.item-excerpt').css('max-height', excerptHeight + 'px');
-                $(this).find('.post-image').css('max-height', (imageHeight - excerptHeight) + 'px')
+                $(this).find('.post-image').css('max-height', (imageHeight - excerptHeight) + 'px');
+                console.log($(this).find('.post-image').outerHeight());
+                console.log($(this).find('.item-excerpt').outerHeight());
             }, function() {
                 $(this).find('.item-excerpt').css('max-height', '0px');
-                $(this).find('.post-image').css('max-height', imageHeight + 'px')
+                $(this).find('.post-image').css('max-height', imageHeight + 'px');
             });
         });
     }
