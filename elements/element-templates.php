@@ -1412,8 +1412,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
         ?>
         <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
             <div class="grid-item-inner">
-                <?php
-                if (isset($thumbnail)) : ?>
+                <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
                         <div class="post-image scale-hover">
                             <a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
@@ -1450,34 +1449,33 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                             </div>
                         <?php endif; ?>
                     </div>
+                <?php endif; ?>
+                <div class="item-content d-flex justify-content-center">
+                    <h4 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h4>
+                    <?php if ($show_excerpt == 'true') : ?>
+                        <div class="item-excerpt">
+                            <?php
+                            if (!empty($post->post_excerpt)) {
+                                echo wp_trim_words($post->post_excerpt, $num_words, null);
+                            } else {
+                                $content = strip_shortcodes($post->post_content);
+                                $content = apply_filters('the_content', $content);
+                                $content = str_replace(']]>', ']]&gt;', $content);
+                                echo wp_trim_words($content, $num_words, null);
+                            }
+                            ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($show_button == 'true') : ?>
+                        <div class="item-readmore pxl-button-wrapper">
+                            <a class="btn btn-additional-6" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                <span><?php echo pxl_print_html($button_text); ?></span>
+                            </a>
+                        </div>
+                    <?php endif; ?>
                 </div>
-            <?php endif; ?>
-        <div class="item-content">
-            <h4 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h4>
-            <?php if ($show_excerpt == 'true') : ?>
-                <div class="item-excerpt">
-                    <?php
-                    if (!empty($post->post_excerpt)) {
-                        echo wp_trim_words($post->post_excerpt, $num_words, null);
-                    } else {
-                        $content = strip_shortcodes($post->post_content);
-                        $content = apply_filters('the_content', $content);
-                        $content = str_replace(']]>', ']]&gt;', $content);
-                        echo wp_trim_words($content, $num_words, null);
-                    }
-                    ?>
-                </div>
-            <?php endif; ?>
-            <?php if ($show_button == 'true') : ?>
-                <div class="item-readmore pxl-button-wrapper">
-                    <a class="btn btn-additional-06" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                        <span><?php echo pxl_print_html($button_text); ?></span>
-                    </a>
-                </div>
-            <?php endif; ?>
+            </div>
         </div>
-    </div>
-</div>
 <?php
 endforeach;
 }

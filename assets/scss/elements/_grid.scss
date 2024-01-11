@@ -303,33 +303,6 @@
                 }
             }
         }
-        .item-content {
-            .post-metas {
-                background-color: transparent;
-                color: $heading_color;
-                text-transform: uppercase;
-                line-height: 1.5;
-                padding: 0;
-                .meta-inner {
-                    @media (min-width: $sm_min) {
-                        flex-wrap: nowrap;
-                    }
-                    a {
-                        color: $heading_color;
-                        background-image: linear-gradient(transparent calc(100% - 1px), $secondary_color 1px);
-                        background-size: 0% 100%;
-                        background-repeat: no-repeat;
-                        transition: background-size 400ms;
-                        &:hover {
-                            background-size: 100% 100%;
-                        }
-                    }
-                    > span {
-                        padding: 0 6px 0 0;
-                    }
-                }
-            }
-        }
         .item-excerpt {
             margin-top: 18px;
             margin-bottom: 15px;
