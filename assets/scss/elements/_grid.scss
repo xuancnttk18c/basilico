@@ -283,6 +283,7 @@
             .post-image {
                 overflow: hidden;
                 @include border-radius(20px);
+                transition: all 400ms ease-out;
             }
             .post-metas {
                 position: absolute;
@@ -338,6 +339,9 @@
         }
         .grid-item-inner {
             &:hover {
+                .post-image {
+                    max-height: 278px;
+                }
                 .item-excerpt {
                     max-height: 75px;
                     margin-top: 14px;
