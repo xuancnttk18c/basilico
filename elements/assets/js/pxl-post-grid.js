@@ -214,12 +214,18 @@
             var imageHeight = $(this).find('.post-image').outerHeight();
             $(this).find('.item-excerpt').css('max-height', '0px');
 
-            $(this).hover(function() {
-                $(this).find('.item-excerpt').css('max-height', excerptHeight + 'px');
-                $(this).find('.post-image').css('max-height', (imageHeight - (excerptHeight  + 14)) + 'px');
+            // $(this).hover(function() {
+            //     $(this).find('.item-excerpt').css('max-height', excerptHeight + 'px');
+            //     $(this).find('.post-image').css('max-height', (imageHeight - (excerptHeight  + 14)) + 'px');
+            // }, function() {
+            //     $(this).find('.item-excerpt').css('max-height', '0px');
+            //     $(this).find('.post-image').css('max-height', imageHeight + 'px');
+            // });
+
+            $(this).find('.grid-item-inner').hover(function() {
+                $(this).find('.grid-item-inner').addClass('item-hovered');
             }, function() {
-                $(this).find('.item-excerpt').css('max-height', '0px');
-                $(this).find('.post-image').css('max-height', imageHeight + 'px');
+                $(this).find('.grid-item-inner').removeClass('item-hovered');
             });
         });
     }
