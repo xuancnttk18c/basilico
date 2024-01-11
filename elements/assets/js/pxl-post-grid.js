@@ -223,10 +223,7 @@
             // });
 
             $(this).find('.grid-item-inner').hover(function() {
-                alert('Test');
-                $(this).find('.grid-item-inner').addClass('item-hovered');
-            }, function() {
-                $(this).find('.grid-item-inner').removeClass('item-hovered');
+                $(this).find('.grid-item-inner').toggleClass('item-hovered');
             });
         });
     }
