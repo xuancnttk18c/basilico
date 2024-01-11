@@ -1351,6 +1351,7 @@
                 }
                 button {
                     position: absolute;
+                    padding: 0;
                     display: flex;
                     width: calc(#{$input_height} - 8px);
                     top: 4px;
