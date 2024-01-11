@@ -406,15 +406,15 @@ if (!class_exists('Basilico_Blog')) {
                         if ($post_tags_on && $posttags) : ?>
                             <div class="post-tags d-flex align-items-center">
                                 <i class="pxli pxli-tag1"></i>
-                                <?php if ($posttags) {
-                                    $last_key = array_key_last($posttags);
-                                    foreach ($posttags as $key => $tag) {
-                                        echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
-                                        if ($key != $last_key) {
-                                            echo ', ';
-                                        }
+                                <?php
+                                $last_key = array_key_last($posttags);
+                                foreach ($posttags as $key => $tag) {
+                                    echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                                    if ($key != $last_key) {
+                                        echo ', ';
                                     }
-                                }; ?>
+                                }
+                                ?>
                             </div>
                         <?php endif; ?>
                         <?php if ($post_categories_on && has_category()) : ?>

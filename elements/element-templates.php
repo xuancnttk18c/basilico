@@ -1426,6 +1426,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                                     <?php
                                     if ($show_date == 'true') : ?>
                                         <div class="post-date">
+                                            <i class="pxli pxli-calendar-days"></i>
                                             <?php echo get_the_date(get_option('date_format'), $post->ID); ?>
                                         </div>
                                     <?php endif; ?>
@@ -1433,15 +1434,16 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                                     $posttags = get_the_tags($post->ID);
                                     if ($posttags && $show_category == 'true') : ?>
                                         <span class="post-tags">
-                                            <?php if ($posttags) {
-                                                $last_key = array_key_last($posttags);
-                                                foreach ($posttags as $key => $tag) {
-                                                    echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
-                                                    if ($key != $last_key) {
-                                                        echo ', ';
-                                                    }
+                                            <i class="pxli pxli-tag1"></i>
+                                            <?php
+                                            $last_key = array_key_last($posttags);
+                                            foreach ($posttags as $key => $tag) {
+                                                echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                                                if ($key != $last_key) {
+                                                    echo ', ';
                                                 }
-                                            }; ?>
+                                            }
+                                            ?>
                                         </span>
                                     <?php endif; ?>
                                 </div>
