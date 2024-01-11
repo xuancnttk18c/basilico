@@ -321,17 +321,26 @@
             text-transform: none;
             text-align: center;
             letter-spacing: 0.02em;
+            margin-top: 23px;
             margin-bottom: 0;
         }
         .item-excerpt {
             text-align: center;
-            margin-top: 18px;
+            margin-top: 14px;
+            transition: all 400ms ease-out;
         }
         .item-readmore {
-            margin-top: 15px;
+            margin-top: 33px;
         }
         .posts-pagination {
             padding-top: 30px;
+        }
+        .grid-item-inner {
+            &:hover {
+                .item-excerpt {
+                    max-height: 0px;
+                }
+            }
         }
     }
 }
