@@ -326,8 +326,8 @@
         }
         .item-excerpt {
             overflow: hidden;
+            max-height: 0;
             text-align: center;
-            margin-top: 14px;
             transition: all 400ms ease-out;
         }
         .item-readmore {
@@ -339,8 +339,8 @@
         .grid-item-inner {
             &:hover {
                 .item-excerpt {
-                    max-height: 0px;
-                    margin-top: 0;
+                    max-height: 75px;
+                    margin-top: 14px;
                 }
             }
         }
