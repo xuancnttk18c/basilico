@@ -216,7 +216,7 @@
 
             $(this).hover(function() {
                 $(this).find('.item-excerpt').css('max-height', excerptHeight + 'px');
-                $(this).find('.post-image').css('max-height', (imageHeight - excerptHeight  + 14) + 'px');
+                $(this).find('.post-image').css('max-height', (imageHeight - (excerptHeight  + 14)) + 'px');
             }, function() {
                 $(this).find('.item-excerpt').css('max-height', '0px');
                 $(this).find('.post-image').css('max-height', imageHeight + 'px');
