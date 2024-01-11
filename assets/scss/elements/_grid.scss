@@ -316,7 +316,7 @@
             }
         }
         .item-title {
-            @include text-truncate-multi-line(22px, 1,36, 2);
+            @include text-truncate-multi-line(22px, 1.363636363636364, 2);
             text-align: center;
             letter-spacing: 0.02em;
         }
