@@ -224,6 +224,7 @@
 		"serving-dish",
 		"calendar-minus",
 		"tag1",
-		"bell"
+		"bell",
+		"send2"
     ]
 }
