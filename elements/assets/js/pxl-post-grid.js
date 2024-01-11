@@ -223,9 +223,9 @@
             // });
 
             $(this).find('.grid-item-inner').hover(function() {
-                $(this).find('.grid-item-inner').addClass('item-hovered');
+                $(this).addClass('item-hovered');
             }, function() {
-                $(this).find('.grid-item-inner').removeClass('item-hovered');
+                $(this).removeClass('item-hovered');
             });
         });
     }
