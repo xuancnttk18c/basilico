@@ -327,7 +327,7 @@
         }
         .item-excerpt {
             overflow: hidden;
-            //@include text-truncate-multi-line(15px, 1,666666666666667, 3);
+            @include text-truncate-multi-line(15px, 1.666666666666667, 3);
             text-align: center;
             transition: all 400ms ease-out;
         }
