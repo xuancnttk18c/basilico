@@ -210,14 +210,13 @@
 
     if ($('.pxl-post-grid.layout-post-2 .grid-item').length > 0) {
         $('.pxl-post-grid.layout-post-2 .grid-item').each(function() {
-            var excerptHeight = $(this).find('.item-excerpt').outerHeight() + 14;
+            var excerptHeight = $(this).find('.item-excerpt').outerHeight();
             var imageHeight = $(this).find('.post-image').outerHeight();
-            console.log(excerptHeight, imageHeight);
             $(this).find('.item-excerpt').css('max-height', '0px');
+
             $(this).hover(function() {
                 $(this).find('.item-excerpt').css('max-height', excerptHeight + 'px');
-                $(this).find('.post-image').css('max-height', (imageHeight - excerptHeight) + 'px');
-                console.log($(this).find('.post-image').outerHeight());
+                $(this).find('.post-image').css('max-height', (imageHeight - excerptHeight  + 14) + 'px');
             }, function() {
                 $(this).find('.item-excerpt').css('max-height', '0px');
                 $(this).find('.post-image').css('max-height', imageHeight + 'px');
