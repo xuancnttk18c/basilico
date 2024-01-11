@@ -189,6 +189,10 @@ function basilico_get_grid_layout_options($posttype_name){
                 'label' => esc_html__('Layout 1', 'basilico'),
                 'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-layout1.jpg'
             ],
+            'post-2' => [
+                'label' => esc_html__('Layout 1', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-layout1.jpg'
+            ],
         ];
         break;
     }

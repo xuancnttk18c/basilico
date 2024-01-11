@@ -329,6 +329,11 @@ pxl_add_custom_widget(
                             'label'     => esc_html__('Show Divider', 'basilico' ),
                             'type'      => \Elementor\Controls_Manager::SWITCHER,
                             'default'   => 'true',
+                            'condition' => [
+                                'layout!' => [
+                                    'layout-post-2'
+                                ]
+                            ]
                         ),
                         array(
                             'name'      => 'show_comment',

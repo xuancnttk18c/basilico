@@ -346,6 +346,9 @@ if (!function_exists('basilico_get_post_grid')) {
             case 'post-1':
             basilico_get_post_grid_layout1($posts, $settings, $args_m);
             break;
+            case 'post-2':
+            basilico_get_post_grid_layout2($posts, $settings, $args_m);
+            break;
             case 'pxl-portfolio-1':
             basilico_get_post_grid_pxl_portfolio1($posts, $settings, $args_m);
             break;
@@ -1334,6 +1337,123 @@ function basilico_get_post_grid_layout1($posts = [], $settings = [], $args_m = [
                     </div>
                 </div>
             <?php endif; ?>
+            <?php if ($show_divider == 'true') : ?>
+                <div class="pxl-divider"></div>
+            <?php endif; ?>
+            <?php if ($show_excerpt == 'true') : ?>
+                <div class="item-excerpt">
+                    <?php
+                    if (!empty($post->post_excerpt)) {
+                        echo wp_trim_words($post->post_excerpt, $num_words, null);
+                    } else {
+                        $content = strip_shortcodes($post->post_content);
+                        $content = apply_filters('the_content', $content);
+                        $content = str_replace(']]>', ']]&gt;', $content);
+                        echo wp_trim_words($content, $num_words, null);
+                    }
+                    ?>
+                </div>
+            <?php endif; ?>
+            <?php if ($show_button == 'true') : ?>
+                <div class="item-readmore pxl-button-wrapper">
+                    <a class="btn-more" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                        <span><?php echo pxl_print_html($button_text); ?></span>
+                        <i class="zmdi zmdi-long-arrow-right"></i>
+                    </a>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+<?php
+endforeach;
+}
+
+function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [])
+{
+    extract($settings);
+    foreach ($posts as $key => $post) :
+        $str_item_class = !empty($args_m[$key]['item_class']) ? $args_m[$key]['item_class'] : $item_class;
+        if (!empty($args_m[$key]['thumbnail'])) {
+            $thumbnail = wp_specialchars_decode($args_m[$key]['thumbnail'], ENT_QUOTES);
+        } else {
+            if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
+                $img_id = get_post_thumbnail_id($post->ID);
+                if ($img_id) {
+                    $img = pxl_get_image_by_size(array(
+                        'attach_id'  => $img_id,
+                        'thumb_size' => $img_size,
+                        'class' => 'no-lazyload',
+                    ));
+                    $thumbnail = $img['thumbnail'];
+                } else {
+                    $thumbnail = get_the_post_thumbnail($post->ID, $img_size);
+                }
+            }
+        }
+        $filter_class = '';
+        if ($select_post_by === 'term_selected' && $filter == "true")
+            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+        $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'basilico');
+        $increase = $key + 1;
+        $data_settings = '';
+        $animate_cls = '';
+        if (!empty($item_animation)) {
+            $animate_cls = ' pxl-animate pxl-invisible animated-' . $item_animation_duration;
+            $data_animation =  json_encode([
+                'animation'      => $item_animation,
+                'animation_delay' => ((float)$item_animation_delay * $increase)
+            ]);
+            $data_settings = 'data-settings="' . esc_attr($data_animation) . '"';
+        }
+        if (!empty($args_m[$key]['data_setting']))
+            $data_settings = $args_m[$key]['data_setting'];
+        $author = get_user_by('id', $post->post_author);
+        ?>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+            <div class="grid-item-inner">
+                <?php
+                if (isset($thumbnail)) : ?>
+                    <div class="item-featured">
+                        <div class="post-image scale-hover">
+                            <a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                <?php echo wp_kses_post($thumbnail); ?>
+                            </a>
+                        </div>
+                        <?php if ($show_category == 'true' || $show_author == 'true') : ?>
+                            <div class="post-metas">
+                                <div class="meta-inner d-flex">
+                                    <?php
+                                    if ($show_date == 'true') : ?>
+                                        <div class="post-date">
+                                            <?php echo get_the_date(get_option('date_format'), $post->ID); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php 
+                                    if ($posttags && $show_category == '') : 
+                                        $posttags = get_the_tags($post->ID);
+                                    ?>
+                                        <span class="post-tags">
+                                            <span class="label"><?php echo esc_html('Tags: ', 'basilico'); ?></span>
+                                            <?php if ($posttags) {
+                                                $last_key = array_key_last($posttags);
+                                                foreach ($posttags as $key => $tag) {
+                                                    echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                                                    if ($key != $last_key) {
+                                                        echo ', ';
+                                                    }
+                                                }
+                                            }; ?>
+                                        </span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+        <div class="item-content">
+            <h4 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h4>
             <?php if ($show_divider == 'true') : ?>
                 <div class="pxl-divider"></div>
             <?php endif; ?>
