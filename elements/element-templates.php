@@ -1425,7 +1425,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                                 <div class="meta-inner d-flex">
                                     <?php
                                     if ($show_date == 'true') : ?>
-                                        <div class="post-date">
+                                        <div class="post-date d-flex align-items-center">
                                             <i class="pxli pxli-calendar-days"></i>
                                             <?php echo get_the_date(get_option('date_format'), $post->ID); ?>
                                         </div>
@@ -1433,7 +1433,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                                     <?php
                                     $posttags = get_the_tags($post->ID);
                                     if ($posttags && $show_category == 'true') : ?>
-                                        <span class="post-tags">
+                                        <span class="post-tags d-flex align-items-center">
                                             <i class="pxli pxli-tag1"></i>
                                             <?php
                                             $last_key = array_key_last($posttags);
@@ -1454,9 +1454,6 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
             <?php endif; ?>
         <div class="item-content">
             <h4 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h4>
-            <?php if ($show_divider == 'true') : ?>
-                <div class="pxl-divider"></div>
-            <?php endif; ?>
             <?php if ($show_excerpt == 'true') : ?>
                 <div class="item-excerpt">
                     <?php
@@ -1473,9 +1470,8 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
             <?php endif; ?>
             <?php if ($show_button == 'true') : ?>
                 <div class="item-readmore pxl-button-wrapper">
-                    <a class="btn-more" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                    <a class="btn btn-additional-06" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
                         <span><?php echo pxl_print_html($button_text); ?></span>
-                        <i class="zmdi zmdi-long-arrow-right"></i>
                     </a>
                 </div>
             <?php endif; ?>
