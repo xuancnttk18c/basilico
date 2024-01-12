@@ -83,9 +83,9 @@
         basilico_table_cart_content();
         basilico_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '');
     } );
-    $(document).ready(function () {
-        $("select").niceSelect();
-    });
+    // $(document).ready(function () {
+    //     $("select").niceSelect();
+    // });
     function basilico_header_sticky() {
         'use strict';
         if($(document).find('.pxl-header-sticky').length > 0 && window_width >= 1200 && !$(document).find(".pxl-hidden-template.open").length > 0){
