@@ -637,12 +637,16 @@ textarea{
         select,
         textarea,
         .nice-select {
+            color: #fff;
             border: 1px solid $primary_color !important;
             background-color: transparent;
             @include placeholder() {
                 color: inherit;
                 font-size: inherit;
                 letter-spacing: inherit;
+            }
+            option {
+                color: #000;
             }
             &:hover,
             &:focus {
