@@ -637,6 +637,7 @@ textarea{
         select,
         textarea,
         .nice-select {
+            color: #000;
             border: 1px solid $primary_color !important;
             background-color: transparent;
             @include placeholder() {
