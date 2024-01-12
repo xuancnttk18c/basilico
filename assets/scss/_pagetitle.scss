@@ -149,3 +149,10 @@
 		}
 	}
 }
+
+//* Custom Classes
+.custom-pagetitle-1 {
+	margin: 0 30px;
+	@include border-radius(50%);
+	overflow: hidden;
+}
