@@ -301,21 +301,26 @@ Redux::setSection($opt_name, array(
     'fields' => array_merge(
         basilico_page_title_opts(),
         array(
+            // array(
+            //     'id'             => 'page_title_margin',
+            //     'type'           => 'spacing',
+            //     'output'         => array('.pxl-pagetitle'),
+            //     'mode'           => 'margin',
+            //     'units'          => array('px'),
+            //     'units_extended' => 'false',
+            //     'title'          => esc_html__('Margin', 'basilico'),
+            //     'default'        => array(
+            //         'padding-top'    => '',
+            //         'padding-bottom' => '',
+            //         'padding-left'    => '',
+            //         'padding-right'    => '',
+            //         'units'          => 'px',
+            //     ),
+            // ),
             array(
-                'id'             => 'page_title_margin',
-                'type'           => 'spacing',
-                'output'         => array('.pxl-pagetitle'),
-                'mode'           => 'margin',
-                'units'          => array('px'),
-                'units_extended' => 'false',
-                'title'          => esc_html__('Margin', 'basilico'),
-                'default'        => array(
-                    'padding-top'    => '',
-                    'padding-bottom' => '',
-                    'padding-left'    => '',
-                    'padding-right'    => '',
-                    'units'          => 'px',
-                ),
+                'id'             => 'page_title_class',
+                'type'           => 'text',
+                'title'          => esc_html__('Custom Class', 'basilico'),
             ),
         ),
     )

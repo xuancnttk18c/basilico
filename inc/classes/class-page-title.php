@@ -12,6 +12,7 @@ if (!class_exists('Basilico_Page_Title')) {
             $breadcrumb_on = basilico()->get_opt( 'breadcrumb_on', false );
             $breadcrumb = new Basilico_Breadcrumb();
             $entries = $breadcrumb->get_entries();
+            $custom_class = basilico()->get_opt( 'page_title_custom', '' );
  
             $brc_divider = '<span class="br-divider pxli-long-arrow-right1 rtl-flip"></span>';
 
@@ -32,13 +33,13 @@ if (!class_exists('Basilico_Page_Title')) {
             }
             if ($pt_mode == 'bd' && $ptitle_layout > 0 && class_exists('Pxltheme_Core') && is_callable( 'Elementor\Plugin::instance' )) {
                 ?>
-                <div id="pxl-pagetitle" style="<?php if(!empty($bg_image)){?>background-image:url('<?php echo esc_url($bg_image); ?>');<?php } ?>" class="pxl-pagetitle bg-image  layout-el relative">
+                <div id="pxl-pagetitle" style="<?php if(!empty($bg_image)){?>background-image:url('<?php echo esc_url($bg_image); ?>');<?php } ?>" class="pxl-pagetitle bg-image layout-el relative <?php echo esc_attr($custom_class) != '' ? $custom_class : ''; ?>">
                     <?php echo Elementor\Plugin::$instance->frontend->get_builder_content_for_display( $ptitle_layout);?>
                 </div>
                 <?php 
             } else {
                 ?>
-                <div id="pxl-pagetitle" style="<?php if(!empty($bg_image)){?>background-image:url('<?php echo esc_url($bg_image); ?>');<?php } ?>" class="pxl-pagetitle bg-image layout-df relative">
+                <div id="pxl-pagetitle" style="<?php if(!empty($bg_image)){?>background-image:url('<?php echo esc_url($bg_image); ?>');<?php } ?>" class="pxl-pagetitle bg-image layout-df relative <?php echo esc_attr($custom_class) != '' ? $custom_class : ''; ?>">
                     <div class="pxl-page-title-overlay"></div>
                     <div class="container relative">
                         <div class="pxl-page-title-inner text-center">
