@@ -817,6 +817,10 @@
 	}
 }
 
+.border-radius-2px {
+	@include border-radius(2px);
+}
+
 @keyframes animationFramesOne{
 	0% {
 		transform: translateX(0px);
