@@ -629,6 +629,7 @@ textarea{
         z-index: 1;
     }
 }
+
 .pxl-contact-form7 {
     &.style-2,
     &.style-3 {
@@ -636,7 +637,7 @@ textarea{
         select,
         textarea,
         .nice-select {
-            border: 1px solid $primary_color;
+            border: 1px solid $primary_color !important;
             background-color: transparent;
             @include placeholder() {
                 color: inherit;
