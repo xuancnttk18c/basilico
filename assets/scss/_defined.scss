@@ -817,8 +817,10 @@
 	}
 }
 
-.border-radius-2px {
-	@include border-radius(2px);
+.divider-radius-2px {
+	.elementor-divider-separator {
+		@include border-radius(2px);
+	}
 }
 
 @keyframes animationFramesOne{
