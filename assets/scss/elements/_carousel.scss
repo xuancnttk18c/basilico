@@ -2867,6 +2867,7 @@
     }
     &.layout-pxl-service-2 {
         .item-featured {
+            margin-top: 20px;
             position: relative;
             a {
                 position: relative;
@@ -2881,6 +2882,19 @@
                 left: 52px;
                 right: 52px;
                 border: 1px solid $primary_color;
+            }
+        }
+        .content-inner {
+            max-width: 870px;
+            margin-left: auto;
+            margin-right: auto;
+            @include d-flex();
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .item-title {
+                font-size: 35px;
+                font-weight: 600;
             }
         }
     }
