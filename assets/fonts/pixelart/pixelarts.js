@@ -225,6 +225,8 @@
 		"calendar-minus",
 		"tag1",
 		"bell",
-		"send2"
+		"send2",
+		"alarm-clock",
+		"iphone"
     ]
 }
