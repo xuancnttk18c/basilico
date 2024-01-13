@@ -434,6 +434,10 @@ function basilico_get_carousel_layout_options($posttype_name){
                     'label' => esc_html__('Layout 1', 'basilico'),
                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-1.jpg'
                 ],
+                'pxl-service-2' => [
+                    'label' => esc_html__('Layout 1', 'basilico'),
+                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-1.jpg'
+                ],
             ];
             break;
     }
