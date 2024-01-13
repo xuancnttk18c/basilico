@@ -2866,7 +2866,23 @@
         }
     }
     &.layout-pxl-service-2 {
-        
+        .item-featured {
+            position: relative;
+            a {
+                position: relative;
+                z-index: 2;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                top: -20px;
+                bottom: -20px;
+                left: 52px;
+                right: 52px;
+                border: 1px solid $primary_color;
+            }
+        }
     }
 }
 
