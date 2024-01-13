@@ -81,7 +81,7 @@ if ( !empty( $item_animation) ) {
         'animation_delay' => (float)$item_animation_delay
     ];
 }
-$button_text = !empty($button_text) ? $button_text : esc_html__('READ MORE', 'powerlegal');
+$button_text = !empty($button_text) ? $button_text : esc_html__('View Detail', 'basilico');
 ?>
 <?php if(!empty($posts) && count($posts)): ?>
     <div class="pxl-swiper-slider pxl-service-carousel layout-<?php echo esc_attr($settings['layout']);?> ">
@@ -138,24 +138,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('READ MORE', 'po
                                             <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
                                         </div>
                                     <?php endif; ?>
-                                    <h3 class="item-title"><a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
                                     <div class="content-inner">
-                                        <?php
-                                        if (!empty($area_img['url']) && $icon_type == 'image'){
-                                            ?>
-                                            <div class="area-icon-wrap">
-                                                <img class="area-icon" src="<?php echo esc_url($area_img['url']); ?>" />
-                                            </div>
-                                            <?php
-                                        }
-                                        if ($icon_type == 'icon'){
-                                            ?>
-                                            <div class="area-icon-wrap">
-                                                <div class="area-icon"><i class="<?php echo esc_attr($area_icon); ?>"></i></div>
-                                            </div>
-                                            <?php
-                                        }
-                                        ?>
                                         <h3 class="item-title"><a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
                                         <?php if($show_excerpt == 'true'): ?>
                                             <div class="item-excerpt">
@@ -169,6 +152,14 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('READ MORE', 'po
                                                     echo wp_trim_words( $content, $num_words, null );
                                                 }
                                                 ?>
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php if ($show_button == 'true') : ?>
+                                            <div class="item-readmore pxl-button-wrapper">
+                                                <a class="btn btn-additional-3" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                                    <span><?php echo pxl_print_html($button_text); ?></span>
+                                                    <i class="zmdi zmdi-long-arrow-right"></i>
+                                                </a>
                                             </div>
                                         <?php endif; ?>
                                     </div>
