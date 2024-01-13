@@ -158,7 +158,6 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('View Detail', '
                                             <div class="item-readmore pxl-button-wrapper">
                                                 <a class="btn btn-additional-3" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
                                                     <span><?php echo pxl_print_html($button_text); ?></span>
-                                                    <i class="zmdi zmdi-long-arrow-right"></i>
                                                 </a>
                                             </div>
                                         <?php endif; ?>
