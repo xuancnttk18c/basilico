@@ -501,7 +501,7 @@ textarea{
     .nice-select {
         color: $heading_color;
         font-size: 15px;
-        letter-spacing: 0.05em;
+        //letter-spacing: 0.05em;
         height: 50px;
         background-color: transparent;
         @include placeholder() {
