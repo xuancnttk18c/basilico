@@ -76,6 +76,9 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-swiper-arrow .pxl-icon' => 'color: {{VALUE}};',
                                 ],
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
                             ),
                             array(
                                 'name' => 'arrow_prev_position',
