@@ -14,11 +14,11 @@ $arrows = $widget->get_setting("arrows", "false");
 $arrows_style = $widget->get_setting("arrows_style", "style-df");
 
 $arrow_prev_center = '';
-if ($widget->get_setting("arrow_prev_center_orientation_left", "true")) {
-    $arrow_prev_center = 'translate-center-left';
+if ($widget->get_setting("arrow_prev_center_left", "true")) {
+    $arrow_prev_center_x = 'translate-center-left-x';
 }
-elseif ($widget->get_setting("arrow_prev_center_orientation_right", "true")) {
-    $arrow_prev_center = 'translate-center-right';
+elseif ($widget->get_setting("arrow_prev_center_right", "true")) {
+    $arrow_prev_center_x = 'translate-center-right-x';
 }
 
 extract($settings);
