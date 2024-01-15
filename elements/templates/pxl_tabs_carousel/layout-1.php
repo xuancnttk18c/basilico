@@ -46,8 +46,8 @@ $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
     <?php if ($arrows != false) : ?>
         <div class="pxl-swiper-arrows nav-vertical-in <?php echo esc_attr($arrows_style); ?>">
             <?php if ($arrows_style == 'style-2') : ?>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon zmdi zmdi-arrow-right"></span></div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon zmdi zmdi-arrow-left"></span></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon zmdi zmdi-arrow-left"></span></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon zmdi zmdi-arrow-right"></span></div>
             <?php else: ?>
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon pxli-thin-arrow-left"></span></div>
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon pxli-thin-arrow-right"></span></div>
