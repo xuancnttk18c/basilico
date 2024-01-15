@@ -157,6 +157,6 @@ body:has(.pxl-header-sticky.h-fixed) {
 
 .pxl-arrows-translateY-minus-50percent {
     .pxl-swiper-arrow {
-        @include transform(translateY(-50%));
+        transform: translateY(-50%) !important;
     }
 }
