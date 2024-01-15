@@ -15,11 +15,13 @@ $arrows_style = $widget->get_setting("arrows_style", "style-df");
 
 $arrow_prev_center = '';
 if ($widget->get_setting("arrow_prev_center_left", "true")) {
-    $arrow_prev_center_x = 'translate-center-left-x';
+    $arrow_prev_center = 'translate-center-left-x';
 }
 elseif ($widget->get_setting("arrow_prev_center_right", "true")) {
-    $arrow_prev_center_x = 'translate-center-right-x';
+    $arrow_prev_center = 'translate-center-right-x';
 }
+
+var_dump($widget->get_setting("arrow_prev_center_left", "true"));
 
 extract($settings);
 $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
