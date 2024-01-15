@@ -2953,6 +2953,7 @@
                 align-items: center;
                 justify-content: center;
                 transform: none;
+                @include box-shadow(0px 0px 18.27px 2.73px rgba(0, 0, 0, 0.2));
                 &.slick-disabled {
                     cursor: not-allowed;
                 }
