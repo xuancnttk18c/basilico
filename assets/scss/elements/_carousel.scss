@@ -2937,5 +2937,24 @@
                 }
             }
         }
+        &.style-2.nav-vertical-in {
+            margin-top: 37px;
+            .pxl-swiper-arrow {
+                cursor: pointer;
+                position: static;
+                display: inline-block;
+                top: 0;
+                transform: none;
+                &.slick-disabled {
+                    cursor: not-allowed;
+                }
+                &.pxl-swiper-arrow-next {
+                    margin-left: 30px;
+                }
+                .pxl-icon {
+                    font-size: 25px;
+                }
+            }
+        }
     }
 }
