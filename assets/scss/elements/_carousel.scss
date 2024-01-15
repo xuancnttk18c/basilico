@@ -2918,7 +2918,7 @@
 //* PXL Tabs Carousel
 .pxl-tabs-carousel-container {
     .pxl-swiper-arrows {
-        &.style-df.nav-vertical-in {
+        &.style-df {
             margin-top: 37px;
             .pxl-swiper-arrow {
                 cursor: pointer;
@@ -2937,7 +2937,7 @@
                 }
             }
         }
-        &.style-2.nav-vertical-in {
+        &.style-2 {
             margin-top: 30px;
             @include d-flex();
             .pxl-swiper-arrow {
