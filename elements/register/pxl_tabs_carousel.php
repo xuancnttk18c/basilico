@@ -72,7 +72,7 @@ pxl_add_custom_widget(
                                 'name' => 'arrows_style',
                                 'label' => esc_html__('Arrows Style', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SELECT,
-                                'default' => 'default',
+                                'default' => 'style-df',
                                 'options' => [
                                     'style-df' => esc_html('Default', 'basilico'),
                                     'style-2' => esc_html('Style 2', 'basilico'),

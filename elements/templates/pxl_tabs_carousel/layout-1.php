@@ -11,14 +11,14 @@ $widget->add_render_attribute('opts', [
     ])
 ]);
 $arrows = $widget->get_setting("arrows", "false");
-$arrows_style = $widget->get_setting("arrows_style", "default");
+$arrows_style = $widget->get_setting("arrows_style", "style-df");
 extract($settings);
 $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
 ?>
 
 <div class="pxl-tabs-carousel-container">
     <div class="pxl-swiper-slider-wrap pxl-carousel-inner">
-        <div class="pxl-tabs-carousel <?php echo esc_attr($arrows_style); ?>" <?php pxl_print_html($widget->get_render_attribute_string('link_id')); ?> <?php pxl_print_html($widget->get_render_attribute_string('opts')); ?>>
+        <div class="pxl-tabs-carousel" <?php pxl_print_html($widget->get_render_attribute_string('link_id')); ?> <?php pxl_print_html($widget->get_render_attribute_string('opts')); ?>>
             <?php foreach ($tabs_list_carousel as $key => $tab_carousel) : ?>
                 <div class="pxl-carousel-item">
                     <?php
@@ -44,7 +44,7 @@ $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
         </div>
     </div>
     <?php if ($arrows != false) : ?>
-        <div class="pxl-swiper-arrows nav-vertical-in">
+        <div class="pxl-swiper-arrows nav-vertical-in <?php echo esc_attr($arrows_style); ?>">
             <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon pxli-thin-arrow-left"></span></div>
             <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon pxli-thin-arrow-right"></span></div>
         </div>
