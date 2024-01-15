@@ -2944,6 +2944,13 @@
                 position: static;
                 display: inline-block;
                 top: 0;
+                color: #fff;
+                background-color: $secondary_color;
+                width: 62px;
+                height: 62px;
+                @include d-flex();
+                align-items: center;
+                justify-content: center;
                 transform: none;
                 &.slick-disabled {
                     cursor: not-allowed;
