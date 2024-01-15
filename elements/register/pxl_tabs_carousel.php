@@ -130,28 +130,6 @@ pxl_add_custom_widget(
                                 ]
                             ),
                             array(
-                                'name' => 'arrow_prev_center_left',
-                                'label' => esc_html__('Is Center', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::SWITCHER,
-                                'condition' => [
-                                    'arrows' => 'true',
-                                    'arrow_prev_position' => 'absolute',
-                                    'arrow_prev_offset_orientation_h' => 'left'
-                                ],
-                                'return_value' => 'yes'
-                            ),
-                            array(
-                                'name' => 'arrow_prev_center_right',
-                                'label' => esc_html__('Is Center', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::SWITCHER,
-                                'condition' => [
-                                    'arrows' => 'true',
-                                    'arrow_prev_position' => 'absolute',
-                                    'arrow_prev_offset_orientation_h' => 'right'
-                                ],
-                                'return_value' => 'yes'
-                            ),
-                            array(
                                 'name' => 'arrow_prev_offset_x',
                                 'label' => esc_html__('Offset', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SLIDER,

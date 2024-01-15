@@ -13,17 +13,6 @@ $widget->add_render_attribute('opts', [
 $arrows = $widget->get_setting("arrows", "false");
 $arrows_style = $widget->get_setting("arrows_style", "style-df");
 
-$arrow_prev_center = '';
-if ($widget->get_setting("arrow_prev_center_left", "yes") == "yes") {
-    $arrow_prev_center = 'translate-center-left-x';
-}
-elseif ($widget->get_setting("arrow_prev_center_right", "true") == "yes") {
-    $arrow_prev_center = 'translate-center-right-x';
-}
-
-var_dump($widget->get_setting("arrow_prev_center_left", "no"));
-
-extract($settings);
 $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
 ?>
 
@@ -57,10 +46,10 @@ $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
     <?php if ($arrows != false) : ?>
         <div class="pxl-swiper-arrows nav-vertical-in <?php echo esc_attr($arrows_style); ?>">
             <?php if ($arrows_style == 'style-2') : ?>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev <?php echo esc_attr($arrow_prev_center); ?>"><span class="pxl-icon zmdi zmdi-arrow-left"></span></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon zmdi zmdi-arrow-left"></span></div>
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon zmdi zmdi-arrow-right"></span></div>
             <?php else: ?>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev <?php echo esc_attr($arrow_prev_center); ?>"><span class="pxl-icon pxli-thin-arrow-left"></span></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon pxli-thin-arrow-left"></span></div>
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon pxli-thin-arrow-right"></span></div>
             <?php endif; ?>
         </div>
