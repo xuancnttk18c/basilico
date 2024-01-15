@@ -185,7 +185,7 @@ pxl_add_custom_widget(
                                     'arrows' => 'true',
                                     'arrow_prev_offset_orientation_h!' => 'right',
                                     'arrow_prev_position' => 'absolute',
-                                    'arrow_prev_center_left' => 'no'
+                                    'arrow_prev_center_left!' => 'yes'
                                 ],
                             ),
                             array(
@@ -224,7 +224,7 @@ pxl_add_custom_widget(
                                     'arrows' => 'true',
                                     'arrow_prev_offset_orientation_h' => 'right',
                                     'arrow_prev_position' => 'absolute',
-                                    'arrow_prev_center_right' => 'no'
+                                    'arrow_prev_center_right!' => 'yes'
                                 ],
                             ),
                             array(
