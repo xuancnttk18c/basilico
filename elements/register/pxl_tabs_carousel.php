@@ -69,6 +69,19 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
                             ),
                             array(
+                                'name' => 'arrows_style',
+                                'label' => esc_html__('Arrows Style', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'default' => 'default',
+                                'options' => [
+                                    'style-df' => esc_html('Default', 'basilico'),
+                                    'style-2' => esc_html('Style 2', 'basilico'),
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
+                            ),
+                            array(
                                 'name' => 'arrows_color',
                                 'label' => esc_html__( 'Arrows Color', 'basilico' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
@@ -145,7 +158,7 @@ pxl_add_custom_widget(
                                 ],
                                 'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-arrow-prev' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
+                                    '{{WRAPPER}} .pxl-swiper-arrow-prev' => 'position: absolute; left: {{SIZE}}{{UNIT}}; right: auto;',
                                 ],
                                 'condition' => [
                                     'arrows' => 'true',
@@ -183,7 +196,7 @@ pxl_add_custom_widget(
                                     'unit' => 'px'
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-arrow-prev' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
+                                    '{{WRAPPER}} .pxl-swiper-arrow-prev' => 'position: absolute; right: {{SIZE}}{{UNIT}}; left: auto;',
                                 ],
                                 'condition' => [
                                     'arrows' => 'true',
@@ -242,7 +255,7 @@ pxl_add_custom_widget(
                                 ],
                                 'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-arrow-prev' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
+                                    '{{WRAPPER}} .pxl-swiper-arrow-prev' => 'position: absolute; top: {{SIZE}}{{UNIT}}; bottom: auto;',
                                 ],
                                 'condition' => [
                                     'arrows' => 'true',
@@ -280,7 +293,7 @@ pxl_add_custom_widget(
                                     'unit' => 'px'
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-arrow-prev' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
+                                    '{{WRAPPER}} .pxl-swiper-arrow-prev' => 'position: absolute; bottom: {{SIZE}}{{UNIT}}; top: auto;',
                                 ],
                                 'condition' => [
                                     'arrows' => 'true',
@@ -353,7 +366,7 @@ pxl_add_custom_widget(
                                 ],
                                 'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-arrow-next' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
+                                    '{{WRAPPER}} .pxl-swiper-arrow-next' => 'position: absolute; left: {{SIZE}}{{UNIT}}; right: auto;',
                                 ],
                                 'condition' => [
                                     'arrows' => 'true',
@@ -391,7 +404,7 @@ pxl_add_custom_widget(
                                     'unit' => 'px'
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-arrow-next' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
+                                    '{{WRAPPER}} .pxl-swiper-arrow-next' => 'position: absolute; right: {{SIZE}}{{UNIT}}; left: auto;',
                                 ],
                                 'condition' => [
                                     'arrows' => 'true',
@@ -450,7 +463,7 @@ pxl_add_custom_widget(
                                 ],
                                 'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-arrow-next' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
+                                    '{{WRAPPER}} .pxl-swiper-arrow-next' => 'position: absolute; top: {{SIZE}}{{UNIT}}; bottom: auto;',
                                 ],
                                 'condition' => [
                                     'arrows' => 'true',
@@ -488,7 +501,7 @@ pxl_add_custom_widget(
                                     'unit' => 'px'
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-arrow-next' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
+                                    '{{WRAPPER}} .pxl-swiper-arrow-next' => 'position: absolute; bottom: {{SIZE}}{{UNIT}}; top: auto;',
                                 ],
                                 'condition' => [
                                     'arrows' => 'true',
