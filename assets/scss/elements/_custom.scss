@@ -154,3 +154,9 @@ body:has(.pxl-header-sticky.h-fixed) {
         transition-delay: 600ms;
     }
 }
+
+.arrows-translateY-minus-50percent {
+    .pxl-swiper-arrow {
+        @include transform(translateY(-50%));
+    }
+}

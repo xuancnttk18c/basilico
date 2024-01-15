@@ -90,7 +90,8 @@ pxl_add_custom_widget(
                                     '{{WRAPPER}} .pxl-swiper-arrow .pxl-icon' => 'color: {{VALUE}};',
                                 ],
                                 'condition' => [
-                                    'arrows' => 'true'
+                                    'arrows' => 'true',
+                                    'arrows_style' => 'style-df'
                                 ]
                             ),
                             array(
