@@ -14,14 +14,14 @@ $arrows = $widget->get_setting("arrows", "false");
 $arrows_style = $widget->get_setting("arrows_style", "style-df");
 
 $arrow_prev_center = '';
-if ($widget->get_setting("arrow_prev_center_left", "true")) {
+if ($widget->get_setting("arrow_prev_center_left", "yes") == "yes") {
     $arrow_prev_center = 'translate-center-left-x';
 }
-elseif ($widget->get_setting("arrow_prev_center_right", "true")) {
+elseif ($widget->get_setting("arrow_prev_center_right", "true") == "yes") {
     $arrow_prev_center = 'translate-center-right-x';
 }
 
-var_dump($widget->get_setting("arrow_prev_center_left", "true"));
+var_dump($widget->get_setting("arrow_prev_center_left", "no"));
 
 extract($settings);
 $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
