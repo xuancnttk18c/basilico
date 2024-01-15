@@ -109,6 +109,15 @@ pxl_add_custom_widget(
                                 ]
                             ),
                             array(
+                                'name' => 'arrow_prev_center_orientation_left',
+                                'label' => esc_html__('Horizontal Orientation', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                                'condition' => [
+                                    'arrows' => 'true',
+                                    'arrow_prev_position' => 'absolute'
+                                ]
+                            ),
+                            array(
                                 'name' => 'arrow_prev_offset_orientation_h',
                                 'label' => esc_html__('Horizontal Orientation', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::CHOOSE,
