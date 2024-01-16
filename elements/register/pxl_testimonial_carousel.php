@@ -311,6 +311,11 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'testimonial_background',
+                            'label' => esc_html__('Background Image', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::MEDIA,
+                        ),
+                        array(
                             'name' => 'max_width',
                             'label' => esc_html__('Description Max Width', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SLIDER,
