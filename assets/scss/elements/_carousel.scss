@@ -570,7 +570,12 @@
             justify-content: center;
             .item-inner {
                 max-width: 970px;
+                padding-top: 52px;
+                padding-bottom: 52px;
             }
+        }
+        .pxl-thumbs-wrapper {
+            margin-bottom: 46px;
         }
         .icon-wrapper {
             margin-bottom: 30px;
@@ -617,11 +622,13 @@
             }
         }
         .item-desc {
+            margin-top: 15px;
             font-size: 15px;
             font-weight: 500;
             line-height: 26px;
         }
         .item-testimonial-title {
+            margin-top: 23px;
             font-family: $heading_font_family;
             color: $heading_color;
             font-size: 17px;
@@ -638,12 +645,16 @@
             }
         }
         .item-title {
+            color: $primary_color;
             font-family: $heading_font_family;
             font-size: 25px;
             line-height: 28px;
             font-weight: 600;
+            text-transform: none;
+            margin-bottom: 0;
         }
         .item-position {
+            margin-top: 4px;
             font-size: 15px;
             line-height: 28px;
             letter-spacing: 0.01em;
