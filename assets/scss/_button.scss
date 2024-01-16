@@ -633,25 +633,27 @@
     }
 }
 
-.hover-outside {
-    .btn-additional-6 {
-        background-color: $primary_color;
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: $secondary_color;
-            @include transform(scaleX(0));
-            @include transition(all 250ms linear 0s);
-        }
-        &:hover {
-            background-color: $secondary_color;
+.btn-hover-outside {
+    &:hover {
+        .btn-additional-6 {
+            background-color: $primary_color;
             &:before {
-                background-color: $primary_color;
-                @include transform(scaleX(1));
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $secondary_color;
+                @include transform(scaleX(0));
+                @include transition(all 250ms linear 0s);
+            }
+            &:hover {
+                background-color: $secondary_color;
+                &:before {
+                    background-color: $primary_color;
+                    @include transform(scaleX(1));
+                }
             }
         }
     }
