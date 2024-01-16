@@ -592,6 +592,7 @@
             @include transition(transform 0.3s linear);
         }
         .pxl-carousel-inner {
+            overflow: hidden;
             @include border-radius(35px);
             background-color: $additional01_color;
         }
