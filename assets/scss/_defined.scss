@@ -1105,6 +1105,11 @@
 }
 .icon-hover-spin {
 	svg, i {
-		@include transform(rotateY(360deg));
+		transition: all 300ms linear 0s;
+	}
+	&:hover {
+		svg, i {
+			@include transform(rotateY(360deg));
+		}
 	}
 }
