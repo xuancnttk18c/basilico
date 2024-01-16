@@ -1104,7 +1104,7 @@
 	animation-timing-function: linear;
 }
 
-@keyframes icon-hover-spin {
+@keyframes iconHoverSpin {
 	50% {
 		@include transform(translateY(-10px) rotateY(180deg));
 	}
@@ -1115,7 +1115,7 @@
 .icon-hover-spin {
 	&:hover {
 		svg, i {
-			animation: icon-hover-spin 300ms linear 0s;
+			animation: iconHoverSpin 300ms linear 0s;
 		}
 	}
 }
