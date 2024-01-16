@@ -96,7 +96,7 @@ $widget->add_render_attribute( 'carousel', [
                 </div>
             </div>
         </div>
-        <div class="pxl-swiper-slider-wrap pxl-carousel-inner d-flex justify-content-center relative" <?php echo !empty($background_image) ? 'style="background_image: url('.$background_image.')"'; ?>>
+        <div class="pxl-swiper-slider-wrap pxl-carousel-inner d-flex justify-content-center relative" <?php echo !empty($background_image) ? 'style="background_image: url('.$background_image.')"' : ''; ?>>
             <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) : ?>
                 <div class="icon-wrapper">
                     <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
