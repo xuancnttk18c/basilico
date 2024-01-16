@@ -114,7 +114,9 @@ $widget->add_render_attribute( 'carousel', [
                         <div class="pxl-swiper-slide swiper-slide">
                             <div class="item-inner d-flex flex-column text-center">
                                 <?php if (!empty($title)) : ?>
-                                    <h4 class="item-title"><?php echo esc_html($title); ?></h4>
+                                    <h4 class="item-title">
+                                        <span><?php echo esc_html($title); ?></span>
+                                    </h4>
                                 <?php endif; ?>
                                 <?php if (!empty($position)) : ?>
                                     <div class="item-position"><?php echo esc_html($position); ?></div>
