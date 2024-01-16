@@ -105,40 +105,40 @@ $widget->add_render_attribute( 'carousel', [
             <?php endif; ?>
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
                 <div class="pxl-swiper-wrapper swiper-wrapper">
-                <?php foreach ($content_list as $key => $value):
-                    $description = isset($value['description']) ? $value['description'] : '';
-                    $title       = isset($value['title']) ? $value['title'] : '';
-                    $position    = isset($value['position']) ? $value['position'] : '';
-                    $testimonial_title = isset($value['testimonial_title']) ? $value['testimonial_title'] : '';
-                    ?>
-                    <div class="pxl-swiper-slide swiper-slide">
-                        <div class="item-inner">
-                            <?php if (!empty($title)) : ?>
-                                <h4 class="item-title"><?php echo esc_html($title); ?></h4>
-                            <?php endif; ?>
-                            <?php if (!empty($position)) : ?>
-                                <div class="item-position"><?php echo esc_html($position); ?></div>
-                            <?php endif; ?>
-                            <?php if (!empty($testimonial_title)) : ?>
-                                <div class="item-testimonial-title"><?php echo esc_html($testimonial_title); ?></div>
-                            <?php endif; ?>
-                            <?php if (!empty($description)) : ?>
-                                <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
-                            <?php endif; ?>
-                            <?php if(!empty($value['rating']) && $value['rating'] != 'none') : ?>
-                                <div class="item-rating-star">
-                                    <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
-                                        <i class="pxli-star1"></i>
-                                        <i class="pxli-star1"></i>
-                                        <i class="pxli-star1"></i>
-                                        <i class="pxli-star1"></i>
-                                        <i class="pxli-star1"></i>
+                    <?php foreach ($content_list as $key => $value):
+                        $description = isset($value['description']) ? $value['description'] : '';
+                        $title       = isset($value['title']) ? $value['title'] : '';
+                        $position    = isset($value['position']) ? $value['position'] : '';
+                        $testimonial_title = isset($value['testimonial_title']) ? $value['testimonial_title'] : '';
+                        ?>
+                        <div class="pxl-swiper-slide swiper-slide">
+                            <div class="item-inner d-flex justify-content-center">
+                                <?php if (!empty($title)) : ?>
+                                    <h4 class="item-title"><?php echo esc_html($title); ?></h4>
+                                <?php endif; ?>
+                                <?php if (!empty($position)) : ?>
+                                    <div class="item-position"><?php echo esc_html($position); ?></div>
+                                <?php endif; ?>
+                                <?php if (!empty($testimonial_title)) : ?>
+                                    <div class="item-testimonial-title"><?php echo esc_html($testimonial_title); ?></div>
+                                <?php endif; ?>
+                                <?php if (!empty($description)) : ?>
+                                    <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
+                                <?php endif; ?>
+                                <?php if(!empty($value['rating']) && $value['rating'] != 'none') : ?>
+                                    <div class="item-rating-star">
+                                        <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
+                                            <i class="pxli-star1"></i>
+                                            <i class="pxli-star1"></i>
+                                            <i class="pxli-star1"></i>
+                                            <i class="pxli-star1"></i>
+                                            <i class="pxli-star1"></i>
+                                        </div>
                                     </div>
-                                </div>
-                            <?php endif; ?>
+                                <?php endif; ?>
+                            </div>
                         </div>
-                    </div>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <?php if($arrows !== 'false'): ?>
