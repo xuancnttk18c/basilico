@@ -659,17 +659,16 @@
                     content: '';
                     position: absolute;
                     top: 50%;
-                    @include transform(translateY(-50%));
+                    @include transform(translateY(calc(-50% + 2px)));
                     width: 10px;
                     height: 3px;
                     background-color: $secondary_color;
                 }
                 &:before {
-                    left: -40px;
+                    left: -17px;
                 }
                 &:after {
-                    right: -40px;
-                    @include transform(translate(100%, -50%));
+                    right: -17px;
                 }
             }
         }
