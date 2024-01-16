@@ -596,11 +596,6 @@
             @include border-radius(35px);
             background-color: $additional01_color;
         }
-        .testimonial-title {
-            font-size: 22px;
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
         .item-image {
             display: flex;
             align-items: center;
@@ -622,12 +617,15 @@
             }
         }
         .item-desc {
-            font-size: 20px;
+            font-size: 15px;
             font-weight: 500;
-            line-height: 35px;
-            letter-spacing: 0.01em;
+            line-height: 26px;
+        }
+        .item-testimonial-title {
+            font-family: $heading_font_family;
             color: $heading_color;
-            padding-bottom: 34px;
+            font-size: 17px;
+            letter-spacing: 0.01em;
         }
         .item-info {
             gap: 28px;
@@ -641,13 +639,14 @@
         }
         .item-title {
             font-family: $body_font_family;
-            font-size: 17px;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-            margin-bottom: 3px;
+            font-size: 25px;
+            line-height: 28px;
+            font-weight: 600;
         }
         .item-position {
             font-size: 15px;
+            line-height: 28px;
+            letter-spacing: 0.01em;
         }
         .pxl-swiper-thumbs {
             width: 1020px;
