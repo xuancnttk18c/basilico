@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'pxli';
   src:
-    url('fonts/pxli.ttf?ia11qt') format('truetype'),
-    url('fonts/pxli.woff?ia11qt') format('woff'),
-    url('fonts/pxli.svg?ia11qt#pxli') format('svg');
+    url('fonts/pxli.ttf?c7ky7o') format('truetype'),
+    url('fonts/pxli.woff?c7ky7o') format('woff'),
+    url('fonts/pxli.svg?c7ky7o#pxli') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pxli-collaboration:before {
+  content: "\e9e0";
+}
 .pxli-iphone:before {
   content: "\e9de";
 }
