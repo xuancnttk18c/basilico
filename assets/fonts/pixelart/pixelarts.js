@@ -109,10 +109,6 @@
 		"arrow-circle-right-large",
 		"arrow-down",
 		"arrow-up",
-		"arrow-long-down",
-		"arrow-long-left",
-		"arrow-long-right",
-		"arrow-long-up",
 		"long-arrow-up",
 		"long-arrow-down",
 		"long-arrow-left",
@@ -227,6 +223,7 @@
 		"bell",
 		"send2",
 		"alarm-clock",
-		"iphone"
+		"iphone",
+		"collaboration"
     ]
 }
