@@ -648,13 +648,6 @@
                 @include transform(scaleX(0));
                 @include transition(all 250ms linear 0s);
             }
-            &:hover {
-                background-color: $secondary_color;
-                &:before {
-                    background-color: $primary_color;
-                    @include transform(scaleX(1));
-                }
-            }
         }
     }
 }
