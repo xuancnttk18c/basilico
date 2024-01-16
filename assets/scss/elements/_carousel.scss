@@ -591,6 +591,10 @@
             color: $secondary_color;
             @include transition(transform 0.3s linear);
         }
+        .pxl-carousel-inner {
+            @include border-radius(35px);
+            background-color: $additional01_color;
+        }
         .testimonial-title {
             font-size: 22px;
             font-weight: 500;
