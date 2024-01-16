@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'pxli';
   src:
-    url('fonts/pxli.ttf?c7ky7o') format('truetype'),
-    url('fonts/pxli.woff?c7ky7o') format('woff'),
-    url('fonts/pxli.svg?c7ky7o#pxli') format('svg');
+    url('fonts/pxli.ttf?c6pkqt') format('truetype'),
+    url('fonts/pxli.woff?c6pkqt') format('woff'),
+    url('fonts/pxli.svg?c6pkqt#pxli') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pxli-healthcare:before {
+  content: "\e9e1";
+}
+.pxli-help:before {
+  content: "\e9e2";
+}
+.pxli-piggy-bank:before {
+  content: "\e9e3";
+}
+.pxli-save-money:before {
+  content: "\e9e4";
+}
 .pxli-collaboration:before {
   content: "\e9e0";
 }

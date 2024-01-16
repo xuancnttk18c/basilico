@@ -224,6 +224,10 @@
 		"send2",
 		"alarm-clock",
 		"iphone",
-		"collaboration"
+		"collaboration",
+		"healthcare",
+		"help",
+		"piggy-bank",
+		"save-money"
     ]
 }
