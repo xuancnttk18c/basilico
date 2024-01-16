@@ -591,9 +591,6 @@
             color: $secondary_color;
             @include transition(transform 0.3s linear);
         }
-        .item-inner {
-            text-align: center;
-        }
         .testimonial-title {
             font-size: 22px;
             font-weight: 500;

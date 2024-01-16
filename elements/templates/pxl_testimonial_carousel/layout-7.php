@@ -58,7 +58,7 @@ $widget->add_render_attribute( 'carousel', [
 ]);
 ?>
 <?php if(isset($content_list) && !empty($content_list) && count($content_list)): ?>
-    <div class="pxl-swiper-slider pxl-testimonial-carousel layout-<?php echo esc_attr($settings['layout'])?>">
+    <div class="pxl-swiper-slider pxl-testimonial-carousel d-flex justify-content-center layout-<?php echo esc_attr($settings['layout'])?>">
         <div class="pxl-swiper-thumbs-wrap">
             <div class="pxl-swiper-thumbs overflow-hidden" data-item="6" data-gutter="35">
                 <div class="pxl-thumbs-wrapper swiper-wrapper">
@@ -94,7 +94,7 @@ $widget->add_render_attribute( 'carousel', [
                 </div>
             </div>
         </div>
-        <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
+        <div class="pxl-swiper-slider-wrap pxl-carousel-inner d-flex justify-content-center relative">
             <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) : ?>
                 <div class="icon-wrapper">
                     <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
@@ -112,7 +112,7 @@ $widget->add_render_attribute( 'carousel', [
                         $testimonial_title = isset($value['testimonial_title']) ? $value['testimonial_title'] : '';
                         ?>
                         <div class="pxl-swiper-slide swiper-slide">
-                            <div class="item-inner d-flex justify-content-center">
+                            <div class="item-inner d-flex flex-column text-center">
                                 <?php if (!empty($title)) : ?>
                                     <h4 class="item-title"><?php echo esc_html($title); ?></h4>
                                 <?php endif; ?>
