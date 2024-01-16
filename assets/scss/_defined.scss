@@ -1103,13 +1103,11 @@
 	animation-name: up-down-move;
 	animation-timing-function: linear;
 }
+
 .icon-hover-spin {
-	svg, i {
-		transition: all 300ms linear 0s;
-	}
 	&:hover {
 		svg, i {
-			@include transform(rotateY(360deg));
+			animation: icon-hover-spin 300ms linear 0s;
 		}
 	}
 }
