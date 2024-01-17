@@ -2174,6 +2174,9 @@
     }
     &.layout-2 {
         .pxl-list-content {
+            + .pxl-list-content {
+                border-top: 1px dashed $body_color;
+            }
             .pxl-list-icon {
                 max-width: 0;
                 overflow: hidden;
