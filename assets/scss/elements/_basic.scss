@@ -2175,6 +2175,7 @@
     &.layout-2 {
         .pxl-list-content {
             + .pxl-list-content {
+                margin-top: 0px;
                 border-top-width: 1px;
                 border-top-style: dashed;
                 border-top-color: rgba(255, 255, 255, 0.45);
