@@ -2181,8 +2181,14 @@
             }
             .pxl-list-icon {
                 max-width: 0;
+                margin-right: 0;
                 overflow: hidden;
                 @include transition();
+            }
+            &:hover {
+                .pxl-list-icon {
+                    margin-right: 0;
+                }
             }
         }
     }
