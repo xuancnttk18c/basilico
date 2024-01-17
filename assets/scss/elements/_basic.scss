@@ -2175,16 +2175,9 @@
     &.layout-2 {
         .pxl-list-content {
             .pxl-list-icon {
-                max-width: 0%;
+                max-width: 0;
                 overflow: hidden;
-                margin-right: 0;
                 @include transition();
-            }
-            &:hover {
-                .pxl-list-icon {
-                    max-width: auto;
-                    margin-right: 10px;
-                }
             }
         }
     }
