@@ -9,6 +9,29 @@ pxl_add_custom_widget(
         'params' => array(
             'sections' => array(
                 array(
+                    'name'     => 'layout_section',
+                    'label'    => esc_html__( 'Layout', 'basilico' ),
+                    'tab'      => 'layout',
+                    'controls' => array(
+                        array(
+                            'name'    => 'layout',
+                            'label'   => esc_html__( 'Templates', 'basilico' ),
+                            'type'    => 'layoutcontrol',
+                            'default' => '1',
+                            'options' => [
+                                '1' => [
+                                    'label' => esc_html__( 'Layout 1', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-1.jpg'
+                                ],
+                                '2' => [
+                                    'label' => esc_html__( 'Layout 2', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-2.jpg'
+                                ],
+                            ],
+                        )
+                    )
+                ),
+                array(
                     'name' => 'tab_content',
                     'label' => esc_html__( 'Content', 'basilico' ),
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,

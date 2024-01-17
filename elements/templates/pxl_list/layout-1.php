@@ -7,7 +7,7 @@ extract($settings);
 $is_new = \Elementor\Icons_Manager::is_migration_allowed();
 ?>
 <?php if(isset($list) && !empty($list) && count($list)): ?>
-    <div class="pxl-list">
+    <div class="pxl-list layout-1">
         <div class="pxl-item-list">
             <?php
             foreach ($list as $key => $value):
