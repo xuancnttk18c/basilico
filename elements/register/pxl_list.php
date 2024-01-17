@@ -162,7 +162,7 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-list .pxl-list-content + .pxl-list-content' => 'border-top-color: {{VALUE}};',
                             ],
                             'condition' => [
-                                'border_type!' => '',
+                                'content_border_type!' => '',
                             ],
                         ),
                         array(
