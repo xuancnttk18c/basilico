@@ -1544,9 +1544,13 @@
         }
     }
     &.layout-3 {
+        form {
+            height: 50px;
+        }
         .pxl-search-field {
             font-size: 15px;
             letter-spacing: 0;
+            padding-right: 50px;
             height: 50px;
             border: 1px solid $secondary_color;
             @include border-radius(30px);
@@ -1565,9 +1569,10 @@
             top: 4px;
             right: 4px;
             left: 4px;
-            width: 50px;
+            width: 42px;
             @include border-radius(50%);
             background-color: $secondary_color;
+            font-size: 15px;
             span {
                 color: #fff;
             }
