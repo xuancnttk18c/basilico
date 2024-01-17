@@ -2175,15 +2175,15 @@
     &.layout-2 {
         .pxl-list-content {
             .pxl-list-icon {
-                @include transform(scaleX(0));
+                max-width: 0%;
                 overflow: hidden;
-                margin: 0;
-                padding-right: 10px;
+                margin-right: 0;
                 @include transition();
             }
             &:hover {
                 .pxl-list-icon {
-                    @include transform(scaleX(1));
+                    max-width: auto;
+                    margin-right: 10px;
                 }
             }
         }
