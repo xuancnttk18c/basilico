@@ -2863,9 +2863,8 @@
             font-size: 20px;
             letter-spacing: 0.03em;
             font-weight: 400;
-            text-transform: uppercase;
+            text-transform: none;
             position: relative;
-            text-transform: none !important;
             cursor: pointer;
             -webkit-font-smoothing: antialiased;
             font-smoothing: antialiased;
@@ -2914,6 +2913,68 @@
             hyphens: auto;
             padding: 42px 85px 42px 34px;
             border: 1px solid $divider_color;
+            border-top: none;
+            @media (max-width: $xs_max) {
+                padding: 34px 40px 33px 30px;
+            }
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .pxl-ac-item {
+            background-color: transparent;
+            padding: 0;
+            @include transition(all 300ms linear 0ms);
+            + .pxl-ac-item {
+                .pxl-ac-title {
+                    border-top: none;
+                }
+            }
+        }
+    }
+    &.style6 {
+        .pxl-ac-title {
+            @include transition(all 250ms linear 0ms);
+            background-color: $heading_color;
+            font-family: $heading_font_family;
+            padding: 21px 70px 21px 33px;
+            @include border-radius(50%);
+            color: $heading_color;
+            font-size: 17px;
+            letter-spacing: 0.02em;
+            font-weight: 400;
+            position: relative;
+            text-transform: none;
+            cursor: pointer;
+            -webkit-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            .pxl-ac-title-text {
+                transition: none;
+            }
+            &:after {
+                content: "\f2fc";
+                font-family: "Material-Design-Iconic-Font";
+                font-size: 36px;
+                position: absolute;
+                top: 50%;
+                right: 32px;
+                @include transform(translate(0, -50%) rotate(180deg));
+                @include transition();
+                color: $secondary_color;
+                z-index: 1;
+            }
+            &.active {
+                background-color: $primary_color;
+                &:after {
+                    @include transform(translate(0, -50%) rotate(0deg));
+                }
+            }
+        }
+        .pxl-ac-content {
+            overflow-wrap: break-word;
+            hyphens: auto;
+            padding: 42px 85px 42px 34px;
             border-top: none;
             @media (max-width: $xs_max) {
                 padding: 34px 40px 33px 30px;
