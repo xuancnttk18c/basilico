@@ -2937,9 +2937,9 @@
             @include transition(all 250ms linear 0ms);
             background-color: $heading_color;
             font-family: $heading_font_family;
-            padding: 21px 70px 21px 33px;
+            padding: 11px 70px 11px 35px;
             @include border-radius(25px);
-            color: $heading_color;
+            color: #fff;
             font-size: 17px;
             letter-spacing: 0.02em;
             font-weight: 400;
@@ -2955,7 +2955,7 @@
             &:after {
                 content: "\f2fc";
                 font-family: "Material-Design-Iconic-Font";
-                font-size: 36px;
+                font-size: 25px;
                 position: absolute;
                 top: 50%;
                 right: 32px;
@@ -2974,11 +2974,8 @@
         .pxl-ac-content {
             overflow-wrap: break-word;
             hyphens: auto;
-            padding: 42px 85px 42px 34px;
+            padding: 22px 65px 43px 34px;
             border-top: none;
-            @media (max-width: $xs_max) {
-                padding: 34px 40px 33px 30px;
-            }
             p:last-child {
                 margin-bottom: 0;
             }
@@ -2988,9 +2985,7 @@
             padding: 0;
             @include transition(all 300ms linear 0ms);
             + .pxl-ac-item {
-                .pxl-ac-title {
-                    border-top: none;
-                }
+                margin-top: 15px;
             }
         }
     }
