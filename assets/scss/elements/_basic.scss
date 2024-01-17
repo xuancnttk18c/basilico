@@ -2181,7 +2181,9 @@
                 @include transition();
             }
             &:hover {
-                max-width: 100%;
+                .pxl-list-icon {
+                    max-width: 100%;
+                }
             }
         }
     }
