@@ -1579,7 +1579,6 @@
         }
     }
 }
-    
 
 //* Pxl Media Popup
 .pxl-media-popup {
@@ -2171,6 +2170,19 @@
         }
         + .pxl-list-content {
             margin-top: 15px;
+        }
+    }
+    &.layout-2 {
+        .pxl-list-content {
+            .pxl-list-icon {
+                max-width: 0%;
+                overflow: hidden;
+                margin-right: 0;
+                @include transition();
+            }
+            &:hover {
+                max-width: 100%;
+            }
         }
     }
 }
