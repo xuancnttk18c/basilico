@@ -142,7 +142,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Content Border Type', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => [
-                                '' => esc_html__( 'None', 'basilico' ),
+                                'none' => esc_html__( 'None', 'basilico' ),
                                 'solid' => esc_html__( 'Solid', 'basilico' ),
                                 'double' => esc_html__( 'Double', 'basilico' ),
                                 'dotted' => esc_html__( 'Dotted', 'basilico' ),
@@ -151,6 +151,9 @@ pxl_add_custom_widget(
                             ],
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-list .pxl-list-content + .pxl-list-content' => 'border-top-style: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'layout' => '2'
                             ],
                         ),
                         array(
@@ -162,7 +165,8 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-list .pxl-list-content + .pxl-list-content' => 'border-top-color: {{VALUE}};',
                             ],
                             'condition' => [
-                                'content_border_type!' => '',
+                                'content_border_type!' => 'none',
+                                'layout' => '2'
                             ],
                         ),
                         array(
