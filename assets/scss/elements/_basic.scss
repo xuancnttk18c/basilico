@@ -2987,6 +2987,9 @@
             + .pxl-ac-item {
                 margin-top: 15px;
             }
+            &.active + .pxl-ac-item {
+                margin-top: 0;
+            }
         }
     }
 }
