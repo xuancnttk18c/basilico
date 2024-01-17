@@ -27,6 +27,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 1', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_search_form-1.jpg'
                                 ],
+                                '3' => [
+                                    'label' => esc_html__( 'Layout 1', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_search_form-3.jpg'
+                                ],
                             ],
                             'prefix_class' => 'pxl-search-form-layout-'
                         ),
