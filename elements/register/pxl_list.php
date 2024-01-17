@@ -138,6 +138,34 @@ pxl_add_custom_widget(
                             'selector' => '{{WRAPPER}} .pxl-list .pxl-list-content',
                         ),
                         array(
+                            'name' => 'content_border_type',
+                            'label' => esc_html__( 'Content Border Type', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'options' => [
+                                '' => esc_html__( 'None', 'basilico' ),
+                                'solid' => esc_html__( 'Solid', 'basilico' ),
+                                'double' => esc_html__( 'Double', 'basilico' ),
+                                'dotted' => esc_html__( 'Dotted', 'basilico' ),
+                                'dashed' => esc_html__( 'Dashed', 'basilico' ),
+                                'groove' => esc_html__( 'Groove', 'basilico' ),
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-list .pxl-list-content:not(:last-child)' => 'border-style: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'content_border_color',
+                            'label' => esc_html__( 'Content Border Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'default' => '',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-list .pxl-list-content:not(:last-child)' => 'border-color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'border_type!' => '',
+                            ],
+                        ),
+                        array(
                             'name' => 'link_color',
                             'label' => esc_html__('Link Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
