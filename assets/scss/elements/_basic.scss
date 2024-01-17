@@ -1568,7 +1568,7 @@
             position: absolute;
             top: 4px;
             right: 4px;
-            left: 4px;
+            bottom: 4px;
             width: 42px;
             @include border-radius(50%);
             background-color: $secondary_color;
