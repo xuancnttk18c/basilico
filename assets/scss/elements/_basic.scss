@@ -1543,6 +1543,36 @@
             }
         }
     }
+    &.layout-3 {
+        .pxl-search-field {
+            font-size: 15px;
+            letter-spacing: 0;
+            height: 50px;
+            border: 1px solid $secondary_color;
+            @include border-radius(30px);
+            @include placeholder() {
+                color: $heading_color;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                opacity: 1;
+                text-overflow: ellipsis;
+                line-height: inherit;
+            }
+        }
+        .pxl-search-submit {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            left: 4px;
+            width: 50px;
+            @include border-radius(50%);
+            background-color: $secondary_color;
+            span {
+                color: #fff;
+            }
+        }
+    }
 }
     
 
