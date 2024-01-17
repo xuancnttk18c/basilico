@@ -2938,7 +2938,7 @@
             background-color: $heading_color;
             font-family: $heading_font_family;
             padding: 21px 70px 21px 33px;
-            @include border-radius(50%);
+            @include border-radius(25px);
             color: $heading_color;
             font-size: 17px;
             letter-spacing: 0.02em;
