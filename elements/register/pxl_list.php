@@ -90,8 +90,7 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-list-content .pxl-list-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
                                 '{{WRAPPER}} .pxl-list-content .pxl-list-icon svg' => 'height: {{SIZE}}{{UNIT}};',
-                                '{{WRAPPER}} .layout-2 .pxl-list-content:hover .pxl-list-icon i' => 'max-width: calc({{SIZE}}{{UNIT}} + 10px);',
-                                '{{WRAPPER}} .layout-2 .pxl-list-content:hover .pxl-list-icon svg' => 'max-width: calc({{SIZE}}{{UNIT}} + 10px);',
+                                '{{WRAPPER}} .pxl-list.layout-2 .pxl-list-content:hover .pxl-list-icon' => 'max-width: calc({{SIZE}}{{UNIT}} + 10px);',
                             ],
 
                         ),
