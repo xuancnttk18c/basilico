@@ -150,7 +150,7 @@ pxl_add_custom_widget(
                                 'groove' => esc_html__( 'Groove', 'basilico' ),
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-list .pxl-list-content:not(:last-child)' => 'border-style: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-list .pxl-list-content + .pxl-list-content' => 'border-top-style: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -159,7 +159,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-list .pxl-list-content:not(:last-child)' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-list .pxl-list-content + .pxl-list-content' => 'border-top-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'border_type!' => '',
