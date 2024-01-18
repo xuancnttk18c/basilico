@@ -3,7 +3,7 @@ use Elementor\Utils;
 ?>
 
 <div class="pxl-fancy-box layout-4">
-    <div class="box-inner">
+    <div class="box-inner box-inner d-flex flex-column align-items-center">
         <div class="box-icon">
             <?php if(! empty( $settings['selected_icon']['value'] )): ?>
                 <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
