@@ -195,7 +195,7 @@ pxl_add_custom_widget(
                             'separator' => 'after',
                         ),
                         array(
-                            'name' => 'style',
+                            'name' => 'btn_style',
                             'label' => esc_html__('Button Styles', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'default' => 'btn-default',
@@ -213,7 +213,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'btn_color',
-                            'label' => esc_html__('Text Color', 'basilico' ),
+                            'label' => esc_html__('Button Text Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box .btn' => 'color: {{VALUE}};',
@@ -224,7 +224,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'btn_color_hover',
-                            'label' => esc_html__('Text Color Hover', 'basilico' ),
+                            'label' => esc_html__('Button Text Color Hover', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box .btn:hover' => 'color: {{VALUE}};',
@@ -235,7 +235,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'btn_bg_color',
-                            'label' => esc_html__('Background Color', 'basilico' ),
+                            'label' => esc_html__('Button Background Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box .btn' => 'background-image: none; background-color: {{VALUE}}; border-color: {{VALUE}};',
@@ -247,7 +247,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'btn_bg_color_hover',
-                            'label' => esc_html__('Background Color Hover', 'basilico' ),
+                            'label' => esc_html__('Button Background Color Hover', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box .btn:hover' => 'border-color: {{VALUE}};',
