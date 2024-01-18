@@ -2372,17 +2372,6 @@
             position: relative;
             margin-bottom: 7px;
         }
-        .pxl-divider {
-            margin-left: auto;
-            margin-right: auto;
-            width: 60px;
-            height: 3px;
-            background-color: $secondary_color;
-            @include border-radius(2px);
-            &:before {
-                width: 100%;
-            }
-        }
         .box-button {
             margin-top: 33px;
         }
@@ -2491,6 +2480,17 @@
             color: $heading_color;
             position: relative;
             margin-bottom: 7px;
+        }
+        .pxl-divider {
+            margin-left: auto;
+            margin-right: auto;
+            width: 60px;
+            height: 3px;
+            background-color: $secondary_color;
+            @include border-radius(2px);
+            &:before {
+                width: 100%;
+            }
         }
         .box-button {
             margin-top: 33px;
