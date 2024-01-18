@@ -578,7 +578,8 @@
             margin-bottom: 46px;
         }
         .icon-wrapper {
-            margin-bottom: 30px;
+            margin-bottom: -20px;
+            margin-top: 20px;
             svg {
                 width: 79px;
                 fill: $secondary_color;
@@ -594,7 +595,7 @@
             margin-bottom: -70px;
         }
         .pxl-icon {
-            font-size: 20px;
+            font-size: 50px;
             color: $secondary_color;
             @include transition(transform 0.3s linear);
         }
