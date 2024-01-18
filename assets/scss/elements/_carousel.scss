@@ -585,11 +585,13 @@
             }   
         }
         .item-quote-icon {
-            font-family: $heading_font_family;
+            font-family: none;
             color: $primary_color;
-            font-size: 60px;
+            font-size: 100px;
             font-weight: 700;
             line-height: 1;
+            margin-top: 30px;
+            margin-bottom: -70px;
         }
         .pxl-icon {
             font-size: 20px;
@@ -639,6 +641,7 @@
             gap: 28px;
         }
         .item-rating-star {
+            margin-top: 30px;
             .item-rating i {
                 font-size: 15px;
                 margin-right: 0;
