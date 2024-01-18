@@ -207,6 +207,9 @@ pxl_add_custom_widget(
                                 'btn-outline' => esc_html__('Out Line', 'basilico' ),
                                 'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
                             ],
+                            'condition' => [
+                                'layout'    => ['2']
+                            ]
                         ),
                         array(
                             'name' => 'btn_color',
@@ -215,6 +218,9 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box .btn' => 'color: {{VALUE}};',
                             ],
+                            'condition' => [
+                                'layout'    => ['2']
+                            ]
                         ),
                         array(
                             'name' => 'btn_color_hover',
@@ -223,6 +229,9 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box .btn:hover' => 'color: {{VALUE}};',
                             ],
+                            'condition' => [
+                                'layout'    => ['2']
+                            ]
                         ),
                         array(
                             'name' => 'btn_bg_color',
