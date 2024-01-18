@@ -2486,10 +2486,11 @@
             margin-right: auto;
             width: 60px;
             height: 3px;
-            background-color: $secondary_color;
             @include border-radius(2px);
+            overflow: hidden;
             &:before {
                 width: 100%;
+                background-color: $secondary_color;
             }
         }
         .box-button {
