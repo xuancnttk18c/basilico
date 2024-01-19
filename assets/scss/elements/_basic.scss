@@ -2460,6 +2460,9 @@
             justify-content: center;
             background-color: $primary_color;
             @include border-radius(20px);
+            @include transform(scaleY(1));
+            transform-origin: bottom;
+            @inlcude transition();
             i {
                 font-size: 47px;
                 color: #fff;
@@ -2495,12 +2498,19 @@
             }
         }
         .box-description {
-            margin-top: 19px;
+            margin-top: 0px;
+            @include transform(scaleY(0));
+            @include transition();
+            transform-origin: bottom;
         }
         .box-inner:hover {
-            .box-icon svg,
-            .box-icon i {
-                @include transform(rotateY(360deg));
+            .box-icon {
+                margin-bottom: 0px;
+                @include transform(scaleY(0));
+            }
+            .box-description {
+                margin-top: 19px;
+                @include transform(scaleY(0));
             }
         }
     }
