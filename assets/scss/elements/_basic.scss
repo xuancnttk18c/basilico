@@ -2462,7 +2462,7 @@
             @include border-radius(20px);
             @include transform(scaleY(1));
             transform-origin: bottom;
-            @inlcude transition();
+            @include transition();
             i {
                 font-size: 47px;
                 color: #fff;
