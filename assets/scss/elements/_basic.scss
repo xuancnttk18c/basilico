@@ -2479,6 +2479,7 @@
             font-size: 25px;
             letter-spacing: 0.03em;
             text-transform: none;
+            @include text-truncate-multi-line($font-size: 25px, $line-height: 1.2, $lines-to-show: 1);
             color: $heading_color;
             position: relative;
             text-transform: none;
