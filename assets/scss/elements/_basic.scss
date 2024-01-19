@@ -2510,7 +2510,7 @@
             }
             .box-description {
                 margin-top: 19px;
-                @include transform(scaleY(0));
+                @include transform(scaleY(1));
             }
         }
     }
