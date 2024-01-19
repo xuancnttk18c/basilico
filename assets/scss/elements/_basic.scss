@@ -2452,6 +2452,7 @@
     }
     &.layout-4 {
         .box-icon {
+            overflow: hidden;
             margin-bottom: 30px;
             width: 96px;
             height: 96px;
@@ -2496,6 +2497,7 @@
             }
         }
         .box-description {
+            overflow: hidden;
             margin-top: 0px;
             max-height: 0px;
             @include transition(all 400ms ease);
