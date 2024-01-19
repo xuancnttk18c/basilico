@@ -2460,8 +2460,8 @@
             justify-content: center;
             background-color: $primary_color;
             @include border-radius(20px);
-            @include transform(scaleY(1));
-            transform-origin: bottom;
+            max-height: 96px;
+            transform-origin: top;
             @include transition();
             i {
                 font-size: 47px;
@@ -2499,18 +2499,18 @@
         }
         .box-description {
             margin-top: 0px;
-            @include transform(scaleY(0));
+            max-height: 0;
             @include transition();
             transform-origin: bottom;
         }
         .box-inner:hover {
             .box-icon {
                 margin-bottom: 0px;
-                @include transform(scaleY(0));
+                max-height: 0px;
             }
             .box-description {
                 margin-top: 19px;
-                @include transform(scaleY(1));
+                max-height: 100%;
             }
         }
     }
