@@ -2452,7 +2452,7 @@
     }
     &.layout-4 {
         .box-icon {
-            margin-bottom: 15px;
+            margin-bottom: 30px;
             width: 96px;
             height: 96px;
             @include d-flex();
@@ -2474,11 +2474,12 @@
         }
         .box-title {
             font-family: $heading_font_family;
-            font-size: 30px;
-            line-height: 2;
-            letter-spacing: 0.05em;
+            font-size: 25px;
+            letter-spacing: 0.03em;
+            text-transform: none;
             color: $heading_color;
             position: relative;
+            text-transform: none;
             margin-bottom: 7px;
         }
         .pxl-divider {
@@ -2493,8 +2494,8 @@
                 background-color: $secondary_color;
             }
         }
-        .box-button {
-            margin-top: 33px;
+        .box-description {
+            margin-top: 19px;
         }
         .box-inner:hover {
             .box-icon svg,
