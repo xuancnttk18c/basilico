@@ -65,8 +65,8 @@ pxl_add_custom_widget(
                             'label'            => esc_html__( 'Icon', 'basilico' ),
                             'type'             => 'icons',
                             'default'          => [
-                                'library' => 'fas',
-                                'value'   => 'fa-pizza-slice'
+                                'library' => 'fa-solid',
+                                'value'   => 'fas fa-pizza-slice'
                             ],
                             'condition' => [
                                 'layout' => '6'
@@ -121,8 +121,8 @@ pxl_add_custom_widget(
                                     'label'            => esc_html__( 'Icon', 'basilico' ),
                                     'type'             => 'icons',
                                     'default'          => [
-                                        'library' => 'fas',
-                                        'value'   => 'fa-pizza-slice'
+                                        'library' => 'fa-solid',
+                                        'value'   => 'fas fa-pizza-slice'
                                     ],
                                     'description' => esc_html__('Use for layout 7', 'basilico'),
                                 ),
