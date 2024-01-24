@@ -124,9 +124,7 @@ pxl_add_custom_widget(
                                         'library' => 'fas',
                                         'value'   => 'fa-pizza-slice'
                                     ],
-                                    'condition' => [
-                                        'layout' => '7'
-                                    ]
+                                    'description' => esc_html__('Use for layout 7', 'basilico'),
                                 ),
                                 array(
                                     'name' => 'tab_title',

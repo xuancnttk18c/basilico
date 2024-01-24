@@ -3715,6 +3715,57 @@
             }
         }
     }
+    &.layout-7 {
+        border-radius: inherit;
+        .tabs-title {
+            @include d-flex();
+            align-items: center;
+            margin-bottom: 4px;
+            .title-wrap {
+                @include d-inline-flex();
+                gap: 62px;
+                @media (max-width: $sm_max) {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+            }
+        }
+        .tab-title {
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 45px;
+            color: $heading_color;
+            text-transform: uppercase;
+            display: inline-flex;
+            letter-spacing: 0.1em;
+            flex-grow: 1;
+            cursor: pointer;
+            @include transition(all 300ms linear 0ms);
+            .title-icon {
+                opacity: 0;
+                line-height: 1;
+            }
+            &.active {
+                color: $primary_color;
+                .title-icon {
+                    opacity: 1;
+                }
+            }
+            &:last-child {
+                border-right: none;
+                @media (max-width: $sm_max) {
+                    border-bottom-color: $divider_color;
+                }
+            }
+        }
+        .tabs-content {
+            position: relative;
+            padding: 54px 0px 0px;
+            @media (max-width: $xs_max) {
+                padding: 30px 0 0 0;
+            }
+        }
+    }
 }
 
 //* Circle Tab
