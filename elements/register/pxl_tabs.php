@@ -43,7 +43,11 @@ pxl_add_custom_widget(
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
                                 ],
                                 '6' => [
-                                    'label' => esc_html__( 'Layout 5', 'basilico' ),
+                                    'label' => esc_html__( 'Layout 6', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
+                                ],
+                                '7' => [
+                                    'label' => esc_html__( 'Layout 7', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
                                 ],
                             ],
@@ -112,6 +116,18 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Tabs List', 'basilico'),
                             'type' => \Elementor\Controls_Manager::REPEATER,
                             'controls' => array(
+                                array(
+                                    'name'             => 'tab_icon',
+                                    'label'            => esc_html__( 'Icon', 'basilico' ),
+                                    'type'             => 'icons',
+                                    'default'          => [
+                                        'library' => 'fas',
+                                        'value'   => 'fa-pizza-slice'
+                                    ],
+                                    'condition' => [
+                                        'layout' => '7'
+                                    ]
+                                ),
                                 array(
                                     'name' => 'tab_title',
                                     'label' => esc_html__('Title', 'basilico'),
