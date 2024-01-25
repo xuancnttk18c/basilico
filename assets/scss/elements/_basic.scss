@@ -3724,7 +3724,8 @@
             .title-wrap {
                 width: 100%;
                 @include d-flex();
-                gap: 30px;
+                justify-content: space-between;
+                border-bottom: 1px solid rgba(200, 200, 200, 0.7);
                 @media (max-width: $sm_max) {
                     flex-direction: column;
                     gap: 12px;
@@ -3747,10 +3748,10 @@
                 &:after {
                     content: '';
                     position: absolute;
-                    bottom: 0;
+                    bottom: -1px;
                     left: 0;
                     right: 0;
-                    height: 2px;
+                    height: 4px;
                     background: $primary_color;
                     border-radius: 2px;
                 }
