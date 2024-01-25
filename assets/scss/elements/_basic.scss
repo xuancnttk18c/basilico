@@ -3745,6 +3745,7 @@
             @include transition(all 300ms linear 0ms);
             span {
                 position: relative;
+                padding: 0 12px;
                 &:after {
                     content: '';
                     position: absolute;
@@ -3754,6 +3755,8 @@
                     height: 4px;
                     background: $primary_color;
                     border-radius: 2px;
+                    opacity: 0;
+                    transform: scaleX(0);
                 }
             }
             .title-icon {
@@ -3762,6 +3765,12 @@
                 }
                 svg {
                     height: 60px;
+                }
+            }
+            &.active {
+                span:after {
+                    opacity: 1;
+                    transform: scaleX(0);
                 }
             }
         }
