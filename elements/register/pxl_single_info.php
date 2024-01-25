@@ -15,6 +15,16 @@ pxl_add_custom_widget(
                     'tab'      => 'content',
                     'controls' => array(
                         array(
+                            'name' => 'el_style',
+                            'label' => esc_html__('Style', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'options' => [
+                                'style-1' => esc_html__('Style 1', 'basilico'),
+                                'style-2' => esc_html__('Style 2', 'basilico'),
+                            ],
+                            'default' => 'style-1'
+                        ),
+                        array(
                             'name' => 'el_title',
                             'label' => esc_html__('Element Title', 'basilico'),
                             'type' => \Elementor\Controls_Manager::TEXTAREA,

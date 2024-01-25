@@ -8,7 +8,7 @@ extract($settings);
 $html_id = pxl_get_element_id($settings);
 $info_items = $widget->get_settings('single_info_items');
 if(!empty($info_items)) : ?>
-    <div id="<?php echo esc_attr($html_id); ?>" class="pxl-single-info e-sidebar-widget">
+    <div id="<?php echo esc_attr($html_id); ?>" class="pxl-single-info e-sidebar-widget <?php echo esc_attr($el_style); ?>">
         <?php if(!empty($el_title)) : ?>
             <h3 class="widget-title"><?php echo esc_attr($el_title); ?></h3>
         <?php endif; ?>
