@@ -528,7 +528,7 @@
                     .sub-menu {
                         border-radius: 25px;
                         background-color: $primary_color;
-                        li:not(:last-child) {
+                        li + li {
                             a {border-bottom: 1px dashed #fff;}
                         }
                         a {
