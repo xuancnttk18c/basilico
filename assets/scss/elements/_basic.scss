@@ -528,10 +528,8 @@
                     .sub-menu {
                         border-radius: 25px;
                         background-color: $primary_color;
-                        > li + li {
-                            a {
-                                border-top: 1px dashed #fff;
-                            }
+                        > li:not(:last-child) a {
+                            border-bottom: 1px dashed #fff;
                         }
                         a {
                             text-transform: capitalize;
