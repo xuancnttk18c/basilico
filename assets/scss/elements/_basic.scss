@@ -529,7 +529,8 @@
                         border-radius: 25px;
                         background-color: $primary_color;
                         > li:not(:last-child) > a {
-                            border-bottom: 1px dashed #fff;
+                            border-bottom: 1px dashed;
+                            border-color: rgba(255, 255, 255, 0.45);
                         }
                         a {
                             text-transform: capitalize;
