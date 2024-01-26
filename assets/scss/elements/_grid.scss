@@ -1604,9 +1604,11 @@
                 z-index: 2;
             }
             .item-title {
-                font-size: 20px;
-                line-height: 1.5;
+                font-size: 25px;
+                font-weight: 600;
+                line-height: calc(30 / 25);
                 letter-spacing: 0.02em;
+                text-transform: capitalize;
                 color: #fff;
                 margin-bottom: 0;
                 a {
@@ -1634,8 +1636,9 @@
             .item-readmore {
                 .bt-more-plus {
                     @include border-radius(8px);
-                    background-color: #fff;
+                    background-color: $secondary_color;
                     i {
+                        font-size: 22px;
                         color: #fff;
                     }
                 }
