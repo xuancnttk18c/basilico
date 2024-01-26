@@ -105,7 +105,7 @@
             }
         }
         &.style-3 {
-            margin-bottom: 60px;
+            margin-bottom: 78px;
             gap: 50px;
             @media (max-width: $sm_max) {
                 margin-bottom: 40px;
@@ -117,6 +117,7 @@
                 line-height: 45px;
                 color: $heading_color;
                 letter-spacing: 0.1em;
+                padding: 0;
                 @include transition();
                 &:after {
                     content: "";
@@ -129,7 +130,7 @@
                     right: 0;
                     transform: scaleX(0);
                     transform-origin: center;
-                    @include transition(all 0.3s linear);
+                    @include transition(all 0.3s ease-in-out);
                     @include border-radius(2px);
                 }
                 &.active,
