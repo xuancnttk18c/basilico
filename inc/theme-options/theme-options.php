@@ -367,6 +367,7 @@ Redux::setSection($opt_name, array(
             'options'  => array(
                 'style-df' => get_template_directory_uri() . '/assets/images/tabs_layout/t1.jpg',
                 'style-2'  => get_template_directory_uri() . '/assets/images/tabs_layout/t2.jpg',
+                'style-3'  => get_template_directory_uri() . '/assets/images/tabs_layout/t3.jpg',
             ),
             'default' => 'style-df'
         )
