@@ -104,6 +104,59 @@
                 }
             }
         }
+        &.style-3 {
+            margin-bottom: 60px;
+            gap: 20px;
+            @media (max-width: $sm_max) {
+                margin-bottom: 40px;
+            }
+            .filter-item {
+                font-family: $heading_font_family;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 45px;
+                color: $heading_color;
+                letter-spacing: 0.1em;
+                @include transition();
+                &:after {
+                    content: "";
+                    display: block;
+                    height: 4px;
+                    background-color: $secondary_color;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0;
+                    right: 0;
+                    transform: scaleX(0);
+                    transform-origin: center;
+                    @include transition(all 0.3s linear);
+                    @include border-radius(2px);
+                }
+                &.active,
+                &:hover {
+                    color: $primary_color;
+                    &:after {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+            &.start {
+                .filter-item:first-child {
+                    padding-left: 0 !important;
+                    &:after {
+                        left: 0 !important;
+                    }
+                }
+            }
+            &.end {
+                .filter-item:last-child {
+                    padding-right: 0 !important;
+                    &:after {
+                        right: 0 !important;
+                    }
+                }
+            }
+        }
     }
     .grid-sizer {
         visibility: hidden;
