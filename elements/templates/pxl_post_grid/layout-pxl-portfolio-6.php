@@ -122,7 +122,7 @@ if( count($posts) <= 0){
         $icon_pos = ( !empty($settings['loadmore_icon']) && !empty($settings['icon_align'])) ? $settings['icon_align'] : '';
         ?>
         <div class="pxl-load-more d-flex" data-loadmore="<?php echo esc_attr(json_encode($load_more)); ?>">
-            <span class="btn btn-grid-loadmore btn-outline <?php echo esc_attr($icon_pos)?>">
+            <span class="btn btn-grid-loadmore btn-additional-6 <?php echo esc_attr($icon_pos)?>">
                 <?php
                 if(!empty($settings['loadmore_icon']))
                     \Elementor\Icons_Manager::render_icon( $settings['loadmore_icon'], [ 'aria-hidden' => 'true', 'class' => 'btn-icon '.$icon_pos ], 'span' );
