@@ -1241,7 +1241,8 @@
 /* Pxl Portfolio Grid */
 .pxl-portfolio-grid {
     &.layout-pxl-portfolio-1,
-    &.layout-pxl-portfolio-3 {
+    &.layout-pxl-portfolio-3,
+    &.layout-pxl-portfolio-6 {
         .grid-item-inner {
             .item-featured {
                 position: relative;
@@ -1574,6 +1575,54 @@
                 letter-spacing: 0;
                 color: #e0e3e5;
                 max-width: 253px;
+                margin: 0 auto;
+            }
+        }
+    }
+    &.layout-pxl-portfolio-6 {
+        .grid-item-inner {
+            .item-featured {
+                @include border-radius(20px);
+            }
+            .item-content {
+                background-color: $primary_color;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 30px;
+                    right: 30px;
+                    top: 30px;
+                    bottom: 30px;
+                    @include border-radius(20px);
+                }
+            }
+            .content-inner {
+                position: relative;
+                z-index: 2;
+            }
+            .item-title {
+                font-size: 20px;
+                line-height: 1.5;
+                letter-spacing: 0.02em;
+                color: #fff;
+                margin-bottom: 0;
+                a:hover {
+                    color: $secondary_color;
+                }
+            }
+            .pxl-divider {
+                width: 46px;
+                height: 4px;
+                @include border-radius(2px);
+                &:before {
+                    width: 100%;
+                    height: 100%;
+                    background-color: $secondary_color;
+                }
+            }
+            .item-excerpt {
+                letter-spacing: 0;
+                color: #fff;
                 margin: 0 auto;
             }
         }
