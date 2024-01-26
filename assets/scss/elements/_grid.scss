@@ -49,58 +49,58 @@
                 }
             }
         }
-    }
-    &.style-2 {
-        margin-bottom: 59px;
-        gap: 20px;
-        @media (max-width: $sm_max) {
-            margin-bottom: 40px;
-        }
-        .filter-item {
-            font-family: $body_font_family;
-            font-size: 13px;
-            font-weight: 500;
-            line-height: 40px;
-            color: $heading_color;
-            letter-spacing: 0.1em;
-            padding: 0 28px;
-            border: 1px solid $primary_color;
-            @include transition();
-            &:after {
-                content: "";
-                display: block;
-                height: 1px;
-                background-color: $primary_color;
-                position: absolute;
-                bottom: -9px;
-                left: 0;
-                right: 0;
-                transform: scaleX(0);
-                transform-origin: center;
-                @include transition(all 0.3s linear);
+        &.style-2 {
+            margin-bottom: 59px;
+            gap: 20px;
+            @media (max-width: $sm_max) {
+                margin-bottom: 40px;
             }
-            &.active,
-            &:hover {
-                background-color: $primary_color;
-                color: #fff;
+            .filter-item {
+                font-family: $body_font_family;
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 40px;
+                color: $heading_color;
+                letter-spacing: 0.1em;
+                padding: 0 28px;
+                border: 1px solid $primary_color;
+                @include transition();
                 &:after {
-                    transform: scaleX(1);
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    background-color: $primary_color;
+                    position: absolute;
+                    bottom: -9px;
+                    left: 0;
+                    right: 0;
+                    transform: scaleX(0);
+                    transform-origin: center;
+                    @include transition(all 0.3s linear);
+                }
+                &.active,
+                &:hover {
+                    background-color: $primary_color;
+                    color: #fff;
+                    &:after {
+                        transform: scaleX(1);
+                    }
                 }
             }
-        }
-        &.start {
-            .filter-item:first-child {
-                padding-left: 0 !important;
-                &:after {
-                    left: 0 !important;
+            &.start {
+                .filter-item:first-child {
+                    padding-left: 0 !important;
+                    &:after {
+                        left: 0 !important;
+                    }
                 }
             }
-        }
-        &.end {
-            .filter-item:last-child {
-                padding-right: 0 !important;
-                &:after {
-                    right: 0 !important;
+            &.end {
+                .filter-item:last-child {
+                    padding-right: 0 !important;
+                    &:after {
+                        right: 0 !important;
+                    }
                 }
             }
         }
