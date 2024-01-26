@@ -1613,7 +1613,7 @@
                 margin-bottom: 0;
                 a {
                     color: #fff;
-                    @include transtion();
+                    @include transition();
                     &:hover {
                         color: $secondary_color;
                     }
