@@ -1583,8 +1583,11 @@
         .grid-item-inner {
             .item-featured {
                 @include border-radius(20px);
+                overflow: hidden;
             }
             .item-content {
+                @include border-radius(20px);
+                overflow: hidden;
                 background-color: $primary_color;
                 &:after {
                     content: '';
@@ -1606,8 +1609,11 @@
                 letter-spacing: 0.02em;
                 color: #fff;
                 margin-bottom: 0;
-                a:hover {
-                    color: $secondary_color;
+                a {
+                    color: #fff;
+                    &:hover {
+                        color: $secondary_color;
+                    }
                 }
             }
             .pxl-divider {
@@ -1624,6 +1630,15 @@
                 letter-spacing: 0;
                 color: #fff;
                 margin: 0 auto;
+            }
+            .item-readmore {
+                .btn-more-plus {
+                    @include border-radius(8px);
+                    background-color: #fff;
+                    i {
+                        color: #fff;
+                    }
+                }
             }
         }
     }
