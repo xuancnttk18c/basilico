@@ -1650,6 +1650,11 @@
         }
         .btn-grid-loadmore {
             padding: 4px 32.75px;
+            .pxl-btn-icon {
+                display: flex;
+                right: 15px;
+                margin-top: -7px;
+            }
         }
     }
 }
