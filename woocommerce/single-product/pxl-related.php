@@ -3,11 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-global $product;
-if( ! is_a( $product, 'WC_Product' ) ){
-    $product = wc_get_product(get_the_id());
-}
-
 woocommerce_related_products( array(
     'posts_per_page' => 4,
     'columns'        => 4,
