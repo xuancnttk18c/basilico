@@ -232,10 +232,10 @@ function basilico_variable_add_to_cart(){
 	$variations_json = wp_json_encode( $available_variations );
 	$variations_attr = function_exists( 'wc_esc_json' ) ? wc_esc_json( $variations_json ) : _wp_specialchars( $variations_json, ENT_QUOTES, 'UTF-8', true );
 
-	$theme_style = basilico()->get_theme_opt('theme_style', 'default');
-	switch ($theme_style) {
-		case 'pxl-luxury':
-		$single_btn_cls = 'pxl-btn btn-outline single_add_to_cart_button button alt';
+	$shop_style = basilico()->get_theme_opt('shop_style', 'default');
+	switch ($shop_style) {
+		case 'wooshop-style-2':
+		$single_btn_cls = 'pxl-btn btn-additional-3 single_add_to_cart_button button alt';
 		break;
 		default:
 		$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt';
@@ -327,10 +327,10 @@ function basilico_external_add_to_cart(){
 	$product_url = $product->add_to_cart_url();
 	$button_text = $product->single_add_to_cart_text();
 
-	$theme_style = basilico()->get_theme_opt('theme_style', 'default');
-	switch ($theme_style) {
-		case 'pxl-luxury':
-		$single_btn_cls = 'pxl-btn btn-outline single_add_to_cart_button button alt';
+	$shop_style = basilico()->get_theme_opt('shop_style', 'default');
+	switch ($shop_style) {
+		case 'wooshop-style-2':
+		$single_btn_cls = 'pxl-btn btn-additional-3 single_add_to_cart_button button alt';
 		break;
 		default:
 		$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt';
@@ -359,10 +359,10 @@ function basilico_grouped_add_to_cart(){
 	global $product, $post;
 	$products = array_filter( array_map( 'wc_get_product', $product->get_children() ), 'wc_products_array_filter_visible_grouped' );
 
-	$theme_style = basilico()->get_theme_opt('theme_style', 'default');
-	switch ($theme_style) {
-		case 'pxl-luxury':
-		$single_btn_cls = 'pxl-btn btn-outline single_add_to_cart_button button alt';
+	$shop_style = basilico()->get_theme_opt('shop_style', 'default');
+	switch ($shop_style) {
+		case 'wooshop-style-2':
+		$single_btn_cls = 'pxl-btn btn-additional-3 single_add_to_cart_button button alt';
 		break;
 		default:
 		$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt';
@@ -500,10 +500,10 @@ function basilico_simple_add_to_cart(){
                 <div class="pxl-addtocart-btn-wrap">
                     <div class="pxl-atc-btn">
                     	<?php
-                    	$theme_style = basilico()->get_theme_opt('theme_style', 'default');
-                    	switch ($theme_style) {
-                    		case 'pxl-luxury':
-                    		$single_btn_cls = 'pxl-btn btn-outline single_add_to_cart_button button alt';
+                    	$shop_style = basilico()->get_theme_opt('shop_style', 'default');
+                    	switch ($shop_style) {
+                    		case 'wooshop-style-2':
+                    		$single_btn_cls = 'pxl-btn btn-additional-3 single_add_to_cart_button button alt';
                     		break;
                     		default:
                     		$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt';
