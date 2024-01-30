@@ -82,6 +82,15 @@
             background-color: $additional01_color;
         }
     }
+    &.widget_mc4wp_form_widget {
+        button {
+            margin-top: 20px;
+            width: 100%;
+            i {
+                display: none;
+            }
+        }
+    }
 }
 #pxl-sidebar-area .mc4wp-form .mailchimp-form {
     button[type="submit"] {
