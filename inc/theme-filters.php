@@ -241,7 +241,7 @@ function basilico_body_classes( $classes )
     $header_sticky_layout = (int)basilico()->get_opt('header_sticky_layout');
     $footer_fixed = basilico()->get_opt('footer_fixed', '0');
 
-    $theme_style = basilico()->get_theme_opt('theme_style', 'default');
+    $shop_style = basilico()->get_theme_opt('shop_style', 'default');
 
     if (class_exists('ReduxFramework')) {
         $classes[] = 'redux-page';
@@ -256,7 +256,7 @@ function basilico_body_classes( $classes )
     if(get_option( 'woosw_page_id', 0) == get_the_ID())
         $classes[] = 'pxl-wishlist-page';
 
-    //if ($theme_style != 'default') $classes[] = $theme_style;
+    if ($shop_style != 'default') $classes[] = $shop_style;
     return $classes;
 }
 

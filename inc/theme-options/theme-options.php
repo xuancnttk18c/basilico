@@ -126,17 +126,6 @@ Redux::setSection($opt_name, array(
     'icon'   => 'el-icon-home',
     'fields' => array(
         array(
-            'id'          => 'theme_style',
-            'type'        => 'select',
-            'title'       => esc_html__('Theme Style', 'basilico'),
-            'options'  => array(
-                'default' => esc_html__('Default', 'basilico'),
-                'pxl-luxury' => esc_html__('Luxury', 'basilico'),
-                'pxl-pizza' => esc_html__('Pizza', 'basilico'),
-            ),
-            'default'     => 'default',
-        ),
-        array(
             'id'       => 'favicon',
             'type'     => 'media',
             'title'    => esc_html__('Favicon', 'basilico'),
@@ -751,6 +740,17 @@ if(class_exists('Woocommerce')) {
         'fields'     => array_merge(
             basilico_sidebar_pos_opts([ 'prefix' => 'shop_', 'default_value' => 'left']),
             array(
+                array(
+                    'id'          => 'shop_style',
+                    'type'        => 'select',
+                    'title'       => esc_html__('Shop Style', 'basilico'),
+                    'options'  => array(
+                        'default' => esc_html__('Default', 'basilico'),
+                        'style-2' => esc_html__('Style 2', 'basilico'),
+                        'style-3' => esc_html__('Style 3', 'basilico'),
+                    ),
+                    'default'     => 'default',
+                ),
                 array(
                     'id'       => 'shop_display_type',
                     'type'     => 'button_set',
