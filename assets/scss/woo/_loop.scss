@@ -546,6 +546,13 @@ select.orderby{
 			}
 			&:before {
 				background-color: $primary_color;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				transform-origin: bottom right;
+				@include transform(scale(0));
 			}
 			&:after {
                 left: auto;
