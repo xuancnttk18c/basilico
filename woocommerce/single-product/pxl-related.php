@@ -3,12 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-woocommerce_related_products( array(
-    'posts_per_page' => 4,
-    'columns'        => 4,
-    'orderby'        => 'rand'
-) );
-
 if ( $related_products ) : ?>
 	<section class="related products">
 		<?php
