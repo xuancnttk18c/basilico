@@ -10,7 +10,7 @@ $arrows = $widget->get_setting('arrows', 'false');
 $dots = $widget->get_setting('dots', 'false');
 $quote_icon_type = $widget->get_setting('quote_icon_type', 'text');
 
-$pagination_style = basilico()->get_setting('swiper_pagination_style', 'style-df');
+$pagination_style = basilico()->get_theme_opt('swiper_pagination_style', 'style-df');
 
 $opts = [
     'slide_direction'               => 'vertical',
