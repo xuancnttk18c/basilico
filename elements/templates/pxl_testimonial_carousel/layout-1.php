@@ -10,6 +10,8 @@ $arrows = $widget->get_setting('arrows', 'false');
 $dots = $widget->get_setting('dots', 'false');
 $quote_icon_type = $widget->get_setting('quote_icon_type', 'text');
 
+$pagination_style = basilico()->get_setting('swiper_pagination_style', 'style-df');
+
 $opts = [
     'slide_direction'               => 'horizontal',
     'slide_percolumn'               => '1',
@@ -112,7 +114,7 @@ $widget->add_render_attribute('carousel', [
                 </div>
             <?php endif; ?>
             <?php if ($dots !== 'false') : ?>
-                <div class="pxl-swiper-dots"></div>
+                <div class="pxl-swiper-dots <?php echo esc_attr($pagination_style); ?>"></div>
             <?php endif; ?>
         </div>
     </div>

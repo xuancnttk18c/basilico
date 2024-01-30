@@ -359,6 +359,16 @@ Redux::setSection($opt_name, array(
                 'style-3'  => get_template_directory_uri() . '/assets/images/tabs_layout/t3.jpg',
             ),
             'default' => 'style-df'
+        ),
+        array(
+            'id'      => 'swiper_pagination_style',
+            'type'    => 'image_select',
+            'title'   => esc_html__('Swiper Pagination Style', 'basilico'),
+            'options'  => array(
+                'style-df' => get_template_directory_uri() . '/assets/images/tabs_layout/t1.jpg',
+                'style-2'  => get_template_directory_uri() . '/assets/images/tabs_layout/t2.jpg',
+            ),
+            'default' => 'style-df'
         )
     )
 ));

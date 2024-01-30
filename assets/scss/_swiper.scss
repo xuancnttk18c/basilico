@@ -284,13 +284,10 @@ $slider-outer-space: 0;
     }
 }
 
-.pxl-luxury {
-    .pxl-swiper-dots,
-    .slick-dots {
-        .pxl-swiper-pagination-bullet {
-            &:after {
-                border-color: rgba($primary_color_rgb, 0.4);
-            }
+.pxl-swiper-dots.style-2 {
+    .pxl-swiper-pagination-bullet {
+        &:after {
+            border-color: rgba($primary_color_rgb, 0.4);
         }
     }
 }
