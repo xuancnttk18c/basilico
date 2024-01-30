@@ -234,7 +234,7 @@ function basilico_variable_add_to_cart(){
 
 	$shop_style = basilico()->get_theme_opt('shop_style', 'default');
 	switch ($shop_style) {
-		case 'wooshop-style-2':
+		case 'style-2':
 		$single_btn_cls = 'pxl-btn btn-additional-3 single_add_to_cart_button button alt';
 		break;
 		default:
@@ -329,7 +329,7 @@ function basilico_external_add_to_cart(){
 
 	$shop_style = basilico()->get_theme_opt('shop_style', 'default');
 	switch ($shop_style) {
-		case 'wooshop-style-2':
+		case 'style-2':
 		$single_btn_cls = 'pxl-btn btn-additional-3 single_add_to_cart_button button alt';
 		break;
 		default:
@@ -361,7 +361,7 @@ function basilico_grouped_add_to_cart(){
 
 	$shop_style = basilico()->get_theme_opt('shop_style', 'default');
 	switch ($shop_style) {
-		case 'wooshop-style-2':
+		case 'style-2':
 		$single_btn_cls = 'pxl-btn btn-additional-3 single_add_to_cart_button button alt';
 		break;
 		default:
@@ -502,7 +502,7 @@ function basilico_simple_add_to_cart(){
                     	<?php
                     	$shop_style = basilico()->get_theme_opt('shop_style', 'default');
                     	switch ($shop_style) {
-                    		case 'wooshop-style-2':
+                    		case 'style-2':
                     		$single_btn_cls = 'pxl-btn btn-additional-3 single_add_to_cart_button button alt';
                     		break;
                     		default:
