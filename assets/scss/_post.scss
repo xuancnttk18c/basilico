@@ -16,18 +16,20 @@
 	.content-inner {
 		padding-top: 27px;
 	}
-	&.pxl-luxury {
-		.content-inner {
-			padding-top: 22px;
-		}
-		.post-content {
-			padding-bottom: 53px;
-		}
+}
+
+.single-layout-1 {
+	.content-inner {
+		padding-top: 22px;
 	}
-	&.pxl-pizza {
-		.post-content {
-			padding-bottom: 9px;
-		}	
+	.post-content {
+		padding-bottom: 53px;
+	}
+}
+
+.single-layout-2 {
+	.post-content {
+		padding-bottom: 9px;
 	}
 }
 
@@ -481,7 +483,8 @@
 	}
 }
 
-.single-layout-1 .social-share {
+.single-layout-1 .social-share,
+.wooshop-style-2 .social-share {
 	.pxl-icon {
 		border: 1px solid rgba($primary_color_rgb, 0.7);
 		color: #fff;
