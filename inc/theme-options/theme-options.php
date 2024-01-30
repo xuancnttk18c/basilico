@@ -365,8 +365,8 @@ Redux::setSection($opt_name, array(
             'type'    => 'image_select',
             'title'   => esc_html__('Swiper Pagination Style', 'basilico'),
             'options'  => array(
-                'style-df' => get_template_directory_uri() . '/assets/images/tabs_layout/t1.jpg',
-                'style-2'  => get_template_directory_uri() . '/assets/images/tabs_layout/t2.jpg',
+                'style-df' => get_template_directory_uri() . '/assets/images/swiper_dots_layout/sw1.jpg',
+                'style-2'  => get_template_directory_uri() . '/assets/images/swiper_dots_layout/sw2.jpg',
             ),
             'default' => 'style-df'
         )
