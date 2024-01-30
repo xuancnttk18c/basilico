@@ -553,6 +553,7 @@ select.orderby{
 				bottom: 0;
 				transform-origin: bottom right;
 				@include transform(scale(0));
+				@include transition(all 300ms ease);
 			}
 			&:after {
                 left: auto;
