@@ -251,7 +251,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'border-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn:before' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-button-wrapper .btn::before' => 'background-color: {{VALUE}};',
                                 ],
                                 'condition' => [
                                     'style!' => ['btn-gradient'],
