@@ -238,7 +238,7 @@ if (!class_exists('Basilico_Blog')) {
             $post_tags_on = basilico()->get_theme_opt('post_tag', false);
             
             if ($post_author_on || $post_date_on || $post_categories_on || $post_comments_on) : ?>
-                <div class="post-metas <?php echo esc_attr($theme_style) == 'pxl-luxury' ? 'hover-underline' : ''; ?>">
+                <div class="post-metas">
                     <div class="meta-inner d-flex align-items-center">
                         <?php if ($post_author_on) : ?>
                             <span class="post-author d-flex align-items-center">
@@ -248,11 +248,7 @@ if (!class_exists('Basilico_Blog')) {
                         <?php if ($post_date_on) : ?>
                             <span class="post-date d-flex align-items-center">
                                 <span>
-                                    <?php if ($theme_style == 'pxl-luxury'):
-                                        echo get_the_date('', get_the_ID()) . esc_html(' at ', 'basilico') . get_the_time('', get_the_ID());
-                                    else :
-                                        echo get_the_date('', get_the_ID());
-                                    endif; ?>
+                                    <?php echo get_the_date('', get_the_ID()); ?>
                                 </span>
                             </span>
                         <?php endif; ?>
