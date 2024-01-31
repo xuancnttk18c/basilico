@@ -530,6 +530,9 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-swiper-dots, {{WRAPPER}} .slick-dots' => 'margin-top: {{VALUE}}px;',
                                 ],
+                                'condition' => [
+                                    'dots' => "true",
+                                ],
                             ),
                             array(
                                 'name' => 'dots_color',

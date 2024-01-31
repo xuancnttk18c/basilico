@@ -284,8 +284,7 @@ $slider-outer-space: 0;
     }
 }
 
-.pxl-swiper-dots.style-2,
-.slick-dots {
+.pxl-swiper-dots.style-2 {
     .pxl-swiper-pagination-bullet {
         &:before {
             background-color: $primary_color;
