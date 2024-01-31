@@ -142,22 +142,7 @@ pxl_add_custom_widget(
                     'label' => esc_html__('Carousel Settings', 'basilico' ),
                     'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
                     'controls' => array_merge(
-                        basilico_carousel_column_settings(),
                         array( 
-                            // array(
-                            //     'name' => 'slides_to_scroll',
-                            //     'label' => esc_html__('Slides to scroll', 'basilico' ),
-                            //     'type' => \Elementor\Controls_Manager::SELECT,
-                            //     'default' => '1',
-                            //     'options' => [
-                            //         '1' => '1',
-                            //         '2' => '2',
-                            //         '3' => '3',
-                            //         '4' => '4',
-                            //         '5' => '5',
-                            //         '6' => '6',
-                            //     ],
-                            // ),
                             array(
                                 'name' => 'arrows',
                                 'label' => esc_html__('Show Arrows', 'basilico'),
