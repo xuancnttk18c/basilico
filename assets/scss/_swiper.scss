@@ -294,3 +294,12 @@ $slider-outer-space: 0;
         }
     }
 }
+
+.pxl-swiper-pagination-bullet.style-2 {
+    &:before {
+        background-color: $primary_color;
+    }
+    &:after {
+        border-color: rgba($primary_color_rgb, 0.75);
+    }
+}
