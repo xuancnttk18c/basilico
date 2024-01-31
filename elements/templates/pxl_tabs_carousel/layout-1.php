@@ -12,6 +12,7 @@ $widget->add_render_attribute('opts', [
 ]);
 $arrows = $widget->get_setting("arrows", "false");
 $arrows_style = $widget->get_setting("arrows_style", "style-df");
+$dots_style = basilico()->get_theme_opt('swiper_pagination_style', 'style-df');
 extract($settings);
 $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
 ?>
