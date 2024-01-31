@@ -7,11 +7,13 @@ $settings = array_merge($default_settings, $settings);
 $widget->add_render_attribute('opts', [
     'data-settings' => wp_json_encode([
         'dots' => $widget->get_setting("dots", "false"),
+        'dots_style' => basilico()->get_theme_opt('swiper_pagination_style', 'style-df'),
         'swipe' => $widget->get_setting("swipe", "false")
     ])
 ]);
 $arrows = $widget->get_setting("arrows", "false");
 $arrows_style = $widget->get_setting("arrows_style", "style-df");
+$dots_style = basilico()->get_theme_opt('swiper_pagination_style', 'style-df');
 extract($settings);
 $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
 ?>
