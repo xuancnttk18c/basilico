@@ -12,7 +12,7 @@ $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'blog', 'content_col'=> '
     <div class="row <?php echo esc_attr($pxl_sidebar['wrap_class']) ?>" >
         <div id="pxl-content-area" class="<?php echo esc_attr($pxl_sidebar['content_class']) ?>">
             <?php if ( have_posts() ): ?>
-            <main id="pxl-content-main" class="pxl-content-main content-archive">
+            <main id="pxl-content-main" class="pxl-content-main content-archive <?php echo esc_attr($archive_style); ?>">
                 <?php
                     while ( have_posts() ) {
                         the_post();
