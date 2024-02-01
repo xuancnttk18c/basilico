@@ -150,8 +150,9 @@ textarea, select,
     outline: none;
     @include border-radius($ff_border_radius);
     @include transition();
-    &::placeholder {
+    @include placeholder() {
         font-size: $input_font_size;
+        font-weight: $input_font_weight;
     }
     &:hover,&:focus,&:active {
         background-color: $ff_background_hover;
