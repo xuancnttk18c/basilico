@@ -14,6 +14,19 @@ function basilico_page_options_register( $metabox ) {
 					'title'  => esc_html__( 'Post Settings', 'basilico' ),
 					'icon'   => 'el el-refresh',
 					'fields' => array_merge(
+                        array(
+                            array(
+                                'id'       => 'single_post_layout',
+                                'type'     => 'select',
+                                'title'    => esc_html__('Select Post Layout', 'basilico'),
+                                'options'  => array(
+                                    '-1'  => esc_html__('Inherit', 'basilico'),
+                                    'layout-1' => esc_html__('Layout 1', 'basilico'),
+                                    'layout-2' => esc_html__('Layout 1', 'basilico'),
+                                ),
+                                'default'  => '-1'
+                            ),
+                        ),
 						basilico_sidebar_pos_opts(['prefix' => 'post_', 'default' => true, 'default_value' => '-1']),
 						basilico_page_title_opts([
 							'default'         => true,

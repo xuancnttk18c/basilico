@@ -436,6 +436,16 @@ Redux::setSection($opt_name, array(
     'fields'     => array_merge(
         array(
             array(
+                'id'       => 'single_post_layout',
+                'type'     => 'select',
+                'title'    => esc_html__('Select Post Layout', 'basilico'),
+                'options'  => array(
+                    'layout-1' => esc_html__('Layout 1', 'basilico'),
+                    'layout-2' => esc_html__('Layout 2', 'basilico'),
+                ),
+                'default'  => 'df'
+            ),
+            array(
                 'id'       => 'single_post_title_layout',
                 'type'     => 'button_set',
                 'title'    => esc_html__('Post title layout', 'basilico'),
