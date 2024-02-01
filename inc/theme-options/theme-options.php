@@ -379,6 +379,19 @@ Redux::setSection($opt_name, array(
     'icon'  => 'el-icon-list',
     'subsection' => true,
     'fields'     => array_merge(
+        array(
+            array(
+                'id'       => 'archive_post_layout',
+                'type'     => 'select',
+                'title'    => esc_html__('Select Post Layout', 'basilico'),
+                'options'  => array(
+                    'layout-1' => esc_html__('Layout 1', 'basilico'),
+                    'layout-2' => esc_html__('Layout 2', 'basilico'),
+                    'layout-3' => esc_html__('Layout 3', 'basilico'),
+                ),
+                'default'  => 'layout-1'
+            ),
+        ),
         basilico_sidebar_pos_opts([ 'prefix' => 'blog_']),
         array(
             array(
