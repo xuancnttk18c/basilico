@@ -6,9 +6,7 @@ get_header();
 
 $theme_post_style = basilico()->get_theme_opt('single_post_layout', 'layout-1');
 $page_post_style  = basilico()->get_page_opt('single_post_layout', '-1');
-
 $post_style = esc_attr($page_post_style) == '-1' ? $theme_post_style : $page_post_style;
-var_dump($post_style);
 
 $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'post', 'content_col' => '8']); // type: blog, post, page, shop, product
 ?>

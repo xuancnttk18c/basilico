@@ -22,7 +22,7 @@ function basilico_page_options_register( $metabox ) {
                                 'options'  => array(
                                     '-1'  => esc_html__('Inherit', 'basilico'),
                                     'layout-1' => esc_html__('Layout 1', 'basilico'),
-                                    'layout-2' => esc_html__('Layout 1', 'basilico'),
+                                    'layout-2' => esc_html__('Layout 2', 'basilico'),
                                 ),
                                 'default'  => '-1'
                             ),
