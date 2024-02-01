@@ -9,13 +9,10 @@
         padding-bottom: 37px;
         border-bottom: 1px solid $divider_color;
     }
-    // a {
-    //     @include multiline-hover-underline($heading_color);
-    // }
 }
 
-.single-layout-2 {
-    .no-sidebar {
+.pxl-content-main.layout-3 {
+    &.no-sidebar {
         .comments-area {
             max-width: 770px;
             margin-left: auto;
@@ -49,13 +46,13 @@
 	}
 }
 
-.single-layout-1 .comments-title,
-.single-layout-1 .comment-reply-title {
+.pxl-content-main.layout-2 .comments-title,
+.pxl-content-main.layout-2 .comment-reply-title {
     letter-spacing: 0.05em;
 }
 
-.single-layout-2 .comments-title,
-.single-layout-2 .comment-reply-title {
+.pxl-content-main.layout-3 .comments-title,
+.pxl-content-main.layout-3 .comment-reply-title {
     font-size: 30px;
     text-transform: capitalize;
     letter-spacing: 0.02em;
@@ -191,7 +188,7 @@
     }
 }
 
-.single-layout-1 .commentlist {
+.pxl-content-main.layout-2 .commentlist {
     .comment-content {
         .comment-title {
             font-family: $heading_font_family;
@@ -208,7 +205,7 @@
     }
 }
 
-.single-layout-2 .commentlist {
+.pxl-content-main.layout-3 .commentlist {
     .comment-avatar {
         img {
             border-color: $secondary_color;
