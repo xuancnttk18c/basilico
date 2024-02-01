@@ -30,8 +30,7 @@ pxl_add_custom_widget(
                                 'btn-additional-4' => esc_html__('Additional Button 04', 'basilico' ),
                                 'btn-additional-5' => esc_html__('Additional Button 05', 'basilico' ),
                                 'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
-                                'btn-additional-7' => esc_html__('Additional Button 06', 'basilico' ),
-                                'btn-additional-8' => esc_html__('Additional Button 06', 'basilico' ),
+                                'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
                             ],
                         ),
                         array(
