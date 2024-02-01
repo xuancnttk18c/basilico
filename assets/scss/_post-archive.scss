@@ -251,8 +251,8 @@
 		font-weight: 400;
 		@include text-truncate-multi-line(30px, 1.33, 2);
 	}
-	.format-quote,
-	.format-link {
+	&.format-quote,
+	&.format-link {
 		position: relative;
 		padding-bottom: 13px;
 		&:after {
@@ -285,13 +285,13 @@
 			}
 		}
 	}
-	.format-quote {
+	&.format-quote {
 		.quote-inner {
 			position: relative;
 			z-index: 1;
 			.quote-icon {
 				font-weight: 700;
-				color: var(--primary-color);
+				color: $primary_color;
 				line-height: 1;
 				margin-top: -3px;
 				margin-bottom: 11px;
@@ -329,7 +329,7 @@
 			}                
 		}
 	}
-	.format-link {
+	&.format-link {
 		.link-inner {
 			position: relative;
 			z-index: 1;
