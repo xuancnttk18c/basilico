@@ -150,12 +150,12 @@
 }
 
 .pxl-content-main.layout-2 .post-metas {
-	color: #fff;
+	color: $heading_color;
 	padding: 20px 0 12px;
 	margin-bottom: 0;
 	text-transform: none;
 	a {
-		color: #fff;
+		color: $heading_color;
 		&:hover {
 			color: $primary_color;
 		}
