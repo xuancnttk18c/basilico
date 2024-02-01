@@ -21,17 +21,23 @@
     }
 }
 
-.pxl-luxury .comments-area {
+.pxl-content-main.layout-2 .comments-area {
     .comment-list-wrap {
         border-bottom: 1px solid $divider_color;
     }
 }
 
-.pxl-pizza .comments-area {
-    max-width: 770px;
-    margin: 62px auto 0;
-    .comment-list-wrap {
-        margin-bottom: 40px;
+.pxl-content-main.layout-4 {
+    .comments-area {
+        margin: 62px auto 0;
+        .comment-list-wrap {
+            margin-bottom: 40px;
+        }
+    }
+    &.no-sidebar {
+        .comments-area {
+            max-width: 770px;
+        }
     }
 }
  
@@ -58,8 +64,8 @@
     letter-spacing: 0.02em;
 }
 
-.pxl-pizza .comments-title,
-.pxl-pizza .comment-reply-title {
+.pxl-content-main.layout-4 .comments-title,
+.pxl-content-main.layout-4 .comment-reply-title {
     font-size: 40px;
     font-weight: 400;
     text-transform: capitalize;
@@ -229,7 +235,7 @@
     }
 }
 
-.pxl-pizza .commentlist {
+.pxl-content-main.layout-4 .commentlist {
     .comment-content {
         .comment-title {
             font-size: 17px;
