@@ -150,7 +150,7 @@ $theme_style = basilico()->get_theme_opt('theme_style', 'default');
                     if ($archive_readmore == '1') {
                     ?>
                         <div class="post-btn-wrap col-sm-6">
-                            <a class="btn-more" href="<?php echo esc_url(get_permalink()); ?>">
+                            <a class="btn-more style-2" href="<?php echo esc_url(get_permalink()); ?>">
                                 <span><?php echo esc_html($archive_readmore_text); ?></span>
                                 <i class="zmdi zmdi-long-arrow-right"></i>
                             </a>
