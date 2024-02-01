@@ -90,7 +90,7 @@
  /* Meta block */
 .post-metas {
 	background-color: $secondary_color;
-	color: #dedede;
+	color: $heading_color;
 	padding: 16px 29px;
 	font-size: 13px;
 	line-height: 1;
@@ -99,7 +99,7 @@
 	text-transform: capitalize;
 	margin-bottom: 26px;
 	a {
-		color: #dedede;
+		color: $heading_color;
 		&:hover {
 			color: $primary_color;
 		}
@@ -251,7 +251,7 @@
 		text-transform: none;
 		margin-bottom: 33px;
 	}
-	.no-sidebar {
+	&.no-sidebar {
 		.post-metas,
 		.post-title {
 			margin-left: auto;
@@ -344,7 +344,7 @@
 			text-transform: none;
 		}
 	}
-	.no-sidebar {
+	&.no-sidebar {
 		.post-tags-share {
 			max-width: 770px;
 			margin-left: auto;
