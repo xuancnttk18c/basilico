@@ -38,7 +38,7 @@
 	position: relative;
 }
 
-.pxl-pizza .post-featured {
+.pxl-content-main.layout-4 .post-featured {
 	border: 1px solid $divider_color;
 	img {
 		max-height: 576px;
@@ -267,7 +267,7 @@
 	}
 }
 
-.pxl-pizza .post-metas {
+.pxl-content-main.layout-4 .post-metas {
 	@include d-flex();
 	justify-content: center;
 	margin-left: auto;
@@ -323,7 +323,7 @@
 }
 
 .pxl-content-main.layout-2 .post-tags-share,
-.pxl-pizza .post-tags-share {
+.pxl-content-main.layout-4 .post-tags-share {
 	border-top: 1px solid $divider_color;
 	border-bottom: 1px solid $divider_color;
 }
@@ -354,7 +354,7 @@
 	}
 }
 
-.pxl-pizza .post-tags-share {
+.pxl-content-main.layout-4 .post-tags-share {
 	max-width: 770px;
 	margin: 0 auto;
 	.label {
@@ -517,7 +517,7 @@
 	}
 }
 
-.pxl-pizza .social-share {
+.pxl-content-main.layout-4 .social-share {
 	.pxl-icon {
 		border: 1px solid $divider_color;
 		color: $heading_color;
