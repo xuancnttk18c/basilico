@@ -443,7 +443,7 @@ Redux::setSection($opt_name, array(
                     'layout-1' => esc_html__('Layout 1', 'basilico'),
                     'layout-2' => esc_html__('Layout 2', 'basilico'),
                 ),
-                'default'  => 'df'
+                'default'  => 'layout-1'
             ),
             array(
                 'id'       => 'single_post_title_layout',
