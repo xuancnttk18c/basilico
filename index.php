@@ -16,7 +16,7 @@ $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'blog', 'content_col'=> '
                 <?php
                     while ( have_posts() ) {
                         the_post();
-                        get_template_part( 'template-parts/content/content', '-'.esc_attr($archive_style));
+                        get_template_part( 'template-parts/content/content', '-'.$archive_style);
                     }
                 ?>
             </main>
