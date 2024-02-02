@@ -297,8 +297,19 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'default' => '',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-color: {{VALUE}};',
-                                    'body.pxl-pizza {{WRAPPER}} .pxl-button-wrapper .btn::before' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-color: {{VALUE}};'
+                                ],
+                                'condition' => [
+                                    'border_type!' => '',
+                                ],
+                            ),
+                            array(
+                                'name' => 'border_color_hover',
+                                'label' => esc_html__( 'Border Color Hover', 'basilico' ),
+                                'type' => \Elementor\Controls_Manager::COLOR,
+                                'default' => '',
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'border-color: {{VALUE}};'
                                 ],
                                 'condition' => [
                                     'border_type!' => '',
