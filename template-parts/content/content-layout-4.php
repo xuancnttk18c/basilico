@@ -46,7 +46,7 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
                 <div class="button-share d-flex align-items-center">
                     <?php if ($archive_readmore == '1') : ?>
                         <div class="post-btn-wrap pxl-button-wrapper col-sm-6">
-                            <a class="btn btn-default" href="<?php echo esc_url(get_permalink()); ?>">
+                            <a class="btn btn-additonal-7" href="<?php echo esc_url(get_permalink()); ?>">
                                 <span><?php echo esc_html($archive_readmore_text); ?></span>
                                 <i class="pxli pxli-arrow-right-solid"></i>
                             </a>
