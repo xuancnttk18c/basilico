@@ -29,12 +29,13 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
         <?php basilico()->blog->get_post_metas_fastfood(); ?>
         <?php
         $custom_post_title = basilico()->get_theme_opt('single_post_title_layout', '0');
+        $post_img = basilico()->get_theme_opt('post_feature_image_on', '1');
         if ($custom_post_title == '1') : ?>
             <h2 class="post-title">
                 <?php echo get_the_title(); ?>
             </h2>
         <?php endif; ?>
-        <?php if (has_post_thumbnail()) : ?>
+        <?php if (has_post_thumbnail() && esc_attr($post_img) == '1') : ?>
             <div class="post-image post-featured">
                 <?php
                 basilico()->blog->get_post_feature();
