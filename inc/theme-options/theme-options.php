@@ -192,15 +192,11 @@ Redux::setSection($opt_name, array(
             'default'     => '#0e1927'
         ),
         array(
-            'id'      => 'link_color',
-            'type'    => 'link_color',
-            'title'   => esc_html__('Link Colors', 'basilico'),
-            'default' => array(
-                'regular' => '',
-                'hover'   => '#e6c9a2',
-                'active'  => '#e6c9a2'
-            ),
-            'output'  => array('a')
+            'id'          => 'additional_color_01',
+            'type'        => 'color',
+            'title'       => esc_html__('Additional Color 01', 'basilico'),
+            'transparent' => false,
+            'default'     => '#fbf5ee'
         ),
         array(
             'id'          => 'gradient_color_01',
@@ -215,61 +211,15 @@ Redux::setSection($opt_name, array(
             ),
         ),
         array(
-            'id'          => 'gradient_color_02',
-            'type'        => 'color_gradient',
-            'title'       => esc_html__('Gradient Color 02', 'basilico'),
-            'transparent' => false,
-            'gradient-angle' => true,
-            'default'  => array(
-                'from' => '#443b7f',
-                'to'   => '#7b7bcf',
-                'gradient-angle' => 180,
+            'id'      => 'link_color',
+            'type'    => 'link_color',
+            'title'   => esc_html__('Link Colors', 'basilico'),
+            'default' => array(
+                'regular' => '',
+                'hover'   => '#e6c9a2',
+                'active'  => '#e6c9a2'
             ),
-        ),
-        array(
-            'id'          => 'additional_color_01',
-            'type'        => 'color',
-            'title'       => esc_html__('Additional Color 01', 'basilico'),
-            'transparent' => false,
-            'default'     => '#fbf5ee'
-        ),
-        array(
-            'id'          => 'additional_color_02',
-            'type'        => 'color',
-            'title'       => esc_html__('Additional Color 02', 'basilico'),
-            'transparent' => false,
-            'default'     => '#6565b7'
-        ),
-        array(
-            'id'          => 'additional_color_03',
-            'type'        => 'color',
-            'title'       => esc_html__('Additional Color 03', 'basilico'),
-            'transparent' => false,
-            'default'     => '#383169'
-        ),
-        array(
-            'id'          => 'additional_color_04',
-            'type'        => 'color',
-            'title'       => esc_html__('Additional Color 04', 'basilico'),
-            'transparent' => false,
-            'default'     => '#5959a6'
-        ),
-        array(
-            'id'          => 'additional_color_05',
-            'type'        => 'color',
-            'title'       => esc_html__('Additional Color 05', 'basilico'),
-            'transparent' => false,
-            'default'     => '#faa952'
-        ),
-        array(
-            'id'          => 'divider_color',
-            'type'        => 'color_rgba',
-            'title'       => esc_html__('Divider Color', 'basilico'),
-            'transparent' => false,
-            'default'     => array(
-                'color'     => '#c8c8c8',
-                'alpha'     => 0.6
-            )
+            'output'  => array('a')
         ),
     )
 ));
