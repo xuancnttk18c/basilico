@@ -255,7 +255,9 @@
 		font-weight: 600;
 		text-align: center;
 		text-transform: none;
-		margin-bottom: 33px;
+		+ .post-image {
+			margin-top: 33px;
+		}
 	}
 	&.no-sidebar {
 		.post-metas,
