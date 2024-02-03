@@ -384,9 +384,6 @@
         }
     }
     &.layout-post-2 {
-        .grid-item {
-            margin-bottom: 20px;
-        }
         .item-featured {
             position: relative;
             .post-image {
@@ -447,7 +444,8 @@
         .posts-pagination {
             padding-top: 55px;
         }
-        .grid-item-inner {
+        .grid-item {
+            margin-bottom: 20px;
             &:hover {
                 .post-image {
                     max-height: 100%;
