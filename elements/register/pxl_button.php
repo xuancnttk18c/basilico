@@ -36,7 +36,7 @@ pxl_add_custom_widget(
                             'name'  => 'is_fullwidth',
                             'label' => esc_html__('Is Fullwidth?', 'basilico'),
                             'type'  => \Elementor\Controls_Manager::CHOOSE,
-                            'return_value' => 'no',
+                            'return_value' => 'yes',
                             'default' => 'no',
                         ),
                         array(
