@@ -23,7 +23,7 @@ if ($link_type == 'page') {
     $widget->add_render_attribute( 'button', 'href', $page_url );
 }
 
-$widget->add_render_attribute( 'button', 'class', 'btn '.$settings['style'].' icon-ps-'.$settings['icon_align'].' '.$is_fullwidth.' ' );
+$widget->add_render_attribute( 'button', 'class', 'btn '.$settings['style'].' icon-ps-'.$settings['icon_align'].' '.$is_fullwidth );
 $html_id = pxl_get_element_id($settings);
 
 ?>
