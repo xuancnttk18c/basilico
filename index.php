@@ -5,8 +5,8 @@
 get_header();
 
 $archive_style = basilico()->get_theme_opt('archive_post_layout', 'layout-1');
-
 $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'blog', 'content_col'=> '8']); // type: blog, post, page, shop, product
+
 ?>
 <div class="container">
     <div class="row <?php echo esc_attr($pxl_sidebar['wrap_class']) ?>" >

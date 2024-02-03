@@ -21,7 +21,6 @@ pxl_add_custom_widget(
                             'options' => [
                                 'btn-default' => esc_html__('Default', 'basilico' ),
                                 'btn-white' => esc_html__('White', 'basilico' ),
-                                'btn-fullwidth' => esc_html__('Full Width', 'basilico' ),
                                 'btn-outline' => esc_html__('Out Line', 'basilico' ),
                                 'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
                                 'btn-additional-1' => esc_html__('Additional Button 01', 'basilico' ),
@@ -32,6 +31,13 @@ pxl_add_custom_widget(
                                 'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
                                 'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
                             ],
+                        ),
+                        array(
+                            'name'  => 'is_fullwidth',
+                            'label' => esc_html__('Is Fullwidth?', 'basilico'),
+                            'type'  => \Elementor\Controls_Manager::CHOOSE,
+                            'return_value' => 'no',
+                            'default' => 'no',
                         ),
                         array(
                             'name' => 'text',
