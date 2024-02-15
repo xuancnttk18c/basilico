@@ -192,18 +192,18 @@ Redux::setSection($opt_name, array(
             'default'     => '#0e1927'
         ),
         array(
-            'id'          => 'divider_color',
-            'type'        => 'color',
-            'title'       => esc_html__('Additional Color 01', 'basilico'),
-            'transparent' => false,
-            'default'     => '#c8c8c8'
-        ),
-        array(
             'id'          => 'additional_color_01',
             'type'        => 'color',
-            'title'       => esc_html__('Additional Color 01', 'basilico'),
+            'title'       => esc_html__('Additional Color', 'basilico'),
             'transparent' => false,
             'default'     => '#fbf5ee'
+        ),
+        array(
+            'id'          => 'divider_color',
+            'type'        => 'color',
+            'title'       => esc_html__('Divider Color', 'basilico'),
+            'transparent' => false,
+            'default'     => '#c8c8c8'
         ),
         array(
             'id'          => 'gradient_color_01',
