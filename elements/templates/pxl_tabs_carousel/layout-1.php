@@ -29,7 +29,7 @@ $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
                     if ($tab_carousel['content_type'] == 'template' && !empty($tab_carousel['content_template'])) {
                         $content_carousel = Elementor\Plugin::$instance->frontend->get_builder_content_for_display((int)$tab_carousel['content_template']);
                         $tabs_content_carousel = $content_carousel;
-                    } elseif ($tab['content_type'] == 'df') {
+                    } elseif ($tab_carousel['content_type'] == 'df') {
                         $tabs_content_carousel = $tab_carousel['tab_content_carousel'];
                     }
                     $widget->add_render_attribute($content_key_carousel, [
