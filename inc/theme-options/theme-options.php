@@ -652,12 +652,15 @@ Redux::setSection($opt_name, array(
             ),
         ),
         array(
-            'id'          => 'input_border_radius',
-            'type'        => 'text',
+            'id'          => 'input_height',
+            'type'        => 'dimensions',
             'title'       => esc_html__('Border Radius', 'basilico'),
+            'height' => false,
             'unit'     => 'px',
-            'default'  => '0',
-            'validate' => array( 'numeric', 'not_empty' )
+            'default'  => array(
+                'width'  => '0',
+                'unit' => 'px'
+            ),
         ),
         array(
             'id'          => 'font_input',
