@@ -655,10 +655,10 @@ Redux::setSection($opt_name, array(
             'id'          => 'input_height',
             'type'        => 'dimensions',
             'title'       => esc_html__('Border Radius', 'basilico'),
-            'height' => false,
+            'width' => false,
             'unit'     => 'px',
             'default'  => array(
-                'width'  => '0',
+                'height'  => '0',
                 'unit' => 'px'
             ),
         ),
