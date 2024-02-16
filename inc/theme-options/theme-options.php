@@ -307,6 +307,16 @@ Redux::setSection($opt_name, array(
             'default' => 'style-df'
         ),
         array(
+            'id'      => 'swiper_pagination_style',
+            'type'    => 'image_select',
+            'title'   => esc_html__('Swiper Pagination Style', 'basilico'),
+            'options'  => array(
+                'style-df' => get_template_directory_uri() . '/assets/images/swiper_dots_layout/sw1.jpg',
+                'style-2'  => get_template_directory_uri() . '/assets/images/swiper_dots_layout/sw2.jpg',
+            ),
+            'default' => 'style-df'
+        ),
+        array(
             'id'      => 'tab_style',
             'type'    => 'image_select',
             'title'   => esc_html__('Tab Style', 'basilico'),
@@ -317,16 +327,6 @@ Redux::setSection($opt_name, array(
             ),
             'default' => 'style-df'
         ),
-        array(
-            'id'      => 'swiper_pagination_style',
-            'type'    => 'image_select',
-            'title'   => esc_html__('Swiper Pagination Style', 'basilico'),
-            'options'  => array(
-                'style-df' => get_template_directory_uri() . '/assets/images/swiper_dots_layout/sw1.jpg',
-                'style-2'  => get_template_directory_uri() . '/assets/images/swiper_dots_layout/sw2.jpg',
-            ),
-            'default' => 'style-df'
-        )
     )
 ));
 
