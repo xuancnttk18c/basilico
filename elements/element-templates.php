@@ -1415,7 +1415,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
             <div class="grid-item-inner">
                 <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
-                        <div class="post-image scale-hover">
+                        <div class="post-image">
                             <a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
                                 <?php echo wp_kses_post($thumbnail); ?>
                             </a>
