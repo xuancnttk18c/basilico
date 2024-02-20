@@ -312,19 +312,11 @@ add_filter( 'wpcf7_autop_or_not', '__return_false' );
 //* Add Custom Fonts Redux
 add_filter( 'redux/'.basilico()->get_option_name().'/field/typography/custom_fonts', 'basilico_custom_fonts'); 
 function basilico_custom_fonts($fonts){
-    // $fonts = [
-    //     'Custom Fonts' => [
-    //         '\'Audrey\', sans-serif' => '\'Audrey\', sans-serif',
-    //         '\'Cerebri Sans\', sans-serif' => '\'Cerebri Sans\', sans-serif',
-    //         '\'Cormorant Infant\', serif' => '\'Cormorant Infant\', serif',
-    //         '\'PS Demo\', sans-serif' => '\'PS Demo\', sans-serif'
-    //     ]
-    // ];
     $fonts = [
         'Custom Fonts' => [
             'Audrey' => 'Audrey',
             'Cerebri Sans' => 'Cerebri Sans',
-            'PS Demo, sans-serif' => 'PS Demo'
+            'PS Demo' => 'PS Demo'
         ]
     ];
     return $fonts;

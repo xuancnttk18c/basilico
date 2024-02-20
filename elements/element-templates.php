@@ -699,9 +699,7 @@ function basilico_get_post_list_layout2($posts = [], $settings = [], $args_m = [
                     if (isset($thumbnail)) {
                         ?>
                         <div class="item-featured col-md-6 col-12">
-                            <div class="post-image <?php if (empty($featured_video) && empty($audio_url)) {
-                                echo esc_attr('scale-hover');
-                            } ?>">
+                            <div class="post-image">
                             <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
                             <?php
                             if (has_post_format('video', $post->ID) && !empty($featured_video)) : ?>
