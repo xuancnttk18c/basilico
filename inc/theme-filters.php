@@ -324,7 +324,6 @@ function basilico_custom_fonts($fonts){
         'Custom Fonts' => [
             'Audrey' => 'Audrey',
             'Cerebri Sans' => 'Cerebri Sans',
-            'Cormorant Infant' => 'Cormorant Infant',
             'PS Demo, sans-serif' => 'PS Demo'
         ]
     ];
