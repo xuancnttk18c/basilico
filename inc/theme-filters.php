@@ -314,7 +314,7 @@ add_filter( 'redux/'.basilico()->get_option_name().'/field/typography/custom_fon
 function basilico_custom_fonts($fonts){
     $fonts = [
         'Custom Fonts' => [
-            'Audrey' => '\'Audrey\', sans-serif',
+            'Audrey' => 'Audrey',
             '\'Cerebri Sans\', sans-serif' => '\'Cerebri Sans\', sans-serif',
             '\'Cormorant Infant\', serif' => '\'Cormorant Infant\', serif',
             '\'PS Demo\', sans-serif' => '\'PS Demo\', sans-serif'
