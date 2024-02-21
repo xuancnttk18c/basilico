@@ -347,6 +347,19 @@
 	}
 }
 
+.content-archive.layout-3 .pxl-archive-post {
+	.post-metas {
+		max-width: fit-content;
+		margin-top: 30px;
+	}
+	.post-title {
+		text-align: start;
+	}
+	.button-share {
+		margin-top: 27px;
+	}
+}
+
 .content-archive.layout-4 .pxl-archive-post {
 	&:not(:last-child) {
 		margin-bottom: 35px;
@@ -424,15 +437,5 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-	}
-}
-
-.content-archive.layout-3 .pxl-archive-post {
-	.post-metas {
-		max-width: fit-content;
-		margin-top: 30px;
-	}
-	.post-title {
-		text-align: start;
 	}
 }
