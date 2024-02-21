@@ -390,10 +390,12 @@
         letter-spacing: 0.065em;
         border: none;
         .pxl-button-icon {
+            position: relative;
             color: #fff;
             margin-bottom: -2px;
         }
         i:not(.pxl-button-icon) {
+            position: relative;
             margin-left: 7px;
             color: #fff;
         }
