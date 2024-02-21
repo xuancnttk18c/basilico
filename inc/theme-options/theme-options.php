@@ -755,6 +755,7 @@ if(class_exists('Woocommerce')) {
                     'options'  => [
                         'df'           => esc_html__('Default', 'basilico'),
                         'layout-2'       => esc_html__('Layout 2', 'basilico'),
+                        'layout-3'       => esc_html__('Layout 3', 'basilico'),
                     ],
                     'default'  => 'df',
                 ),
