@@ -56,7 +56,7 @@ $item_class          = ['grid-item'];
                     <div class="top-content-inner d-md-flex gx-30 justify-content-between">
                         <?php woocommerce_template_loop_price(); ?>
                         <?php
-                        if( class_exists( 'WPCleverWoosc' ) || class_exists( 'WPCleverWoosq' ) || class_exists( 'WPCleverWoosw' )){
+                        if(class_exists( 'WPCleverWoosw' )){
                             echo '<div class="pxl-shop-woosmart-wrap">';
                             do_action( 'woosw_button_position_archive_woosmart' );
                             echo '</div>';
@@ -128,7 +128,7 @@ $item_class          = ['grid-item'];
             <div class="list-view-rating">
                 <?php woocommerce_template_loop_rating(); ?>
                 <?php
-                if( class_exists( 'WPCleverWoosc' ) || class_exists( 'WPCleverWoosq' ) || class_exists( 'WPCleverWoosw' )){
+                if(class_exists( 'WPCleverWoosw' )){
                     echo '<div class="pxl-shop-woosmart-wrap">';
                     do_action( 'woosw_button_position_archive_woosmart' );
                     echo '</div>';
