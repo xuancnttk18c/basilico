@@ -749,6 +749,16 @@ if(class_exists('Woocommerce')) {
                     'default'     => 'default',
                 ),
                 array(
+                    'id'       => 'product_layout',
+                    'type'     => 'select',
+                    'title'    => esc_html__('Select Product Layout', 'utero'),
+                    'options'  => [
+                        'df'           => esc_html__('Default', 'utero'),
+                        'layout-2'       => esc_html__('Sticky Info', 'utero'),
+                    ],
+                    'default'  => 'df',
+                ),
+                array(
                     'id'       => 'shop_display_type',
                     'type'     => 'button_set',
                     'title'    => esc_html__('Display Type', 'basilico'),

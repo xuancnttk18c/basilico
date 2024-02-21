@@ -11,31 +11,35 @@ if ( empty( $product ) || ! $product->is_visible() ) {
     <div class="pxl-shop-item-wrap">
         <div class="pxl-products-thumb relative">
             <?php
-            $img = array();
-            $image_size = !empty($img_size) ? $img_size : '768x677';
-            $img_id       = get_post_thumbnail_id( get_the_ID() );
-            if (has_post_thumbnail(get_the_ID()) && wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), false)){
-                $img          = pxl_get_image_by_size( array(
-                    'attach_id'  => $img_id,
-                    'thumb_size' => $image_size
-                ) );
-            }
-            $thumbnail    = $img['thumbnail'];
-            $demo_image = get_post_meta(get_the_ID(), 'demo_image',true);
-            if (!empty($demo_image['url']) ){
+            $attachment_ids = $product->get_gallery_image_ids();
+            if ( is_array( $attachment_ids ) && ! empty( $attachment_ids ) ) {
+                $first_image_url = wp_get_attachment_url( $attachment_ids[0] );
                 ?>
-                <div class="image-wrap">
-                    <img class="demo-image" src="<?php echo esc_url($demo_image['url']); ?>" alt="<?php echo esc_attr__('Demo Image', 'basilico');?>">
-                </div>
-                <?php
-            }else{
-                ?>
-                <div class="image-wrap">
-                    <?php echo wp_kses_post($thumbnail); ?>
+                <div class="hover-image">
+                    <img src="<?php echo esc_url($first_image_url)?>" alt="<?php echo esc_attr__('Product Image', 'basilico');?>">
                 </div>
                 <?php
             }
             ?>
+            <div class="image-wrap">
+                <?php
+                woocommerce_template_loop_product_thumbnail();
+                ?>
+            </div>
+            <div class="hot-sale">
+                <?php
+                if ( $product->is_featured() ) {
+                    $feature_text = get_post_meta($product->get_id(),'product_feature_text', true);
+                    if (empty($feature_text)){
+                        $feature_text = "HOT";
+                    }
+                    ?>
+                    <span class="pxl-featured"><?php echo esc_html($feature_text); ?></span>
+                    <?php
+                }
+                woocommerce_show_product_loop_sale_flash();
+                ?>
+            </div>
         </div>
         <div class="pxl-products-content">
             <div class="pxl-products-content-wrap">

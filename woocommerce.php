@@ -5,6 +5,8 @@ if(is_singular('product')){
 }else{
     $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'shop', 'content_col'=> '8']); // type: blog, post, page, shop, product
 }
+
+$product_layout = basilico()->get_theme_opt('product_layout', 'df');
 ?>
     <div class="container">
         <div class="row <?php echo esc_attr($pxl_sidebar['wrap_class']) ?>">
@@ -28,7 +30,7 @@ if(is_singular('product')){
                             <?php if ( wc_get_loop_prop( 'total' ) ) : ?>
                                 <?php while ( have_posts() ) : ?>
                                     <?php the_post(); ?>
-                                    <?php wc_get_template_part( 'pxl-content-product', 'df' ); ?>
+                                    <?php wc_get_template_part( 'pxl-content-product', esc_attr($product_layout) ); ?>
                                 <?php endwhile; ?>
                             <?php endif; ?>
                             <?php woocommerce_product_loop_end(); ?>
