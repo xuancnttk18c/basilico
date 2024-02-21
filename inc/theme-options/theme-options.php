@@ -751,10 +751,10 @@ if(class_exists('Woocommerce')) {
                 array(
                     'id'       => 'product_layout',
                     'type'     => 'select',
-                    'title'    => esc_html__('Select Product Layout', 'utero'),
+                    'title'    => esc_html__('Select Product Layout', 'basilico'),
                     'options'  => [
-                        'df'           => esc_html__('Default', 'utero'),
-                        'layout-2'       => esc_html__('Sticky Info', 'utero'),
+                        'df'           => esc_html__('Default', 'basilico'),
+                        'layout-2'       => esc_html__('Layout 2', 'basilico'),
                     ],
                     'default'  => 'df',
                 ),
