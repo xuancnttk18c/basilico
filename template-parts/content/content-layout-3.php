@@ -12,7 +12,7 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('pxl-archive-post row gx-0'); ?>>
     <?php if (has_post_thumbnail()) { ?>
-        <div class="post-featured col-5">
+        <div class="post-featured">
             <div class="post-image scale-hover">
                 <a href="<?php echo esc_url(get_permalink()); ?>">
                     <?php basilico()->blog->get_post_feature(); ?>
@@ -20,8 +20,8 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
             </div>
         </div>
     <?php } ?>
-    <div class="post-content <?php echo has_post_thumbnail() ? 'col-7' : ''; ?>">
-        <?php basilico()->blog->get_archive_metas_pizza(); ?>
+    <div class="post-content">
+        <?php basilico()->blog->get_archive_metas_fastfood(); ?>
         <div class="main-content">
             <h2 class="post-title">
                 <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php the_title_attribute(); ?>">
@@ -46,7 +46,7 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
                 <div class="button-share d-flex align-items-center">
                     <?php if ($archive_readmore == '1') : ?>
                         <div class="post-btn-wrap pxl-button-wrapper col-sm-6">
-                            <a class="btn btn-additional-7" href="<?php echo esc_url(get_permalink()); ?>">
+                            <a class="btn btn-additional-5" href="<?php echo esc_url(get_permalink()); ?>">
                                 <span><?php echo esc_html($archive_readmore_text); ?></span>
                                 <i class="pxli pxli-arrow-right-solid"></i>
                             </a>
