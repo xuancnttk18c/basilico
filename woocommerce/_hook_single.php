@@ -232,14 +232,8 @@ function basilico_variable_add_to_cart(){
 	$variations_json = wp_json_encode( $available_variations );
 	$variations_attr = function_exists( 'wc_esc_json' ) ? wc_esc_json( $variations_json ) : _wp_specialchars( $variations_json, ENT_QUOTES, 'UTF-8', true );
 
-	$shop_style = basilico()->get_theme_opt('shop_style', 'default');
-	switch ($shop_style) {
-		case 'style-2':
-		$single_btn_cls = 'pxl-btn btn-additional-3 single_add_to_cart_button button alt';
-		break;
-		default:
-		$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt';
-	}
+	$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'default');
+	$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
 
 	do_action( 'woocommerce_before_add_to_cart_form' );
 	?>
@@ -327,14 +321,8 @@ function basilico_external_add_to_cart(){
 	$product_url = $product->add_to_cart_url();
 	$button_text = $product->single_add_to_cart_text();
 
-	$shop_style = basilico()->get_theme_opt('shop_style', 'default');
-	switch ($shop_style) {
-		case 'style-2':
-		$single_btn_cls = 'pxl-btn btn-additional-3 single_add_to_cart_button button alt';
-		break;
-		default:
-		$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt';
-	}
+	$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'default');
+	$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
 
 	do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
@@ -359,14 +347,8 @@ function basilico_grouped_add_to_cart(){
 	global $product, $post;
 	$products = array_filter( array_map( 'wc_get_product', $product->get_children() ), 'wc_products_array_filter_visible_grouped' );
 
-	$shop_style = basilico()->get_theme_opt('shop_style', 'default');
-	switch ($shop_style) {
-		case 'style-2':
-		$single_btn_cls = 'pxl-btn btn-additional-3 single_add_to_cart_button button alt';
-		break;
-		default:
-		$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt';
-	}
+	$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'default');
+	$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
 	if ( $products ) {
 		$grouped_product = $product;
 		$grouped_products = $products;
@@ -500,14 +482,8 @@ function basilico_simple_add_to_cart(){
                 <div class="pxl-addtocart-btn-wrap">
                     <div class="pxl-atc-btn">
                     	<?php
-                    	$shop_style = basilico()->get_theme_opt('shop_style', 'default');
-                    	switch ($shop_style) {
-                    		case 'style-2':
-                    		$single_btn_cls = 'pxl-btn btn-additional-3 single_add_to_cart_button button alt';
-                    		break;
-                    		default:
-                    		$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt';
-                    	}
+                    	$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
+						$single_btn_cls = 'pxl-btn btn-outline-secondary single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
                     	?>
                         <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
                     </div>
