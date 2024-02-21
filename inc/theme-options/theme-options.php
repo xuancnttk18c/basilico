@@ -766,7 +766,7 @@ if(class_exists('Woocommerce')) {
                         'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
                         'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
                     ),
-                    'default' => 'btn-outline',
+                    'default' => 'btn-outline-secondary',
                 ),
                 array(
                     'id'       => 'shop_display_type',
