@@ -738,17 +738,6 @@ if(class_exists('Woocommerce')) {
             basilico_sidebar_pos_opts([ 'prefix' => 'shop_', 'default_value' => 'left']),
             array(
                 array(
-                    'id'          => 'shop_style',
-                    'type'        => 'select',
-                    'title'       => esc_html__('Shop Style', 'basilico'),
-                    'options'  => array(
-                        'default' => esc_html__('Default', 'basilico'),
-                        'style-2' => esc_html__('Style 2', 'basilico'),
-                        'style-3' => esc_html__('Style 3', 'basilico'),
-                    ),
-                    'default'     => 'default',
-                ),
-                array(
                     'id'       => 'product_layout',
                     'type'     => 'select',
                     'title'    => esc_html__('Select Product Layout', 'basilico'),

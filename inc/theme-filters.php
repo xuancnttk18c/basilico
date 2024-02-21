@@ -256,7 +256,6 @@ function basilico_body_classes( $classes )
     if(get_option( 'woosw_page_id', 0) == get_the_ID())
         $classes[] = 'pxl-wishlist-page';
 
-    if ($shop_style != 'default') $classes[] = 'wooshop-'.$shop_style;
     return $classes;
 }
 
