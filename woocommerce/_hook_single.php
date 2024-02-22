@@ -82,7 +82,7 @@ if(!function_exists('basilico_wc_single_product_gallery_layout')){
         $options['prevText']     = '<span class="flex-prev-icon"></span>';
 		$options['nextText']     = '<span class="flex-next-icon"></span>';
         if ( $gallery_layout == 'vertical' || $gallery_layout == 'horizontal' ){
-            $options['directionNav'] = true;
+            $options['directionNav'] = false;
             $options['controlNav']   = false;
             $options['sync'] = '.wc-gallery-sync';
         }
