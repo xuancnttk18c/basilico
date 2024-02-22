@@ -110,8 +110,8 @@ if(!function_exists('basilico_product_gallery_thumbnail_sync')){
         $thumb_v_w = 118;
         $thumb_v_h = 118;
 
-        $thumb_h_w = 130;
-        $thumb_h_h = 130;
+        $thumb_h_w = 170;
+        $thumb_h_h = 170;
 
         switch ($args['gallery_layout']) {
 	        case 'vertical':
