@@ -1623,6 +1623,10 @@
                 &:nth-child(n + 4) {
                     margin-top: -1px;
                 }
+                &:nth-child(3n + 1) {
+                    margin-top: -1px;
+                    margin-left: 0;
+                }
             }
         }
         .grid-item-inner {
