@@ -1623,7 +1623,8 @@
                 right: 0;
                 bottom: 0;
                 background-color: $heading_color;
-                background-image: url(../assets/images/dirt_explosion_overlay.png);
+                background-image: url(../images/dirt_explosion_overlay.png);
+                background-size: cover;
             }
             .item-title {
                 font-family: $heading_font_family;
