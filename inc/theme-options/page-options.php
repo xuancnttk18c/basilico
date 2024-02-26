@@ -288,6 +288,12 @@ function basilico_page_options_register( $metabox ) {
                                 ),
                                 'default'  => 'simple'
                             ),
+                            array(
+                                'id'=> 'product_additional_info',
+                                'type' => 'textarea',
+                                'title' => esc_html__('Addtional Info', 'basilico'),
+                                'default' => '',
+                            ),
 						)
 				    )
 				],
