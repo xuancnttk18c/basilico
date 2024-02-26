@@ -159,14 +159,14 @@
             }
         }
         &.style-4 {
-            margin-bottom: 4px;
+            display: flex;
             gap: 62px;
             @media (max-width: $sm_max) {
                 margin-bottom: 12px;
             }
             .filter-item {
-                font-size: 20px;
-                font-weight: 500;
+                font-size: 17px;
+                font-weight: 600;
                 line-height: 45px;
                 color: $heading_color;
                 letter-spacing: 0.1em;
