@@ -1617,7 +1617,7 @@
             .grid-item {
                 border: 1px solid;
                 border-color: inherit;
-                &:nth-child(n + 1) {
+                &:nth-child(n + 2) {
                     margin-left: -1px;
                 }
                 &:nth-child(n + 3) {
