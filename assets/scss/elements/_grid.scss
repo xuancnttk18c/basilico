@@ -184,8 +184,7 @@
                 &:after {
                     content: none;
                 }
-                &.active,
-                &:hover {
+                &.active {
                     color: $primary_color;
                     &:before {
                         opacity: 1;
