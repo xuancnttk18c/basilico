@@ -1614,13 +1614,8 @@
     }
     &.layout-pxl-portfolio-5 {
         .pxl-grid-inner {
-            border-top: 1px solid;
-            border-left: 1px solid;
-            border-color: $divider_color;
             .grid-item {
-                border-right: 1px solid;
-                border-bottom: 1px solid;
-                border-color: inherit;
+                outline: 1px solid black;
             }
         }
         .grid-item-inner {
