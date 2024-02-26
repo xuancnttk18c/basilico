@@ -179,6 +179,7 @@
                     font-family: $pxli_font;
                     font-size: 17px;
                     line-height: 1;
+                    opacity: 0;
                 }
                 &:after {
                     content: none;
@@ -186,6 +187,9 @@
                 &.active,
                 &:hover {
                     color: $primary_color;
+                    &:before {
+                        opacity: 1;
+                    }
                 }
             }
             &.start {
