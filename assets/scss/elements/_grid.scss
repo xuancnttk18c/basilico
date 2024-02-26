@@ -1637,10 +1637,30 @@
                 }
             }
             .item-tags {
-                font-family: #fff;
+                margin-top: 11px;
+                color: #fff;
                 line-height: 26px;
                 letter-spacing: 0;
                 text-transform: uppercase;
+            }
+            .pxl-divider {
+                display: none;
+                margin: 0;
+            }
+            .item-excerpt {
+                margin-top: 20px;
+                + .item-readmore {
+                    margin-top: 43px;
+                }
+            }
+            .item-readmore {
+                .bt-more-plus {
+                    position: relative;
+                    z-index: 2;
+                    color: #fff;
+                    border-color: #fff;
+                    background-color: $primary_color;
+                }
             }
         }
     }
