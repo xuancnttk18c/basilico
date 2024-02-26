@@ -191,22 +191,6 @@
                     }
                 }
             }
-            &.start {
-                .filter-item:first-child {
-                    padding-left: 0 !important;
-                    &:after {
-                        left: 0 !important;
-                    }
-                }
-            }
-            &.end {
-                .filter-item:last-child {
-                    padding-right: 0 !important;
-                    &:after {
-                        right: 0 !important;
-                    }
-                }
-            }
         }
     }
     .grid-sizer {
