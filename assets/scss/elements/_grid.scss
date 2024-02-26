@@ -1612,6 +1612,33 @@
             }
         }
     }
+    &.layout-pxl-portfolio-5 {
+        .grid-item-inner {
+            .post-image {
+                border: 1px solid $divider_color;
+            }
+            .item-content {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $heading_color;
+            }
+            .item-title {
+                font-family: $heading_font_family;
+                font-size: 25px;
+                line-height: 32px;
+                color: $secondary_color;
+                letter-spacing: 0.03em;
+            }
+            .item-tags {
+                font-family: #fff;
+                line-height: 26px;
+                letter-spacing: 0;
+                text-transform: uppercase;
+            }
+        }
+    }
     &.layout-pxl-portfolio-6 {
         .grid-item-inner {
             .item-featured {
