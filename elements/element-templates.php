@@ -1764,7 +1764,7 @@ function basilico_get_post_grid_pxl_portfolio2($posts = [], $settings = [], $arg
                                 $content = strip_shortcodes($post->post_content);
                                 $content = apply_filters('the_content', $content);
                                 $content = str_replace(']]>', ']]&gt;', $content);
-                                echo wp_trim_words($content, $num_words, null);
+                                echo wp_trim_words($content, $num_words, '...');
                             }
                             ?>
                         </div>
