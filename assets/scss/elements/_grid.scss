@@ -1643,6 +1643,9 @@
                 line-height: 26px;
                 letter-spacing: 0;
                 text-transform: uppercase;
+                a:hover {
+                    color: $secondary_color;
+                }
             }
             .pxl-divider {
                 display: none;
