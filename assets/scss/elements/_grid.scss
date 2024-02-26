@@ -1615,7 +1615,15 @@
     &.layout-pxl-portfolio-5 {
         .pxl-grid-inner {
             .grid-item {
-                outline: 1px solid black;
+                border: 1px solid;
+                border-color: inherit;
+                &:nth-child(n + 1) {
+                    margin-left: -1px;
+                    margin-right: 1px;
+                }
+                &:nth-child(n + 3) {
+                    margin-top: -1px;
+                }
             }
         }
         .grid-item-inner {
