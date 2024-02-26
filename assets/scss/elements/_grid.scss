@@ -165,13 +165,19 @@
                 margin-bottom: 12px;
             }
             .filter-item {
-                font-size: 17px;
                 font-weight: 600;
                 line-height: 45px;
-                color: $heading_color;
-                letter-spacing: 0.1em;
+                letter-spacing: 0.01em;
                 padding: 0;
                 @include transition();
+                &:before {
+                    content: 'e9e5';
+                    font-family: $pxli_font;
+                    font-size: 17px;
+                }
+                &:after {
+                    content: none;
+                }
                 &.active,
                 &:hover {
                     color: $primary_color;

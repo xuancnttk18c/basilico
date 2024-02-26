@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'pxli';
   src:
-    url('fonts/pxli.ttf?c6pkqt') format('truetype'),
-    url('fonts/pxli.woff?c6pkqt') format('woff'),
-    url('fonts/pxli.svg?c6pkqt#pxli') format('svg');
+    url('fonts/pxli.ttf?aghm4s') format('truetype'),
+    url('fonts/pxli.woff?aghm4s') format('woff'),
+    url('fonts/pxli.svg?aghm4s#pxli') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pxli-pizza-slice:before {
+  content: "\e9e5";
+}
 .pxli-healthcare:before {
   content: "\e9e1";
 }
