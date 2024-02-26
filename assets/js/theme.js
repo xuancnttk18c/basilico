@@ -503,7 +503,7 @@
                         selector       : '.wc-gallery-sync-slides > .wc-gallery-sync-slide',
                         animation      : 'slide',
                         controlNav     : false,
-                        directionNav   : true,
+                        directionNav   : false,
                         prevText       : '<span class="flex-prev-icon"></span>',
                         nextText       : '<span class="flex-next-icon"></span>',
                         asNavFor       : '.woocommerce-product-gallery',
