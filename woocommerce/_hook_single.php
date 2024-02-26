@@ -119,7 +119,7 @@ if(!function_exists('basilico_product_gallery_thumbnail_sync')){
 				$thumb_w        = $thumb_v_w;
 				$thumb_h        = $thumb_v_h;
 				$flex_class     = 'flex-vertical';
-				$thumb_margin   = 15;
+				$thumb_margin   = 30;
 	            break;
 
 	        case 'horizontal':
@@ -127,7 +127,7 @@ if(!function_exists('basilico_product_gallery_thumbnail_sync')){
 	            $thumb_w = $thumb_h_w;
 	            $thumb_h = $thumb_h_h;
 	            $flex_class = 'flex-horizontal';
-	            $thumb_margin   = 15;
+	            $thumb_margin   = 30;
 	            break;
 
 	    }
