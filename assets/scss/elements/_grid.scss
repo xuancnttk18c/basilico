@@ -1656,10 +1656,32 @@
             .item-readmore {
                 .bt-more-plus {
                     position: relative;
-                    z-index: 2;
-                    color: #fff;
                     border-color: #fff;
                     background-color: $primary_color;
+                    i {
+                        color: #fff;
+                    }
+                    &:before {
+                        content: '';
+                        position: relative;
+                        top: 3px;
+                        left: 3px;
+                        right: -3px;
+                        bottom: -3px;
+                        background-color: $divider_color;
+                        @include transition();
+                    }
+                    &:hover {
+                        i {
+                            animation: none;
+                        }
+                        &:before {
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                        }
+                    }
                 }
             }
         }
