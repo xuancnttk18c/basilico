@@ -1668,7 +1668,7 @@
                         left: 3px;
                         right: -3px;
                         bottom: -3px;
-                        background-color: $divider_color;
+                        background-color: #fff;
                         @include transition();
                     }
                     &:hover {
