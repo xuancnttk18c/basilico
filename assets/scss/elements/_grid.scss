@@ -158,6 +158,42 @@
                 }
             }
         }
+        &.style-4 {
+            margin-bottom: 4px;
+            gap: 62px;
+            @media (max-width: $sm_max) {
+                margin-bottom: 12px;
+            }
+            .filter-item {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 45px;
+                color: $heading_color;
+                letter-spacing: 0.1em;
+                padding: 0;
+                @include transition();
+                &.active,
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+            &.start {
+                .filter-item:first-child {
+                    padding-left: 0 !important;
+                    &:after {
+                        left: 0 !important;
+                    }
+                }
+            }
+            &.end {
+                .filter-item:last-child {
+                    padding-right: 0 !important;
+                    &:after {
+                        right: 0 !important;
+                    }
+                }
+            }
+        }
     }
     .grid-sizer {
         visibility: hidden;
