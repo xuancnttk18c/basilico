@@ -56,7 +56,7 @@ function basilico_page_options_register( $metabox ) {
                                 'title'       => esc_html__( 'Post Share Number', 'basilico' ),
                                 'description' => esc_html__( 'Edit post number share. This add 1 when click on post social share button.', 'basilico' ),
                                 'validate'    => 'numeric',
-                                'msg'         => 'This must be a number!',
+                                'msg'         => esc_html__('This must be a number!', 'basilico'),
                             ),
                         ),
                         array(
