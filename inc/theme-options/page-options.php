@@ -290,7 +290,7 @@ function basilico_page_options_register( $metabox ) {
                             ),
                             array(
                                 'id'=> 'product_additional_info',
-                                'type' => 'textarea',
+                                'type' => 'editor',
                                 'title' => esc_html__('Addtional Info', 'basilico'),
                                 'default' => '',
                             ),
