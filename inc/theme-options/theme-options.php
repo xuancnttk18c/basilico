@@ -610,7 +610,7 @@ Redux::setSection($opt_name, array(
 
 //* Input
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('Input Form', 'basilico'),
+    'title'  => esc_html__('Input', 'basilico'),
     'icon'   => 'el el-italic',
     'fields' => array(
         array(
