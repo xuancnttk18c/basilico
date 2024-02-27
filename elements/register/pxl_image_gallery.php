@@ -191,7 +191,7 @@ pxl_add_custom_widget(
                             'default' => 15,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-grid:not(.layout-pxl-portfolio-5) .pxl-grid-inner' => 'margin-left: -{{VALUE}}px; margin-right: -{{VALUE}}px;',
-                                '{{WRAPPER}} .pxl-grid.layout-pxl-portfolio-5 .pxl-grid-inner' => 'margin-left: 0px; margin-right: 0px;',
+                                '{{WRAPPER}} .pxl-grid.layout-pxl-portfolio-5 .pxl-grid-inner' => 'margin-left: {{VALUE}}px; margin-right: {{VALUE}}px;',
                                 '{{WRAPPER}} .pxl-grid:not(.layout-pxl-portfolio-5) .grid-item' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px; margin-top: {{VALUE}}px; margin-bottom: {{VALUE}}px;',
                                 '{{WRAPPER}} .pxl-grid.layout-pxl-portfolio-5 .grid-item' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px; padding-top: {{VALUE}}px; padding-bottom: {{VALUE}}px; margin-top: 0; margin-bottom: 0;',
                                 '{{WRAPPER}} .pxl-grid .grid-sizer' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px;',
