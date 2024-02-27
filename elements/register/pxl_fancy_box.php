@@ -192,7 +192,6 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box .box-inner' => 'background-color: {{VALUE}};'
                             ],
-                            'separator' => 'after',
                         ),
                         array(
                             'name' => 'btn_style',
