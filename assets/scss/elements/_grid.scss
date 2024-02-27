@@ -1614,12 +1614,9 @@
     }
     &.layout-pxl-portfolio-5 {
         .pxl-grid-inner {
-            border-left: 1px solid;
-            border-bottom: 1px solid;
-            border-color: $divider_color;
             .grid-item {
                 border: 1px solid;
-                border-color: inherit;
+                border-color: $divider_color;
                 margin-left: -1px;
                 margin-bottom: -1px;
             }

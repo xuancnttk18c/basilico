@@ -79,7 +79,7 @@ $widget->add_render_attribute( 'wrapper', [
     'data-next-link'   => $next_link
 ]);
 
-$grid_class = 'pxl-grid-inner pxl-grid-masonry row relative overflow-hidden animation-time';
+$grid_class = 'pxl-grid-inner pxl-grid-masonry row relative animation-time';
 $widget->add_render_attribute( 'grid', 'class', $grid_class);
  
 if( count($posts) <= 0){
