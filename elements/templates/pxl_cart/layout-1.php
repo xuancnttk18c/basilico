@@ -5,7 +5,7 @@ $target = '.pxl-side-cart';
 <div class="pxl-cart-wrap layout-1 d-flex align-items-center align-content-center">
     <div <?php pxl_print_html($widget->get_render_attribute_string( 'cart' )); ?> data-target="<?php echo esc_attr($target)?>">
         <?php
-        if(!is_admin())
+        if(!is_admin() && class_exists( 'WooCommerce' ))
             $count = WC()->cart->get_cart_contents_count();
         if( $widget->get_setting('icon_type','none') == 'lib'){
             echo '<div class="pxl-cart-icon d-inline-flex">';
