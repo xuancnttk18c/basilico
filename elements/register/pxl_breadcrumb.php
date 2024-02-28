@@ -63,7 +63,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Text Color', 'basilico' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-breadcrumb, .pxl-breadcrumb .br-item' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-breadcrumb, .pxl-breadcrumb .br-item' => 'color: {{VALUE}} !important;',
                             ],
                         ),
                         array(
@@ -71,7 +71,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Link Color', 'basilico' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-breadcrumb a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-breadcrumb a' => 'color: {{VALUE}} !important;',
                             ],
                         ),
                         array(
@@ -79,7 +79,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Link Color Hover', 'basilico' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-breadcrumb a:hover' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-breadcrumb a:hover' => 'color: {{VALUE}} !important;',
                             ],
                         ),
                         array(
