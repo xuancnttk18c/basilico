@@ -1422,6 +1422,9 @@
 .pxl-fancy-box-carousel {
     &.layout-1 {
         text-align: center;
+        .item-inner {
+            overflow: hidden;
+        }
         .item-icon {
             img {
                 width: auto;
@@ -1483,7 +1486,7 @@
             padding: 121px 125px 124px;
             transform-origin: bottom;
             @include transition(all 400ms ease);
-            @include transform(scaleY(0));
+            @include transform(translateY(100%));
             &:before {
                 content: '';
                 position: absolute;
@@ -1500,7 +1503,7 @@
         }
         .item-inner:hover {
             .item-content {
-                @include transform(scaleY(1));
+                @include transform(translateY(0));
             }
         }
     }
