@@ -1090,42 +1090,40 @@
             }
         }
         .format-link {
-            .link-inner {
-                .link-text {
-                    max-width: none;
-                    margin: 0 auto;
-                    font-family: $heading_font_family;
-                    font-size: 25px;
-                    font-weight: 600;
-                    letter-spacing: 0.05em;
-                    font-style: italic;
-                    text-transform: none;
-                    font-size: 25px;
-                    line-height: 1.6;
-                    @media (min-width: $xl_min) {
-                        max-width: 85%;
-                    }
-                    @media (max-width: $sm_max) {
-                        font-size: 22px;
-                    }
+            .link-text {
+                max-width: none;
+                margin: 0 auto;
+                font-family: $heading_font_family;
+                font-size: 25px;
+                font-weight: 600;
+                letter-spacing: 0.05em;
+                font-style: italic;
+                text-transform: none;
+                font-size: 25px;
+                line-height: 1.6;
+                @media (min-width: $xl_min) {
+                    max-width: 85%;
                 }
-                .link-cite {
-                    margin-top: 29px;
+                @media (max-width: $sm_max) {
+                    font-size: 22px;
                 }
-                .link-icon {
-                    margin: 6px 0 3px;
-                    display: inline-flex;
-                    border-radius: 11px;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: $secondary_color;
+            }
+            .link-cite {
+                margin-top: 29px;
+            }
+            .link-icon {
+                margin: 6px 0 3px;
+                display: inline-flex;
+                border-radius: 11px;
+                align-items: center;
+                justify-content: center;
+                background-color: $secondary_color;
+                color: $primary_color;
+                position: relative;
+                font-size: 50px;
+                line-height: 1;
+                a {
                     color: $primary_color;
-                    position: relative;
-                    font-size: 50px;
-                    line-height: 1;
-                    a {
-                        color: $primary_color;
-                    }
                 }
             }
         }
