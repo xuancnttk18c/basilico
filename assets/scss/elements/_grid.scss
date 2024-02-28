@@ -1013,31 +1013,65 @@
             margin-top: 23px;
             margin-bottom: 34px;
         }
-        .format-wrap {
-            padding: 47px 44px 41px 70px;
-            @media (max-width: $xs_max) {
-                padding: 60px 30px 60px 20px;
+        .format-quote,
+        .format-link {
+            position: relative;
+            padding-bottom: 13px;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0px;
+                border-bottom: 1px solid $divider_color;
             }
-            .quote-inner,
-            .link-inner {
-                .quote-text,
-                .link-text {
-                    margin: 0;
-                    text-align: left;
-                    @media (min-width: $xl_min) {
-                        max-width: 95%;
-                    }
+            .format-wrap {
+                position: relative;
+                padding-bottom: 13px;
+                padding: 47px 44px 41px 70px;
+                border-color: $divider_color;
+                text-align: center;
+                padding: 32px 15px 42px;
+                position: relative;
+                overflow: hidden;
+                border: 1px solid $divider_color;
+                background-color: $secondary_color;
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-size: cover;
+                    background-position: top right;
+                    background-repeat: no-repeat;
                 }
-                .pxl-divider {
-                    margin: 22px 0 7px;
-                    width: 114px;
-                    &:before {
-                        width: 100%;
-                    }
+                @media (max-width: $xs_max) {
+                    padding: 60px 30px 60px 20px;
                 }
-                .quote-cite,
-                .link-cite {
-                    text-align: left;
+                .quote-inner,
+                .link-inner {
+                    .quote-text,
+                    .link-text {
+                        margin: 0;
+                        text-align: left;
+                        @media (min-width: $xl_min) {
+                            max-width: 95%;
+                        }
+                    }
+                    .pxl-divider {
+                        margin: 22px 0 7px;
+                        width: 114px;
+                        &:before {
+                            width: 100%;
+                        }
+                    }
+                    .quote-cite,
+                    .link-cite {
+                        text-align: left;
+                    }
                 }
             }
         }
@@ -1050,12 +1084,16 @@
             .quote-inner {
                 .quote-text {
                     font-size: 25px;
+                    font-style: italic;
                     font-weight: 600;
                     line-height: 35px;
                     letter-spacing: 0.05em;
                     text-transform: none;
                 }
                 .quote-cite {
+                    font-size: 15px;
+                    line-height: 26px;
+                    letter-spacing: 0.1em;
                     text-transform: uppercase;
                 }
             }
