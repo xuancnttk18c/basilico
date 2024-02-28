@@ -830,13 +830,6 @@
             margin-bottom: 0;
             padding-bottom: 0;
             border-color: transparent;
-            &.format-link,
-            &.format-quote {
-                margin-bottom: 15px;
-                &:after {
-                    bottom: -15px;
-                }
-            }
         }
         .grid-item {
             .grid-item-inner {
@@ -1027,11 +1020,9 @@
             }
             .format-wrap {
                 position: relative;
-                padding-bottom: 13px;
                 padding: 47px 44px 41px 70px;
                 border-color: $divider_color;
                 text-align: center;
-                padding: 32px 15px 42px;
                 position: relative;
                 overflow: hidden;
                 border: 1px solid $divider_color;
