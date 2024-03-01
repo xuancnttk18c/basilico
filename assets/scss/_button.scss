@@ -493,20 +493,40 @@
             @include transition(all 300ms ease-out);
         }
         &:hover {
+            color: #fff;
             &:before {
                 top: 0;
                 left: 0;
                 right: 0;
                 bottom: 0;
             }
-        }
-        &:hover {
-            color: #fff;
             i {
                 color: inherit;
             }
         }
-    }    
+    }
+    &.btn-additional-8 {
+        background-color: $primary_color;
+        line-height: 50px;
+        height: 50px;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        overflow: visible;
+        @include border-radius(5px);
+        span + i, i + span {
+            margin-left: 13px;
+        }
+        i {
+            font-size: 13px;
+        }
+        .pxl-button-icon {
+            color: #fff;
+        }
+        &:hover {
+            background-color: $secondary_color;
+        }
+    }
 }
 
 .rs-layer.btn, .pxl-button-wrapper .btn, .pxl-button-wrapper button, .pxl-button-wrapper .button, .comment-form button {
