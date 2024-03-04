@@ -1044,6 +1044,18 @@
                 height: $input_height;
                 @include transition();
             }
+            input[type="checkbox"] {
+                position: relative;
+                &:before {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 15px;
+                    height: 15px;
+                    border: 1px solid $primary_color;
+                    @include border-radius(2px);
+                }
+            }
         }
     }
     &.hide-icon {
