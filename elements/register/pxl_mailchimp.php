@@ -77,9 +77,9 @@ pxl_add_custom_widget(
                                             'name' => 'input_border_radius',
                                             'label' => esc_html__('Input Border Radius', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                                            'size_units' => [ 'px' ],
+                                            'size_units' => [ 'px', 'em' ],
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form input:not([type="submit"]):not(type="checkbox")' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                                '{{WRAPPER}} .mailchimp-form input[type="text"], {{WRAPPER}} .mailchimp-form input[type="password"], {{WRAPPER}} .mailchimp-form input[type="email"], {{WRAPPER}} .mailchimp-form input[type="phone"]' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                             ],
                                         ),
                                     )
