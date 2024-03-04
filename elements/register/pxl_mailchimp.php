@@ -245,7 +245,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Checkbox Margin', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'selectors' => [
-                                '{{WRAPPER}} .mailchimp-form checkbox' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .mailchimp-form input[type="checkbox"]' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'responsive' => true
@@ -255,7 +255,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Checkbox Checked Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .mailchimp-form checkbox' => 'accent-color: {{VALUE}};',
+                                '{{WRAPPER}} .mailchimp-form input[type="checkbox"]' => 'accent-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -263,7 +263,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Checkbox Width (px)', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::NUMBER,
                             'selectors' => [
-                                '{{WRAPPER}} .mailchimp-form checkbox' => 'width: {{VALUE}}px;',
+                                '{{WRAPPER}} .mailchimp-form input[type="checkbox"]' => 'width: {{VALUE}}px;',
                             ],
                             'separator' => 'after'
                         ),
@@ -272,7 +272,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Label Typography', 'basilico' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .mailchimp-form label, {{WRAPPER}} .mailchimp-form input[type="submit"]',
+                            'selector' => '{{WRAPPER}} .mailchimp-form label',
                         ),
                     ),
                 ),
