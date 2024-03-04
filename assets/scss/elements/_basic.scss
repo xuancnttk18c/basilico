@@ -1411,10 +1411,10 @@
             display: none;
         }
     }
-    &.hide-text {
+    &.hide_button_text {
         button,
         input[type="submit"] {
-            *:not(i) {
+            > *:not(i) {
                 font-size: 0;
             }
         }
