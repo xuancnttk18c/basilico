@@ -147,6 +147,14 @@ pxl_add_custom_widget(
                                             ],
                                         ),
                                         array(
+                                            'name' => 'icon_size',
+                                            'label' => esc_html__('Icon Size (px)', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::NUMBER,
+                                            'selectors' => [
+                                                '{{WRAPPER}} .pxl-mailchimp button i' => 'font-size: {{VALUE}}px !important;',
+                                            ],
+                                        ),
+                                        array(
                                             'name' => 'btn_width',
                                             'label' => esc_html__('Width (px)', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::NUMBER,
