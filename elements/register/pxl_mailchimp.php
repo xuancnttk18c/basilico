@@ -30,6 +30,7 @@ pxl_add_custom_widget(
                         array(
                             'name' => 'button_style_tabs',
                             'control_type' => 'tab',
+                            'separator' => 'after',
                             'tabs' => array(
                                 array(
                                     'name' => 'mc_style_normal',
