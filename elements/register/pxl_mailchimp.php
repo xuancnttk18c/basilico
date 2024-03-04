@@ -90,10 +90,26 @@ pxl_add_custom_widget(
                                     'controls' => array(
                                         array(
                                             'name' => 'input_background_hover',
-                                            'label' => esc_html__('Input Background Hover/Focus', 'basilico' ),
+                                            'label' => esc_html__('Input Background', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .pxl-mailchimp input:not(type="submit"):not(type="checkbox"):hover, {{WRAPPER}} .pxl-mailchimp input:focus' => 'background-color: {{VALUE}} !important;',
+                                                '{{WRAPPER}} .pxl-mailchimp input:not(type="submit"):hover, {{WRAPPER}} .pxl-mailchimp input:not(type="submit"):focus, {{WRAPPER}} .pxl-mailchimp input:not(type="checkbox"):hover, {{WRAPPER}} .pxl-mailchimp input:not(type="checkbox"):focus' => 'background-color: {{VALUE}} !important;',
+                                            ],
+                                        ),
+                                        array(
+                                            'name' => 'input_border_hover',
+                                            'label' => esc_html__('Input Border Color', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::COLOR,
+                                            'selectors' => [
+                                                '{{WRAPPER}} .pxl-mailchimp input:not(type="submit"):hover, {{WRAPPER}} .pxl-mailchimp input:not(type="submit"):focus, {{WRAPPER}} .pxl-mailchimp input:not(type="checkbox"):hover, {{WRAPPER}} .pxl-mailchimp input:not(type="checkbox"):focus' => 'border-color: {{VALUE}} !important;',
+                                            ],
+                                        ),
+                                        array(
+                                            'name' => 'input_text_hover',
+                                            'label' => esc_html__('Input Text Color', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::COLOR,
+                                            'selectors' => [
+                                                '{{WRAPPER}} .pxl-mailchimp input:not(type="submit"):hover, {{WRAPPER}} .pxl-mailchimp input:not(type="submit"):focus, {{WRAPPER}} .pxl-mailchimp input:not(type="checkbox"):hover, {{WRAPPER}} .pxl-mailchimp input:not(type="checkbox"):focus' => 'color: {{VALUE}} !important;',
                                             ],
                                         ),
                                     )
