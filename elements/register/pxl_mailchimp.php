@@ -61,24 +61,6 @@ pxl_add_custom_widget(
                                             ],
                                         ),
                                         array(
-                                            'name' => 'input_border_radius',
-                                            'label' => esc_html__('Border Radius', 'basilico' ),
-                                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                                            'size_units' => [ 'px' ],
-                                            'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form input:not([type="submit"])' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                            ],
-                                        ),
-                                        array(
-                                            'name' => 'button_border_radius',
-                                            'label' => esc_html__('Border Radius', 'basilico' ),
-                                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                                            'size_units' => [ 'px' ],
-                                            'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form input[type="submit"], {{WRAPPER}} .mailchimp-form button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                            ],
-                                        ),
-                                        array(
                                             'name' => 'icon_background',
                                             'label' => esc_html__('Icon Button Background', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
@@ -92,6 +74,24 @@ pxl_add_custom_widget(
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
                                                 '{{WRAPPER}} .mailchimp-form button i' => 'color: {{VALUE}};',
+                                            ],
+                                        ),
+                                        array(
+                                            'name' => 'input_border_radius',
+                                            'label' => esc_html__('Input Border Radius', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                                            'size_units' => [ 'px' ],
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form input:not([type="submit"])' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                            ],
+                                        ),
+                                        array(
+                                            'name' => 'button_border_radius',
+                                            'label' => esc_html__('Button Border Radius', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                                            'size_units' => [ 'px' ],
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form input[type="submit"], {{WRAPPER}} .mailchimp-form button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                             ],
                                         ),
                                     )
