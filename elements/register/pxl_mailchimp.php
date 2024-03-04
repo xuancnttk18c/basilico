@@ -181,7 +181,7 @@ pxl_add_custom_widget(
                                                 'groove' => esc_html__( 'Groove', 'basilico' ),
                                             ],
                                             'selectors' => [
-                                                '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-style: {{VALUE}};',
+                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'border-style: {{VALUE}};',
                                             ],
                                         ),
                                         array(
@@ -189,7 +189,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__( 'Border Width', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                                             'selectors' => [
-                                                '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                             ],
                                             'responsive' => true,
                                         ),
@@ -199,7 +199,7 @@ pxl_add_custom_widget(
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'default' => '',
                                             'selectors' => [
-                                                '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-color: {{VALUE}};'
+                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'border-color: {{VALUE}};'
                                             ],
                                             'condition' => [
                                                 'border_type!' => '',
@@ -211,7 +211,7 @@ pxl_add_custom_widget(
                                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                                             'size_units' => [ 'px' ],
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                             ],
                                             'control_type' => 'responsive',
                                         ),
