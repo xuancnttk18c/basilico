@@ -168,12 +168,50 @@ pxl_add_custom_widget(
                                             ]
                                         ),
                                         array(
+                                            'name' => 'border_type',
+                                            'label' => esc_html__( 'Border Type', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::SELECT,
+                                            'separator' => 'before',
+                                            'options' => [
+                                                '' => esc_html__( 'None', 'basilico' ),
+                                                'solid' => esc_html__( 'Solid', 'basilico' ),
+                                                'double' => esc_html__( 'Double', 'basilico' ),
+                                                'dotted' => esc_html__( 'Dotted', 'basilico' ),
+                                                'dashed' => esc_html__( 'Dashed', 'basilico' ),
+                                                'groove' => esc_html__( 'Groove', 'basilico' ),
+                                            ],
+                                            'selectors' => [
+                                                '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-style: {{VALUE}};',
+                                            ],
+                                        ),
+                                        array(
+                                            'name' => 'border_width',
+                                            'label' => esc_html__( 'Border Width', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                                            'selectors' => [
+                                                '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                            ],
+                                            'responsive' => true,
+                                        ),
+                                        array(
+                                            'name' => 'border_color',
+                                            'label' => esc_html__( 'Border Color', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::COLOR,
+                                            'default' => '',
+                                            'selectors' => [
+                                                '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-color: {{VALUE}};'
+                                            ],
+                                            'condition' => [
+                                                'border_type!' => '',
+                                            ],
+                                        ),
+                                        array(
                                             'name' => 'btn_border_radius',
                                             'label' => esc_html__('Border Radius', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                                             'size_units' => [ 'px' ],
                                             'selectors' => [
-                                                '{{WRAPPER}} .pxl-button-wrapper .btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                             ],
                                             'control_type' => 'responsive',
                                         ),

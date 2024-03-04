@@ -150,7 +150,7 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-button-wrapper .pxl-icon' => 'font-size: {{SIZE}}{{UNIT}};',
                             ],
-                        ), 
+                        ),
                     ),
                 ),
                 array(
