@@ -160,19 +160,12 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Distance To Input Border (px)', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::NUMBER,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'top: {{VALUE}}px; right: {{VALUE}}px; height: calc( var(--input-height) - {{VALUE}}px );',
+                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'top: {{VALUE}}px; right: {{VALUE}}px; height: calc( var(--input-height) - ({{VALUE}}px * 2) );',
                                             ],
                                             'control_type' => 'responsive',
-                                        ),
-                                        array(
-                                            'name' => 'btn_padding',
-                                            'label' => esc_html__('Padding', 'basilico' ),
-                                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                                            'size_units' => [ 'px' ],
-                                            'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                            ],
-                                            'control_type' => 'responsive',
+                                            'condition' => [
+                                                'style' => 'style-2'
+                                            ]
                                         ),
                                     )
                                 ),
