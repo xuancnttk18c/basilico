@@ -29,49 +29,82 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'hide_icon',
-                            'label' => esc_html__('Hide Icon', 'basilico' ),
+                            'label' => esc_html__('Hide Icon?', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SWITCHER,
                             'default' => false
                         ),
                         array(
-                            'name' => 'input_background',
-                            'label' => esc_html__('Input Background', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'selectors' => [
-                                '{{WRAPPER}} .mailchimp-form input' => 'background-color: {{VALUE}};',
-                            ],
-                        ),
-                        array(
-                            'name' => 'input_text_color',
-                            'label' => esc_html__('Input Text Color', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'selectors' => [
-                                '{{WRAPPER}} .mailchimp-form input' => 'color: {{VALUE}};',
-                            ],
-                        ),
-                        array(
-                            'name' => 'input_border_color',
-                            'label' => esc_html__('Input Border Color', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'selectors' => [
-                                '{{WRAPPER}} .mailchimp-form input' => 'border-color: {{VALUE}};',
-                            ],
-                        ),
-                        array(
-                            'name' => 'icon_color',
-                            'label' => esc_html__('Icon Color', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'selectors' => [
-                                '{{WRAPPER}} .mailchimp-form button' => 'color: {{VALUE}};',
-                            ],
-                        ),
-                        array(
-                            'name' => 'icon_background',
-                            'label' => esc_html__('Icon Background', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'selectors' => [
-                                '{{WRAPPER}} .mailchimp-form button' => 'background-color: {{VALUE}};',
-                            ],
+                            'name' => 'button_style_tabs',
+                            'control_type' => 'tab',
+                            'tabs' => array(
+                                array(
+                                    'name' => 'mc_style_normal',
+                                    'label' => esc_html__('Normal', 'basilico'),
+                                    'controls' => array(
+                                        array(
+                                            'name' => 'input_background',
+                                            'label' => esc_html__('Input Background', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::COLOR,
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form input' => 'background-color: {{VALUE}};',
+                                            ],
+                                        ),
+                                        array(
+                                            'name' => 'input_typography',
+                                            'label' => esc_html__('Input Typography', 'basilico' ),
+                                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                                            'control_type' => 'group',
+                                            'selector' => '{{WRAPPER}} .mailchimp-form input',
+                                        ),
+                                        array(
+                                            'name' => 'input_text_color',
+                                            'label' => esc_html__('Input Text Color', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::COLOR,
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form input' => 'color: {{VALUE}};',
+                                            ],
+                                        ),
+                                        array(
+                                            'name' => 'input_border_color',
+                                            'label' => esc_html__('Input Border Color', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::COLOR,
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form input' => 'border-color: {{VALUE}};',
+                                            ],
+                                        ),
+                                        array(
+                                            'name' => 'icon_background',
+                                            'label' => esc_html__('Icon Button Background', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::COLOR,
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form button' => 'background-color: {{VALUE}};',
+                                            ],
+                                        ),
+                                        array(
+                                            'name' => 'icon_color',
+                                            'label' => esc_html__('Icon Button Color', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::COLOR,
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form button i' => 'color: {{VALUE}};',
+                                            ],
+                                        ),
+                                    )
+                                ),
+                                array(
+                                    'name' => 'mc_style_hover',
+                                    'label' => esc_html__('Hover', 'basilico'),
+                                    'controls' => array(
+                                        array(
+                                            'name' => 'icon_color_hover',
+                                            'label' => esc_html__('Icon Button Color', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::COLOR,
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form button:hover i' => 'color: {{VALUE}};',
+                                            ],
+                                        ),
+                                    )
+                                ),
+                            )
                         ),
                     ),
                 ),
