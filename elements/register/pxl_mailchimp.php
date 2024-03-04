@@ -147,8 +147,8 @@ pxl_add_custom_widget(
                                             ],
                                         ),
                                         array(
-                                            'name' => 'btn_width (px)',
-                                            'label' => esc_html__('Button Width', 'basilico' ),
+                                            'name' => 'btn_width',
+                                            'label' => esc_html__('Button Width (px)', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::NUMBER,
                                             'selectors' => [
                                                 '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'width: {{VALUE}}px !important;',
