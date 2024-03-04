@@ -93,7 +93,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Input Background', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .pxl-mailchimp input[type="text"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="password"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="email"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="phone"]:focus' => 'background-color: {{VALUE}};',
+                                                '{{WRAPPER}} .pxl-mailchimp input[type="text"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="password"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="email"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="phone"]:focus, {{WRAPPER}} .pxl-mailchimp input:focus + button' => 'background-color: {{VALUE}};',
                                             ],
                                         ),
                                         array(
