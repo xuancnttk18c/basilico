@@ -1044,7 +1044,7 @@
                 height: $input_height;
                 @include transition();
             }
-            label[for="AGREE_TO_TERMS"] {
+            .label-checkbox {
                 position: relative;
                 display: flex;
                 flex-wrap: nowrap;
