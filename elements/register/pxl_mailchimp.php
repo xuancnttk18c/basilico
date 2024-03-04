@@ -28,12 +28,6 @@ pxl_add_custom_widget(
                             'default' => 'style-default',
                         ),
                         array(
-                            'name' => 'hide_icon',
-                            'label' => esc_html__('Hide Icon?', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::SWITCHER,
-                            'default' => false
-                        ),
-                        array(
                             'name' => 'button_style_tabs',
                             'control_type' => 'tab',
                             'tabs' => array(
@@ -99,12 +93,18 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Icon Button Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button:hover i' => 'color: {{VALUE}};',
+                                                '{{WRAPPER}} .mailchimp-form input[type="text"]:hover button i' => 'color: {{VALUE}};',
                                             ],
                                         ),
                                     )
                                 ),
                             )
+                        ),
+                        array(
+                            'name' => 'hide_icon',
+                            'label' => esc_html__('Hide Icon?', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                            'default' => false
                         ),
                     ),
                 ),
