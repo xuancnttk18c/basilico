@@ -101,6 +101,12 @@ pxl_add_custom_widget(
                             'default' => false,
                             'separator' => 'before',
                         ),
+                        array(
+                            'name' => 'hide_button_text',
+                            'label' => esc_html__('Hide Button Text?', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                            'default' => false,
+                        ),
                     ),
                 ),
             ),

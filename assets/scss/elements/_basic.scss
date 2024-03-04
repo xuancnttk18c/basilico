@@ -1411,6 +1411,14 @@
             display: none;
         }
     }
+    &.hide-text {
+        button,
+        input[type="submit"] {
+            *:not(i) {
+                font-size: 0;
+            }
+        }
+    }
 }
 
 //* Pxl Cart
