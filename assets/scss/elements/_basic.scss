@@ -1023,6 +1023,15 @@
         z-index: 999;
         font-size: 13px;
         box-shadow: 0px 5px 83px 0px rgba(3, 43, 86, 0.12);
+        input[type="email"],
+        input[type="text"],
+        input[type="password"],
+        input[type="phone"] {
+            @include placeholder() {
+                font-size: inherit;
+                color: inherit;
+            }
+        }
         &:empty {
             display: none;
         }
@@ -1032,10 +1041,16 @@
             margin-bottom: 0;
         }
         input[type="email"],
-        input[type="text"] {
+        input[type="text"],
+        input[type="password"],
+        input[type="phone"] {
             background-color: transparent;
             border: 1px solid $primary_color;
             padding: 0 60px 0 20px;
+            @include placeholder() {
+                font-size: inherit;
+                color: inherit;
+            }
         }
         button {
             position: absolute;
