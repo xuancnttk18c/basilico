@@ -57,7 +57,25 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Input Border Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form input' => 'border-color: {{VALUE}};',
+                                                '{{WRAPPER}} .mailchimp-form input:not([type="submit"])' => 'border-color: {{VALUE}};',
+                                            ],
+                                        ),
+                                        array(
+                                            'name' => 'input_border_radius',
+                                            'label' => esc_html__('Border Radius', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                                            'size_units' => [ 'px' ],
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form input:not([type="submit"])' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                            ],
+                                        ),
+                                        array(
+                                            'name' => 'button_border_radius',
+                                            'label' => esc_html__('Border Radius', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                                            'size_units' => [ 'px' ],
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form input[type="submit"], {{WRAPPER}} .mailchimp-form button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                             ],
                                         ),
                                         array(
