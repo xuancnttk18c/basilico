@@ -1054,11 +1054,11 @@
         }
         button {
             position: absolute;
-            top: 0;
-            right: 0;
+            top: 1;
+            right: 1;
             margin: 0;
             width: auto;
-            height: $input_height;
+            height: calc($input_height - 2px);
             @include transition();
         }
         
