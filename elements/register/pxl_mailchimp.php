@@ -116,6 +116,13 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Normal', 'basilico'),
                                     'controls' => array(
                                         array(
+                                            'name' => 'typography',
+                                            'label' => esc_html__('Button Typography', 'basilico' ),
+                                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                                            'control_type' => 'group',
+                                            'selector' => '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]',
+                                        ),
+                                        array(
                                             'name' => 'btn_background',
                                             'label' => esc_html__('Button Background', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
@@ -139,10 +146,38 @@ pxl_add_custom_widget(
                                                 '{{WRAPPER}} .mailchimp-form button i' => 'color: {{VALUE}} !important;',
                                             ],
                                         ),
+                                        array(
+                                            'name' => 'btn_padding',
+                                            'label' => esc_html__('Padding', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                                            'size_units' => [ 'px' ],
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                            ],
+                                            'control_type' => 'responsive',
+                                            'seperator' => 'before'
+                                        ),
+                                        array(
+                                            'name' => 'btn_width (px)',
+                                            'label' => esc_html__('Button Width', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::NUMBER,
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'width: {{VALUE}}px !important;',
+                                            ],
+                                        ),
+                                        array(
+                                            'name' => 'btn_distance',
+                                            'label' => esc_html__('Distance To Input Border (px)', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::NUMBER,
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'top: {{VALUE}}px; right: {{VALUE}}px; height: calc( var(--input-height) - {{VALUE}}px );',
+                                            ],
+                                            'control_type' => 'responsive',
+                                        ),
                                     )
                                 ),
                                 array(
-                                    'name' => 'mc_style_hover',
+                                    'name' => 'btn_style_hover',
                                     'label' => esc_html__('Hover', 'basilico'),
                                     'controls' => array(
                                         array(
