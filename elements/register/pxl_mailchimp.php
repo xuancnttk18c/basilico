@@ -44,18 +44,12 @@ pxl_add_custom_widget(
                                             ],
                                         ),
                                         array(
-                                            'name' => 'input_typography',
-                                            'label' => esc_html__('Input Typography', 'basilico' ),
-                                            'type' => \Elementor\Group_Control_Typography::get_type(),
-                                            'control_type' => 'group',
-                                            'selector' => '{{WRAPPER}} .mailchimp-form input',
-                                        ),
-                                        array(
                                             'name' => 'input_text_color',
                                             'label' => esc_html__('Input Text Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
                                                 '{{WRAPPER}} .mailchimp-form input' => 'color: {{VALUE}};',
+                                                '{{WRAPPER}} .mailchimp-form input::placeholder' => 'color: {{VALUE}};',
                                             ],
                                         ),
                                         array(
