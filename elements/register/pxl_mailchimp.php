@@ -89,7 +89,7 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Hover', 'basilico'),
                                     'controls' => array(
                                         array(
-                                            'name' => 'input_background',
+                                            'name' => 'input_background_hover',
                                             'label' => esc_html__('Input Background Hover/Focus', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
