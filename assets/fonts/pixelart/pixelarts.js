@@ -228,6 +228,7 @@
 		"healthcare",
 		"help",
 		"piggy-bank",
-		"save-money"
+		"save-money",
+		"coffee-bean"
     ]
 }

@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'pxli';
   src:
-    url('fonts/pxli.ttf?aghm4s') format('truetype'),
-    url('fonts/pxli.woff?aghm4s') format('woff'),
-    url('fonts/pxli.svg?aghm4s#pxli') format('svg');
+    url('fonts/pxli.ttf?b3k802') format('truetype'),
+    url('fonts/pxli.woff?b3k802') format('woff'),
+    url('fonts/pxli.svg?b3k802#pxli') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pxli-coffee-bean:before {
+  content: "\e9e6";
+}
 .pxli-pizza-slice:before {
   content: "\e9e5";
 }
