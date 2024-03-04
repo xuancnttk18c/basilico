@@ -1044,18 +1044,6 @@
                 height: $input_height;
                 @include transition();
             }
-            .label-checkbox {
-                position: relative;
-                display: flex;
-                flex-wrap: nowrap;
-                &:before {
-                    content: '';
-                    width: 15px;
-                    height: 15px;
-                    border: 1px solid $primary_color;
-                    @include border-radius(2px);
-                }
-            }
         }
     }
     &.hide-icon {
