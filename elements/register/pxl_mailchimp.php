@@ -54,7 +54,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Input Background', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .pxl-mailchimp input:not([type="submit"]):not(type="checkbox")' => 'background-color: {{VALUE}} !important;',
+                                                '{{WRAPPER}} .pxl-mailchimp input:not([type="submit"]), {{WRAPPER}} .pxl-mailchimp input:not([type="checkbox"])' => 'background-color: {{VALUE}} !important;',
                                             ],
                                         ),
                                         array(
@@ -62,7 +62,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Input Text Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .pxl-mailchimp input:not([type="submit"]):not(type="checkbox"), {{WRAPPER}} .pxl-mailchimp input:not([type="submit"]):not(type="checkbox")::placeholder' => 'color: {{VALUE}} !important;',
+                                                '{{WRAPPER}} .pxl-mailchimp input:not([type="submit"]), {{WRAPPER}} .pxl-mailchimp input:not([type="checkbox"]), {{WRAPPER}} .pxl-mailchimp input:not([type="submit"])::placeholder, {{WRAPPER}} .pxl-mailchimp input:not([type="checkbox"])::placeholder' => 'color: {{VALUE}} !important;',
                                             ],
                                         ),
                                         array(
@@ -108,7 +108,7 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_STYLE,
                     'controls' => array(
                         array(
-                            'name' => 'mc_style_btn_tabs',
+                            'name' => 'style_btn_tabs',
                             'control_type' => 'tab',
                             'tabs' => array(
                                 array(
@@ -241,6 +241,30 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_STYLE,
                     'controls' => array(
                         array(
+                            'name' => 'lb_typography',
+                            'label' => esc_html__('Label Typography', 'basilico' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}} .pxl-mailchimp label',
+                        ),
+                        array(
+                            'name' => 'lb_color',
+                            'label' => esc_html__('Label Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-mailchimp label' => 'color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'link_color',
+                            'label' => esc_html__('Link Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-mailchimp label a' => 'color: {{VALUE}};',
+                            ],
+                            'separator' => 'after'
+                        ),
+                        array(
                             'name' => 'cb_margin',
                             'label' => esc_html__( 'Checkbox Margin', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
@@ -264,30 +288,6 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::NUMBER,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-mailchimp input[type="checkbox"]' => 'width: {{VALUE}}px;',
-                            ],
-                            'separator' => 'after'
-                        ),
-                        array(
-                            'name' => 'lb_typography',
-                            'label' => esc_html__('Label Typography', 'basilico' ),
-                            'type' => \Elementor\Group_Control_Typography::get_type(),
-                            'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-mailchimp label',
-                        ),
-                        array(
-                            'name' => 'lb_color',
-                            'label' => esc_html__('Label Color', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-mailchimp label' => 'color: {{VALUE}};',
-                            ],
-                        ),
-                        array(
-                            'name' => 'link_color',
-                            'label' => esc_html__('Link Color', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-mailchimp label a' => 'color: {{VALUE}};',
                             ],
                         ),
                     ),
