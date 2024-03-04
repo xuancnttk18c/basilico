@@ -1042,19 +1042,7 @@
                 margin: 0;
                 width: auto;
                 height: $input_height;
-                background-color: transparent;
-                border: none;
-                color: $primary_color;
                 @include transition();
-                &:before {
-                    content: none;
-                }
-                &:hover {
-                    i {
-                        color: $primary_color;
-                        animation: toRightFromLeft 0.3s forwards;
-                    }
-                }
             }
         }
     }

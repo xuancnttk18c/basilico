@@ -124,7 +124,7 @@ pxl_add_custom_widget(
                                         ),
                                         array(
                                             'name' => 'btn_background',
-                                            'label' => esc_html__('Button Background', 'basilico' ),
+                                            'label' => esc_html__('Background Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
                                                 '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'background-color: {{VALUE}} !important;',
@@ -132,7 +132,7 @@ pxl_add_custom_widget(
                                         ),
                                         array(
                                             'name' => 'btn_color',
-                                            'label' => esc_html__('Button Color', 'basilico' ),
+                                            'label' => esc_html__('Text Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
                                                 '{{WRAPPER}} .mailchimp-form button' => 'color: {{VALUE}} !important;',
@@ -140,7 +140,7 @@ pxl_add_custom_widget(
                                         ),
                                         array(
                                             'name' => 'btn_icon_color',
-                                            'label' => esc_html__('Button Icon Color', 'basilico' ),
+                                            'label' => esc_html__('Icon Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
                                                 '{{WRAPPER}} .mailchimp-form button i' => 'color: {{VALUE}} !important;',
@@ -148,7 +148,7 @@ pxl_add_custom_widget(
                                         ),
                                         array(
                                             'name' => 'btn_width',
-                                            'label' => esc_html__('Button Width (px)', 'basilico' ),
+                                            'label' => esc_html__('Width (px)', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::NUMBER,
                                             'selectors' => [
                                                 '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'width: {{VALUE}}px !important; padding: 0 !important;',
@@ -166,6 +166,16 @@ pxl_add_custom_widget(
                                             'condition' => [
                                                 'style' => 'style-2'
                                             ]
+                                        ),
+                                        array(
+                                            'name' => 'btn_border_radius',
+                                            'label' => esc_html__('Border Radius', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                                            'size_units' => [ 'px' ],
+                                            'selectors' => [
+                                                '{{WRAPPER}} .pxl-button-wrapper .btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                            ],
+                                            'control_type' => 'responsive',
                                         ),
                                     )
                                 ),
