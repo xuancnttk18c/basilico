@@ -1044,13 +1044,12 @@
                 height: $input_height;
                 @include transition();
             }
-            input[type="checkbox"] {
+            label[for="AGREE_TO_TERMS"] {
                 position: relative;
+                display: flex;
+                flex-wrap: nowrap;
                 &:before {
                     content: '';
-                    position: absolute;
-                    left: 0;
-                    top: 0;
                     width: 15px;
                     height: 15px;
                     border: 1px solid $primary_color;
