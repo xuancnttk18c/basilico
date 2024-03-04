@@ -93,7 +93,8 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Input Background', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .pxl-mailchimp input[type="text"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="password"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="email"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="phone"]:focus, {{WRAPPER}} .pxl-mailchimp input:focus + button' => 'background-color: {{VALUE}};',
+                                                '{{WRAPPER}} .pxl-mailchimp input[type="text"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="password"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="email"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="phone"]:focus,
+                                                {{WRAPPER}} .pxl-mailchimp input[type="text"]:hover, {{WRAPPER}} .pxl-mailchimp input[type="password"]:hover, {{WRAPPER}} .pxl-mailchimp input[type="email"]:hover, {{WRAPPER}} .pxl-mailchimp input[type="phone"]:hover, {{WRAPPER}} .pxl-mailchimp input[type="submit"]:focus + button, {{WRAPPER}} .pxl-mailchimp input[type="submit"]:hover + button' => 'background-color: {{VALUE}};',
                                             ],
                                         ),
                                         array(
@@ -101,7 +102,8 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Input Text Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .pxl-mailchimp input:not(type="submit"):hover, {{WRAPPER}} .pxl-mailchimp input:not(type="submit"):focus, {{WRAPPER}} .pxl-mailchimp input:not(type="checkbox"):hover, {{WRAPPER}} .pxl-mailchimp input:not(type="checkbox"):focus' => 'color: {{VALUE}};',
+                                                '{{WRAPPER}} .pxl-mailchimp input[type="text"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="password"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="email"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="phone"]:focus,
+                                                {{WRAPPER}} .pxl-mailchimp input[type="text"]:hover, {{WRAPPER}} .pxl-mailchimp input[type="password"]:hover, {{WRAPPER}} .pxl-mailchimp input[type="email"]:hover, {{WRAPPER}} .pxl-mailchimp input[type="phone"]:hover' => 'color: {{VALUE}};',
                                             ],
                                         ),
                                         array(
@@ -109,7 +111,8 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Input Border Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .pxl-mailchimp input:not(type="submit"):hover, {{WRAPPER}} .pxl-mailchimp input:not(type="submit"):focus, {{WRAPPER}} .pxl-mailchimp input:not(type="checkbox"):hover, {{WRAPPER}} .pxl-mailchimp input:not(type="checkbox"):focus' => 'border-color: {{VALUE}};',
+                                                '{{WRAPPER}} .pxl-mailchimp input[type="text"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="password"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="email"]:focus, {{WRAPPER}} .pxl-mailchimp input[type="phone"]:focus,
+                                                {{WRAPPER}} .pxl-mailchimp input[type="text"]:hover, {{WRAPPER}} .pxl-mailchimp input[type="password"]:hover, {{WRAPPER}} .pxl-mailchimp input[type="email"]:hover, {{WRAPPER}} .pxl-mailchimp input[type="phone"]:hover' => 'border-color: {{VALUE}};',
                                             ],
                                         ),
                                     )
