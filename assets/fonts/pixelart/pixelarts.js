@@ -229,6 +229,7 @@
 		"help",
 		"piggy-bank",
 		"save-money",
-		"coffee-bean"
+		"coffee-bean",
+		"telegram-plane"
     ]
 }

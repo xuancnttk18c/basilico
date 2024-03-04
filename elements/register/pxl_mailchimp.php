@@ -54,7 +54,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Input Background', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form input:not([type="submit"]):not(type="checkbox")' => 'background-color: {{VALUE}} !important;',
+                                                '{{WRAPPER}} .pxl-mailchimp input:not([type="submit"]):not(type="checkbox")' => 'background-color: {{VALUE}} !important;',
                                             ],
                                         ),
                                         array(
@@ -62,7 +62,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Input Text Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form input:not([type="submit"]):not(type="checkbox"), {{WRAPPER}} .mailchimp-form input:not([type="submit"]):not(type="checkbox")::placeholder' => 'color: {{VALUE}} !important;',
+                                                '{{WRAPPER}} .pxl-mailchimp input:not([type="submit"]):not(type="checkbox"), {{WRAPPER}} .pxl-mailchimp input:not([type="submit"]):not(type="checkbox")::placeholder' => 'color: {{VALUE}} !important;',
                                             ],
                                         ),
                                         array(
@@ -70,7 +70,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Input Border Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form input:not([type="submit"])' => 'border-color: {{VALUE}} !important;',
+                                                '{{WRAPPER}} .pxl-mailchimp input:not([type="submit"])' => 'border-color: {{VALUE}} !important;',
                                             ],
                                         ),
                                         array(
@@ -79,7 +79,7 @@ pxl_add_custom_widget(
                                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                                             'size_units' => [ 'px', 'em' ],
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form input[type="text"], {{WRAPPER}} .mailchimp-form input[type="password"], {{WRAPPER}} .mailchimp-form input[type="email"], {{WRAPPER}} .mailchimp-form input[type="phone"]' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                                '{{WRAPPER}} .pxl-mailchimp input[type="text"], {{WRAPPER}} .pxl-mailchimp input[type="password"], {{WRAPPER}} .pxl-mailchimp input[type="email"], {{WRAPPER}} .pxl-mailchimp input[type="phone"]' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                             ],
                                         ),
                                     )
@@ -93,7 +93,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Input Background Hover/Focus', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form input:not(type="submit"):not(type="checkbox"):hover, {{WRAPPER}} .mailchimp-form input:focus' => 'background-color: {{VALUE}} !important;',
+                                                '{{WRAPPER}} .pxl-mailchimp input:not(type="submit"):not(type="checkbox"):hover, {{WRAPPER}} .pxl-mailchimp input:focus' => 'background-color: {{VALUE}} !important;',
                                             ],
                                         ),
                                     )
@@ -120,14 +120,14 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Button Typography', 'basilico' ),
                                             'type' => \Elementor\Group_Control_Typography::get_type(),
                                             'control_type' => 'group',
-                                            'selector' => '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]',
+                                            'selector' => '{{WRAPPER}} .pxl-mailchimp button, {{WRAPPER}} .pxl-mailchimp input[type="submit"]',
                                         ),
                                         array(
                                             'name' => 'btn_background',
                                             'label' => esc_html__('Background Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'background-color: {{VALUE}} !important;',
+                                                '{{WRAPPER}} .pxl-mailchimp button, {{WRAPPER}} .pxl-mailchimp input[type="submit"]' => 'background-color: {{VALUE}} !important;',
                                             ],
                                         ),
                                         array(
@@ -135,7 +135,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Text Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button' => 'color: {{VALUE}} !important;',
+                                                '{{WRAPPER}} .pxl-mailchimp button' => 'color: {{VALUE}} !important;',
                                             ],
                                         ),
                                         array(
@@ -143,7 +143,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Icon Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button i' => 'color: {{VALUE}} !important;',
+                                                '{{WRAPPER}} .pxl-mailchimp button i' => 'color: {{VALUE}} !important;',
                                             ],
                                         ),
                                         array(
@@ -151,7 +151,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Width (px)', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::NUMBER,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'width: {{VALUE}}px !important; padding: 0 !important;',
+                                                '{{WRAPPER}} .pxl-mailchimp button, {{WRAPPER}} .pxl-mailchimp input[type="submit"]' => 'width: {{VALUE}}px !important; padding: 0 !important;',
                                             ],
                                             'separator' => 'before'
                                         ),
@@ -160,7 +160,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Distance To Input Border (px)', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::NUMBER,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'top: {{VALUE}}px; right: {{VALUE}}px; height: calc( var(--input-height) - ({{VALUE}}px * 2) );',
+                                                '{{WRAPPER}} .pxl-mailchimp button, {{WRAPPER}} .pxl-mailchimp input[type="submit"]' => 'top: {{VALUE}}px; right: {{VALUE}}px; height: calc( var(--input-height) - ({{VALUE}}px * 2) );',
                                             ],
                                             'control_type' => 'responsive',
                                             'condition' => [
@@ -181,7 +181,7 @@ pxl_add_custom_widget(
                                                 'groove' => esc_html__( 'Groove', 'basilico' ),
                                             ],
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'border-style: {{VALUE}};',
+                                                '{{WRAPPER}} .pxl-mailchimp button, {{WRAPPER}} .pxl-mailchimp input[type="submit"]' => 'border-style: {{VALUE}};',
                                             ],
                                         ),
                                         array(
@@ -189,7 +189,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__( 'Border Width', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                                '{{WRAPPER}} .pxl-mailchimp button, {{WRAPPER}} .pxl-mailchimp input[type="submit"]' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                             ],
                                             'responsive' => true,
                                         ),
@@ -199,7 +199,7 @@ pxl_add_custom_widget(
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'default' => '',
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'border-color: {{VALUE}};'
+                                                '{{WRAPPER}} .pxl-mailchimp button, {{WRAPPER}} .pxl-mailchimp input[type="submit"]' => 'border-color: {{VALUE}};'
                                             ],
                                             'condition' => [
                                                 'border_type!' => '',
@@ -211,7 +211,7 @@ pxl_add_custom_widget(
                                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                                             'size_units' => [ 'px' ],
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                                '{{WRAPPER}} .pxl-mailchimp button, {{WRAPPER}} .pxl-mailchimp input[type="submit"]' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                             ],
                                             'control_type' => 'responsive',
                                         ),
@@ -226,7 +226,7 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Button Hover Background', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button:hover, {{WRAPPER}} .mailchimp-form input[type="submit"]:hover' => 'background-color: {{VALUE}} !important;',
+                                                '{{WRAPPER}} .pxl-mailchimp button:hover, {{WRAPPER}} .pxl-mailchimp input[type="submit"]:hover' => 'background-color: {{VALUE}} !important;',
                                             ],
                                         ),
                                     )
@@ -245,7 +245,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Checkbox Margin', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'selectors' => [
-                                '{{WRAPPER}} .mailchimp-form input[type="checkbox"]' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-mailchimp input[type="checkbox"]' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'responsive' => true
@@ -255,7 +255,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Checkbox Checked Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .mailchimp-form input[type="checkbox"]' => 'accent-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-mailchimp input[type="checkbox"]' => 'accent-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -263,7 +263,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Checkbox Width (px)', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::NUMBER,
                             'selectors' => [
-                                '{{WRAPPER}} .mailchimp-form input[type="checkbox"]' => 'width: {{VALUE}}px;',
+                                '{{WRAPPER}} .pxl-mailchimp input[type="checkbox"]' => 'width: {{VALUE}}px;',
                             ],
                             'separator' => 'after'
                         ),
@@ -272,7 +272,23 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Label Typography', 'basilico' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .mailchimp-form label',
+                            'selector' => '{{WRAPPER}} .pxl-mailchimp label',
+                        ),
+                        array(
+                            'name' => 'lb_color',
+                            'label' => esc_html__('Label Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-mailchimp label' => 'color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'link_color',
+                            'label' => esc_html__('Link Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-mailchimp label a' => 'color: {{VALUE}};',
+                            ],
                         ),
                     ),
                 ),
