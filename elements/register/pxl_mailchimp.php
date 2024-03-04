@@ -147,23 +147,13 @@ pxl_add_custom_widget(
                                             ],
                                         ),
                                         array(
-                                            'name' => 'btn_padding',
-                                            'label' => esc_html__('Padding', 'basilico' ),
-                                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                                            'size_units' => [ 'px' ],
-                                            'selectors' => [
-                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                            ],
-                                            'control_type' => 'responsive',
-                                            'seperator' => 'before'
-                                        ),
-                                        array(
                                             'name' => 'btn_width (px)',
                                             'label' => esc_html__('Button Width', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::NUMBER,
                                             'selectors' => [
                                                 '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'width: {{VALUE}}px !important;',
                                             ],
+                                            'separator' => 'before'
                                         ),
                                         array(
                                             'name' => 'btn_distance',
@@ -171,6 +161,16 @@ pxl_add_custom_widget(
                                             'type' => \Elementor\Controls_Manager::NUMBER,
                                             'selectors' => [
                                                 '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'top: {{VALUE}}px; right: {{VALUE}}px; height: calc( var(--input-height) - {{VALUE}}px );',
+                                            ],
+                                            'control_type' => 'responsive',
+                                        ),
+                                        array(
+                                            'name' => 'btn_padding',
+                                            'label' => esc_html__('Padding', 'basilico' ),
+                                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                                            'size_units' => [ 'px' ],
+                                            'selectors' => [
+                                                '{{WRAPPER}} .mailchimp-form button, {{WRAPPER}} .mailchimp-form input[type="submit"]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                             ],
                                             'control_type' => 'responsive',
                                         ),
