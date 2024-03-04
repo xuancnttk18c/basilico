@@ -30,7 +30,6 @@ pxl_add_custom_widget(
                         array(
                             'name' => 'button_style_tabs',
                             'control_type' => 'tab',
-                            'separator' => 'after',
                             'tabs' => array(
                                 array(
                                     'name' => 'mc_style_normal',
@@ -99,7 +98,8 @@ pxl_add_custom_widget(
                             'name' => 'hide_icon',
                             'label' => esc_html__('Hide Icon?', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SWITCHER,
-                            'default' => false
+                            'default' => false,
+                            'separator' => 'before',
                         ),
                     ),
                 ),
