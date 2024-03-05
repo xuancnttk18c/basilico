@@ -491,6 +491,80 @@
             }
         }
     }
+    &.layout-post-3 {
+        .item-featured {
+            position: relative;
+            .post-image {
+                overflow: hidden;
+                @include border-radius(20px);
+                transition: all 400ms ease-out;
+            }
+            .post-metas {
+                position: absolute;
+                left: 13px;
+                right: 13px;
+                bottom: 11px;
+                margin-bottom: 0;
+                padding: 10px;
+                background-color: $primary_color;
+                color: #fff;
+                @include border-radius(21.5px);
+                i {
+                    font-size: 13px;
+                    margin-right: 6px;
+                    color: #fff;
+                }
+                .meta-inner {
+                    padding-left: 6px;
+                    padding-right: 6px;
+                    justify-content: center;
+                    column-gap: 22px;
+                    a {
+                        color: #fff;
+                    }
+                    .post-tags {
+                        a + a {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .item-title {
+            @include text-truncate-multi-line(22px, 1.363636363636364, 2);
+            font-weight: 600;
+            text-transform: none;
+            text-align: center;
+            letter-spacing: 0.02em;
+            margin-top: 23px;
+            margin-bottom: 0;
+        }
+        .item-excerpt {
+            overflow: hidden;
+            @include text-truncate-multi-line(15px, 1.666666666666667, 3);
+            text-align: center;
+            max-height: 0px;
+            transition: all 400ms ease-out;
+        }
+        .item-readmore {
+            margin-top: 33px;
+        }
+        .posts-pagination {
+            padding-top: 55px;
+        }
+        .grid-item {
+            margin-bottom: 20px;
+            &:hover {
+                .post-image {
+                    max-height: 100%;
+                }
+                .item-excerpt {
+                    //max-height: 75px;
+                    margin-top: 14px;
+                }
+            }
+        }
+    }
 }
 
 /* Pxl Post List */
