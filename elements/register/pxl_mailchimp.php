@@ -34,6 +34,12 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::SWITCHER,
                             'default' => false,
                         ),
+                        array(
+                            'name' => 'hide_lbcb',
+                            'label' => esc_html__('Hide Checkbox/Label', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                            'default' => false,
+                        ),
                     ),
                 ),
                 array(
@@ -307,6 +313,16 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-mailchimp label' => 'color: {{VALUE}};',
                             ],
+                        ),
+                        array(
+                            'name' => 'lb_margin',
+                            'label' => esc_html__( 'Label Margin', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-mailchimp label' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                            'control_type' => 'responsive',
+                            'responsive' => true
                         ),
                         array(
                             'name' => 'link_color',

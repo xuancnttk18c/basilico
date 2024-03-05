@@ -1054,8 +1054,8 @@
         }
         button {
             position: absolute;
-            top: 1;
-            right: 1;
+            top: 1px;
+            right: 1px;
             margin: 0;
             width: auto;
             height: calc($input_height - 2px);
@@ -1068,7 +1068,12 @@
             display: none;
         }
     }
-    &.hide_button_text {
+    &.hide-cblb {
+        label, input[type="checkbox"] {
+            display: none;
+        }
+    }
+    &.hide-button-text {
         button,
         input[type="submit"] {
             > *:not(i) {
