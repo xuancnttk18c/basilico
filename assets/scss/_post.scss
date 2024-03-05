@@ -539,9 +539,16 @@
 }
 
 .pxl-content-main.layout-5 {
-	.post-tags-share{
+	.post-tags-share {
+		font-weight: 500;
 		.label {
-			margin-right: 4px;
+			&:before {
+				content: "\e9e6";
+				font-family: $pxli_font;
+				color: $primary_color;
+				font-size: 13px;
+				margin-right: 10px;
+			}
 		}
 		.post-shares .label {
 			margin-right: 15px;
