@@ -40,6 +40,20 @@
         }
     }
 }
+
+.pxl-content-main.layout-5 {
+    .comments-area {
+        margin: 62px auto 0;
+        .comment-list-wrap {
+            margin-bottom: 40px;
+        }
+    }
+    &.no-sidebar {
+        .comments-area {
+            max-width: 770px;
+        }
+    }
+}
  
 .comments-title, .comment-reply-title {
     font-size: 30px;
@@ -240,6 +254,22 @@
         .comment-title {
             font-size: 17px;
             font-weight: 700;
+        }
+        .comment-reply-link {
+            font-weight: 500;
+            letter-spacing: 0;
+            background-color: $heading_color;
+            color: $secondary_color;
+        }
+    }
+}
+
+.pxl-content-main.layout-5 .commentlist {
+    .comment-content {
+        .comment-title {
+            font-family: $heading_font_family;
+            font-size: 17px;
+            font-weight: 500;
         }
         .comment-reply-link {
             font-weight: 500;
