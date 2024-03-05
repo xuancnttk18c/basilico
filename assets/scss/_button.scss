@@ -596,6 +596,7 @@
         letter-spacing: 0.15em;
         text-transform: uppercase;
         i {
+            margin-right: 8px;
             color: $primary_color;
         }
         &:after {
@@ -603,7 +604,8 @@
             background-color: $primary_color;
         }
         &:hover {
-            color: $primary_color;
+            color: $heading_color;
+            margin-right: 8px;
             &:after {
                 width: 100%;
             }
