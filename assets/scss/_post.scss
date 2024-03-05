@@ -488,9 +488,6 @@
 		display: inline-block;
 		font-size: 15px;
 		margin-right: 3px;
-		&:hover {
-			color: $heading_color;
-		}
 		&:not(:last-child) {
 			&:after {
 				content: ', ';
@@ -500,8 +497,11 @@
 }
 
 .pxl-content-main.layout-1 {
-	.post-tags-wrap {
+	.post-tags-wrap a {
 		@include multiline-hover-underline($heading_color);
+		&:hover {
+			color: $heading_color;
+		}
 	}
 }
 
