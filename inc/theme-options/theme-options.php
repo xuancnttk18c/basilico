@@ -416,7 +416,7 @@ Redux::setSection($opt_name, array(
                     'layout-2' => esc_html__('Layout 2', 'basilico'),
                     'layout-3' => esc_html__('Layout 3', 'basilico'),
                     'layout-4' => esc_html__('Layout 4', 'basilico'),
-                    'layout-5' => esc_html__('Layout 4', 'basilico'),
+                    'layout-5' => esc_html__('Layout 5', 'basilico'),
                 ),
                 'default'  => 'layout-1'
             ),
