@@ -507,11 +507,15 @@
                     &:after {
                         content: '';
                         width: 13px;
+                        height: 1px;
                         background-color: $primary_color;
                         display: inline-block;
                         right: 0;
                         top: 50%;
                         transform: translateY(-50%);
+                    }
+                    &:last-child:after {
+                        content: none;
                     }
                 }
                 a {
