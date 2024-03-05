@@ -1058,7 +1058,7 @@
             right: 1px;
             margin: 0;
             width: auto;
-            height: calc($input_height - 2px);
+            height: calc(#{$input_height} - 2px);
             @include transition();
         }
         
