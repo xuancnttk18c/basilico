@@ -632,7 +632,8 @@
 	}
 }
 
-.pxl-content-main.layout-3 .social-share {
+.pxl-content-main.layout-3 .social-share,
+.shop-layout-3 .social-share {
 	.d-flex {
 		margin-left: -2px;
 		margin-right: -2px;
@@ -653,7 +654,8 @@
 	}
 }
 
-.pxl-content-main.layout-4 .social-share {
+.pxl-content-main.layout-4 .social-share,
+.shop-layout-4 .social-share {
 	.pxl-icon {
 		border: 1px solid $divider_color;
 		color: $heading_color;
@@ -695,6 +697,20 @@
 		}
 	}
 }
+
+.pxl-content-main.layout-5 .social-share,
+.shop-layout-5 .social-share {
+	.pxl-icon {
+		border: none;
+		background-color: #e5e5e4;
+		color: $heading_color;
+		&:after {
+			background-color: $primary_color;
+			color: #fff;
+		}
+	}
+}
+
 
 .hover-share{
 	display: inline-flex;
