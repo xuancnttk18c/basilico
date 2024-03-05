@@ -590,6 +590,25 @@
             color: $primary_color;
         }
     }
+    &.style-3 {
+        font-family: $heading_font_family;
+        font-size: 15px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        i {
+            color: $primary_color;
+        }
+        &:after {
+            width: 0%;
+            background-color: $primary_color;
+        }
+        &:hover {
+            color: $primary_color;
+            &:after {
+                width: 100%;
+            }
+        }
+    }
 }
 
 .item-readmore .btn {
@@ -622,9 +641,7 @@
         i {
             @include animation(toRightFromLeft 0.3s forwards);
         }
-
     }
-
 }
 
 .bt-more-plus {
