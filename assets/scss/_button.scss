@@ -596,6 +596,8 @@
         letter-spacing: 0.15em;
         text-transform: uppercase;
         i {
+            max-width: none;
+            font-size: 13px;
             margin-right: 8px;
             color: $primary_color;
         }
