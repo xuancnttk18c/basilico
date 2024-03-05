@@ -313,6 +313,7 @@
 
 .pxl-content-main.layout-5 .post-metas {
 	@include d-flex();
+	background-color: transparent;
 	justify-content: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -338,6 +339,19 @@
 			&:after {
 				content: none;
 			}
+		}
+		a:after {
+			content: none;
+		}
+		i {
+			@include d-flex();
+			align-items: center;
+			justify-content: center;
+			font-size: 10px;
+			width: 32px;
+			height: 32px;
+			border: 1px solid rgba(215, 77, 41, 0.2);
+			@include border-radius(50%);
 		}
 	}
 	.post-tags {
