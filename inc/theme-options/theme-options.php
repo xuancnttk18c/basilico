@@ -303,6 +303,7 @@ Redux::setSection($opt_name, array(
                 'style-df' => get_template_directory_uri() . '/assets/images/pagination_layout/p1.jpg',
                 'style-2'  => get_template_directory_uri() . '/assets/images/pagination_layout/p2.jpg',
                 'style-3'  => get_template_directory_uri() . '/assets/images/pagination_layout/p3.jpg',
+                'style-4'  => get_template_directory_uri() . '/assets/images/pagination_layout/p4.jpg',
             ),
             'default' => 'style-df'
         ),
