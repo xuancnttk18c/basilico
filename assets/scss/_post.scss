@@ -538,6 +538,23 @@
 	}
 }
 
+.pxl-content-main.layout-5 {
+	.post-tags-share{
+		.label {
+			margin-right: 4px;
+		}
+		.post-shares .label {
+			margin-right: 15px;
+		}
+		.post-tags {
+			margin: 0px;
+			> * {
+				margin: 0px;
+			}
+		}
+	}
+}
+
 .post-share-wrap {
 	flex-grow: 1;
 	.post-shares{
