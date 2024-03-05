@@ -1546,7 +1546,6 @@ function basilico_get_post_grid_layout3($posts = [], $settings = [], $args_m = [
                                     <?php
                                     if ($show_date == 'true') : ?>
                                         <span class="post-date d-flex align-items-center">
-                                            <i class="pxli pxli-calendar-days"></i>
                                             <?php echo get_the_date(get_option('date_format'), $post->ID); ?>
                                         </span>
                                     <?php endif; ?>
@@ -1578,7 +1577,7 @@ function basilico_get_post_grid_layout3($posts = [], $settings = [], $args_m = [
                     <?php endif; ?>
                     <?php if ($show_button == 'true') : ?>
                         <div class="item-readmore pxl-button-wrapper">
-                            <a class="btn-more style-2" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                            <a class="btn-more" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
                                 <span><?php echo pxl_print_html($button_text); ?></span>
                             </a>
                         </div>

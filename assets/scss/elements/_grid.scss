@@ -499,13 +499,16 @@
                 transition: all 400ms ease-out;
             }
             .post-metas {
-                padding: 10px;
-                color: $body_color;
+                background-color: transparent;
+                color: #666666;
                 .meta-inner {
                     padding-left: 6px;
                     padding-right: 6px;
                     justify-content: center;
                     column-gap: 22px;
+                    a {
+                        color: inherit;
+                    }
                 }
             }
         }
