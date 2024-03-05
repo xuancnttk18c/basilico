@@ -35,7 +35,7 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
             </div>
         <?php
         }
-        basilico()->blog->get_post_metas();
+        basilico()->blog->get_post_metas_coffee();
         $custom_post_title = basilico()->get_theme_opt('single_post_title_layout', '0');
         if ($custom_post_title == '1') :
         ?>
