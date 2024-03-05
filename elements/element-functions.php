@@ -195,11 +195,11 @@ function basilico_get_grid_layout_options($posttype_name){
             ],
             'post-2' => [
                 'label' => esc_html__('Layout 2', 'basilico'),
-                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-layout1.jpg'
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-layout2.jpg'
             ],
             'post-3' => [
                 'label' => esc_html__('Layout 3', 'basilico'),
-                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-layout1.jpg'
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-layout3.jpg'
             ],
         ];
         break;
