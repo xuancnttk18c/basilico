@@ -311,6 +311,42 @@
 	}
 }
 
+.pxl-content-main.layout-5 .post-metas {
+	@include d-flex();
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 35px;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 24px;
+	color: $heading_color;
+	a {
+		color: $heading_color;
+		&:hover {
+			color: $primary_color;
+		}
+	}
+	i {
+		color: $heading_color;
+	}
+	.meta-inner {
+		column-gap: 35px;
+		> span {
+			margin: 0;
+			padding: 0;
+			&:after {
+				content: none;
+			}
+		}
+	}
+	.post-tags {
+		a + a {
+			margin-left: 4px;
+		}
+	}
+}
+
 /* Tag & Share block */
 .post-tags-share {
 	padding: 14px 0;
