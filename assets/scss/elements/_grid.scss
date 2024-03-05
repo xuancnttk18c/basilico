@@ -502,10 +502,12 @@
         .post-metas {
             background-color: transparent;
             color: #666666;
-            padding: 21px 0 0 0;
+            padding: 26px 0 0 0;
             margin-bottom: 0;
             .meta-inner {
                 > span {
+                    margin: 0px 12px 0px 0;
+                    padding: 0 22px 0 0;
                     &:after {
                         content: '';
                         width: 13px;
