@@ -706,6 +706,8 @@
 		color: $heading_color;
 		&:after {
 			background-color: $primary_color;
+		}
+		&:hover {
 			color: #fff;
 		}
 	}
