@@ -1534,32 +1534,32 @@ function basilico_get_post_grid_layout3($posts = [], $settings = [], $args_m = [
                                 <?php echo wp_kses_post($thumbnail); ?>
                             </a>
                         </div>
-                        <?php if ($show_category == 'true' || $show_author == 'true' || $show_date == 'true') : ?>
-                            <div class="post-metas hover-underline">
-                                <div class="meta-inner d-flex">
-                                    <?php if ($show_author == 'true') : ?>
-                                        <span class="post-author">
-                                            <span class="label"><?php echo esc_html__('By', 'basilico'); ?></span>
-                                            <a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->display_name); ?></a>
-                                        </span>
-                                    <?php endif; ?>
-                                    <?php
-                                    if ($show_date == 'true') : ?>
-                                        <span class="post-date d-flex align-items-center">
-                                            <?php echo get_the_date(get_option('date_format'), $post->ID); ?>
-                                        </span>
-                                    <?php endif; ?>
-                                    <?php if ($show_category == 'true') : ?>
-                                        <span class="post-category">
-                                            <span><?php the_terms($post->ID, 'category', '', ', ', ''); ?></span>
-                                        </span>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
                 <div class="item-content">
+                    <?php if ($show_category == 'true' || $show_author == 'true' || $show_date == 'true') : ?>
+                        <div class="post-metas hover-underline">
+                            <div class="meta-inner d-flex">
+                                <?php if ($show_author == 'true') : ?>
+                                    <span class="post-author">
+                                        <span class="label"><?php echo esc_html__('By', 'basilico'); ?></span>
+                                        <a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->display_name); ?></a>
+                                    </span>
+                                <?php endif; ?>
+                                <?php
+                                if ($show_date == 'true') : ?>
+                                    <span class="post-date d-flex align-items-center">
+                                        <?php echo get_the_date(get_option('date_format'), $post->ID); ?>
+                                    </span>
+                                <?php endif; ?>
+                                <?php if ($show_category == 'true') : ?>
+                                    <span class="post-category">
+                                        <span><?php the_terms($post->ID, 'category', '', ', ', ''); ?></span>
+                                    </span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                     <h4 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h4>
                     <?php if ($show_excerpt == 'true') : ?>
                         <div class="item-excerpt">
