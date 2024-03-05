@@ -505,7 +505,7 @@
             .meta-inner {
                 > span {
                     &:after {
-                        content: 'none';
+                        content: '';
                         width: 13px;
                         background-color: $primary_color;
                         display: inline-block;
