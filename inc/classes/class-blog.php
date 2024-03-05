@@ -471,7 +471,7 @@ if (!class_exists('Basilico_Blog')) {
                         <?php endif; ?>
                         <?php if ($post_date_on) : ?>
                             <div class="post-date d-flex align-items-center">
-                                <i class="pxli pxli-calendar"></i>
+                                <i class="pxli pxli-calendar3"></i>
                                 <span><?php echo get_the_date(); ?></span>
                             </div>
                         <?php endif; ?>

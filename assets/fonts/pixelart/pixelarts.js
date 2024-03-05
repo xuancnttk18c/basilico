@@ -230,6 +230,7 @@
 		"piggy-bank",
 		"save-money",
 		"coffee-bean",
-		"telegram-plane"
+		"telegram-plane",
+		"calendar3"
     ]
 }
