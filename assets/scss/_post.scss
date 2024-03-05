@@ -488,7 +488,6 @@
 		display: inline-block;
 		font-size: 15px;
 		margin-right: 3px;
-		@include multiline-hover-underline($heading_color);
 		&:hover {
 			color: $heading_color;
 		}
@@ -497,6 +496,12 @@
 				content: ', ';
 			}
 		}
+	}
+}
+
+.pxl-content-main.layout-1 {
+	.post-tags-wrap {
+		@include multiline-hover-underline($heading_color);
 	}
 }
 
