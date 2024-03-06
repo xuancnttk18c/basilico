@@ -155,7 +155,6 @@ textarea, select,
     @include placeholder() {
         font-size: $input_font_size;
         font-style: $input_font_style;
-        font-weight: $input_font_weight;
     }
     &:hover,&:focus,&:active {
         background-color: $ff_background_hover;
