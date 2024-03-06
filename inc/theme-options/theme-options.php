@@ -625,11 +625,11 @@ Redux::setSection($opt_name, array(
             'units'          => array('px'),
             'units_extended' => 'false',
             'title'          => esc_html__('Input Padding', 'basilico'),
-            'desc'           => esc_html__('Default: Left-20px, Right-20px', 'basilico'),
+            'desc'           => esc_html__('Default: Right - 20px, Left - 20px', 'basilico'),
             'default'        => array(
                 'padding-left'    => '20',
-                'padding-right' => '20',
-                'units'          => 'px',
+                'padding-right'   => '20',
+                'units'           => 'px',
             ),
         ),
         array(
@@ -692,6 +692,13 @@ Redux::setSection($opt_name, array(
             'text-align'  => false,
             'letter-spacing' => true,
             'units'       => 'px',
+            'weights' => array(
+                '400'       => 'Normal 400',
+                '500'       => 'Medium 500',
+                '700'       => 'Bold 700',
+                '400italic' => 'Normal 400 Italic',
+                '700italic' => 'Bold 700 Italic',
+            ),
         ),
     ),
 ));
