@@ -1,7 +1,9 @@
 // Variable Form Colors Theme Main
 $place_holder_color: $heading_color;
+$ff_font_family: $input_font_family;
 $ff_color: $heading_color;
 $ff_height: $input_height;
+$ff_style: $input_font_style;
 $ff_padding: 0 $input_padding_right 0 $input_padding_left;
 $ff_border: 1px solid;
 $ff_border_color: $input_border_color;
@@ -139,6 +141,7 @@ textarea, select,
     background-color: $ff_background;
     border: $ff_border;
     border-color: $ff_border_color;
+    font-family: $input_font_family;
     color: $ff_color;
     padding: $ff_padding;
     height: $ff_height;
@@ -152,6 +155,7 @@ textarea, select,
     @include transition();
     @include placeholder() {
         font-size: $input_font_size;
+        font-style: $input_font_style;
         font-weight: $input_font_weight;
     }
     &:hover,&:focus,&:active {
