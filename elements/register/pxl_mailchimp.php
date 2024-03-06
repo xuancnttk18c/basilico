@@ -214,9 +214,12 @@ pxl_add_custom_widget(
                                                  {{WRAPPER}} .pxl-mailchimp input[type="submit"]' => 'width: {{VALUE}}px; padding: 0;',
                                                 '{{WRAPPER}} .pxl-mailchimp input[type="text"], 
                                                  {{WRAPPER}} .pxl-mailchimp input[type="email"], 
-                                                 {{WRAPPER}} .pxl-mailchimp input[type="phone"]' => 'padding-right: {{VALUE}}px;',
+                                                 {{WRAPPER}} .pxl-mailchimp input[type="phone"]' => 'padding-right: calc({{VALUE}}px + 10px);',
                                             ],
-                                            'separator' => 'before'
+                                            'separator' => 'before',
+                                            'condition' => [
+                                                'style' => 'style-2'
+                                            ]
                                         ),
                                         array(
                                             'name' => 'btn_distance',
