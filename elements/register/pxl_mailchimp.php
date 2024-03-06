@@ -210,7 +210,11 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Width (px)', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::NUMBER,
                                             'selectors' => [
-                                                '{{WRAPPER}} .pxl-mailchimp button, {{WRAPPER}} .pxl-mailchimp input[type="submit"]' => 'width: {{VALUE}}px; padding: 0;',
+                                                '{{WRAPPER}} .pxl-mailchimp button,
+                                                 {{WRAPPER}} .pxl-mailchimp input[type="submit"]' => 'width: {{VALUE}}px; padding: 0;',
+                                                '{{WRAPPER}} .pxl-mailchimp input[type="text"], 
+                                                 {{WRAPPER}} .pxl-mailchimp input[type="email"], 
+                                                 {{WRAPPER}} .pxl-mailchimp input[type="phone"]' => 'padding-right: {{VALUE}}px;',
                                             ],
                                             'separator' => 'before'
                                         ),
