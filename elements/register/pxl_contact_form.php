@@ -95,7 +95,8 @@ if(class_exists('WPCF7')) {
                                                 'label' => esc_html__('Text Color', 'basilico'),
                                                 'type' => \Elementor\Controls_Manager::COLOR,
                                                 'selectors' => [
-                                                    '{{WRAPPER}} .wpcf7-form input[type="submit"]' => 'color: {{VALUE}};'
+                                                    '{{WRAPPER}} .wpcf7-form input[type="submit"], 
+                                                     {{WRAPPER}} .wpcf7-form button' => 'color: {{VALUE}};'
                                                 ]
                                             ),
                                             array(
@@ -103,7 +104,7 @@ if(class_exists('WPCF7')) {
                                                 'type' => \Elementor\Group_Control_Background::get_type(),
                                                 'control_type' => 'group',
                                                 'types'             => [ 'classic' , 'gradient' ],
-                                                'selector' => '{{WRAPPER}} .wpcf7-form input[type="submit"]',
+                                                'selector' => '{{WRAPPER}} .wpcf7-form input[type="submit"], {{WRAPPER}} .wpcf7-form button',
                                             ),
 
                                         )
@@ -117,7 +118,8 @@ if(class_exists('WPCF7')) {
                                                 'label' => esc_html__('Text Color', 'basilico'),
                                                 'type' => \Elementor\Controls_Manager::COLOR,
                                                 'selectors' => [
-                                                    '{{WRAPPER}} .wpcf7-form input[type="submit"]:hover' => 'color:{{VALUE}};'
+                                                    '{{WRAPPER}} .wpcf7-form input[type="submit"]:hover,
+                                                     {{WRAPPER}} .wpcf7-form button:hover' => 'color:{{VALUE}};'
                                                 ]
                                             ),
                                             array(
@@ -125,7 +127,7 @@ if(class_exists('WPCF7')) {
                                                 'type' => \Elementor\Group_Control_Background::get_type(),
                                                 'control_type' => 'group',
                                                 'types'             => [ 'classic' , 'gradient' ],
-                                                'selector' => '{{WRAPPER}} .wpcf7-form input[type="submit"]:hover',
+                                                'selector' => '{{WRAPPER}} .wpcf7-form input[type="submit"]:hover, {{WRAPPER}} .wpcf7-form button:hover',
                                             ),
                                         )
                                     ),
