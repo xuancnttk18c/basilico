@@ -214,7 +214,7 @@ pxl_add_custom_widget(
                                                  {{WRAPPER}} .pxl-mailchimp input[type="submit"]' => 'width: {{VALUE}}px; padding: 0;',
                                                 '{{WRAPPER}} .pxl-mailchimp input[type="text"], 
                                                  {{WRAPPER}} .pxl-mailchimp input[type="email"], 
-                                                 {{WRAPPER}} .pxl-mailchimp input[type="phone"]' => 'padding-right: calc({{VALUE}}px + 10px);',
+                                                 {{WRAPPER}} .pxl-mailchimp input[type="phone"]' => 'padding-right: calc({{VALUE}}px + 5px);',
                                             ],
                                             'separator' => 'before',
                                             'condition' => [
