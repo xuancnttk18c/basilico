@@ -697,6 +697,7 @@ Redux::setSection($opt_name, array(
                 '500'       => 'Medium 500',
                 '700'       => 'Bold 700',
                 '400italic' => 'Normal 400 Italic',
+                '500italic' => 'Medium 500 Italic',
                 '700italic' => 'Bold 700 Italic',
             ),
         ),
