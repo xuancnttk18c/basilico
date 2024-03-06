@@ -617,6 +617,22 @@ Redux::setSection($opt_name, array(
     'icon'   => 'el el-italic',
     'fields' => array(
         array(
+            'id'             => 'input_padding',
+            'type'           => 'spacing',
+            'top'          => false,
+            'bottom'           => false,
+            'mode'           => 'padding',
+            'units'          => array('px'),
+            'units_extended' => 'false',
+            'title'          => esc_html__('Input Padding', 'basilico'),
+            'desc'           => esc_html__('Default: Left-20px, Right-20px', 'basilico'),
+            'default'        => array(
+                'padding-top'    => '',
+                'padding-bottom' => '',
+                'units'          => 'px',
+            ),
+        ),
+        array(
             'id'          => 'input_bg_color',
             'type'        => 'color',
             'title'       => esc_html__('Input Background Color', 'basilico'),
