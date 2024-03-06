@@ -148,7 +148,7 @@ if(!function_exists('basilico_configs')){
                 'font-weight'       => basilico()->get_theme_opt('font_input', ['font-weight' => '400'], 'font-weight'),
                 'line-height'       => basilico()->get_theme_opt('font_input', ['line-height' => '1.66666666667'], 'line-height'),
                 'letter-spacing'    => basilico()->get_theme_opt('font_input', ['letter-spacing' => '0.01em'], 'letter-spacing'),
-                'padding'           => basilico()->get_theme_opt('input_padding', ['left' => '20px', 'units' => 'px'])['left'],
+                'padding'           => basilico()->get_theme_opt('input_padding', ['padding-left' => '20px', 'units' => 'px'])['padding-left'],
             ],
         ];
 
