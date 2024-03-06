@@ -2,7 +2,7 @@
 $place_holder_color: $heading_color;
 $ff_color: $heading_color;
 $ff_height: $input_height;
-$ff_padding: 0 20px;
+$ff_padding: 0 $input_padding_right 0 $input_padding_left;
 $ff_border: 1px solid;
 $ff_border_color: $input_border_color;
 $ff_border_hover: $input_border_hover;
