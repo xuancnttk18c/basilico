@@ -194,6 +194,14 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'social_bg_color',
+                            'label' => esc_html__('Background Color', 'basilico' ),
+                            'type' => 'color',
+                            'selectors' => [
+                                '{{WRAPPER}} .social-item' => 'background-color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
                             'name' => 'social_bg_color_hover',
                             'label' => esc_html__('Background Color Hover', 'basilico' ),
                             'type' => 'color',
