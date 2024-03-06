@@ -152,6 +152,7 @@ if(!function_exists('basilico_configs')){
             ],
         ];
 
+        var_dump(basilico()->get_theme_opt('input_padding'));
         return $configs[$value];
     }
 }
