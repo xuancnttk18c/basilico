@@ -619,8 +619,8 @@ Redux::setSection($opt_name, array(
         array(
             'id'             => 'input_padding',
             'type'           => 'spacing',
-            'top'          => false,
-            'bottom'           => false,
+            'top'            => false,
+            'bottom'         => false,
             'mode'           => 'padding',
             'units'          => array('px'),
             'units_extended' => 'false',

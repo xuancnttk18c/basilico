@@ -68,7 +68,10 @@ pxl_add_custom_widget(
                                             'label' => esc_html__('Input Text Color', 'basilico' ),
                                             'type' => \Elementor\Controls_Manager::COLOR,
                                             'selectors' => [
-                                                '{{WRAPPER}} .pxl-mailchimp input[type="text"], {{WRAPPER}} .pxl-mailchimp input[type="password"], {{WRAPPER}} .pxl-mailchimp input[type="email"], {{WRAPPER}} .pxl-mailchimp input[type="phone"]' => 'color: {{VALUE}};',
+                                                '{{WRAPPER}} .pxl-mailchimp input[type="text"],
+                                                 {{WRAPPER}} .pxl-mailchimp input[type="password"],
+                                                 {{WRAPPER}} .pxl-mailchimp input[type="email"],
+                                                 {{WRAPPER}} .pxl-mailchimp input[type="phone"]' => 'color: {{VALUE}};',
                                             ],
                                         ),
                                         array(
