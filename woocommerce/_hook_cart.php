@@ -123,7 +123,7 @@ function basilico_woocommerce_sidebar_cart_count_number_header( $fragments ) {
 add_action( 'pxltheme_anchor_target', 'basilico_canvas_cart');
 function basilico_canvas_cart(){
 	if(!class_exists('WooCommerce')) return;
-	$canvas_cart = utero()->get_theme_opt('canvas_cart_on', 'on');
+	$canvas_cart = basilico()->get_theme_opt('canvas_cart_on', 'on');
 	if($canvas_cart != 'on') return;
 	wp_enqueue_script( 'wc-cart-fragments' ); 
 	?>
