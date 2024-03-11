@@ -439,7 +439,7 @@ table.cart {
 		}
 	}
 	.woocommerce-mini-cart__buttons{
-		@include d-flex0();
+		@include d-flex();
 		flex-direction: column;
 		.button{
 			font-size: 14px;
