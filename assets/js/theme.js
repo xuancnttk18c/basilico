@@ -19,7 +19,6 @@
         //* Main Theme Functions
         basilico_header_sticky();
         basilico_open_menu_toggle();
-        basilico_events_handler();
         basilico_panel_mobile_menu();
         basilico_cart_toggle();
         basilico_panel_anchor_toggle();
