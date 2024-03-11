@@ -128,6 +128,22 @@
             $('.pxl-register-form').addClass('active');
         }
     });
+    $(document).on('click','.pxl-close',function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).closest('.pxl-hidden-template').removeClass('open');
+            $(this).closest('.sidebar-shop').removeClass('open');
+            $('.pxl-anchor.side-panel').removeClass('cliked');
+            $('.pxl-page-overlay').removeClass('active');    
+            $('.btn-shop-sidebar-hidden-toggle').removeClass('cliked');
+            $('.btn-shop-filter-top-toggle').removeClass('cliked');
+            $(this).closest('.shop-filter-top-wrap').removeClass('open');
+            $(this).closest('.pxl-product-attr-size-guide-panel').removeClass('open');
+            $(this).closest('.pxl-login-form-checkout').removeClass('open');
+
+            $('.wc-tabs-panel').removeClass('open');
+            $('.tab-item').removeClass('active');  
+        });
     function basilico_header_sticky() {
         'use strict';
         if($(document).find('.pxl-header-sticky').length > 0 && window_width >= 1200 && !$(document).find(".pxl-hidden-template.open").length > 0){
