@@ -329,7 +329,7 @@
             var target = $(this).attr('data-target');
             $(this).toggleClass('cliked');
             $(target).toggleClass('open');
-            $('..pxl-page-overlay').toggleClass('active');
+            $('.pxl-page-overlay').toggleClass('active');
             $(document).find('.pxl-header-sticky').removeClass('h-fixed');
             setTimeout(function(){
                 $('.pxl-search-form input[name="s"]').focus();
