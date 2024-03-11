@@ -119,3 +119,30 @@ function basilico_woocommerce_sidebar_cart_count_number_header( $fragments ) {
 
     return $fragments;
 }
+
+/* Cart action */
+add_filter('woocommerce_add_to_cart_fragments', 'basilico_woocommerce_add_to_cart_fragments', 10, 1 );
+function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
+    
+    ob_start();
+    ?>
+    <span class="header-count cart_total"><?php echo WC()->cart->cart_contents_count; ?></span>
+    <?php
+    $fragments['.cart_total'] = ob_get_clean();
+    $fragments['.mini-cart-count'] = '<span class="mini-cart-total mini-cart-count">'.WC()->cart->cart_contents_count.'</span>';
+
+    ob_start();
+		wc_get_template( 'cart/mini-cart-totals.php' );
+	$mini_cart_totals = ob_get_clean();
+    $fragments['.pxl-hidden-template-canvas-cart .cart-footer-inner'] = $mini_cart_totals;
+    $fragments['.pxl-cart-dropdown .cart-footer-inner'] = $mini_cart_totals;
+ 
+    $fragments['.pxl-anchor-cart .anchor-cart-count'] = '<span class="anchor-cart-count">'.WC()->cart->cart_contents_count.'</span>';
+    $fragments['.pxl-anchor-cart .anchor-cart-total'] = '<span class="anchor-cart-total">'.WC()->cart->get_cart_subtotal().'</span>';
+
+    ob_start();
+		wc_get_template( 'cart/pxl-cart-content.php' );
+	$fragments['.cart-list-wrapper .cart-list-content'] = ob_get_clean();
+
+    return $fragments;
+}

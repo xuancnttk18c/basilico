@@ -42,6 +42,7 @@
         basilico_quantity_plus_minus_action();
         basilico_table_cart_content();
         basilico_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '');
+        basilico_mini_cart_dropdown_offset();
     });
     $(window).on('load', function () {
         setTimeout(function() {
@@ -86,6 +87,25 @@
     // $(document).ready(function () {
     //     $("select").niceSelect();
     // });
+    $( document.body ).on( 'wc_fragments_loaded wc_fragments_refreshed', function() {
+        utero_mini_cart_body_caculate_height();
+        $('body').find('.pxl-hidden-template-canvas-cart').removeClass('loading');
+        $('body').find('.pxl-cart-dropdown').removeClass('loading');
+        $('body').removeClass('loading');
+    });
+    $( document ).on( 'click', '.pxl-anchor-cart .pxl-anchor', function( e ) {
+            e.preventDefault();
+            e.stopPropagation();
+            var target = $(this).attr('data-target');
+            if( target == '.pxl-cart-dropdown'){
+                $(this).next(target).toggleClass('open');    
+            }else{
+                $(target).toggleClass('open');
+                $('.pxl-page-overlay').toggleClass('active');   
+                $('.product-main-img .pxl-cursor-icon').addClass('hide'); 
+            }
+             
+        });
     function basilico_header_sticky() {
         'use strict';
         if($(document).find('.pxl-header-sticky').length > 0 && window_width >= 1200 && !$(document).find(".pxl-hidden-template.open").length > 0){
@@ -458,6 +478,21 @@
                 $(this).parents('.pxl-content-area').find('.products').removeAttr('class').addClass($(this).attr('data-cls'));
             }
         });
+    }
+
+    function basilico_mini_cart_dropdown_offset(){
+        if( $( '.pxl-cart-dropdown' ).length > 0 ){
+            var window_w = $(window).width();
+            
+            $( '.pxl-cart-dropdown' ).each(function(index, el) {
+                var anchor_cart_offset_right = $(this).closest('.pxl-anchor-cart').offset().left;
+                if ( ($(this).offset().left + $(this).width() ) > window_w) {
+                    var right_offset = window_w - (anchor_cart_offset_right + $(this).closest('.pxl-anchor-cart').width()) - 15;
+                    $(this).css('right', (right_offset * -1));
+                }
+            });
+             
+        }
     }
 
     function basilico_wc_single_product_gallery(){
