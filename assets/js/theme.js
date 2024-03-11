@@ -318,7 +318,7 @@
             var target = $(this).attr('data-target');
             $(this).toggleClass('cliked');
             $(target).toggleClass('open');
-            $('body').toggleClass('side-panel-open');
+            $('.pxl-page-overlay').toggleClass('active');
         });
     }
     function basilico_panel_anchor_toggle(){
@@ -329,7 +329,7 @@
             var target = $(this).attr('data-target');
             $(this).toggleClass('cliked');
             $(target).toggleClass('open');
-            $('body').toggleClass('side-panel-open');
+            $('..pxl-page-overlay').toggleClass('active');
             $(document).find('.pxl-header-sticky').removeClass('h-fixed');
             setTimeout(function(){
                 $('.pxl-search-form input[name="s"]').focus();
@@ -354,7 +354,8 @@
             var target = $(this).attr('data-target');
             $(this).toggleClass('cliked');
             $(target).toggleClass('open');
-            $('body').toggleClass('side-panel-open');
+            $('.pxl-page-overlay').toggleClass('active');
+
             setTimeout(function(){
                 $('.pxl-search-form input[name="s"]').focus();
             },1000);
@@ -366,11 +367,11 @@
             var target = $(e.target);
             var check = '.btn-nav-mobile, .pxl-anchor.side-panel, .pxl-anchor-cart.pxl-anchor';
 
-            if (!(target.is(check)) && target.closest('.pxl-hidden-template').length <= 0 && $('body').hasClass('side-panel-open')) {
+            if (!(target.is(check)) && target.closest('.pxl-hidden-template').length <= 0 && $('.pxl-page-overlay').length <= 0) {
                 $('.btn-nav-mobile').removeClass('cliked');
                 //$('.pxl-cart-toggle').removeClass('cliked');
                 $('.pxl-hidden-template').removeClass('open');
-                $('body').removeClass('side-panel-open');
+                $('.pxl-page-overlay').removeClass('active');
             }
 
             if ( !(target.is('.pxl-anchor-cart.pxl-anchor')) && target.closest('.pxl-cart-dropdown').length <= 0 ) {  
@@ -383,13 +384,13 @@
                 $('.pxl-page-overlay').removeClass('active');
             }
         });
-        $(document).on('click','.pxl-close',function(e){
+        $(document).on('click','.pxl-close', function(e){
             e.preventDefault();
             e.stopPropagation();
             $(this).closest('.pxl-hidden-template').toggleClass('open');
             $('.btn-nav-mobile').removeClass('cliked');
             // $('.pxl-cart-toggle').removeClass('cliked');
-            $('body').toggleClass('side-panel-open');
+            $('.pxl-page-overlay').toggleClass('active');
         });
     }
 
@@ -665,7 +666,6 @@
             }
         });
     }
-
     // cart js
     function basilico_canvas_dropdown_mini_cart(){
         if ( typeof wc_add_to_cart_params === 'undefined' )

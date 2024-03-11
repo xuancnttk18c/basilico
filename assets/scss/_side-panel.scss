@@ -67,12 +67,10 @@
     }
 
 }
-.side-panel-open {
-    .pxl-page-overlay {
-        width: 100%;
-        height: 100%;
-        opacity: 1;
-    }
+.pxl-page-overlay.active {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
 }
 .pxl-close {
     border: 7px solid transparent;
