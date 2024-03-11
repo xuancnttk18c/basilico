@@ -120,6 +120,32 @@ function basilico_woocommerce_sidebar_cart_count_number_header( $fragments ) {
     return $fragments;
 }
 
+add_action( 'pxltheme_anchor_target', 'basilico_canvas_cart');
+function basilico_canvas_cart(){
+	if(!class_exists('WooCommerce')) return;
+	$canvas_cart = utero()->get_theme_opt('canvas_cart_on', 'on');
+	if($canvas_cart != 'on') return;
+	wp_enqueue_script( 'wc-cart-fragments' ); 
+	?>
+	<div class="pxl-hidden-template pxl-hidden-template-canvas-cart pos-right">
+        <div class="pxl-hidden-template-wrap">
+        	<div class="pxl-panel-header">
+                <div class="panel-header-inner d-flex justify-content-between">
+                    <span class="pxl-title h4"><?php echo esc_html__( 'Basket', 'utero' ) ?> (<span class="mini-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>)</span>
+                    <span class="pxl-close lnil lnil-close" title="<?php echo esc_attr__( 'Close', 'utero' ) ?>"></span>
+                </div>
+            </div>
+            <div class="pxl-panel-content widget_shopping_cart custom_scroll">
+                <div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+            </div>
+            <div class="pxl-panel-footer">
+            	<?php wc_get_template( 'cart/mini-cart-totals.php' ); ?>
+            </div>
+        </div>
+    </div> 
+    <?php
+}
+
 /* Cart action */
 add_filter('woocommerce_add_to_cart_fragments', 'basilico_woocommerce_add_to_cart_fragments', 10, 1 );
 function basilico_woocommerce_add_to_cart_fragments( $fragments ) {

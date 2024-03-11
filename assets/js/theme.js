@@ -43,6 +43,8 @@
         basilico_table_cart_content();
         basilico_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '');
         basilico_mini_cart_dropdown_offset();
+        basilico_canvas_dropdown_mini_cart();
+        basilico_mini_cart_body_caculate_height();
     });
     $(window).on('load', function () {
         setTimeout(function() {
@@ -480,6 +482,25 @@
         });
     }
 
+    // cart js
+    function basilico_canvas_dropdown_mini_cart(){
+        if ( typeof wc_add_to_cart_params === 'undefined' )
+            return false;
+        if( $( '.pxl-hidden-template-canvas-cart' ).length > 0 ){
+            $(document.body).on( 'added_to_cart', function( evt, fragments, cart_hash, $button ) {
+                $('.pxl-hidden-template-canvas-cart').toggleClass('open');
+                $('.pxl-page-overlay').toggleClass('active');
+                utero_mini_cart_body_caculate_height();
+            } );
+        }
+ 
+        $( document ).on( 'click', '.js-remove-from-cart', function( e ) {
+            $(this).closest('.pxl-hidden-template-canvas-cart').addClass('loading');
+            $(this).closest('.pxl-cart-dropdown').addClass('loading');
+        });
+        
+    }
+
     function basilico_mini_cart_dropdown_offset(){
         if( $( '.pxl-cart-dropdown' ).length > 0 ){
             var window_w = $(window).width();
@@ -494,6 +515,21 @@
              
         }
     }
+
+    function basilico_mini_cart_body_caculate_height(){
+        if( $('.pxl-hidden-template-canvas-cart').length > 0){
+            var window_height = window.innerHeight;
+            var $canvas_cart  = $('.pxl-hidden-template-canvas-cart');
+            var $cart_header  = $canvas_cart.find( '.pxl-panel-header' );
+            var $cart_content = $canvas_cart.find( '.pxl-panel-content' );
+            var $cart_footer  = $canvas_cart.find( '.pxl-panel-footer' );
+            
+            var admin_bar_h = $('#wpadminbar').length > 0 ? $('#wpadminbar').height() : 0;
+            var content_h = window_height - $cart_header.outerHeight() - $cart_footer.outerHeight() - admin_bar_h;
+            content_h = Math.max( content_h, 400 );
+            $cart_content.outerHeight( content_h );
+        }
+    } 
 
     function basilico_wc_single_product_gallery(){
         'use strict';
