@@ -97,18 +97,37 @@
         $('body').removeClass('loading');
     });
     $( document ).on( 'click', '.pxl-anchor-cart .pxl-anchor', function( e ) {
-            e.preventDefault();
-            e.stopPropagation();
-            var target = $(this).attr('data-target');
-            if( target == '.pxl-cart-dropdown'){
-                $(this).next(target).toggleClass('open');    
-            }else{
-                $(target).toggleClass('open');
-                $('.pxl-page-overlay').toggleClass('active');   
-                $('.product-main-img .pxl-cursor-icon').addClass('hide'); 
-            }
-             
-        });
+        e.preventDefault();
+        e.stopPropagation();
+        var target = $(this).attr('data-target');
+        if( target == '.pxl-cart-dropdown'){
+            $(this).next(target).toggleClass('open');    
+        }else{
+            $(target).toggleClass('open');
+            $('.pxl-page-overlay').toggleClass('active');   
+            $('.product-main-img .pxl-cursor-icon').addClass('hide'); 
+        }
+
+    });
+    $(document).on('click','.pxl-anchor.side-panel',function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var target = $(this).attr('data-target');
+        $(this).toggleClass('cliked');
+        $(target).toggleClass('open');
+        $('.pxl-page-overlay').toggleClass('active');    
+        $('.product-main-img .pxl-cursor-icon').addClass('hide'); 
+
+        var attr = $(this).attr('data-form-type');
+        if (typeof attr !== 'undefined' && attr == 'login') {
+            $('.pxl-register-form').removeClass('active');
+            $('.pxl-login-form').addClass('active');
+        }
+        if (typeof attr !== 'undefined' && attr == 'reg') {
+            $('.pxl-login-form').removeClass('active');
+            $('.pxl-register-form').addClass('active');
+        }
+    });
     function basilico_header_sticky() {
         'use strict';
         if($(document).find('.pxl-header-sticky').length > 0 && window_width >= 1200 && !$(document).find(".pxl-hidden-template.open").length > 0){
