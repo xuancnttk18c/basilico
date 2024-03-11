@@ -90,7 +90,7 @@
     //     $("select").niceSelect();
     // });
     $( document.body ).on( 'wc_fragments_loaded wc_fragments_refreshed', function() {
-        utero_mini_cart_body_caculate_height();
+        basilico_mini_cart_body_caculate_height();
         $('body').find('.pxl-hidden-template-canvas-cart').removeClass('loading');
         $('body').find('.pxl-cart-dropdown').removeClass('loading');
         $('body').removeClass('loading');
