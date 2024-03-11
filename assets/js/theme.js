@@ -95,6 +95,18 @@
         $('body').find('.pxl-cart-dropdown').removeClass('loading');
         $('body').removeClass('loading');
     });
+    $( document ).on( 'click', '.pxl-anchor-cart .pxl-anchor', function( e ) {
+        e.preventDefault();
+        e.stopPropagation();
+        var target = $(this).attr('data-target');
+        if( target == '.pxl-cart-dropdown'){
+            $(this).next(target).toggleClass('open');    
+        }else{
+            $(target).toggleClass('open');
+            $('.pxl-page-overlay').toggleClass('active');   
+            $('.product-main-img .pxl-cursor-icon').addClass('hide'); 
+        }
+    });
 
     function basilico_header_sticky() {
         'use strict';
