@@ -37,7 +37,6 @@ $target = $link_target == 'cart-canvas' ? '.pxl-hidden-template-canvas-cart' : '
 		?>
 		<?php if ( !\Elementor\Plugin::$instance->editor->is_edit_mode() ): ?>
 			<?php if( $layout_type != 'layout-text'): ?>
-				<span class="anchor-cart-total"><?php echo WC()->cart->get_cart_subtotal(); ?></span>
 				<span class="anchor-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>
 			<?php else: ?>
 				(<span class="anchor-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>)
