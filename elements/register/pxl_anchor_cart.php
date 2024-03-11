@@ -1,0 +1,186 @@
+<?php
+pxl_add_custom_widget(
+    array(
+        'name'       => 'pxl_anchor_cart',
+        'title'      => esc_html__( 'PXL Anchor Cart', 'basilico' ),
+        'icon'       => 'eicon-anchor',
+        'categories' => array('pxltheme-core'),
+        'scripts'    => array(),
+        'params' => array(
+            'sections' => array(
+                array(
+                    'name'     => 'icon_section',
+                    'label'    => esc_html__( 'Settings', 'basilico' ),
+                    'tab'      => 'content',
+                    'controls' => array(
+                        array(
+                            'name' => 'layout_type',
+                            'label' => esc_html__('Layut Type', 'basilico'),
+                            'type' => 'select',
+                            'options' => [
+                                'layout-df' => esc_html__('Default (Icon)', 'basilico'),
+                                'layout-text' => esc_html__('Text', 'basilico'),
+                            ],
+                            'default' => 'layout-df' 
+                        ), 
+                        array(
+                            'name' => 'link_target',
+                            'label' => esc_html__('Link Target', 'basilico'),
+                            'type' => 'select',
+                            'options' => [
+                                'cart-page' => esc_html__('Cart Page', 'basilico'),
+                                'cart-dropdown' => esc_html__('Cart Dropdown', 'basilico'),
+                                'cart-canvas' => esc_html__('Cart Canvas', 'basilico'),
+                            ],
+                            'default' => 'cart_dropdown' 
+                        ), 
+                        array(
+                            'name'             => 'selected_icon',
+                            'label'            => esc_html__( 'Icon', 'basilico' ),
+                            'type'             => 'icons',
+                            'default'          => [
+                                'library' => 'lnil',
+                                'value'   => 'lnil lnil-cart'
+                            ],
+                            'condition' => ['layout_type' => 'layout-df']
+                        ),
+                        array(
+                            'name'  => 'icon_size',
+                            'label' => esc_html__( 'Icon Size(px)', 'basilico' ),
+                            'type'  => 'slider',
+                            'control_type' => 'responsive',
+                            'range' => [
+                                'px' => [
+                                    'min' => 15,
+                                    'max' => 300,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-anchor-cart.layout-df a.cart-anchor .pxl-anchor-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+                            ],
+                            'condition' => ['layout_type' => 'layout-df']
+                        ),
+                        array(
+                            'name'        => 'text_title',
+                            'label'       => esc_html__( 'Text Title', 'basilico' ),
+                            'type'        => 'text',
+                            'default'     => 'Basket',
+                            'condition'   => ['layout_type' => 'layout-text']
+                        ),
+                        array(
+                            'name' => 'title_typography',
+                            'label' => esc_html__('Title Typography', 'basilico' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}} .pxl-anchor',
+                        ),
+                        array(
+                            'name' => 'icon_margin',
+                            'label' => esc_html__('Icon Margin(px)', 'basilico' ),
+                            'type' => 'dimensions',
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-anchor-icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                            'condition' => ['icon_type!' => 'none'],
+                        ),
+                        array(
+                            'name' => 'icon_color',
+                            'label' => esc_html__('Color', 'basilico' ),
+                            'type' => 'color',
+                            'control_type' => 'responsive',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-anchor, {{WRAPPER}} .pxl-anchor-icon' => 'color: {{VALUE}};',
+                            ],
+                        ), 
+                        array(
+                            'name' => 'icon_color_hover',
+                            'label' => esc_html__('Hover Color', 'basilico' ),
+                            'type' => 'color',
+                            'control_type' => 'responsive',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-anchor:hover, {{WRAPPER}} .pxl-anchor:hover .pxl-anchor-icon' => 'color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'cart_count_bg',
+                            'label' => esc_html__('Count background', 'basilico' ),
+                            'type' => 'color',
+                            'control_type' => 'responsive',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-anchor-cart a.cart-anchor .anchor-cart-count' => 'background-color: {{VALUE}};',
+                            ],
+                            'condition' => ['layout_type' => 'layout-df']
+                        ),  
+                        array(
+                            'name' => 'cart_count_color',
+                            'label' => esc_html__('Count Color', 'basilico' ),
+                            'type' => 'color',
+                            'control_type' => 'responsive',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-anchor-cart a.cart-anchor .anchor-cart-count' => 'color: {{VALUE}};',
+                            ],
+                        ), 
+                        array(
+                            'name'         => 'show_cart_totals',
+                            'label'        => esc_html__('Show Cart Total', 'basilico'),
+                            'type'         => 'select',
+                            'options'      => [
+                                'inline-flex' => esc_html__('Yes','basilico'),
+                                'none'  => esc_html__('No', 'basilico')
+                            ], 
+                            'default'      => 'inline-flex', 
+                            'control_type' => 'responsive',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-anchor-cart a.cart-anchor .anchor-cart-total' => 'display: {{VALUE}};',
+                            ],
+                            'prefix_class' => 'show-cart-totals%s-',
+                        ),
+                        array(
+                            'name'         => 'align',
+                            'label'        => esc_html__( 'Alignment', 'basilico' ),
+                            'type'         => 'choose',
+                            'control_type' => 'responsive',
+                            'options' => [
+                                'start' => [
+                                    'title' => esc_html__( 'Start', 'basilico' ),
+                                    'icon' => 'eicon-text-align-left',
+                                ],
+                                'center' => [
+                                    'title' => esc_html__( 'Center', 'basilico' ),
+                                    'icon' => 'eicon-text-align-center',
+                                ],
+                                'end' => [
+                                    'title' => esc_html__( 'End', 'basilico' ),
+                                    'icon' => 'eicon-text-align-right',
+                                ]
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-anchor-wrap' => 'justify-content: {{VALUE}};',
+                            ],
+                            'prefix_class' => 'anchor-align-'
+                        ),
+                        array(
+                            'name'         => 'dropdown_pos_offset_top',
+                            'label'        => esc_html__( 'Dropdown offset Top', 'basilico' ).' (50px) px,%,vh,auto',
+                            'type'         => 'text',
+                            'default'      => '',
+                            'control_type' => 'responsive',
+                            'selectors'    => [
+                                '{{WRAPPER}} .pxl-cart-dropdown' => 'top: {{VALUE}}',
+                            ],
+                            'condition' => ['link_target' => 'cart-dropdown'] 
+                        ), 
+                        array(
+                            'name'        => 'custom_class',
+                            'label'       => esc_html__( 'Custom class', 'basilico' ),
+                            'type'        => 'text',
+                        ),
+                    )
+                )
+            )
+        )
+    ),
+    basilico_get_class_widget_path()
+);
