@@ -513,6 +513,7 @@
         $('.pxl-hidden-template-canvas-cart').on( 'change', '.qty', function() {
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val(); 
+            console.log(item_key, item_qty);
             var data = {
                 action: 'basilico_update_product_quantity',
                 cart_item_key: item_key,
