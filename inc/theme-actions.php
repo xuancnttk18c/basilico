@@ -110,7 +110,7 @@ function basilico_scripts() {
     $js_variables = array(
         'ajaxurl'          => admin_url( 'admin-ajax.php' ),
         'pxl_ajax_url'     => class_exists('Basilico_Ajax') ? Basilico_Ajax::get_endpoint( '%%endpoint%%' ) : '#',
-        'shop_base_url'    => class_exists('Basilico_Woo') ? esc_url(basilco()->woo->get_shop_base_url()) : '#',
+        //'shop_base_url'    => class_exists('Basilico_Woo') ? esc_url(basilco()->woo->get_shop_base_url()) : '#',
         'lg_share'         => utero()->get_theme_opt('lg_share'),
         'lg_zoom'          => utero()->get_theme_opt('lg_zoom'),
         'lg_full_screen'   => utero()->get_theme_opt('lg_full_screen'),
