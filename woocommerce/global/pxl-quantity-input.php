@@ -1,9 +1,6 @@
 <?php
 
 defined( 'ABSPATH' ) || exit;
-
-$variable_layout = isset($_GET['variable-layout']) ? sanitize_text_field($_GET['variable-layout']) : basilico()->get_opt('product_variable_layout', 'vlayout-inline');  
-$label_cls = $variable_layout == 'vlayout-inline' ? 'col-auto' : 'col-12';
 ?>
 <div class="quantity">
 	<?php
@@ -11,7 +8,7 @@ $label_cls = $variable_layout == 'vlayout-inline' ? 'col-auto' : 'col-12';
 	?>
 	 
 	<div class="pxl-quantity-wrap row gx-20">
-		<div class="label <?php echo esc_attr($label_cls) ?>">
+		<div class="label">
 			<label><?php esc_html_e( 'Qty', 'basilico' ) ?></label>
 		</div>
 		<div class="qty-field col">
