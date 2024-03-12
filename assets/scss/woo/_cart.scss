@@ -593,9 +593,12 @@ table.cart {
 			color: $gray;
 		} 
 	}
-	.mini_cart_item{
+	.mini_cart_item {
 		position: relative;
 		list-style: none;
+		+ .mini_cart_item {
+			margin-top: 20px;
+		}
 		.remove{
 			position: absolute;
 			top: 13px;
