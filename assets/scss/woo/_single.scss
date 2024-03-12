@@ -630,11 +630,11 @@
 	}
 }
 
-.pxl-quantity{
+.quantity-button {
 	position: relative;
 	display: inline-block;
-	.quantity-down,.quantity-up{
-		&:before{
+	.quantity-down, .quantity-up {
+		&:before {
 			content: '\e99f';
 			font-family: $pxli_font;
 			font-size: 13px;
