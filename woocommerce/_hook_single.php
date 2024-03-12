@@ -493,11 +493,6 @@ function basilico_simple_add_to_cart(){
         <?php endif;
 }
 
-/* Quantity Label */
-add_filter('woocommerce_before_quantity_input_field', function(){
-    echo '<div class="lbl">'.esc_html__( 'Quantity','basilico' ).'</div>';
-});
-
 /* Social Sharing */
 if(!function_exists('basilico_woocommerce_template_single_sharing')){
 	add_action('woocommerce_share', 'basilico_woocommerce_template_single_sharing');
