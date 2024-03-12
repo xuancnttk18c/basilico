@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 		<div class="qty-field col">
 			<div class="quantity-inner">
-				<span class="quantity-button quantity-down"><i class="zmdi zmdi-minus"></i></span>
+				<span class="quantity-button quantity-down"><i class="zmdi zmdi-minus"></i></span></span>
 				<input
 					type="<?php echo esc_attr( $type ); ?>"
 					<?php echo esc_attr($readonly) ? 'readonly="readonly"' : ''; ?>
