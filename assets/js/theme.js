@@ -37,6 +37,7 @@
 
         //* For Shop
         basilico_shop_view_layout();
+        basilico_single_product_handler();
         basilico_wc_single_product_gallery();
         basilico_table_cart_content();
         basilico_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '');
@@ -81,7 +82,6 @@
         basilico_sticky_position();
     });
     jQuery( document ).on( 'updated_wc_div', function() {
-        basilico_quantity_plus_minus();
         basilico_table_cart_content();
         basilico_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '');
     } );
@@ -491,6 +491,38 @@
             }
         });
     }
+
+    function basilico_single_product_handler(){
+        $(document).on('click','.quantity .quantity-button',function () {
+            var $this = $(this),
+                spinner = $this.closest('.quantity'),
+                input = spinner.find('input[type="number"]'),
+                step = input.attr('step'),
+                min = input.attr('min'),
+                max = input.attr('max'),value = parseInt(input.val());
+            if(!value) value = 0;
+            if(!step) step=1;
+            step = parseInt(step);
+            if (!min) min = 0;
+            var type = $this.hasClass('quantity-up') ? 'up' : 'down' ;
+            switch (type)
+            {
+                case 'up':
+                    if(!(max && value >= max))
+                        input.val(value+step).change();
+                    break;
+                case 'down':
+                    if (value > min)
+                        input.val(value-step).change();
+                    break;
+            }
+            if(max && (parseInt(input.val()) > max))
+                input.val(max).change();
+            if(parseInt(input.val()) < min)
+                input.val(min).change();
+        });
+    }
+
     // cart js
     function basilico_canvas_dropdown_mini_cart(){
         if ( typeof wc_add_to_cart_params === 'undefined' )
@@ -536,12 +568,9 @@
                 complete: function() {}
             } );
         } );
-
         $('.cart-list-wrapper').on( 'change', '.qty', function() {
-             
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val(); 
- 
             var data = {
                 action: 'basilico_update_product_quantity',
                 cart_item_key: item_key,

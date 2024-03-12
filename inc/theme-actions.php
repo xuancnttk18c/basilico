@@ -110,7 +110,6 @@ function basilico_scripts() {
     $js_variables = array(
         'ajaxurl'          => admin_url( 'admin-ajax.php' ),
         'pxl_ajax_url'     => class_exists('Basilico_Ajax') ? Basilico_Ajax::get_endpoint( '%%endpoint%%' ) : '#',
-        //'shop_base_url'    => class_exists('Basilico_Woo') ? esc_url(basilco()->woo->get_shop_base_url()) : '#',
         'variation_alert'  => esc_html__( 'Please select some product options before add to cart or buy now', 'utero' ),
         'is_single'                  => is_singular(),
         'post_id'                    => is_singular() ? get_the_ID() : 0,
