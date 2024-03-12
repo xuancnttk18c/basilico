@@ -146,8 +146,8 @@ function basilico_canvas_cart(){
     <?php
 }
 
-add_action( 'wp_ajax_utero_update_product_quantity', 'basilico_update_product_quantity' );
-add_action( 'wp_ajax_nopriv_utero_update_product_quantity', 'basilico_update_product_quantity' );
+add_action( 'wp_ajax_basilico_update_product_quantity', 'basilico_update_product_quantity' );
+add_action( 'wp_ajax_nopriv_basilico_update_product_quantity', 'basilico_update_product_quantity' );
 function basilico_update_product_quantity() {
 	 
 	wc_maybe_define_constant( 'WOOCOMMERCE_CART', true );
