@@ -411,11 +411,14 @@ table.cart {
     z-index: -1;
     margin-top: 10px;
     @include transition(all .2s linear 0s);
-    &.open{
+    &.open {
     	opacity: 1;
     	visibility: visible;
     	z-index: 9;
     	margin-top: 0;
+    }
+    ul {
+    	margin: 0;
     }
     .pxl-cart-dropdown-inner{
     	position: relative;
@@ -539,7 +542,7 @@ table.cart {
 	}
 	.cart-content-footer{
 		padding: 0 30px;
-		margin-top: 35px;
+		margin-top: 20px;
 		@media (max-width: $xs_screen){
     		padding: 0 20px;
     	}
