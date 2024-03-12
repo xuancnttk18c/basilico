@@ -328,7 +328,7 @@ table.cart {
 	    	padding: 30px 20px;  
 	    }
 		.panel-header-inner{
-			padding-bottom: 50px;
+			padding-bottom: 30px;
 			border-bottom: 1px solid #e9e9e9;
 			@media (max-width: $lg_max){
 		    	padding-bottom: 30px;
@@ -583,6 +583,7 @@ table.cart {
 }
 .pxl-hidden-template-canvas-cart {
 	.pxl-title {
+		font-family: $heading_font_family;
 		color: $heading_color;
 		line-height: 1.2
 	}
