@@ -419,7 +419,7 @@ table.cart {
     }
     .pxl-cart-dropdown-inner{
     	position: relative;
-		padding: 37px 0 47px 0;
+		padding: 25px 0 30px 0;
 		&:before{
 			content: "";
 		    position: absolute;
@@ -474,6 +474,7 @@ table.cart {
 		padding-top: 13px;
 		padding-bottom: 13px;
 		padding-right: 20px;
+		list-style: none;
 		@media (max-width: $xxl_max){
 	    	padding-right: 50px;
 	    }
@@ -544,11 +545,11 @@ table.cart {
     	}
 		.cart-footer-wrap{
 			border-top: 1px solid #d0d0d0;
-			padding-top: 25px;
+			padding-top: 15px;
 		}
 	}
 	.woocommerce-mini-cart__total{
-		margin-bottom: 28px;
+		margin-bottom: 25px;
 		align-items:center;
 		.total-lbl{
 			font-size: 18px;
