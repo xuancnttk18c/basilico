@@ -578,32 +578,19 @@ table.cart {
 	}
 }
 .pxl-hidden-template-canvas-cart{
-	.pxl-title{
+	.pxl-title {
 		color: $heading_color;
 		line-height: 1.2
 	}
-	.pxl-close{
+	.pxl-close {
 		font-size: 20px;
 		color: #000;
 		&:hover{
 			color: $gray;
 		} 
 	}
-
 	.mini_cart_item{
 		position: relative;
-		padding-right: 80px;
-		padding-top: 13px;
-		padding-bottom: 13px;
-		@media (max-width: $xxl_max){
-	    	padding-right: 50px;
-	    }
-	    @media (max-width: $lg_max){
-	    	padding-right: 35px;
-	    }
-	    @media (max-width: $xs_max){
-	    	padding-right: 30px;
-	    }
 		.remove{
 			position: absolute;
 			top: 13px;
@@ -637,7 +624,7 @@ table.cart {
 			padding: 0;
 			position: relative;
 			display: inline-flex;
-			&+span{
+			& + span{
 				padding-left: 8px;
 				&:before{
 					content: ",";
