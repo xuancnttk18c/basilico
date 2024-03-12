@@ -513,7 +513,6 @@
         $('.pxl-hidden-template-canvas-cart').on( 'change', '.qty', function() {
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val(); 
-            console.log(item_key, item_qty);
             var data = {
                 action: 'basilico_update_product_quantity',
                 cart_item_key: item_key,
@@ -529,7 +528,7 @@
                 data: data,
                 success: function( response ) {  
                     $( document.body ).trigger( 'wc_fragment_refresh' );
-                    $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
+                    //$( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
                 },
                 beforeSend: function() {
                     $('body').find('.pxl-hidden-template-canvas-cart').addClass('loading'); 
@@ -557,7 +556,7 @@
                 data: data,
                 success: function( response ) {  
                     $( document.body ).trigger( 'wc_fragment_refresh' );
-                    $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
+                    //$( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
                 },
                 beforeSend: function() {
                     $('body').addClass('loading');
