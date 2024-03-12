@@ -131,7 +131,7 @@ function basilico_canvas_cart(){
         <div class="pxl-hidden-template-wrap">
         	<div class="pxl-panel-header">
                 <div class="panel-header-inner d-flex justify-content-between">
-                    <span class="pxl-title h4"><?php echo esc_html__( 'Basket', 'basilico' ) ?> (<span class="mini-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>)</span>
+                    <span class="pxl-title h4"><?php echo esc_html__( 'Shopping Cart', 'basilico' ) ?> (<span class="mini-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>)</span>
                     <span class="pxl-close lnil lnil-close" title="<?php echo esc_attr__( 'Close', 'basilico' ) ?>"></span>
                 </div>
             </div>
