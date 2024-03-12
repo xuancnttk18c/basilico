@@ -517,16 +517,16 @@
                 action: 'basilico_update_product_quantity',
                 cart_item_key: item_key,
                 cart_item_qty: item_qty,
-                security: main_data.nonce,
+                //security: main_data.nonce,
             };
-            console.log('jdkafkfjkldajfkl1001');
             $.ajax( {
                 url: main_data.ajaxurl,
                 type: 'POST',
                 cache: false,
                 dataType: 'json',
                 data: data,
-                success: function( response ) {  
+                success: function( response ) {
+                    console.log('Success');
                     $( document.body ).trigger( 'wc_fragment_refresh' );
                     $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
                 },
