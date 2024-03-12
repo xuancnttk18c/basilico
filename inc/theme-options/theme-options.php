@@ -1011,6 +1011,14 @@ Redux::setSection($opt_name, array(
             'text-align'  => false,
             'letter-spacing' => true,
             'units'       => 'px',
+            'weights' => array(
+                '400'       => 'Normal 400',
+                '500'       => 'Medium 500',
+                '700'       => 'Bold 700',
+                '400italic' => 'Normal 400 Italic',
+                '500italic' => 'Medium 500 Italic',
+                '700italic' => 'Bold 700 Italic',
+            ),
         ),
         array(
             'id'             => 'font_heading',
@@ -1023,6 +1031,14 @@ Redux::setSection($opt_name, array(
             'letter-spacing' => true,
             'text-transform' => true,
             'units'          => 'em',
+            'weights' => array(
+                '400'       => 'Normal 400',
+                '500'       => 'Medium 500',
+                '700'       => 'Bold 700',
+                '400italic' => 'Normal 400 Italic',
+                '500italic' => 'Medium 500 Italic',
+                '700italic' => 'Bold 700 Italic',
+            ),
         ),
         array(
             'id'          => 'font_h1',
