@@ -739,6 +739,12 @@ table.cart {
 		flex-direction: column;
 		.button{
 			width: 100%;
+			&:hover {
+				color: $heading_color;
+				border: 1px solid $heading_color;
+				@include border-radius(0px);
+				background-color: transparent;
+			}
 		}
 		a:first-child{
 			order: 1;
