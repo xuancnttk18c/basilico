@@ -131,8 +131,8 @@ function basilico_canvas_cart(){
         <div class="pxl-hidden-template-wrap">
         	<div class="pxl-panel-header">
                 <div class="panel-header-inner d-flex justify-content-between">
-                    <span class="pxl-title h4"><?php echo esc_html__( 'Basket', 'utero' ) ?> (<span class="mini-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>)</span>
-                    <span class="pxl-close lnil lnil-close" title="<?php echo esc_attr__( 'Close', 'utero' ) ?>"></span>
+                    <span class="pxl-title h4"><?php echo esc_html__( 'Basket', 'basilico' ) ?> (<span class="mini-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>)</span>
+                    <span class="pxl-close lnil lnil-close" title="<?php echo esc_attr__( 'Close', 'basilico' ) ?>"></span>
                 </div>
             </div>
             <div class="pxl-panel-content widget_shopping_cart custom_scroll">
@@ -144,31 +144,4 @@ function basilico_canvas_cart(){
         </div>
     </div> 
     <?php
-}
-
-/* Cart action */
-add_filter('woocommerce_add_to_cart_fragments', 'basilico_woocommerce_add_to_cart_fragments', 10, 1 );
-function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
-    
-    ob_start();
-    ?>
-    <span class="header-count cart_total"><?php echo WC()->cart->cart_contents_count; ?></span>
-    <?php
-    $fragments['.cart_total'] = ob_get_clean();
-    $fragments['.mini-cart-count'] = '<span class="mini-cart-total mini-cart-count">'.WC()->cart->cart_contents_count.'</span>';
-
-    ob_start();
-		wc_get_template( 'cart/mini-cart-totals.php' );
-	$mini_cart_totals = ob_get_clean();
-    $fragments['.pxl-hidden-template-canvas-cart .cart-footer-inner'] = $mini_cart_totals;
-    $fragments['.pxl-cart-dropdown .cart-footer-inner'] = $mini_cart_totals;
- 
-    $fragments['.pxl-anchor-cart .anchor-cart-count'] = '<span class="anchor-cart-count">'.WC()->cart->cart_contents_count.'</span>';
-    $fragments['.pxl-anchor-cart .anchor-cart-total'] = '<span class="anchor-cart-total">'.WC()->cart->get_cart_subtotal().'</span>';
-
-    ob_start();
-		wc_get_template( 'cart/pxl-cart-content.php' );
-	$fragments['.cart-list-wrapper .cart-list-content'] = ob_get_clean();
-
-    return $fragments;
 }
