@@ -3,17 +3,14 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 <div class="quantity">
-	<?php
-	do_action('woocommerce_before_quantity_input_field');
-	?>
-	 
+	<?php do_action('woocommerce_before_quantity_input_field'); ?>
 	<div class="pxl-quantity-wrap row gx-20">
 		<div class="label">
 			<label><?php esc_html_e( 'Qty', 'basilico' ) ?></label>
 		</div>
 		<div class="qty-field col">
 			<div class="quantity-inner">
-				<span class="quantity-button quantity-down"><span class="lnil lnil-minus"></span></span>
+				<span class="quantity-button quantity-down">-</span></span>
 				<input
 					type="<?php echo esc_attr( $type ); ?>"
 					<?php echo esc_attr($readonly) ? 'readonly="readonly"' : ''; ?>
@@ -31,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
 						autocomplete="<?php echo esc_attr( isset( $autocomplete ) ? $autocomplete : 'on' ); ?>"
 					<?php endif; ?>
 				/>
-				<span class="quantity-button quantity-up"><span class="lnir lnir-plus"></span></span>
+				<span class="quantity-button quantity-up">+</span>
 			</div>
 		</div>
 	</div>
