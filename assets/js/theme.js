@@ -38,8 +38,6 @@
         //* For Shop
         basilico_shop_view_layout();
         basilico_wc_single_product_gallery();
-        basilico_quantity_plus_minus();
-        basilico_quantity_plus_minus_action();
         basilico_table_cart_content();
         basilico_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '');
         basilico_mini_cart_dropdown_offset();
@@ -508,7 +506,70 @@
             $(this).closest('.pxl-hidden-template-canvas-cart').addClass('loading');
             $(this).closest('.pxl-cart-dropdown').addClass('loading');
         });
-        
+    }
+
+    function basilico_update_cart_quantity(){
+        $('.pxl-hidden-template-canvas-cart').on( 'change', '.qty', function() {
+            var item_key = $( this ).attr( 'name' );
+            var item_qty = $( this ).val(); 
+            var data = {
+                action: 'basilico_update_product_quantity',
+                cart_item_key: item_key,
+                cart_item_qty: item_qty,
+                security: main_data.nonce,
+            };
+
+            $.ajax( {
+                url: main_data.ajaxurl,
+                type: 'POST',
+                cache: false,
+                dataType: 'json',
+                data: data,
+                success: function( response ) {  
+                    $( document.body ).trigger( 'wc_fragment_refresh' );
+                    $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
+                },
+                beforeSend: function() {
+                    $('body').find('.pxl-hidden-template-canvas-cart').addClass('loading'); 
+                },
+                complete: function() {}
+            } );
+        } );
+
+        $('.cart-list-wrapper').on( 'change', '.qty', function() {
+             
+            var item_key = $( this ).attr( 'name' );
+            var item_qty = $( this ).val(); 
+ 
+            var data = {
+                action: 'basilico_update_product_quantity',
+                cart_item_key: item_key,
+                cart_item_qty: item_qty,
+                security: main_data.nonce,
+            };
+            $.ajax( {
+                url: main_data.ajaxurl,
+                type: 'POST',
+                cache: false,
+                dataType: 'json',
+                data: data,
+                success: function( response ) {  
+                    $( document.body ).trigger( 'wc_fragment_refresh' );
+                    $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
+                },
+                beforeSend: function() {
+                    $('body').addClass('loading');
+                },
+                complete: function() {}
+            } );
+        } );
+        $('.pxl-sticky-atc').on( 'change', '.qty', function() {
+            var item_key = $( this ).attr( 'name' );
+            var item_qty = $( this ).val(); 
+            if( parseInt(item_qty) > 0){
+                $(this).closest('.pxl-sticky-atc').find('.add_to_cart_button').attr('data-quantity',item_qty);
+            }
+        } );
     }
 
     function basilico_mini_cart_dropdown_offset(){
@@ -601,78 +662,6 @@
         }
     }
 
-    function basilico_quantity_plus_minus(){
-        "use strict";
-        $( ".quantity input" ).wrap( "<div class='pxl-quantity'></div>" );
-        $('<span class="quantity-button quantity-down"></span>').insertBefore('.quantity input');
-        $('<span class="quantity-button quantity-up"></span>').insertAfter('.quantity input');
-        // contact form 7 input number
-        $('<span class="pxl-input-number-spin"><span class="pxl-input-number-spin-inner pxl-input-number-spin-up"></span><span class="pxl-input-number-spin-inner pxl-input-number-spin-down"></span></span>').insertAfter('.wpcf7-form-control-wrap input[type="number"]');
-    }
-    function basilico_ajax_quantity_plus_minus(){
-        "use strict";
-        $('<span class="quantity-button quantity-down"></span>').insertBefore('.quantity input');
-        $('<span class="quantity-button quantity-up"></span>').insertAfter('.quantity input');
-    }
-    function basilico_quantity_plus_minus_action(){
-        "use strict";
-        $(document).on('click','.quantity .quantity-button',function () {
-            var $this = $(this),
-                spinner = $this.closest('.quantity'),
-                input = spinner.find('input[type="number"]'),
-                step = input.attr('step'),
-                min = input.attr('min'),
-                max = input.attr('max'),value = parseInt(input.val());
-            if(!value) value = 0;
-            if(!step) step=1;
-            step = parseInt(step);
-            if (!min) min = 0;
-            var type = $this.hasClass('quantity-up') ? 'up' : 'down' ;
-            switch (type)
-            {
-                case 'up':
-                    if(!(max && value >= max))
-                        input.val(value+step).change();
-                    break;
-                case 'down':
-                    if (value > min)
-                        input.val(value-step).change();
-                    break;
-            }
-            if(max && (parseInt(input.val()) > max))
-                input.val(max).change();
-            if(parseInt(input.val()) < min)
-                input.val(min).change();
-        });
-        $(document).on('click','.pxl-input-number-spin-inner',function () {
-            var $this = $(this),
-                spinner = $this.parents('.wpcf7-form-control-wrap'),
-                input = spinner.find('input[type="number"]'),
-                step = input.attr('step'),
-                min = input.attr('min'),
-                max = input.attr('max'),value = parseInt(input.val());
-            if(!value) value = 0;
-            if(!step) step=1;
-            step = parseInt(step);
-            if (!min) min = 0;
-            var type = $this.hasClass('pxl-input-number-spin-up') ? 'up' : 'down' ;
-            switch (type)
-            {
-                case 'up':
-                    if(!(max && value >= max))
-                        input.val(value+step).change();
-                    break;
-                case 'down':
-                    if (value > min)
-                        input.val(value-step).change();
-                    break;
-            }
-            if(max && (parseInt(input.val()) > max))
-                input.val(max).change();
-            if(parseInt(input.val()) < min)
-                input.val(min).change();
-        });
-    }
     function basilico_table_cart_content(){
         "use strict";
         var table = jQuery('.woocommerce-cart-form__contents'),

@@ -145,3 +145,41 @@ function basilico_canvas_cart(){
     </div> 
     <?php
 }
+
+add_action( 'wp_ajax_utero_update_product_quantity', 'basilico_update_product_quantity' );
+add_action( 'wp_ajax_nopriv_utero_update_product_quantity', 'basilico_update_product_quantity' );
+function basilico_update_product_quantity() {
+	 
+	wc_maybe_define_constant( 'WOOCOMMERCE_CART', true );
+
+	$nonce_value 		= sanitize_text_field( wp_unslash($_POST['security']) ) ;
+	$cart_item_key      = isset( $_POST['cart_item_key'] ) ? sanitize_text_field( wp_unslash( $_POST['cart_item_key'] ) ) : false;
+	$cart_item_quantity = isset( $_POST['cart_item_qty'] ) ? floatval( sanitize_text_field( $_POST['cart_item_qty'] ) ) : 0;
+	$fragments          = array();
+	$errors             = new \WP_Error();
+  
+	if( wp_verify_nonce( $nonce_value, 'basilico-security' )){
+		if ( ! empty( $cart_item_key ) && ! empty( WC()->cart->get_cart_item( $cart_item_key ) ) ) { 
+			
+			if ( $cart_item_quantity > 0 ) {
+				WC()->cart->set_quantity( $cart_item_key, $cart_item_quantity );
+			} else {
+				WC()->cart->remove_cart_item( $cart_item_key );
+			}
+
+			WC()->cart->check_cart_coupons();
+		} else { 
+			$errors->add( 'cart-item-null', esc_html__( 'Cart item not exist!', 'basilico' ) );
+		}
+ 
+		if ( ! $errors->has_errors() ) {
+			wp_send_json_success( [
+				'fragments' => $fragments,
+			] );
+		} else {
+			wp_send_json_error( [
+				'fragments' => $fragments,
+			] );
+		}
+	} 
+}
