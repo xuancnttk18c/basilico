@@ -563,10 +563,10 @@ table.cart {
 	.woocommerce-mini-cart__buttons{
 		@include d-flex();
 		flex-direction: column;
-		.button{
-			font-size: 14px;
-			width: 100%;
-			padding: 14px 35px 14px 35px
+		.button:hover {
+			background-color: transparent;
+			border: 1px solid $secondary_color;
+			color: $heading_color;
 		}
 		a:first-child{
 			order: 1;
