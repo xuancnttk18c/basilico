@@ -115,6 +115,7 @@ select.orderby{
 		bottom: 40px;
 		left: 40px;
 		right: 40px;
+		height: auto;
 		transform-origin: top;
 		@include transform(scaleY(0));
 		@include transition(.35s cubic-bezier(.48,.57,.33,.89));
