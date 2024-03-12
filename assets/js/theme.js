@@ -44,6 +44,7 @@
         basilico_canvas_dropdown_mini_cart();
         basilico_mini_cart_body_caculate_height();
         basilico_update_cart_quantity();
+        basilico_single_product_add_to_cart_ajax_handler();
     });
     $(window).on('load', function () {
         setTimeout(function() {
@@ -509,6 +510,107 @@
         });
     }
 
+    function basilico_single_product_add_to_cart_ajax_handler(){
+        if ( typeof wc_add_to_cart_params === 'undefined' ) {
+            return false;
+        }
+        $( document ).on( 'click', 'form.cart .ajax_add_to_cart', function( e ) {
+            e.preventDefault();
+            var $this_button = $( this );
+
+            if ( $this_button.hasClass( 'disabled' ) ) {  
+                return false;
+            }
+            // Smart Bundle
+            if ( $this_button.hasClass( 'woosb-disabled' ) ) { 
+                return false;
+            }
+
+            if( 'buy-now' === $this_button.attr( 'name' ) && $this_button.closest('.woocommerce-variation-add-to-cart').hasClass('woocommerce-variation-add-to-cart-disabled')){
+                alert(main_data.variation_alert);
+                return false;
+            }
+
+            var $variations_form = $this_button.closest( 'form.cart' ),
+                p_id       = $variations_form.find( '[name=add-to-cart]' ).val(),
+                var_id     = $variations_form.find( 'input[name=variation_id]' ).val(),
+                quantity        = $variations_form.find( '.quantity .qty[name=quantity]' ).val();
+
+            if ( 'add-to-cart' === $this_button.attr( 'name' ) || 'buy-now' === $this_button.attr( 'name' ) ) {
+                p_id = $this_button.val();
+            }
+              
+            if ( 0 === p_id ) {
+                return;
+            }
+            var data = {
+                product_id: p_id,
+                variation_id: var_id,
+            };
+
+            $variations_form.serializeArray().map( function( attr ) {
+                if ( attr.name !== 'add-to-cart' ) {
+                    if ( attr.name.endsWith( '[]' ) ) {
+                        let name = attr.name.substring( 0, attr.name.length - 2 );
+                        if ( ! (
+                            name in data
+                        ) ) {
+                            data[name] = [];
+                        }
+                        data[name].push( attr.value );
+                    } else {
+                        data[attr.name] = attr.value;
+                    }
+                }
+            } );
+
+            if ( $this_button.attr( 'data-qty' ) ) {
+                quantity = parseInt( $this_button.attr( 'data-qty' ) );
+            }
+            data.quantity = quantity;
+  
+            $this_button.removeClass( 'added' ).addClass( 'loading' );
+            $( document.body ).trigger( 'adding_to_cart', [ $this_button, data ] );
+             
+            var ajaxurl = main_data.pxl_ajax_url.toString().replace( '%%endpoint%%', 'pxl_add_to_cart_variable' );
+              
+            $.post( ajaxurl, data, function( response ) {
+                 
+                if ( ! response ) {
+                    return;
+                }
+
+                if ( response.error && response.product_url ) {
+                    window.location = response.product_url;
+                    return;
+                }
+
+                // Redirect to checkout for Buy Now button.
+                var redirect = $this_button.data( 'redirect' );
+
+                if ( redirect && '' !== redirect ) {
+                    window.location = redirect;
+                    return;
+                }
+
+                // Redirect to cart option.
+                if ( wc_add_to_cart_params.cart_redirect_after_add === 'yes' ) {
+                    window.location = wc_add_to_cart_params.cart_url;
+                    return;
+                }
+
+                // Trigger event so themes can refresh other areas.
+                $( document.body ).trigger( 'added_to_cart', [
+                    response.fragments, response.cart_hash, $this_button
+                ] );
+
+            } ).always( function() { 
+                $this_button.addClass( 'added' ).removeClass( 'loading' );
+            } );
+        } );
+        
+    } 
+
     function basilico_update_cart_quantity(){
         $('.pxl-hidden-template-canvas-cart').on( 'change', '.qty', function() {
             var item_key = $( this ).attr( 'name' );
@@ -528,7 +630,7 @@
                 data: data,
                 success: function( response ) {  
                     $( document.body ).trigger( 'wc_fragment_refresh' );
-                    //$( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
+                    $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
                 },
                 beforeSend: function() {
                     $('body').find('.pxl-hidden-template-canvas-cart').addClass('loading'); 
@@ -556,7 +658,7 @@
                 data: data,
                 success: function( response ) {  
                     $( document.body ).trigger( 'wc_fragment_refresh' );
-                    //$( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
+                    $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
                 },
                 beforeSend: function() {
                     $('body').addClass('loading');
