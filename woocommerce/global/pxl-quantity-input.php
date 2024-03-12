@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 		<div class="qty-field col">
 			<div class="quantity-inner">
-				<span class="quantity-button quantity-down">-</span>
+				<span class="quantity-button quantity-down"><i class="zmdi zmdi-minus"></i></span>
 				<input
 					type="<?php echo esc_attr( $type ); ?>"
 					<?php echo esc_attr($readonly) ? 'readonly="readonly"' : ''; ?>
@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
 						autocomplete="<?php echo esc_attr( isset( $autocomplete ) ? $autocomplete : 'on' ); ?>"
 					<?php endif; ?>
 				/>
-				<span class="quantity-button quantity-up">+</span>
+				<span class="quantity-button quantity-up"><i class="zmdi zmdi-plus"></i></span>
 			</div>
 		</div>
 	</div>
