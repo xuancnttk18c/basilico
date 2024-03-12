@@ -517,7 +517,7 @@
                 action: 'basilico_update_product_quantity',
                 cart_item_key: item_key,
                 cart_item_qty: item_qty,
-                //security: main_data.nonce,
+                security: main_data.nonce,
             };
             $.ajax( {
                 url: main_data.ajaxurl,

@@ -106,7 +106,30 @@ function basilico_widgets_position() {
  * Enqueue Styles Scripts : Front-End
  */
 add_action( 'wp_enqueue_scripts', 'basilico_scripts' );
-function basilico_scripts() {  
+function basilico_scripts() {
+    $js_variables = array(
+        'ajaxurl'          => admin_url( 'admin-ajax.php' ),
+        'pxl_ajax_url'     => class_exists('Basilico_Ajax') ? Basilico_Ajax::get_endpoint( '%%endpoint%%' ) : '#',
+        'shop_base_url'    => class_exists('Basilico_Woo') ? esc_url(basilco()->woo->get_shop_base_url()) : '#',
+        'lg_share'         => utero()->get_theme_opt('lg_share'),
+        'lg_zoom'          => utero()->get_theme_opt('lg_zoom'),
+        'lg_full_screen'   => utero()->get_theme_opt('lg_full_screen'),
+        'lg_download'      => utero()->get_theme_opt('lg_download'),
+        'lg_auto_play'     => utero()->get_theme_opt('lg_auto_play'),
+        'lg_thumbnail'     => utero()->get_theme_opt('lg_thumbnail'),
+        'variation_alert'  => esc_html__( 'Please select some product options before add to cart or buy now', 'utero' ),
+        'is_single'                  => is_singular(),
+        'post_id'                    => is_singular() ? get_the_ID() : 0,
+        'post_type'                  => get_post_type(),
+        'nonce'                      => wp_create_nonce( 'basilico-security' ),
+        'apply_coupon_nonce'         => wp_create_nonce( 'apply-coupon' ),
+        'is_checkout_page'           => class_exists('Woocommerce') ? is_checkout() : '',
+        'i18l'                      => [
+            'no_matched_found' => esc_html( _x( 'No matched found', 'enhanced select', 'utero' ) ),
+            'all'            => esc_html__( 'All %s', 'utero' ),
+        ],
+    );
+
     /* Icons Lib */
     wp_enqueue_style( 'basilico-icon', get_template_directory_uri() . '/assets/fonts/pixelart/style.css', array(), '1.0.0');
     wp_enqueue_style( 'flaticon', get_template_directory_uri() . '/assets/fonts/flaticon/css/flaticon.css', array(), '1.0.0');
@@ -134,6 +157,7 @@ function basilico_scripts() {
     if(isset($smoothscroll) && $smoothscroll) {
         wp_enqueue_script('basilico-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array('jquery'), '1.0.0', true);
     }
+    wp_localize_script( 'basilico-main', 'main_data', $js_variables );
     do_action( 'basilico_scripts');
 }
 
