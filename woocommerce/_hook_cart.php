@@ -183,3 +183,22 @@ function basilico_update_product_quantity() {
 		}
 	} 
 }
+
+add_action( 'wp_ajax_basilico_remove_from_cart', 'basilico_remove_from_cart' );
+add_action( 'wp_ajax_nopriv_basilico_remove_from_cart', 'basilico_remove_from_cart' );
+function basilico_remove_from_cart() { 
+	$cart_item_key = wc_clean( isset( $_POST['cart_item_key'] ) ? wp_unslash( $_POST['cart_item_key'] ) : '' );
+	$fragments          = array();
+	$errors             = new \WP_Error();
+	 
+	if ( $cart_item_key && false !== WC()->cart->remove_cart_item( $cart_item_key ) ) {
+		wp_send_json_success( [
+			'fragments' => $fragments,
+		] );
+	} else {
+		$errors->add( 'cart-item-null', esc_html__( 'Cart item not exist!', 'utero' ) );
+		wp_send_json_error( [
+			'fragments' => $fragments,
+		] );
+	}
+}
