@@ -24,15 +24,6 @@
     max-height: 100vh;
     overflow-y: auto;
     scrollbar-width: none;
-    .pxl-panel-header {
-        .panel-header-inner{
-            @include d-inline-flex();
-            position: absolute;
-            right: 38px;
-            top: 42px;
-            z-index: 9;
-        }
-    }
     .pxl-panel-content{
         position: relative;
         //padding: 50px 35px 50px 35px;
@@ -73,9 +64,8 @@
     opacity: 1;
 }
 .pxl-close {
-    border: 7px solid transparent;
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
     display: inline-flex;
     justify-content: center;
     align-items: center;

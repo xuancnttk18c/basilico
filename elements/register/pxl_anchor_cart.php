@@ -2,7 +2,7 @@
 pxl_add_custom_widget(
     array(
         'name'       => 'pxl_anchor_cart',
-        'title'      => esc_html__( 'PXL Anchor Cart', 'basilico' ),
+        'title'      => esc_html__( 'PXL Cart', 'basilico' ),
         'icon'       => 'eicon-anchor',
         'categories' => array('pxltheme-core'),
         'scripts'    => array(),
