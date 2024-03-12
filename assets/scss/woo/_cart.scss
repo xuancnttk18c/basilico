@@ -683,26 +683,37 @@ table.cart {
 			top: 0;
 			width: 35px;
 			height: 35px;
-			line-height: 32px;
+			line-height: 35px;
 			font-size: 11px;
 			border: 0;
 			cursor: pointer;
 			display: flex;
 		    align-items: center;
-		    color: $body_color;
+		    color: $heading_color;
 		    @include transition(color .3s ease);
+		    &:before {
+		    	font-family: 'Material-Design-Iconic-Font';
+		    	font-size: 16px;
+		    	color: $heading_color;
+		    }
 			&:hover{
 				color: #000;
 			}
 		}
-		.quantity-up{
+		.quantity-up {
 			right: 0;
 			justify-content: center;
+			&:before {
+				content: '\f278';
+			}
 		}
-		.quantity-down{
+		.quantity-down {
 			left: 0;
 			z-index: 1;
 			justify-content: center;
+			&:before {
+				content: '\f273';
+			}
 		}
 		&:hover{
 			input{
