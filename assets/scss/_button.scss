@@ -32,7 +32,8 @@
     @include border-radius($button_radius);
     background-color: $secondary_color;
     color: #fff;
-    line-height: 40px;
+    line-height: $input_height;
+    height: $input_height;
     text-transform: uppercase;
     white-space: nowrap;
     outline: none;

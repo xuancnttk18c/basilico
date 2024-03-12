@@ -131,7 +131,7 @@ if(!function_exists('basilico_configs')){
                 'font-size'          => '13px',
                 'font-weight'        => '400',
                 'letter-spacing'     => '0.15em',
-                'padding'            => '4px 32.75px',
+                'padding'            => '0 32.75px',
                 'radius'             => '0',
                 'radius-rtl'         => '0',
             ],

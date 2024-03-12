@@ -110,7 +110,7 @@ function basilico_scripts() {
     $js_variables = array(
         'ajaxurl'          => admin_url( 'admin-ajax.php' ),
         'pxl_ajax_url'     => class_exists('Basilico_Ajax') ? Basilico_Ajax::get_endpoint( '%%endpoint%%' ) : '#',
-        'variation_alert'  => esc_html__( 'Please select some product options before add to cart or buy now', 'utero' ),
+        'variation_alert'  => esc_html__( 'Please select some product options before add to cart or buy now', 'basilico' ),
         'is_single'                  => is_singular(),
         'post_id'                    => is_singular() ? get_the_ID() : 0,
         'post_type'                  => get_post_type(),
@@ -118,8 +118,8 @@ function basilico_scripts() {
         'apply_coupon_nonce'         => wp_create_nonce( 'apply-coupon' ),
         'is_checkout_page'           => class_exists('Woocommerce') ? is_checkout() : '',
         'i18l'                      => [
-            'no_matched_found' => esc_html( _x( 'No matched found', 'enhanced select', 'utero' ) ),
-            'all'            => esc_html__( 'All %s', 'utero' ),
+            'no_matched_found' => esc_html( _x( 'No matched found', 'enhanced select', 'basilico' ) ),
+            'all'            => esc_html__( 'All %s', 'basilico' ),
         ],
     );
 

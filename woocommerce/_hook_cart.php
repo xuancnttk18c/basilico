@@ -108,9 +108,9 @@ if ( ! function_exists( 'basilico_widget_shopping_cart_proceed_to_checkout' ) ) 
 		echo '<a href="' . esc_url( wc_get_checkout_url() ) . '" class="pxl-btn button checkout wc-forward"><span>' . esc_html__( 'Checkout', 'basilico' ) . '</span></a>';
 	}
 }
-// 
-add_filter('woocommerce_add_to_cart_fragments', 'utero_woocommerce_add_to_cart_fragments', 10, 1 );
-function utero_woocommerce_add_to_cart_fragments( $fragments ) {
+
+add_filter('woocommerce_add_to_cart_fragments', 'basilico_woocommerce_add_to_cart_fragments', 10, 1 );
+function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
     
     ob_start();
     ?>
@@ -129,7 +129,7 @@ function utero_woocommerce_add_to_cart_fragments( $fragments ) {
     $fragments['.pxl-anchor-cart .anchor-cart-total'] = '<span class="anchor-cart-total">'.WC()->cart->get_cart_subtotal().'</span>';
 
     ob_start();
-		wc_get_template( 'cart/pxl-cart-content.php' );
+	wc_get_template( 'cart/pxl-cart-content.php' );
 	$fragments['.cart-list-wrapper .cart-list-content'] = ob_get_clean();
 
     return $fragments;
@@ -211,7 +211,7 @@ function basilico_remove_from_cart() {
 			'fragments' => $fragments,
 		] );
 	} else {
-		$errors->add( 'cart-item-null', esc_html__( 'Cart item not exist!', 'utero' ) );
+		$errors->add( 'cart-item-null', esc_html__( 'Cart item not exist!', 'basilico' ) );
 		wp_send_json_error( [
 			'fragments' => $fragments,
 		] );
