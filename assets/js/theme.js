@@ -43,6 +43,7 @@
         basilico_mini_cart_dropdown_offset();
         basilico_canvas_dropdown_mini_cart();
         basilico_mini_cart_body_caculate_height();
+        basilico_update_cart_quantity();
     });
     $(window).on('load', function () {
         setTimeout(function() {
