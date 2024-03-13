@@ -132,10 +132,7 @@
                     $(document).find('.pxl-header-main-sticky').addClass('h-fixed');
                 }
             }else{
-                $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
-                tl.to('.pxl-header-main-sticky', {
-                    y: 0
-                });
+                $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');                
             }
         } 
 
