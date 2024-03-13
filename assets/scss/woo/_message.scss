@@ -71,22 +71,22 @@
 		 
     }
 }
-.woocommerce-error{
-	color: $error_color;
+.woocommerce-error {
+	//color: $error_color;
 	&:before{
-		color: $error_color; 
+		//color: $error_color; 
 		content: "\ec07";
 	}
 } 
 .woocommerce-info{
-	color: $notice_color; 
+	//color: $notice_color; 
 	&:before{
 		color: $notice_color; 
 		content: "\ec07";
 	}
 }
 .woocommerce-message{
-	color: $success_color; 
+	//color: $success_color; 
 	&:before{
 		color: $success_color; 
 		content: "\ec07";
