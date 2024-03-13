@@ -584,8 +584,9 @@ table.cart {
 .pxl-hidden-template-canvas-cart {
 	.pxl-title {
 		font-family: $heading_font_family;
+		font-weight: 500;
+		text-transform: uppercase;
 		color: $heading_color;
-		line-height: 1.2
 	}
 	.pxl-close {
 		font-size: 20px;
