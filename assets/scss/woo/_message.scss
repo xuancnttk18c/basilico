@@ -72,9 +72,9 @@
     }
 }
 .woocommerce-error {
-	//color: $error_color;
+	color: $error_color;
 	&:before{
-		//color: $error_color; 
+		color: $error_color; 
 		content: "\f1ca";
 	}
 } 
