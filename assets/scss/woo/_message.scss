@@ -19,7 +19,7 @@
     word-wrap: break-word;
     list-style: none;
     &:before{
-    	font-family: $pxli_font;
+    	font-family: 'Material-Design-Iconic-Font';
     	font-size: 18px;
 	    position: absolute;
 	    top: 50%;
@@ -75,21 +75,21 @@
 	//color: $error_color;
 	&:before{
 		//color: $error_color; 
-		content: "\ec07";
+		content: "\f1ca";
 	}
 } 
 .woocommerce-info {
 	color: $notice_color; 
 	&:before {
 		color: $notice_color; 
-		content: "\ec07";
+		content: "\f1f7";
 	}
 }
 .woocommerce-message {
 	color: $success_color; 
 	&:before {
 		color: $success_color; 
-		content: "\ec07";
+		content: "\f1ca";
 	}
 }
 
