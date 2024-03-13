@@ -1169,10 +1169,10 @@
     }
     .pxl-search-field {
         font-size: 14px;
-        line-height: 55px;
+        line-height: $input_height;
         letter-spacing: 0.02em;
         border-color: transparent;
-        height: 55px;
+        height: $input_height;
         border: 1px solid $secondary_color;
         @include border-radius(0px);
         @include placeholder() {
