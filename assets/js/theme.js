@@ -20,7 +20,6 @@
         basilico_header_sticky();
         basilico_open_menu_toggle();
         basilico_panel_mobile_menu();
-        basilico_cart_toggle();
         basilico_panel_anchor_toggle();
         basilico_sidebar_tabs_toggle();
         basilico_document_click();
@@ -161,6 +160,7 @@
         else
             $(document).find('.sidebar-sticky .sidebar-sticky-wrap').css('top', 30 + 'px');    
     }
+
     function basilico_open_menu_toggle(){
         'use strict';
         //* Add toggle button to parent Menu
@@ -190,6 +190,7 @@
             }
         });
     }
+
     function basilico_panel_mobile_menu(){
         'use strict';
         $(document).on('click','.btn-nav-mobile',function(e){
@@ -201,6 +202,7 @@
             $('.pxl-page-overlay').toggleClass('active');
         });
     }
+
     function basilico_panel_anchor_toggle(){
         'use strict';
         $(document).on('click','.pxl-anchor.side-panel',function(e){
@@ -216,6 +218,7 @@
             },1000);
         });
     }
+    
     function basilico_sidebar_tabs_toggle(){
         'use strict';
         $(".anchor-inner-item").first().addClass('active');
