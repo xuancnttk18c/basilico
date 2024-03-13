@@ -38,6 +38,9 @@ function basilico_wc_update_get_template($template, $template_name, $args, $temp
         case 'cart/mini-cart.php':
             $template = get_template_directory().'/'.WC()->template_path().'cart/pxl-mini-cart.php';
             break;
+        case 'cart/cart-empty.php':
+            $template = get_template_directory().'/'.WC()->template_path().'cart/pxl-cart-empty.php';
+            break;
         case 'content-widget-product.php':
             $template = get_template_directory().'/'.WC()->template_path().'pxl-content-widget-product.php';
             break;

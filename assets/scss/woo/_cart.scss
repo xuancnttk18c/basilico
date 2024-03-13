@@ -876,34 +876,39 @@ table.cart {
 	}
 }
 
- 
-.wc-proceed-to-checkout{
-	.btn{
+.wc-proceed-to-checkout {
+	.btn {
         width: 100%;
     	display: block;
-        
 	}
 }
 
- 
-.cart-empty.woocommerce-info{
+.cart-empty.woocommerce-info {
 	display: none;
 }
-.pxl-cart-empty-wrap{
-	img.img-bag{
+.pxl-cart-empty-wrap {
+	img.img-bag {
 		max-width: 112px;
 		margin-bottom: 20px;
 	}
-	h2{
+	h2 {
 		margin-bottom: 12px;
 	}
-	p.desc{
+	p.desc {
 		margin-bottom: 20px;
 		color: $gray;
 	}
 
 }
-.return-to-shop{
+.return-to-shop {
 	text-align: center;		
 }
- 
+
+.pxl-cart-empty {
+	.woocommerce-info {
+		margin-bottom: 30px;
+	}
+	.return-to-shop {
+		text-align: center;
+	}
+}
