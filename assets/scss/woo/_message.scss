@@ -19,7 +19,7 @@
     word-wrap: break-word;
     list-style: none;
     &:before{
-    	//font-family: $lineicons_font;
+    	font-family: $pxli_font;
     	font-size: 18px;
 	    position: absolute;
 	    top: 50%;
@@ -35,7 +35,7 @@
 	    margin: 4px 0 0 15px;
 	    position: relative;
 	    overflow: hidden;
-		&:before{
+		&:before {
 			content: "";
 			width: 100%;
 			height: 1px;
@@ -45,7 +45,7 @@
 			background-color: $link_color; 
 			@include transition(all 0.3s cubic-bezier(0.4, 0, 1, 1));
 		}
-		&:after{
+		&:after {
 			content: "";
 			width: 0;
 			height: 1px;
@@ -55,16 +55,16 @@
 			background-color: $link_color_hover;
 			@include transition(all 0.3s cubic-bezier(0.4, 0, 1, 1));
 		}
-		&:active,&:hover, &:focus {
+		&:active, &:hover, &:focus {
 	        color: $link_color_hover;
 	        outline: medium none;
 	        text-decoration: none;   
 	        background-color: transparent;
 	        border-color: transparent;
-			&:before{
+			&:before {
 		 		left: 100%;
 			}
-			&:after{
+			&:after {
 				width: 100%;
 			}
 	    }
@@ -78,16 +78,16 @@
 		content: "\ec07";
 	}
 } 
-.woocommerce-info{
-	//color: $notice_color; 
-	&:before{
+.woocommerce-info {
+	color: $notice_color; 
+	&:before {
 		color: $notice_color; 
 		content: "\ec07";
 	}
 }
-.woocommerce-message{
-	//color: $success_color; 
-	&:before{
+.woocommerce-message {
+	color: $success_color; 
+	&:before {
 		color: $success_color; 
 		content: "\ec07";
 	}
