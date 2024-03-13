@@ -82,17 +82,6 @@ function basilico_woocommerce_cross_sells_total( $totals ) {
 	return $totals;
 }
 
-add_action( 'woocommerce_cart_is_empty', 'basilico_custom_cart_is_empty' );
-function basilico_custom_cart_is_empty(){
-	?>
-	<div class="pxl-cart-empty-wrap text-center">
-		<img class="img-bag" src="<?php echo esc_url(get_template_directory_uri().'/assets/images/bag-large.png')?>">
-		<h2 class="pxl-heading"><?php echo esc_html__('Your cart is currently empty.','basilico') ?></h2>
-		<p class="desc"><?php echo esc_html__( 'You may check out all the available products and buy some in the shop.', 'basilico' ) ?></p>
-	</div>
-	<?php 
-}
-
 /* mini cart */
 if ( ! function_exists( 'basilico_widget_shopping_cart_button_view_cart' ) ) {
 	remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );
