@@ -1084,70 +1084,22 @@
 }
 
 //* Pxl Cart
-.pxl-cart-wrap {
-    &.layout-1 {
-        .pxl-cart-icon {
-            cursor: pointer;
+.pxl-anchor-cart {
+    &.layout-df {
+        a.cart-anchor {
             position: relative;
-            display: inline-flex;
-            svg {
-                width: 25px;
-            }
-            .pxl-cart-count {
+            .anchor-cart-count {
                 position: absolute;
-                min-width: 21px;
+                left: 12px;
+                top: 0;
+                width: 21px;
                 height: 21px;
-                padding: 3px;
-                display: inline-flex;
-                background-color: $secondary_color;
+                border-radius: 50%;
+                background-color: $primary_color;
                 color: #fff;
-                font-size: 12px;
-                border-radius: 12px;
-                align-items: center;
-                justify-content: center;
-                top: -0.5em;
-                right: -1em;
-            }
-        }
-    }
-    &.layout-2 {
-        .pxl-cart-icon {
-            cursor: pointer;
-            position: relative;
-            display: inline-flex;
-            i {
-                color: $primary_color;
-            }
-            svg {
-                fill: $primary_color;
-                width: 25px;
-            }
-        }
-        .custom-cart-icon {
-            svg {
-                width: 31px;
-                fill: none;
-                .st0 {
-                    fill: $primary_color;
-                }
-                .st1 {
-                    fill: $heading_color;
-                }
-            }
-        }
-        .pxl-cart-text {
-            margin-left: 14px;
-            color: $heading_color;
-            font-size: 15px;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-            .pxl-cart-count {
-                &:before {
-                    content: '(';
-                }
-                &:after {
-                    content: ')';
-                }
+                font-size: 13px;
+                display: inline-block;
+                text-align: center;
             }
         }
     }
