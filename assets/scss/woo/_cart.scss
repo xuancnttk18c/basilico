@@ -317,7 +317,7 @@ table.cart {
 		}
 	}
 	.pxl-panel-header{
-		padding: 50px 80px 20px 80px;
+		padding: 50px 50px 20px;
 		@media (max-width: $xxl_max){
 	    	padding: 50px 50px 60px 50px;
 	    }
@@ -336,7 +336,7 @@ table.cart {
 		}
 	}
 	.pxl-panel-content{
-		padding: 0 80px;
+		padding: 0 50px;
 		overflow-y: auto;
 	    -webkit-box-flex: 1;
 	    -webkit-flex-grow: 1;
@@ -384,7 +384,7 @@ table.cart {
 	    }
 	}
 	.pxl-panel-footer{
-		padding: 30px 80px 75px 80px;  
+		padding: 30px 50px 75px;  
 		padding-bottom: 75px;
 		@media (max-width: $xxl_max){
 	    	padding: 30px 50px 75px 50px;  
