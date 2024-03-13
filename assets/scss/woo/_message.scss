@@ -1,71 +1,95 @@
 .woocommerce-notices-wrapper{
-	margin-top: 15px;
-	margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid $border_color;
+	margin-bottom: 38px;
 	&:empty{
 		display: none;
 	}
 	ul{
 		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-	.woocommerce-error{
-		li{
-			 
-    		@media (min-width: $md_min){
-	    		position: relative;
-	    		padding-right: 165px;
-	    	}
-	    	@media (max-width: $sm_max){
-	    		@include d-flex();
-	    	}
-    		a{
-    			 
-			    @media (min-width: $md_min){
-			        position: absolute;
-			        top: 50%;
-				    right: 0;
-				    width: 150px;
-				    @include transform(translateY(-50%));
-				}
-				@media (max-width: $sm_max){
-					order: 2;
-	    		}
-    		}
-		}
-	}
-	.woocommerce-info{
-
-	}
-	.woocommerce-message{
-		@media (min-width: $sm_min){
-			@include d-flex();
-			align-items:center;
-			justify-content: space-between;
-		}
-		@media (max-width: $xs_max){
-			a.btn{
-				display: block;
-				margin-top: 10px;
-			}
-		}
-	}
-	.btn-secondary:hover{
-		background-color: $secondary_color;
 	}
 }
-
+.woocommerce-error, 
+.woocommerce-info, 
+.woocommerce-message {
+    position: relative;
+    width: 100%;
+    border: 0;
+    color: $body_color;
+    background: #f2f2f2;
+    padding: 15px 15px 15px 45px;
+    word-wrap: break-word;
+    list-style: none;
+    &:before{
+    	font-family: $lineicons_font;
+    	font-size: 18px;
+	    position: absolute;
+	    top: 50%;
+	    left: 15px;
+	    @include transform(translateY(-50%));
+    }
+    a.button{
+    	float: right;
+	    padding: 0;
+	    background-color: transparent;
+	    border-color: transparent;
+	    color: $link_color; 
+	    margin: 4px 0 0 15px;
+	    position: relative;
+	    overflow: hidden;
+		&:before{
+			content: "";
+			width: 100%;
+			height: 1px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-color: $link_color; 
+			@include transition(all 0.3s cubic-bezier(0.4, 0, 1, 1));
+		}
+		&:after{
+			content: "";
+			width: 0;
+			height: 1px;
+			position: absolute;
+			bottom: 0;
+			left: 0;	 
+			background-color: $link_color_hover;
+			@include transition(all 0.3s cubic-bezier(0.4, 0, 1, 1));
+		}
+		&:active,&:hover, &:focus {
+	        color: $link_color_hover;
+	        outline: medium none;
+	        text-decoration: none;   
+	        background-color: transparent;
+	        border-color: transparent;
+			&:before{
+		 		left: 100%;
+			}
+			&:after{
+				width: 100%;
+			}
+	    }
+		 
+    }
+}
 .woocommerce-error{
 	color: $error_color;
+	&:before{
+		color: $error_color; 
+		content: "\ec07";
+	}
 } 
 .woocommerce-info{
-	color: $notice_color;
-    background: #F2F2F2;
-    padding: 20px 24px;
-    font-size: 15px;
+	color: $notice_color; 
+	&:before{
+		color: $notice_color; 
+		content: "\ec07";
+	}
 }
 .woocommerce-message{
 	color: $success_color; 
+	&:before{
+		color: $success_color; 
+		content: "\ec07";
+	}
 }
+
