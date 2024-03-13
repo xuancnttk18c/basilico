@@ -908,5 +908,10 @@ table.cart {
 	}
 	.return-to-shop {
 		text-align: center;
+		button:hover {
+			border: 1px solid $heading_color;
+			color: $heading_color;
+			background-color: transparent;
+		}		
 	}
 }
