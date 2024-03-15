@@ -275,7 +275,150 @@ table.cart {
 		}
 	}
 }
-
+.cart-list-wrapper{
+	.cart-list-head{
+		font-size: 14px;
+		color: $gray;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		border-bottom: 1px solid #dedede;
+		padding-bottom: 10px;
+		@media (max-width: $xs_max){
+			display: none;
+		}
+		.product-name{
+			margin-left: -90px;
+		}
+		.col-quantity{
+    		width: 20%;
+		}
+	}
+	.cart-list-item{
+		padding: 25px 0;
+		&+ .cart-list-item{
+			border-top: 1px solid #dedede;
+		}
+		.product-thumbnail{
+			img{
+				width: 70px;
+			}
+		}
+		.cart-item-info{
+			padding-left: 20px;
+		}
+		.item-name{
+			font-size: 16px;
+			padding-top: 4px;
+			line-height: 24px;
+		}
+		.variation{
+			margin-top: 5px;
+			padding-bottom: 4px;
+			line-height: 1;
+			span{
+				margin: 0;
+				padding: 0;
+				position: relative;
+				display: inline-flex;
+				&+span{
+					padding-left: 8px;
+					&:before{
+						content: ",";
+						position: absolute;
+						left: 0;
+					}
+				}
+			}
+		}
+		.col-quantity{
+    		width: 20%;
+		}
+		.pxl-quantity-wrap{
+			align-items: center;
+			.label{
+				display: none;
+			}
+		}
+		.quantity-inner{
+			position: relative;
+			display: inline-block;
+			width: 80px;
+			input{
+			    line-height: 34px;
+			    width: 100%;
+	    		height: 34px;
+	    		border: 1px solid #d0d0d0;
+	    		font-size: 14px;
+	    		text-align: center;
+			}
+			.quantity-button{
+				position: absolute;
+				top: 0;
+				width: 35px;
+				height: 34px;
+				line-height: 32px;
+				font-size: 11px;
+				border: 0;
+				cursor: pointer;
+				display: flex;
+			    align-items: center;
+			    color: $body_color;
+			    @include transition(color .3s ease);
+				&:hover{
+					color: #000;
+				}
+			}
+			.quantity-up{
+				right: 0;
+				justify-content: center;
+			}
+			.quantity-down{
+				left: 0;
+				z-index: 1;
+				justify-content: center;
+			}
+			&:hover{
+				input{
+					border-color: #000;
+				}
+			}
+		}
+		.item-price,
+		.item-subtotal{
+			font-size: 16px;
+			color: $heading_color;
+			padding-top: 4px;
+		}
+		.remove{
+			font-size: 12px;
+			color: $gray;
+			&:hover{
+				color: $link_color;
+			}
+		}
+		@media (max-width: $xs_max){
+			.cart-item-info{
+				position: relative;
+			}
+			.col-remove{
+				position: absolute;
+			    top: 0;
+			    right: 0;
+			    width: auto !important;
+			}
+			.item-name{
+				padding-top: 0;
+				margin-bottom: 5px;
+			}
+			.item-subtotal{
+				margin-top: 5px;
+				.lbl{
+					color: $body_color;
+				}
+			}
+		}
+	}
+}
 .pxl-hidden-template.pxl-hidden-template-canvas-cart.pos-right{
 	max-width: 645px;
     flex-direction: row;
