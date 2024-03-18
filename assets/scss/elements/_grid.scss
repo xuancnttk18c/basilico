@@ -1926,6 +1926,10 @@
 /* Pxl Team Grid */
 .pxl-team-grid.layout-1 {
     .pxl-grid-inner {
+        margin-bottom: -75px;
+        > .grid-item {
+            margin-bottom: 75px;
+        }
     }
     .item-inner {
         position: relative;
