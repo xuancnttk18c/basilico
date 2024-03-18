@@ -12,9 +12,12 @@ if ( $related_products ) : ?>
 			$heading = $relate_title;
 		}
 		$relate_sub_title = basilico()->get_theme_opt('related_sub_title', '');
-		if ( $heading ) :
-			?>
-			<div class="related_subtitle"><span><?php echo esc_html( $relate_sub_title ); ?></span></div>
+		if ( $heading ) : ?>
+			<?php if (!empty($relate_sub_title)): ?>
+				<div class="related_subtitle">
+					<span><?php echo esc_html( $relate_sub_title ); ?></span>
+				</div>
+			<?php endif; ?>
 			<h2 class="related_title"><?php echo esc_html( $heading ); ?></h2>
 			<div class="pxl-divider"></div>
 		<?php endif; ?>

@@ -19,7 +19,6 @@ function basilico_woocommerce_remove_product_single_function() {
     remove_action( 'woocommerce_single_product_summary' , 'woocommerce_template_single_price', 10 );
     add_action( 'woocommerce_single_product_summary' , 'woocommerce_template_single_price', 10 );
     add_action( 'woocommerce_single_product_summary' , 'woocommerce_template_single_rating', 10 );
-
 }
 add_action( 'init', 'basilico_woocommerce_remove_product_single_function' );
 
@@ -561,4 +560,3 @@ function basilico_woocommerce_output_related_products_args( $args ) {
 	$args['columns'] = 3;
 	return $args;
 }
-
