@@ -1931,11 +1931,36 @@
         position: relative;
         .item-image {
             position: relative;
-            margin-bottom: 25px;
+            margin-bottom: 36px;
             .image-wrap {
                 border-radius: 10px;
                 overflow: hidden;
             }
+        }
+    }
+    .item-content {
+        text-align: center;
+        padding: 0 20px;
+        .item-title {
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            margin-bottom: 6px;
+            a {
+                color: inherit;
+                &:hover {
+                    color: $secondary_color;
+                }
+            }
+        }
+        .item-position {
+            font-size: 15px;
+            color: #666666;
+            letter-spacing: 0;
+            text-transform: capitalize;
+        }
+        .item-description {
+            margin-top: 10px;
         }
         .item-social {
             margin: 0 auto;
@@ -1968,30 +1993,6 @@
                     }
                 }
             }
-        }
-    }
-    .item-content {
-        text-align: center;
-        padding: 0 20px;
-        .item-title {
-            font-size: 22px;
-            letter-spacing: 0.03em;
-            a {
-                color: inherit;
-                &:hover {
-                    color: $secondary_color;
-                }
-            }
-        }
-        .item-position {
-            font-family: $heading_font_family;
-            font-size: 15px;
-            color: #666666;
-            letter-spacing: 0.01em;
-            text-transform: capitalize;
-        }
-        .item-description {
-            margin-top: 10px;
         }
     }
 }
