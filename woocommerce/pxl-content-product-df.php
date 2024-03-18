@@ -140,6 +140,7 @@ $item_class          = ['grid-item'];
             </div>
             <?php woocommerce_template_loop_add_to_cart(); ?>
         </div>
+        <?php basilico()->blog->get_post_nav(); ?>
     </div>
     <?php
 	/**
@@ -150,5 +151,4 @@ $item_class          = ['grid-item'];
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
     ?>
-    <?php basilico()->blog->get_post_nav(); ?>
 </div>
