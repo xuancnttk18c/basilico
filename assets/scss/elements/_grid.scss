@@ -1966,13 +1966,12 @@
             margin-top: 22px;
             display: inline-flex;
             justify-content: center;
-            i {
-                color: #fff;
-                transition: all 300ms linear 0s;
-            }
+            background: $primary_color;
+            border-radius: 17px;
+            padding: 0 13px;
             a {
                 width: 35px;
-                height: 40px;
+                height: 35px;
                 font-size: 13px;
                 color: #fff;
                 text-align: center;
@@ -1981,9 +1980,13 @@
                 align-items: center;
                 justify-content: center;
                 transition: all 400ms linear;
+                i {
+                    color: #fff;
+                    transition: all 300ms linear 0s;
+                }
                 &:hover {
                     i {
-                        opacity: 1;
+                        color: $heading_color;
                     }
                 }
             }
