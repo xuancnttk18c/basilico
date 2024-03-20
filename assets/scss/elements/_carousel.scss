@@ -900,6 +900,7 @@
             @include border-radius(18px);
             .pxl-swiper-arrow {
                 &:before {
+                    content: '';
                     font-family: 'Material-Design-Iconic-Font';
                     font-size: 15px;
                     color: rgba(255, 255, 255, 0.5);
