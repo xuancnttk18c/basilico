@@ -13,7 +13,7 @@ $quote_icon_type = $widget->get_setting('quote_icon_type', 'text');
 $pagination_style = basilico()->get_theme_opt('swiper_pagination_style', 'style-df');
 
 $opts = [
-    'slide_direction'               => 'horizontal',
+    'slide_direction'               => 'vertical',
     'slide_percolumn'               => '1',
     'slide_mode'                    => 'slide',
     'slides_to_show_xxl'            => '1',
