@@ -900,15 +900,14 @@
             @include border-radius(18px);
             .pxl-swiper-arrow {
                 &:before {
-                    content: '';
                     font-family: 'Material-Design-Iconic-Font';
                     font-size: 15px;
                     color: rgba(255, 255, 255, 0.5);
                 }
-                .pxl-swiper-arrow-next:before {
+                &.pxl-swiper-arrow-next:before {
                     content: '\f2ee';
                 }
-                .pxl-swiper-arrow-prev:before {
+                &.pxl-swiper-arrow-prev:before {
                     content: '\f2ea';
                 }
             }
