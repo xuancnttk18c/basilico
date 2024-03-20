@@ -19,7 +19,7 @@ pxl_add_custom_widget(
                         array(
                             array(
                                 'name' => 'img_gallery',
-                                'label' => __( 'Add Images', 'basilico' ),
+                                'label' => __('Add Images', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::GALLERY,
                                 'show_label' => false,
                                 'dynamic' => [
