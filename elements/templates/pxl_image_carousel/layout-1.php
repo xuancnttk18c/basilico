@@ -48,6 +48,7 @@ $widget->add_render_attribute( 'carousel', [
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
                     ));
+                    $thumbnail = $img['thumbnail'];
                     ?>
                     <div class="item-content">
                         <?php if (!empty($image)) : ?>
