@@ -26,12 +26,6 @@ pxl_add_custom_widget(
                                     'active' => true,
                                 ],
                             ),
-                            array(
-                                'name' => 'img_size',
-                                'label' => esc_html__('Image Size', 'basilico' ),
-                                'type' => \Elementor\Controls_Manager::TEXT,
-                                'description' =>  esc_html__('Enter image size (Example: "thumbnail", "medium", "large", "full" or other sizes defined by theme). Alternatively enter size in pixels (Default: 370x300 (Width x Height)).', 'basilico')
-                            ),
                         ),
                     ),
                 ),
