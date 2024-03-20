@@ -62,8 +62,8 @@ $dots = $widget->get_setting('dots','false');
         </div>
         <?php if($arrows !== 'false'): ?>
             <div class="pxl-swiper-arrows <?php echo esc_attr($arrows_style);?>">
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon pxli-arrow-next"></span></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"></div>
             </div>
         <?php endif; ?>
         <?php if($dots !== 'false'): ?>
