@@ -26,8 +26,6 @@ $opts = [
     'delay'                         => $widget->get_setting('autoplay_speed', '5000'),
     'loop'                          => $widget->get_setting('infinite','false'),
     'speed'                         => $widget->get_setting('speed', '500'),
-    'centered_slides'               => true,
-    'centered_slides_bounds'        => true,
 ];
 
 $widget->add_render_attribute( 'carousel', [
