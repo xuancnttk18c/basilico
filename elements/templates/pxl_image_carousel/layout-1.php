@@ -50,7 +50,7 @@ $widget->add_render_attribute( 'carousel', [
                     ));
                     $thumbnail = $img['thumbnail'];
                     ?>
-                    <div class="item-content">
+                    <div class="pxl-swiper-slide swiper-slide">
                         <?php if (!empty($image)) : ?>
                             <div class="item-inner">
                                 <?php echo wp_kses_post($thumbnail); ?>
