@@ -891,6 +891,7 @@
 .pxl-image-carousel {
     .pxl-swiper-arrows {
         &.style-1 {
+            padding: 7px 18px;
             position: absolute;
             left: 50%;
             bottom: 25px;
@@ -899,7 +900,6 @@
             background-color: #2d2723;
             @include border-radius(18px);
             .pxl-swiper-arrow {
-                padding: 7px 18px;
                 + .pxl-swiper-arrow {
                     margin-left: 47px;
                 }
