@@ -71,6 +71,16 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
                             ),
                             array(
+                                'name' => 'arrows_style',
+                                'label' => esc_html__('Arrows Style', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'options' => [
+                                    'style-1' => esc_html__('Style 1'),
+                                    'style-2' => esc_html__('Style 2'),
+                                ],
+                                'default' => 'style-1'
+                            ),
+                            array(
                                 'name' => 'dots',
                                 'label' => esc_html__('Show Dots', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SWITCHER,

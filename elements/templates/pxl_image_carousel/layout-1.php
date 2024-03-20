@@ -2,9 +2,6 @@
 extract($settings);
 
 $imgGallery = $settings['img_gallery'];
-
-$arrows = $widget->get_setting('arrows','false');
-$dots = $widget->get_setting('dots','false');
 $opts = [
     'slide_direction'               => 'horizontal',
     'slide_percolumn'               => '1', 
@@ -33,6 +30,11 @@ $widget->add_render_attribute( 'carousel', [
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
+
+$arrows = $widget->get_setting('arrows','false');
+$arrows_style = $widget->get_setting('arrows_style', 'style-1');
+
+$dots = $widget->get_setting('dots','false');
 ?>
 
 <div class="pxl-swiper-slider pxl-image-carousel layout-1">
@@ -59,7 +61,7 @@ $widget->add_render_attribute( 'carousel', [
             </div>
         </div>
         <?php if($arrows !== 'false'): ?>
-            <div class="pxl-swiper-arrows nav-vertical-in">
+            <div class="pxl-swiper-arrows <?php echo esc_attr($arrows_style);?>">
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon pxli-arrow-next"></span></div>
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
             </div>

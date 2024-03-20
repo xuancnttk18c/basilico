@@ -60,7 +60,7 @@ pxl_add_custom_widget(
                         array(
                             array(
                                 'name' => 'wp_gallery',
-                                'label' => __( 'Add Images', 'basilico' ),
+                                'label' => esc_html__( 'Add Images', 'basilico' ),
                                 'type' => \Elementor\Controls_Manager::GALLERY,
                                 'show_label' => false,
                                 'dynamic' => [
