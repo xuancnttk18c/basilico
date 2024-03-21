@@ -31,10 +31,12 @@ $widget->add_render_attribute( 'carousel', [
     'data-settings' => wp_json_encode($opts)
 ]);
 
-$arrows = $widget->get_setting('arrows','false');
+$img_size = !empty($img_size) ? $img_size : 'full';
+
+$arrows = $widget->get_setting('arrows', 'false');
 $arrows_style = $widget->get_setting('arrows_style', 'style-1');
 
-$dots = $widget->get_setting('dots','false');
+$dots = $widget->get_setting('dots', 'false');
 ?>
 
 <div class="pxl-swiper-slider pxl-image-carousel layout-1">

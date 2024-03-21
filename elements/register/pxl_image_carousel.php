@@ -78,7 +78,10 @@ pxl_add_custom_widget(
                                     'style-1' => esc_html__('Style 1'),
                                     'style-2' => esc_html__('Style 2'),
                                 ],
-                                'default' => 'style-1'
+                                'default' => 'style-1',
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
                             ),
                             array(
                                 'name' => 'dots',

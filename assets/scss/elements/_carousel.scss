@@ -420,7 +420,6 @@
                 line-height: 32px;
                 letter-spacing: 0.02em;
                 color: $heading_color;
-                margin-bottom: 30px;
                 max-width: 1074px;
                 @media (max-width: $sm_max) {
                     font-size: 18px;
@@ -438,6 +437,9 @@
             }
             .item-position {
                 font-size: 15px;
+            }
+            .item-rating-star {
+                margin-top: 30px;
             }
         }
         .pxl-swiper-dots {
@@ -900,6 +902,7 @@
             background-color: #2d2723;
             @include border-radius(18px);
             .pxl-swiper-arrow {
+                cursor: pointer;
                 + .pxl-swiper-arrow {
                     margin-left: 47px;
                 }
