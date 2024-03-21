@@ -185,7 +185,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Border Active Color', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet.swiper-pagination-bullet-active:after' => 'border-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:after' => 'border-color: {{VALUE}};',
                                 ],
                                 'condition' => [
                                     'dots' => "true",
