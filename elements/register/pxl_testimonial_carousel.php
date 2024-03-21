@@ -50,6 +50,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 7', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-7.jpg'
                                 ],
+                                '8' => [
+                                    'label' => esc_html__( 'Layout 7', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-8.jpg'
+                                ],
                             ],
                             'prefix_class' => 'pxl-testimonial-carousel-layout-',
                         ),
@@ -88,7 +92,6 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Title', 'basilico'),
                                     'type' => \Elementor\Controls_Manager::TEXT,
                                     'label_block' => true,
-                                    'description' => esc_html('Use for Layout 2', 'basilico'),
                                 ),
                                 array(
                                     'name' => 'description',
