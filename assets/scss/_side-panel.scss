@@ -96,6 +96,16 @@
         }
     }
 }
+.pxl-luxury .pxl-close {
+    border: none;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    &:before,
+    &:after {
+        height: 1px;
+    }
+}
 
 .pxl-panel-content{
     .menu-main-container-wrap{
@@ -111,288 +121,60 @@
 }
 
 //* Panel Position
-.pxl-hidden-template.pos-left {
-    width: 100%;
-    max-width: 364px;
+.pxl-hidden-template.pos-left{
+    width: 90%;
+    max-width: 601px;
+    z-index: 604;
     right: auto;
     left: 0;
     @include transform(translate(-100%,0));
-    @media (max-width: $sm_max) {
-        max-width: 320px;
-    }
-    @media (max-width: $xs_max) {
-        width: 90%;
-    }  
-    .pxl-panel-header {
-        padding: 30px 30px 10px 30px;
-        @media (max-width: $xs_screen) {
-            padding: 30px 20px 10px 20px;
-        }
-    }
-    .pxl-panel-content {
-        padding: 30px 40px;
-        @media (max-width: $sm_max) {
-            padding: 30px 30px;
-        }
-        @media (max-width: $xs_max) {
-            padding: 30px 30px;
-        }
-        @media (max-width: $xs_screen) {
-            padding: 30px 20px;
-        }
-    }
 }
-.pxl-hidden-template.pxl-canvas-menu {
-    max-width: 445px;
-    overflow: visible;
-    .pxl-panel-content {
-        padding: 0;
-    }
-    .pxl-close {
-        top: 55px;
-        right: auto;
-        left: 80px;
-        @media (max-width: $xxl_max) {
-            top: 25px;
-            left: 50px;
-        }
-    }
-}
-
-.pxl-hidden-template.pos-right {
+.pxl-hidden-template.pos-right{
     width: 100%;
-    max-width: 500px;
+    max-width: 601px;
+    z-index: 604;
     right: 0;
     left: auto;
     @include transform(translate(100%,0));
-    @media (max-width: $xs_max) {
-        width: 90%;
-    }
-    .pxl-hidden-template-wrap {
-        position: relative;
-        padding: 30px;
-    }    
 }
-
-.pxl-hidden-template.pos-top {
+.pxl-hidden-template.pos-top{
+    background-color: transparent;
     width: 100%;
-    height: auto;
-    max-height: 100%;
+    z-index: 604;
     left: 0;
     right: 0;
     @include transform(translate(0,-100%));
     .pxl-panel-header {
-        padding: 0;
         position: absolute;
-        top: 30px;
-        right: 30px;
+        top: 20px;
+        right: 20px;
         z-index: 1;
     }
-}
-
-.admin-bar .pxl-hidden-template.pos-top {
-    max-height: calc(100% - 32px);
-}
-
-.pxl-hidden-template.pos-top {
-    .pxl-hidden-template-wrap {
-        position: relative;
-        &:before{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            @include transition(all .3s ease);
-        }
-        &:before {
-            bottom: 0;
-            right: 0;
-            background-color: rgba(#ffffff, 0.6);
-            z-index: 999999;
-            opacity: 0;
-            visibility: hidden;
-            cursor: progress;
-        }
-    }
-    &.loading {
-        .pxl-hidden-template-wrap{
-            &:before {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
+    .pxl-panel-content{
+        padding: 0;
     }
 }
-.elementor-element-edit-mode .pxl-search-product .pxl-close{
-    display: none;
-}
-
-.pxl-hidden-template.pos-center {
+.pxl-hidden-template.pos-center{
     @include d-flex();
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    cursor: none;
     .pxl-hidden-template-wrap{
-        width: 100%;
         max-width: 570px;
-        max-height: 100vh;
-        position: relative;
-        border-radius: 0;
         background-color: #fff;
-        cursor: default;
-        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
         @include box-shadow( 0 3px 21px rgba(#ffffff, 0.3));
-        @include transition(all .3s ease);
+        @include transition(all .3s linear);
         @include transform(scale(0.6));
-        overflow-y: auto;
-        @media (max-width: $lg_max){
-            max-width: 450px;
-        }
-        @media (max-width: $sm_max){
-            max-width: 420px;
-        }
-        &::-webkit-scrollbar{
-            height: 0;
-            width: 0;
-            background-color: transparent;
-        }
-
-        &::-webkit-scrollbar-track{
-            border-radius: 0;
-        }
-         
-        &::-webkit-scrollbar-thumb{
-            border-radius: 0;
-            background-color: transparent;
-        }
-
-        &:hover::-webkit-scrollbar {
-            width: 0;
-            height: auto;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 0
-        }
-        &:hover::-webkit-scrollbar-thumb{
-            background-color: rgba(48, 48, 48, 0.1);
-        }
         &:hover{
             @include box-shadow( 0 8px 30px rgba(#ffffff, 0.3));
         }
-    } 
-    .pxl-close{
-        top: 50px;
-        right: 50px;
-        color: #000;
-        @media (max-width: $xs_max){
-            top: 20px;
-            right: 20px;
-        }
-        &:hover{
-            color: $gray;
-        }
     }
-    .pxl-panel-content{
-        padding: 0;
-    }
-
-    &.open{
-        .pxl-hidden-template-wrap{
-            @include transform(scale(1));
-        }
-    }
-}
-.pxl-hidden-template.pos-center-large {
-    @include d-flex();
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    cursor: none;
-    padding: 30px 0;
-    flex-direction: row;
-    overflow-y: inherit;
-    .pxl-hidden-template-wrap{
-        width: 100%;
-        max-width: 1560px;
-        position: relative;
-        border-radius: 0;
-        background-color: #fff;
-        cursor: default;
-        border-radius: 10px;
-        @include box-shadow( 0 3px 21px rgba(#000, 0.3));
-        @include transition(all .3s ease);
-        @include transform(scale(0.6));
-        overflow: hidden;
-        @media (max-width: $xxl_max){
-            max-width: 90%;
-        }
-        @media (max-width: $lg_max){
-            max-width: calc(100% - 40px);
-        }
-        
-    } 
-    .pxl-panel-content{
-        padding: 0;
-        position: static;
-        max-height: calc(100vh - 60px);
-        overflow-y: auto;
-        &::-webkit-scrollbar{
-            height: 0;
-            width: 0;
-            background-color: transparent;
-        }
-
-        &::-webkit-scrollbar-track{
-            border-radius: 0;
-        }
-         
-        &::-webkit-scrollbar-thumb{
-            border-radius: 0;
-            background-color: transparent;
-        }
-
-        &:hover::-webkit-scrollbar {
-            width: 0;
-            height: auto;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 0
-        }
-        &:hover::-webkit-scrollbar-thumb{
-            background-color: rgba(48, 48, 48, 0.1);
-        }
-    }
-    .pxl-close{
-        top: 10px;
-        right: 10px;
-        color: #000;
-        background: #fff;
-        padding: 15px;
-        border-radius: 50%;
-        @media (max-width: $sm_max){
-            padding: 10px;
-            font-size: 14px;
-        }
-        &:hover{
-            color: $gray;
-        }
-    }
-    
-    &.open{
-        .pxl-hidden-template-wrap{
-            opacity: 1;
-            @include transform(scale(1));
-        }
-    }
-}
-.admin-bar .pxl-hidden-template.pos-center-large .pxl-hidden-template-wrap{
-    max-height: calc(100vh - 92px);
-}
-.pxl-hidden-template.pos-full{ 
     .pxl-panel-header {
-        padding: 0;
         position: absolute;
-        top: 30px;
-        right: 30px;
+        top: 15px;
+        right: 15px;
         z-index: 1;
     }
     .pxl-panel-content{
@@ -403,6 +185,26 @@
             @include transform(scale(1));
         }
     }
+}
+.pxl-hidden-template.pos-full{
+    @include d-flex();
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    .pxl-panel-header {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1;
+    }
+    .pxl-panel-content{
+        padding: 0;
+    }
+}
+.pxl-hidden-template.open{
+    @include transform(translateX(0));
+    opacity: 1;
+    z-index: 9999;
 }
 
 //* Cart Sidebar
