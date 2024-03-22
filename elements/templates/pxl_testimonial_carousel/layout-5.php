@@ -42,78 +42,78 @@ $widget->add_render_attribute('carousel', [
 ]);
 ?>
 <?php if (isset($content_list) && !empty($content_list) && count($content_list)) : ?>
-    <div class="pxl-swiper-slider pxl-testimonial-carousel layout-<?php echo esc_attr($settings['layout']) ?>">
-        <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
-            <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
-                <div class="pxl-swiper-wrapper swiper-wrapper">
-                    <?php foreach ($content_list as $key => $value) :
-                        $image       = isset($value['image']) ? $value['image'] : [];
-                        $title       = isset($value['title']) ? $value['title'] : '';
-                        $position    = isset($value['position']) ? $value['position'] : '';
-                        $testimonial_title = isset($value['testimonial_title']) ? $value['testimonial_title'] : '';
-                        $description = isset($value['description']) ? $value['description'] : '';
-                        $thumbnail = '';
-                        if (!empty($image['id'])) {
-                            $img = pxl_get_image_by_size(array(
-                                'attach_id'  => $image['id'],
-                                'thumb_size' => '250x250',
-                                'class' => 'no-lazyload',
-                            ));
-                            $thumbnail = $img['thumbnail'];
-                        }
+<div class="pxl-swiper-slider pxl-testimonial-carousel layout-<?php echo esc_attr($settings['layout']) ?>">
+    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
+        <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
+            <div class="pxl-swiper-wrapper swiper-wrapper">
+                <?php foreach ($content_list as $key => $value) :
+                    $image       = isset($value['image']) ? $value['image'] : [];
+                    $title       = isset($value['title']) ? $value['title'] : '';
+                    $position    = isset($value['position']) ? $value['position'] : '';
+                    $testimonial_title = isset($value['testimonial_title']) ? $value['testimonial_title'] : '';
+                    $description = isset($value['description']) ? $value['description'] : '';
+                    $thumbnail = '';
+                    if (!empty($image['id'])) {
+                        $img = pxl_get_image_by_size(array(
+                            'attach_id'  => $image['id'],
+                            'thumb_size' => '250x250',
+                            'class' => 'no-lazyload',
+                        ));
+                        $thumbnail = $img['thumbnail'];
+                    }
                     ?>
-                        <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) { ?>
-                            <div class="icon-wrapper">
-                                <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
-                            </div>
-                        <?php } ?>
-                        <?php if ($quote_icon_type == 'text') { ?>
-                            <div class="item-quote-icon">“</div>
-                        <?php } ?>
-                        <div class="pxl-swiper-slide swiper-slide">
-                            <div class="item-inner relative text-center">
-                                <?php if (!empty($testimonial_title)) { ?>
+                    <div class="pxl-swiper-slide swiper-slide">
+                        <div class="item-inner relative text-center">
+                            <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) { ?>
+                                <div class="icon-wrapper">
+                                    <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
+                                </div>
+                            <?php } ?>
+                            <?php if ($quote_icon_type == 'text') { ?>
+                                <div class="item-quote-icon">“</div>
+                            <?php } ?>
+                            <?php if (!empty($testimonial_title)) { ?>
                                 <h4 class="testimonial-title"><span><?php echo esc_html($testimonial_title); ?></span></h4>
-                                <?php } ?>
-                                <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
-                                <div class="item-wrap row gx-20 justify-content-center">
-                                    <?php if (!empty($value['rating']) && $value['rating'] != 'none') : ?>
-                                        <div class="item-rating-star">
-                                            <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
-                                                <i class="zmdi zmdi-star"></i>
-                                                <i class="zmdi zmdi-star"></i>
-                                                <i class="zmdi zmdi-star"></i>
-                                                <i class="zmdi zmdi-star"></i>
-                                                <i class="zmdi zmdi-star"></i>
-                                            </div>
+                            <?php } ?>
+                            <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
+                            <div class="item-wrap row gx-20 justify-content-center">
+                                <?php if (!empty($value['rating']) && $value['rating'] != 'none') : ?>
+                                    <div class="item-rating-star">
+                                        <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
+                                            <i class="zmdi zmdi-star"></i>
+                                            <i class="zmdi zmdi-star"></i>
+                                            <i class="zmdi zmdi-star"></i>
+                                            <i class="zmdi zmdi-star"></i>
+                                            <i class="zmdi zmdi-star"></i>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+                                <div class="item-info col-auto">
+                                    <h4 class="item-title"><span><?php echo esc_html($title); ?></span></h4>
+                                    <div class="item-position"><?php echo esc_html($position); ?></div>
+                                    <?php if (!empty($thumbnail)) : ?>
+                                        <div class="item-image col-auto">
+                                            <span class="img-outer">
+                                                <?php echo wp_kses_post($thumbnail); ?>
+                                            </span>
                                         </div>
                                     <?php endif; ?>
-                                    <div class="item-info col-auto">
-                                        <h4 class="item-title"><span><?php echo esc_html($title); ?></span></h4>
-                                        <div class="item-position"><?php echo esc_html($position); ?></div>
-                                        <?php if (!empty($thumbnail)) : ?>
-                                            <div class="item-image col-auto">
-                                                <span class="img-outer">
-                                                    <?php echo wp_kses_post($thumbnail); ?>
-                                                </span>
-                                            </div>
-                                        <?php endif; ?>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                    <?php endforeach; ?>
-                </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
-            <?php if ($arrows !== 'false') : ?>
-                <div class="pxl-swiper-arrows nav-vertical-out">
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon pxli-arrow-next"></span></div>
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
-                </div>
-            <?php endif; ?>
-            <?php if ($dots !== 'false') : ?>
-                <div class="pxl-swiper-dots <?php echo esc_attr($pagination_style); ?>"></div>
-            <?php endif; ?>
         </div>
+        <?php if ($arrows !== 'false') : ?>
+            <div class="pxl-swiper-arrows nav-vertical-out">
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon pxli-arrow-next"></span></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
+            </div>
+        <?php endif; ?>
+        <?php if ($dots !== 'false') : ?>
+            <div class="pxl-swiper-dots <?php echo esc_attr($pagination_style); ?>"></div>
+        <?php endif; ?>
     </div>
+</div>
 <?php endif; ?>
