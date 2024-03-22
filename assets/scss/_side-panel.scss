@@ -56,6 +56,7 @@
     &:hover::-webkit-scrollbar-thumb{
         background-color: rgba(48, 48, 48, 0.1);
     }
+
 }
 .pxl-page-overlay.active {
     width: 100%;
@@ -122,20 +123,49 @@
 
 //* Panel Position
 .pxl-hidden-template.pos-left{
-    width: 90%;
-    max-width: 601px;
-    z-index: 604;
+    width: 100%;
+    max-width: 364px;
     right: auto;
     left: 0;
     @include transform(translate(-100%,0));
+    @media (max-width: $sm_max){
+        max-width: 320px;
+    }
+    @media (max-width: $xs_max){
+        width: 90%;
+    }  
+    .pxl-panel-header {
+        padding: 30px 30px 10px 30px;
+        @media (max-width: $xs_screen){
+            padding: 30px 20px 10px 20px;
+        }
+    }
+    .pxl-panel-content{
+        padding: 30px 40px;
+        @media (max-width: $sm_max){
+            padding: 30px 30px;
+        }
+        @media (max-width: $xs_max){
+            padding: 30px 30px;
+        }
+        @media (max-width: $xs_screen){
+            padding: 30px 20px;
+        }
+    }
 }
 .pxl-hidden-template.pos-right{
     width: 100%;
-    max-width: 601px;
-    z-index: 604;
+    max-width: 500px;
     right: 0;
     left: auto;
     @include transform(translate(100%,0));
+    @media (max-width: $xs_max){
+        width: 90%;
+    }
+    .pxl-hidden-template-wrap{
+        position: relative;
+        padding: 30px;
+    }    
 }
 .pxl-hidden-template.pos-top{
     background-color: transparent;
@@ -153,6 +183,9 @@
     .pxl-panel-content{
         padding: 0;
     }
+}
+.admin-bar .pxl-hidden-template.pos-top{
+    max-height: calc(100% - 32px);
 }
 .pxl-hidden-template.pos-center{
     @include d-flex();
