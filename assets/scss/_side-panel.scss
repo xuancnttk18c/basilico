@@ -129,6 +129,12 @@
     right: auto;
     left: 0;
     @include transform(translate(-100%,0));
+    .pxl-panel-header {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+    }
 }
 .pxl-hidden-template.pos-right{
     width: 100%;

@@ -543,7 +543,8 @@
 			padding-top: 5px;
 		}
 		&:last-child {
-			padding-bottom: 25px;
+			border-bottom: none;
+			padding-bottom: 0;
 		}
 		a {
 			font-weight: 600;
