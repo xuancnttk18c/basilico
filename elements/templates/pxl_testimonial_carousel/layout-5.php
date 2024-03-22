@@ -16,13 +16,13 @@ $opts = [
     'slide_direction'               => 'horizontal',
     'slide_percolumn'               => '1',
     'slide_mode'                    => 'slide',
-    'slides_to_show_xxl'            => '1',
-    'slides_to_show'                => '1',
-    'slides_to_show_lg'             => '1',
-    'slides_to_show_md'             => '1',
-    'slides_to_show_sm'             => '1',
-    'slides_to_show_xs'             => '1',
-    'slides_to_scroll'              => '1',
+    'slides_to_show_xxl'            => $widget->get_setting('col_xxl', '4'), 
+    'slides_to_show'                => $widget->get_setting('col_xl', '4'), 
+    'slides_to_show_lg'             => $widget->get_setting('col_lg', '3'), 
+    'slides_to_show_md'             => $widget->get_setting('col_md', '3'), 
+    'slides_to_show_sm'             => $widget->get_setting('col_sm', '2'), 
+    'slides_to_show_xs'             => $widget->get_setting('col_xs', '1'), 
+    'slides_to_scroll'              => $widget->get_setting('slides_to_scroll', '1'), 
     'slides_gutter'                 => 30,
     'arrow'                         => $arrows,
     'dots'                          => $dots,
@@ -35,7 +35,6 @@ $opts = [
     'speed'                         => $widget->get_setting('speed', '500')
 ];
 
-
 $widget->add_render_attribute('carousel', [
     'class'         => 'pxl-swiper-container overflow-hidden',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
@@ -46,14 +45,6 @@ $widget->add_render_attribute('carousel', [
     <div class="pxl-swiper-slider pxl-testimonial-carousel layout-<?php echo esc_attr($settings['layout']) ?>">
         <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
             <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
-                <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) { ?>
-                    <div class="icon-wrapper">
-                        <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
-                    </div>
-                <?php } ?>
-                <?php if ($quote_icon_type == 'text') { ?>
-                    <div class="item-quote-icon">“</div>
-                <?php } ?>
                 <div class="pxl-swiper-wrapper swiper-wrapper">
                     <?php foreach ($content_list as $key => $value) :
                         $image       = isset($value['image']) ? $value['image'] : [];
@@ -71,6 +62,14 @@ $widget->add_render_attribute('carousel', [
                             $thumbnail = $img['thumbnail'];
                         }
                     ?>
+                        <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) { ?>
+                            <div class="icon-wrapper">
+                                <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
+                            </div>
+                        <?php } ?>
+                        <?php if ($quote_icon_type == 'text') { ?>
+                            <div class="item-quote-icon">“</div>
+                        <?php } ?>
                         <div class="pxl-swiper-slide swiper-slide">
                             <div class="item-inner relative text-center">
                                 <?php if (!empty($testimonial_title)) { ?>
