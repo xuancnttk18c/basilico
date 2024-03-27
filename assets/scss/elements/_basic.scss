@@ -198,29 +198,31 @@
         span {
             position: relative;
         }
-        &.highlighted {
-            span {
-                &:before,
-                &:after {
-                    content: '';
-                    position: absolute;
-                    width: 62px;
-                    height: 1px;
-                    background-color: $primary_color;
-                    bottom: 5px;
-                }
-                &:before {
-                    left: -15px;
-                    @include transform(translateX(-100%));
-                }
-                &:after {
-                    right: -15px;
-                    @include transform(translateX(100%));
-                }
-                @media (max-width: $xs_max) {
+        &.style-1 {
+            &.highlighted {
+                span {
                     &:before,
                     &:after {
-                        content: none !important;
+                        content: '';
+                        position: absolute;
+                        width: 62px;
+                        height: 1px;
+                        background-color: $primary_color;
+                        bottom: 5px;
+                    }
+                    &:before {
+                        left: -15px;
+                        @include transform(translateX(-100%));
+                    }
+                    &:after {
+                        right: -15px;
+                        @include transform(translateX(100%));
+                    }
+                    @media (max-width: $xs_max) {
+                        &:before,
+                        &:after {
+                            content: none !important;
+                        }
                     }
                 }
             }

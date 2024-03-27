@@ -107,16 +107,6 @@ pxl_add_custom_widget(
                                 'default' => 'false',
                             ),
                             array(
-                                'name' => 'highlighted_line_style',
-                                'label' => esc_html__('Highlighted Line Style', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::SELECT,
-                                'options' => [
-                                    'style-1' => esc_html__('Style 1'),
-                                    'style-2' => esc_html__('Style 2'),
-                                ],
-                                'default' => 'style-1'
-                            ),
-                            array(
                                 'name'  => 'title_max_width',
                                 'label' => esc_html__( 'Max Width (px)', 'basilico' ),
                                 'type'  => 'slider',
@@ -174,6 +164,16 @@ pxl_add_custom_widget(
                                 'name' => 'subtitle_highlighted_line',
                                 'label' => esc_html__('Highlighted Line', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
+                            ),
+                            array(
+                                'name' => 'subtitle_highlighted_style',
+                                'label' => esc_html__('Highlighted Line Style', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'options' => [
+                                    'style-1' => esc_html__('Style 1'),
+                                    'style-2' => esc_html__('Style 2'),
+                                ],
+                                'default' => 'style-1'
                             ),
                             array(
                                 'name' => 'sub_title_space',
