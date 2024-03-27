@@ -53,10 +53,9 @@ if(class_exists('WPCF7')) {
                                 'default' => 'style-df',
                             ),
                             array(
-                                'name' => 'style_input',
-                                'label' => esc_html__('Input', 'basilico'),
-                                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
-                                'controls' => array(
+                                'name' => 'mc_style_input_tabs',
+                                'control_type' => 'tab',
+                                'tabs' => array(
                                     array(
                                         'name' => 'input_style_normal',
                                         'label' => esc_html__('Normal', 'basilico'),
@@ -75,9 +74,9 @@ if(class_exists('WPCF7')) {
                                                 'type' => \Elementor\Controls_Manager::COLOR,
                                                 'selectors' => [
                                                     '{{WRAPPER}} .pxl-contact-form7 input[type="text"],
-                                                     {{WRAPPER}} .pxl-contact-form7 input[type="password"],
-                                                     {{WRAPPER}} .pxl-contact-form7 input[type="email"],
-                                                     {{WRAPPER}} .pxl-contact-form7 input[type="phone"]' => 'color: {{VALUE}};',
+                                                    {{WRAPPER}} .pxl-contact-form7 input[type="password"],
+                                                    {{WRAPPER}} .pxl-contact-form7 input[type="email"],
+                                                    {{WRAPPER}} .pxl-contact-form7 input[type="phone"]' => 'color: {{VALUE}};',
                                                 ],
                                             ),
                                             array(
@@ -97,7 +96,7 @@ if(class_exists('WPCF7')) {
                                                     '{{WRAPPER}} .pxl-contact-form7 input[type="text"], {{WRAPPER}} .pxl-contact-form7 input[type="password"], {{WRAPPER}} .pxl-contact-form7 input[type="email"], {{WRAPPER}} .pxl-contact-form7 input[type="phone"]' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                                 ],
                                             ),
-                                        ),
+                                        )
                                     ),
                                     array(
                                         'name' => 'input_style_hover',
