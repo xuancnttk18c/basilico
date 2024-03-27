@@ -350,7 +350,7 @@
             .highlighted span {
                 &:before,
                 &:after {
-                    content: '';
+                    content: inherit;
                 }
             }
         }
