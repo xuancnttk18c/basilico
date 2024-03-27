@@ -189,7 +189,7 @@ if(class_exists('WPCF7')) {
                                                      {{WRAPPER}} .pxl-contact-form7 input[type="time"]:focus,
                                                      {{WRAPPER}} .pxl-contact-form7 input[type="date"]:focus,
                                                      {{WRAPPER}} .pxl-contact-form7 input[type="time"]:focus, 
-                                                     {{WRAPPER}} .pxl-contact-form7 input[type="datetime-local"]:focus,, 
+                                                     {{WRAPPER}} .pxl-contact-form7 input[type="datetime-local"]:focus,
                                                      {{WRAPPER}} .pxl-contact-form7 input:focus + input[type="submit"],
                                                      {{WRAPPER}} .pxl-contact-form7 input:hover + input[type="submit"],
                                                      {{WRAPPER}} .pxl-contact-form7 input:focus + button,
