@@ -237,6 +237,7 @@
                         color: $primary_color;
                         font-size: inherit;
                         line-height: inherit;
+                        margin-top: 2px;
                     }
                     &:before {
                         margin-right: 8px;
@@ -343,14 +344,6 @@
             .highlighted span {
                 &:before {
                     content: none;
-                }
-            }
-        }
-        &.center {
-            .highlighted span {
-                &:before,
-                &:after {
-                    content: inherit;
                 }
             }
         }
