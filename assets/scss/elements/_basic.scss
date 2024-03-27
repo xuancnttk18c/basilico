@@ -227,6 +227,26 @@
                 }
             }
         }
+        &.style-2 {
+            &.highlighted {
+                span {
+                    &:before,
+                    &:after {
+                        content: '\e9e6';
+                        font-family: $pxli_font;
+                        color: $primary_color;
+                        font-size: inherit;
+                        line-height: inherit;
+                    }
+                    &:before {
+                        margin-right: 8px;
+                    }
+                    &:after {
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
     }
     .heading-description {
         hyphens: auto;
