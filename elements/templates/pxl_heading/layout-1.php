@@ -33,9 +33,8 @@ if ( $settings['title_animation'] ) {
     );
 }
 $widget->add_render_attribute( 'sub-title', 'class', 'heading-subtitle');
-if ( $settings['subtitle_highlighted_line'] == 'true') {
-    $widget->add_render_attribute( 'sub-title', 'class', 'highlighted');
-}
+$widget->add_render_attribute( 'sub-title', 'class', $settings['highlighted_line_style']);
+
 if ( $settings['sub_title_animation'] ) {
     $widget->add_render_attribute( 'sub-title', 'class', 'pxl-animate pxl-invisible animated-'.$settings['sub_title_animation_duration']);
     $widget->add_render_attribute( 'sub-title', 'data-settings',
