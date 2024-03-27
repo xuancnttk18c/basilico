@@ -342,13 +342,18 @@
             }
         }
         &.start {
+            text-align: left;
             .highlighted span {
                 &:before {
                     content: none;
                 }
             }
         }
+        &.center {
+            text-align: center
+        }
         &.end {
+            text-align: right;
             .highlighted span {
                 &:after {
                     content: none;

@@ -94,10 +94,6 @@ pxl_add_custom_widget(
                                         'icon' => 'eicon-text-align-right',
                                     ]
                                 ],
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-wrap' => 'justify-content: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-heading-inner' => 'text-align: {{VALUE}};',
-                                ],
                             ),
                             array(
                                 'name' => 'title_highlighted_line',
@@ -168,6 +164,7 @@ pxl_add_custom_widget(
                                 'name' => 'subtitle_highlighted_style',
                                 'label' => esc_html__('Highlighted Line Style', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SELECT,
+                                'label_block' => true,
                                 'options' => [
                                     'style-1' => esc_html__('Style 1'),
                                     'style-2' => esc_html__('Style 2'),
