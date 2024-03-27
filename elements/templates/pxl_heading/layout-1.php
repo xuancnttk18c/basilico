@@ -33,6 +33,7 @@ if ( $settings['title_animation'] ) {
     );
 }
 $widget->add_render_attribute( 'sub-title', 'class', 'heading-subtitle');
+$widget->add_render_attribute( 'sub-title', 'class', $settings['subtitle_highlighted_line'] == "true" ? 'highlighted');
 $widget->add_render_attribute( 'sub-title', 'class', $settings['subtitle_highlighted_style']);
 
 if ( $settings['sub_title_animation'] ) {
