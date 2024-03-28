@@ -47,6 +47,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 6', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_image_gallery-6.jpg'
                                 ],
+                                '7' => [
+                                    'label' => esc_html__( 'Layout 7', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_image_gallery-6.jpg'
+                                ],
                             ],
                             'prefix_class' => 'pxl-image-gallery-layout-',
                         ),

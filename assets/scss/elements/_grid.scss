@@ -2111,7 +2111,8 @@
         }
     }
     &.layout-2,
-    &.layout-3, {
+    &.layout-3,
+    &.layout-7 {
         .up-icon {
             a i {
                 font-size: 25px !important;
@@ -2280,6 +2281,17 @@
             margin-top: 19px;
             margin-bottom: 9px;
             color: $heading_color;
+        }
+    }
+    &.layout-7 {
+        .up-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 83px;
+            height: 83px;
+            background-color: $primary_color;
+            border-radius: 50%;
         }
     }
 }
