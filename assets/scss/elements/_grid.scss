@@ -2286,9 +2286,7 @@
         .grid-item .item-inner {
             &:before {
                 background-color: rgba(18, 15, 12, 0.35);
-            }
-            img {
-                @include transition();
+                backdrop-filter: blur(5px);
             }
             .up-icon {
                 display: inline-flex;
