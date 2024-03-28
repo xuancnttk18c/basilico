@@ -160,7 +160,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Icon', 'basilico' ),
                             'type' => 'icons',
                             'condition' => [
-                                'layout' => ['2', '3', '5', '6']
+                                'layout!' => ['1', '4']
                             ]
                         ),
                         array(

@@ -2292,6 +2292,18 @@
             height: 83px;
             background-color: $primary_color;
             border-radius: 50%;
+            i {
+                color: #fff;
+            }
+            .x-line,
+            .y-line {
+                @include d-inline-flex();
+                position: relative;
+                &:before,
+                &:after {
+                    background-color: #fff;
+                }
+            }
         }
     }
 }

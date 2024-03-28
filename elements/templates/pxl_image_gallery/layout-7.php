@@ -138,4 +138,4 @@ if ($layout_mode == 'masonry') {
         <?php endforeach; ?>
         <div class="grid-sizer <?php echo esc_attr($grid_sizer); ?>"></div>
     </div>
-</div>\
+</div>
