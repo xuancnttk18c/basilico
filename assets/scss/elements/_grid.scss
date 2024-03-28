@@ -2301,8 +2301,7 @@
                     color: #fff;
                     font-size: 23px;
                 }
-                .x-line,
-                .y-line {
+                .x-line, .y-line {
                     @include d-inline-flex();
                     position: relative;
                     &:before,
