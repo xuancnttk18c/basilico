@@ -2284,6 +2284,12 @@
     }
     &.layout-7 {
         .grid-item .item-inner {
+            &:before {
+                background-color: rgba(18, 15, 12, 0.35);
+            }
+            img {
+                @include transition();
+            }
             .up-icon {
                 display: inline-flex;
                 align-items: center;
@@ -2307,9 +2313,6 @@
                 }
             }
             &:hover {
-                &:before {
-                    content: none;
-                }
                 img {
                     filter: blur(5px);
                 }
