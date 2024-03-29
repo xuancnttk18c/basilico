@@ -62,7 +62,7 @@ if ( $settings['description_animation'] ) {
 $inner_tag = 'span d-flex align-item-center';
 if ( ! empty( $settings['link']['url'] ) ) {
     $widget->add_render_attribute( 'link', 'href', $settings['link']['url'] );
-    $inner_tag = 'a d-flex align-item-center';
+    $inner_tag = 'a';
     if ( $settings['link']['is_external'] ) {
         $widget->add_render_attribute( 'link', 'target', '_blank' );
     }
@@ -87,7 +87,7 @@ extract($settings);
     <div class="pxl-heading-inner <?php echo esc_attr($text_align); ?>">
         <?php if(!empty($sub_title)) : ?>
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'sub-title' )); ?>>
-                <span class="d-flex align-items-center"><?php pxl_print_html(nl2br($sub_title)); ?></span>
+                <span><?php pxl_print_html(nl2br($sub_title)); ?></span>
             </div>
         <?php endif; ?>
 
