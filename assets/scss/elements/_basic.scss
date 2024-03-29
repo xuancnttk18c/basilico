@@ -993,6 +993,37 @@
     }
     &.layout-6 {
         .pxl-menu-item {
+            .menu-icon {
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 20px;
+                img {
+                    width: 75px;
+                    height: 75px;
+                }
+            }
+            .menu-title {
+                font-family: $heading_font_family;
+                font-size: 22px;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.03em;
+                color: $heading_color;
+                a {
+                    @include multiline-hover-underline($heading_color);
+                }
+                @media (max-width: $xs_max) {
+                    width: 100%;
+                }
+            }
+            .menu-price {
+                font-family: $heading_font_family;
+                font-size: 22px;
+                line-height: 28px;
+                font-weight: 500;
+                letter-spacing: 0.02em;
+                color: $primary_color;
+            }
             .pxl-separator {
                 height: 1px;
                 background-image: radial-gradient(rgba(var(--primary-color-rgb), 0.5) 1px, transparent 0);
