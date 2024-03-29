@@ -336,7 +336,7 @@
                 text-align: center;
                 .heading-title.style-1,
                 .heading-subtitle.style-1 {
-                    .highlighted span {
+                    &.highlighted span {
                         &:before {
                             content: '';
                         }
@@ -344,7 +344,7 @@
                 }
                 .heading-title.style-2,
                 .heading-subtitle.style-2 {
-                    .highlighted span {
+                    &.highlighted span {
                         &:before {
                             content: '\e9e6';
                         }
@@ -355,7 +355,7 @@
                 text-align: right;
                 .heading-title.style-1,
                 .heading-subtitle.style-1 {
-                    .highlighted span {
+                    &.highlighted span {
                         &:before {
                             content: '';
                         }
@@ -366,7 +366,7 @@
                 }
                 .heading-title.style-2,
                 .heading-subtitle.style-2 {
-                    .highlighted span {
+                    &.highlighted span {
                         &:before {
                             content: '\e9e6';
                         }
