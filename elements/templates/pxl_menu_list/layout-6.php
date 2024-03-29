@@ -7,7 +7,7 @@ extract($settings);
 
 ?>
 <?php if(isset($list) && !empty($list) && count($list)): ?>
-    <div class="pxl-menu-list layout-3">
+    <div class="pxl-menu-list layout-6">
         <div class="pxl-item-list">
             <?php
             foreach ($list as $key => $value):
