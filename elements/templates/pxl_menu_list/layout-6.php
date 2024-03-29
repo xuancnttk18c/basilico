@@ -30,12 +30,12 @@ extract($settings);
                     <?php if ($value['tag_1'] === 'yes' || $value['tag_2'] === 'yes') : ?>
                         <div class="custom-tags d-flex">
                             <?php if ($value['tag_1'] === 'yes' && !empty($value['tag_1_text'])) : ?>
-                                <div class="custom-tag tag-1" <?php echo !empty($value['tag_1_color']) ? 'style="background-color: ' . $value['tag_1_color'] . ';"' : ''; ?>>
+                                <div class="custom-tag tag-1">
                                     <?php echo esc_html($value['tag_1_text']); ?>
                                 </div>
                             <?php endif;?>
                             <?php if ($value['tag_2'] === 'yes' && !empty($value['tag_2_text'])) : ?>
-                                <div class="custom-tag tag-2" <?php echo !empty($value['tag_2_color']) ? 'style="background-color: ' . $value['tag_2_color'] . ';"' : ''; ?>>
+                                <div class="custom-tag tag-2">
                                     <?php echo esc_html($value['tag_2_text']); ?>
                                 </div>
                             <?php endif;?>
@@ -46,7 +46,7 @@ extract($settings);
                             $thumbnail = '';
                             $img  = pxl_get_image_by_size(array(
                                 'attach_id'  => $value['selected_img']['id'],
-                                'thumb_size' => '90x90',
+                                'thumb_size' => '75x75',
                             ) );
                             $thumbnail = $img['thumbnail'];
                             $image_position = isset($img_position) ? $img_position : '';
