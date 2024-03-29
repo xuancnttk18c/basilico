@@ -59,7 +59,7 @@ if ( $settings['description_animation'] ) {
         ])
     );
 }
-$inner_tag = 'span d-flex align-item-center';
+$inner_tag = 'span';
 if ( ! empty( $settings['link']['url'] ) ) {
     $widget->add_render_attribute( 'link', 'href', $settings['link']['url'] );
     $inner_tag = 'a';
