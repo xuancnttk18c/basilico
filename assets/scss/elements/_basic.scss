@@ -991,6 +991,15 @@
             }
         }
     }
+    &.layout-6 {
+        .pxl-menu-item {
+            .pxl-separator {
+                height: 1px;
+                background-image: radial-gradient(rgba(var(--primary-color-rgb), 0.5) 1px, transparent 0);
+                background-size: 6px 1px;
+            }
+        }
+    }
 }
 
 //*PXL Dropdown Links

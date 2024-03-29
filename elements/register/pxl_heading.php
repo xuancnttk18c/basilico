@@ -116,16 +116,18 @@ pxl_add_custom_widget(
                                 ],
                             ),
                             array(
-                                'name' => 'title_highlighted_icon_size',
-                                'label' => esc_html__('Highlighted Icon Size (px)', 'basilico'),
+                                'name' => 'title_highlighted_size',
+                                'label' => esc_html__('Highlighted Size (px)', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::NUMBER,
                                 'condition' => [
                                     'title_highlighted_line' => "true",
                                     'title_highlighted_style' => 'style-2'
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-inner .heading-title:before,
-                                     {{WRAPPER}} .pxl-heading-inner .heading-title:after'
+                                    '{{WRAPPER}} .pxl-heading-inner .heading-title span:before,
+                                     {{WRAPPER}} .pxl-heading-inner .heading-title span:after
+                                     {{WRAPPER}} .pxl-heading-inner .heading-title a:before,
+                                     {{WRAPPER}} .pxl-heading-inner .heading-title a:after',
                                      => 'font-size: {{VALUE}}px;'
                                 ],
                             ),
