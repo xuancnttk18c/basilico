@@ -95,8 +95,8 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Is Featured?', 'basilico'),
                                     'type' => \Elementor\Controls_Manager::SWITCHER,
                                     'return_value' => 'yes',
-                                    'default' => 'no'
-                                    'description' => esc_html__('For Layout 6. Highlight product and show custom tags.', 'basilico' )
+                                    'default' => 'no',
+                                    'description' => esc_html__('For Layout 6. Highlight product and show custom tags.', 'basilico')
                                 ),
                                 array(
                                     'name' => 'tag_1',
