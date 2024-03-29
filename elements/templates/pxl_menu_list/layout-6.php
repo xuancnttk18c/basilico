@@ -41,7 +41,7 @@ extract($settings);
                             <?php endif;?>
                         </div>
                     <?php endif ?>
-                    <div class="d-flex align-items-center">
+                    <div class="item-content d-flex align-items-center">
                         <?php if (!empty($value['selected_img']['id'])) :
                             $thumbnail = '';
                             $img  = pxl_get_image_by_size(array(

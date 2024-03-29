@@ -995,6 +995,9 @@
         .pxl-menu-item {
             border: 1px solid #2d2723;
             @include border-radius(10px);
+            .item-content {
+                padding: 0 24px 12px;
+            }
             .menu-icon {
                 border-radius: 50%;
                 overflow: hidden;
@@ -1049,7 +1052,7 @@
                         &:before {
                             content: '/';
                         }
-                        margin-left: 8px;
+                        margin: 0 8px;
                     }
                 }
             }
