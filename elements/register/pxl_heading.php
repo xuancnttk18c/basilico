@@ -116,6 +116,20 @@ pxl_add_custom_widget(
                                 ],
                             ),
                             array(
+                                'name' => 'title_highlighted_style',
+                                'label' => esc_html__('Highlighted Icon Size (px)', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::NUMBER,
+                                'condition' => [
+                                    'title_highlighted_line' => "true",
+                                    'title_highlighted_style' => 'style-2'
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-heading-inner .heading-title:before,
+                                     {{WRAPPER}} .pxl-heading-inner .heading-title:after',
+                                     => 'font-size: {{VALUE}}px;'
+                                ],
+                            ),
+                            array(
                                 'name'  => 'title_max_width',
                                 'label' => esc_html__( 'Max Width (px)', 'basilico' ),
                                 'type'  => 'slider',
