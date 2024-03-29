@@ -116,7 +116,7 @@ pxl_add_custom_widget(
                                 ],
                             ),
                             array(
-                                'name' => 'title_highlighted_style',
+                                'name' => 'title_highlighted_icon_size',
                                 'label' => esc_html__('Highlighted Icon Size (px)', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::NUMBER,
                                 'condition' => [
