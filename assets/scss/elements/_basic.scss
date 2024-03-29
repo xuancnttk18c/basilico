@@ -268,7 +268,7 @@
             display: inline-block;
             &.highlighted {
                 &.style-1 {
-                    span {
+                    span, a {
                         position: relative;
                         &:before,
                         &:after {
@@ -296,7 +296,7 @@
                     }
                 }
                 &.style-2 {
-                    span {
+                    span, a {
                         display: flex;
                         align-items: center;
                         &:before,
@@ -319,6 +319,7 @@
             }
         }
         .pxl-heading-inner {
+            .heading-title.highlighted a,
             .heading-title.highlighted span,
             .heading-subtitle.highlighted span {
                 &:before {
@@ -327,6 +328,7 @@
             }
             &.start {
                 text-align: left;
+                .heading-title.highlighted a,
                 .heading-title.highlighted span,
                 .heading-subtitle.highlighted span {
                     &:before {
@@ -338,7 +340,8 @@
                 text-align: center;
                 .heading-title.style-1,
                 .heading-subtitle.style-1 {
-                    &.highlighted span {
+                    &.highlighted span,
+                    &.highlighted a {
                         &:before {
                             content: '';
                         }
@@ -346,7 +349,8 @@
                 }
                 .heading-title.style-2,
                 .heading-subtitle.style-2 {
-                    &.highlighted span {
+                    &.highlighted span,
+                    &.highlighted a {
                         &:before {
                             content: '\e9e6';
                         }
@@ -357,7 +361,8 @@
                 text-align: right;
                 .heading-title.style-1,
                 .heading-subtitle.style-1 {
-                    &.highlighted span {
+                    &.highlighted span,
+                    &.highlighted a {
                         &:before {
                             content: '';
                         }
@@ -368,7 +373,8 @@
                 }
                 .heading-title.style-2,
                 .heading-subtitle.style-2 {
-                    &.highlighted span {
+                    &.highlighted span,
+                    &.highlighted a {
                         &:before {
                             content: '\e9e6';
                         }
