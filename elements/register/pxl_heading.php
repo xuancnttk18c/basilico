@@ -125,7 +125,7 @@ pxl_add_custom_widget(
                                 ],
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-heading-inner .heading-title:before,
-                                     {{WRAPPER}} .pxl-heading-inner .heading-title:after',
+                                     {{WRAPPER}} .pxl-heading-inner .heading-title:after'
                                      => 'font-size: {{VALUE}}px;'
                                 ],
                             ),
