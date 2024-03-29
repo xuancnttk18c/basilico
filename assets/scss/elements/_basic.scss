@@ -333,14 +333,46 @@
                 }
             }
             &.center {
-                text-align: center
+                text-align: center;
+                .heading-title.style-1,
+                .heading-subtitle.style-1 {
+                    .highlighted span {
+                        &:before {
+                            content: '';
+                        }
+                    }
+                }
+                .heading-title.style-2,
+                .heading-subtitle.style-2 {
+                    .highlighted span {
+                        &:before {
+                            content: '\e9e6';
+                        }
+                    }
+                }
             }
             &.end {
                 text-align: right;
-                .heading-title.highlighted span,
-                .heading-subtitle.highlighted span {
-                    &:after {
-                        content: none;
+                .heading-title.style-1,
+                .heading-subtitle.style-1 {
+                    .highlighted span {
+                        &:before {
+                            content: '';
+                        }
+                        &:after {
+                            content: none;
+                        }
+                    }
+                }
+                .heading-title.style-2,
+                .heading-subtitle.style-2 {
+                    .highlighted span {
+                        &:before {
+                            content: '\e9e6';
+                        }
+                        &:after {
+                            content: none;
+                        }
                     }
                 }
             }
