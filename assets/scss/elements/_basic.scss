@@ -267,29 +267,50 @@
             margin: 0;
             display: inline-block;
             &.highlighted {
-                span {
-                    position: relative;
-                    &:before,
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        width: 62px;
-                        height: 1px;
-                        background-color: $primary_color;
-                        top: 50%;
-                    }
-                    &:before {
-                        left: -19px;
-                        @include transform(translate(-100%, -50%));
-                    }
-                    &:after {
-                        right: -19px;
-                        @include transform(translate(100%, -50%));
-                    }
-                    @media (max-width: $xs_max) {
+                &.style-1 {
+                    span {
+                        position: relative;
                         &:before,
                         &:after {
-                            content: none !important;
+                            content: "";
+                            position: absolute;
+                            width: 62px;
+                            height: 1px;
+                            background-color: $primary_color;
+                            top: 50%;
+                        }
+                        &:before {
+                            left: -19px;
+                            @include transform(translate(-100%, -50%));
+                        }
+                        &:after {
+                            right: -19px;
+                            @include transform(translate(100%, -50%));
+                        }
+                        @media (max-width: $xs_max) {
+                            &:before,
+                            &:after {
+                                content: none !important;
+                            }
+                        }
+                    }
+                }
+                &.style-2 {
+                    span {
+                        &:before,
+                        &:after {
+                            content: '\e9e6';
+                            position: relative;
+                            font-family: $pxli_font;
+                            color: $primary_color;
+                            font-size: inherit;
+                            line-height: inherit;
+                        }
+                        &:before {
+                            margin-right: 8px;
+                        }
+                        &:after {
+                            margin-left: 8px;
                         }
                     }
                 }

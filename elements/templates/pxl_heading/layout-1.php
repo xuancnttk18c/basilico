@@ -18,10 +18,11 @@ if(count($hightlight_list) > 0){
     }
 }
 $widget->add_render_attribute( 'wrap-heading', 'class', 'pxl-heading-wrap d-flex layout1');
- 
+
 $widget->add_render_attribute( 'large-title', 'class', 'heading-title');
-if ( $settings['title_highlighted_line'] == 'true') {
+if ( $settings['title_highlighted_line'] == "true") {
     $widget->add_render_attribute( 'large-title', 'class', 'highlighted');
+    $widget->add_render_attribute( 'large-title', 'class', $settings['title_highlighted_style']);
 }
 if ( $settings['title_animation'] ) {
     $widget->add_render_attribute( 'large-title', 'class', 'pxl-animate pxl-invisible animated-'.$settings['title_animation_duration']);
@@ -32,13 +33,12 @@ if ( $settings['title_animation'] ) {
         ])
     );
 }
-$widget->add_render_attribute( 'sub-title', 'class', 'heading-subtitle');
-$widget->add_render_attribute( 'sub-title', 'class', $settings['subtitle_highlighted_style']);
 
+$widget->add_render_attribute( 'sub-title', 'class', 'heading-subtitle');
 if ($settings['subtitle_highlighted_line'] == "true") {
     $widget->add_render_attribute( 'sub-title', 'class', 'highlighted');
+    $widget->add_render_attribute( 'sub-title', 'class', $settings['subtitle_highlighted_style']);
 }
-
 if ( $settings['sub_title_animation'] ) {
     $widget->add_render_attribute( 'sub-title', 'class', 'pxl-animate pxl-invisible animated-'.$settings['sub_title_animation_duration']);
     $widget->add_render_attribute( 'sub-title', 'data-settings',
