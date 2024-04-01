@@ -1041,6 +1041,7 @@
             }
             .custom-tags {
                 display: none;
+                margin-bottom: 0;
                 padding: 0 25px;
                 background-color: #2d2723;
                 .custom-tag {
@@ -1066,7 +1067,8 @@
                 @include border-radius(10px);
                 overflow: hidden;
                 .item-content {
-                    margin-bottom: 12px;
+                    margin-top: 13px;
+                    margin-bottom: 13px;
                 }
                 .custom-tags {
                     @include d-flex();
