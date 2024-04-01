@@ -995,6 +995,48 @@
             margin-top: 57px;
         }
     }
+    &.layout-3 {
+        .item-inner {
+            text-align: center;
+        }
+        .item-featured {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .menu-title {
+            font-family: $heading_font_family;
+            font-size: 22px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: $heading_color;
+            a {
+                cursor: pointer;
+                @include multiline-hover-underline($heading_color);
+            }
+        }
+        .pxl-divider {
+            margin: 18px auto;
+            width: 37px;
+            @include border-radius(2px);
+            overflow: hidden;
+            &:before {
+                width: 100%;
+            }
+        }
+        .menu-description {
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+        .nav-vertical-out .pxl-swiper-arrow-prev {
+            opacity: 1;
+            left: -70px;
+        }
+        .nav-vertical-out .pxl-swiper-arrow-next {
+            opacity: 1;
+            right: -70px;
+        }
+    }
 }
 
 //* Image Carousel
