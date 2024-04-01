@@ -112,8 +112,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Heading Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-carousel .pxl-menu-item .menu-title' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-menu-carousel .pxl-menu-item .menu-title a' => 'color: {{VALUE}}; background-image: linear-gradient(transparent calc(100% - 1px), {{VALUE}} 1px);'
+                                '{{WRAPPER}} .pxl-menu-carousel .item-inner .menu-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-menu-carousel .item-inner .menu-title a' => 'color: {{VALUE}}; background-image: linear-gradient(transparent calc(100% - 1px), {{VALUE}} 1px);'
                             ],
                         ),
                         array(
