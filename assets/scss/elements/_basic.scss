@@ -1036,6 +1036,7 @@
                 background-size: cover;
             }
             .custom-tags {
+                display: none;
                 padding: 0 25px;
                 background-color: #2d2723;
                 .custom-tag {
@@ -1060,6 +1061,9 @@
                 border: 1px solid #2d2723;
                 @include border-radius(10px);
                 overflow: hidden;
+                .custom-tags {
+                    display: flex;
+                }
             }
         }
     }
