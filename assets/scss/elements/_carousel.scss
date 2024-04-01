@@ -1030,6 +1030,7 @@
                 z-index: 0;
             }
             img {
+                position: relative;
                 @include border-radius(50%);
                 width: auto;
                 height: auto;
