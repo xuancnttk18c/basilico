@@ -1000,8 +1000,9 @@
             text-align: center;
         }
         .item-featured {
+            @include border-radius(50%);
+            overflow: hidden;
             margin-bottom: 25px;
-            position: relative;
         }
         .menu-title {
             font-family: $heading_font_family;
