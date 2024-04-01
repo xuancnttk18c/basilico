@@ -1130,18 +1130,8 @@
             color: #fff;
             @include border-radius(5px);
         }
-        .pxl-divider {
-            margin: 18px auto;
-            width: 37px;
-            height: 3px;
-            @include border-radius(2px);
-            &:before {
-                width: 100%;
-            }
-        }
         .menu-description {
             margin: 0 auto;
-            max-width: 302px;
         }
         .nav-vertical-out .pxl-swiper-arrow-prev {
             opacity: 1;

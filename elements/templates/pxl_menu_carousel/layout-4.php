@@ -99,7 +99,6 @@ $widget->add_render_attribute( 'carousel', [
                                 </div>
                             <?php endif;
                             if (!empty($value['description'])) : ?>
-                                <div class="pxl-divider"></div>
                                 <div class="menu-description">
                                     <?php echo esc_html($value['description']); ?>
                                 </div>
