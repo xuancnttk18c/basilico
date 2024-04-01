@@ -1001,12 +1001,22 @@
         }
         .item-featured {
             display: inline-block;
+            position: relative;
             margin-bottom: 25px;
+            &:before {
+                position: absolute;
+                width: calc(100% + 8px);
+                height: calc(100% + 8px);
+                border: 1px solid $primary_color;
+                @include border-radius(50%);
+                z-index: 0;
+            }
             img {
                 @include border-radius(50%);
                 width: auto;
                 height: auto;
                 overflow: hidden;
+                z-index: 1;
             }
         }
         .menu-title {
@@ -1033,7 +1043,7 @@
         }
         .menu-description {
             margin: 0 auto;
-            padding: 0 25px;
+            padding: 0 70px;
         }
         .nav-vertical-out .pxl-swiper-arrow-prev {
             opacity: 1;
