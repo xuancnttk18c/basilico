@@ -1000,9 +1000,13 @@
             text-align: center;
         }
         .item-featured {
-            @include border-radius(50%);
-            overflow: hidden;
+            @include d-flex();
+            justify-content: center;
             margin-bottom: 25px;
+            img {
+                @include border-radius(50%);
+                overflow: hidden;
+            }
         }
         .menu-title {
             font-family: $heading_font_family;
