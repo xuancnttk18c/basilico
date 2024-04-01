@@ -26,7 +26,7 @@ extract($settings);
                 }
                 $link_attributes = $widget->get_render_attribute_string( $link_key );
                 ?>
-                <div class="pxl-menu-item">
+                <div class="pxl-menu-item<?php echo esc_attr($value == 'yes' ? ' featured' : ''); ?>">
                     <?php if ($value['tag_1'] === 'yes' || $value['tag_2'] === 'yes') : ?>
                         <div class="custom-tags d-flex">
                             <?php if ($value['tag_1'] === 'yes' && !empty($value['tag_1_text'])) : ?>
