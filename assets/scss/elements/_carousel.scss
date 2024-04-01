@@ -1000,11 +1000,12 @@
             text-align: center;
         }
         .item-featured {
-            @include d-flex();
-            justify-content: center;
+            display: inline-block;
             margin-bottom: 25px;
             img {
                 @include border-radius(50%);
+                width: auto;
+                height: auto;
                 overflow: hidden;
             }
         }
@@ -1023,6 +1024,7 @@
         .pxl-divider {
             margin: 18px auto;
             width: 37px;
+            height: 3px;
             @include border-radius(2px);
             overflow: hidden;
             &:before {
