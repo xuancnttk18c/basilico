@@ -1022,11 +1022,10 @@
                 top: 50%;
                 left: 50%;
                 @include transform(translate(-50%, -50%));
-                width: calc(100% + 20px);
-                height: calc(100% + 20px);
+                width: calc(99%);
+                height: calc(99%);
                 border: 1px solid $primary_color;
                 @include border-radius(50%);
-                opacity: 0;
                 @include transition();
             }
             img {
@@ -1063,7 +1062,8 @@
             padding: 0 70px;
         }
         .item-inner:hover .item-featured:before {
-            opacity: 1;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
         }
         .nav-vertical-out .pxl-swiper-arrow-prev {
             opacity: 1;
