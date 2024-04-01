@@ -1011,7 +1011,7 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                @include transform(transition(-50%, -50%));
+                @include transform(translate(-50%, -50%));
                 width: calc(100% + 20px);
                 height: calc(100% + 20px);
                 border: 1px solid $primary_color;
