@@ -996,16 +996,19 @@
         }
     }
     &.layout-3 {
+        .pxl-swiper-container {
+            overflow-x: clip;
+        }
         .item-inner {
             position: relative;
             text-align: center;
             &:before {
                 content: '';
                 position: absolute;
-                height: 60%;
+                height: 63%;
                 width: 1px;
                 right: 15px;
-                bottom: 15px;
+                bottom: 42px;
                 background-color: rgba(245, 245, 245, 0.15);
             }
         }
@@ -1023,14 +1026,14 @@
                 height: calc(100% + 20px);
                 border: 1px solid $primary_color;
                 @include border-radius(50%);
-                z-index: 0;
+                opacity: 0;
+                @include transition();
             }
             img {
                 @include border-radius(50%);
                 width: auto;
                 height: auto;
                 overflow: hidden;
-                z-index: 1;
             }
         }
         .menu-title {
@@ -1058,6 +1061,9 @@
         .menu-description {
             margin: 0 auto;
             padding: 0 70px;
+        }
+        .item-inner:hover .item-featured:before {
+            opacity: 1;
         }
         .nav-vertical-out .pxl-swiper-arrow-prev {
             opacity: 1;
