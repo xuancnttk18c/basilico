@@ -996,9 +996,6 @@
         }
     }
     &.layout-3 {
-        .pxl-swiper-container {
-            overflow-x: clip;
-        }
         .item-inner {
             position: relative;
             text-align: center;
@@ -1068,7 +1065,10 @@
             width: calc(100% + 20px);
             height: calc(100% + 20px);
         }
-        .pxl-swiper-arrows .pxl-swipper-arrow {
+        .pxl-swiper-container {
+            overflow-x: clip;
+        }
+        .pxl-swiper-arrows .pxl-swiper-arrow {
             font-size: 24px;
             color: #fff;
             @include border-radius(50%);
