@@ -52,6 +52,7 @@
                 watchSlidesProgress: true,
                 watchSlidesVisibility: true,
                 observer: true,
+                observeParents: true,
                 breakpoints: {
                     0: {
                         direction: 'horizontal',
