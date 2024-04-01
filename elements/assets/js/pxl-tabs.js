@@ -30,8 +30,8 @@
             })
             if ($('.pxl-tabs-carousel').length > 0)
                 $('.pxl-tabs-carousel').slick('refresh');
-            if ($('.pxl-swiper-container').length > 0)
-                $('.pxl-swiper-container').update();
+            // if ($('.pxl-swiper-container').length > 0)
+            //     $('.pxl-swiper-container').update();
         });
         if (link_to_tabs_carousel_id != undefined) {
             $scope.find('[data-slide]').click(function(e){
