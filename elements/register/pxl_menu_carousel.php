@@ -153,6 +153,21 @@ pxl_add_custom_widget(
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-menu-carousel .item-inner .menu-price',
                         ),
+                        array(
+                            'name' => 'desc_color',
+                            'label' => esc_html__('Description Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-menu-carousel .item-inner .menu-description' => 'color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'price_typography',
+                            'label' => esc_html__('Heading Typography', 'basilico' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}} .pxl-menu-carousel .item-inner .menu-description',
+                        ),
                     ),
                 ),
                 array(
