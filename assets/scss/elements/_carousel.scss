@@ -1000,9 +1000,12 @@
             position: relative;
             text-align: center;
             &:before {
+                content: '';
                 position: absolute;
                 height: 60%;
                 width: 1px;
+                right: 15px;
+                bottom: 15px;
                 background-color: rgba(245, 245, 245, 0.15);
             }
         }
