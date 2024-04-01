@@ -1076,8 +1076,8 @@
             height: 57px;
             background-color: $primary_color;
             @include d-flex();
-            align-items: center;
             justify-content: center;
+            align-items: center;
         }
         .nav-vertical-out .pxl-swiper-arrow-prev {
             opacity: 1;
