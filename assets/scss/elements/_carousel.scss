@@ -1006,6 +1006,9 @@
             &:before {
                 content: '';
                 position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(transition(-50%, -50%));
                 width: calc(100% + 8px);
                 height: calc(100% + 8px);
                 border: 1px solid $primary_color;
