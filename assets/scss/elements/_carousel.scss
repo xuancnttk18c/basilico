@@ -1027,12 +1027,14 @@
                 border: 1px solid $primary_color;
                 @include border-radius(50%);
                 @include transition();
+                z-index: 0;
             }
             img {
                 @include border-radius(50%);
                 width: auto;
                 height: auto;
                 overflow: hidden;
+                z-index: 1;
             }
         }
         .menu-title {
