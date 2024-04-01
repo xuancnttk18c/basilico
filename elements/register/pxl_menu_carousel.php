@@ -162,8 +162,8 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
-                            'name' => 'price_typography',
-                            'label' => esc_html__('Heading Typography', 'basilico' ),
+                            'name' => 'desc_typography',
+                            'label' => esc_html__('Description Typography', 'basilico' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-menu-carousel .item-inner .menu-description',
