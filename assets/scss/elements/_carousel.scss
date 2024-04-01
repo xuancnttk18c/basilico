@@ -996,11 +996,15 @@
         }
     }
     &.layout-3 {
-        .pxl-swiper-container {
-            overflow-y: hidden !important;
-        }
         .item-inner {
+            position: relative;
             text-align: center;
+            &:before {
+                position: absolute;
+                height: 60%;
+                width: 1px;
+                background-color: rgba(245, 245, 245, 0.15);
+            }
         }
         .item-featured {
             display: inline-block;
