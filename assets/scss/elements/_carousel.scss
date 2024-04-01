@@ -996,21 +996,24 @@
         }
     }
     &.layout-3 {
+        .pxl-swiper-container {
+            overflow-y: hidden !important;
+        }
         .item-inner {
             text-align: center;
         }
         .item-featured {
             display: inline-block;
             position: relative;
-            margin-bottom: 25px;
+            margin-bottom: 18px;
             &:before {
                 content: '';
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 @include transform(transition(-50%, -50%));
-                width: calc(100% + 8px);
-                height: calc(100% + 8px);
+                width: calc(100% + 20px);
+                height: calc(100% + 20px);
                 border: 1px solid $primary_color;
                 @include border-radius(50%);
                 z-index: 0;
@@ -1036,7 +1039,7 @@
             }
         }
         .pxl-divider {
-            margin: 18px auto;
+            margin: 18px auto 15px;
             width: 37px;
             height: 3px;
             @include border-radius(2px);

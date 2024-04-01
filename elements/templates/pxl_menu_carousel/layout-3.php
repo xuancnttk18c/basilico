@@ -34,7 +34,7 @@ $opts = [
 
 $img_size = !empty($img_size) ? $img_size : '600x472';
 $widget->add_render_attribute( 'carousel', [
-    'class'         => 'pxl-swiper-container overflow-hidden',
+    'class'         => 'pxl-swiper-container',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
