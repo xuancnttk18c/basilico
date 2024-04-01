@@ -993,9 +993,6 @@
     }
     &.layout-6 {
         .pxl-menu-item {
-            border: 1px solid #2d2723;
-            @include border-radius(10px);
-            overflow: hidden;
             .item-content {
                 padding: 0 24px 12px;
             }
@@ -1058,6 +1055,11 @@
                         }
                     }
                 }
+            }
+            &.featured {
+                border: 1px solid #2d2723;
+                @include border-radius(10px);
+                overflow: hidden;
             }
         }
     }
