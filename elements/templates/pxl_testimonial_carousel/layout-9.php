@@ -64,30 +64,30 @@ $widget->add_render_attribute('carousel', [
                     ?>
                     <div class="pxl-swiper-slide swiper-slide">
                         <div class="item-inner relative text-center">
-                            <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) { ?>
+                            <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) : ?>
                                 <div class="icon-wrapper">
                                     <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
                                 </div>
-                            <?php } ?>
-                            <?php if ($quote_icon_type == 'text') { ?>
+                            <?php endif; ?>
+                            <?php if ($quote_icon_type == 'text') : ?>
                                 <div class="item-quote-icon">“</div>
-                            <?php } ?>
-                            <?php if (!empty($testimonial_title)) { ?>
+                            <?php endif; ?>
+                            <?php if (!empty($testimonial_title)) : ?>
                                 <h4 class="testimonial-title"><span><?php echo esc_html($testimonial_title); ?></span></h4>
-                            <?php } ?>
+                            <?php endif; ?>
+                            <?php if (!empty($value['rating']) && $value['rating'] != 'none') : ?>
+                                <div class="item-rating-star">
+                                    <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                             <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
                             <div class="item-wrap row gx-20 justify-content-center">
-                                <?php if (!empty($value['rating']) && $value['rating'] != 'none') : ?>
-                                    <div class="item-rating-star">
-                                        <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
-                                            <i class="zmdi zmdi-star"></i>
-                                            <i class="zmdi zmdi-star"></i>
-                                            <i class="zmdi zmdi-star"></i>
-                                            <i class="zmdi zmdi-star"></i>
-                                            <i class="zmdi zmdi-star"></i>
-                                        </div>
-                                    </div>
-                                <?php endif; ?>
                                 <div class="item-info col-auto">
                                     <h4 class="item-title"><span><?php echo esc_html($title); ?></span></h4>
                                     <div class="item-position"><?php echo esc_html($position); ?></div>
