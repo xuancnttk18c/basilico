@@ -811,6 +811,104 @@
             }
         }
     }
+    &.layout-9 {
+        .item-quote-icon {
+            text-align: center;
+            font-size: 120px;
+            color: $primary_color;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            margin-bottom: -13px;
+        }
+        i.item-quote-icon {
+            margin-bottom: 40px;
+        }
+        .item-inner {
+            .pxl-icon {
+                font-size: 20px;
+                color: $secondary_color;
+                @include transition(transform 0.3s linear);
+            }
+            .item-image {
+                .img-outer {
+                    width: 65px;
+                    height: 65px;
+                    display: inline-block;
+                    @include border-radius(50%);
+                    border: 2px solid $secondary_color;
+                    overflow: hidden;
+                }
+                img {
+                    width: 100%;
+                    @include border-radius(50%);
+                }
+            }
+            .testimonial-title {
+                color: $primary_color;
+                font-size: 30px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                font-style: italic;
+                text-transform: none;
+                margin-bottom: 35px;
+                line-height: 26px;
+                span {
+                    position: relative;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: 3px;
+                        left: 0;
+                        right: 0;
+                        border-bottom: 2px solid $primary_color;
+                    }
+                }
+                @media (max-width: $sm_max) {
+                    font-size: 22px;
+                }
+            }
+            .item-desc {
+                font-size: 15x;
+                font-weight: 500;
+                line-height: 27px;
+                letter-spacing: 0.02em;
+                color: $heading_color;
+                @media (max-width: $sm_max) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+            .item-info {
+                margin-top: 34px;
+            }
+            .item-title {
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 26px;
+                letter-spacing: 0.08em;
+            }
+            .item-position {
+                font-size: 15px;
+            }
+            .item-rating-star {
+                margin-top: 30px;
+            }
+        }
+        .pxl-swiper-dots {
+            justify-content: center;
+            margin-top: 36px;
+        }
+        .pxl-swiper-arrow {
+            font-size: 40px;
+            line-height: 1;
+            color: $primary_color;
+            cursor: pointer;
+            &.swiper-button-disabled {
+                cursor: not-allowed;
+            }
+        }
+    }
 }
 
 //* Menu Carousel

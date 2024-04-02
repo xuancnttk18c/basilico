@@ -42,6 +42,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Text', 'basilico' ),
                                 'type' => 'textarea',
                                 'label_block' => true,
+                                'default' => esc_html__('This is the heading', 'basilico'),
                             ),
                             array(
                                 'name' => 'title_tag',
