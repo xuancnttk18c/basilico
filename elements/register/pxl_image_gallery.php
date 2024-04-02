@@ -182,7 +182,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name'  => 'icon_color',
-                            'label' => esc_html__( 'Icon Size (px)', 'basilico' ),
+                            'label' => esc_html__( 'Icon Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-image-gallery .up-icon i' => 'color: {{VALUE}};',
