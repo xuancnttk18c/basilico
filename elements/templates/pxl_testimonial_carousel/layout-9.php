@@ -23,7 +23,7 @@ $opts = [
     'slides_to_show_sm'             => $widget->get_setting('col_sm', '2'), 
     'slides_to_show_xs'             => $widget->get_setting('col_xs', '1'), 
     'slides_to_scroll'              => $widget->get_setting('slides_to_scroll', '1'), 
-    'slides_gutter'                 => 110,
+    'slides_gutter'                 => 115,
     'arrow'                         => $arrows,
     'dots'                          => $dots,
     'dots_style'                    => 'bullets',
@@ -89,8 +89,13 @@ $widget->add_render_attribute('carousel', [
                             <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
                             <div class="item-wrap row gx-20 justify-content-center">
                                 <div class="item-info col-auto">
-                                    <h4 class="item-title"><span><?php echo esc_html($title); ?></span></h4>
-                                    <div class="item-position"><?php echo esc_html($position); ?></div>
+                                    <?php if (!empty($title)) : ?>
+                                        <i class="pxli pxli-coffee-bean"></i>
+                                        <h4 class="item-title"><span><?php echo esc_html($title); ?></span></h4>
+                                    <?php endif; ?>
+                                    <?php if (!empty($position)) : ?>
+                                        <div class="item-position"><?php echo esc_html($position); ?></div>
+                                    <?php endif ?>
                                     <?php if (!empty($thumbnail)) : ?>
                                         <div class="item-image col-auto">
                                             <span class="img-outer">
