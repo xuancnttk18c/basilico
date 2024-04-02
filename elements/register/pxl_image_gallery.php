@@ -180,6 +180,17 @@ pxl_add_custom_widget(
                                 'layout' => ['2', '3', '5', '6']
                             ]
                         ),
+                        array(
+                            'name'  => 'icon_color',
+                            'label' => esc_html__( 'Icon Size (px)', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-image-gallery .up-icon i' => 'color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'layout' => ['2', '3', '5', '6']
+                            ]
+                        ),
                     ),
                 ),
                 array(
@@ -199,6 +210,16 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-grid .grid-item' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px; margin-top: {{VALUE}}px; margin-bottom: {{VALUE}}px;',
                                 '{{WRAPPER}} .pxl-grid.layout-5 .grid-item' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px; padding-top: {{VALUE}}px; padding-bottom: {{VALUE}}px; margin-top: 0; margin-bottom: 0;',
                                 '{{WRAPPER}} .pxl-grid .grid-sizer' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px;',
+                            ],
+                        ),
+                        array(
+                            'name'         => 'image_border_radius',
+                            'label'        => esc_html__( 'Image Radius', 'basilico' ),
+                            'type'         => \Elementor\Controls_Manager::DIMENSIONS,
+                            'control_type' => 'responsive',
+                            'size_units'   => [ 'px', '%' ],
+                            'selectors'    => [
+                                '{{WRAPPER}} .grid-item img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                             ],
                         ),
                         array(
