@@ -73,7 +73,9 @@ $widget->add_render_attribute('carousel', [
                                 <div class="item-quote-icon">“</div>
                             <?php endif; ?>
                             <?php if (!empty($testimonial_title)) : ?>
-                                <h4 class="testimonial-title"><span><?php echo esc_html($testimonial_title); ?></span></h4>
+                                <h4 class="testimonial-title">
+                                    <span><?php echo esc_html($testimonial_title); ?></span>
+                                </h4>
                             <?php endif; ?>
                             <?php if (!empty($value['rating']) && $value['rating'] != 'none') : ?>
                                 <div class="item-rating-star">
@@ -95,7 +97,7 @@ $widget->add_render_attribute('carousel', [
                                     <?php endif; ?>
                                     <?php if (!empty($position)) : ?>
                                         <div class="item-position"><?php echo esc_html($position); ?></div>
-                                    <?php endif ?>
+                                    <?php endif; ?>
                                     <?php if (!empty($thumbnail)) : ?>
                                         <div class="item-image col-auto">
                                             <span class="img-outer">
