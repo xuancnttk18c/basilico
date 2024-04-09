@@ -18,6 +18,8 @@
     padding: 15px 15px 15px 45px;
     word-wrap: break-word;
     list-style: none;
+    @include d-flex();
+    justify-content: space-between;
     &:before{
     	font-family: 'Material-Design-Iconic-Font';
     	font-size: 18px;
@@ -68,10 +70,6 @@
 				width: 100%;
 			}
 	    }
-    }
-    .pxl-added-to-cart-msg {
-    	@include d-flex();
-    	justify-content: space-between;
     }
 }
 .woocommerce-error {
