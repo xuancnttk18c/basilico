@@ -6,7 +6,7 @@ if(is_singular('product')){
     $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'shop', 'content_col'=> '8']); // type: blog, post, page, shop, product
 }
 
-$product_layout = basilico()->get_theme_opt('product_layout', 'df');
+$product_layout = basilico()->get_theme_opt('product_layout', 'layout-1');
 ?>
     <div class="container">
         <div class="row <?php echo esc_attr($pxl_sidebar['wrap_class']); ?> <?php echo 'shop-'.esc_attr($product_layout); ?>">
