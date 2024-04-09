@@ -4,12 +4,12 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <div class="quantity">
 	<?php do_action('woocommerce_before_quantity_input_field'); ?>
-	<div class="pxl-quantity-wrap row gx-20">
+	<div class="pxl-quantity-wrap">
 		<div class="label">
-			<label><?php esc_html_e( 'Qty', 'basilico' ) ?></label>
+			<label><?php esc_html_e( 'Quantity', 'basilico' ) ?></label>
 		</div>
-		<div class="qty-field col">
-			<div class="quantity-inner">
+		<div class="qty-field">
+			<div class="quantity-inner d-flex">
 				<span class="quantity-button quantity-down"></span>
 				<input
 					type="<?php echo esc_attr( $type ); ?>"
