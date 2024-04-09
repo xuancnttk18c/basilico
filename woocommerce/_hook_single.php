@@ -538,9 +538,9 @@ if(!function_exists('basilico_wc_add_to_cart_message_html')){
 		// Output success messages.
 		if ( 'yes' === get_option( 'woocommerce_cart_redirect_after_add' ) ) {
 			$return_to = apply_filters( 'woocommerce_continue_shopping_redirect', wc_get_raw_referer() ? wp_validate_redirect( wc_get_raw_referer(), false ) : wc_get_page_permalink( 'shop' ) );
-			$message   = sprintf( '<span class="pxl-added-to-cart-msg">%s</span> <a href="%s" tabindex="1" class="btn btn-secondary">%s</a>', esc_html( $added_text ), esc_url( $return_to ), esc_html__( 'Continue shopping', 'basilico' ) );
+			$message   = sprintf( '<span class="pxl-added-to-cart-msg">%s</span> <a href="%s" tabindex="1">%s</a>', esc_html( $added_text ), esc_url( $return_to ), esc_html__( 'Continue shopping', 'basilico' ) );
 		} else {
-			$message = sprintf( '<span class="pxl-added-to-cart-msg">%s</span> <a href="%s" tabindex="1" class="btn btn-secondary">%s</a>',esc_html( $added_text ), esc_url( wc_get_cart_url() ), esc_html__( 'View cart', 'basilico' ) );
+			$message = sprintf( '<span class="pxl-added-to-cart-msg">%s</span> <a href="%s" tabindex="1">%s</a>',esc_html( $added_text ), esc_url( wc_get_cart_url() ), esc_html__( 'View cart', 'basilico' ) );
 		}
 		return $message;
 	}
