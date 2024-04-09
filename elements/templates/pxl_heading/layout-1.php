@@ -110,8 +110,8 @@ extract($settings);
                 <span><?php pxl_print_html(nl2br($description)); ?></span>
             </div>
         <?php endif; ?>
-        <?php if(!empty($settings['underline_type']) && $settings['underline_type'] != 'hide') : ?>
-            <div class="heading-underline <?php echo esc_attr($settings['underline_type']);?>">
+        <?php if (esc_attr($underline_type) != 'hide') : ?>
+            <div class="heading-underline <?php echo esc_attr($underline_type); ?>">
                 <span class="pxl-divider"></span>
             </div>
         <?php endif; ?>
