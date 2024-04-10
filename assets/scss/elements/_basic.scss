@@ -468,71 +468,100 @@
         }
     }
     &.pxl-nav-menu-main {
-        // Underline Style2
+        &.style-1 {
+            .pxl-primary-menu {
+                > li {
+                    &:before{
+                        content: "";
+                        width: 0;
+                        height: 3px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: $primary_color;
+                        @include transition(width .5s cubic-bezier(0.35,.7,.35,1));
+                    }
+                    &.active,
+                    &.current-menu-item,
+                    &.current-menu-ancestor,
+                    &:hover {
+                        width: 100%;
+                    }
+                }
+            }
+        }
         &.style-2 {
-            @media (min-width: $xl_min) {
-                .pxl-primary-menu {
-                    > li {
-                        &:before {
-                            top: auto;
-                            bottom: 0;
-                        }
-                        > a {
-                            color: $heading_color;
-                            font-weight: 500;
-                            overflow: hidden;
-                        }
+            .pxl-primary-menu {
+                > li {
+                    &:before{
+                        content: "";
+                        width: 0;
+                        height: 3px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        background-color: $primary_color;
+                        @include transition(width .5s cubic-bezier(0.35,.7,.35,1));
+                    }
+                    > a {
+                        color: $heading_color;
+                        font-weight: 500;
+                        overflow: hidden;
+                    }
+                    &.active,
+                    &.current-menu-item,
+                    &.current-menu-ancestor,
+                    &:hover {
+                        width: 100%;
                     }
                 }
             }
         }
         &.style-3 {
-            @media (min-width: $xl_min) {
-                .pxl-primary-menu {
-                    margin-left: 0;
-                    margin-right: 0;
-                    flex-direction: column;
-                    > li {
-                        margin: 0;
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
+            .pxl-primary-menu {
+                margin-left: 0;
+                margin-right: 0;
+                flex-direction: column;
+                > li {
+                    margin: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    &:before {
+                        content: none;
+                    }
+                    + li {
+                        margin-top: 33px;
+                    }
+                    > a {
+                        font-weight: 500;
+                        line-height: 36px;
                         &:before {
-                            content: none;
+                            content: "";
+                            width: 0;
+                            height: 1px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            background-color: $primary_color;
+                            @include transition(width 0.5s cubic-bezier(0.35, 0.7, 0.35, 1));
                         }
-                        + li {
-                            margin-top: 33px;
-                        }
+                    }
+                    &.active,
+                    &.current-menu-item,
+                    &.current-menu-ancestor,
+                    &:hover{
                         > a {
-                            font-weight: 500;
-                            line-height: 36px;
                             &:before {
-                                content: "";
-                                width: 0;
-                                height: 1px;
-                                position: absolute;
-                                bottom: 0;
-                                left: 0;
-                                background-color: $primary_color;
-                                @include transition(width 0.5s cubic-bezier(0.35, 0.7, 0.35, 1));
-                            }
-                        }
-                        &.active,
-                        &.current-menu-item,
-                        &.current-menu-ancestor,
-                        &:hover{
-                            > a {
-                                &:before {
-                                    width: 100%;
-                                }
+                                width: 100%;
                             }
                         }
                     }
-                    .sub-menu {
-                        top: 0;
-                        left: 100%;
-                        @include box-shadow(0 0 4px rgba(0, 0, 0, 0.8));
-                    }
+                }
+                .sub-menu {
+                    top: 0;
+                    left: 100%;
+                    @include box-shadow(0 0 4px rgba(0, 0, 0, 0.8));
                 }
             }
         }
@@ -540,9 +569,15 @@
             @media (min-width: $xl_min) {
                 .pxl-primary-menu {
                     > li {
-                        &:before {
-                            top: auto;
+                        &:before{
+                            content: "";
+                            width: 0;
+                            height: 3px;
+                            position: absolute;
                             bottom: 0;
+                            left: 0;
+                            background-color: $primary_color;
+                            @include transition(width .5s cubic-bezier(0.35,.7,.35,1));
                         }
                         &:not(:last-child):after {
                             content: '/';
@@ -550,6 +585,12 @@
                             top: 50%;
                             right: ($menu_item_space / 2) * -1;
                             @include transform(translateY(-50%));
+                        }
+                        &.active,
+                        &.current-menu-item,
+                        &.current-menu-ancestor,
+                        &:hover {
+                            width: 100%;
                         }
                         .sub-menu {
                             padding: 0;
@@ -600,10 +641,15 @@
             @media (min-width: $xl_min) {
                 .pxl-primary-menu {
                     > li {
-                        &:before {
-                            background-color: $secondary_color;
-                            top: auto;
+                        &:before{
+                            content: "";
+                            width: 0;
+                            height: 3px;
+                            position: absolute;
                             bottom: 0;
+                            left: 0;
+                            background-color: $secondary_color;
+                            @include transition(width .5s cubic-bezier(0.35,.7,.35,1));
                         }
                         > a {
                             color: $heading_color;
@@ -611,6 +657,12 @@
                             letter-spacing: 0;
                             text-transform: capitalize;
                             overflow: hidden;
+                        }
+                        &.active,
+                        &.current-menu-item,
+                        &.current-menu-ancestor,
+                        &:hover {
+                            width: 100%;
                         }
                     }
                     .sub-menu {
@@ -653,6 +705,12 @@
                             color: $heading_color;
                             font-weight: 500;
                             overflow: hidden;
+                        }
+                        &.active,
+                        &.current-menu-item,
+                        &.current-menu-ancestor,
+                        &:hover {
+                            width: 100%;
                         }
                     }
                 }
