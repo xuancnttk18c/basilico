@@ -52,9 +52,9 @@ if( ! empty( $settings['selected_img']['id'] ) ){
                     <?php pxl_print_html($widget->get_setting('description')); ?>
                 </div>
             <?php endif; ?>
-        </div>
-        <div class="box-image">
-            <?php echo wp_kses_post($thumbnail); ?>
+            <div class="box-image">
+                <?php echo wp_kses_post($thumbnail); ?>
+            </div>
         </div>
     </div>  
 </div>
