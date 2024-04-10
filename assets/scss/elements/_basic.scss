@@ -2460,14 +2460,13 @@
             background-color: #fff;
             transition: all 300ms linear 0s;
             position: relative;
-            @include border-radius(10px);
             @media (max-width: $sm_max) {
                 text-align: left;
             }
         }
         .icon-wrapper {
             display: inline-block;
-            margin-top: -40px;
+            margin-top: -73px;
             padding: 7px;
             background-color: #fff;
             @include border-radius(50%);
@@ -2485,7 +2484,6 @@
             overflow: hidden;
             transition: all 300ms ease-out 0s;
             z-index: 1;
-            
             i {
                 font-size: 59px;
                 color: #fff;
@@ -2498,6 +2496,7 @@
         }
         .box-content {
             padding: 25px 32px 18px;
+            @include border-radius(10px 10px 0 0);
         }
         .box-title {
             font-size: 25px;
@@ -2508,6 +2507,9 @@
         .box-description {
             color: $body_color;
             transition: all 300ms linear 0s;
+        }
+        .box-image {
+            @include border-radius(0 0 10px 10px);
         }
     }
 }
