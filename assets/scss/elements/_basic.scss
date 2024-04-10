@@ -351,7 +351,7 @@
                 .heading-subtitle.style-2 {
                     &.highlighted span,
                     &.highlighted a {
-                        &:before {
+                        &:after {
                             content: '\e9e6';
                         }
                     }
@@ -376,10 +376,10 @@
                     &.highlighted span,
                     &.highlighted a {
                         &:before {
-                            content: '\e9e6';
+                            content: none;
                         }
                         &:after {
-                            content: none;
+                            content: '\e9e6';
                         }
                     }
                 }
