@@ -2506,12 +2506,11 @@
             letter-spacing: 0.05em;
         }
         .box-description {
-            padding: 0 32px;
+            padding: 0 32px 41px;
             color: $body_color;
             transition: all 300ms linear 0s;
         }
         .box-image {
-            margin-top: 41px;
             overflow: hidden;
             @include border-radius(0 0 10px 10px);
             img {
