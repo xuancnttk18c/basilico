@@ -638,10 +638,16 @@
                 .pxl-primary-menu {
                     > li {
                         &:before {
+                            content: "\e9e6";
                             position: relative;
                             margin-right: 8px;
-                            top: auto;
+                            font-size: 15px;
+                            font-family: $pxli_font;
+                            color: $primary_color;
+                            top: 50%;
+                            left: -30px;
                             bottom: auto;
+                            @include transform(translateY(-50%));
                         }
                         > a {
                             color: $heading_color;
