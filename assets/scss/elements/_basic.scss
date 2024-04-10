@@ -2522,7 +2522,9 @@
                 color: $primary_color;
             }
             .box-image {
-                @include transform(translateY(33px));
+                img {
+                    @include transform(translateY(33px));
+                }
             }
         }
     }
