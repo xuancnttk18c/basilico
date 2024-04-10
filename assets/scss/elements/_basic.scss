@@ -717,12 +717,16 @@
                         }
                         &.active,
                         &.current-menu-item,
-                        &.current-menu-ancestor,
-                        &:hover {
+                        &.current-menu-ancestor {
                             > a {
                                 &:before {
                                     opacity: 1;
                                 }
+                            }
+                        }
+                        &:hover {
+                            > a {
+                                color: $primary_color;
                             }
                         }
                     }
