@@ -272,7 +272,7 @@
                         position: relative;
                         &:before,
                         &:after {
-                            content: "";
+                            //content: "";
                             position: absolute;
                             width: 62px;
                             height: 1px;
@@ -301,7 +301,7 @@
                         align-items: center;
                         &:before,
                         &:after {
-                            content: '\e9e6';
+                            //content: '\e9e6';
                             position: relative;
                             font-family: $pxli_font;
                             color: $primary_color;
@@ -319,11 +319,25 @@
             }
         }
         .pxl-heading-inner {
-            .heading-title.highlighted a,
-            .heading-title.highlighted span,
-            .heading-subtitle.highlighted span {
-                &:before {
-                    content: none;
+            .heading-title.style-1,
+            .heading-subtitle.style-1 {
+                &.highlighted span,
+                &.highlighted a {
+                    &:before {
+                        content: none;
+                    }
+                }
+            }
+            .heading-title.style-2,
+            .heading-subtitle.style-2 {
+                &.highlighted span,
+                &.highlighted a {
+                    &:before {
+                        content: '\e9e6';
+                    }
+                    &:after {
+                        content: none;
+                    }
                 }
             }
             &.start {
@@ -334,8 +348,26 @@
                     &:before {
                         content: none;
                     }
-                    &:after {
-                        content: '\e9e6';
+                }
+                .heading-title.style-1,
+                .heading-subtitle.style-1 {
+                    &.highlighted span,
+                    &.highlighted a {
+                        &:before {
+                            content: none;
+                        }
+                    }
+                }
+                .heading-title.style-2,
+                .heading-subtitle.style-2 {
+                    &.highlighted span,
+                    &.highlighted a {
+                        &:before {
+                            content: '\e9e6';
+                        }
+                        &:after {
+                            content: none;
+                        }
                     }
                 }
             }
