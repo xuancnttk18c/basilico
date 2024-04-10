@@ -2517,6 +2517,25 @@
                 @include transition();
             }
         }
+        .box-btn {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 50%;
+            width: 66px;
+            height: 66px;
+            background-color: $primary_color;
+            @include transform(translateX(-50%));
+            @include border-radius(50%);
+            @include transition();
+            @include d-flex();
+            align-items: center;
+            justify-content: center;
+            i {
+                font-size: 22px;
+                color: #fff;
+            }
+        }
         .box-inner:hover {
             .box-icon {
                 background-color: $heading_color;
@@ -2526,6 +2545,9 @@
                 img {
                     @include transform(translateY(33px));
                 }
+            }
+            .box-btn {
+                opacity: 1;
             }
         }
     }
