@@ -633,6 +633,25 @@
                 }
             }
         }
+        &.style-6 {
+            @media (min-width: $xl_min) {
+                .pxl-primary-menu {
+                    > li {
+                        &:before {
+                            position: relative;
+                            margin-right: 8px;
+                            top: auto;
+                            bottom: auto;
+                        }
+                        > a {
+                            color: $heading_color;
+                            font-weight: 500;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
     }
     &.pxl-nav-menu-inner {
         .menu-item > a {

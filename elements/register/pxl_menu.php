@@ -56,11 +56,12 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Menu Style', 'basilico' ),
                             'type' => 'select',
                             'options' => [
-                                '1' => esc_html__('Default', 'basilico'),
-                                '2' => esc_html__('Style 2', 'basilico'),
-                                '3' => esc_html__('Style 3', 'basilico'),
-                                '4' => esc_html__('Style 4', 'basilico'),
-                                '5' => esc_html__('Style 5', 'basilico'),
+                                '1' => esc_html__('Underline Top', 'basilico'),
+                                '2' => esc_html__('Underline Bottom', 'basilico'),
+                                '3' => esc_html__('Vertical', 'basilico'),
+                                '4' => esc_html__('Slash Between', 'basilico'),
+                                '5' => esc_html__('Luxury', 'basilico'),
+                                '6' => esc_html__('Coffee Bean', 'basilico'),
                             ],
                             'default' => '1',
                             'condition' => [
@@ -94,7 +95,7 @@ pxl_add_custom_widget(
                             ],
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-primary-menu' => 'justify-content: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu.style-3 .pxl-primary-menu' => 'align-items: {{VALUE}};'
+                                '{{WRAPPER}} .pxl-nav-menu.style-3 .menu-item' => 'justify-content: {{VALUE}};'
                             ],
                             'condition' => [
                                 'type' => ['1','3'],
