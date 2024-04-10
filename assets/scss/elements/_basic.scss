@@ -2457,6 +2457,7 @@
     }
     &.layout-5 {
         .box-inner {
+            padding-top: 25px;
             transition: all 300ms linear 0s;
             position: relative;
             @media (max-width: $sm_max) {
@@ -2494,17 +2495,18 @@
             }
         }
         .box-content {
-            padding: 25px 32px 51px;
             background-color: #fff;
             @include border-radius(10px);
         }
         .box-title {
+            padding: 32px;
             font-size: 25px;
             line-height: 1.5;
             margin-bottom: 16px;
             letter-spacing: 0.05em;
         }
         .box-description {
+            padding: 32px;
             color: $body_color;
             transition: all 300ms linear 0s;
         }
