@@ -33,11 +33,13 @@ if( ! empty( $settings['selected_img']['id'] ) ){
 <div class="pxl-fancy-box layout-5">
     <div class="box-inner">
         <div class="box-content">
-            <div class="box-icon">
-                <?php if(! empty( $settings['selected_icon']['value'] )): ?>
-                    <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
-                <?php endif; ?>
-            </div> 
+            <?php if(! empty( $settings['selected_icon']['value'] )): ?>
+                <div class="icon-wrapper">
+                    <div class="box-icon">
+                        <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
+                    </div>
+                </div>
+            <?php endif; ?>
             <?php if(!empty($widget->get_setting('title'))): ?>
                 <h3 class="box-title">
                     <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
