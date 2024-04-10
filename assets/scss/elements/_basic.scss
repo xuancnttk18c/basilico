@@ -701,24 +701,28 @@
                             content: none;
                         }
                         > a {
+                            position: relative;
                             color: $heading_color;
                             font-weight: 500;
-                            overflow: hidden;
                             &:before {
                                 content: "\e9e6";
-                                position: relative;
-                                margin-right: 8px;
+                                position: absolute;
+                                left: -24px;
                                 font-size: 15px;
                                 font-family: $pxli_font;
                                 color: $primary_color;
+                                opacity: 0;
+                                @include transition();
                             }
                         }
                         &.active,
                         &.current-menu-item,
                         &.current-menu-ancestor,
                         &:hover {
-                            &:before {
-                                width: 100%;
+                            > a {
+                                &:before {
+                                    opacity: 1;
+                                }
                             }
                         }
                     }
