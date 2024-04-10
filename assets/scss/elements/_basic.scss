@@ -2517,7 +2517,13 @@
             @include transition();
         }
         .box-inner:hover {
-            
+            .box-icon {
+                background-color: $heading_color;
+                color: $primary_color;
+            }
+            .box-image {
+                @include transform(translateY(33px));
+            }
         }
     }
 }
