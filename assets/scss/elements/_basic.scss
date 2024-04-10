@@ -2514,7 +2514,9 @@
             margin-top: 41px;
             overflow: hidden;
             @include border-radius(0 0 10px 10px);
-            @include transition();
+            img {
+                @include transition();
+            }
         }
         .box-inner:hover {
             .box-icon {
