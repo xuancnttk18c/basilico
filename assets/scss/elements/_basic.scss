@@ -2536,6 +2536,9 @@
                 font-size: 20px;
                 color: #fff;
             }
+            &:hover {
+                background-color: $heading_color;
+            }
         }
         .box-inner:hover {
             .box-icon {
