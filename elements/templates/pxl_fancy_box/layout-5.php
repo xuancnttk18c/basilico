@@ -54,6 +54,9 @@ if( ! empty( $settings['selected_img']['id'] ) ){
             <?php endif; ?>
             <div class="box-image">
                 <?php echo wp_kses_post($thumbnail); ?>
+                <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
+                    <span class="pxl-icon pxli-arrow-next"></span>
+                <?php if ( $link_attributes ) echo '</a>'; ?> 
             </div>
         </div>
     </div>  
