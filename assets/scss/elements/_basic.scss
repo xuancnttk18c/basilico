@@ -2510,8 +2510,17 @@
         }
         .box-image {
             margin-top: -10px;
-            @include border-radius(0 0 10px 10px);
             overflow: hidden;
+            @include border-radius(0 0 10px 10px);
+            @include transition();
+        }
+        &:hover {
+            .box-content {
+                padding-bottom: 84px;
+            }
+            .box-image {
+                max-height: calc(100% - 33px);
+            }
         }
     }
 }
