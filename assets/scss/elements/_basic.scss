@@ -698,21 +698,20 @@
                 .pxl-primary-menu {
                     > li {
                         &:before {
-                            content: "\e9e6";
-                            position: relative;
-                            margin-right: 8px;
-                            font-size: 15px;
-                            font-family: $pxli_font;
-                            color: $primary_color;
-                            top: 50%;
-                            left: -30px;
-                            bottom: auto;
-                            @include transform(translateY(-50%));
+                            content: none;
                         }
                         > a {
                             color: $heading_color;
                             font-weight: 500;
                             overflow: hidden;
+                            &:before {
+                                content: "\e9e6";
+                                position: relative;
+                                margin-right: 8px;
+                                font-size: 15px;
+                                font-family: $pxli_font;
+                                color: $primary_color;
+                            }
                         }
                         &.active,
                         &.current-menu-item,
