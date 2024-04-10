@@ -485,7 +485,9 @@
                     &.current-menu-item,
                     &.current-menu-ancestor,
                     &:hover {
-                        width: 100%;
+                        &:before {
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -512,7 +514,9 @@
                     &.current-menu-item,
                     &.current-menu-ancestor,
                     &:hover {
-                        width: 100%;
+                        &:before {
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -590,7 +594,9 @@
                         &.current-menu-item,
                         &.current-menu-ancestor,
                         &:hover {
-                            width: 100%;
+                            &:before {
+                                width: 100%;
+                            }
                         }
                         .sub-menu {
                             padding: 0;
@@ -662,7 +668,9 @@
                         &.current-menu-item,
                         &.current-menu-ancestor,
                         &:hover {
-                            width: 100%;
+                            &:before {
+                                width: 100%;
+                            }
                         }
                     }
                     .sub-menu {
@@ -710,7 +718,9 @@
                         &.current-menu-item,
                         &.current-menu-ancestor,
                         &:hover {
-                            width: 100%;
+                            &:before {
+                                width: 100%;
+                            }
                         }
                     }
                 }
