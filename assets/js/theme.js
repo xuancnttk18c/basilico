@@ -178,7 +178,7 @@
         $menu.find('.pxl-primary-menu li').each(function () {
             var $submenu = $(this).find('> ul.sub-menu');
             if ($submenu.length == 1) {
-                $(this).hover(function () {
+                $(this).on('hover', function () {
                     if ($submenu.offset().left + $submenu.width() > $(window).width()) {
                         $submenu.addClass('back');
                     } else if ($submenu.offset().left < 0) {
@@ -269,7 +269,7 @@
         if (scroll_top > window_height) {
             $('.pxl-scroll-top').addClass('on').removeClass('off');
         }
-        $('.pxl-scroll-top').click(function (e) {
+        $('.pxl-scroll-top').on('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
             $('html, body').stop().animate({scrollTop: 0}, 800);
