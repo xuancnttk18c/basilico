@@ -1405,7 +1405,8 @@
     &.layout-pxl-portfolio-1,
     &.layout-pxl-portfolio-3,
     &.layout-pxl-portfolio-5, 
-    &.layout-pxl-portfolio-6 {
+    &.layout-pxl-portfolio-6,
+    &.layout-pxl-portfolio-7 {
         .grid-item-inner {
             .item-featured {
                 position: relative;
@@ -1883,6 +1884,70 @@
                     height: 100%;
                     background-color: $secondary_color;
                 }
+            }
+            .item-excerpt {
+                letter-spacing: 0;
+                color: #fff;
+                margin: 0 auto;
+            }
+            .item-readmore {
+                margin-top: 43px;
+                .bt-more-plus {
+                    @include border-radius(8px);
+                    background-color: $secondary_color;
+                    i {
+                        font-size: 22px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .btn-grid-loadmore .pxl-btn-icon {
+            display: flex;
+            right: 15px;
+            margin-top: -7px;
+        }
+    }
+    &.layout-pxl-portfolio-7 {
+        .grid-item-inner {
+            .item-featured {
+                @include border-radius(10px);
+                overflow: hidden;
+            }
+            .item-content {
+                overflow: hidden;
+                background-color: rgba(18, 15, 12, 0.6);
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                }
+            }
+            .content-inner {
+                position: relative;
+                z-index: 2;
+            }
+            .item-title {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: calc(50 / 24);
+                letter-spacing: 0.08em;
+                text-transform: $primary_color;
+                color: #fff;
+                margin-bottom: 0;
+                a {
+                    color: #fff;
+                    @include transition();
+                    &:hover {
+                        color: $secondary_color;
+                    }
+                }
+            }
+            .pxl-divider {
+                display: none;
             }
             .item-excerpt {
                 letter-spacing: 0;

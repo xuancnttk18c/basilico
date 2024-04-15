@@ -185,6 +185,10 @@ function basilico_get_grid_layout_options($posttype_name){
                 'label' => esc_html__('Layout 6', 'basilico'),
                 'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-6.jpg'
             ],
+            'pxl-portfolio-7' => [
+                'label' => esc_html__('Layout 7', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-6.jpg'
+            ],
         ];
         break;
         case 'post':
