@@ -627,8 +627,8 @@ Redux::setSection($opt_name, array(
             'title'          => esc_html__('Input Padding', 'basilico'),
             'desc'           => esc_html__('Default: Right - 20px, Left - 20px', 'basilico'),
             'default'        => array(
-                'padding-left'    => '20',
-                'padding-right'   => '20',
+                'padding-left'    => '20px',
+                'padding-right'   => '20px',
                 'units'           => 'px',
             ),
         ),
