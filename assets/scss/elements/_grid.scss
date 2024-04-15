@@ -1912,8 +1912,10 @@
             position: relative;
             overflow: hidden;
             @include border-radius(10px);
-            .item-content {
+            .content-inner {
                 @include d-flex();
+                position: relative;
+                z-index: 2;
                 flex-direction: column;
                 justify-content: center;
                 overflow: hidden;
@@ -1924,16 +1926,13 @@
                 bottom: 0;
                 text-align: center;
                 position: absolute;
-            }
-            .content-inner {
-                position: relative;
-                z-index: 2;
                 &:has(.item-title) {
                     &:before {
                         content: "\e9e6";
                         font-size: 20px;
                         font-family: $pxli_font;
                         color: $primary_color;
+                        opacity: 0;
                     }
                 }
                 > * {
