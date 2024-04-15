@@ -1929,10 +1929,12 @@
                 @include transition(350ms cubic-bezier(.48,.57,.33,.89));
             }
             .content-inner {
-                position: relative;
+                position: absolute;
+                top: 50%;
+                left: 50%;
                 z-index: 2;
                 opacity: 0;
-                @include transform(translateY(-10px));
+                @include transform(translate(-50%, calc(-50% -10px)));
                 @include transition(all 300ms ease 400ms);
                 &:has(.item-title) {
                     &:before {
@@ -1986,7 +1988,7 @@
                 }
                 .content-inner {
                     opacity: 1;
-                    @include transform(translateY(0px));
+                    @include transform(translate(-50%, -50%));
                 }
             }
         }
