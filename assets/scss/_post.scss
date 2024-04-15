@@ -1003,10 +1003,6 @@
 }
 .pxl-load-more{
 	margin-top: 35px;
-	.btn-grid-loadmore{
-		font-size: 15px;
-		padding: 10px 45px;
-	}
 	.btn-grid-loadmore.right{
         @include d-flex();
     }
