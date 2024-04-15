@@ -1924,17 +1924,17 @@
                 bottom: 0;
                 text-align: center;
                 position: absolute;
-                &:has(.item-title) {
-                    &:before {
-                        content: '';
-                        font-size: 20px;
-                        color: $primary_color;
-                    }
-                }
             }
             .content-inner {
                 position: relative;
                 z-index: 2;
+                &:has(.item-title) {
+                    &:before {
+                        content: "\e9e6";
+                        font-size: 20px;
+                        color: $primary_color;
+                    }
+                }
             }
             .item-title {
                 font-size: 24px;
