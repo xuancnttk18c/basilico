@@ -1405,8 +1405,7 @@
     &.layout-pxl-portfolio-1,
     &.layout-pxl-portfolio-3,
     &.layout-pxl-portfolio-5, 
-    &.layout-pxl-portfolio-6,
-    &.layout-pxl-portfolio-7 {
+    &.layout-pxl-portfolio-6 {
         .grid-item-inner {
             .item-featured {
                 position: relative;
@@ -1910,6 +1909,7 @@
     }
     &.layout-pxl-portfolio-7 {
         .grid-item-inner {
+            position: relative;
             .item-featured {
                 @include border-radius(10px);
                 overflow: hidden;
@@ -1935,8 +1935,8 @@
                 font-weight: 500;
                 line-height: calc(50 / 24);
                 letter-spacing: 0.08em;
-                text-transform: $primary_color;
-                color: #fff;
+                text-transform: uppercase;
+                color: $primary_color;
                 margin-bottom: 0;
                 a {
                     color: #fff;
