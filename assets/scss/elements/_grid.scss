@@ -1922,7 +1922,6 @@
                 right: 0;
                 left: 0;
                 bottom: 0;
-                text-align: center;
                 position: absolute;
                 transform-origin: bottom;
                 @include transform(scaleY(0));
@@ -1937,6 +1936,7 @@
                 opacity: 0;
                 @include transform(translate(-50%, calc(-50% - 10px)));
                 @include transition(all 300ms ease 400ms);
+                text-align: center;
                 &:has(.item-title) {
                     &:before {
                         content: "\e9e6";
@@ -1984,7 +1984,7 @@
                 }
             }
             &:hover {
-                .item-content {
+                .background-overlay {
                     transform: scaleY(1);
                 }
                 .content-inner {
