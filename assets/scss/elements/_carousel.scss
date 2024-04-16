@@ -3323,6 +3323,11 @@
         .pxl-swiper-dots {
             margin-top: 112px;
         }
+        .item-icon {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
         .item-title {
             font-size: 24px;
             line-height: 1.3;
@@ -3335,10 +3340,11 @@
             }
         }
         .item-tags {
+            margin-top: 5px;
             font-size: 15px;
             line-height: 28px;
             letter-spacing: 0.02em;
-            color: #dedede;
+            color: #fff;
             a {
                 color: inherit;
                 &:hover {
@@ -3355,6 +3361,7 @@
             line-height: 25px;
             color: #dedede;
             letter-spacing: 0.02em;
+            margin-top: 30px;
             margin-bottom: 48px;
         }
         .item-readmore {
