@@ -151,9 +151,6 @@ if ( !empty( $item_animation) ) {
                                             <?php the_terms($post->ID, 'pxl-portfolio-tag', '', '&nbsp/&nbsp', ''); ?>
                                         </div>
                                     <?php endif; ?>
-                                    <?php if ($show_divider == 'true') : ?>
-                                        <div class="pxl-divider"></div>
-                                    <?php endif; ?>
                                     <?php if ($show_excerpt == 'true') : ?>
                                         <div class="item-excerpt">
                                             <?php
@@ -170,7 +167,8 @@ if ( !empty( $item_animation) ) {
                                     <?php endif; ?>
                                     <?php if ($show_button == 'true') : ?>
                                         <div class="item-readmore">
-                                            <a class="bt-more-plus" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                            <a class="btn-more style-2" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                                <span><?php echo esc_attr($loadmore_text); ?></span>
                                                 <i class="zmdi zmdi-arrow-right"></i>
                                             </a>
                                         </div>
