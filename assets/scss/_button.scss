@@ -615,6 +615,27 @@
             }
         }
     }
+    &.style-4 {
+        font-family: $heading_font_family;
+        font-size: 15px;
+        line-height: calc(20 / 15);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        i {
+            max-width: none;
+            font-size: 13px;
+            margin-left: 8px;
+            color: $primary_color;
+        }
+        &:after {
+            content: none;
+        }
+        &:hover {
+            i {
+                animation: toRightFromLeft 0.3s ease;
+            }
+        }
+    }
 }
 
 .item-readmore .btn {

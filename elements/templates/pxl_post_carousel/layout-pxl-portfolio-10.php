@@ -170,7 +170,7 @@ if ( !empty( $item_animation) ) {
                                     <?php endif; ?>
                                     <?php if ($show_button == 'true') : ?>
                                         <div class="item-readmore">
-                                            <a class="btn-more style-2" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                            <a class="btn-more style-4" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
                                                 <span><?php echo esc_attr($button_text); ?></span>
                                                 <i class="zmdi zmdi-arrow-right"></i>
                                             </a>
