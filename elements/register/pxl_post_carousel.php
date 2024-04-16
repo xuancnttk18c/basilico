@@ -180,6 +180,422 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
                             ),
                             array(
+                                'name' => 'arrow_prev_position',
+                                'label' => esc_html__('Arrow Previous Position', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'default' => 'default',
+                                'label_block' => true,
+                                'options' => [
+                                    'default' => esc_html('Default', 'basilico'),
+                                    'absolute' => esc_html('Custom', 'basilico'),
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
+                            ),
+                            array(
+                                'name' => 'arrow_prev_offset_orientation_h',
+                                'label' => esc_html__('Horizontal Orientation', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::CHOOSE,
+                                'default' => 'left',
+                                'options' => [
+                                    'left' => [
+                                        'title' => 'Start',
+                                        'icon' => 'eicon-h-align-left',
+                                    ],
+                                    'right' => [
+                                        'title' => 'End',
+                                        'icon' => 'eicon-h-align-right',
+                                    ],
+                                ],
+                                'render_type' => 'ui',
+                                'condition' => [
+                                    'arrows' => 'true',
+                                    'arrow_prev_position' => 'absolute'
+                                ]
+                            ),
+                            array(
+                                'name' => 'arrow_prev_offset_x',
+                                'label' => esc_html__('Offset', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'range' => [
+                                    'px' => [
+                                        'min' => -1000,
+                                        'max' => 1000,
+                                        'step' => 1,
+                                    ],
+                                    '%' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vw' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vh' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                ],
+                                'control_type' => 'responsive',
+                                'default' => [
+                                    'size' => 0,
+                                    'unit' => 'px'
+                                ],
+                                'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; left: {{SIZE}}{{UNIT}}; right: auto;',
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true',
+                                    'arrow_prev_offset_orientation_h!' => 'right',
+                                    'arrow_prev_position' => 'absolute',
+                                ],
+                            ),
+                            array(
+                                'name' => 'arrow_prev_offset_x_end',
+                                'label' => esc_html__('Offset', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'range' => [
+                                    'px' => [
+                                        'min' => -1000,
+                                        'max' => 1000,
+                                        'step' => 1,
+                                    ],
+                                    '%' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vw' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vh' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                ],
+                                'control_type' => 'responsive',
+                                'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+                                'default' => [
+                                    'size' => 0,
+                                    'unit' => 'px'
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; right: {{SIZE}}{{UNIT}}; left: auto;',
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true',
+                                    'arrow_prev_offset_orientation_h' => 'right',
+                                    'arrow_prev_position' => 'absolute',
+                                ],
+                            ),
+                            array(
+                                'name' => 'arrow_prev_offset_orientation_v',
+                                'label' => esc_html__('Vertical Orientation', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::CHOOSE,
+                                'default' => 'top',
+                                'options' => [
+                                    'top' => [
+                                        'title' => 'Top',
+                                        'icon' => 'eicon-v-align-top',
+                                    ],
+                                    'bottom' => [
+                                        'title' => 'Bottom',
+                                        'icon' => 'eicon-v-align-bottom',
+                                    ],
+                                ],
+                                'render_type' => 'ui',
+                                'condition' => [
+                                    'arrows' => 'true',
+                                    'arrow_prev_position' => 'absolute'
+                                ]
+                            ),
+                            array(
+                                'name' => 'arrow_prev_offset_y',
+                                'label' => esc_html__('Offset', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'range' => [
+                                    'px' => [
+                                        'min' => -1000,
+                                        'max' => 1000,
+                                        'step' => 1,
+                                    ],
+                                    '%' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vw' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vh' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                ],
+                                'control_type' => 'responsive',
+                                'default' => [
+                                    'size' => 0,
+                                    'unit' => 'px'
+                                ],
+                                'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; top: {{SIZE}}{{UNIT}}; bottom: auto;',
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true',
+                                    'arrow_prev_offset_orientation_v!' => 'bottom',
+                                    'arrow_prev_position' => 'absolute',
+                                ],
+                            ),
+                            array(
+                                'name' => 'arrow_prev_offset_y_end',
+                                'label' => esc_html__('Offset', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'range' => [
+                                    'px' => [
+                                        'min' => -1000,
+                                        'max' => 1000,
+                                        'step' => 1,
+                                    ],
+                                    '%' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vw' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vh' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                ],
+                                'control_type' => 'responsive',
+                                'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+                                'default' => [
+                                    'size' => 0,
+                                    'unit' => 'px'
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; bottom: {{SIZE}}{{UNIT}}; top: auto;',
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true',
+                                    'arrow_prev_offset_orientation_v' => 'bottom',
+                                    'arrow_prev_position' => 'absolute',
+                                ],
+                            ),
+                            array(
+                                'name' => 'arrow_next_position',
+                                'label' => esc_html__('Arrow Next Position', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'default' => 'default',
+                                'label_block' => true,
+                                'options' => [
+                                    'default' => esc_html('Default', 'basilico'),
+                                    'absolute' => esc_html('Custom', 'basilico'),
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
+                            ),
+                            array(
+                                'name' => 'arrow_next_offset_orientation_h',
+                                'label' => esc_html__('Horizontal Orientation', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::CHOOSE,
+                                'default' => 'left',
+                                'options' => [
+                                    'left' => [
+                                        'title' => 'Start',
+                                        'icon' => 'eicon-h-align-left',
+                                    ],
+                                    'right' => [
+                                        'title' => 'End',
+                                        'icon' => 'eicon-h-align-right',
+                                    ],
+                                ],
+                                'render_type' => 'ui',
+                                'condition' => [
+                                    'arrows' => 'true',
+                                    'arrow_next_position' => 'absolute'
+                                ]
+                            ),
+                            array(
+                                'name' => 'arrow_next_offset_x',
+                                'label' => esc_html__('Offset', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'range' => [
+                                    'px' => [
+                                        'min' => -1000,
+                                        'max' => 1000,
+                                        'step' => 1,
+                                    ],
+                                    '%' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vw' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vh' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                ],
+                                'control_type' => 'responsive',
+                                'default' => [
+                                    'size' => 0,
+                                    'unit' => 'px'
+                                ],
+                                'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'position: absolute !important; left: {{SIZE}}{{UNIT}}; right: auto;',
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true',
+                                    'arrow_next_offset_orientation_h!' => 'right',
+                                    'arrow_next_position' => 'absolute',
+                                ],
+                            ),
+                            array(
+                                'name' => 'arrow_next_offset_x_end',
+                                'label' => esc_html__('Offset', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'range' => [
+                                    'px' => [
+                                        'min' => -1000,
+                                        'max' => 1000,
+                                        'step' => 1,
+                                    ],
+                                    '%' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vw' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vh' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                ],
+                                'control_type' => 'responsive',
+                                'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+                                'default' => [
+                                    'size' => 0,
+                                    'unit' => 'px'
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'position: absolute !important; right: {{SIZE}}{{UNIT}}; left: auto;',
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true',
+                                    'arrow_next_offset_orientation_h' => 'right',
+                                    'arrow_next_position' => 'absolute',
+                                ],
+                            ),
+                            array(
+                                'name' => 'arrow_next_offset_orientation_v',
+                                'label' => esc_html__('Vertical Orientation', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::CHOOSE,
+                                'default' => 'top',
+                                'options' => [
+                                    'top' => [
+                                        'title' => 'Top',
+                                        'icon' => 'eicon-v-align-top',
+                                    ],
+                                    'bottom' => [
+                                        'title' => 'Bottom',
+                                        'icon' => 'eicon-v-align-bottom',
+                                    ],
+                                ],
+                                'render_type' => 'ui',
+                                'condition' => [
+                                    'arrows' => 'true',
+                                    'arrow_next_position' => 'absolute'
+                                ]
+                            ),
+                            array(
+                                'name' => 'arrow_next_offset_y',
+                                'label' => esc_html__('Offset', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'range' => [
+                                    'px' => [
+                                        'min' => -1000,
+                                        'max' => 1000,
+                                        'step' => 1,
+                                    ],
+                                    '%' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vw' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vh' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                ],
+                                'control_type' => 'responsive',
+                                'default' => [
+                                    'size' => 0,
+                                    'unit' => 'px'
+                                ],
+                                'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'position: absolute !important; top: {{SIZE}}{{UNIT}}; bottom: auto;',
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true',
+                                    'arrow_next_offset_orientation_v!' => 'bottom',
+                                    'arrow_next_position' => 'absolute',
+                                ],
+                            ),
+                            array(
+                                'name' => 'arrow_next_offset_y_end',
+                                'label' => esc_html__('Offset', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'range' => [
+                                    'px' => [
+                                        'min' => -1000,
+                                        'max' => 1000,
+                                        'step' => 1,
+                                    ],
+                                    '%' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vw' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                    'vh' => [
+                                        'min' => -200,
+                                        'max' => 200,
+                                    ],
+                                ],
+                                'control_type' => 'responsive',
+                                'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+                                'default' => [
+                                    'size' => 0,
+                                    'unit' => 'px'
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'position: absolute !important; bottom: {{SIZE}}{{UNIT}}; top: auto;',
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true',
+                                    'arrow_next_offset_orientation_v' => 'bottom',
+                                    'arrow_next_position' => 'absolute',
+                                ],
+                            ),
+                            array(
                                 'name' => 'arrows_on_hover',
                                 'label' => esc_html__('Show Arrows on Hover', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SWITCHER,

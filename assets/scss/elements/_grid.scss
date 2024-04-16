@@ -1909,7 +1909,6 @@
     }
     &.layout-pxl-portfolio-7 {
         .grid-item-inner {
-            position: relative;
             overflow: hidden;
             @include border-radius(10px);
             .background-overlay {
