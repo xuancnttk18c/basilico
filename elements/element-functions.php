@@ -8,7 +8,7 @@ if (!function_exists('basilico_elements_scripts')) {
     add_action('basilico_scripts', 'basilico_elements_scripts');
     function basilico_elements_scripts(){
         wp_enqueue_style( 'e-animations');
-        wp_register_script( 'motion-path', get_template_directory_uri() . '/elements/assets/js/libs/gsap_motion_path_plugin.min.js', array( 'jquery','gsap' ), '3.12.2', true );
+        wp_register_script( 'motion-path', get_template_directory_uri() . '/elements/assets/js/gsap_motion_path_plugin.min.js', array( 'jquery','gsap' ), '3.12.2', true );
         wp_register_style( 'odometer', get_template_directory_uri() . '/elements/assets/css/odometer-theme-default.css', array(), '1.1.0');
         wp_enqueue_script('basilico-elements', get_template_directory_uri() . '/elements/assets/js/pxl-elements.js', [ 'jquery' ], basilico()->get_version(), true);
         wp_register_script('basilico-tabs', get_template_directory_uri() . '/elements/assets/js/pxl-tabs.js', ['jquery'], basilico()->get_version(), true);
