@@ -140,6 +140,7 @@ function basilico_scripts() {
     wp_enqueue_script( 'tilt', get_template_directory_uri() . '/assets/js/tilt.jquery.min.js', array( 'jquery' ), basilico()->get_version(), true );
     wp_enqueue_script( 'magnific-popup', get_template_directory_uri() . '/assets/js/magnific-popup.min.js', array( 'jquery' ), '1.0.0', true );
     wp_enqueue_script('slick', get_template_directory_uri() . '/assets/js/slick.min.js', array('jquery'), '1.8.1', true);
+    wp_enqueue_script( 'gsap', get_template_directory_uri() . '/elements/assets/js/gsap.min.js', array( 'jquery' ), '3.5.0', true );
     wp_enqueue_script('nice-select', get_template_directory_uri() . '/assets/js/nice-select.min.js', array('jquery'), '1.1.0', true);
     wp_enqueue_script( 'basilico-main', get_template_directory_uri() . '/assets/js/theme.js', array( 'jquery' ), basilico()->get_version(), true );
     wp_localize_script( 'basilico-main', 'main_data', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
