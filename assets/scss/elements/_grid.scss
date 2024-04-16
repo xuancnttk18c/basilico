@@ -1949,23 +1949,14 @@
             .item-title {
                 font-size: 24px;
                 font-weight: 500;
-                line-height: 1.4;
+                line-height: calc(50 / 24);
                 letter-spacing: 0.08em;
                 text-transform: uppercase;
                 color: $primary_color;
                 margin-bottom: 0;
-                position: relative;
+                white-space: nowrap;
                 &:before, &:after {
                     content: '-';
-                    position: absolute;
-                    top: 50%;
-                    @include transform(translateY(-50%));
-                }
-                &:before {
-                    left: -15px;
-                }
-                &:after {
-                    right: -15px;
                 }
                 a {
                     color: inherit;
