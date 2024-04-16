@@ -76,6 +76,7 @@
             scroll_status = 'down';
         }
         lastScrollTop = scroll_top;
+        
         basilico_header_sticky();
         basilico_scroll_to_top();
         basilico_sticky_position();
