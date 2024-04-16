@@ -3431,6 +3431,23 @@
                 }
             }
         }
+        .pxl-swiper-arrows {
+            .pxl-swiper-arrow {
+                @include d-flex();
+                align-items: center;
+                justify-content: center;
+                width: 57px;
+                height: 57px;
+                border: 1px solid $primary_color;
+                @include border-radius(50%);
+                font-size: 18px;
+                color: $primary_color;
+                &:hover {
+                    background-color: $primary_color;
+                    color: #fff;
+                }
+            }
+        }
     }
 }
 
