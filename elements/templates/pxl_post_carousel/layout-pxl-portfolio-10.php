@@ -185,8 +185,8 @@ if ( !empty( $item_animation) ) {
         </div>
         <?php if($arrows !== 'false'): ?>
             <div class="pxl-swiper-arrows style-default nav-horizontal">
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxli pxli-arrow-prev"></span></div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxli pxli-arrow-next"></span></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="zmdi zmdi-arrow-left"></span></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="zmdi zmdi-arrow-right"></span></div>
             </div>
         <?php endif; ?>
         <?php if($dots !== 'false'): ?>
