@@ -438,6 +438,10 @@ function basilico_get_carousel_layout_options($posttype_name){
                     'label' => esc_html__('Layout 9', 'basilico'),
                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-7.jpg'
                 ],
+                'pxl-portfolio-10' => [
+                    'label' => esc_html__('Layout 10', 'basilico'),
+                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-7.jpg'
+                ],
             ];
             break;
         case 'pxl-service':
