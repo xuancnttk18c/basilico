@@ -147,6 +147,7 @@ if ( !empty( $item_animation) ) {
                             <div class="item-content <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
                                 <div class="content-inner">
                                     <h4 class="item-title">
+                                        <i class="pxli pxli-coffee-bean"></i>
                                         <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
                                     </h4>
                                     <?php if ($show_category == 'true') : ?>
