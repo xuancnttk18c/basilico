@@ -1962,10 +1962,10 @@
                     @include transform(translateY(-50%));
                 }
                 &:before {
-                    left: -10px;
+                    left: -15px;
                 }
-                &:before {
-                    right: -10px;
+                &:after {
+                    right: -15px;
                 }
                 a {
                     color: inherit;
