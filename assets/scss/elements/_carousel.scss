@@ -3324,9 +3324,9 @@
             margin-top: 112px;
         }
         .item-icon {
+            margin-bottom: 15px;
             font-size: 20px;
             color: #fff;
-            margin-bottom: 10px;
         }
         .item-title {
             font-size: 24px;
@@ -3356,12 +3356,11 @@
             }
         }
         .item-excerpt {
-            padding: 0 10px;
             font-size: 15px;
             line-height: 25px;
             color: #dedede;
             letter-spacing: 0.02em;
-            margin-top: 30px;
+            margin-top: 20px;
             margin-bottom: 48px;
         }
         .item-readmore {
@@ -3388,7 +3387,7 @@
                 }
             }
             .item-content {
-                padding: 20px 70px;
+                padding: 20px 80px;
                 @include d-flex();
                 align-items: center;
                 position: absolute;
@@ -3411,6 +3410,19 @@
                 .item-content {
                     opacity: 1;
                     visibility: visible;
+                }
+            }
+        }
+        .box-title {
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            .item-title {
+                &:before,
+                &:after {
+                    content: none;
                 }
             }
         }

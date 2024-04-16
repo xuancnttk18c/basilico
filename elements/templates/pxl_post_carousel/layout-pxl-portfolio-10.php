@@ -179,6 +179,18 @@ if ( !empty( $item_animation) ) {
                                     <?php endif; ?>
                                 </div>
                             </div>
+                            <div class="box-title">
+                                <div class="title-wrap">
+                                    <h4 class="item-title">
+                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                                    </h4>
+                                    <?php if ($show_category == 'true') : ?>
+                                        <div class="item-tags">
+                                            <?php the_terms($post->ID, 'pxl-portfolio-tag', '', '&nbsp/&nbsp', ''); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 <?php endforeach; ?>
