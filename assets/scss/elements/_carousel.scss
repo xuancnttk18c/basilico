@@ -3368,6 +3368,20 @@
                 color: #fff;
             }
         }
+        .box-title {
+            position: absolute;
+            bottom: 41px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+            .item-title {
+                &:before,
+                &:after {
+                    content: none;
+                }
+            }
+        }
         .item-inner {
             position: relative;
             @include border-radius(10px);
@@ -3411,18 +3425,8 @@
                     opacity: 1;
                     visibility: visible;
                 }
-            }
-        }
-        .box-title {
-            position: absolute;
-            bottom: 50px;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            .item-title {
-                &:before,
-                &:after {
-                    content: none;
+                .box-title {
+                    opacity: 0;
                 }
             }
         }
