@@ -11,6 +11,7 @@
             autoplay: false,
             swipe: (settings["swipe"] === "true"),
             dots: (settings["dots"] === "true"),
+            waitForAnimate: false,
             customPaging : function(slider, i) {
                 return '<span class="pxl-swiper-pagination-bullet ' + settings['dots_style'] + '"></span>';
             },
