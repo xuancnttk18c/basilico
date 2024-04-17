@@ -219,7 +219,7 @@ pxl_add_custom_widget(
                             'control_type' => 'responsive',
                             'size_units'   => [ 'px', '%' ],
                             'selectors'    => [
-                                '{{WRAPPER}} .grid-item img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                                '{{WRAPPER}} .grid-item img, {{WRAPPER}} .pxl-image-gallery.layout-2 .grid-item .item-inner:before' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                             ],
                         ),
                         array(

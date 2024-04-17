@@ -44,8 +44,17 @@ $slider-outer-space: 0;
     align-items: center;
     justify-content: center;
 }
+
 .non-swiper-slide {
     display: none;
+}
+
+.slick-slide {
+    opacity: 0 !important;
+}
+
+.slick-active {
+    opacity: 1 !important;
 }
 
 // Multi Column
