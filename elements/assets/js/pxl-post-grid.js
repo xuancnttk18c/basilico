@@ -57,8 +57,8 @@
     };
 
     function pxl_update_grid_layout_height() {
-        if ($('.pxl-post-grid.layout-post-2 .grid-item, .pxl-post-grid.layout-post-3 .grid-item').length > 0) {
-            $('.pxl-post-grid.layout-post-2 .grid-item, .pxl-post-grid.layout-post-3 .grid-item').each(function() {
+        if ($('.pxl-post-grid.layout-post-2 .grid-item, .pxl-post-grid.layout-post-3 .grid-item, .pxl-post-carousel .layout-post-3 .swiper-slide').length > 0) {
+            $('.pxl-post-grid.layout-post-2 .grid-item, .pxl-post-grid.layout-post-3 .grid-item, .pxl-post-carousel .layout-post-3 .swiper-slide').each(function() {
                 var excerptHeight = $(this).find('.item-excerpt').get(0).scrollHeight;
                 var imageHeight = $(this).find('.post-image').outerHeight();
                 $(this).find('.item-excerpt').css('max-height', '0px');
