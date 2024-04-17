@@ -57,7 +57,6 @@
     };
 
     function pxl_update_grid_layout_height() {
-        console.log($('.pxl-post-carousel .layout-post-3 .swiper-slide'));
         if ($('.pxl-post-grid.layout-post-2 .grid-item, .pxl-post-grid.layout-post-3 .grid-item, .pxl-post-carousel.layout-post-3 .swiper-slide').length > 0) {
             $('.pxl-post-grid.layout-post-2 .grid-item, .pxl-post-grid.layout-post-3 .grid-item, .pxl-post-carousel.layout-post-3 .swiper-slide').each(function() {
                 var excerptHeight = $(this).find('.item-excerpt').get(0).scrollHeight;
