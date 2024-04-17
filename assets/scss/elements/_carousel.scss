@@ -2601,6 +2601,29 @@
                 }
             }
         }
+        .pxl-swiper-arrows.nav-vertical-out {
+            .pxl-swiper-arrow {
+                opacity: 1;
+                top: 50%;
+            }
+            .pxl-swiper-arrow {
+                @include d-flex();
+                align-items: center;
+                justify-content: center;
+                @include border-radius(50%);
+                background-color: $primary_color;
+                color: #fff;
+                width: 57px;
+                height: 57px;
+                @include transform(translateY(-50%));
+            }
+            .pxl-swiper-arrow-prev {
+                left: -90px;
+            }
+            .pxl-swiper-arrow-next {
+                right: -90px;
+            }
+        }
     }
 }
 

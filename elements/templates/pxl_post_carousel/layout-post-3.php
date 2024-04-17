@@ -185,8 +185,8 @@ $arrows_on_hover_cls = $arrows_on_hover == 'true' ? 'arrow-on-hover' : '';
         </div>
         <?php if($arrows !== 'false'): ?>
             <div class="pxl-swiper-arrows style-default nav-vertical-out <?php echo esc_attr($arrows_on_hover_cls) ?>">
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon pxli-arrow-next"></span></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon zmdi zmdi-arrow-left"></span></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon zmdi zmdi-arrow-right"></span></div>
             </div>
         <?php endif; ?>
         <?php if($dots !== 'false'): ?>
