@@ -2615,13 +2615,14 @@
                 color: #fff;
                 width: 57px;
                 height: 57px;
+                font-size: 22px;
                 @include transform(translateY(-50%));
             }
             .pxl-swiper-arrow-prev {
-                left: -90px;
+                left: -153px;
             }
             .pxl-swiper-arrow-next {
-                right: -90px;
+                right: -153px;
             }
         }
     }
