@@ -123,7 +123,7 @@ $arrows_on_hover_cls = $arrows_on_hover == 'true' ? 'arrow-on-hover' : '';
                         <div class="item-inner relative">
                             <?php if (isset( $thumbnail )): ?>
                                 <div class="post-featured">
-                                    <div class="post-image scale-hover">
+                                    <div class="post-image">
                                         <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>">
                                             <?php echo wp_kses_post($thumbnail); ?>
                                         </a>
