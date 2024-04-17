@@ -2617,6 +2617,9 @@
                 height: 57px;
                 font-size: 22px;
                 @include transform(translateY(-50%));
+                &.swiper-button-disabled {
+                    opacity: 0.6;
+                }
             }
             .pxl-swiper-arrow-prev {
                 left: -153px;
