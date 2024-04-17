@@ -398,6 +398,10 @@ function basilico_get_carousel_layout_options($posttype_name){
                     'label' => esc_html__('Layout 2', 'basilico'),
                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-2.jpg'
                 ],
+                'post-3' => [
+                    'label' => esc_html__('Layout 3', 'basilico'),
+                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-2.jpg'
+                ],
             ];
             break;
         case 'pxl-portfolio':
