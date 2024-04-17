@@ -2536,6 +2536,64 @@
             }
         }
     }
+    &.layout-post-3 {
+        .item-inner {
+            .item-featured {
+                position: relative;
+                .post-image {
+                    overflow: hidden;
+                    @include border-radius(10px);
+                    transition: all 400ms ease-out;
+                }
+            }
+            .post-metas {
+                background-color: transparent;
+                color: #666666;
+                padding: 26px 0 0 0;
+                margin-bottom: 0;
+                .meta-inner {
+                    > span {
+                        margin: 0px 12px 0px 0;
+                        padding: 0 22px 0 0;
+                        &:after {
+                            content: '';
+                            width: 13px;
+                            height: 1px;
+                            background-color: $primary_color;
+                            display: inline-block;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        &:last-child:after {
+                            content: none;
+                        }
+                    }
+                    a {
+                        color: inherit;
+                    }
+                }
+            }
+            .item-title {
+                @include text-truncate-multi-line(22px, 1.363636363636364, 2);
+                font-weight: 600;
+                letter-spacing: 0.02em;
+                margin-top: 23px;
+                margin-bottom: 0;
+            }
+            .item-excerpt {
+                overflow: hidden;
+                @include text-truncate-multi-line(15px, 1.666666666666667, 3);
+                max-height: 0px;
+                transition: all 400ms ease-out;
+            }
+            .item-readmore {
+                margin-top: 25px;
+                padding-top: 18px;
+                border-top: 1px solid $divider_color;
+            }
+        }
+    }
 }
 
 //* Pxl Portfolio Carousel
