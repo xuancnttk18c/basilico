@@ -2567,6 +2567,7 @@
         }
         .box-icon {
             width: 100%;
+            margin-bottom: 29px;
             i {
                 font-size: 70px;
                 color: $primary_color;
@@ -2578,11 +2579,10 @@
             }
         }
         .box-title {
-            padding: 0 32px;
-            font-size: 25px;
-            line-height: 1.5;
-            margin-bottom: 16px;
-            letter-spacing: 0.05em;
+            font-size: 30px;
+            line-height: 1.2;
+            letter-spacing: 0.08em;
+            color: #fff;
         }
         .box-description {
             padding: 0 32px 41px;
@@ -2600,7 +2600,7 @@
         .front-card {
             background-size: cover;
             background-position: center;
-            padding-top: 360px;
+            padding: 360px 30px 31px;
         }
         .back-card {
             position: absolute;
@@ -2614,6 +2614,11 @@
             background-size: cover;
             background-position: center;
             @include transform(rotateY(-90deg));
+            .box-title {
+                &:before, &:after {
+                    content: '-';
+                }
+            }
         }
     }
 }
