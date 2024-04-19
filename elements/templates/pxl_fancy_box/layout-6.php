@@ -20,15 +20,13 @@ if(!empty($settings['link']['url'])){
 $link_attributes = $widget->get_render_attribute_string( 'link' );
 ?>
 
-<div class="pxl-fancy-box layout-5">
+<div class="pxl-fancy-box layout-6">
     <div class="box-inner">
         <div class="box-content">
             <div class="front-card" style="background-image: url(<?php echo esc_url($settings['selected_img']['url']); ?>);">
                 <?php if(! empty( $settings['selected_icon']['value'] )): ?>
-                    <div class="icon-wrapper">
-                        <div class="box-icon">
-                            <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
-                        </div>
+                    <div class="box-icon">
+                        <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
                     </div>
                 <?php endif; ?>
                 <?php if(!empty($widget->get_setting('title'))): ?>
@@ -41,10 +39,8 @@ $link_attributes = $widget->get_render_attribute_string( 'link' );
             </div>
             <div class="back-card" style="background-image: url(<?php echo esc_url($settings['selected_img']['url']); ?>);">
                 <?php if(! empty( $settings['selected_icon']['value'] )): ?>
-                    <div class="icon-wrapper">
-                        <div class="box-icon">
-                            <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
-                        </div>
+                    <div class="box-icon">
+                        <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
                     </div>
                 <?php endif; ?>
                 <?php if(!empty($widget->get_setting('title'))): ?>
