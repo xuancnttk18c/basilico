@@ -18,10 +18,10 @@ if(!empty($settings['link']['url'])){
 
 }
 $link_attributes = $widget->get_render_attribute_string( 'link' );
+extract($settings);
 ?>
 
 <div class="pxl-fancy-box layout-5">
-    <?php var_dump($settings['selected_img']); ?>
     <div class="box-inner" style="background-image: url(<?php echo esc_url($settings['selected_img']['url']); ?>);">
         <div class="box-content">
             <?php if(! empty( $settings['selected_icon']['value'] )): ?>
