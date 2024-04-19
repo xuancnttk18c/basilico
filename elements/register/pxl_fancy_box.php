@@ -223,6 +223,20 @@ array(
             'selectors' => [
                 '{{WRAPPER}} .pxl-fancy-box .box-inner' => 'background-color: {{VALUE}};'
             ],
+            'condition' => [
+                'layout!' => '6'
+            ]
+        ),
+        array(
+            'name' => 'border_inner_color',
+            'label' => esc_html__('Border Inner Color', 'basilico' ),
+            'type' => 'color',
+            'selectors' => [
+                '{{WRAPPER}} .pxl-fancy-box.layout-6 .back-card:before' => 'border-color: {{VALUE}};'
+            ],
+            'condition' => [
+                'layout!' => '6'
+            ]
         ),
         array(
             'name' => 'btn_style',
