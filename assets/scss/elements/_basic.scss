@@ -2583,6 +2583,7 @@
             }
         }
         .box-title {
+            margin-bottom: 0;
             font-size: 30px;
             line-height: 1.2;
             letter-spacing: 0.08em;
@@ -2606,6 +2607,7 @@
             background-size: cover;
             background-position: center;
             padding: 360px 30px 31px;
+            @include border-radius(10px);
             &:after {
                 content: '';
                 position: absolute;
@@ -2623,6 +2625,7 @@
             left: 0;
             bottom: 0;
             right: 0;
+            @include border-radius(10px);
             @include d-flex();
             align-items: center;
             justify-content: center;
