@@ -2566,6 +2566,7 @@
             }
         }
         .box-icon {
+            width: 100%;
             i {
                 font-size: 70px;
                 color: $primary_color;
@@ -2599,6 +2600,7 @@
         .front-card {
             background-size: cover;
             background-position: center;
+            padding-top: 360px;
         }
         .back-card {
             position: absolute;
@@ -2611,6 +2613,7 @@
             justify-content: center;
             background-size: cover;
             background-position: center;
+            @include transform(rotateY(-90deg));
         }
     }
 }
