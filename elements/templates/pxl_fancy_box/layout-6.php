@@ -18,31 +18,48 @@ if(!empty($settings['link']['url'])){
 
 }
 $link_attributes = $widget->get_render_attribute_string( 'link' );
-extract($settings);
 ?>
 
 <div class="pxl-fancy-box layout-5">
     <div class="box-inner">
-        <div class="box-content" style="background-image: url(<?php echo esc_url($settings['selected_img']['url']); ?>);">
-            <?php if(! empty( $settings['selected_icon']['value'] )): ?>
-                <div class="icon-wrapper">
-                    <div class="box-icon">
-                        <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
+        <div class="box-content">
+            <div class="front-card" style="background-image: url(<?php echo esc_url($settings['selected_img']['url']); ?>);">
+                <?php if(! empty( $settings['selected_icon']['value'] )): ?>
+                    <div class="icon-wrapper">
+                        <div class="box-icon">
+                            <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
+                        </div>
                     </div>
-                </div>
-            <?php endif; ?>
-            <?php if(!empty($widget->get_setting('title'))): ?>
-                <h3 class="box-title">
-                    <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
-                    <?php pxl_print_html( nl2br($widget->get_setting('title'))); ?>
-                    <?php if ( $link_attributes ) echo '</a>'; ?> 
-                </h3>
-            <?php endif; ?>
-            <?php if(!empty($widget->get_setting('description'))): ?>
-                <div class="box-description">
-                    <?php pxl_print_html($widget->get_setting('description')); ?>
-                </div>
-            <?php endif; ?>
+                <?php endif; ?>
+                <?php if(!empty($widget->get_setting('title'))): ?>
+                    <h3 class="box-title">
+                        <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
+                        <?php pxl_print_html( nl2br($widget->get_setting('title'))); ?>
+                        <?php if ( $link_attributes ) echo '</a>'; ?> 
+                    </h3>
+                <?php endif; ?>
+            </div>
+            <div class="back-card" style="background-image: url(<?php echo esc_url($settings['selected_img']['url']); ?>);">
+                <?php if(! empty( $settings['selected_icon']['value'] )): ?>
+                    <div class="icon-wrapper">
+                        <div class="box-icon">
+                            <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <?php if(!empty($widget->get_setting('title'))): ?>
+                    <h3 class="box-title">
+                        <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
+                        <?php pxl_print_html( nl2br($widget->get_setting('title'))); ?>
+                        <?php if ( $link_attributes ) echo '</a>'; ?> 
+                    </h3>
+                <?php endif; ?>
+                <?php if(!empty($widget->get_setting('description'))): ?>
+                    <div class="box-description">
+                        <?php pxl_print_html($widget->get_setting('description')); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
         </div>
     </div>  
 </div>
