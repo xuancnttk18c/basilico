@@ -2592,6 +2592,8 @@
             background-position: center;
             padding: 360px 30px 31px;
             @include border-radius(10px);
+            overflow: hidden;
+            @include transition(all 400ms ease 400ms);
             &:after {
                 content: '';
                 position: absolute;
@@ -2609,6 +2611,7 @@
             left: 0;
             bottom: 0;
             right: 0;
+            overflow: hidden;
             @include border-radius(10px);
             @include d-flex();
             align-items: center;
@@ -2616,10 +2619,28 @@
             background-size: cover;
             background-position: center;
             @include transform(rotateY(-90deg));
+            @include transition(all 400ms ease);
             .box-title {
                 &:before, &:after {
                     content: '-';
                 }
+            }
+            &:before {
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                bottom: 15px;
+                right: 15px;
+                border: 1px solid #fff;
+                @include border-radius(10px);
+            }
+        }
+        .box-content:hover {
+            .front-card {
+                @include transform(translateY(90deg));
+            }
+            .back-card {
+                @include transform(translateY(0deg));   
             }
         }
     }
