@@ -2635,7 +2635,7 @@
                 @include border-radius(10px);
             }
         }
-        .box-content:hover {
+        .box-inner:hover {
             .front-card {
                 @include transform(translateY(90deg));
             }
