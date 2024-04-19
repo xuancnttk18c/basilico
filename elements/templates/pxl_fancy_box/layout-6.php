@@ -22,8 +22,8 @@ $link_attributes = $widget->get_render_attribute_string( 'link' );
 
 <div class="pxl-fancy-box layout-6">
     <div class="box-inner">
-        <div class="box-content">
-            <div class="front-card" style="background-image: url(<?php echo esc_url($settings['selected_img']['url']); ?>);">
+        <div class="front-card" style="background-image: url(<?php echo esc_url($settings['selected_img']['url']); ?>);">
+            <div class="box-content">
                 <?php if(! empty( $settings['selected_icon']['value'] )): ?>
                     <div class="box-icon">
                         <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
@@ -37,7 +37,9 @@ $link_attributes = $widget->get_render_attribute_string( 'link' );
                     </h3>
                 <?php endif; ?>
             </div>
-            <div class="back-card" style="background-image: url(<?php echo esc_url($settings['selected_img']['url']); ?>);">
+        </div>
+        <div class="back-card" style="background-image: url(<?php echo esc_url($settings['selected_img']['url']); ?>);">
+            <div class="box-content">
                 <?php if(! empty( $settings['selected_icon']['value'] )): ?>
                     <div class="box-icon">
                         <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
@@ -56,6 +58,6 @@ $link_attributes = $widget->get_render_attribute_string( 'link' );
                     </div>
                 <?php endif; ?>
             </div>
-        </div>
+        </div>        
     </div>  
 </div>
