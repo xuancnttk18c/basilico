@@ -2640,6 +2640,7 @@
         .box-inner:hover {
             .front-card {
                 @include transform(rotateY(90deg));
+                transition-delay: 0;
             }
             .back-card {
                 @include transform(rotateY(0deg));
