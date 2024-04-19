@@ -18,16 +18,6 @@ if(!empty($settings['link']['url'])){
 
 }
 $link_attributes = $widget->get_render_attribute_string( 'link' );
-
-$img_size = !empty($img_size) ? $img_size : 'full';
-$thumbnail = '';
-if( ! empty( $settings['selected_img']['id'] ) ){
-    $img  = pxl_get_image_by_size( array(
-        'attach_id'  => $settings['selected_img']['id'],
-        'thumb_size' => $img_size,
-    ) );
-    $thumbnail = $img['thumbnail'];
-}
 ?>
 
 <div class="pxl-fancy-box layout-5">
