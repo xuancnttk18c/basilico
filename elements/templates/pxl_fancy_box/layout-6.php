@@ -24,7 +24,6 @@ extract($settings);
 <div class="pxl-fancy-box layout-5">
     <div class="box-inner" style="background-image: url(<?php echo esc_url($settings['selected_img']['url']); ?>);">
         <div class="box-content">
-            <?php var_dump($settings['selected_img']); ?>
             <?php if(! empty( $settings['selected_icon']['value'] )): ?>
                 <div class="icon-wrapper">
                     <div class="box-icon">

@@ -112,7 +112,7 @@ pxl_add_custom_widget(
                                 'url' => \Elementor\Utils::get_placeholder_image_src()
                             ],
                             'condition' => [
-                                'layout'    => ['5']
+                                'layout'    => ['5', '6']
                             ]
                         ),
                         array(
