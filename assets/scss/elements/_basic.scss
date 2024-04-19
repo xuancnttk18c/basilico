@@ -2593,7 +2593,8 @@
             padding: 360px 30px 31px;
             @include border-radius(10px);
             overflow: hidden;
-            @include transition(all 400ms ease 400ms);
+            @include transition(all 200ms ease);
+            transition-delay: 200ms;
             &:after {
                 content: '';
                 position: absolute;
@@ -2619,7 +2620,8 @@
             background-size: cover;
             background-position: center;
             @include transform(rotateY(-90deg));
-            @include transition(all 400ms ease);
+            @include transition(all 200ms ease);
+            transition-delay: 0ms;
             .box-title {
                 &:before, &:after {
                     content: '-';
@@ -2640,7 +2642,8 @@
                 @include transform(rotateY(90deg));
             }
             .back-card {
-                @include transform(rotateY(0deg));   
+                @include transform(rotateY(0deg));
+                transition-delay: 200ms;
             }
         }
     }
