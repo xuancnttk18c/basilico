@@ -2637,10 +2637,10 @@
         }
         .box-inner:hover {
             .front-card {
-                @include transform(translateY(90deg));
+                @include transform(rotateY(90deg));
             }
             .back-card {
-                @include transform(translateY(0deg));   
+                @include transform(rotateY(0deg));   
             }
         }
     }
