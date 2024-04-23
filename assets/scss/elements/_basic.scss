@@ -3262,6 +3262,51 @@
             }
         }
     }
+    &.style7 {
+        border-radius: inherit;
+        .pxl-ac-title {
+            font-family: $heading_font_family;
+            font-size: 20px;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+            color: $heading_color;
+            text-transform: uppercase;
+            position: relative;
+            cursor: pointer;
+            -webkit-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            .pxl-ac-title-text {
+                transition: none;
+            }
+            &:before {
+                content: '\f278';
+                font-family: "Material-Design-Iconic-Font";
+                font-size: 15px;
+                @include transition();
+                color: $primary_color;
+            }
+            &.active {
+                &:before {
+                    content: '\f273';
+                }
+            }
+        }
+        .pxl-ac-content {
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .pxl-ac-item {
+            padding: 0;
+            @include transition(all 300ms linear 0ms);
+            & + .pxl-ac-item {
+                .pxl-ac-title {
+                    border-top: none;
+                }
+            }
+        }
+    }
 }
 
 //* Progressbar
