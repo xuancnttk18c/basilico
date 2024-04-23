@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'pxli';
   src:
-    url('fonts/pxli.ttf?6g36vz') format('truetype'),
-    url('fonts/pxli.woff?6g36vz') format('woff'),
-    url('fonts/pxli.svg?6g36vz#pxli') format('svg');
+    url('fonts/pxli.ttf?yag70d') format('truetype'),
+    url('fonts/pxli.woff?yag70d') format('woff'),
+    url('fonts/pxli.svg?yag70d#pxli') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,48 +24,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.pxli-calendar3:before {
-  content: "\e9e8";
-}
-.pxli-telegram-plane:before {
-  content: "\e9e7";
-}
-.pxli-coffee-bean:before {
-  content: "\e9e6";
-}
-.pxli-pizza-slice:before {
-  content: "\e9e5";
-}
-.pxli-healthcare:before {
-  content: "\e9e1";
-}
-.pxli-help:before {
-  content: "\e9e2";
-}
-.pxli-piggy-bank:before {
-  content: "\e9e3";
-}
-.pxli-save-money:before {
-  content: "\e9e4";
-}
-.pxli-collaboration:before {
-  content: "\e9e0";
-}
-.pxli-iphone:before {
-  content: "\e9de";
-}
-.pxli-alarm-clock:before {
-  content: "\e9df";
-}
-.pxli-send2:before {
-  content: "\e9dd";
-}
-.pxli-bell:before {
-  content: "\e9dc";
-}
-.pxli-calendar-days:before {
-  content: "\e9db";
-}
 .pxli-tag1:before {
   content: "\e9d9";
 }

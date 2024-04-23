@@ -376,11 +376,6 @@
 		color: $primary_color;
 		letter-spacing: 0.02em;
 	}
-	.price_slider_amount {
-		button {
-			border: 1px solid $divider_color;
-		}
-	}
 	.ui-slider .ui-slider-handle,
 	.ui-slider .ui-slider-range,
 	.price_slider_amount button:before {
@@ -430,7 +425,7 @@
 .widget_products {
 	padding-bottom: 20px !important;
 }
-.sidebar-shop ul.product_list_widget {
+ul.product_list_widget {
 	list-style: none outside;
 	padding: 0;
 	li {
@@ -543,8 +538,7 @@
 			padding-top: 5px;
 		}
 		&:last-child {
-			border-bottom: none;
-			padding-bottom: 0;
+			padding-bottom: 25px;
 		}
 		a {
 			font-weight: 600;
@@ -577,8 +571,8 @@
 			color: $primary_color;
 			font-weight: 400;
 		}
-		.cart-item-quantify {
-			display: none;
+		.quantity {
+			margin-bottom: 2px;
 		}
 		del .amount{
 			color: #786c55;

@@ -51,8 +51,6 @@
                 watchOverflow: true,
                 watchSlidesProgress: true,
                 watchSlidesVisibility: true,
-                observer: true,
-                observeParents: true,
                 breakpoints: {
                     0: {
                         direction: 'horizontal',
@@ -312,10 +310,6 @@
         );
         elementorFrontend.hooks.addAction(
             "frontend/element_ready/pxl_carousel_landing.default",
-            pxl_swiper_handler
-        );
-        elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_image_carousel.default",
             pxl_swiper_handler
         );
     });

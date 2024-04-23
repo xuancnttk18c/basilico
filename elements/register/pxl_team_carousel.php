@@ -133,6 +133,7 @@ pxl_add_custom_widget(
                     'label' => esc_html__('Carousel Settings', 'basilico'),
                     'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
                     'controls' => array_merge(
+                         
                         array(
                             array(
                                 'name' => 'img_size',

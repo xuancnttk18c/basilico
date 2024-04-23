@@ -326,7 +326,7 @@ if (!class_exists('Basilico_Breadcrumb')) {
         {
             $queried_object = $GLOBALS['wp_query']->get_queried_object();
             $this->add_entry(
-                esc_html__( 'Tag:', 'basilico' ).' '.single_tag_title( '', false ) ).' '.get_tag_link( $queried_object->term_id
+                esc_html__( 'Tag:', 'basilico' ).' '.single_tag_title( '', false ) ).' '.get_tag_link( $queried_objepxl->term_id
             );
         }
 

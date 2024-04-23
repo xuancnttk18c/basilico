@@ -234,5 +234,6 @@ class Basilico_CSS_Generator {
 	}
 
 }
+ 
 
 new Basilico_CSS_Generator();

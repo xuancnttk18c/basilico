@@ -30,14 +30,6 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 2', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_carousel-2.jpg'
                                 ],
-                                '3' => [
-                                    'label' => esc_html__( 'Layout 2', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_carousel-2.jpg'
-                                ],
-                                '4' => [
-                                    'label' => esc_html__( 'Layout 2', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_carousel-2.jpg'
-                                ],
                             ],
                         ),
                         
@@ -120,8 +112,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Heading Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-carousel .item-inner .menu-title' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-menu-carousel .item-inner .menu-title a' => 'color: {{VALUE}}; background-image: linear-gradient(transparent calc(100% - 1px), {{VALUE}} 1px);'
+                                '{{WRAPPER}} .pxl-menu-carousel .pxl-menu-item .menu-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-menu-carousel .pxl-menu-item .menu-title a' => 'color: {{VALUE}}; background-image: linear-gradient(transparent calc(100% - 1px), {{VALUE}} 1px);'
                             ],
                         ),
                         array(
@@ -160,21 +152,6 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-menu-carousel .item-inner .menu-price',
-                        ),
-                        array(
-                            'name' => 'desc_color',
-                            'label' => esc_html__('Description Color', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-carousel .item-inner .menu-description' => 'color: {{VALUE}};',
-                            ],
-                        ),
-                        array(
-                            'name' => 'desc_typography',
-                            'label' => esc_html__('Description Typography', 'basilico' ),
-                            'type' => \Elementor\Group_Control_Typography::get_type(),
-                            'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-menu-carousel .item-inner .menu-description',
                         ),
                     ),
                 ),

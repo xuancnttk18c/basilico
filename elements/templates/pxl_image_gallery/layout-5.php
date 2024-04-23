@@ -35,7 +35,7 @@ $layout_mode = $widget->get_setting('layout_mode', 'fitRows');
 if (is_admin())
     $grid_class = 'pxl-grid-inner pxl-grid-masonry-adm row relative';
 else
-    $grid_class = 'pxl-grid-inner pxl-grid-masonry row relative';
+    $grid_class = 'pxl-grid-inner pxl-grid-masonry row relative overflow-hidden';
 
 if (!$settings['wp_gallery']) {
     return;

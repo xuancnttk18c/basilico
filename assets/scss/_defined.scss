@@ -33,10 +33,10 @@
 		max-width: 100%;
 	}
 }
-.d-flex-auto {
+.d-flex-auto{
 	@include d-flex-auto();
 }
-.d-flex-align-justify-center {
+.d-flex-align-justify-center{
 	@include d-flex();
 	align-items: center;
 	justify-content: center;
@@ -817,12 +817,6 @@
 	}
 }
 
-.divider-radius-2px {
-	.elementor-divider-separator {
-		@include border-radius(2px);
-	}
-}
-
 @keyframes animationFramesOne{
 	0% {
 		transform: translateX(0px);
@@ -1102,20 +1096,4 @@
 	transform-origin: bottom;
 	animation-name: up-down-move;
 	animation-timing-function: linear;
-}
-
-@keyframes iconHoverSpin {
-	50% {
-		@include transform(translateY(-10px) rotateY(180deg));
-	}
-	100% {
-		@include transform(rotateY(360deg));
-	}
-}
-.icon-hover-spin {
-	&:hover {
-		svg, i {
-			animation: iconHoverSpin 400ms linear 0s;
-		}
-	}
 }

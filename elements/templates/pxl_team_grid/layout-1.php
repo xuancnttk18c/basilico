@@ -44,6 +44,8 @@ else
                 $title    = isset($value['title']) ? $value['title'] : '';
                 $position = isset($value['position']) ? $value['position'] : '';
                 $description = isset($value['description']) ? $value['description'] : '';
+                $phone = isset($value['phone']) ? $value['phone'] : '';
+                $phone_result = str_replace(array(' ', '+', '-', '.'), '', $phone);
                 $image    = isset($value['image']) ? $value['image'] : [];
                 $link     = isset($value['link']) ? $value['link'] : '';  
                 $thumbnail = '';
@@ -94,8 +96,25 @@ else
                                     <?php echo wp_kses_post($thumbnail); ?>
                                     <?php if ( ! empty( $link['url'] ) ): ?></a><?php endif; ?>
                                 </div>
+                                <?php if(!empty($social)): ?>
+                                    <div class="item-social">
+                                    <?php 
+                                        $team_social = json_decode($social, true);
+                                        foreach ($team_social as $value): ?>
+                                            <a href="<?php echo esc_url($value['url']); ?>" target="_blank">
+                                                <i class="pxli <?php echo esc_attr($value['icon']); ?>"></i>
+                                            </a>
+                                    <?php endforeach;?>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if(!empty($phone)) { ?>
+                                    <div class="say-hi" style="background-image: url(<?php echo esc_url($settings['item_background']['url']); ?>);">
+                                        <h4><?php echo esc_html($phone); ?></h4>
+                                    </div>
+                                <?php } ?>
                             </div>
                         <?php } ?>
+                         
                         <div class="item-content">
                             <h3 class="item-title">
                                 <?php if ( ! empty( $link['url'] ) ): ?><a <?php echo implode( ' ', [ $link_attributes ] ); ?>><?php endif; ?>
@@ -106,17 +125,6 @@ else
                             <?php if(!empty($description)) { ?>
                                 <div class="item-description"><?php echo pxl_print_html($description); ?></div>
                             <?php } ?>
-                            <?php if(!empty($social)): ?>
-                                <div class="item-social">
-                                    <?php 
-                                    $team_social = json_decode($social, true);
-                                    foreach ($team_social as $value): ?>
-                                        <a href="<?php echo esc_url($value['url']); ?>" target="_blank">
-                                            <i class="pxli <?php echo esc_attr($value['icon']); ?>"></i>
-                                        </a>
-                                    <?php endforeach;?>
-                                </div>
-                            <?php endif; ?>
                         </div>
                     </div> 
                 </div>

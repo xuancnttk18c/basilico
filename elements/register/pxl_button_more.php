@@ -17,12 +17,9 @@ pxl_add_custom_widget(
                             'name' => 'style',
                             'label' => esc_html__('Style', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SELECT,
-                            'default' => '',
+                            'default' => 'style-default',
                             'options' => [
-                                '' => esc_html__('Style 1', 'basilico' ),
-                                'style-2' => esc_html__('Style 2', 'basilico' ),
-                                'style-3' => esc_html__('Style 3', 'basilico' ),
-                                'style-4' => esc_html__('Style 4', 'basilico' ),
+                                'style-default' => esc_html__('Default', 'basilico' ),
                             ],
                         ),
                         array(

@@ -3,7 +3,6 @@ use Elementor\Utils;
 
 $widget->add_render_attribute( 'wrapper', 'class', 'pxl-button-wrapper d-flex pxl-button-layout1' );
 $link_type = $settings['button_url_type'];
-$is_fullwidth = esc_attr($settings['is_fullwidth']) == 'yes' ? 'btn-fullwidth' : '';
 if(($link_type == 'url') && !empty( $settings['link']['url'])){
     $widget->add_render_attribute( 'button', 'href', $settings['link']['url'] );
     if ( $settings['link']['is_external'] ) {
@@ -23,7 +22,7 @@ if ($link_type == 'page') {
     $widget->add_render_attribute( 'button', 'href', $page_url );
 }
 
-$widget->add_render_attribute( 'button', 'class', 'btn '.$settings['style'].' icon-ps-'.$settings['icon_align'].' '.$is_fullwidth );
+$widget->add_render_attribute( 'button', 'class', 'btn '.$settings['style'].' icon-ps-'.$settings['icon_align'].' ' );
 $html_id = pxl_get_element_id($settings);
 
 ?>

@@ -5,35 +5,32 @@ if (!class_exists('Basilico_Header')) {
         public function getHeader()
         {
             $disable_header = basilico()->get_page_opt('disable_header','0');
-            if($disable_header == '1') return; 
+            if($disable_header == '1') return;
 
-            $header_layout        = (int)basilico()->get_opt('header_layout'); 
-            $header_mobile_layout = (int)basilico()->get_opt('header_mobile_layout'); 
+            $header_layout        = (int)basilico()->get_opt('header_layout');
+            $header_mobile_layout = (int)basilico()->get_opt('header_mobile_layout');
 
             $logo_desktop = basilico()->get_theme_opt( 'logo_d', ['url' => get_template_directory_uri().'/assets/images/logo.png', 'id' => '' ] );
             $logo_mobile = basilico()->get_theme_opt( 'logo_m', ['url' => get_template_directory_uri().'/assets/images/logo.png', 'id' => '' ] );
             $p_menu = basilico()->get_page_opt('p_menu');
-            
+
             $header_type = $header_layout <=0 ? 'df' : 'el';
             $header_mobile_type = $header_mobile_layout <=0 ? 'df' : 'el';
 
-            $sticky_header_direction = basilico()->get_theme_opt('sticky_header_direction', 'scroll-down'); 
-             
             $classes = [
                 'pxl-header',
                 'header-type-'.$header_type,
                 'header-layout-'.$header_layout,
-                'header-mobile-type-'.$header_mobile_type,
-                'sticky-direction-'.$sticky_header_direction,
+                'header-mobile-type-'.$header_mobile_type
             ];
             $header_css_cls = implode(' ', $classes)
             ?>
             <header id="pxl-header" class="<?php echo esc_attr($header_css_cls); ?>">
                 <?php if ($header_layout <= 0 || !class_exists('Pxltheme_Core') || !is_callable( 'Elementor\Plugin::instance' )): ?>
                     <div class="header-container container d-none d-xl-block">
-                        <div class="row justify-content-between align-items-center gx-100">
+                        <div class="row justify-content-between align-items-center gx-50">
                             <div class="pxl-header-logo col-auto">
-                                <?php 
+                                <?php
                                 printf(
                                     '<a class="logo-default logo-desktop" href="%1$s" title="%2$s" rel="home"><img class="pxl-logo" src="%3$s" alt="%2$s"/></a>',
                                     esc_url( home_url( '/' ) ),
@@ -44,10 +41,10 @@ if (!class_exists('Basilico_Header')) {
                             </div>
                             <div class="pxl-navigation col">
                                 <div class="row align-items-center justify-content-end">
-                                    <div class="col-12">
+                                    <div class="col-12 col-xl-auto">
                                         <div class="row align-items-center">
                                             <div class="pxl-main-navigation col-12 col-xl-auto">
-                                                <?php 
+                                                <?php
                                                 if ( has_nav_menu( 'primary' ) ){
                                                     $attr_menu = array(
                                                         'theme_location' => 'primary',
@@ -76,13 +73,13 @@ if (!class_exists('Basilico_Header')) {
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 <?php else: ?>
                     <?php if(isset($header_layout) && $header_layout > 0) : ?>
                         <div class="pxl-header-desktop d-none d-xl-block">
-                            <?php echo Elementor\Plugin::$instance->frontend->get_builder_content_for_display($header_layout); ?>         
+                            <?php echo Elementor\Plugin::$instance->frontend->get_builder_content_for_display($header_layout); ?>
                         </div>
                     <?php endif; ?>
                 <?php endif; ?>
@@ -91,7 +88,7 @@ if (!class_exists('Basilico_Header')) {
                     <div class="pxl-header-mobile container d-xl-none">
                         <div class="row justify-content-between align-items-center gx-40">
                             <div class="pxl-header-logo col-auto">
-                                <?php 
+                                <?php
                                 printf(
                                     '<a class="logo-default logo-mobile" href="%1$s" title="%2$s" rel="home"><img class="pxl-logo" src="%3$s" alt="%2$s"/></a>',
                                     esc_url( home_url( '/' ) ),
@@ -100,11 +97,11 @@ if (!class_exists('Basilico_Header')) {
                                 );
                                 ?>
                             </div>
-                            <div class="col col-auto">
+                            <div class="col col-auto d-xl-none">
                                 <div class="row align-items-center justify-content-end">
-                                    <div class="header-mobile-nav">
-                                        <span class="menu-mobile-toggle-nav open-menu pxl-anchor side-panel" data-target=".pxl-side-mobile" onclick="">
-                                            <span aria-hidden="true" class="pxl-icon lnir lnir-menu"></span>
+                                    <div id="main-menu-mobile" class="main-menu-mobile">
+                                        <span class="btn-nav-mobile open-menu" data-target=".pxl-side-mobile" onclick="">
+                                            <span></span>
                                         </span>
                                     </div>
                                 </div>
@@ -113,13 +110,13 @@ if (!class_exists('Basilico_Header')) {
                     </div>
                 <?php else: ?>
                     <?php if(isset($header_mobile_layout) && $header_mobile_layout > 0) : ?>
-                        <div class="pxl-header-mobile d-xl-none"> 
-                            <?php echo Elementor\Plugin::$instance->frontend->get_builder_content_for_display( $header_mobile_layout); ?>      
-                        </div> 
+                        <div class="pxl-header-mobile d-xl-none">
+                            <?php echo Elementor\Plugin::$instance->frontend->get_builder_content_for_display( $header_mobile_layout); ?>
+                        </div>
                     <?php endif; ?>
                 <?php endif; ?>
             </header>
-            <?php 
-        }          
+            <?php
+        }
     }
 }

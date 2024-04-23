@@ -38,9 +38,6 @@ function basilico_wc_update_get_template($template, $template_name, $args, $temp
         case 'cart/mini-cart.php':
             $template = get_template_directory().'/'.WC()->template_path().'cart/pxl-mini-cart.php';
             break;
-        case 'cart/cart-empty.php':
-            $template = get_template_directory().'/'.WC()->template_path().'cart/pxl-cart-empty.php';
-            break;
         case 'content-widget-product.php':
             $template = get_template_directory().'/'.WC()->template_path().'pxl-content-widget-product.php';
             break;
@@ -49,9 +46,6 @@ function basilico_wc_update_get_template($template, $template_name, $args, $temp
             break;
         case 'loop/pagination.php':
             $template = get_template_directory().'/'.WC()->template_path().'loop/pxl-pagination.php';
-            break;
-        case 'global/quantity-input.php':
-            $template = get_template_directory().'/'.WC()->template_path().'global/pxl-quantity-input.php';
             break;
     }
 

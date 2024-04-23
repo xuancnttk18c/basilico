@@ -40,8 +40,8 @@
             });
 
         });
-        pxl_update_grid_layout_height();
     }
+
 
     var widget_post_masonry_handler = function( $scope, $ ) {
         $scope.find('.pxl-post-grid .pxl-grid-masonry').imagesLoaded(function(){
@@ -55,24 +55,6 @@
             }
         });
     };
-
-    function pxl_update_grid_layout_height() {
-        if ($('.pxl-post-grid.layout-post-2 .grid-item, .pxl-post-grid.layout-post-3 .grid-item, .pxl-post-carousel.layout-post-3 .swiper-slide').length > 0) {
-            $('.pxl-post-grid.layout-post-2 .grid-item, .pxl-post-grid.layout-post-3 .grid-item, .pxl-post-carousel.layout-post-3 .swiper-slide').each(function() {
-                var excerptHeight = $(this).find('.item-excerpt').get(0).scrollHeight;
-                var imageHeight = $(this).find('.post-image').outerHeight();
-                $(this).find('.item-excerpt').css('max-height', '0px');
-                $(this).find('.post-image').css('max-height', imageHeight + 'px');
-                $(this).hover(function() {
-                    $(this).find('.item-excerpt').css('max-height', excerptHeight + 'px');
-                    $(this).find('.post-image').css('max-height', (imageHeight - (excerptHeight  + 14)) + 'px');
-                }, function() {
-                    $(this).find('.item-excerpt').css('max-height', '0px');
-                    $(this).find('.post-image').css('max-height', imageHeight + 'px');
-                });
-            });
-        }
-    }
 
     $(document).on('click', '.btn-grid-loadmore', function(){
         var loadmore      = $(this).parents('.pxl-load-more').data('loadmore');
@@ -225,23 +207,6 @@
         });
         return false;
     });
-
-    if ($('.pxl-post-grid.layout-post-2 .grid-item').length > 0) {
-        $('.pxl-post-grid.layout-post-2 .grid-item').each(function() {
-            var excerptHeight = $(this).find('.item-excerpt').get(0).scrollHeight;
-            var imageHeight = $(this).find('.post-image').outerHeight();
-            $(this).find('.item-excerpt').css('max-height', '0px');
-            $(this).find('.post-image').css('max-height', imageHeight + 'px');
-
-            $(this).hover(function() {
-                $(this).find('.item-excerpt').css('max-height', excerptHeight + 'px');
-                $(this).find('.post-image').css('max-height', (imageHeight - (excerptHeight  + 14)) + 'px');
-            }, function() {
-                $(this).find('.item-excerpt').css('max-height', '0px');
-                $(this).find('.post-image').css('max-height', imageHeight + 'px');
-            });
-        });
-    }
 
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {

@@ -4,19 +4,22 @@
  */
 get_header();
 
-$theme_post_style = basilico()->get_theme_opt('single_post_layout', 'layout-1');
-$page_post_style  = basilico()->get_page_opt('single_post_layout', '-1');
-$post_style = esc_attr($page_post_style) == '-1' ? $theme_post_style : $page_post_style;
-
+$theme_style = basilico()->get_theme_opt('theme_style', 'default');
 $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'post', 'content_col' => '8']); // type: blog, post, page, shop, product
 ?>
     <div class="container">
         <div class="row <?php echo esc_attr($pxl_sidebar['wrap_class']) ?>">
             <div id="pxl-content-area" class="<?php echo esc_attr($pxl_sidebar['content_class']) ?>">
-                <main id="pxl-content-main" class="pxl-content-main <?php echo esc_attr($post_style); ?> <?php echo $pxl_sidebar['sidebar_class'] ? '' : 'no-sidebar' ;?>">
+                <main id="pxl-content-main" class="pxl-content-main">
                     <?php while (have_posts()) {
                         the_post();
-                        get_template_part( 'template-parts/content/content-single-'.$post_style, get_post_format());
+                        switch ($theme_style) {
+                            case 'pxl-pizza':
+                                get_template_part( 'template-parts/content/content-single-pizza', get_post_format() );
+                                break;
+                            default:
+                                get_template_part( 'template-parts/content/content-single', get_post_format());
+                        }
                         if (comments_open() || get_comments_number()) {
                             comments_template();
                         }

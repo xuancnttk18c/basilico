@@ -47,10 +47,6 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 6', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_image_gallery-6.jpg'
                                 ],
-                                '7' => [
-                                    'label' => esc_html__( 'Layout 7', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_image_gallery-7.jpg'
-                                ],
                             ],
                             'prefix_class' => 'pxl-image-gallery-layout-',
                         ),
@@ -64,7 +60,7 @@ pxl_add_custom_widget(
                         array(
                             array(
                                 'name' => 'wp_gallery',
-                                'label' => esc_html__( 'Add Images', 'basilico' ),
+                                'label' => __( 'Add Images', 'basilico' ),
                                 'type' => \Elementor\Controls_Manager::GALLERY,
                                 'show_label' => false,
                                 'dynamic' => [
@@ -160,7 +156,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Icon', 'basilico' ),
                             'type' => 'icons',
                             'condition' => [
-                                'layout!' => ['1', '4']
+                                'layout' => ['2', '3', '5', '6']
                             ]
                         ),
                         array(
@@ -175,17 +171,6 @@ pxl_add_custom_widget(
                             ],
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-image-gallery .up-icon i' => 'font-size: {{SIZE}}{{UNIT}} !important;',
-                            ],
-                            'condition' => [
-                                'layout' => ['2', '3', '5', '6']
-                            ]
-                        ),
-                        array(
-                            'name'  => 'icon_color',
-                            'label' => esc_html__( 'Icon Color', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-image-gallery .up-icon i' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['2', '3', '5', '6']
@@ -210,16 +195,6 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-grid .grid-item' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px; margin-top: {{VALUE}}px; margin-bottom: {{VALUE}}px;',
                                 '{{WRAPPER}} .pxl-grid.layout-5 .grid-item' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px; padding-top: {{VALUE}}px; padding-bottom: {{VALUE}}px; margin-top: 0; margin-bottom: 0;',
                                 '{{WRAPPER}} .pxl-grid .grid-sizer' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px;',
-                            ],
-                        ),
-                        array(
-                            'name'         => 'image_border_radius',
-                            'label'        => esc_html__( 'Image Radius', 'basilico' ),
-                            'type'         => \Elementor\Controls_Manager::DIMENSIONS,
-                            'control_type' => 'responsive',
-                            'size_units'   => [ 'px', '%' ],
-                            'selectors'    => [
-                                '{{WRAPPER}} .grid-item img, {{WRAPPER}} .pxl-image-gallery.layout-2 .grid-item .item-inner:before' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                             ],
                         ),
                         array(

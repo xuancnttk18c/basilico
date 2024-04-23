@@ -241,7 +241,7 @@ function basilico_body_classes( $classes )
     $header_sticky_layout = (int)basilico()->get_opt('header_sticky_layout');
     $footer_fixed = basilico()->get_opt('footer_fixed', '0');
 
-    $shop_style = basilico()->get_theme_opt('shop_style', 'default');
+    $theme_style = basilico()->get_theme_opt('theme_style', 'default');
 
     if (class_exists('ReduxFramework')) {
         $classes[] = 'redux-page';
@@ -256,6 +256,7 @@ function basilico_body_classes( $classes )
     if(get_option( 'woosw_page_id', 0) == get_the_ID())
         $classes[] = 'pxl-wishlist-page';
 
+    //if ($theme_style != 'default') $classes[] = $theme_style;
     return $classes;
 }
 
@@ -313,9 +314,10 @@ add_filter( 'redux/'.basilico()->get_option_name().'/field/typography/custom_fon
 function basilico_custom_fonts($fonts){
     $fonts = [
         'Custom Fonts' => [
-            'Audrey' => 'Audrey',
-            'Cerebri Sans' => 'Cerebri Sans',
-            'PS Demo' => 'PS Demo'
+            '\'Audrey\', sans-serif' => '\'Audrey\', sans-serif',
+            '\'Cerebri Sans\', sans-serif' => '\'Cerebri Sans\', sans-serif',
+            '\'Cormorant Infant\', serif' => '\'Cormorant Infant\', serif',
+            '\'PS Demo\', sans-serif' => '\'PS Demo\', sans-serif',
         ]
     ];
     return $fonts;

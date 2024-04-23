@@ -68,6 +68,12 @@ pxl_add_custom_widget(
                                     'rows' => 4,
                                 ),
                                 array(
+                                    'name' => 'phone',
+                                    'label' => esc_html__('Hi Text', 'basilico'),
+                                    'type' => \Elementor\Controls_Manager::TEXT,
+                                    'label_block' => true,
+                                ),
+                                array(
                                     'name' => 'link',
                                     'label' => esc_html__('Link', 'basilico'),
                                     'type' => \Elementor\Controls_Manager::URL,
@@ -123,6 +129,12 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-team-grid .item-position' => 'color: {{VALUE}};',
                             ],
+                        ),
+                        array(
+                            'name'        => 'item_background',
+                            'label'       => esc_html__('Say Hi Background', 'basilico'),
+                            'type'        => 'media',
+                            'label_block' => true,
                         ),
                     ),
                 ),

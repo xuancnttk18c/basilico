@@ -2,7 +2,7 @@
 use Elementor\Utils;
 if(!empty($settings['link']['url'])){
     $widget->add_render_attribute( 'link', 'href', $settings['link']['url'] );
-    $widget->add_render_attribute( 'link', 'class', 'btn '.$settings['btn_style'] );
+    $widget->add_render_attribute( 'link', 'class', 'btn '.$settings['style'] );
     if ( $settings['link']['is_external'] ) {
         $widget->add_render_attribute( 'link', 'target', '_blank' );
     }

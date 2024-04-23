@@ -36,6 +36,16 @@
 			width: auto;
 			margin: 0 $menu_item_space / 2;
 			display: inline-flex;
+			&:before{
+				content: "";
+				width: 0;
+				height: 3px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: $primary_color;
+				@include transition(width .5s cubic-bezier(0.35,.7,.35,1));
+			}
 			> a {
 				color: $menu_regular;
 				font-size: $menu_font_size;
@@ -53,7 +63,10 @@
 			&.active,
 			&.current-menu-item,
 			&.current-menu-ancestor,
-			&:hover {
+			&:hover{
+				&:before{
+					width: 100%;
+				}
 				> a,
 				> .main-menu-toggle:before{
 					color: $menu_active;

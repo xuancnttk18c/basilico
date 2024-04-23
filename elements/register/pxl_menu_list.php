@@ -28,19 +28,15 @@ pxl_add_custom_widget(
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-2.jpg'
                                 ],
                                 '3' => [
-                                    'label' => esc_html__( 'Layout 3', 'basilico' ),
+                                    'label' => esc_html__( 'Layout 1', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-3.jpg'
                                 ],
                                 '4' => [
-                                    'label' => esc_html__( 'Layout 4', 'basilico' ),
+                                    'label' => esc_html__( 'Layout 1', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-4.jpg'
                                 ],
                                 '5' => [
-                                    'label' => esc_html__( 'Layout 5', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-5.jpg'
-                                ],
-                                '6' => [
-                                    'label' => esc_html__( 'Layout 6', 'basilico' ),
+                                    'label' => esc_html__( 'Layout 1', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-5.jpg'
                                 ],
                             ],
@@ -89,14 +85,6 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Item Link', 'basilico'),
                                     'type' => \Elementor\Controls_Manager::URL,
                                     'label_block' => true,
-                                ),
-                                array(
-                                    'name' => 'is_featured',
-                                    'label' => esc_html__('Is Featured?', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::SWITCHER,
-                                    'return_value' => 'yes',
-                                    'default' => 'no',
-                                    'description' => esc_html__('For Layout 6. Highlight product and show custom tags.', 'basilico')
                                 ),
                                 array(
                                     'name' => 'tag_1',

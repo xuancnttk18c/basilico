@@ -69,7 +69,7 @@ select.orderby{
 	}
 }
 
-.shop-layout-2 .pxl-view-layout {
+.pxl-luxury .pxl-view-layout {
 	li {
 		a {
 			color: $primary_color;
@@ -115,7 +115,6 @@ select.orderby{
 		bottom: 40px;
 		left: 40px;
 		right: 40px;
-		height: auto;
 		transform-origin: top;
 		@include transform(scaleY(0));
 		@include transition(.35s cubic-bezier(.48,.57,.33,.89));
@@ -140,7 +139,7 @@ select.orderby{
 		}
 	}
 }
-.shop-layout-2 .pxl-products-thumb {
+.pxl-luxury .pxl-products-thumb {
 	.add_to_cart_button,
 	.button.product_type_grouped,
 	.product_type_external,
@@ -250,7 +249,7 @@ select.orderby{
 		}
 	}
 }
-.shop-layout-2 .pxl-shop-item-wrap {
+.pxl-luxury .pxl-shop-item-wrap {
 	.pxl-product-title {
 		font-size: 23px;
 		font-weight: 600;
@@ -303,8 +302,8 @@ select.orderby{
 	top: 65px;
 }
 
-.shop-layout-2 .pxl-featured,
-.shop-layout-2 .onsale {
+.pxl-luxury .pxl-featured,
+.pxl-luxury .onsale {
 	background-color: $primary_color;
 	color: $heading_color;
 }
@@ -390,7 +389,7 @@ select.orderby{
 	}
 }
 
-.shop-layout-2 .pxl-shop-woosmart-wrap {
+.pxl-luxury .pxl-shop-woosmart-wrap {
 	.woosw-btn {
 		&:before {
 			background-color: transparent;
@@ -528,7 +527,7 @@ select.orderby{
 	}
 }
 
-.shop-layout-2 .products.shop-view-list {
+.pxl-luxury .products.shop-view-list {
 	.pxl-products-content-list-view {
 		.add_to_cart_button,
 		.button.product_type_grouped,
@@ -547,14 +546,6 @@ select.orderby{
 			}
 			&:before {
 				background-color: $primary_color;
-				position: absolute;
-				left: 0;
-				right: 0;
-				top: 0;
-				bottom: 0;
-				transform-origin: bottom right;
-				@include transform(scale(0));
-				@include transition(all 300ms ease);
 			}
 			&:after {
                 left: auto;

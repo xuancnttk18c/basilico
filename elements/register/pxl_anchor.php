@@ -61,36 +61,7 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-anchor-icon' => 'font-size: {{SIZE}}{{UNIT}};',
                                 '{{WRAPPER}} .pxl-anchor-icon svg' => 'width: {{SIZE}}{{UNIT}};',
                             ],
-                        ),
-                        array(
-                            'name'  => 'icon_size_custom',
-                            'label' => esc_html__( 'Icon Size(px)', 'basilico' ),
-                            'type'  => 'slider',
-                            'range' => [
-                                'px' => [
-                                    'min' => 15,
-                                    'max' => 300,
-                                ],
-                            ],
-                            'condition' => ['icon_type' => 'custom-2'],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-icon.custom-2' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-                            ],
-                        ),
-                        array(
-                            'name'  => 'dot_size_custom',
-                            'label' => esc_html__( 'Dot Size(px)', 'basilico' ),
-                            'type'  => 'slider',
-                            'range' => [
-                                'px' => [
-                                    'min' => 15,
-                                    'max' => 300,
-                                ],
-                            ],
-                            'condition' => ['icon_type' => 'custom-2'],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-icon.custom-2 span' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-                            ],
+
                         ),
                         array(
                             'name' => 'icon_margin',

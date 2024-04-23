@@ -106,23 +106,7 @@ function basilico_widgets_position() {
  * Enqueue Styles Scripts : Front-End
  */
 add_action( 'wp_enqueue_scripts', 'basilico_scripts' );
-function basilico_scripts() {
-    $js_variables = array(
-        'ajaxurl'          => admin_url( 'admin-ajax.php' ),
-        'pxl_ajax_url'     => class_exists('Basilico_Ajax') ? Basilico_Ajax::get_endpoint( '%%endpoint%%' ) : '#',
-        'variation_alert'  => esc_html__( 'Please select some product options before add to cart or buy now', 'basilico' ),
-        'is_single'                  => is_singular(),
-        'post_id'                    => is_singular() ? get_the_ID() : 0,
-        'post_type'                  => get_post_type(),
-        'nonce'                      => wp_create_nonce( 'basilico-security' ),
-        'apply_coupon_nonce'         => wp_create_nonce( 'apply-coupon' ),
-        'is_checkout_page'           => class_exists('Woocommerce') ? is_checkout() : '',
-        'i18l'                      => [
-            'no_matched_found' => esc_html( _x( 'No matched found', 'enhanced select', 'basilico' ) ),
-            'all'            => esc_html__( 'All %s', 'basilico' ),
-        ],
-    );
-
+function basilico_scripts() {  
     /* Icons Lib */
     wp_enqueue_style( 'basilico-icon', get_template_directory_uri() . '/assets/fonts/pixelart/style.css', array(), '1.0.0');
     wp_enqueue_style( 'flaticon', get_template_directory_uri() . '/assets/fonts/flaticon/css/flaticon.css', array(), '1.0.0');
@@ -150,7 +134,6 @@ function basilico_scripts() {
     if(isset($smoothscroll) && $smoothscroll) {
         wp_enqueue_script('basilico-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array('jquery'), '1.0.0', true);
     }
-    wp_localize_script( 'basilico-main', 'main_data', $js_variables );
     do_action( 'basilico_scripts');
 }
 

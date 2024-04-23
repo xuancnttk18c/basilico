@@ -9,49 +9,22 @@
         padding-bottom: 37px;
         border-bottom: 1px solid $divider_color;
     }
+    // a {
+    //     @include multiline-hover-underline($heading_color);
+    // }
 }
 
-.pxl-content-main.layout-3 {
-    &.no-sidebar {
-        .comments-area {
-            max-width: 770px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-}
-
-.pxl-content-main.layout-2 .comments-area {
+.pxl-luxury .comments-area {
     .comment-list-wrap {
         border-bottom: 1px solid $divider_color;
     }
 }
 
-.pxl-content-main.layout-4 {
-    .comments-area {
-        margin: 62px auto 0;
-        .comment-list-wrap {
-            margin-bottom: 40px;
-        }
-    }
-    &.no-sidebar {
-        .comments-area {
-            max-width: 770px;
-        }
-    }
-}
-
-.pxl-content-main.layout-5 {
-    .comments-area {
-        margin: 69px auto 0;
-        .comment-list-wrap {
-            margin-bottom: 69px;
-        }
-    }
-    &.no-sidebar {
-        .comments-area {
-            max-width: 770px;
-        }
+.pxl-pizza .comments-area {
+    max-width: 770px;
+    margin: 62px auto 0;
+    .comment-list-wrap {
+        margin-bottom: 40px;
     }
 }
  
@@ -66,20 +39,13 @@
 	}
 }
 
-.pxl-content-main.layout-2 .comments-title,
-.pxl-content-main.layout-2 .comment-reply-title {
+.pxl-luxury .comments-title,
+.pxl-luxury .comment-reply-title {
     letter-spacing: 0.05em;
 }
 
-.pxl-content-main.layout-3 .comments-title,
-.pxl-content-main.layout-3 .comment-reply-title {
-    font-size: 30px;
-    text-transform: capitalize;
-    letter-spacing: 0.02em;
-}
-
-.pxl-content-main.layout-4 .comments-title,
-.pxl-content-main.layout-4 .comment-reply-title {
+.pxl-pizza .comments-title,
+.pxl-pizza .comment-reply-title {
     font-size: 40px;
     font-weight: 400;
     text-transform: capitalize;
@@ -208,7 +174,7 @@
     }
 }
 
-.pxl-content-main.layout-2 .commentlist {
+.pxl-luxury .commentlist {
     .comment-content {
         .comment-title {
             font-family: $heading_font_family;
@@ -225,31 +191,7 @@
     }
 }
 
-.pxl-content-main.layout-3 .commentlist {
-    .comment-avatar {
-        img {
-            border-color: $secondary_color;
-        }
-    }
-    .comment-content {
-        .comment-title {
-            font-family: $heading_font_family;
-            font-weight: 600;
-        }
-        .comment-date {
-            font-weight: 500;
-            letter-spacing: 0;
-        }
-    }
-    .comment-reply-link {
-        background-color: $primary_color;
-        color: #fff;
-        letter-spacing: 0;
-        @include border-radius(5px);
-    }
-}
-
-.pxl-content-main.layout-4 .commentlist {
+.pxl-pizza .commentlist {
     .comment-content {
         .comment-title {
             font-size: 17px;
@@ -260,23 +202,6 @@
             letter-spacing: 0;
             background-color: $heading_color;
             color: $secondary_color;
-        }
-    }
-}
-
-.pxl-content-main.layout-5 .commentlist {
-    .comment-content {
-        .comment-title {
-            font-family: $heading_font_family;
-            font-size: 17px;
-            font-weight: 500;
-        }
-        .comment-reply-link {
-            font-weight: 500;
-            letter-spacing: 0;
-            background-color: $heading_color;
-            color: #fff;
-            @include border-radius(5px);
         }
     }
 }

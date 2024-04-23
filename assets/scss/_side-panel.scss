@@ -24,6 +24,15 @@
     max-height: 100vh;
     overflow-y: auto;
     scrollbar-width: none;
+    .pxl-panel-header {
+        .panel-header-inner{
+            @include d-inline-flex();
+            position: absolute;
+            right: 38px;
+            top: 42px;
+            z-index: 9;
+        }
+    }
     .pxl-panel-content{
         position: relative;
         //padding: 50px 35px 50px 35px;
@@ -58,18 +67,22 @@
     }
 
 }
-.pxl-page-overlay.active {
-    width: 100%;
-    height: 100%;
-    opacity: 1;
+.side-panel-open {
+    .pxl-page-overlay {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
 }
 .pxl-close {
-    width: 28px;
-    height: 28px;
+    border: 7px solid transparent;
+    width: 36px;
+    height: 36px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: $secondary_color;
     &:before,
     &:after {
         content: '';
@@ -129,12 +142,6 @@
     right: auto;
     left: 0;
     @include transform(translate(-100%,0));
-    .pxl-panel-header {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        z-index: 1;
-    }
 }
 .pxl-hidden-template.pos-right{
     width: 100%;
@@ -143,12 +150,6 @@
     right: 0;
     left: auto;
     @include transform(translate(100%,0));
-    &:not(.pxl-hidden-template-canvas-cart) .pxl-panel-header {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 1;
-    }
 }
 .pxl-hidden-template.pos-top{
     background-color: transparent;
