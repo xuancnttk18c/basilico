@@ -14,6 +14,22 @@ function basilico_page_options_register( $metabox ) {
 					'title'  => esc_html__( 'Post Settings', 'basilico' ),
 					'icon'   => 'el el-refresh',
 					'fields' => array_merge(
+                        array(
+                            array(
+                                'id'       => 'single_post_layout',
+                                'type'     => 'select',
+                                'title'    => esc_html__('Select Post Layout', 'basilico'),
+                                'options'  => array(
+                                    '-1'  => esc_html__('Inherit', 'basilico'),
+                                    'layout-1' => esc_html__('Layout 1', 'basilico'),
+                                    'layout-2' => esc_html__('Layout 2', 'basilico'),
+                                    'layout-3' => esc_html__('Layout 3', 'basilico'),
+                                    'layout-4' => esc_html__('Layout 4', 'basilico'),
+                                    'layout-5' => esc_html__('Layout 5', 'basilico'),
+                                ),
+                                'default'  => '-1'
+                            ),
+                        ),
 						basilico_sidebar_pos_opts(['prefix' => 'post_', 'default' => true, 'default_value' => '-1']),
 						basilico_page_title_opts([
 							'default'         => true,
@@ -42,7 +58,7 @@ function basilico_page_options_register( $metabox ) {
                                 'title'       => esc_html__( 'Post Share Number', 'basilico' ),
                                 'description' => esc_html__( 'Edit post number share. This add 1 when click on post social share button.', 'basilico' ),
                                 'validate'    => 'numeric',
-                                'msg'         => 'This must be a number!',
+                                'msg'         => esc_html__('This must be a number!', 'basilico'),
                             ),
                         ),
                         array(
@@ -273,6 +289,12 @@ function basilico_page_options_register( $metabox ) {
                                     'vertical' => esc_html__('Vertical', 'basilico'),
                                 ),
                                 'default'  => 'simple'
+                            ),
+                            array(
+                                'id'=> 'product_additional_info',
+                                'type' => 'editor',
+                                'title' => esc_html__('Addtional Info', 'basilico'),
+                                'default' => '',
                             ),
 						)
 				    )

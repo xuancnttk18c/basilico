@@ -62,6 +62,7 @@ $widget->add_render_attribute( 'carousel', [
     'data-settings' => wp_json_encode($opts)
 ]);
 $img_size = !empty( $img_size ) ? $img_size : '768x600';
+
 if ( ! empty( $settings['loadmore_link']['url'] ) ) {
     $widget->add_render_attribute( 'loadmore', 'href', $settings['loadmore_link']['url'] );
     if ( $settings['loadmore_link']['is_external'] ) {

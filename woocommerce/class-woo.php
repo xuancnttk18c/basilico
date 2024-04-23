@@ -1506,7 +1506,6 @@ if (!class_exists('basilico_Woo')) {
                 </div>
             </div>
             <?php 
-			 
   		}
   		public function get_price_list_filter($wg_id = '', $settings = []){
   			extract($settings);

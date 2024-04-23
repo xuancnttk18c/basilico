@@ -41,8 +41,8 @@ pxl_add_custom_widget(
                                 'name' => 'title',
                                 'label' => esc_html__('Text', 'basilico' ),
                                 'type' => 'textarea',
-                                'default' => 'This is the heading',
                                 'label_block' => true,
+                                'default' => esc_html__('This is the heading', 'basilico'),
                             ),
                             array(
                                 'name' => 'title_tag',
@@ -80,7 +80,6 @@ pxl_add_custom_widget(
                                 'name' => 'text_align',
                                 'label' => esc_html__('Alignment', 'basilico' ),
                                 'type' => 'choose',
-                                'control_type' => 'responsive',
                                 'options' => [
                                     'start' => [
                                         'title' => esc_html__( 'Start', 'basilico' ),
@@ -95,16 +94,42 @@ pxl_add_custom_widget(
                                         'icon' => 'eicon-text-align-right',
                                     ]
                                 ],
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-wrap' => 'justify-content: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-heading-inner' => 'text-align: {{VALUE}};',
-                                ],
                             ),
                             array(
                                 'name' => 'title_highlighted_line',
                                 'label' => esc_html__('Highlighted Line', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
                                 'default' => 'false',
+                            ),
+                            array(
+                                'name' => 'title_highlighted_style',
+                                'label' => esc_html__('Highlighted Line Style', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'label_block' => true,
+                                'options' => [
+                                    'style-1' => esc_html__('Line Between'),
+                                    'style-2' => esc_html__('Coffee Bean'),
+                                ],
+                                'default' => 'style-1',
+                                'condition' => [
+                                    'title_highlighted_line' => "true"
+                                ],
+                            ),
+                            array(
+                                'name' => 'title_highlighted_size',
+                                'label' => esc_html__('Highlighted Size (px)', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::NUMBER,
+                                'condition' => [
+                                    'title_highlighted_line' => "true",
+                                    'title_highlighted_style' => 'style-2'
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-heading-inner .heading-title span:before,
+                                     {{WRAPPER}} .pxl-heading-inner .heading-title span:after,
+                                     {{WRAPPER}} .pxl-heading-inner .heading-title a:before,
+                                     {{WRAPPER}} .pxl-heading-inner .heading-title a:after'
+                                     => 'font-size: {{VALUE}}px;'
+                                ],
                             ),
                             array(
                                 'name'  => 'title_max_width',
@@ -164,6 +189,20 @@ pxl_add_custom_widget(
                                 'name' => 'subtitle_highlighted_line',
                                 'label' => esc_html__('Highlighted Line', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
+                            ),
+                            array(
+                                'name' => 'subtitle_highlighted_style',
+                                'label' => esc_html__('Highlighted Line Style', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'label_block' => true,
+                                'options' => [
+                                    'style-1' => esc_html__('Line Between'),
+                                    'style-2' => esc_html__('Coffee Bean'),
+                                ],
+                                'default' => 'style-1',
+                                'condition' => [
+                                    'subtitle_highlighted_line' => "true"
+                                ],
                             ),
                             array(
                                 'name' => 'sub_title_space',

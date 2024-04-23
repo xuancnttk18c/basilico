@@ -376,6 +376,11 @@
 		color: $primary_color;
 		letter-spacing: 0.02em;
 	}
+	.price_slider_amount {
+		button {
+			border: 1px solid $divider_color;
+		}
+	}
 	.ui-slider .ui-slider-handle,
 	.ui-slider .ui-slider-range,
 	.price_slider_amount button:before {
@@ -425,7 +430,7 @@
 .widget_products {
 	padding-bottom: 20px !important;
 }
-ul.product_list_widget {
+.sidebar-shop ul.product_list_widget {
 	list-style: none outside;
 	padding: 0;
 	li {
@@ -538,7 +543,8 @@ ul.product_list_widget {
 			padding-top: 5px;
 		}
 		&:last-child {
-			padding-bottom: 25px;
+			border-bottom: none;
+			padding-bottom: 0;
 		}
 		a {
 			font-weight: 600;
@@ -571,8 +577,8 @@ ul.product_list_widget {
 			color: $primary_color;
 			font-weight: 400;
 		}
-		.quantity {
-			margin-bottom: 2px;
+		.cart-item-quantify {
+			display: none;
 		}
 		del .amount{
 			color: #786c55;

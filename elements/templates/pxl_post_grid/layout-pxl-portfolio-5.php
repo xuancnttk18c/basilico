@@ -14,6 +14,8 @@ $orderby = $widget->get_setting('orderby', 'date');
 $order = $widget->get_setting('order', 'desc');
 $limit = $widget->get_setting('limit', 6);
 
+$tab_style = basilico()->get_theme_opt('tab_style', 'style-df');
+
 extract(pxl_get_posts_of_grid(
     'pxl-portfolio',
     ['source' => $source, 'orderby' => $orderby, 'order' => $order, 'limit' => $limit, 'post_ids' => $post_ids], 
@@ -77,7 +79,7 @@ $widget->add_render_attribute( 'wrapper', [
     'data-next-link'   => $next_link
 ]);
 
-$grid_class = 'pxl-grid-inner pxl-grid-masonry row relative overflow-hidden animation-time';
+$grid_class = 'pxl-grid-inner pxl-grid-masonry row relative animation-time';
 $widget->add_render_attribute( 'grid', 'class', $grid_class);
  
 if( count($posts) <= 0){
@@ -89,7 +91,7 @@ if( count($posts) <= 0){
 <div <?php pxl_print_html($widget->get_render_attribute_string( 'wrapper' )) ?>>
     <div class="pxl-grid-overlay"></div>
     <?php if ($select_post_by === 'term_selected' && $filter == "true"): ?>
-        <div class="grid-filter-wrap d-flex <?php echo esc_html($settings['filter_alignment']);?>">
+        <div class="grid-filter-wrap d-flex <?php echo esc_html($settings['filter_alignment']);?> <?php echo esc_attr($tab_style); ?>">
             <span class="filter-item active" data-filter="*"><?php echo esc_html($filter_default_title); ?></span>
             <?php foreach ($categories as $category): ?>
                 <?php $category_arr = explode('|', $category); ?>

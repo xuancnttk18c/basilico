@@ -9,6 +9,29 @@ pxl_add_custom_widget(
         'params' => array(
             'sections' => array(
                 array(
+                    'name'     => 'layout_section',
+                    'label'    => esc_html__( 'Layout', 'basilico' ),
+                    'tab'      => 'layout',
+                    'controls' => array(
+                        array(
+                            'name'    => 'layout',
+                            'label'   => esc_html__( 'Templates', 'basilico' ),
+                            'type'    => 'layoutcontrol',
+                            'default' => '1',
+                            'options' => [
+                                '1' => [
+                                    'label' => esc_html__( 'Layout 1', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-1.jpg'
+                                ],
+                                '2' => [
+                                    'label' => esc_html__( 'Layout 2', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-2.jpg'
+                                ],
+                            ],
+                        )
+                    )
+                ),
+                array(
                     'name' => 'tab_content',
                     'label' => esc_html__( 'Content', 'basilico' ),
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
@@ -67,6 +90,7 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-list-content .pxl-list-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
                                 '{{WRAPPER}} .pxl-list-content .pxl-list-icon svg' => 'height: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-list.layout-2 .pxl-list-content:hover .pxl-list-icon' => 'max-width: calc({{SIZE}}{{UNIT}} + 10px);',
                             ],
 
                         ),
@@ -112,6 +136,38 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-list .pxl-list-content',
+                        ),
+                        array(
+                            'name' => 'content_border_type',
+                            'label' => esc_html__( 'Content Border Type', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'options' => [
+                                'none' => esc_html__( 'None', 'basilico' ),
+                                'solid' => esc_html__( 'Solid', 'basilico' ),
+                                'double' => esc_html__( 'Double', 'basilico' ),
+                                'dotted' => esc_html__( 'Dotted', 'basilico' ),
+                                'dashed' => esc_html__( 'Dashed', 'basilico' ),
+                                'groove' => esc_html__( 'Groove', 'basilico' ),
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-list .pxl-list-content + .pxl-list-content' => 'border-top-style: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'layout' => '2'
+                            ],
+                        ),
+                        array(
+                            'name' => 'content_border_color',
+                            'label' => esc_html__( 'Content Border Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'default' => '',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-list .pxl-list-content + .pxl-list-content' => 'border-top-color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'content_border_type!' => 'none',
+                                'layout' => '2'
+                            ],
                         ),
                         array(
                             'name' => 'link_color',

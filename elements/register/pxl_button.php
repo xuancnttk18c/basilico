@@ -21,12 +21,16 @@ pxl_add_custom_widget(
                             'options' => [
                                 'btn-default' => esc_html__('Default', 'basilico' ),
                                 'btn-white' => esc_html__('White', 'basilico' ),
-                                'btn-fullwidth' => esc_html__('Full Width', 'basilico' ),
                                 'btn-outline' => esc_html__('Out Line', 'basilico' ),
                                 'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
                                 'btn-additional-1' => esc_html__('Additional Button 01', 'basilico' ),
                                 'btn-additional-2' => esc_html__('Additional Button 02', 'basilico' ),
                                 'btn-additional-3' => esc_html__('Additional Button 03', 'basilico' ),
+                                'btn-additional-4' => esc_html__('Additional Button 04', 'basilico' ),
+                                'btn-additional-5' => esc_html__('Additional Button 05', 'basilico' ),
+                                'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
+                                'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
+                                'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
                             ],
                         ),
                         array(
@@ -147,7 +151,7 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-button-wrapper .pxl-icon' => 'font-size: {{SIZE}}{{UNIT}};',
                             ],
-                        ), 
+                        ),
                     ),
                 ),
                 array(
@@ -190,6 +194,13 @@ pxl_add_custom_widget(
                                     '{{WRAPPER}} .pxl-button-wrapper .btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
                                 'control_type' => 'responsive',
+                            ),
+                            array(
+                                'name'  => 'is_fullwidth',
+                                'label' => esc_html__('Is Fullwidth?', 'basilico'),
+                                'type'  => \Elementor\Controls_Manager::SWITCHER,
+                                'return_value' => 'yes',
+                                'default' => 'no',
                             ),
                             array(
                                 'name' => 'typography',
@@ -248,8 +259,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'border-color: {{VALUE}};',
-                                    'body:not(.pxl-pizza) {{WRAPPER}} .pxl-button-wrapper .btn:hover:before' => 'background-color: {{VALUE}};',
-                                    'body.pxl-pizza {{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'background-color: {{VALUE}};'
+                                    '{{WRAPPER}} .pxl-button-wrapper .btn::before' => 'background-color: {{VALUE}};',
                                 ],
                                 'condition' => [
                                     'style!' => ['btn-gradient'],
@@ -294,8 +304,19 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'default' => '',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-color: {{VALUE}};',
-                                    'body.pxl-pizza {{WRAPPER}} .pxl-button-wrapper .btn::before' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-color: {{VALUE}};'
+                                ],
+                                'condition' => [
+                                    'border_type!' => '',
+                                ],
+                            ),
+                            array(
+                                'name' => 'border_color_hover',
+                                'label' => esc_html__( 'Border Color Hover', 'basilico' ),
+                                'type' => \Elementor\Controls_Manager::COLOR,
+                                'default' => '',
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'border-color: {{VALUE}};'
                                 ],
                                 'condition' => [
                                     'border_type!' => '',

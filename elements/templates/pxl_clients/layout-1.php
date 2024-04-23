@@ -42,7 +42,7 @@ $widget->add_render_attribute( 'carousel', [
     <div class="pxl-swiper-slider pxl-clients layout-<?php echo esc_attr($settings['layout'])?>">
         <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-                <div class="pxl-swiper-wrapper swiper-wrapper">
+                <div class="pxl-swiper-wrapper swiper-wrapper align-items-center">
                     <?php foreach ($clients as $key => $value):
                         $client_img       = isset($value['client_img']) ? $value['client_img'] : [];
                         $name             = isset($value['name']) ? $value['name'] : '';

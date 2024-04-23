@@ -126,17 +126,6 @@ Redux::setSection($opt_name, array(
     'icon'   => 'el-icon-home',
     'fields' => array(
         array(
-            'id'          => 'theme_style',
-            'type'        => 'select',
-            'title'       => esc_html__('Theme Style', 'basilico'),
-            'options'  => array(
-                'default' => esc_html__('Default', 'basilico'),
-                'pxl-luxury' => esc_html__('Luxury', 'basilico'),
-                'pxl-pizza' => esc_html__('Pizza', 'basilico'),
-            ),
-            'default'     => 'default',
-        ),
-        array(
             'id'       => 'favicon',
             'type'     => 'media',
             'title'    => esc_html__('Favicon', 'basilico'),
@@ -203,6 +192,32 @@ Redux::setSection($opt_name, array(
             'default'     => '#0e1927'
         ),
         array(
+            'id'          => 'additional_color_01',
+            'type'        => 'color',
+            'title'       => esc_html__('Additional Color', 'basilico'),
+            'transparent' => false,
+            'default'     => '#fbf5ee'
+        ),
+        array(
+            'id'          => 'divider_color',
+            'type'        => 'color',
+            'title'       => esc_html__('Divider Color', 'basilico'),
+            'transparent' => false,
+            'default'     => '#c8c8c8'
+        ),
+        array(
+            'id'          => 'gradient_color_01',
+            'type'        => 'color_gradient',
+            'title'       => esc_html__('Gradient Color 01', 'basilico'),
+            'transparent' => false,
+            'gradient-angle' => true,
+            'default'  => array(
+                'from' => '#121212',
+                'to'   => '#3c3c3c',
+                'gradient-angle' => 180,
+            ),
+        ),
+        array(
             'id'      => 'link_color',
             'type'    => 'link_color',
             'title'   => esc_html__('Link Colors', 'basilico'),
@@ -212,72 +227,6 @@ Redux::setSection($opt_name, array(
                 'active'  => '#e6c9a2'
             ),
             'output'  => array('a')
-        ),
-        array(
-            'id'          => 'gradient_color_01',
-            'type'        => 'color_gradient',
-            'title'       => esc_html__('Gradient Color 01', 'basilico'),
-            'transparent' => false,
-            'gradient-angle' => true,
-            'default'  => array(
-                'from' => '#e8411d',
-                'to'   => '#faac52',
-                'gradient-angle' => 51,
-            ),
-        ),
-        array(
-            'id'          => 'gradient_color_02',
-            'type'        => 'color_gradient',
-            'title'       => esc_html__('Gradient Color 02', 'basilico'),
-            'transparent' => false,
-            'gradient-angle' => true,
-            'default'  => array(
-                'from' => '#443b7f',
-                'to'   => '#7b7bcf',
-                'gradient-angle' => 180,
-            ),
-        ),
-        array(
-            'id'          => 'additional_color_01',
-            'type'        => 'color',
-            'title'       => esc_html__('Additional Color 01', 'basilico'),
-            'transparent' => false,
-            'default'     => '#fbf5ee'
-        ),
-        array(
-            'id'          => 'additional_color_02',
-            'type'        => 'color',
-            'title'       => esc_html__('Additional Color 02', 'basilico'),
-            'transparent' => false,
-            'default'     => '#6565b7'
-        ),
-        array(
-            'id'          => 'additional_color_03',
-            'type'        => 'color',
-            'title'       => esc_html__('Additional Color 03', 'basilico'),
-            'transparent' => false,
-            'default'     => '#383169'
-        ),
-        array(
-            'id'          => 'additional_color_04',
-            'type'        => 'color',
-            'title'       => esc_html__('Additional Color 04', 'basilico'),
-            'transparent' => false,
-            'default'     => '#5959a6'
-        ),
-        array(
-            'id'          => 'additional_color_05',
-            'type'        => 'color',
-            'title'       => esc_html__('Additional Color 05', 'basilico'),
-            'transparent' => false,
-            'default'     => '#faa952'
-        ),
-        array(
-            'id'          => 'divider_color',
-            'type'        => 'color',
-            'title'       => esc_html__('Divider Color', 'basilico'),
-            'transparent' => false,
-            'default'     => '#c8c8c8'
         ),
     )
 ));
@@ -296,7 +245,14 @@ Redux::setSection($opt_name, array(
     'title'  => esc_html__('Page Title', 'basilico'),
     'icon'   => 'el el-indent-left',
     'fields' => array_merge(
-        basilico_page_title_opts() 
+        basilico_page_title_opts(),
+        array(
+            array(
+                'id'             => 'page_title_class',
+                'type'           => 'text',
+                'title'          => esc_html__('Custom Class', 'basilico'),
+            ),
+        ),
     )
 ));
 
@@ -346,6 +302,18 @@ Redux::setSection($opt_name, array(
             'options'  => array(
                 'style-df' => get_template_directory_uri() . '/assets/images/pagination_layout/p1.jpg',
                 'style-2'  => get_template_directory_uri() . '/assets/images/pagination_layout/p2.jpg',
+                'style-3'  => get_template_directory_uri() . '/assets/images/pagination_layout/p3.jpg',
+                'style-4'  => get_template_directory_uri() . '/assets/images/pagination_layout/p4.jpg',
+            ),
+            'default' => 'style-df'
+        ),
+        array(
+            'id'      => 'swiper_pagination_style',
+            'type'    => 'image_select',
+            'title'   => esc_html__('Swiper Pagination Style', 'basilico'),
+            'options'  => array(
+                'style-df' => get_template_directory_uri() . '/assets/images/swiper_dots_layout/sw1.jpg',
+                'style-2'  => get_template_directory_uri() . '/assets/images/swiper_dots_layout/sw2.jpg',
             ),
             'default' => 'style-df'
         ),
@@ -356,9 +324,11 @@ Redux::setSection($opt_name, array(
             'options'  => array(
                 'style-df' => get_template_directory_uri() . '/assets/images/tabs_layout/t1.jpg',
                 'style-2'  => get_template_directory_uri() . '/assets/images/tabs_layout/t2.jpg',
+                'style-3'  => get_template_directory_uri() . '/assets/images/tabs_layout/t3.jpg',
+                'style-4'  => get_template_directory_uri() . '/assets/images/tabs_layout/t4.jpg',
             ),
             'default' => 'style-df'
-        )
+        ),
     )
 ));
 
@@ -368,6 +338,20 @@ Redux::setSection($opt_name, array(
     'icon'  => 'el-icon-list',
     'subsection' => true,
     'fields'     => array_merge(
+        array(
+            array(
+                'id'       => 'archive_post_layout',
+                'type'     => 'select',
+                'title'    => esc_html__('Select Post Layout', 'basilico'),
+                'options'  => array(
+                    'layout-1' => esc_html__('Layout 1', 'basilico'),
+                    'layout-2' => esc_html__('Layout 2', 'basilico'),
+                    'layout-3' => esc_html__('Layout 3', 'basilico'),
+                    'layout-4' => esc_html__('Layout 4', 'basilico'),
+                ),
+                'default'  => 'layout-1'
+            ),
+        ),
         basilico_sidebar_pos_opts([ 'prefix' => 'blog_']),
         array(
             array(
@@ -424,6 +408,19 @@ Redux::setSection($opt_name, array(
     'subsection' => true,
     'fields'     => array_merge(
         array(
+            array(
+                'id'       => 'single_post_layout',
+                'type'     => 'select',
+                'title'    => esc_html__('Select Post Layout', 'basilico'),
+                'options'  => array(
+                    'layout-1' => esc_html__('Layout 1', 'basilico'),
+                    'layout-2' => esc_html__('Layout 2', 'basilico'),
+                    'layout-3' => esc_html__('Layout 3', 'basilico'),
+                    'layout-4' => esc_html__('Layout 4', 'basilico'),
+                    'layout-5' => esc_html__('Layout 5', 'basilico'),
+                ),
+                'default'  => 'layout-1'
+            ),
             array(
                 'id'       => 'single_post_title_layout',
                 'type'     => 'button_set',
@@ -498,6 +495,11 @@ Redux::setSection($opt_name, array(
                     'btn-additional-1' => esc_html__('Additional Button 01', 'basilico' ),
                     'btn-additional-2' => esc_html__('Additional Button 02', 'basilico' ),
                     'btn-additional-3' => esc_html__('Additional Button 03', 'basilico' ),
+                    'btn-additional-4' => esc_html__('Additional Button 04', 'basilico' ),
+                    'btn-additional-5' => esc_html__('Additional Button 05', 'basilico' ),
+                    'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
+                    'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
+                    'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
                 ),
                 'default' => 'btn-outline',
                 'required' => [
@@ -611,9 +613,25 @@ Redux::setSection($opt_name, array(
 
 //* Input
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('Input Form', 'basilico'),
+    'title'  => esc_html__('Input', 'basilico'),
     'icon'   => 'el el-italic',
     'fields' => array(
+        array(
+            'id'             => 'input_padding',
+            'type'           => 'spacing',
+            'top'            => false,
+            'bottom'         => false,
+            'mode'           => 'padding',
+            'units'          => array('px'),
+            'units_extended' => 'false',
+            'title'          => esc_html__('Input Padding', 'basilico'),
+            'desc'           => esc_html__('Default: Right - 20px, Left - 20px', 'basilico'),
+            'default'        => array(
+                'padding-left'    => '20px',
+                'padding-right'   => '20px',
+                'units'           => 'px',
+            ),
+        ),
         array(
             'id'          => 'input_bg_color',
             'type'        => 'color',
@@ -654,6 +672,17 @@ Redux::setSection($opt_name, array(
             ),
         ),
         array(
+            'id'          => 'input_border_radius2',
+            'type'        => 'dimensions',
+            'title'       => esc_html__('Border Radius', 'basilico'),
+            'height' => false,
+            'unit'     => 'px',
+            'default'  => array(
+                'width'  => '0',
+                'unit' => 'px'
+            ),
+        ),
+        array(
             'id'          => 'font_input',
             'type'        => 'typography',
             'title'       => esc_html__('Input Typography', 'basilico'),
@@ -663,6 +692,14 @@ Redux::setSection($opt_name, array(
             'text-align'  => false,
             'letter-spacing' => true,
             'units'       => 'px',
+            'weights' => array(
+                '400'       => 'Normal 400',
+                '500'       => 'Medium 500',
+                '700'       => 'Bold 700',
+                '400italic' => 'Normal 400 Italic',
+                '500italic' => 'Medium 500 Italic',
+                '700italic' => 'Bold 700 Italic',
+            ),
         ),
     ),
 ));
@@ -728,6 +765,17 @@ if(class_exists('Woocommerce')) {
         'fields'     => array_merge(
             basilico_sidebar_pos_opts([ 'prefix' => 'shop_', 'default_value' => 'left']),
             array(
+                array(
+                    'id'       => 'product_layout',
+                    'type'     => 'select',
+                    'title'    => esc_html__('Product Layout', 'basilico'),
+                    'options'  => [
+                        'layout-1'       => esc_html__('Layout 1', 'basilico'),
+                        'layout-2'       => esc_html__('Layout 2', 'basilico'),
+                        'layout-3'       => esc_html__('Layout 3', 'basilico'),
+                    ],
+                    'default'  => 'df',
+                ),
                 array(
                     'id'       => 'shop_display_type',
                     'type'     => 'button_set',
@@ -808,6 +856,27 @@ if(class_exists('Woocommerce')) {
                     'max'           => 100,
                     'step'          => 1,
                     'display_value' => 'text',
+                ),
+                array(
+                    'id'       => 'add_to_cart_button_style',
+                    'type'     => 'select',
+                    'title'    => esc_html__('Add To Cart Button Style', 'basilico'),
+                    'options' => array(
+                        'btn-default' => esc_html__('Default', 'basilico' ),
+                        'btn-white' => esc_html__('White', 'basilico' ),
+                        'btn-fullwidth' => esc_html__('Full Width', 'basilico' ),
+                        'btn-outline' => esc_html__('Out Line', 'basilico' ),
+                        'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
+                        'btn-additional-1' => esc_html__('Additional Button 01', 'basilico' ),
+                        'btn-additional-2' => esc_html__('Additional Button 02', 'basilico' ),
+                        'btn-additional-3' => esc_html__('Additional Button 03', 'basilico' ),
+                        'btn-additional-4' => esc_html__('Additional Button 04', 'basilico' ),
+                        'btn-additional-5' => esc_html__('Additional Button 05', 'basilico' ),
+                        'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
+                        'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
+                        'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
+                    ),
+                    'default' => 'btn-outline-secondary',
                 ),
             )
         )
@@ -942,6 +1011,14 @@ Redux::setSection($opt_name, array(
             'text-align'  => false,
             'letter-spacing' => true,
             'units'       => 'px',
+            'weights' => array(
+                '400'       => 'Normal 400',
+                '500'       => 'Medium 500',
+                '700'       => 'Bold 700',
+                '400italic' => 'Normal 400 Italic',
+                '500italic' => 'Medium 500 Italic',
+                '700italic' => 'Bold 700 Italic',
+            ),
         ),
         array(
             'id'             => 'font_heading',
@@ -954,6 +1031,14 @@ Redux::setSection($opt_name, array(
             'letter-spacing' => true,
             'text-transform' => true,
             'units'          => 'em',
+            'weights' => array(
+                '400'       => 'Normal 400',
+                '500'       => 'Medium 500',
+                '700'       => 'Bold 700',
+                '400italic' => 'Normal 400 Italic',
+                '500italic' => 'Medium 500 Italic',
+                '700italic' => 'Bold 700 Italic',
+            ),
         ),
         array(
             'id'          => 'font_h1',

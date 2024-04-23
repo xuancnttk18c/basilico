@@ -85,7 +85,7 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Link', 'basilico'),
                                     'type' => \Elementor\Controls_Manager::URL,
                                     'label_block' => true,
-                                ) 
+                                ),
                             ),
                             'default' => [
                                 [

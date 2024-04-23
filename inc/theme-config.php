@@ -15,24 +15,8 @@ if(!function_exists('basilico_configs')){
                     'value' => basilico()->get_opt('secondary_color', '#0e1927')
                 ],
                 'additional01'   => [
-                    'title' => esc_html__('Additional01 Color', 'basilico'),
+                    'title' => esc_html__('Additional Color', 'basilico'),
                     'value' => basilico()->get_opt('additional_color_01', '#fbf5ee')
-                ],
-                'additional02'   => [
-                    'title' => esc_html__('Additional02 Color', 'basilico'),
-                    'value' => basilico()->get_opt('additional_color_02', '#6565b7')
-                ],
-                'additional03'   => [
-                    'title' => esc_html__('Additional03 Color', 'basilico'),
-                    'value' => basilico()->get_opt('additional_color_03', '#383169')
-                ],
-                'additional04'   => [
-                    'title' => esc_html__('Additional04 Color', 'basilico'),
-                    'value' => basilico()->get_opt('additional_color_04', '#5959a6')
-                ],
-                'additional05'   => [
-                    'title' => esc_html__('Additional05 Color', 'basilico'),
-                    'value' => basilico()->get_opt('additional_color_05', '#faa952')
                 ],
                 'body'     => [
                     'title' => esc_html__('Body', 'basilico'),
@@ -97,7 +81,7 @@ if(!function_exists('basilico_configs')){
                 'color'          => '#dadada',
             ],
             'divider' => [
-                'color'          => '#c8c8c8',
+                'color'          => basilico()->get_opt('divider_color', '#c8c8c8'),
             ],
             // Menu Color
             'menu' => [
@@ -147,7 +131,7 @@ if(!function_exists('basilico_configs')){
                 'font-size'          => '13px',
                 'font-weight'        => '400',
                 'letter-spacing'     => '0.15em',
-                'padding'            => '4px 32.75px',
+                'padding'            => '0 32.75px',
                 'radius'             => '0',
                 'radius-rtl'         => '0',
             ],
@@ -158,11 +142,14 @@ if(!function_exists('basilico_configs')){
                 'border-color'      => basilico()->get_opt('input_border', '#0e1618'),
                 'border-hover'      => basilico()->get_opt('input_border_hover', '#0e1618'),
                 'height'            => basilico()->get_opt('input_height', ['height' => '44px', 'units' => 'px'])['height'],
+                'border-radius'     => basilico()->get_opt('input_border_radius2', ['width' => '0px', 'units' => 'px'])['width'],
                 'font-family'       => basilico()->get_theme_opt('font_input', ['font-family' => $body_font], 'font-family'),
                 'font-size'         => basilico()->get_theme_opt('font_input', ['font-size' => '15px'], 'font-size'),
                 'font-weight'       => basilico()->get_theme_opt('font_input', ['font-weight' => '400'], 'font-weight'),
                 'line-height'       => basilico()->get_theme_opt('font_input', ['line-height' => '1.66666666667'], 'line-height'),
                 'letter-spacing'    => basilico()->get_theme_opt('font_input', ['letter-spacing' => '0.01em'], 'letter-spacing'),
+                'padding-left'      => basilico()->get_theme_opt('input_padding', ['padding-left' => '20px', 'units' => 'px'])['padding-left'],
+                'padding-right'     => basilico()->get_theme_opt('input_padding', ['padding-right' => '20px', 'units' => 'px'])['padding-right'],
             ],
         ];
 

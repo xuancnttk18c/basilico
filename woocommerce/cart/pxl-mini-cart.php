@@ -4,8 +4,7 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_mini_cart' ); ?>
 
-<?php if ( ! WC()->cart->is_empty() ) : ?>
-
+<?php if (!WC()->cart->is_empty()) : ?>
 	<ul class="woocommerce-mini-cart cart_list product_list_widget <?php echo esc_attr( $args['list_class'] ); ?>">
 		<?php
 		do_action( 'woocommerce_before_mini_cart_contents' );
@@ -77,7 +76,6 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 											$min_quantity = 0;
 											$max_quantity = $_product->get_max_purchase_quantity();
 										}
-
 										$product_quantity = woocommerce_quantity_input(
 											array(
 												'input_name'   => $cart_item_key,
@@ -89,7 +87,6 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 											$_product,
 											false
 										);
-
 										echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );  
 										?>
 									</div>
@@ -101,15 +98,10 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 				<?php
 			}
 		}
-
 		do_action( 'woocommerce_mini_cart_contents' );
 		?>
 	</ul>
-	 
 <?php else : ?>
-
 	<?php wc_get_template( 'cart/cart-empty.php' ); ?>
-
 <?php endif; ?>
-
-<?php do_action( 'woocommerce_after_mini_cart' ); ?>
+	<?php do_action( 'woocommerce_after_mini_cart' ); ?>

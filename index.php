@@ -4,24 +4,19 @@
  */
 get_header();
 
-$theme_style = basilico()->get_theme_opt('theme_style', 'default');
+$archive_style = basilico()->get_theme_opt('archive_post_layout', 'layout-1');
 $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'blog', 'content_col'=> '8']); // type: blog, post, page, shop, product
+
 ?>
 <div class="container">
     <div class="row <?php echo esc_attr($pxl_sidebar['wrap_class']) ?>" >
         <div id="pxl-content-area" class="<?php echo esc_attr($pxl_sidebar['content_class']) ?>">
             <?php if ( have_posts() ): ?>
-            <main id="pxl-content-main" class="pxl-content-main content-archive">
+            <main id="pxl-content-main" class="pxl-content-main content-archive <?php echo esc_attr($archive_style); ?>">
                 <?php
                     while ( have_posts() ) {
                         the_post();
-                        switch ($theme_style) {
-                            case 'pxl-pizza':
-                                get_template_part( 'template-parts/content/content', 'pizza' );
-                                break;
-                            default:
-                                get_template_part( 'template-parts/content/content' );
-                        }
+                        get_template_part( 'template-parts/content/content', $archive_style);
                     }
                 ?>
             </main>

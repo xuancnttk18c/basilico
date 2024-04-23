@@ -109,10 +109,6 @@
 		"arrow-circle-right-large",
 		"arrow-down",
 		"arrow-up",
-		"arrow-long-down",
-		"arrow-long-left",
-		"arrow-long-right",
-		"arrow-long-up",
 		"long-arrow-up",
 		"long-arrow-down",
 		"long-arrow-left",
@@ -222,7 +218,19 @@
 		"wedding-rings",
 		"fork",
 		"serving-dish",
-		"calendar-minus"
-		"tag1"
+		"calendar-minus",
+		"tag1",
+		"bell",
+		"send2",
+		"alarm-clock",
+		"iphone",
+		"collaboration",
+		"healthcare",
+		"help",
+		"piggy-bank",
+		"save-money",
+		"coffee-bean",
+		"telegram-plane",
+		"calendar3"
     ]
 }

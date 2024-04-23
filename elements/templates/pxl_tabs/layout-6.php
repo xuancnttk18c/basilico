@@ -25,11 +25,11 @@ if(count($tabs_list) > 0){
                     }
                     ?>
                     <span <?php pxl_print_html($widget->get_render_attribute_string( $title_key )); ?> data-slide="<?php echo esc_attr($key); ?>">
-                        <div class="title-icon">
-                            <?php if(! empty( $settings['selected_icon']['value'] )): ?>
-                                <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
-                            <?php endif; ?>
-                        </div>
+                        <?php if(! empty( $settings['selected_icon']['value'] )): ?>
+                            <div class="title-icon">
+                                <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' ); ?>
+                            </div>
+                        <?php endif; ?>
                         <span><?php echo pxl_print_html($tab['tab_title']); ?></span>
                     </span>
                 <?php endforeach; ?>
