@@ -3281,8 +3281,9 @@
             }
             &:before {
                 content: '\f278';
+                margin-right: 7px;
                 font-family: "Material-Design-Iconic-Font";
-                font-size: 15px;
+                font-size: 22px;
                 @include transition();
                 color: $primary_color;
             }
@@ -3300,10 +3301,8 @@
         .pxl-ac-item {
             padding: 0;
             @include transition(all 300ms linear 0ms);
-            & + .pxl-ac-item {
-                .pxl-ac-title {
-                    border-top: none;
-                }
+            + .pxl-ac-item {
+                margin-top: 11px;    
             }
         }
     }
