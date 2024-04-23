@@ -404,21 +404,8 @@
             margin-left: 7px;
             color: #fff;
         }
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: $secondary_color;
-            @include transform(scaleX(0));
-            @include transition(all 250ms linear 0s);
-        }
         &:hover {
-            &:before {
-                @include transform(scaleX(1));
-            }
+            background-color: $secondary_color;
             i {
                 color: #fff;
             }
