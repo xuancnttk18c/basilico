@@ -274,13 +274,10 @@ Redux::setSection($opt_name, array(
         ),
         array(
             'id'          => 'divider_color',
-            'type'        => 'color_rgba',
+            'type'        => 'color',
             'title'       => esc_html__('Divider Color', 'basilico'),
             'transparent' => false,
-            'default'     => array(
-                'color'     => '#c8c8c8',
-                'alpha'     => 0.6
-            )
+            'default'     => '#c8c8c8'
         ),
     )
 ));

@@ -96,9 +96,8 @@ if(!function_exists('basilico_configs')){
             'border' => [
                 'color'          => '#dadada',
             ],
-
             'divider' => [
-                'color'          => 'rgba('.basilico()->get_opt('divider_color', ['color' => '#c8c8c8'])['color'].','.basilico()->get_opt('divider_color', ['alpha' => '0.6'])['alpha'].')',
+                'color'          => '#c8c8c8',
             ],
             // Menu Color
             'menu' => [
