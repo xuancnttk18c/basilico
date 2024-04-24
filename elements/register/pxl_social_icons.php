@@ -206,10 +206,17 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Background Color Hover', 'basilico' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .social-item:hover' => 'border-color: {{VALUE}};',
                                 '{{WRAPPER}} .social-item:after' => 'background-color: {{VALUE}};',
                             ],
-                        )
+                        ),
+                        array(
+                            'name' => 'social_bg_border_hover',
+                            'label' => esc_html__('Border Color Hover', 'basilico' ),
+                            'type' => 'color',
+                            'selectors' => [
+                                '{{WRAPPER}} .social-item:hover' => 'border-color: {{VALUE}};',
+                            ],
+                        ),
                     )
                 )
             )
