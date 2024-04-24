@@ -374,9 +374,6 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-grid .grid-item-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
-                            'condition' => [
-                                'layout_section' => 'pxl-portfolio-7',
-                            ],
                         ),
                     ),
                 ),
