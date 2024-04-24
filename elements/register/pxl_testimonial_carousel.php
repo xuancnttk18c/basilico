@@ -300,6 +300,8 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-testimonial-carousel .item-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-testimonial-carousel.layout-8 .item-title:before,
+                                 {{WRAPPER}} .pxl-testimonial-carousel.layout-8 .item-title:after' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -309,7 +311,9 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-testimonial-carousel .testimonial-title' => 'color: {{VALUE}};',
                             ],
-                            'condition' => ['layout' => ['2', '3', '4']]
+                            'condition' => [
+                                'layout' => ['2', '3', '4']
+                            ]
                         ),
                         array(
                             'name' => 'position_color',
