@@ -375,7 +375,7 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-grid .grid-item-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'condition' => [
-                                'layout' => '8',
+                                'layout' => '7',
                             ],
                         ),
                     ),
