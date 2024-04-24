@@ -591,6 +591,7 @@ function basilico_grid_custom_column_settings(){
         '3'  => '3',
         '2'  => '2',
         '1.5'  => '2/3',
+        '3.5'  => '1/5',
         '1'  => '1'
     ];
     return array(
