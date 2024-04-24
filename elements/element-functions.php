@@ -157,7 +157,6 @@ function basilico_get_post_grid_layout($pt_supports = []){
 
 function basilico_get_grid_layout_options($posttype_name){
     $option_layouts = [];
-    $theme_style = basilico()->get_theme_opt('theme_style', 'default');
     switch ($posttype_name) {
         case 'pxl-portfolio':
         $option_layouts = [
