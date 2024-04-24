@@ -26,7 +26,7 @@
         basilico_scroll_to_top();
         basilico_footer_fixed();
         basilico_magnific_popup();
-        basilico_scroll_to_id();
+        //basilico_scroll_to_id();
 
         //* For Element
         basilico_element_parallax();
@@ -334,7 +334,7 @@
 
             if (!(target.is(check)) && target.closest('.sidebar-shop').length <= 0 && target.closest('.pxl-hidden-template').length <= 0 && $('.pxl-page-overlay').hasClass('active')) { 
                 $('.pxl-hidden-template').removeClass('open');
-                // /$('.sidebar-shop').removeClass('open');
+                $('.sidebar-shop').removeClass('open');
                 $('.pxl-page-overlay').removeClass('active');
             }
         });
@@ -363,23 +363,23 @@
     }
 
     //* Scroll To ID
-    function basilico_scroll_to_id() {
-        const sections = document.querySelectorAll("section[id]");
-        window.addEventListener("scroll", navHighlighter);
-        function navHighlighter() {
-            let scrollY = window.pageYOffset;
-            sections.forEach(current => {
-                const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 50;
-                const sectionId = current.getAttribute("id");
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight && document.querySelector("a[href*=" + sectionId + "]")){
-                    document.querySelector("a[href*=" + sectionId + "]").classList.add("active");
-                } else if (document.querySelector("a[href*=" + sectionId + "]")) {
-                    document.querySelector("a[href*=" + sectionId + "]").classList.remove("active");
-                }
-            });
-        };
-    }
+    // function basilico_scroll_to_id() {
+    //     const sections = document.querySelectorAll("section[id]");
+    //     window.addEventListener("scroll", navHighlighter);
+    //     function navHighlighter() {
+    //         let scrollY = window.pageYOffset;
+    //         sections.forEach(current => {
+    //             const sectionHeight = current.offsetHeight;
+    //             const sectionTop = current.offsetTop - 50;
+    //             const sectionId = current.getAttribute("id");
+    //             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight && document.querySelector("a[href*=" + sectionId + "]")){
+    //                 document.querySelector("a[href*=" + sectionId + "]").classList.add("active");
+    //             } else if (document.querySelector("a[href*=" + sectionId + "]")) {
+    //                 document.querySelector("a[href*=" + sectionId + "]").classList.remove("active");
+    //             }
+    //         });
+    //     };
+    // }
 
     //* Footer Fixed
     function basilico_footer_fixed() {
