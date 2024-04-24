@@ -366,7 +366,18 @@ pxl_add_custom_widget(
                                 'show_button' => 'true',
                             ],
                         ),
-                        
+                        array(
+                            'name'      => 'item_radius',
+                            'label'     => esc_html__('Item Radius', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'size_units' => [ 'px' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-grid .grid-item-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                            'condition' => [
+                                'layout' => '8',
+                            ],
+                        ),
                     ),
                 ),
             ),

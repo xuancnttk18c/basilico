@@ -527,13 +527,14 @@ function basilico_get_carousel_ids_by_posttype($pt_supports = [], $args = []){
 /* grid columns setting */
 function basilico_grid_column_settings(){
     $options = [
-        '12' => '12',
-        '6'  => '6',
-        '5'  => '5',
-        '4'  => '4',
-        '3'  => '3',
-        '2'  => '2',
+        '12' => '1/12',
+        '6'  => '1/6',
+        '5'  => '1/5',
+        '4'  => '1/4',
+        '3'  => '1/3',
+        '2'  => '1/2',
         '1.5'  => '2/3',
+        '0.4'  => '2/5',
         '1'  => '1'
     ];
     return array(
@@ -642,12 +643,14 @@ function basilico_grid_custom_column_settings(){
 
 function basilico_carousel_column_settings(){
     $options = [
-        '12' => '12',
-        '6'  => '6',
-        '5'  => '5',
-        '4'  => '4',
-        '3'  => '3',
-        '2'  => '2',
+        '12' => '1/12',
+        '6'  => '1/6',
+        '5'  => '1/5',
+        '4'  => '1/4',
+        '3'  => '1/3',
+        '2'  => '1/2',
+        '1.5'  => '2/3',
+        '0.4'  => '2/5',
         '1'  => '1'
     ];
     return array(
