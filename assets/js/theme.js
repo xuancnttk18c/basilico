@@ -334,7 +334,7 @@
 
             if (!(target.is(check)) && target.closest('.sidebar-shop').length <= 0 && target.closest('.pxl-hidden-template').length <= 0 && $('.pxl-page-overlay').hasClass('active')) { 
                 $('.pxl-hidden-template').removeClass('open');
-                $('.sidebar-shop').removeClass('open');
+                // /$('.sidebar-shop').removeClass('open');
                 $('.pxl-page-overlay').removeClass('active');
             }
         });
