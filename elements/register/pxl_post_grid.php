@@ -27,7 +27,7 @@ pxl_add_custom_widget(
                                 'multiple' => true,
                                 'options'  => basilico_get_post_type_options($pt_supports),
                                 'default'  => 'post'
-                            ) 
+                            )
                         ),
                         basilico_get_post_grid_layout($pt_supports)
                     ),
@@ -374,6 +374,9 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-grid .grid-item-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
+                            'condition' => [
+                                'layout' => ['pxl-portfolio-7']
+                            ]
                         ),
                     ),
                 ),
