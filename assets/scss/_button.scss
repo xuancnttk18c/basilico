@@ -494,6 +494,11 @@
                 color: inherit;
             }
         }
+        &.style-2 {
+            &:before, &:after {
+                background-color: #fff;
+            }
+        }
     }
     &.btn-additional-8 {
         font-family: $heading_font_family;
