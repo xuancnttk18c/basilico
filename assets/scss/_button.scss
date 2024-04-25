@@ -467,7 +467,6 @@
             right: -5px;
             top: 5px;
             background-color: $divider_color;
-            z-index: -1;
             @include transition(all 300ms ease-out);
         }
         &:after {
@@ -479,7 +478,6 @@
             left: 5px;
             right: -5px;
             background-color: $divider_color;
-            z-index: -1;
             @include transition(all 300ms ease-out);
         }
         &:hover {
