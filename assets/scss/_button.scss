@@ -484,9 +484,11 @@
             color: #fff;
             &:before {
                 width: 0;
+                @include transform(translate(0px, 0px));
             }
             &:after {
                 height: 0;
+                @include transform(translate(0px, 0px));
             }
             i {
                 color: inherit;
