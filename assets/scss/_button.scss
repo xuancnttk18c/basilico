@@ -463,7 +463,7 @@
             position: absolute;
             width: 4px;
             height: 100%;
-            bottom: -4px;
+            bottom: -5px;
             right: -4px;
             top: 5px;
             background-color: $divider_color;
@@ -477,19 +477,21 @@
             height: 4px;
             bottom: -4px;
             left: 5px;
-            right: -4px;
+            right: -5px;
             background-color: $divider_color;
             z-index: -1;
             @include transition(all 300ms ease-out);
         }
         &:hover {
             color: #fff;
-            // &:before {
-            //     top: 0;
-            //     left: 0;
-            //     right: 0;
-            //     bottom: 0;
-            // }
+            &:before {
+                top: 0;
+                right: 0;
+            }
+            &:after {
+                left: 0;
+                bottom: 0;
+            }
             i {
                 color: inherit;
             }
