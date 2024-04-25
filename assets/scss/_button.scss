@@ -483,10 +483,12 @@
         &:hover {
             color: #fff;
             &:before {
-                width: 0;
+                top: 0;
+                right: 0;
             }
             &:after {
-                height: 0;
+                left: 0;
+                bottom: 0;
             }
             i {
                 color: inherit;
