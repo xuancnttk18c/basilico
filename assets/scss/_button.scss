@@ -463,10 +463,11 @@
             position: absolute;
             width: 4px;
             height: 100%;
-            bottom: -5px;
-            right: -5px;
+            bottom: 0;
+            right: 0;
             top: 5px;
             background-color: $divider_color;
+            @include transform(translate(-5px, -5px));
             @include transition(all 300ms ease-out);
         }
         &:after {
@@ -478,18 +479,19 @@
             left: 5px;
             right: -5px;
             background-color: $divider_color;
+            @include transform(translate(-5px, -5px));
             @include transition(all 300ms ease-out);
         }
         &:hover {
             color: #fff;
-            &:before {
-                top: 0;
-                right: 0;
-            }
-            &:after {
-                left: 0;
-                bottom: 0;
-            }
+            // &:before {
+            //     top: 0;
+            //     right: 0;
+            // }
+            // &:after {
+            //     left: 0;
+            //     bottom: 0;
+            // }
             i {
                 color: inherit;
             }
