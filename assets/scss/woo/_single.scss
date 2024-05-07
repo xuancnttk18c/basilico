@@ -653,17 +653,18 @@
 					font-family: 'Material-Design-Iconic-Font';
 					font-size: 13px;
 					color: #fff;
+					z-index: 1;
 				}
 				&.quantity-up {
 					&:before {
 						content: '\f2fc';
-						top: 16px;
+						top: 12px;
 					}
 				}
 				&.quantity-down {
 					&:before {
 						content: '\f2f9';
-						bottom: 16px;
+						bottom: 12px;
 					}
 				}
 			}
@@ -679,7 +680,7 @@
 		margin-right: 25px;
 	}
 }
-.stock{
+.stock {
 	color: $secondary_color;
 	span{
 		margin-right: 4px;
@@ -693,36 +694,6 @@
 	}
 }
 
-.quantity-button {
-	position: relative;
-	display: inline-block;
-	.quantity-down, .quantity-up {
-		&:before {
-			content: '\e99f';
-			font-family: $pxli_font;
-			font-size: 13px;
-			width: 13px;
-			height: 13px;
-			display: flex;
-			color: #fff;
-			position: absolute;
-			z-index: 3;
-			position: absolute;
-			right: 8px;
-		}
-	}
-	.quantity-up{
-		&:before{
-			top: 5px;
-		}
-	}
-	.quantity-down{
-		&:before{
-			bottom: 5px	;
-			@include transform(rotateX(180deg));
-		}
-	}
-}
 input.qty[type="number"] {
 	background-color: $secondary_color;
 	width: 66px;
