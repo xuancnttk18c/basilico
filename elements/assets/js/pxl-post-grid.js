@@ -249,7 +249,7 @@
         elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_post_list.default', widget_post_masonry_handler );
         elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_team_grid.default', widget_post_masonry_handler );
         elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_image_gallery.default', widget_post_masonry_handler );
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_post_grid.default', widget_post_masonry_handler );
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_product_grid.default', widget_post_masonry_handler );
     } );
 
 } )( jQuery );
