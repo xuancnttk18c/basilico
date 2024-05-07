@@ -899,3 +899,12 @@ function basilico_get_img_link_url( $settings ) {
         'url' => $settings['image']['url'],
     ];
 }
+
+function pxl_get_product_grid_term_options($args=[]){
+    $product_categories = get_categories(array( 'taxonomy' => 'product_cat' ));
+    $options = array();
+    foreach($product_categories as $category){
+        $options[$category->slug] = $category->name;
+    }
+    return $options;
+}
