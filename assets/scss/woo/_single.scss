@@ -13,7 +13,6 @@
 		}
 		&.pxl-single-product-gallery-wraps{
 			text-align: center;
-			margin-bottom: 40px;
 		}
 		> .pxl-single-product-gallery-wraps-inner {
 			display: inline-block;
@@ -165,7 +164,7 @@
 	}
 }
 .shop-layout-5 .woocommerce-product-gallery {
-	.woocommerce-product-gallery__wrapper {
+	.woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image{
 		@include border-radius(10px);
 		overflow: hidden;
 	}
