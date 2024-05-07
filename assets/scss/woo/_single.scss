@@ -395,7 +395,7 @@
 /** ------------------------------------------------
  * Summary
 ---------------------------------------------------*/
-.pxl-single-product-summary-wrap{
+.pxl-single-product-summary-wrap {
 	margin-top: 40px;
 	padding-left: 41px !important;
 	.price {
@@ -610,6 +610,21 @@
 			letter-spacing: 0.08em;
 			color: $primary_color;
 		}
+	}
+}
+
+.shop-layout-3 .pxl-single-product-summary-wrap {
+	.price {
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		color: $primary_color;
+	}
+	.quantity .label {
+		font-family: $heading_font_family;
+		font-weight: 500;
+		font-size: 20px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
 	}
 }
 
