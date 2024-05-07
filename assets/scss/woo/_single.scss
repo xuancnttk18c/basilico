@@ -165,10 +165,9 @@
 		}
 	}
 }
-.wc-gallery-sync{
+.wc-gallery-sync {
 	position: relative;
-	margin-top: 15px;
-
+	margin-top: 30px;
 	.flex-control-thumb {
 		position: relative;
 		overflow: hidden;
@@ -200,6 +199,14 @@
 		}
 	}
 }
+.shop-layout-5 .wc-gallery-sync {
+	.flex-control-thumb {
+		border: none;
+		@include border-radius(10px);
+		overflow: hidden;
+	}
+}
+
 .product_title {
 	font-family: $heading_font_family;
 	font-size: 30px;
