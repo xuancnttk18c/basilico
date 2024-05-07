@@ -695,9 +695,9 @@
 		background-color: transparent;
 		border: 1px solid $primary_color;
 		&:hover {
+			color: #fff;
 			&:after {
 				background-color: $primary_color;
-				color: #fff;
 			}
 		}
 	}
