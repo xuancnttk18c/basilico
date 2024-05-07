@@ -619,7 +619,8 @@
 		letter-spacing: 0.02em;
 		color: $primary_color;
 	}
-	.quantity .label {
+	.quantity .label label {
+		margin-bottom: 19px;
 		font-family: $heading_font_family;
 		font-weight: 500;
 		font-size: 20px;
