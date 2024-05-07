@@ -656,14 +656,14 @@
 				}
 				&.quantity-up {
 					&:before {
-						top: 16px;
 						content: '\f2fc';
+						top: 16px;
 					}
 				}
 				&.quantity-down {
 					&:before {
-						bottom: 16px;
 						content: '\f2f9';
+						bottom: 16px;
 					}
 				}
 			}
