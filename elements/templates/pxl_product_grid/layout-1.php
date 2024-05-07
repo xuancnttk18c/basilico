@@ -6,12 +6,12 @@ $product_ids = $widget->get_setting('product_ids', '');
 $categories = $widget->get_setting('taxonomies', '');
 
 $param_args=[];
-$loop = Pxl_Woo_Query::instance()->salepush_woocommerce_query($query_type,$post_per_page,$product_ids,$categories,$param_args);
+$loop = Pxl_Woo_Query::instance()->basilico_woocommerce_query($query_type,$post_per_page,$product_ids,$categories,$param_args);
 extract($loop);
 $grid_layout          = $widget->get_setting('grid_layout', 'layout-1');
 $pagination_type      = $widget->get_setting('pagination_type', 'false');
 
-$row_cols_class = salepush_get_shop_loop_row_column_class([
+$row_cols_class = basilico_get_shop_loop_row_column_class([
     'col_xs'  => $widget->get_setting('col_xs', '1'),
     'col_sm'  => $widget->get_setting('col_sm', '2'),
     'col_md'  => $widget->get_setting('col_md', '2'),
@@ -22,7 +22,7 @@ $row_cols_class = salepush_get_shop_loop_row_column_class([
 $grid_class = 'pxl-grid-inner products row relative '.implode(' ', $row_cols_class);
 $widget->add_render_attribute( 'grid', 'class', $grid_class);
 if( $total <= 0){
-    echo '<div class="pxl-no-post-grid">'.esc_html__( 'No Post Found', 'salepush' ). '</div>';
+    echo '<div class="pxl-no-post-grid">'.esc_html__( 'No Post Found', 'basilico' ). '</div>';
     return;
 }
 ?>
