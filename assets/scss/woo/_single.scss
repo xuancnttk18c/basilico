@@ -646,9 +646,26 @@
 				background-color: $heading_color;
 				color: #fff;
 			}
-			.quantity-button:before {
-				position: absolute;
-				left: 46px;
+			.quantity-button {
+				&:before {
+					position: absolute;
+					left: 46px;
+					font-family: 'Material-Design-Iconic-Font';
+					font-size: 13px;
+					color: #fff;
+				}
+				&.quantity-up {
+					&:before {
+						top: 16px;
+						content: '\f2fc';
+					}
+				}
+				&.quantity-down {
+					&:before {
+						bottom: 16px;
+						content: '\f2f9';
+					}
+				}
 			}
 		}
 	}
