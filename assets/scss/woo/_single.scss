@@ -633,8 +633,13 @@
 			display: none;
 		}
 	}
+	.product_meta {
+		> span {
+			margin-top: 0px;
+		}
+	}
 	.price {
-		font-weight: 600;
+		font-weight: 500;
 		letter-spacing: 0.02em;
 		color: $primary_color;
 	}
@@ -680,6 +685,18 @@
 						bottom: 12px;
 					}
 				}
+			}
+		}
+	}
+}
+
+.shop-layout-5 .social-share {
+	.pxl-icon {
+		background-color: transparent;
+		border: 1px solid $primary_color;
+		&:hover {
+			&:after {
+				color: $primary_color
 			}
 		}
 	}
