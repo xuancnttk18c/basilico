@@ -648,6 +648,7 @@
 			}
 			.quantity-button {
 				&:before {
+					cursor: pointer;
 					position: absolute;
 					left: 46px;
 					font-family: 'Material-Design-Iconic-Font';
