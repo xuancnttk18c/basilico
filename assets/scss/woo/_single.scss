@@ -696,7 +696,8 @@
 		border: 1px solid $primary_color;
 		&:hover {
 			&:after {
-				color: $primary_color
+				background-color: $primary_color;
+				color: #fff;
 			}
 		}
 	}
