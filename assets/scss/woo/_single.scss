@@ -349,7 +349,7 @@
 				}
 			}
 		}
-		
+
 	}
 }
 .flex-control-nav{
@@ -614,19 +614,42 @@
 }
 
 .shop-layout-5 .pxl-single-product-summary-wrap {
+	.woocommerce-product-rating {
+		.star-rating > span:before {
+			color: $primary_color;
+		}
+		.woocommerce-review-link {
+			display: none;
+		}
+	}
 	.price {
 		font-weight: 600;
 		letter-spacing: 0.02em;
 		color: $primary_color;
 	}
-	.quantity .label {
-		margin-bottom: 19px;
-		label {
-			font-family: $heading_font_family;
-			font-weight: 500;
-			font-size: 20px;
-			letter-spacing: 0.03em;
-			text-transform: uppercase;
+	.quantity {
+		max-width: 82px;
+		margin-right: 4px;
+		.label {
+			margin-bottom: 19px;
+			label {
+				font-family: $heading_font_family;
+				font-weight: 500;
+				font-size: 20px;
+				letter-spacing: 0.03em;
+				text-transform: uppercase;
+			}
+		}
+		.qty-field .quantity-inner {
+			position: relative;
+			input.qty[type="number"] {
+				background-color: $heading_color;
+				color: #fff;
+			}
+			.quantity-button:before {
+				position: absolute;
+				left: 46px;
+			}
 		}
 	}
 }
