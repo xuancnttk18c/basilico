@@ -33,6 +33,7 @@ textarea{
         line-height: inherit;
     }
 }
+
 input[type="search"]{
     @include placeholder(){
         color: $place_holder_color;
@@ -44,7 +45,6 @@ input[type="search"]{
         line-height: inherit;
     }
 }
- 
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -186,7 +186,7 @@ select, .pxl-time, .pxl-date, input[type="date"] {
     width: 100%;
     background-size: 15px;
     cursor: pointer;
-    [dir="rtl"] &{
+    [dir="rtl"] & {
         background-position: 10px 50%;
         padding-right: 22px;
         padding-left: 30px;

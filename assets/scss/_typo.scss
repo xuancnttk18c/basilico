@@ -14,9 +14,7 @@ body {
     //font-weight: normal;
     overflow-x: clip;
 }
-body.pxl-luxury{
-    background-color: $secondary_color;
-}
+
 a {
     text-decoration: none;
     @include transition(all 300ms linear 0ms);
