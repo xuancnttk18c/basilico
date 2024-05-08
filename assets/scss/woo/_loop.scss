@@ -169,6 +169,22 @@ select.orderby{
 			font-size: 15px;
 		}
 	}
+	.pxl-shop-woosmart-wrap {
+		.woosw-btn {
+			width: 47px;
+			height: 47px;
+			@include border-radius(50%);
+			font-size: 0;
+			background-color: $secondary_color;
+			padding: 0;
+			&:after {
+				content: "\e985";
+				color: #fff;
+				font-family: $pxli_font;
+				font-size: 15px;
+			}
+		}
+	}
 }
 
 .shop-layout-1 .pxl-shop-item-wrap,
