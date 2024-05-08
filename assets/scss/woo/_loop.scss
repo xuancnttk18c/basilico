@@ -155,6 +155,10 @@ select.orderby{
 }
 
 .shop-layout-5 .grid-item .pxl-products-thumb {
+	.image-wrap {
+		@include border-radius(10px);
+		overflow: hidden;
+	}
 	.btn-wrapper {
 		position: absolute;
 		bottom: 32px;
@@ -426,9 +430,11 @@ select.orderby{
 }
 
 .shop-layout-5 .pxl-products-content {
+	padding: 26px 0 0;
 	text-align: center;
 	.pxl-products-content-inner {
 		.top-content-inner {
+			margin-bottom: 9px;
 			justify-content: center;
 			.price {
 				font-size: 20px;
@@ -438,6 +444,7 @@ select.orderby{
 		}
 	}
 	.pxl-product-title {
+		margin-bottom: 19px;
 		font-size: 22px;
 		font-weight: 500;
 		letter-spacing: 0.05em;
