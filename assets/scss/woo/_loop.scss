@@ -329,8 +329,7 @@ select.orderby{
 	}
 }
 
-.shop-layout-1,
-.shop-layout-2 {
+.shop-layout-1 .grid-item, .shop-layout-2 .grid-item{
 	.pxl-shop-woosmart-wrap {
 		overflow: hidden;
 		.woosw-btn {
