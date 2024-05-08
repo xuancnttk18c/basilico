@@ -85,7 +85,7 @@ function basilico_woocommerce_loop_add_to_cart_link($button, $product, $args){
         esc_attr( isset( $args['class'] ) ? $args['class'] : 'button' ),
         isset( $args['attributes'] ) ? wc_implode_html_attributes( $args['attributes'] ) : '',
         esc_html( $product->add_to_cart_text() ),
-        $product_layout
+        $btn_icon
     );
 }
 
