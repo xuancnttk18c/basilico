@@ -161,6 +161,7 @@ select.orderby{
 	.added_to_cart {
 		width: 47px;
 		height: 47px;
+		@include border-radius(50%);
 		font-size: 0;
 		background-color: $additional01_color;
 		padding: 0;
