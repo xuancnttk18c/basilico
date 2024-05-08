@@ -33,10 +33,19 @@ $item_class          = ['grid-item'];
                 woocommerce_show_product_loop_sale_flash();
                 ?>
             </div>
-            <div class="pxl-add-to-cart">
-                <div class="wrap-btn for-cart">
-                    <?php woocommerce_template_loop_add_to_cart(); ?>
+            <div class="btn-wrapper">
+                <div class="pxl-add-to-cart">
+                    <div class="wrap-btn for-cart">
+                        <?php woocommerce_template_loop_add_to_cart(); ?>
+                    </div>
                 </div>
+                <?php
+                if(class_exists( 'WPCleverWoosw' )){
+                    echo '<div class="pxl-shop-woosmart-wrap">';
+                    do_action( 'woosw_button_position_archive_woosmart' );
+                    echo '</div>';
+                }
+                ?>
             </div>
         </div>
         <div class="pxl-products-content">
@@ -44,13 +53,6 @@ $item_class          = ['grid-item'];
                 <div class="pxl-products-content-inner">
                     <div class="top-content-inner d-md-flex gx-30 justify-content-between">
                         <?php woocommerce_template_loop_price(); ?>
-                        <?php
-                        if(class_exists( 'WPCleverWoosw' )){
-                            echo '<div class="pxl-shop-woosmart-wrap">';
-                            do_action( 'woosw_button_position_archive_woosmart' );
-                            echo '</div>';
-                        }
-                        ?>
                     </div>
                     <?php
                     /**
