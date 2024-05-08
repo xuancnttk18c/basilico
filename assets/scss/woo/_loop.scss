@@ -154,6 +154,22 @@ select.orderby{
 	}
 }
 
+.shop-layout-2 .pxl-products-thumb {
+	.add_to_cart_button,
+	.button.product_type_grouped,
+	.product_type_external,
+	.added_to_cart {
+		width: 47px;
+		height: 47px;
+		font-size: 0;
+		background-color: $secondary_color;
+		padding: 0;
+		.pxl-icon {
+			font-size: 15px;
+		}
+	}
+}
+
 .shop-layout-1 .pxl-shop-item-wrap,
 .shop-layout-2 .pxl-shop-item-wrap {
 	.woocommerce-loop-product__link {
