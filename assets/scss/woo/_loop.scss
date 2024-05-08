@@ -448,7 +448,6 @@ select.orderby{
 	.star-rating > span:before,
 	.star-rating .pxl-star-rated:before,
 	.star-rating[aria-label="Rated 0 out of 5"]:before {
-		font-size: 17px;
 		color: $primary_color;
 	}
 }
