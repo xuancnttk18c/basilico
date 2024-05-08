@@ -168,15 +168,15 @@ select.orderby{
 			.pxl-add-to-cart,
 			.pxl-shop-woosmart-wrap {
 				display: inline-block;
-				@include transform(translateY(-5px));
+				@include transform(translateY(10px));
 				opacity: 0;
 			}
 			.pxl-add-to-cart {
-				@include transition(all 400ms ease);
+				@include transition(all 400ms ease-out);
 			}
 			.pxl-shop-woosmart-wrap {
 				.pxl-add-to-cart {
-					@include transition(all 400ms ease 400ms);
+					@include transition(all 400ms ease-out 400ms);
 				}	
 			}
 			.pxl-add-to-cart + .pxl-shop-woosmart-wrap {
