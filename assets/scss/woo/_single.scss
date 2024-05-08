@@ -703,6 +703,52 @@
 	}
 }
 
+.single-product .shop-layout-5 .pxl-shop-woosmart-wrap {
+	.woosw-btn {
+		background-color: transparent;
+		border: none;
+		color: $heading_color;
+		text-transform: capitalize;
+		line-height: 26px;
+		letter-spacing: 0.02em;
+		font-weight: normal;
+		padding: 10px 0;
+		font-size: 15px;
+		overflow: hidden;
+		&:before {
+			content: "\e985";
+			position: relative;
+			width: 17px;
+			height: 16px;
+			margin-right: 10px;
+			color: $primary_color;
+			font-family: $pxli_font;
+			font-size: 16px;
+			text-indent: 0;
+			line-height: 1;
+			@include transition(color 300ms linear);
+		}
+		&.woosw-adding {
+			&:before {
+				content: "\e95b";
+				font-family: $heading_;
+				@include animation(pxl-spin 2s linear infinite);
+			}
+			&:after{
+				display: none !important;
+			}
+		}
+		&.woosw-added {
+			font-size: 15px;
+			&:before {
+				content: "\e90c";
+				color: $primary_color;
+				left: 1px;
+			}
+		}
+	}
+}
+
 .stock-wishlist{
 	display: flex;
 	align-items: center;
