@@ -73,6 +73,11 @@ if(!function_exists('basilico_woocommerce_catalog_result')){
 /* Cart Button */
 add_filter('woocommerce_loop_add_to_cart_link', 'basilico_woocommerce_loop_add_to_cart_link', 10, 3);
 function basilico_woocommerce_loop_add_to_cart_link($button, $product, $args){
+    $product_layout = basilico()->get_theme_opt('product_layout', 'layout-1');
+    $btn_icon = '<span class="pxl-icon pxli-shopping-bag-2"></span>';
+    if ($product_layout == 'layout-5') {
+        $btn_icon = '<span class="pxl-icon pxli pxli-shopping-cart-plus"></span>';
+    }
     return sprintf(
         '<a href="%s" data-quantity="%s" class="pxl-btn %s" %s><span class="pxl-btn-text">%s</span>%s</a>',
         esc_url( $product->add_to_cart_url() ),
@@ -80,7 +85,7 @@ function basilico_woocommerce_loop_add_to_cart_link($button, $product, $args){
         esc_attr( isset( $args['class'] ) ? $args['class'] : 'button' ),
         isset( $args['attributes'] ) ? wc_implode_html_attributes( $args['attributes'] ) : '',
         esc_html( $product->add_to_cart_text() ),
-        '<span class="pxl-icon pxli-shopping-bag-2"></span>'
+        $product_layout
     );
 }
 
