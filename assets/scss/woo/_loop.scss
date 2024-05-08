@@ -175,9 +175,7 @@ select.orderby{
 				@include transition(all 400ms ease-out);
 			}
 			.pxl-shop-woosmart-wrap {
-				.pxl-add-to-cart {
-					@include transition(all 400ms ease-out 400ms);
-				}	
+				@include transition(all 400ms ease-out 400ms);
 			}
 			.pxl-add-to-cart + .pxl-shop-woosmart-wrap {
 				margin-left: 10px;
