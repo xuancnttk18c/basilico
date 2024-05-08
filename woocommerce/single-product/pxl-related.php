@@ -3,6 +3,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$product_layout = basilico()->get_theme_opt('product_layout', 'layout-1');
+
 if ( $related_products ) : ?>
 	<section class="related products">
 		<?php
@@ -26,7 +28,7 @@ if ( $related_products ) : ?>
 			<?php
 			$post_object = get_post( $related_product->get_id() );
 			setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
-			wc_get_template_part( 'pxl-content', 'product-layout-1' );
+			wc_get_template_part( 'pxl-content-product', esc_attr($product_layout));
 			?>
 		<?php endforeach; ?>
 		<?php woocommerce_product_loop_end(); ?>
