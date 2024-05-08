@@ -328,7 +328,9 @@ select.orderby{
 		}
 	}
 }
-.grid-item {
+
+.shop-layout-1 .pxl-shop-woosmart-wrap,
+.shop-layout-2 .pxl-shop-woosmart-wrap {
 	.pxl-shop-woosmart-wrap {
 		overflow: hidden;
 		.woosw-btn {
@@ -346,8 +348,6 @@ select.orderby{
 			}
 		}	
 	}
-}
-.pxl-shop-woosmart-wrap {
 	.woosw-btn {
 		background-color: transparent;
 		border: none;
