@@ -731,7 +731,7 @@
 		&.woosw-adding {
 			&:before {
 				content: "\e95b";
-				font-family: $heading_;
+				font-family: $pxli_font;
 				@include animation(pxl-spin 2s linear infinite);
 			}
 			&:after{
