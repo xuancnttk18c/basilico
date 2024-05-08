@@ -155,6 +155,19 @@ select.orderby{
 }
 
 .shop-layout-5 .pxl-products-thumb {
+	.btn-wrapper {
+		position: absolute;
+		bottom: 32px;
+		left: 50%;
+		@include transform(translateX(-50%));
+		.pxl-add-to-cart,
+		.pxl-shop-woosmart-wrap {
+			display: inline-block;
+		}
+		.pxl-add-to-cart + .pxl-shop-woosmart-wrap {
+			margin-left: 10px;
+		}
+	}
 	.add_to_cart_button,
 	.button.product_type_grouped,
 	.product_type_external,
@@ -188,7 +201,7 @@ select.orderby{
 			}
 			&.woosw-adding {
 				&:after{
-					content: "\e95b";
+					content: "\e95b" !important;
 					@include animation(pxl-spin 2s linear infinite);
 				}
 			}
