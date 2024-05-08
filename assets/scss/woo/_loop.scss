@@ -480,6 +480,14 @@ select.orderby{
 				font-size: 20px;
 				font-weight: 500;
 				color: $primary_color;
+				del {
+					color: #c8c8c8;
+				}
+				del + ins {
+					&:before {
+						content: '-';
+					}
+				}
 			}
 		}
 	}
