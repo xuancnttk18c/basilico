@@ -14,17 +14,6 @@ $item_class          = ['grid-item'];
 <div <?php wc_product_class( $item_class, $product ); ?>>
     <div class="pxl-shop-item-wrap">
         <div class="pxl-products-thumb relative">
-            <?php
-            $attachment_ids = $product->get_gallery_image_ids();
-            if ( is_array( $attachment_ids ) && ! empty( $attachment_ids ) ) {
-                $first_image_url = wp_get_attachment_url( $attachment_ids[0] );
-                ?>
-                <div class="hover-image">
-                    <img src="<?php echo esc_url($first_image_url)?>" alt="<?php echo esc_attr__('Product Image', 'basilico');?>">
-                </div>
-                <?php
-            }
-            ?>
             <div class="image-wrap">
                 <?php
                 woocommerce_template_loop_product_thumbnail();
