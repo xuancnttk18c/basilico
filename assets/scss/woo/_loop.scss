@@ -172,10 +172,10 @@ select.orderby{
 				opacity: 0;
 			}
 			.pxl-add-to-cart {
-				@include transition(all 400ms ease-out);
+				@include transition(all 400ms ease);
 			}
 			.pxl-shop-woosmart-wrap {
-				@include transition(all 400ms ease-out 400ms);
+				@include transition(all 400ms ease 150ms);
 			}
 			.pxl-add-to-cart + .pxl-shop-woosmart-wrap {
 				margin-left: 10px;
