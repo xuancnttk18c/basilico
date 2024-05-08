@@ -9,7 +9,7 @@ if(is_singular('product')){
 $product_layout = basilico()->get_theme_opt('product_layout', 'layout-1');
 ?>
     <div class="container">
-        <div class="row <?php echo esc_attr($pxl_sidebar['wrap_class']); ?> <?php echo 'shop-'.esc_attr($product_layout); ?>">
+        <div class="row <?php echo esc_attr($pxl_sidebar['wrap_class']); ?> <?php echo 'pxl-shop-'.esc_attr($product_layout); ?>">
             <div id="pxl-content-area" class="<?php echo esc_attr($pxl_sidebar['content_class']) ?>">
                 <main id="pxl-content-main" class="pxl-content-main">
                     <?php

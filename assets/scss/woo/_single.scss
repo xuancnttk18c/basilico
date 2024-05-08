@@ -163,7 +163,7 @@
 		}
 	}
 }
-.shop-layout-5 .woocommerce-product-gallery {
+.pxl-shop-layout-5 .woocommerce-product-gallery {
 	.flex-viewport {
 		@include border-radius(10px);
 		overflow: hidden;
@@ -203,7 +203,7 @@
 		}
 	}
 }
-.shop-layout-5 .wc-gallery-sync {
+.pxl-shop-layout-5 .wc-gallery-sync {
 	.flex-control-thumb {
 		border: none;
 		@include border-radius(10px);
@@ -218,11 +218,11 @@
 	letter-spacing: 0.05em;
 	margin-bottom: 10px;
 }
-.shop-layout-2 .product_title {
+.pxl-shop-layout-2 .product_title {
 	font-size: 35px;
 	font-weight: 600;
 }
-.shop-layout-5 .product_title {
+.pxl-shop-layout-5 .product_title {
 	font-size: 35px;
 	font-weight: 700;
 }
@@ -575,7 +575,7 @@
 	}
 }
 
-.shop-layout-2 .pxl-single-product-summary-wrap {
+.pxl-shop-layout-2 .pxl-single-product-summary-wrap {
 	margin-top: 25px;
 	.price {
 		color: $primary_color;
@@ -624,7 +624,7 @@
 	}
 }
 
-.shop-layout-5 .pxl-single-product-summary-wrap {
+.pxl-shop-layout-5 .pxl-single-product-summary-wrap {
 	.woocommerce-product-rating {
 		.star-rating > span:before {
 			color: $primary_color;
@@ -690,7 +690,7 @@
 	}
 }
 
-.shop-layout-5 .social-share {
+.pxl-shop-layout-5 .social-share {
 	.pxl-icon {
 		background-color: transparent;
 		border: 1px solid $primary_color;
@@ -703,7 +703,7 @@
 	}
 }
 
-.single-product .shop-layout-5 .pxl-shop-woosmart-wrap {
+.single-product .pxl-shop-layout-5 .pxl-shop-woosmart-wrap {
 	.woosw-btn {
 		background-color: transparent;
 		border: none;
@@ -734,7 +734,7 @@
 				font-family: $pxli_font;
 				@include animation(pxl-spin 2s linear infinite);
 			}
-			&:after{
+			&:after {
 				display: none !important;
 			}
 		}
@@ -788,7 +788,7 @@ input.qty[type="number"] {
 	}
 }
 
-.shop-layout-2 .pxl-quantity{
+.pxl-shop-layout-2 .pxl-quantity{
 	.quantity-down, .quantity-up{
 		&:before {
 			font-family: 'Material-Design-Iconic-Font';
@@ -816,7 +816,7 @@ input.qty[type="number"] {
 		}
 	}
 }
-.shop-layout-2 input.qty[type="number"] {
+.pxl-shop-layout-2 input.qty[type="number"] {
 	width: 136px;
 	padding: 0 40px;
 	border: none;
@@ -1098,7 +1098,7 @@ table.shop_attributes{
 		}
 	}
 }
-.shop-layout-2 .woocommerce-tabs {
+.pxl-shop-layout-2 .woocommerce-tabs {
 	margin-top: 5px;
 	ul.wc-tabs {
 		li {
@@ -1175,9 +1175,9 @@ table.shop_attributes{
 	}
 }
 
-.shop-layout-2 .products.related,
-.shop-layout-2 .products.upsells,
-.shop-layout-2 .cross-sells {
+.pxl-shop-layout-2 .products.related,
+.pxl-shop-layout-2 .products.upsells,
+.pxl-shop-layout-2 .cross-sells {
 	.related_subtitle {
 		font-family: $heading_font_family;
 		font-size: 27px;
