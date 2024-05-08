@@ -172,10 +172,10 @@ select.orderby{
 				opacity: 0;
 			}
 			.pxl-add-to-cart {
-				@include transition(all 400ms ease);
+				@include transition(all 400ms ease 150ms);
 			}
 			.pxl-shop-woosmart-wrap {
-				@include transition(all 400ms ease 150ms);
+				@include transition(all 400ms ease);
 			}
 			.pxl-add-to-cart + .pxl-shop-woosmart-wrap {
 				margin-left: 10px;
@@ -234,6 +234,12 @@ select.orderby{
 		.pxl-shop-woosmart-wrap {
 			opacity: 1;
 			@include transform(translateY(0px));
+		}
+		.pxl-add-to-cart {
+			@include transition(all 400ms ease);
+		}
+		.pxl-shop-woosmart-wrap {
+			@include transition(all 400ms ease 150ms);
 		}
 	}
 }
