@@ -373,8 +373,7 @@ select.orderby{
 			}
 		}
 		&.added {
-			opacity: 0;
-			visibility: hidden;
+			display: none;
 			+ .added_to_cart{
 				opacity: 1;
 			}
