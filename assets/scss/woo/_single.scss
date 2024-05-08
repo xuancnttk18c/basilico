@@ -164,6 +164,7 @@
 	}
 }
 .pxl-shop-layout-5 .woocommerce-product-gallery {
+	.woocommerce-product-gallery__image,
 	.flex-viewport {
 		@include border-radius(10px);
 		overflow: hidden;
