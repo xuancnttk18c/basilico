@@ -713,10 +713,10 @@ Redux::setSection($opt_name, array(
             'id'          => 'sidebar_style',
             'type'        => 'select',
             'title'       => esc_html__('Sidebar Style', 'basilico'),
-            'description' => esc_html__('Style 2 is suitable for dark theme.', 'basilico'),
             'options'  => array(
                 'default' => esc_html__('Default', 'basilico'),
-                'style-2' => esc_html__('Style 2', 'basilico'),
+                'style-2' => esc_html__('Style 2 (Suitable for Dark Theme)', 'basilico'),
+                'style-3' => esc_html__('Style 2 (Coffee)', 'basilico'),
             ),
             'default'     => 'default',
         ),
