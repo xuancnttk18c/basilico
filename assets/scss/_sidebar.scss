@@ -96,6 +96,21 @@
         }
     }
 }
+
+#pxl-sidebar-area.style-5 .widget,
+.elementor-widget-sidebar.style-5 .widget,
+.elementor-widget.style-5 .e-sidebar-widget {
+    @include border-radius(10px);
+    .widget-title,
+    &.widget_block h2,
+    .wp-block-search__label,
+    .widgettitle {
+        font-size: 22px;
+        letter-spacing: 0.03em;
+        color: $fff;
+    }
+}
+
 #pxl-sidebar-area .mc4wp-form .mailchimp-form {
     button[type="submit"] {
         font-size: 14px;
