@@ -594,7 +594,7 @@ ul.menu {
                     content: "";
                     display: inline-flex;
                     width: 0;
-                    height: 1px;
+                    max-height: 1px;
                     background-color: $primary_color;
                     position: relative;
                     left: 0;
@@ -718,7 +718,7 @@ ul.menu {
                     font-family: $pxli_font;
                     display: inline-flex;
                     width: 0;
-                    height: auto;
+                    max-height: unset;
                     background-color: transparent;
                     color: $primary_color;
                     position: relative;
