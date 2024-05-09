@@ -726,20 +726,19 @@ ul.menu {
                 align-items: center;
                 padding: 12px 0;
                 position: relative;
+                transition: all 300ms ease 0s;
             }
             > a {
+                margin-left: -25px;
                 &:before {
                     content: "\e9e6";
                     font-family: $pxli_font;
                     display: inline-flex;
                     color: $primary_color;
-                    position: relative;
-                    transition: all 300ms ease 0s;
+                    margin-right: 12px;
                 }
                 &:hover {
-                    &:before {
-                        width: 13px;
-                    }
+                    margin-left: 0px;
                 }
             }
             &.current-cat > a,
