@@ -717,13 +717,24 @@ ul.menu {
                     content: "\e9e6";
                     font-family: $pxli_font;
                     display: inline-flex;
-                    width: auto;
+                    width: 0;
                     height: auto;
                     background-color: transparent;
                     color: $primary_color;
                     position: relative;
                     transition: all 300ms ease 0s;
                 }
+                &:hover {
+                    &:before {
+                        width: 13px;
+                    }
+                }
+            }
+            &.current-cat > a,
+            &.current-cat-parent > a,
+            &.current-menu-item > a,
+            > a:hover {
+                text-decoration: none;
             }
         }
     }

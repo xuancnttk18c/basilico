@@ -268,9 +268,10 @@
 }
 
 /* Widget Product Category */
-.widget_product_categories{
-	.product-categories{
-		li a{
+#pxl-sidebar-area.sidebar-shop.style-1 .widget_product_categories,
+#pxl-sidebar-area.sidebar-shop.style-2 .widget_product_categories {
+	.product-categories {
+		li a {
 			text-transform: uppercase !important;
 			&:before{
 				bottom: 0 !important;
