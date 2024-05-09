@@ -716,7 +716,9 @@ ul.menu {
     .widget_archive,
     .widget_meta,
     .widget_block {
-        overflow: hidden;
+        .product-categories {
+            overflow: hidden;
+        }
         ul li {
             a {
                 font-size: 17px;
