@@ -716,6 +716,7 @@ ul.menu {
     .widget_archive,
     .widget_meta,
     .widget_block {
+        overflow: hidden;
         ul li {
             a {
                 font-size: 17px;
@@ -724,7 +725,7 @@ ul.menu {
                 color: $heading_color;
                 display: flex;
                 align-items: center;
-                padding: 12px 0;
+                padding: 20px 0;
                 position: relative;
                 transition: all 300ms ease 0s;
             }
