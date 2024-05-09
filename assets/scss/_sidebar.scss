@@ -589,33 +589,6 @@ ul.menu {
                 padding: 22px 0;
                 position: relative;
             }
-            > a {
-                &:before {
-                    content: "";
-                    display: inline-flex;
-                    width: 0;
-                    max-height: 1px;
-                    background-color: $primary_color;
-                    position: relative;
-                    left: 0;
-                    transition: all 300ms ease 0s;
-                }
-            }
-            &:last-child > a {
-                border-bottom: none;
-            }
-            &.current-cat > a,
-            &.current-cat-parent > a,
-            &.current-menu-item > a,
-            > a:hover {
-                text-decoration: underline;
-                &:before {
-                    margin-right: 10px;
-                    width: 13px;
-                    left: -1px;
-                    background-color: $primary_color;
-                }
-            }
             &.menu-item-has-children > a {
                 border-bottom: 1px solid $divider_color;
             }
@@ -663,6 +636,48 @@ ul.menu {
         select {
             margin: 10px 0 30px !important;
             max-width: 100% !important;
+        }
+    }
+}
+
+#pxl-main .pxl-sidebar-area.style-1,
+#pxl-main .elementor-widget-sidebar.style-1,
+#pxl-main .pxl-sidebar-area.style-2,
+#pxl-main .elementor-widget-sidebar.style-2 {
+    .widget_categories,
+    .widget_product_categories,
+    .widget_nav_menu,
+    .pxl-nav-menu.e-sidebar-widget,
+    .widget_pages,
+    .widget_archive,
+    .widget_meta,
+    .widget_block {
+        > a {
+            &:before {
+                content: "";
+                display: inline-flex;
+                width: 0;
+                height: 1px;
+                background-color: $primary_color;
+                position: relative;
+                left: 0;
+                transition: all 300ms ease 0s;
+            }
+        }
+        &:last-child > a {
+            border-bottom: none;
+        }
+        &.current-cat > a,
+        &.current-cat-parent > a,
+        &.current-menu-item > a,
+        > a:hover {
+            text-decoration: underline;
+            &:before {
+                margin-right: 10px;
+                width: 13px;
+                left: -1px;
+                background-color: $primary_color;
+            }
         }
     }
 }
@@ -717,9 +732,6 @@ ul.menu {
                     content: "\e9e6";
                     font-family: $pxli_font;
                     display: inline-flex;
-                    width: 0;
-                    max-height: unset;
-                    background-color: transparent;
                     color: $primary_color;
                     position: relative;
                     transition: all 300ms ease 0s;
