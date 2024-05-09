@@ -108,6 +108,7 @@
         font-size: 22px;
         letter-spacing: 0.03em;
         color: #fff;
+        padding: 20px 0;
     }
 }
 
@@ -689,6 +690,45 @@ ul.menu {
         }
     }
 }
+
+#pxl-main .pxl-sidebar-area.style-3,
+#pxl-main .elementor-widget-sidebar.style-3 {
+    .widget_categories,
+    .widget_product_categories,
+    .widget_nav_menu,
+    .pxl-nav-menu.e-sidebar-widget,
+    .widget_pages,
+    .widget_archive,
+    .widget_meta,
+    .widget_block {
+        ul li {
+            a {
+                font-size: 17px;
+                font-weight: normal;
+                letter-spacing: 0.01em;
+                color: $heading_color;
+                display: flex;
+                align-items: center;
+                padding: 12px 0;
+                position: relative;
+            }
+            > a {
+                &:before {
+                    content: "\e9e6";
+                    font-family: $pxli_font;
+                    display: inline-flex;
+                    width: auto;
+                    height: auto;
+                    background-color: transparent;
+                    color: $primary_color;
+                    position: relative;
+                    transition: all 300ms ease 0s;
+                }
+            }
+        }
+    }
+}
+
 
 //* Recent comments widget
 .widget_recent_entries,
