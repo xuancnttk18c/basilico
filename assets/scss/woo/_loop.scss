@@ -3,7 +3,7 @@
 	padding-top: 50px;
 }
 
-.pxl-shop-layout-5 {
+.pxl-shop-layout-5 .woocommerce-pagination {
 	justify-content: center;
 }
 
@@ -24,6 +24,7 @@
 	line-height: 30px;
 	letter-spacing: 0.02em;
 }
+
 select.orderby{
 	@include border-radius(0);
 	padding: 0 20px;
