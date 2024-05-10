@@ -653,31 +653,33 @@ ul.menu {
     .widget_archive,
     .widget_meta,
     .widget_block {
-        > a {
-            &:before {
-                content: "";
-                display: inline-flex;
-                width: 0;
-                height: 1px;
-                background-color: $primary_color;
-                position: relative;
-                left: 0;
-                transition: all 300ms ease 0s;
+        ul li {
+            > a {
+                &:before {
+                    content: "";
+                    display: inline-flex;
+                    width: 0;
+                    height: 1px;
+                    background-color: $primary_color;
+                    position: relative;
+                    left: 0;
+                    transition: all 300ms ease 0s;
+                }
             }
-        }
-        &:last-child > a {
-            border-bottom: none;
-        }
-        &.current-cat > a,
-        &.current-cat-parent > a,
-        &.current-menu-item > a,
-        > a:hover {
-            text-decoration: underline;
-            &:before {
-                margin-right: 10px;
-                width: 13px;
-                left: -1px;
-                background-color: $primary_color;
+            &:last-child > a {
+                border-bottom: none;
+            }
+            &.current-cat > a,
+            &.current-cat-parent > a,
+            &.current-menu-item > a,
+            > a:hover {
+                text-decoration: underline;
+                &:before {
+                    margin-right: 10px;
+                    width: 13px;
+                    left: -1px;
+                    background-color: $primary_color;
+                }
             }
         }
     }
