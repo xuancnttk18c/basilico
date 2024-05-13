@@ -101,22 +101,6 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 		do_action( 'woocommerce_mini_cart_contents' );
 		?>
 	</ul>
-	<p class="woocommerce-mini-cart__total total">
-		<?php
-		/**
-		 * Hook: woocommerce_widget_shopping_cart_total.
-		 *
-		 * @hooked woocommerce_widget_shopping_cart_subtotal - 10
-		 */
-		do_action( 'woocommerce_widget_shopping_cart_total' );
-		?>
-	</p>
-
-	<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
-
-	<p class="woocommerce-mini-cart__buttons buttons"><?php do_action( 'woocommerce_widget_shopping_cart_buttons' ); ?></p>
-
-	<?php do_action( 'woocommerce_widget_shopping_cart_after_buttons' ); ?>
 <?php else : ?>
 	<?php wc_get_template( 'cart/cart-empty.php' ); ?>
 <?php endif; ?>
