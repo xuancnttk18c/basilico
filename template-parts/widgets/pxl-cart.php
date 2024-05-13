@@ -18,7 +18,7 @@ if (!class_exists('WooCommerce')) return;
 
 if (!function_exists('pxl_register_wp_widget')) return;
 add_action('widgets_init', function () {
-    pxl_register_wp_widget('PXL_Widget_Cart');
+	pxl_register_wp_widget('PXL_Widget_Cart');
 });
 
 class PXL_Widget_Cart extends WC_Widget {
@@ -79,16 +79,18 @@ class PXL_Widget_Cart extends WC_Widget {
 		}
 
 		// Insert cart widget placeholder - code in woocommerce.js will update this on page load.
-		echo '<div class="widget_shopping_cart_content"></div>';
-		echo '<p class="woocommerce-mini-cart__total total">';
-			do_action( 'woocommerce_widget_shopping_cart_total' );
-		echo '</p>';
-		do_action( 'woocommerce_widget_shopping_cart_before_buttons' );
-		echo '<p class="woocommerce-mini-cart__buttons buttons">';
-			do_action( 'woocommerce_widget_shopping_cart_buttons' );
-		echo '</p>';
-		do_action( 'woocommerce_widget_shopping_cart_after_buttons' );
 
+		if (WC()->cart->cart_contents_count > 0) {
+			echo '<div class="widget_shopping_cart_content"></div>';
+			echo '<p class="woocommerce-mini-cart__total total">';
+			do_action( 'woocommerce_widget_shopping_cart_total' );
+			echo '</p>';
+			do_action( 'woocommerce_widget_shopping_cart_before_buttons' );
+			echo '<p class="woocommerce-mini-cart__buttons buttons">';
+			do_action( 'woocommerce_widget_shopping_cart_buttons' );
+			echo '</p>';
+			do_action( 'woocommerce_widget_shopping_cart_after_buttons' );
+		}
 		if ( $hide_if_empty ) {
 			echo '</div>';
 		}
