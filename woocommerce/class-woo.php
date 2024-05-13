@@ -153,7 +153,6 @@ if (!class_exists('basilico_Woo')) {
 								echo $this->get_product_image( $product, $image_size ); 
 							}
 							?>
-							<?php wc_get_template( 'single-product/pxl-sale-flash.php');?>
 							<?php if( empty( $video_output) ): ?>
 								<div class="pxl-cursor-icon"><span class="pxl-icon lnil lnil-plus"></span></div> 
 							<?php endif; ?>

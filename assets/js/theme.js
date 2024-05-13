@@ -665,6 +665,31 @@
                 complete: function() {}
             } );
         } );
+        $('.widget_shopping_cart').on( 'change', '.qty', function() {
+            var item_key = $( this ).attr( 'name' );
+            var item_qty = $( this ).val(); 
+            var data = {
+                action: 'basilico_update_product_quantity',
+                cart_item_key: item_key,
+                cart_item_qty: item_qty,
+                security: main_data.nonce,
+            };
+            $.ajax( {
+                url: main_data.ajaxurl,
+                type: 'POST',
+                cache: false,
+                dataType: 'json',
+                data: data,
+                success: function( response ) {  
+                    $( document.body ).trigger( 'wc_fragment_refresh' );
+                    $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
+                },
+                beforeSend: function() {
+                    $('body').addClass('loading');
+                },
+                complete: function() {}
+            } );
+        } );
         $('.pxl-sticky-atc').on( 'change', '.qty', function() {
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val(); 
