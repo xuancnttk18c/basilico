@@ -479,6 +479,9 @@
 			display: inline-block;
 			margin-bottom: 4px;
 		}
+		.cart-item-quantify {
+			display: none;
+		}
 		.amount {
 			margin-left: -1px;
 			font-size: 17px;
@@ -577,9 +580,6 @@
 			letter-spacing: 0.02em;
 			color: $primary_color;
 			font-weight: 400;
-		}
-		.cart-item-quantify {
-			display: none;
 		}
 		del .amount{
 			color: #786c55;

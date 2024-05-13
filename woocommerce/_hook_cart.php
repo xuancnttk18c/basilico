@@ -129,7 +129,7 @@ function basilico_canvas_cart(){
 	if(!class_exists('WooCommerce')) return;
 	$canvas_cart = basilico()->get_theme_opt('canvas_cart_on', 'on');
 	if($canvas_cart != 'on') return;
-	wp_enqueue_script( 'wc-cart-fragments' ); 
+	wp_enqueue_script( 'wc-cart-fragments' );
 	?>
 	<div class="pxl-hidden-template pxl-hidden-template-canvas-cart pos-right">
         <div class="pxl-hidden-template-wrap">

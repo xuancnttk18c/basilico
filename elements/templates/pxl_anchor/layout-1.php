@@ -12,7 +12,7 @@ if($template > 0 ){
 }
 
 $custom_cls = $widget->get_setting('custom_class','');
- 
+
 ?>
 <div class="pxl-anchor-wrap d-flex align-items-center align-content-center <?php echo esc_attr($custom_cls);?>">
 	<a href="#pxl-<?php echo esc_attr($template)?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor' )); ?> data-target="<?php echo esc_attr($target)?>">
