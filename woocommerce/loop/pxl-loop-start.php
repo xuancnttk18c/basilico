@@ -13,9 +13,8 @@ if ($woocommerce_loop['name'] == 'related') {
         'col_lg'  => '2',
         'col_xl'  => '3',  
         'col_xxl' => '3'
-    ]);
+    ]);    
 }
-
 else {
     $row_cols_class = basilico_get_shop_loop_row_column_class();
 }
