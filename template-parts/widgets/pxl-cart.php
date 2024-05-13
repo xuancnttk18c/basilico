@@ -80,13 +80,6 @@ class PXL_Widget_Cart extends WC_Widget {
 
 		// Insert cart widget placeholder - code in woocommerce.js will update this on page load.
 		echo '<div class="widget_shopping_cart_content"></div>';
-
-		if ( $hide_if_empty ) {
-			echo '</div>';
-		}
-
-		$this->widget_end( $args );
-
 		echo '<p class="woocommerce-mini-cart__total total">';
 			do_action( 'woocommerce_widget_shopping_cart_total' );
 		echo '</p>';
@@ -95,5 +88,11 @@ class PXL_Widget_Cart extends WC_Widget {
 			do_action( 'woocommerce_widget_shopping_cart_buttons' );
 		echo '</p>';
 		do_action( 'woocommerce_widget_shopping_cart_after_buttons' );
+
+		if ( $hide_if_empty ) {
+			echo '</div>';
+		}
+
+		$this->widget_end( $args );
 	}
 }
