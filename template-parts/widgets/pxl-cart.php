@@ -91,6 +91,10 @@ class PXL_Widget_Cart extends WC_Widget {
 			echo '</p>';
 			do_action( 'woocommerce_widget_shopping_cart_after_buttons' );
 		}
+		else {
+			wc_get_template( 'cart/cart-empty.php' );
+		}
+
 		if ( $hide_if_empty ) {
 			echo '</div>';
 		}
