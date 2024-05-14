@@ -116,6 +116,7 @@ function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
  
     $fragments['.pxl-anchor-cart .anchor-cart-count'] = '<span class="anchor-cart-count">'.WC()->cart->cart_contents_count.'</span>';
     $fragments['.pxl-anchor-cart .anchor-cart-total'] = '<span class="anchor-cart-total">'.WC()->cart->get_cart_subtotal().'</span>';
+    $fragments['.woocommerce widget_shopping_cart .total-value'] = '<span class="total-value">'.WC()->cart->get_cart_subtotal().'</span>';
 
     ob_start();
 	wc_get_template( 'cart/pxl-cart-content.php' );
