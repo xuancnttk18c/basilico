@@ -281,6 +281,13 @@
 			.total-lbl {
 				color: #fff;
 				letter-spacing: 0.05em;
+				&:before {
+					content: '\e9e9';
+					font-size: 15px;
+					color: $primary_color;
+					font-family: $pxli_font;
+					margin-right: 5px;
+				}
 			}
 			.amount {
 				color: #fff;
@@ -297,13 +304,6 @@
 					letter-spacing: 0.15em;
 					color: $secondary_color;
 					@include transition();
-					&:before {
-						content: '\e9e9';
-						font-size: 15px;
-						color: $primary_color;
-						font-family: $pxli_font;
-						margin-right: 5px;
-					}
 					&:after {
 						content: none;
 					}
