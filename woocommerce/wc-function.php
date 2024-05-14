@@ -120,11 +120,3 @@ function basilico_get_grid_gutter_y_class($option_name, $is_single = false){
     }
     return $g_y_cls;
 }
-
-function basilico_custom_cart_subtotal_endpoint() {
-    // Output the cart subtotal
-    echo WC()->cart->get_cart_subtotal();
-    wp_die();
-}
-add_action('wp_ajax_get_cart_subtotal', 'basilico_custom_cart_subtotal_endpoint');
-add_action('wp_ajax_nopriv_get_cart_subtotal', 'basilico_custom_cart_subtotal_endpoint');

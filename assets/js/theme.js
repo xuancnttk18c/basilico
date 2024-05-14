@@ -696,17 +696,6 @@
         } );
     }
 
-    function basilico_update_cart_widget_subtotal() {
-        $.ajax({
-            url: wc_cart_fragments_params.wc_ajax_url.toString().replace('%%endpoint%%', 'get_cart_subtotal'),
-            type: 'POST',
-            success: function(response) {
-                // Replace the subtotal HTML
-                $('.widget_shopping_cart .woocommerce-mini-cart__total .woocommerce-Price-amount').html(response);
-            }
-        });
-    }
-
     function basilico_mini_cart_dropdown_offset(){
         if( $( '.pxl-cart-dropdown' ).length > 0 ){
             var window_w = $(window).width();
