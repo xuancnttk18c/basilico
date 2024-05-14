@@ -118,13 +118,17 @@ function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
 	$fragments['.pxl-anchor-cart .anchor-cart-total'] = '<span class="anchor-cart-total">'.WC()->cart->get_cart_subtotal().'</span>';
 
 	ob_start();
+	wc_get_template( 'cart/pxl-cart-content.php' );
 	$fragments['.cart-list-wrapper .cart-list-content'] = ob_get_clean();
+
+	ob_start();
 	?>
-	<span class="cart-total">
-		<?php echo WC()->cart->get_cart_total(); ?>
-	</span>
+	<div class="woocommerce-mini-cart__total total d-flex justify-content-between">
+		<span class="total-lbl"><?php echo esc_html__( 'Subtotal', 'basilico' ); ?></span>
+		<span class="total-value"><?php echo WC()->cart->get_cart_subtotal(); ?></span>
+	</div>
 	<?php
-	$fragments['.cart-total'] = ob_get_clean();
+	$fragments['.total'] = ob_get_clean();
 	return $fragments;
 }
 
