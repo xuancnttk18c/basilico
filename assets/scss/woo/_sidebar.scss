@@ -506,13 +506,31 @@
 		}
 		&:last-child {
 			padding-bottom: 0;
-			border-bottom: none;
+			//border-bottom: none;
 		}
 		img {
-			margin-right: 20px;
 			width: 76px;
 			height: 82px;
 			object-fit: cover;
+		}
+		.cart-item-info-inner-wrap {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		.product-name {
+			font-size: 15px;
+			line-height: 26px;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+		}
+		.price {
+			.amount {
+				font-size: 17px;
+				letter-spacing: 0.02em;
+			}
+		}
+		.cart-item-quantify {
+			display: none;
 		}
 	}
 }
