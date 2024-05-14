@@ -197,7 +197,7 @@
 				font-weight: 400;
 			}
 		}
-		.buttons{
+		.buttons {
 			display: flex;
 			justify-content: space-between;
 			flex-wrap: wrap;
@@ -523,12 +523,15 @@
 				margin-bottom: 0;
 				max-height: 47px;
 			}
-			.price .amount {
-				color: $heading_color;
-				font-size: 17px;
-				font-weight: 400;
-				letter-spacing: 0.02em;
+			.price {
 				margin-bottom: 7px;
+				.amount {
+					color: $heading_color;
+					font-size: 17px;
+					font-weight: 400;
+					letter-spacing: 0.02em;
+					margin-bottom: 7px;
+				}
 			}
 			.buttons .button {
 				&:after {
