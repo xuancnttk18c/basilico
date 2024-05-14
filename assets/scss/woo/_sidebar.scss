@@ -146,34 +146,110 @@
 	}
 }
 
-/* Widget Cart */
-.pxl-sidebar-area{
-	.widget_shopping_cart {
-		ul > li {
-			display: flex;
+.sidebar-shop ul.product_list_widget {
+	list-style: none outside;
+	padding: 0;
+	li {
+		padding: 25px 0;
+		position: relative;
+		display: flex;
+		align-items: center;
+		clear: both;
+		overflow: hidden;
+		font-weight: 600;
+		border-bottom: 1px solid $heading_color;
+		&:first-child {
+			padding-top: 5px;
+		}
+		img {
+			width: 76px;
+			height: 82px;
+			object-fit: cover;
+		}
+		.cart-item-wrap {
 			align-items: center;
-			position: relative;
-			padding: 25px 0;
-			border-bottom: 1px solid $heading_color;
-			.remove{
-				position: absolute;
-				top: 25px;
-				right: 0;
-				font-family: 'Nunito Sans';
-				font-size: 16px;
-				line-height: 1;
-				color: $heading_color;
+			.cart-item-info-inner-wrap {
+				display: flex;
+				flex-direction: column-reverse;
+				.product-name {
+					@include text-truncate-multi-line(15px, 1.7, 2);
+					letter-spacing: 0.05em;
+					text-transform: uppercase;
+					margin-bottom: 0;
+					max-height: 47px;
+				}
+				.price {
+					margin-bottom: 7px;
+					.amount {
+						color: $heading_color;
+						font-size: 17px;
+						font-weight: 400;
+						letter-spacing: 0.02em;
+						margin-bottom: 7px;
+					}
+				}
+				.buttons .button {
+					&:after {
+						font-size: 15px;
+					}
+				}
 			}
-			a:hover{
-				color: $secondary_color;
+			.cart-item-quantify {
+				display: none;
 			}
-			.blockOverlay{
-				background-color: #{'rgba(var(--secondary-color-rgb),0.6)'} !important;
-			}
-			&:first-child {
-				padding-top: 5px !important;
-				.remove {
-					top: 5px;
+		}
+	}
+}
+
+/* Widget Cart */
+.pxl-sidebar-area {
+	.widget_shopping_cart {
+		ul {
+			list-style: none outside;
+			padding: 0;
+			li {
+				padding: 25px 0;
+				position: relative;
+				display: flex;
+				align-items: center;
+				clear: both;
+				overflow: hidden;
+				font-weight: 600;
+				border-bottom: 1px solid $heading_color;
+				&:first-child {
+					padding-top: 5px;
+				}
+				img {
+					width: 76px;
+					height: 82px;
+					object-fit: cover;
+				}
+				.cart-item-wrap {
+					align-items: center;
+					.cart-item-info-inner-wrap {
+						display: flex;
+						flex-direction: column-reverse;
+						.product-name {
+							@include text-truncate-multi-line(15px, 1.7, 2);
+							letter-spacing: 0.05em;
+							text-transform: uppercase;
+							margin-bottom: 0;
+							max-height: 47px;
+						}
+						.price {
+							margin-bottom: 7px;
+							.amount {
+								color: $heading_color;
+								font-size: 17px;
+								font-weight: 400;
+								letter-spacing: 0.02em;
+								margin-bottom: 7px;
+							}
+						}
+					}
+					.cart-item-quantify {
+						display: none;
+					}
 				}
 			}
 		}
@@ -513,34 +589,37 @@
 			height: 82px;
 			object-fit: cover;
 		}
-		.cart-item-info-inner-wrap {
-			display: flex;
-			flex-direction: column-reverse;
-			.product-name {
-				@include text-truncate-multi-line(15px, 1.7, 2);
-				letter-spacing: 0.05em;
-				text-transform: uppercase;
-				margin-bottom: 0;
-				max-height: 47px;
-			}
-			.price {
-				margin-bottom: 7px;
-				.amount {
-					color: $heading_color;
-					font-size: 17px;
-					font-weight: 400;
-					letter-spacing: 0.02em;
+		.cart-item-wrap {
+			align-items: center;
+			.cart-item-info-inner-wrap {
+				display: flex;
+				flex-direction: column-reverse;
+				.product-name {
+					@include text-truncate-multi-line(15px, 1.7, 2);
+					letter-spacing: 0.05em;
+					text-transform: uppercase;
+					margin-bottom: 0;
+					max-height: 47px;
+				}
+				.price {
 					margin-bottom: 7px;
+					.amount {
+						color: $heading_color;
+						font-size: 17px;
+						font-weight: 400;
+						letter-spacing: 0.02em;
+						margin-bottom: 7px;
+					}
+				}
+				.buttons .button {
+					&:after {
+						font-size: 15px;
+					}
 				}
 			}
-			.buttons .button {
-				&:after {
-					font-size: 15px;
-				}
+			.cart-item-quantify {
+				display: none;
 			}
-		}
-		.cart-item-quantify {
-			display: none;
 		}
 	}
 }
