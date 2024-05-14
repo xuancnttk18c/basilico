@@ -93,6 +93,7 @@
         $('body').find('.pxl-hidden-template-canvas-cart').removeClass('loading');
         $('body').find('.pxl-cart-dropdown').removeClass('loading');
         $('body').removeClass('loading');
+        basilico_update_cart_widget_subtotal();
     });
     $( document ).on( 'click', '.pxl-anchor-cart .pxl-anchor', function( e ) {
         e.preventDefault();
@@ -105,9 +106,6 @@
             $('.pxl-page-overlay').toggleClass('active');   
             $('.product-main-img .pxl-cursor-icon').addClass('hide'); 
         }
-    });
-    $(document.body).on('wc_fragment_refresh updated_wc_div', function() {
-        basilico_update_cart_widget_subtotal();
     });
 
     function basilico_header_sticky() {
