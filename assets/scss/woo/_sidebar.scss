@@ -577,19 +577,7 @@
 			padding-bottom: 0;
 		}
 		a:has(.product-title) {
-			font-weight: 600;
-			color: $heading_color;
-			text-transform: capitalize;
-			font-size: 20px;
-			line-height: 26px;
-			letter-spacing: 0.02em;
-			flex-shrink: 0;
-			&:hover {
-				color: $primary_color;
-			}
-		}
-		.product-title {
-			font-weight: 600;
+			@include text-truncate-multi-line(20px, 1.05, 2);
 			color: $heading_color;
 			text-transform: capitalize;
 			font-size: 20px;
