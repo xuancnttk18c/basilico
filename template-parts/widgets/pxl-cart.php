@@ -1,19 +1,5 @@
 <?php
-/**
- * Shopping Cart Widget.
- *
- * Displays shopping cart widget.
- *
- * @package WooCommerce\Widgets
- * @version 2.3.0
- */
-
 defined( 'ABSPATH' ) || exit;
-
-/**
- * Widget cart class.
- */
-
 if (!class_exists('WooCommerce')) return;
 
 if (!function_exists('pxl_register_wp_widget')) return;
@@ -23,9 +9,6 @@ add_action('widgets_init', function () {
 
 class PXL_Widget_Cart extends WC_Widget {
 
-	/**
-	 * Constructor.
-	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'woocommerce widget_shopping_cart';
 		$this->widget_description = __( 'Display the customer shopping cart.', 'woocommerce' );
@@ -51,14 +34,6 @@ class PXL_Widget_Cart extends WC_Widget {
 		parent::__construct();
 	}
 
-	/**
-	 * Output widget.
-	 *
-	 * @see WP_Widget
-	 *
-	 * @param array $args     Arguments.
-	 * @param array $instance Widget instance.
-	 */
 	public function widget( $args, $instance ) {
 		if ( apply_filters( 'woocommerce_widget_cart_is_hidden', is_cart() || is_checkout() ) ) {
 			return;
@@ -78,13 +53,11 @@ class PXL_Widget_Cart extends WC_Widget {
 			echo '<div class="hide_cart_widget_if_empty">';
 		}
 
-		// Insert cart widget placeholder - code in woocommerce.js will update this on page load.
-
 		if (WC()->cart->cart_contents_count > 0) {
 			echo '<div class="widget_shopping_cart_content"></div>';
 			?>
 			<div class="woocommerce-mini-cart__total total d-flex">
-				<span class="total-lbl"><?php echo esc_html__( 'Subtotal', 'basilico' ); ?></span>
+				<span class="total-lbl"><?php echo esc_html__( 'Subtotal:', 'basilico' ); ?></span>
 				<span class="total-value"><?php echo WC()->cart->get_cart_subtotal(); ?></span>
 			</div>
 			<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
