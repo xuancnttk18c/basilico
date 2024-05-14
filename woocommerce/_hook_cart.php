@@ -128,7 +128,7 @@ function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
 		<span class="total-value"><?php echo WC()->cart->get_cart_subtotal(); ?></span>
 	</div>
 	<?php
-	$fragments['.total'] = ob_get_clean();
+	$fragments['.woocommerce widget_shopping_cart .total'] = ob_get_clean();
 	return $fragments;
 }
 
