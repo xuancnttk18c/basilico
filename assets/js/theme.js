@@ -106,6 +106,9 @@
             $('.product-main-img .pxl-cursor-icon').addClass('hide'); 
         }
     });
+    $('body').on('change', '.quantity input', function() {
+        updateCartSubtotal();
+    });
 
     function basilico_header_sticky() {
         'use strict';
@@ -693,6 +696,19 @@
                 $(this).closest('.pxl-sticky-atc').find('.add_to_cart_button').attr('data-quantity',item_qty);
             }
         } );
+    }
+
+    function basilico_update_cart_widget_subtotal() {
+        $.ajax({
+            type: 'POST',
+            url: custom_ajax_object.ajaxurl,
+            data: {
+                action: 'update_cart_subtotal'
+            },
+            success: function(response) {
+                $('.widget_shopping_cart .total .amount').html(response);
+            }
+        });
     }
 
     function basilico_mini_cart_dropdown_offset(){
