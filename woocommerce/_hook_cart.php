@@ -3,7 +3,7 @@
 if(!function_exists('basilico_woocommerce_cart_actions')){
 	add_action('woocommerce_cart_actions','basilico_woocommerce_cart_actions', 0);
 	function basilico_woocommerce_cart_actions(){
-	?>
+		?>
 		<div class="pxl-cart-acctions row justify-content-between g-30">
 			<?php if ( wc_coupons_enabled() ) { ?>
 				<div class="coupon pxl-coupon col-12 col-md-auto">
@@ -44,7 +44,7 @@ if(!function_exists('basilico_woocommerce_return_to_shop')){
 				<?php esc_html_e( 'Continue Shopping', 'basilico' ); ?>
 			</a>
 		</div>
-	<?php
+		<?php
 	}
 }
 
@@ -100,28 +100,32 @@ if ( ! function_exists( 'basilico_widget_shopping_cart_proceed_to_checkout' ) ) 
 
 add_filter('woocommerce_add_to_cart_fragments', 'basilico_woocommerce_add_to_cart_fragments', 10, 1 );
 function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
-    
-    ob_start();
-    ?>
-    <span class="header-count cart_total"><?php echo WC()->cart->cart_contents_count; ?></span>
-    <?php
-    $fragments['.cart_total'] = ob_get_clean();
-    $fragments['.mini-cart-count'] = '<span class="mini-cart-total mini-cart-count">'.WC()->cart->cart_contents_count.'</span>';
 
-    ob_start();
-		wc_get_template( 'cart/mini-cart-totals.php' );
+	ob_start();
+	?>
+	<span class="header-count cart_total"><?php echo WC()->cart->cart_contents_count; ?></span>
+	<?php
+	$fragments['.cart_total'] = ob_get_clean();
+	$fragments['.mini-cart-count'] = '<span class="mini-cart-total mini-cart-count">'.WC()->cart->cart_contents_count.'</span>';
+
+	ob_start();
+	wc_get_template( 'cart/mini-cart-totals.php' );
 	$mini_cart_totals = ob_get_clean();
-    $fragments['.pxl-hidden-template-canvas-cart .cart-footer-inner'] = $mini_cart_totals;
-    $fragments['.pxl-cart-dropdown .cart-footer-inner'] = $mini_cart_totals;
- 
-    $fragments['.pxl-anchor-cart .anchor-cart-count'] = '<span class="anchor-cart-count">'.WC()->cart->cart_contents_count.'</span>';
-    $fragments['.pxl-anchor-cart .anchor-cart-total'] = '<span class="anchor-cart-total">'.WC()->cart->get_cart_subtotal().'</span>';
+	$fragments['.pxl-hidden-template-canvas-cart .cart-footer-inner'] = $mini_cart_totals;
+	$fragments['.pxl-cart-dropdown .cart-footer-inner'] = $mini_cart_totals;
 
-    ob_start();
+	$fragments['.pxl-anchor-cart .anchor-cart-count'] = '<span class="anchor-cart-count">'.WC()->cart->cart_contents_count.'</span>';
+	$fragments['.pxl-anchor-cart .anchor-cart-total'] = '<span class="anchor-cart-total">'.WC()->cart->get_cart_subtotal().'</span>';
+
+	ob_start();
 	$fragments['.cart-list-wrapper .cart-list-content'] = ob_get_clean();
-	$fragments['.woocommerce widget_shopping_cart .woocommerce-mini-cart__total .woocommerce-Price-amount'] = WC()->cart->get_cart_subtotal();
-
-    return $fragments;
+	?>
+	<span class="cart-total">
+		<?php echo WC()->cart->get_cart_total(); ?>
+	</span>
+	<?php
+	$fragments['.cart-total'] = ob_get_clean();
+	return $fragments;
 }
 
 add_action( 'pxltheme_anchor_target', 'basilico_canvas_cart');
@@ -132,28 +136,28 @@ function basilico_canvas_cart(){
 	wp_enqueue_script( 'wc-cart-fragments' );
 	?>
 	<div class="pxl-hidden-template pxl-hidden-template-canvas-cart pos-right">
-        <div class="pxl-hidden-template-wrap">
-        	<div class="pxl-panel-header">
-                <div class="panel-header-inner d-flex justify-content-between">
-                    <span class="pxl-title h4"><?php echo esc_html__( 'Shopping Cart', 'basilico' ) ?> (<span class="mini-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>)</span>
-                    <span class="pxl-close lnil lnil-close" title="<?php echo esc_attr__( 'Close', 'basilico' ) ?>"></span>
-                </div>
-            </div>
-            <div class="pxl-panel-content widget_shopping_cart custom_scroll">
-                <div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
-            </div>
-            <div class="pxl-panel-footer">
-            	<?php wc_get_template( 'cart/mini-cart-totals.php' ); ?>
-            </div>
-        </div>
-    </div> 
-    <?php
+		<div class="pxl-hidden-template-wrap">
+			<div class="pxl-panel-header">
+				<div class="panel-header-inner d-flex justify-content-between">
+					<span class="pxl-title h4"><?php echo esc_html__( 'Shopping Cart', 'basilico' ) ?> (<span class="mini-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>)</span>
+					<span class="pxl-close lnil lnil-close" title="<?php echo esc_attr__( 'Close', 'basilico' ) ?>"></span>
+				</div>
+			</div>
+			<div class="pxl-panel-content widget_shopping_cart custom_scroll">
+				<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+			</div>
+			<div class="pxl-panel-footer">
+				<?php wc_get_template( 'cart/mini-cart-totals.php' ); ?>
+			</div>
+		</div>
+	</div> 
+	<?php
 }
 
 add_action( 'wp_ajax_basilico_update_product_quantity', 'basilico_update_product_quantity' );
 add_action( 'wp_ajax_nopriv_basilico_update_product_quantity', 'basilico_update_product_quantity' );
 function basilico_update_product_quantity() {
-	 
+
 	wc_maybe_define_constant( 'WOOCOMMERCE_CART', true );
 
 	$nonce_value 		= sanitize_text_field( wp_unslash($_POST['security']) ) ;
@@ -161,7 +165,7 @@ function basilico_update_product_quantity() {
 	$cart_item_quantity = isset( $_POST['cart_item_qty'] ) ? floatval( sanitize_text_field( $_POST['cart_item_qty'] ) ) : 0;
 	$fragments          = array();
 	$errors             = new \WP_Error();
-  
+
 	if( wp_verify_nonce( $nonce_value, 'basilico-security' )){
 		if ( ! empty( $cart_item_key ) && ! empty( WC()->cart->get_cart_item( $cart_item_key ) ) ) { 
 			
@@ -175,7 +179,7 @@ function basilico_update_product_quantity() {
 		} else { 
 			$errors->add( 'cart-item-null', esc_html__( 'Cart item not exist!', 'basilico' ) );
 		}
- 
+
 		if ( ! $errors->has_errors() ) {
 			wp_send_json_success( [
 				'fragments' => $fragments,
@@ -194,7 +198,7 @@ function basilico_remove_from_cart() {
 	$cart_item_key = wc_clean( isset( $_POST['cart_item_key'] ) ? wp_unslash( $_POST['cart_item_key'] ) : '' );
 	$fragments          = array();
 	$errors             = new \WP_Error();
-	 
+
 	if ( $cart_item_key && false !== WC()->cart->remove_cart_item( $cart_item_key ) ) {
 		wp_send_json_success( [
 			'fragments' => $fragments,
