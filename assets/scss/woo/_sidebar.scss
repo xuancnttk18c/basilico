@@ -544,8 +544,14 @@
 				.product-price {
 					font-size: 17px;
 					font-weight: 300;
-					color: $heading_color;
 					letter-spacing: 0.02em;
+					margin-bottom: 9px;
+					del {
+						color: #666666;
+					}
+					ins {
+						color: $heading_color;
+					}
 				}
 				.star-rating {
 					display: none;
@@ -555,7 +561,7 @@
 					font-size: 15px;
 					font-weight: 500;
 					letter-spacing: 0.05em;
-					@include text-truncate-multi-line(15px, 1.2, 2);
+					@include text-truncate-multi-line(15px, 1.7, 2);
 				}
 			}
 		}
