@@ -121,6 +121,7 @@ function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
 	wc_get_template( 'cart/pxl-cart-content.php' );
 	$fragments['.cart-list-wrapper .cart-list-content'] = ob_get_clean();
 
+	ob_start();
 	wc_get_template( 'cart/mini-cart-totals.php' );
 	$fragments['cart-list-wrapper .cart-footer-inner'] = ob_get_clean();
 
