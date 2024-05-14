@@ -26,7 +26,7 @@
         basilico_scroll_to_top();
         basilico_footer_fixed();
         basilico_magnific_popup();
-        //basilico_scroll_to_id();
+        basilico_scroll_to_id();
 
         //* For Element
         basilico_element_parallax();
@@ -365,7 +365,7 @@
     //* Scroll To ID
     function basilico_scroll_to_id() {
         if ($('.pxl-links').length == 0) return;
-        
+
         const sections = document.querySelectorAll("section[id]");
         window.addEventListener("scroll", navHighlighter);
         function navHighlighter() {
