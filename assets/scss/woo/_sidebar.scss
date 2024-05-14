@@ -516,17 +516,22 @@
 		.cart-item-info-inner-wrap {
 			display: flex;
 			flex-direction: column-reverse;
-		}
-		.product-name {
-			font-size: 15px;
-			line-height: 26px;
-			letter-spacing: 0.05em;
-			text-transform: uppercase;
-		}
-		.price {
-			.amount {
+			.product-name {
+				@include text-truncate-multi-line(15px, 1.7, 2);
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				margin-bottom: 0;
+			}
+			.price .amount {
+				color: $heading_color;
 				font-size: 17px;
+				font-weight: 400;
 				letter-spacing: 0.02em;
+			}
+			.buttons .button {
+				&:after {
+					font-size: 15px;
+				}
 			}
 		}
 		.cart-item-quantify {
