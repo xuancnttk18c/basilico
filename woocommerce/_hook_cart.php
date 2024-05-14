@@ -106,7 +106,6 @@ function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
     <span class="header-count cart_total"><?php echo WC()->cart->cart_contents_count; ?></span>
     <?php
     $fragments['.cart_total'] = ob_get_clean();
-    $fragments['.woocommerce-mini-cart__total'] = ob_get_clean();
     $fragments['.mini-cart-count'] = '<span class="mini-cart-total mini-cart-count">'.WC()->cart->cart_contents_count.'</span>';
 
     ob_start();
