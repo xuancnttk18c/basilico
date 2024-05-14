@@ -558,10 +558,11 @@
 				}
 				a:has(.product-title) {
 					font-family: $heading_font_family;
-					font-size: 15px;
+					@include text-truncate-multi-line(15px, 1.7, 2);
 					font-weight: 500;
 					letter-spacing: 0.05em;
-					@include text-truncate-multi-line(15px, 1.7, 2);
+					color: $heading_color;
+					text-transform: uppercase;
 				}
 			}
 		}
