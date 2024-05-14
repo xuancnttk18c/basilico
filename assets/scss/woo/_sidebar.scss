@@ -569,12 +569,17 @@
 .pxl-sidebar-area.style-2 .widget_products {
 	ul li {
 		border-bottom: 1px solid $divider_color;
-		&:first-child {
-			padding-top: 5px;
+		&:after {
+			content: '';
+			border-top: 1px solid $primary_color;
+			bottom: 0;
+			left: -23px;
+			right: -23px;
 		}
 		&:last-child {
-			border-bottom: none;
-			padding-bottom: 0;
+			&:after {
+				content: none;
+			}
 		}
 		a:has(.product-title) {
 			@include text-truncate-multi-line(20px, 1.05, 2);
@@ -586,6 +591,9 @@
 				color: $primary_color;
 			}
 		}
+		.star-rating {
+			display: block;
+		}
 		.amount {
 			margin-left: -1px;
 			font-size: 17px;
@@ -593,15 +601,10 @@
 			color: $primary_color;
 			font-weight: 400;
 		}
-		del .amount{
-			color: #786c55;
-		}
-	}
-	.product-price del {
-		display: none;
 	}
 	.star-rating {
-		display: inline-block;
+		font-size: 17px;
+		display: block;
 		margin-left: 11px;
 	}
 }
