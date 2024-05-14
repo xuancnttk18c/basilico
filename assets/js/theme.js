@@ -106,8 +106,8 @@
             $('.product-main-img .pxl-cursor-icon').addClass('hide'); 
         }
     });
-    $('body').on('change', '.quantity input', function() {
-        updateCartSubtotal();
+    $(document.body).on('wc_fragment_refresh updated_wc_div', function() {
+        basilico_update_cart_widget_subtotal();
     });
 
     function basilico_header_sticky() {
@@ -700,13 +700,11 @@
 
     function basilico_update_cart_widget_subtotal() {
         $.ajax({
+            url: wc_cart_fragments_params.wc_ajax_url.toString().replace('%%endpoint%%', 'get_cart_subtotal'),
             type: 'POST',
-            url: custom_ajax_object.ajaxurl,
-            data: {
-                action: 'update_cart_subtotal'
-            },
             success: function(response) {
-                $('.widget_shopping_cart .total .amount').html(response);
+                // Replace the subtotal HTML
+                $('.widget_shopping_cart .woocommerce-mini-cart__total .woocommerce-Price-amount').html(response);
             }
         });
     }

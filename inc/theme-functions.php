@@ -371,77 +371,77 @@ function basilico_comment_list($comment, $args, $depth)
         $tag       = 'li';
         $add_below = 'div-comment';
     }
-?>
+    ?>
     <<?php echo '' . $tag ?> <?php comment_class(empty($args['has_children']) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
-        <?php if ('div' != $args['style']) : ?>
-            <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-            <?php endif; ?>
-            <div class="comment-inner">
-                <?php if ($args['avatar_size'] != 0) echo get_avatar($comment, 90); ?>
-                <div class="comment-content">
-                    <h4 class="comment-title">
-                        <?php printf('%s', get_comment_author_link()); ?>
-                    </h4>
-                    <div class="comment-meta">
-                        <span class="comment-date">
-                            <?php echo get_comment_date() . ' - ' . get_comment_time(); ?>
-                        </span>
-                    </div>
-                    <div class="comment-text"><?php comment_text(); ?></div>
-                    <div class="comment-reply">
-                        <?php comment_reply_link(array_merge($args, array(
-                            'add_below' => $add_below,
-                            'depth'     => $depth,
-                            'max_depth' => $args['max_depth']
-                        ))); ?>
-                    </div>
+    <?php if ('div' != $args['style']) : ?>
+        <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+        <?php endif; ?>
+        <div class="comment-inner">
+            <?php if ($args['avatar_size'] != 0) echo get_avatar($comment, 90); ?>
+            <div class="comment-content">
+                <h4 class="comment-title">
+                    <?php printf('%s', get_comment_author_link()); ?>
+                </h4>
+                <div class="comment-meta">
+                    <span class="comment-date">
+                        <?php echo get_comment_date() . ' - ' . get_comment_time(); ?>
+                    </span>
+                </div>
+                <div class="comment-text"><?php comment_text(); ?></div>
+                <div class="comment-reply">
+                    <?php comment_reply_link(array_merge($args, array(
+                        'add_below' => $add_below,
+                        'depth'     => $depth,
+                        'max_depth' => $args['max_depth']
+                    ))); ?>
                 </div>
             </div>
-            <?php if ('div' != $args['style']) : ?>
-            </div>
+        </div>
+        <?php if ('div' != $args['style']) : ?>
+        </div>
     <?php endif;
-        }
+}
 
 
-        function basilico_ajax_paginate_links($link)
-        {
-            $parts = parse_url($link);
-            if (!isset($parts['query'])) return $link;
-            parse_str($parts['query'], $query);
-            if (isset($query['page']) && !empty($query['page'])) {
-                return '#' . $query['page'];
-            } else {
-                return '#1';
-            }
-        }
+function basilico_ajax_paginate_links($link)
+{
+    $parts = parse_url($link);
+    if (!isset($parts['query'])) return $link;
+    parse_str($parts['query'], $query);
+    if (isset($query['page']) && !empty($query['page'])) {
+        return '#' . $query['page'];
+    } else {
+        return '#1';
+    }
+}
 
 
-        function basilico_hex_rgb($color)
-        {
+function basilico_hex_rgb($color)
+{
 
-            $default = '0,0,0';
+    $default = '0,0,0';
 
             //Return default if no color provided
-            if (empty($color))
-                return $default;
+    if (empty($color))
+        return $default;
 
             //Sanitize $color if "#" is provided 
-            if ($color[0] == '#') {
-                $color = substr($color, 1);
-            }
+    if ($color[0] == '#') {
+        $color = substr($color, 1);
+    }
 
             //Check if color has 6 or 3 characters and get values
-            if (strlen($color) == 6) {
-                $hex = array($color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5]);
-            } elseif (strlen($color) == 3) {
-                $hex = array($color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2]);
-            } else {
-                return $default;
-            }
+    if (strlen($color) == 6) {
+        $hex = array($color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5]);
+    } elseif (strlen($color) == 3) {
+        $hex = array($color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2]);
+    } else {
+        return $default;
+    }
 
             //Convert hexadec to rgb
-            $rgb =  array_map('hexdec', $hex);
-            $output = implode(",", $rgb);
+    $rgb =  array_map('hexdec', $hex);
+    $output = implode(",", $rgb);
             //Return rgb(a) color string
-            return $output;
-        }
+    return $output;
+}
