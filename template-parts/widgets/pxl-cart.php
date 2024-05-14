@@ -82,7 +82,7 @@ class PXL_Widget_Cart extends WC_Widget {
 
 		if (WC()->cart->cart_contents_count > 0) {
 			echo '<div class="widget_shopping_cart_content"></div>';
-			echo '<p class="woocommerce-mini-cart__total total anchor-cart-total">';
+			echo '<p class="woocommerce-mini-cart__total total>';
 			do_action( 'woocommerce_widget_shopping_cart_total' );
 			echo '</p>';
 			do_action( 'woocommerce_widget_shopping_cart_before_buttons' );
