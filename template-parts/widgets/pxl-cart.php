@@ -82,16 +82,7 @@ class PXL_Widget_Cart extends WC_Widget {
 
 		if (WC()->cart->cart_contents_count > 0) {
 			echo '<div class="widget_shopping_cart_content"></div>';
-			?>
-			<div class="woocommerce-mini-cart__total total d-flex justify-content-between">
-				<span class="total-lbl"><?php echo esc_html__( 'Subtotal', 'basilico' ); ?></span>
-				<span class="total-value"><?php echo WC()->cart->get_cart_subtotal(); ?></span>
-			</div>
-			<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
-			<div class="woocommerce-mini-cart__buttons buttons">
-				<?php do_action( 'woocommerce_widget_shopping_cart_buttons' ); ?>	
-			</div>
-			<?php
+			wc_get_template( 'cart/mini-cart-totals.php' );
 		}
 		else {
 			wc_get_template( 'cart/cart-empty.php' );
