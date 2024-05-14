@@ -568,10 +568,11 @@
 
 .pxl-sidebar-area.style-2 .widget_products {
 	ul li {
-		border-bottom: 1px solid $divider_color;
+		position: relative;
+		overflow: visible;
 		&:after {
 			content: '';
-			border-top: 1px solid $primary_color;
+			border-bottom: 1px solid $divider_color;
 			bottom: 0;
 			left: -23px;
 			right: -23px;
