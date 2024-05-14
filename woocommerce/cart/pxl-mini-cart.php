@@ -5,15 +5,15 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_before_mini_cart' ); ?> 
 
 <?php if (!WC()->cart->is_empty()) : ?>
-<ul class="woocommerce-mini-cart cart_list product_list_widget <?php echo esc_attr( $args['list_class'] ); ?>">
-	<?php
-	do_action( 'woocommerce_before_mini_cart_contents' );
+	<ul class="woocommerce-mini-cart cart_list product_list_widget <?php echo esc_attr( $args['list_class'] ); ?>">
+		<?php
+		do_action( 'woocommerce_before_mini_cart_contents' );
 
-	foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-		$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
-		$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+			$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+			$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
 
-		if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_widget_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_widget_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 				/**
 				 * Filter the product name.
 				 *
@@ -62,7 +62,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 											</a>
 										<?php endif; ?>
 									</h5>
-									
+									 
 									<?php echo wc_get_formatted_cart_item_data( $cart_item ); ?>
 									<?php echo '<div class="price">' . $product_price . '</div>'; ?>
 								</div>
@@ -101,23 +101,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 		do_action( 'woocommerce_mini_cart_contents' );
 		?>
 	</ul>
-	<p class="woocommerce-mini-cart__total total">
-		<?php
-		/**
-		 * Hook: woocommerce_widget_shopping_cart_total.
-		 *
-		 * @hooked woocommerce_widget_shopping_cart_subtotal - 10
-		 */
-		do_action( 'woocommerce_widget_shopping_cart_total' );
-		?>
-	</p>
-
-	<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
-
-	<p class="woocommerce-mini-cart__buttons buttons"><?php do_action( 'woocommerce_widget_shopping_cart_buttons' ); ?></p>
-
-	<?php do_action( 'woocommerce_widget_shopping_cart_after_buttons' ); ?>
 <?php else : ?>
 	<?php wc_get_template( 'cart/cart-empty.php' ); ?>
 <?php endif; ?>
-<?php do_action( 'woocommerce_after_mini_cart' ); ?>
+	<?php do_action( 'woocommerce_after_mini_cart' ); ?>
