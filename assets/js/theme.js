@@ -363,23 +363,25 @@
     }
 
     //* Scroll To ID
-    // function basilico_scroll_to_id() {
-    //     const sections = document.querySelectorAll("section[id]");
-    //     window.addEventListener("scroll", navHighlighter);
-    //     function navHighlighter() {
-    //         let scrollY = window.pageYOffset;
-    //         sections.forEach(current => {
-    //             const sectionHeight = current.offsetHeight;
-    //             const sectionTop = current.offsetTop - 50;
-    //             const sectionId = current.getAttribute("id");
-    //             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight && document.querySelector("a[href*=" + sectionId + "]")){
-    //                 document.querySelector("a[href*=" + sectionId + "]").classList.add("active");
-    //             } else if (document.querySelector("a[href*=" + sectionId + "]")) {
-    //                 document.querySelector("a[href*=" + sectionId + "]").classList.remove("active");
-    //             }
-    //         });
-    //     };
-    // }
+    function basilico_scroll_to_id() {
+        if ($('.pxl-links').length == 0) return;
+        
+        const sections = document.querySelectorAll("section[id]");
+        window.addEventListener("scroll", navHighlighter);
+        function navHighlighter() {
+            let scrollY = window.pageYOffset;
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 50;
+                const sectionId = current.getAttribute("id");
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight && document.querySelector("a[href*=" + sectionId + "]")){
+                    document.querySelector("a[href*=" + sectionId + "]").classList.add("active");
+                } else if (document.querySelector("a[href*=" + sectionId + "]")) {
+                    document.querySelector("a[href*=" + sectionId + "]").classList.remove("active");
+                }
+            });
+        };
+    }
 
     //* Footer Fixed
     function basilico_footer_fixed() {
