@@ -82,9 +82,14 @@ class PXL_Widget_Cart extends WC_Widget {
 
 		if (WC()->cart->cart_contents_count > 0) {
 			echo '<div class="widget_shopping_cart_content"></div>';
-			echo '<div class="pxl-panel-footer">';
-            	wc_get_template( 'cart/mini-cart-totals.php' );
-            echo '</div>';
+			echo '<p class="woocommerce-mini-cart__total total anchor-cart-total">';
+			do_action( 'woocommerce_widget_shopping_cart_total' );
+			echo '</p>';
+			do_action( 'woocommerce_widget_shopping_cart_before_buttons' );
+			echo '<p class="woocommerce-mini-cart__buttons buttons">';
+			do_action( 'woocommerce_widget_shopping_cart_buttons' );
+			echo '</p>';
+			do_action( 'woocommerce_widget_shopping_cart_after_buttons' );
 		}
 		else {
 			wc_get_template( 'cart/cart-empty.php' );
