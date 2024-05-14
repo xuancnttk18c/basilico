@@ -93,7 +93,6 @@
         $('body').find('.pxl-hidden-template-canvas-cart').removeClass('loading');
         $('body').find('.pxl-cart-dropdown').removeClass('loading');
         $('body').removeClass('loading');
-        basilico_update_cart_widget_subtotal();
     });
     $( document ).on( 'click', '.pxl-anchor-cart .pxl-anchor', function( e ) {
         e.preventDefault();
