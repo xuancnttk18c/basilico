@@ -261,6 +261,9 @@ function basilico_fonts_url()
     if ( 'off' !== _x( 'on', 'Kanit font: on or off', 'basilico' ) ) {
         $fonts[] = 'Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900';
     }
+    if ( 'off' !== _x( 'on', 'Nunito Sans font: on or off', 'basilico' ) ) {
+        $fonts[] = 'Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540';
+    }
     if ($fonts) {
         $fonts_url = add_query_arg(array(
             'display' => 'swap',

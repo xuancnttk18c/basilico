@@ -52,7 +52,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 						</div>
 						<div class="cart-item-info col"> 
 							<div class="cart-item-info-inner row gx-20">
-								<div class="col">
+								<div class="cart-item-info-inner-wrap col">
 									<h5 class="product-name">
 										<?php if ( empty( $product_permalink ) ) : ?>
 											<?php echo ''.$product_name; ?>
