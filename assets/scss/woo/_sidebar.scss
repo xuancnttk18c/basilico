@@ -550,7 +550,7 @@
 				.star-rating {
 					display: none;
 				}
-				a.product-title {
+				a:has(.product-title) {
 					font-family: $heading_font_family;
 					font-size: 15px;
 					font-weight: 500;
