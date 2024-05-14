@@ -547,10 +547,7 @@
 					letter-spacing: 0.02em;
 					margin-bottom: 9px;
 					del {
-						color: #666666;
-					}
-					ins {
-						color: $heading_color;
+						display: none;
 					}
 				}
 				.star-rating {
@@ -579,7 +576,7 @@
 			border-bottom: none;
 			padding-bottom: 0;
 		}
-		a {
+		a:has(.product-title) {
 			font-weight: 600;
 			color: $heading_color;
 			text-transform: capitalize;
