@@ -55,7 +55,7 @@ class PXL_Widget_Cart extends WC_Widget {
 
 		if (WC()->cart->cart_contents_count > 0) {
 			echo '<div class="widget_shopping_cart_content"></div>';
-			echo '<div class="cart-footer-inner"></div>';
+			wc_get_template( 'cart/mini-cart-totals.php' );
 		}
 		else {
 			wc_get_template( 'cart/cart-empty.php' );
