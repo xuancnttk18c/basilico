@@ -554,6 +554,9 @@
 		background-color: transparent;
 		transform: none;
 		@include border-radius(50%);
+		width: 8px;
+		height: 8px;
+		top: -3px;
 		&:before {
 			content: '';
 			position: absolute;
@@ -561,7 +564,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			border: 4px solid $secondary_color;
+			background-color: $secondary_color;
 			@include border-radius(50%);
 			z-index: 2;
 		}
@@ -580,10 +583,20 @@
 	}
 	.price_slider_amount {
 		button {
+			font-family: $heading_font_family;
+			font-weight: 500;
+			letter-spacing: 0.15em;
 			padding: 0 30px;
 			height: 40px;
-			border: 1px solid $secondary_color;
+			border: 1px solid $primary_color;
 			@include border-radius(5px);
+			&:before {
+				content: none;
+			}
+			&:hover {
+				background-color: $primary_color;
+				color: #fff;
+			}
 		}
 	}
 }
