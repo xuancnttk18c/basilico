@@ -346,6 +346,9 @@
 	.widget_shopping_cart {
 		ul li {
 			border-bottom-color: rgba($secondary_color_rgb, 0.1);
+			img {
+				@include border-radius(5px);
+			}
 			&:last-child {
 				padding-bottom: 0;
 				border-bottom: none;
@@ -357,6 +360,7 @@
 						font-weight: 500;
 					}
 					.price {
+						font-weight: 500;
 						margin-bottom: 0;
 					}
 				}
@@ -371,6 +375,7 @@
 		}
 		.total {
 			margin-top: 25px;
+			margin-bottom: 15px;
 			.total-lbl {
 				color: #fff;
 				letter-spacing: 0.05em;
@@ -388,6 +393,7 @@
 			}
 		}
 		.buttons {
+			margin-bottom: -13px;
 			.button {
 				color: $secondary_color;
 				span {
@@ -405,6 +411,7 @@
 					content: "\f2ee";
 					font-family: "Material-Design-Iconic-Font";
 					font-size: 15px;
+					font-weight: 700;
 					color: $primary_color;
 				}
 				&:hover {
