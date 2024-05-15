@@ -347,7 +347,7 @@
 		ul li {
 			border-bottom-color: rgba($secondary_color_rgb, 0.1);
 			&:last-child {
-				padding-bottom: none;
+				padding-bottom: 0;
 				border-bottom: none;
 			}
 			.cart-item-wrap {
@@ -355,9 +355,6 @@
 					.product-name {
 						@include text-truncate-multi-line(17px, 1.65, 2);
 						font-weight: 500;
-						text-transform: capitalize;
-						margin-bottom: 0;
-						max-height: 47px;
 					}
 					.price {
 						margin-bottom: 0;
