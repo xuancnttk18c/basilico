@@ -703,6 +703,7 @@ ul.menu {
             &.current-cat-parent > a,
             &.current-menu-item > a,
             > a:hover {
+                color: $primary_color;
                 text-decoration: none;
             }
         }

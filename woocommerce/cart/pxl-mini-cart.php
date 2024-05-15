@@ -29,7 +29,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 					echo apply_filters(  
 						'woocommerce_cart_item_remove_link',
 						sprintf(
-							'<a href="%s" class="remove js-remove-from-cart remove_from_cart_button" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s"><span class="lnil lnil-close"></span></a>',
+							'<a href="%s" class="remove js-remove-from-cart remove_from_cart_button" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s">x</a>',
 							esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
 							esc_attr( $product_id ),
 							esc_attr( $cart_item_key ),

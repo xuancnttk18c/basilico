@@ -318,6 +318,7 @@
 
 		}
 		.woocommerce-mini-cart__total {
+			@include d-flex();
 			background-color: $secondary_color;
 			@include border-radius(10px);
 			padding: 11px 21px;
@@ -637,7 +638,7 @@
 		}
 	}
 	.star-rating {
-		font-size: 17px;
+		font-size: 15px;
 		display: block;
 		margin-left: 11px;
 	}

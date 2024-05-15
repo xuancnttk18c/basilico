@@ -1188,7 +1188,7 @@ if (!class_exists('basilico_Woo')) {
 
 				$tooltip_text = ! empty( $clear_link['tooltip'] ) ? $clear_link['tooltip'] : esc_html__( 'Remove This', 'basilico' );
 
-				$clear_link['text'] =  $clear_link['text'] . '<span class="link-close lnil lnil-close"></span>';
+				$clear_link['text'] =  $clear_link['text'];
 
 				$output .= sprintf( '<a href="%1$s" class="%2$s" aria-label="%3$s"><span class="filter-link-text">%4$s</span></a>', $clear_link['url'], $base_link_class, $tooltip_text, $clear_link['text'] );
 			}  
