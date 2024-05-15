@@ -264,6 +264,10 @@
 .pxl-sidebar-area.style-2 {
 	.widget_shopping_cart {
 		ul li {
+			border-bottom-color: $divider_color;
+			&:first-child {
+				padding-top: 0;
+			}
 			.cart-item-wrap {
 				.cart-item-info-inner-wrap {
 					.product-name {
@@ -274,6 +278,7 @@
 						max-height: 47px;
 					}
 					.price {
+						margin-bottom: 2px;
 						.amount {
 							color: $primary_color;
 						}
@@ -282,8 +287,9 @@
 			}
 		}
 		.total {
+			margin-top: 16px;
+			margin-bottom: 5px;
 			.total-lbl {
-				font-family: $heading_font_family;
 				font-size: 20px;
 				font-weight: 600;
 				letter-spacing: 0.02em;
@@ -295,6 +301,7 @@
 			}
 		}
 		.buttons {
+			margin-bottom: -16px;
 			.button {
 				color: $heading_color;
 				&:after {
