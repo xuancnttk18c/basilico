@@ -3,7 +3,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 <div class="cart-footer-inner">
-	<div class="woocommerce-mini-cart__total total d-flex justify-content-between">
+	<div class="woocommerce-mini-cart__total total d-flex">
 		<span class="total-lbl"><?php echo esc_html__( 'Subtotal', 'basilico' ); ?></span>
 		<span class="total-value"><?php echo WC()->cart->get_cart_subtotal(); ?></span>
 	</div>
