@@ -169,6 +169,16 @@
 					height: 82px;
 					object-fit: cover;
 				}
+				a.remove {
+					font-family: 'Nunito Sans';
+					position: absolute;
+					right: 0;
+					top: 1px;
+					font-size: 16px;
+					font-weight: 600;
+					line-height: 1;
+					color: $heading_color;
+				}
 				.cart-item-wrap {
 					align-items: center;
 					.cart-item-info-inner-wrap {
