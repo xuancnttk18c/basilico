@@ -451,15 +451,15 @@ select.orderby{
 .pxl-shop-layout-5 .pxl-featured,
 .pxl-shop-layout-5 .onsale {
 	top: 25px;
-    right: 25px;
+	right: 25px;
 	@include border-radius(5px);
 	background-color: $secondary_color;
 	color: #fff;
 	padding: 5px 15px;
-    min-height: 34px;
-    min-width: 97px;
-    font-size: 13px;
-    letter-spacing: 0.05em;
+	min-height: 34px;
+	min-width: 97px;
+	font-size: 13px;
+	letter-spacing: 0.05em;
 }
 
 /* Content Grid view */
@@ -781,6 +781,27 @@ select.orderby{
 					bottom: 0;
 					opacity: 1;
 				}
+			}
+		}
+	}
+}
+
+.pxl-shop-layout-5 .products.shop-view-list {
+	.pxl-products-thumb {
+		.btn-wrapper {
+			display: none;
+		}
+	}
+	.price {
+		font-size: 20px;
+		font-weight: 500;
+		color: $primary_color;
+		del {
+			color: #c8c8c8;
+		}
+		del + ins {
+			&:before {
+				content: ' - ';
 			}
 		}
 	}
