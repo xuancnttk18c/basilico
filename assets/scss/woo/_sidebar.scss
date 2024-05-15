@@ -170,7 +170,7 @@
 					font-family: 'Nunito Sans';
 					position: absolute;
 					right: 0;
-					top: 26px;
+					top: 21px;
 					font-size: 16px;
 					font-weight: 600;
 					line-height: 1;
@@ -269,6 +269,16 @@
 						width: 100%;
 					}
 				}
+			}
+		}
+	}
+}
+
+.pxl-sidebar-area.default {
+	.widget_shopping_cart {
+		ul .cart-item-wrap .cart-item-info-inner-wrap .product-name {
+			a {
+				@include multiline-hover-underline($heading_color);
 			}
 		}
 	}
