@@ -413,6 +413,7 @@
 					font-size: 15px;
 					font-weight: 700;
 					color: $primary_color;
+					margin-left: 7px;
 				}
 				&:hover {
 					&:after {
@@ -425,7 +426,7 @@
 }
 
 /* Widget Product Category */
-#pxl-sidebar-area.sidebar-shop.style-1 .widget_product_categories,
+#pxl-sidebar-area.sidebar-shop.default .widget_product_categories,
 #pxl-sidebar-area.sidebar-shop.style-2 .widget_product_categories {
 	.product-categories {
 		li a {
@@ -545,6 +546,14 @@
 	.ui-slider .ui-slider-range,
 	.price_slider_amount button:before {
 		background-color: $primary_color;
+	}
+}
+
+.pxl-sidebar-area.style-3 .widget_price_filter {
+	.ui-slider .ui-slider-handle {
+		background-color: $secondary_color;
+		transform: none
+		@include border-radius(50%);
 	}
 }
 
@@ -707,6 +716,7 @@
 			.product-price {
 				font-weight: 500;
 				margin-bottom: 0;
+				color: $heading_color;
 				del {
 					display: inline;
 					color: #666666;
