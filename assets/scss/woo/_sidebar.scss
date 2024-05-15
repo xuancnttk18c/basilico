@@ -345,6 +345,11 @@
 .pxl-sidebar-area.style-3 {
 	.widget_shopping_cart {
 		ul li {
+			border-bottom-color: rgba($secondary_color_rgb, 0.1);
+			&:last-child {
+				padding-bottom: none;
+				border-bottom: none;
+			}
 			.cart-item-wrap {
 				.cart-item-info-inner-wrap {
 					.product-name {
@@ -355,7 +360,7 @@
 						max-height: 47px;
 					}
 					.price {
-						margin-bottom: 2px;
+						margin-bottom: 0;
 					}
 				}
 			}
@@ -368,6 +373,7 @@
 			justify-content: space-between;
 		}
 		.total {
+			margin-top: 25px;
 			.total-lbl {
 				color: #fff;
 				letter-spacing: 0.05em;
