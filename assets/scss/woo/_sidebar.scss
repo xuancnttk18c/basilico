@@ -705,9 +705,12 @@
 		}
 		.product-info {
 			.product-price {
-				color: $heading_color;
+				font-weight: 500;
+				margin-bottom: 0;
 				del {
 					display: inline;
+					color: #666666;
+					margin-right: 14px;
 				}
 			}
 			a:has(.product-title) {
