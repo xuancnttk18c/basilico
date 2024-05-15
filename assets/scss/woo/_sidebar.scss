@@ -551,11 +551,11 @@
 
 .pxl-sidebar-area.style-3 .widget_price_filter {
 	.ui-slider .ui-slider-handle {
-		position: relative;
 		background-color: $secondary_color;
 		transform: none;
 		@include border-radius(50%);
 		&:before {
+			content: '';
 			position: absolute;
 			top: 50%;
 			left: 50%;
