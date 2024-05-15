@@ -288,8 +288,15 @@
 	.widget_shopping_cart {
 		ul li {
 			border-bottom-color: $divider_color;
+			a.remove {
+				color: $primary_color;
+			}			
 			&:first-child {
 				padding-top: 0;
+				a.remove {
+					top: -4px;
+				}
+				
 			}
 			.cart-item-wrap {
 				.cart-item-info-inner-wrap {
@@ -338,7 +345,20 @@
 .pxl-sidebar-area.style-3 {
 	.widget_shopping_cart {
 		ul li {
-
+			.cart-item-wrap {
+				.cart-item-info-inner-wrap {
+					.product-name {
+						@include text-truncate-multi-line(17px, 1.65, 2);
+						font-weight: 500;
+						text-transform: capitalize;
+						margin-bottom: 0;
+						max-height: 47px;
+					}
+					.price {
+						margin-bottom: 2px;
+					}
+				}
+			}
 		}
 		.woocommerce-mini-cart__total {
 			@include d-flex();
