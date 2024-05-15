@@ -699,8 +699,20 @@
 
 .pxl-sidebar-area.style-3 .widget_products {
 	ul li {
-		.cart-item-info-inner {
-
+		border-bottom-color: rgba($secondary_color_rgb, 0.1);
+		img {
+			@include border-radius(5px);
+		}
+		.product-info {
+			.product-price {
+				color: $heading_color;
+				del {
+					display: inline;
+				}
+			}
+			a:has(.product-title) {
+				@include text-truncate-multi-line(17px, 1.65, 2);
+			}
 		}
 	}
 }
