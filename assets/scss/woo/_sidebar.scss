@@ -582,6 +582,7 @@
 			background-color: $primary_color;
 			@include border-radius(50%);
 			z-index: 1;
+			@include transition();
 		}
 		&:hover {
 			&:after {

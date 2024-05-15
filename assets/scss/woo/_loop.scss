@@ -534,7 +534,8 @@ select.orderby{
 }
 
 .pxl-shop-layout-1 .pxl-shop-woosmart-wrap,
-.pxl-shop-layout-2 .pxl-shop-woosmart-wrap {
+.pxl-shop-layout-2 .pxl-shop-woosmart-wrap,
+.pxl-shop-layout-5 .pxl-shop-woosmart-wrap {
 	.woosw-btn {
 		background-color: transparent;
 		border: none;
@@ -649,8 +650,6 @@ select.orderby{
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
-			.pxl-shop-woosmart-wrap{
-			}
 			.star-rating + .pxl-shop-woosmart-wrap{
 				padding-left: 15px;
 				margin-left: 13px;
