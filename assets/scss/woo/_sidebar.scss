@@ -552,7 +552,7 @@
 .pxl-sidebar-area.style-3 .widget_price_filter {
 	.ui-slider .ui-slider-handle {
 		background-color: $secondary_color;
-		transform: none
+		transform: none;
 		@include border-radius(50%);
 	}
 }
