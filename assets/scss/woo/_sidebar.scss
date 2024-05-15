@@ -161,9 +161,6 @@
 				overflow: hidden;
 				font-weight: 600;
 				border-bottom: 1px solid $heading_color;
-				&:first-child {
-					padding-top: 5px;
-				}
 				img {
 					width: 76px;
 					height: 82px;
@@ -173,11 +170,17 @@
 					font-family: 'Nunito Sans';
 					position: absolute;
 					right: 0;
-					top: 1px;
+					top: 26px;
 					font-size: 16px;
 					font-weight: 600;
 					line-height: 1;
 					color: $heading_color;
+				}
+				&:first-child {
+					padding-top: 5px;
+					a.remove {
+						top: 1px;
+					}
 				}
 				.cart-item-wrap {
 					align-items: center;
