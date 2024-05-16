@@ -10,10 +10,6 @@ add_action('widgets_init', function () {
 class PXL_Widget_Cart extends WC_Widget {
 
 	public function __construct() {
-		$this->widget_cssclass    = 'woocommerce widget_shopping_cart';
-		$this->widget_description = __( 'Display the customer shopping cart.', 'basilico' );
-		$this->widget_id          = 'pxl_widget_cart';
-		$this->widget_name        = __( '* PXL Cart', 'basilico' );
 		$this->settings           = array(
 			'title'         => array(
 				'type'  => 'text',
@@ -31,7 +27,11 @@ class PXL_Widget_Cart extends WC_Widget {
 			wp_enqueue_script( 'wc-cart-fragments' );
 		}
 
-		parent::__construct();
+		parent::__construct(
+            'pxl_widget_cart',
+            esc_html__('* Pxl Cart', 'basilico'),
+            array('description' => esc_html__('Display the customer shopping cart.', 'basilico'),)
+        );
 	}
 
 	public function widget( $args, $instance ) {
