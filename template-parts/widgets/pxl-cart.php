@@ -42,10 +42,7 @@ class PXL_Cart_Widget extends WC_Widget {
 
 		$this->widget_start( $args, $instance );
 
-		echo '<div class="pxl-widget-cart-content">';
 		woocommerce_mini_cart();
-		echo '</div>';
-
 		wc_get_template( 'cart/mini-cart-totals.php' );
 
 		$this->widget_end( $args );
