@@ -20,11 +20,6 @@ class PXL_Cart_Widget extends WC_Widget {
 				'std'   => __( 'Cart', 'basilico' ),
 				'label' => __( 'Title', 'basilico' ),
 			),
-			'hide_if_empty' => array(
-				'type'  => 'checkbox',
-				'std'   => 0,
-				'label' => __( 'Hide if cart is empty', 'basilico' ),
-			),
 		);
 
 		if ( is_customize_preview() ) {
@@ -49,19 +44,11 @@ class PXL_Cart_Widget extends WC_Widget {
 
 		$this->widget_start( $args, $instance );
 
-		if ( $hide_if_empty ) {
-			echo '<div class="hide_cart_widget_if_empty">';
-		}
-
 		echo '<div class="pxl-widget-cart-content">';
-		basilico_mini_cart();
+		woocommerce_mini_cart();
 		echo '</div>';
 
 		wc_get_template( 'cart/mini-cart-totals.php' );
-
-		if ( $hide_if_empty ) {
-			echo '</div>';
-		}
 
 		$this->widget_end( $args );
 	}
