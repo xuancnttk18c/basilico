@@ -238,7 +238,7 @@ function basilico_variable_add_to_cart(){
 			<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
 				<p class="stock out-of-stock"><?php echo esc_html( apply_filters( 'woocommerce_out_of_stock_message', esc_html__( 'This product is currently out of stock and unavailable.', 'basilico' ) ) ); ?></p>
 			<?php else : ?>
-				<div class="pxl-variation-quantity-wrap">
+				<div class="pxl-variation-quantity-wrap ">
 					<div class="variations">
 						<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 							<div class="pxl-variation-row row">
@@ -252,13 +252,14 @@ function basilico_variable_add_to_cart(){
 											'product'   => $product,
 										)
 									);
-									</div>
-									</div>
-								<?php endforeach; ?>
+									?>
+								</div>
 							</div>
-							<div class="pxl-variation-results">
-								<?php
-								do_action( 'woocommerce_before_single_variation' );
+						<?php endforeach; ?>
+					</div>
+					<div class="pxl-variation-results">
+						<?php
+						do_action( 'woocommerce_before_single_variation' );
                             echo '<div class="woocommerce-variation single_variation"></div>';//do_action( 'woocommerce_single_variation' );
                             do_action( 'woocommerce_after_single_variation' );
                             ?>
