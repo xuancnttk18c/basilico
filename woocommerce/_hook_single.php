@@ -240,8 +240,8 @@ function basilico_variable_add_to_cart(){
 			<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
 				<p class="stock out-of-stock"><?php echo esc_html( apply_filters( 'woocommerce_out_of_stock_message', esc_html__( 'This product is currently out of stock and unavailable.', 'basilico' ) ) ); ?></p>
 			<?php else : ?>
-				<div class="pxl-variation-quantity-wrap row">
-					<div class="pxl-variation-wrap col-8">
+				<div class="pxl-variation-quantity-wrap">
+					<div class="pxl-variation-wrap">
 						<div class="variations">
 							<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 								<div class="pxl-variation-row row">
@@ -268,33 +268,35 @@ function basilico_variable_add_to_cart(){
                             ?>
                         </div>
                     </div>
-                    <div class="single_variation_wrap col-4">
-                    	<div class="woocommerce-variation-add-to-cart variations_button">
-                    		<?php
-                    		do_action( 'woocommerce_before_add_to_cart_quantity' );
-                    		woocommerce_quantity_input(
-                    			array(
-                    				'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
-                    				'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
-                    				'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( sanitize_text_field( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), 
-                    			)
-                    		);
-                    		do_action( 'woocommerce_after_add_to_cart_quantity' );
-                    		?>
-                    		<input type="hidden" name="add-to-cart" value="<?php echo absint( $product->get_id() ); ?>" />
-                    		<input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
-                    		<input type="hidden" name="variation_id" class="variation_id" value="0" />
-                    	</div>
-                    </div>
-                    <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
                 </div>
-                <div class="pxl-addtocart-btn-wrap">
-                	<div class="pxl-atc-btn">
-                		<button type="submit" class="<?php echo esc_attr($single_btn_cls); ?>">
-                			<span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span>
-                		</button>
+                <div class="d-flex align-items-end">
+                	<div class="single_variation_wrap">
+                		<div class="woocommerce-variation-add-to-cart variations_button">
+                			<?php
+                			do_action( 'woocommerce_before_add_to_cart_quantity' );
+                			woocommerce_quantity_input(
+                				array(
+                					'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
+                					'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
+                					'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( sanitize_text_field( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), 
+                				)
+                			);
+                			do_action( 'woocommerce_after_add_to_cart_quantity' );
+                			?>
+                			<input type="hidden" name="add-to-cart" value="<?php echo absint( $product->get_id() ); ?>" />
+                			<input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
+                			<input type="hidden" name="variation_id" class="variation_id" value="0" />
+                		</div>
                 	</div>
-                	<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+                	<div class="pxl-addtocart-btn-wrap">
+                		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+                		<div class="pxl-atc-btn">
+                			<button type="submit" class="<?php echo esc_attr($single_btn_cls); ?>">
+                				<span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span>
+                			</button>
+                		</div>
+                		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+                	</div>
                 </div>
             <?php endif; ?>
             <?php do_action( 'woocommerce_after_variations_form' ); ?>
