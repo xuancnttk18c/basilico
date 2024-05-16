@@ -105,5 +105,5 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 <?php else : ?>
 	<?php wc_get_template( 'cart/cart-empty.php' ); ?>
 <?php endif; ?>
-<?php do_action( 'woocommerce_after_mini_cart' ); ?>
 </div>
+<?php do_action( 'woocommerce_after_mini_cart' ); ?>
