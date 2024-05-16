@@ -10,18 +10,18 @@ add_action('widgets_init', function () {
 class PXL_Widget_Cart extends WC_Widget {
 
 	public function __construct() {
-		$this->settings           = array(
-			'title'         => array(
-				'type'  => 'text',
-				'std'   => __( 'Cart', 'basilico' ),
-				'label' => __( 'Title', 'basilico' ),
-			),
-			'hide_if_empty' => array(
-				'type'  => 'checkbox',
-				'std'   => 0,
-				'label' => __( 'Hide if cart is empty', 'basilico' ),
-			),
-		);
+		// $this->settings           = array(
+		// 	'title'         => array(
+		// 		'type'  => 'text',
+		// 		'std'   => __( 'Cart', 'basilico' ),
+		// 		'label' => __( 'Title', 'basilico' ),
+		// 	),
+		// 	'hide_if_empty' => array(
+		// 		'type'  => 'checkbox',
+		// 		'std'   => 0,
+		// 		'label' => __( 'Hide if cart is empty', 'basilico' ),
+		// 	),
+		// );
 
 		if ( is_customize_preview() ) {
 			wp_enqueue_script( 'wc-cart-fragments' );
