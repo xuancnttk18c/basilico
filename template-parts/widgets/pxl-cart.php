@@ -52,8 +52,11 @@ class PXL_Widget_Cart extends WC_Widget {
 		if ( $hide_if_empty ) {
 			echo '<div class="hide_cart_widget_if_empty">';
 		}
-
+		
+		echo '<div class="pxl-widget-cart-content">';
 		woocommerce_mini_cart();
+		echo '</div>';
+
 		wc_get_template( 'cart/mini-cart-totals.php' );
 
 		if ( $hide_if_empty ) {
