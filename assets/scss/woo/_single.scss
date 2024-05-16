@@ -1132,6 +1132,7 @@ table.shop_attributes{
 	display: block;
 	margin: 0 0 23px 0;
 }
+
 .products.related,
 .products.upsells,
 .cross-sells {
@@ -1234,5 +1235,30 @@ table.shop_attributes{
 			height: 8px;
 			z-index: 2;
 		}
+	}
+}
+
+.pxl-shop-layout-3 .products.related,
+.pxl-shop-layout-3 .products.upsells,
+.pxl-shop-layout-3 .cross-sells {
+	.related_subtitle {
+		font-size: 15px;
+		letter-spacing: 0.1em;
+		color: $primary_color;
+		span {
+			&:before,
+			&:after {
+				content: "\e9e6";
+				font-family: $pxli_font;
+				font-size: 15px;
+				background-color: $primary_color;
+			}
+		}
+	}
+	.related_title {
+		font-size: 45px;
+		line-height: 1.3;
+		letter-spacing: 0.03em;
+		text-align: center;
 	}
 }
