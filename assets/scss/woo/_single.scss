@@ -1145,6 +1145,25 @@ table.shop_attributes{
 		color: $heading_color;
 		text-align: center;
 		margin-bottom: 13px;
+	}
+	.related_title {
+		position: relative;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 1.5;
+		margin: 0 0 62px 0;
+		text-align: center;
+	}
+	.pxl-divider {
+		display: none;
+	}
+}
+
+.pxl-shop-layout-1 .products.related,
+.pxl-shop-layout-1 .products.upsells,
+.pxl-shop-layout-1 .cross-sells {
+	.related_subtitle {
 		span {
 			position: relative;
 			&:before,
@@ -1166,18 +1185,6 @@ table.shop_attributes{
 			}
 		}
 	}
-	.related_title {
-		position: relative;
-		font-style: normal;
-		font-weight: 700;
-		font-size: 40px;
-		line-height: 1.5;
-		margin: 0 0 62px 0;
-		text-align: center;
-	}
-	.pxl-divider {
-		display: none;
-	}
 }
 
 .pxl-shop-layout-2 .products.related,
@@ -1195,7 +1202,6 @@ table.shop_attributes{
 		text-align: center;
 		margin-bottom: 13px;
 		span {
-			position: relative;
 			&:before,
 			&:after {
 				content: none;
@@ -1249,9 +1255,16 @@ table.shop_attributes{
 			&:before,
 			&:after {
 				content: "\e9e6";
+				position: relative;
 				font-family: $pxli_font;
 				font-size: 15px;
 				background-color: $primary_color;
+			}
+			&:before {
+				margin-right: 8px;
+			}
+			&:after {
+				margin-left: 8px;
 			}
 		}
 	}
