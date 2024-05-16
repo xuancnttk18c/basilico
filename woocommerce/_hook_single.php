@@ -183,7 +183,7 @@ if(!function_exists('basilico_wc_template_single_meta')){
 
 /* Add to cart */
 if(!function_exists('basilico_single_add_to_cart')){
-	add_action('woocommerce_single_product_summary','basilico_single_add_to_cart', 30);
+	add_action('woocommerce_single_product_summary', 'basilico_single_add_to_cart', 30);
 	function basilico_single_add_to_cart(){
 		global $product;
 		$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');

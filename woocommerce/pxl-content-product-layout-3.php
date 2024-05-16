@@ -72,6 +72,11 @@ if ( empty( $product ) || ! $product->is_visible() ) {
                         }
                         ?>
                     </div>
+                    <div class="pxl-add-to-cart">
+                        <div class="wrap-btn for-cart">
+                            <?php woocommerce_template_loop_add_to_cart(); ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
