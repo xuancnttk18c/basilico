@@ -233,6 +233,12 @@ function basilico_variable_add_to_cart(){
 	do_action( 'woocommerce_before_add_to_cart_form' );
 	?>
 	
+	<div id="ex1" class="modal">
+		<p>Thanks for clicking. That felt good.</p>
+		<a href="#" rel="modal:close">Close</a>
+	</div>
+	<p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+
 	<form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo esc_attr($variations_attr); ?>">
 		<?php do_action( 'woocommerce_before_variations_form' ); ?>
 
