@@ -266,7 +266,7 @@ select.orderby{
 		font-weight: 500;
 		margin-bottom: 10px;
 		a {
-			@include multiline-hover-underline($heading_color);
+			@include multiline-hover-underline();
 		}
 	}
 	.price {
@@ -359,7 +359,7 @@ select.orderby{
 		font-weight: 600;
 		margin-bottom: 10px;
 		a {
-			@include multiline-hover-underline($heading_color);
+			@include multiline-hover-underline();
 		}
 	}
 	.price {

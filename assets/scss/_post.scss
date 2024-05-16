@@ -495,7 +495,7 @@
 
 .pxl-content-main.layout-1 {
 	.post-tags-wrap a {
-		@include multiline-hover-underline($heading_color);
+		@include multiline-hover-underline();
 		&:hover {
 			color: $heading_color;
 		}

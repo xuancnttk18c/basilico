@@ -384,7 +384,7 @@
     @include css3-prefix("clip-path", $params);
 }
 
-@mixin multiline-hover-underline($underline-color: $secondary_color) {
+@mixin multiline-hover-underline($underline-color: $heading_color) {
     display: inline;
     color: $underline-color;
     background-image: linear-gradient(transparent calc(100% - 1px), $underline-color 1px);

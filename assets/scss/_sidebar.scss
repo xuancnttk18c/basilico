@@ -455,7 +455,7 @@
         margin-bottom: 0;
         letter-spacing: 0.02em;
         a {
-            //@include multiline-hover-underline($heading_color);
+            //@include multiline-hover-underline();
         }
     }
 }

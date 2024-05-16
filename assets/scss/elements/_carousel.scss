@@ -928,7 +928,7 @@
             margin-bottom: -2px;
             a {
                 cursor: pointer;
-                @include multiline-hover-underline($heading_color);
+                @include multiline-hover-underline();
             }
         }
         .menu-price {
@@ -1139,7 +1139,7 @@
             color: $heading_color;
             a {
                 cursor: pointer;
-                @include multiline-hover-underline($heading_color);
+                @include multiline-hover-underline();
             }
         }
         .pxl-divider {
@@ -1204,7 +1204,7 @@
             color: $heading_color;
             a {
                 cursor: pointer;
-                @include multiline-hover-underline($heading_color);
+                @include multiline-hover-underline();
             }
         }
         .menu-sub-title {
@@ -2810,7 +2810,7 @@
                     color: $heading_color;
                     a {
                         color: inherit;
-                        @include multiline-hover-underline($heading_color);
+                        @include multiline-hover-underline();
                     }
                 }
                 .item-tags {

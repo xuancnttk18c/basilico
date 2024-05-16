@@ -989,7 +989,7 @@
             color: $heading_color;
             margin-bottom: -2px;
             a {
-                @include multiline-hover-underline($heading_color);
+                @include multiline-hover-underline();
             }
             @media (max-width: $xs_max) {
                 width: 100%;
@@ -1153,7 +1153,7 @@
                 letter-spacing: 0.03em;
                 color: $heading_color;
                 a {
-                    @include multiline-hover-underline($heading_color);
+                    @include multiline-hover-underline();
                 }
                 @media (max-width: $xs_max) {
                     width: 100%;
@@ -2267,7 +2267,7 @@
             line-height: 1.5;
             margin-bottom: 18px;
             a {
-                @include multiline-hover-underline($heading_color);
+                @include multiline-hover-underline();
             }
         }
         .box-description {

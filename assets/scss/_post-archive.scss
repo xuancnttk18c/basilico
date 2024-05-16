@@ -17,7 +17,7 @@
 		line-height: 40px;
 		margin-bottom: 0;
 		a {
-			//@include multiline-hover-underline($heading_color);
+			//@include multiline-hover-underline();
 		}
 		@media (max-width: $xs_max) {
 			font-size: 20px;

@@ -732,7 +732,7 @@
             line-height: 32px;
             text-transform: uppercase;
             a {
-                @include multiline-hover-underline($heading_color);                
+                @include multiline-hover-underline();                
             }
             @media (max-width: $sm_max) {
                 font-size: 22px;
@@ -849,7 +849,7 @@
                 color: $heading_color;
                 text-transform: uppercase;
                 a {
-                    @include multiline-hover-underline($heading_color);
+                    @include multiline-hover-underline();
                 }
                 @media (max-width: $sm_max) {
                     margin-top: 20px;
@@ -863,7 +863,7 @@
                 text-transform: uppercase;
                 @include text-truncate-multi-line(20px, 1.5, 2);
                 a {
-                    @include multiline-hover-underline($heading_color);
+                    @include multiline-hover-underline();
                 }
             }
             .item-excerpt {
@@ -875,7 +875,7 @@
                 background-color: transparent;
                 color: $heading_color;
                 a {
-                    @include multiline-hover-underline($heading_color);
+                    @include multiline-hover-underline();
                 }
                 .meta-inner {
                     > div {

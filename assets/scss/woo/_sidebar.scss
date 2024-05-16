@@ -278,7 +278,7 @@
 	.widget_shopping_cart {
 		ul .cart-item-wrap .cart-item-info-inner-wrap .product-name {
 			a {
-				@include multiline-hover-underline($heading_color);
+				@include multiline-hover-underline();
 			}
 		}
 	}
