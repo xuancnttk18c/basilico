@@ -4,34 +4,34 @@ if (!class_exists('basilico')) return;
 
 if (!function_exists('pxl_register_wp_widget')) return;
 add_action('widgets_init', function () {
-	pxl_register_wp_widget('PXL_Widget_Cart');
+	pxl_register_wp_widget('PXL_Cart_Widget');
 });
 
-class PXL_Widget_Cart extends WC_Widget {
+class PXL_Cart_Widget extends WC_Widget {
 
 	public function __construct() {
-		// $this->settings           = array(
-		// 	'title'         => array(
-		// 		'type'  => 'text',
-		// 		'std'   => __( 'Cart', 'basilico' ),
-		// 		'label' => __( 'Title', 'basilico' ),
-		// 	),
-		// 	'hide_if_empty' => array(
-		// 		'type'  => 'checkbox',
-		// 		'std'   => 0,
-		// 		'label' => __( 'Hide if cart is empty', 'basilico' ),
-		// 	),
-		// );
+		$this->widget_cssclass    = 'woocommerce widget_shopping_cart';
+		$this->widget_description = __( 'Display the customer shopping cart.', 'basilico' );
+		$this->widget_id          = 'pxl_cart_widget';
+		$this->widget_name        = __( '* PXL Cart', 'basilico' );
+		$this->settings           = array(
+			'title'         => array(
+				'type'  => 'text',
+				'std'   => __( 'Cart', 'basilico' ),
+				'label' => __( 'Title', 'basilico' ),
+			),
+			'hide_if_empty' => array(
+				'type'  => 'checkbox',
+				'std'   => 0,
+				'label' => __( 'Hide if cart is empty', 'basilico' ),
+			),
+		);
 
 		if ( is_customize_preview() ) {
 			wp_enqueue_script( 'wc-cart-fragments' );
 		}
 
-		parent::__construct(
-            'pxl_widget_cart',
-            esc_html__('* Pxl Cart', 'basilico'),
-            array('description' => esc_html__('Display the customer shopping cart.', 'basilico'),)
-        );
+		parent::__construct();
 	}
 
 	public function widget( $args, $instance ) {
