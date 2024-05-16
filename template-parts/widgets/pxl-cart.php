@@ -1,6 +1,6 @@
 <?php
 defined( 'ABSPATH' ) || exit;
-if (!class_exists('WooCommerce')) return;
+if (!class_exists('basilico')) return;
 
 if (!function_exists('pxl_register_wp_widget')) return;
 add_action('widgets_init', function () {
@@ -11,19 +11,19 @@ class PXL_Widget_Cart extends WC_Widget {
 
 	public function __construct() {
 		$this->widget_cssclass    = 'woocommerce widget_shopping_cart';
-		$this->widget_description = __( 'Display the customer shopping cart.', 'woocommerce' );
-		$this->widget_id          = 'woocommerce_widget_cart';
-		$this->widget_name        = __( '* PXL Cart', 'woocommerce' );
+		$this->widget_description = __( 'Display the customer shopping cart.', 'basilico' );
+		$this->widget_id          = 'pxl_widget_cart';
+		$this->widget_name        = __( '* PXL Cart', 'basilico' );
 		$this->settings           = array(
 			'title'         => array(
 				'type'  => 'text',
-				'std'   => __( 'Cart', 'woocommerce' ),
-				'label' => __( 'Title', 'woocommerce' ),
+				'std'   => __( 'Cart', 'basilico' ),
+				'label' => __( 'Title', 'basilico' ),
 			),
 			'hide_if_empty' => array(
 				'type'  => 'checkbox',
 				'std'   => 0,
-				'label' => __( 'Hide if cart is empty', 'woocommerce' ),
+				'label' => __( 'Hide if cart is empty', 'basilico' ),
 			),
 		);
 
@@ -35,7 +35,7 @@ class PXL_Widget_Cart extends WC_Widget {
 	}
 
 	public function widget( $args, $instance ) {
-		if ( apply_filters( 'woocommerce_widget_cart_is_hidden', is_cart() || is_checkout() ) ) {
+		if ( apply_filters( 'basilico_widget_cart_is_hidden', is_cart() || is_checkout() ) ) {
 			return;
 		}
 
@@ -44,7 +44,7 @@ class PXL_Widget_Cart extends WC_Widget {
 		$hide_if_empty = empty( $instance['hide_if_empty'] ) ? 0 : 1;
 
 		if ( ! isset( $instance['title'] ) ) {
-			$instance['title'] = __( 'Cart', 'woocommerce' );
+			$instance['title'] = __( 'Cart', 'basilico' );
 		}
 
 		$this->widget_start( $args, $instance );
@@ -52,9 +52,9 @@ class PXL_Widget_Cart extends WC_Widget {
 		if ( $hide_if_empty ) {
 			echo '<div class="hide_cart_widget_if_empty">';
 		}
-		
+
 		echo '<div class="pxl-widget-cart-content">';
-		woocommerce_mini_cart();
+		basilico_mini_cart();
 		echo '</div>';
 
 		wc_get_template( 'cart/mini-cart-totals.php' );
