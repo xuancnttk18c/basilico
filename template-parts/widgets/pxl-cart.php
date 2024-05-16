@@ -1,6 +1,6 @@
 <?php
 defined( 'ABSPATH' ) || exit;
-if (!class_exists('basilico')) return;
+if (!class_exists('Woocommerce')) return;
 
 if (!function_exists('pxl_register_wp_widget')) return;
 add_action('widgets_init', function () {
