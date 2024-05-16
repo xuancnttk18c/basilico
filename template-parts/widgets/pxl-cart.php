@@ -36,8 +36,6 @@ class PXL_Cart_Widget extends WC_Widget {
 
 		wp_enqueue_script( 'wc-cart-fragments' );
 
-		$hide_if_empty = empty( $instance['hide_if_empty'] ) ? 0 : 1;
-
 		if ( ! isset( $instance['title'] ) ) {
 			$instance['title'] = __( 'Cart', 'basilico' );
 		}
