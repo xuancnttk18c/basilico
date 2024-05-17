@@ -486,7 +486,7 @@
 		}
 		.stock-wishlist {
 			margin-left: 20px;
-    		margin-top: 0;
+			margin-top: 0;
 		}
 	}
 	.woocommerce-product-details__short-description{
@@ -712,6 +712,19 @@
 			padding-top: 28px;
 		}
 	}
+	.woocommerce-product-varitions {
+		margin-bottom: 35px;
+		padding-top: 30px;
+		h4 {
+			font-size: 20px;
+			font-weight: 600;
+			letter-spacing: 0.03em;
+			margin-bottom: 24px;
+		}
+		.stock-wishlist {
+			margin-left: 13px;
+		}
+	}
 }
 
 .pxl-shop-layout-5 .pxl-single-product-summary-wrap {
@@ -791,6 +804,39 @@
 			color: #fff;
 			&:after {
 				background-color: $primary_color;
+			}
+		}
+	}
+}
+
+.single-product .pxl-shop-layout-3 .pxl-single-product-gallery-summary-wraps .pxl-shop-woosmart-wrap {
+	.woosw-btn {
+		font-size: 0;
+		width: 50px;
+		padding: 0;
+		height: 50px;
+		border-radius: 50%;
+		background-image: -moz-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(61, 61, 61) 100%);
+		background-image: -webkit-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(61, 61, 61) 100%);
+		background-image: -ms-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(61, 61, 61) 100%);
+		&:before {
+			content: "\e985";
+			color: #fff;
+			font-family: $pxli_font;
+			font-size: 15px;
+			text-indent: 0;
+			line-height: 1;
+		}
+		&.woosw-adding {
+			&:before {
+				content: "\e95b";
+				font-family: $pxli_font;
+				@include animation(pxl-spin 2s linear infinite);
+			}
+		}
+		&.woosw-added {
+			&:before {
+				content: "\e90c";
 			}
 		}
 	}
