@@ -954,13 +954,16 @@ input.qty[type="number"] {
 	}
 }
 
+body.has(.pxl-shop-layout-1) .modal input.qty[type="number"],
+body.has(.pxl-shop-layout-2) .modal input.qty[type="number"],
 .pxl-shop-layout-1 input.qty[type="number"],
 .pxl-shop-layout-2 input.qty[type="number"] {
 	@include border-radius(0);
 }
 
+body.has(.pxl-shop-layout-2) .modal .pxl-quantity,
 .pxl-shop-layout-2 .pxl-quantity {
-	.quantity-down, .quantity-up{
+	.quantity-down, .quantity-up {
 		&:before {
 			font-family: 'Material-Design-Iconic-Font';
 			font-size: 16px;
@@ -988,6 +991,7 @@ input.qty[type="number"] {
 	}
 }
 
+body.has(.pxl-shop-layout-2) .modal input.qty[type="number"],
 .pxl-shop-layout-2 input.qty[type="number"] {
 	width: 136px;
 	padding: 0 40px;
@@ -995,7 +999,7 @@ input.qty[type="number"] {
 	background-color: rgba(255, 255, 255, 0.1);
 }
 
-.pxl-shop-layout-3 .quantity,
+body.has(.pxl-shop-layout-2) .modal .quantity,
 .pxl-shop-layout-3 .pxl-quantity {
 	.quantity-down, .quantity-up{
 		&:before {
@@ -1025,6 +1029,7 @@ input.qty[type="number"] {
 	}
 }
 
+body.has(.pxl-shop-layout-3) .modal input.qty[type="number"]
 .pxl-shop-layout-3 input.qty[type="number"] {
 	border-radius: calc(#{input_height} / 2);
     width: 100px;
