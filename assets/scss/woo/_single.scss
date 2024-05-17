@@ -970,6 +970,16 @@ input.qty[type="number"] {
 			margin-top: 15px;
 		}
 	}
+	.pxl-variations-wrap {
+		margin-top: 15px;
+		label {
+			font-size: 20px;
+			font-weight: 600;
+			letter-spacing: 0.03em;
+			font-family: $heading_font_family;
+			color: $heading_color;
+		}
+	}
 	.pxl-addtocart-btn-wrap {
 		margin-top: 0;
 		margin-left: 15px;
