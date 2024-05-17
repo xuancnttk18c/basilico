@@ -187,7 +187,6 @@ if(!function_exists('basilico_single_add_to_cart')){
 	add_action('woocommerce_single_product_summary', 'basilico_single_add_to_cart', 30);
 	function basilico_single_add_to_cart(){
 		global $product;
-		$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
 		switch ($product->get_type()) {
 			case 'variable':
 			basilico_variable_add_to_cart();
@@ -202,15 +201,6 @@ if(!function_exists('basilico_single_add_to_cart')){
 			basilico_simple_add_to_cart(); 
 			break;
 		}
-		?>
-		<?php
-		if( $product_wishlist == '1') : ?>
-			<div class="stock-wishlist">
-				<div class="pxl-shop-woosmart-wrap">
-					<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
-				</div>
-			</div>
-		<?php endif;
 	}
 }
 
@@ -231,9 +221,20 @@ function basilico_variable_add_to_cart(){
 	?>
 	<div class="woocommerce-product-varitions">
 		<h4><?php echo esc_html('Choose Your Options: ', 'basilico'); ?></h4>
-		<a href="#variations_cart_modal" rel="modal:open" class="pxl-btn btn <?php echo esc_attr($btn_style); ?>">
-			<?php echo esc_html('Select Options', 'basilico'); ?>
-		</a>
+		<div class="d-flex">
+			<a href="#variations_cart_modal" rel="modal:open" class="pxl-btn btn <?php echo esc_attr($btn_style); ?>">
+				<?php echo esc_html('Select Options', 'basilico'); ?>
+			</a>
+			<?php
+			$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
+			if( $product_wishlist == '1') : ?>
+				<div class="stock-wishlist">
+					<div class="pxl-shop-woosmart-wrap">
+						<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
+					</div>
+				</div>
+			<?php endif; ?>
+		</div>
 		<div id="variations_cart_modal" class="modal">
 			<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			<form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo esc_attr($variations_attr); ?>">
@@ -304,8 +305,8 @@ function basilico_variable_add_to_cart(){
 	        </form>
 	        <?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 	    </div>
-    </div>
-    <?php
+	</div>
+	<?php
 }
 
 function basilico_external_add_to_cart(){
@@ -336,8 +337,16 @@ function basilico_external_add_to_cart(){
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>
 
-	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
-	<?php 
+	<?php
+	do_action( 'woocommerce_after_add_to_cart_form' );
+	$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
+	if( $product_wishlist == '1') : ?>
+		<div class="stock-wishlist">
+			<div class="pxl-shop-woosmart-wrap">
+				<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
+			</div>
+		</div>
+	<?php endif;
 }
 
 function basilico_grouped_add_to_cart(){
@@ -449,8 +458,17 @@ function basilico_grouped_add_to_cart(){
 
 			<?php endif; ?>
 		</form>
-		<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
-		<?php 
+		<?php
+		do_action( 'woocommerce_after_add_to_cart_form' );
+
+		$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
+		if( $product_wishlist == '1') : ?>
+			<div class="stock-wishlist">
+				<div class="pxl-shop-woosmart-wrap">
+					<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
+				</div>
+			</div>
+		<?php endif;
 	}
 }
 
@@ -486,8 +504,17 @@ function basilico_simple_add_to_cart(){
         			</div>
         		</div>
         	</form>
-        	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
-        <?php endif;
+        	<?php
+        	do_action( 'woocommerce_after_add_to_cart_form' );
+        	$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
+        	if( $product_wishlist == '1') { ?>
+        		<div class="stock-wishlist">
+        			<div class="pxl-shop-woosmart-wrap">
+        				<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
+        			</div>
+        		</div>
+        	<?php endif;
+        endif;
     }
 
     /* Social Sharing */
