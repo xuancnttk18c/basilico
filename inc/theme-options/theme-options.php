@@ -883,7 +883,7 @@ if(class_exists('Woocommerce')) {
                     'id'      => 'onsale_text',
                     'type'    => 'text',
                     'title'   => esc_html__('Sale Text', 'basilico'),
-                    'default' => '',
+                    'default' => esc_html__('Sale Off', 'basilico'),
                 ),
             )
         )

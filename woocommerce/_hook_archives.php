@@ -17,10 +17,7 @@ add_filter('woocommerce_show_page_title', function(){ return false;});
 add_filter('woocommerce_sale_flash', 'basilico_custom_sale_text', 10, 3);
 function basilico_custom_sale_text($text, $post, $_product)
 {
-    $onsale_text = basilico()->get_theme_opt('onsale_text', '');
-    if (empty($onsale_text)) {
-        $onsale_text = 'sale off';
-    }
+    $onsale_text = basilico()->get_theme_opt('onsale_text', 'Sale Off');
     return '<span class="onsale">'.esc_attr__($onsale_text, 'basilico').'</span>';
 }
 
