@@ -507,7 +507,7 @@ function basilico_simple_add_to_cart(){
         	<?php
         	do_action( 'woocommerce_after_add_to_cart_form' );
         	$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
-        	if( $product_wishlist == '1') { ?>
+        	if( $product_wishlist == '1') : ?>
         		<div class="stock-wishlist">
         			<div class="pxl-shop-woosmart-wrap">
         				<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
