@@ -1001,8 +1001,12 @@ body:has(.pxl-shop-layout-2) .modal input.qty[type="number"],
 
 body:has(.pxl-shop-layout-3) .modal .quantity,
 .pxl-shop-layout-3 .pxl-quantity {
-	.quantity-down, .quantity-up{
+	.quantity-inner {
+		position: relative;
+	}
+	.quantity-down, .quantity-up {
 		&:before {
+			position: absolute;
 			font-family: 'Material-Design-Iconic-Font';
 			font-size: 16px;
 			width: auto;
@@ -1024,7 +1028,6 @@ body:has(.pxl-shop-layout-3) .modal .quantity,
 			content: '\f273';
 			left: 15px;
 			right: auto;
-			bottom: auto;
 		}
 	}
 }
