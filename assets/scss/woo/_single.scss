@@ -685,6 +685,12 @@
 		letter-spacing: 0.02em;
 		margin-bottom: 0;
 	}
+	.product_meta {
+		margin-top: 25px;
+		> span {
+			margin-top: 0;
+		}
+	}
 	.woocommerce-product-rating {
 		display: inline-flex;
 		margin-left: 27px;
@@ -723,6 +729,16 @@
 		}
 		.stock-wishlist {
 			margin-left: 13px;
+		}
+	}
+	.post-shares {
+		margin-top: 28px;
+		padding-top: 22px;
+		.label {
+			font-size: 20px;
+			font-weight: 600;
+			letter-spacing: 0.03em;
+			text-transform: capitalize;
 		}
 	}
 }
@@ -837,6 +853,7 @@
 		&.woosw-added {
 			&:before {
 				content: "\e90c";
+				margin-right: 0;
 			}
 		}
 	}
@@ -1254,6 +1271,34 @@ table.shop_attributes{
 		.shop_attributes {
 			th, td {
 				color: $heading_color;
+			}
+		}
+	}
+}
+
+.pxl-shop-layout-3 .woocommerce-tabs {
+	margin-top: 45px;
+	ul.wc-tabs {
+		overflow: hidden;
+		li {
+			&:after {
+				background-color: $secondary_color;
+				left: 50%;
+				@include transform(translateX(-50%));
+				@include border-radius(2px);
+			}
+			a {
+				font-family: $heading_font_family;
+				font-size: 20px;
+				font-weight: 600;
+				line-height: 60px;
+				letter-spacing: 0.02em;
+				text-transform: capitalize;
+			}
+			.active {
+				&:after {
+					width: 150px;
+				}
 			}
 		}
 	}
