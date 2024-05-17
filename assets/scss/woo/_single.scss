@@ -999,7 +999,7 @@ body:has(.pxl-shop-layout-2) .modal input.qty[type="number"],
 	background-color: rgba(255, 255, 255, 0.1);
 }
 
-body:has(.pxl-shop-layout-2) .modal .quantity,
+body:has(.pxl-shop-layout-3) .modal .quantity,
 .pxl-shop-layout-3 .pxl-quantity {
 	.quantity-down, .quantity-up{
 		&:before {
@@ -1031,10 +1031,11 @@ body:has(.pxl-shop-layout-2) .modal .quantity,
 
 body:has(.pxl-shop-layout-3) .modal input.qty[type="number"],
 .pxl-shop-layout-3 input.qty[type="number"] {
-	border-radius: calc(#{input_height} / 2);
+	border-radius: calc(var(--input-height) / 2);
     width: 100px;
     background-color: $heading_color;
     color: #fff;
+    padding: 0 20px;
 }
 
 .pxl-addtocart-btn-wrap{
