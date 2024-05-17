@@ -740,6 +740,12 @@
 			letter-spacing: 0.03em;
 			text-transform: capitalize;
 		}
+		.pxl-icon {
+			font-size: 15px;
+			color: $heading_color;
+			width: 42px;
+			height: 42px;
+		}
 	}
 }
 
@@ -1129,7 +1135,7 @@ table.shop_attributes{
 				background-color: $primary_color;
 				border: none;
 				box-shadow: none;
-				z-index: 9;
+				z-index: 1;
 			}
 			&.active {
 				background-color: transparent;
