@@ -271,7 +271,7 @@ function basilico_variable_add_to_cart(){
 	                        </div>
 	                    </div>
 	                </div>
-	                <div class="d-flex align-items-end">
+	                <div class="pxl-variations-wrap d-flex align-items-end">
 	                	<div class="single_variation_wrap">
 	                		<div class="woocommerce-variation-add-to-cart variations_button">
 	                			<?php

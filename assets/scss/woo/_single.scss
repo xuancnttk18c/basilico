@@ -954,6 +954,28 @@ input.qty[type="number"] {
 	}
 }
 
+.modal .variations_form {
+	.variations {
+		.label {
+			font-size: 20px;
+			font-weight: 600;
+			letter-spacing: 0.03em;
+			font-family: $heading_font_family;
+			color: $heading_color;
+			label {
+				font-size: 20px;
+			}
+		}
+		.pxl-variation-row + .pxl-variation-row {
+			margin-top: 15px;
+		}
+	}
+	.pxl-addtocart-btn-wrap {
+		margin-top: 0;
+		margin-left: 15px;
+	}
+}
+
 body:has(.pxl-shop-layout-1) .modal input.qty[type="number"],
 body:has(.pxl-shop-layout-2) .modal input.qty[type="number"],
 .pxl-shop-layout-1 input.qty[type="number"],
@@ -1014,6 +1036,7 @@ body:has(.pxl-shop-layout-3) .modal .quantity,
 			color: #fff;
 			top: 50%;
 			@include transform(translateY(-50%));
+			z-index: 1;
 		}
 	}
 	.quantity-up {
@@ -1035,10 +1058,10 @@ body:has(.pxl-shop-layout-3) .modal .quantity,
 body:has(.pxl-shop-layout-3) .modal input.qty[type="number"],
 .pxl-shop-layout-3 input.qty[type="number"] {
 	border-radius: calc(var(--input-height) / 2);
-    width: 100px;
-    background-color: $heading_color;
-    color: #fff;
-    padding: 0 20px;
+	width: 100px;
+	background-color: $heading_color;
+	color: #fff;
+	padding: 0 32px;
 }
 
 .pxl-addtocart-btn-wrap{
@@ -1394,7 +1417,7 @@ table.shop_attributes{
 			a {
 				color: $secondary_color;
 				height: 18px;
-    			width: 18px;
+				width: 18px;
 				&::before {
 					font-size: 20px;
 					font-family: $pxli_font;
