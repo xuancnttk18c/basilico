@@ -448,6 +448,18 @@ select.orderby{
 	color: $heading_color;
 }
 
+.pxl-shop-layout-3 .pxl-featured,
+.pxl-shop-layout-3 .onsale {
+	display: inline-flex;
+	position: static;
+	background-image: -moz-linear-gradient( -90deg, rgb(103,58,183) 0%, rgb(151,59,245) 100%);
+	background-image: -webkit-linear-gradient( -90deg, rgb(103,58,183) 0%, rgb(151,59,245) 100%);
+	background-image: -ms-linear-gradient( -90deg, rgb(103,58,183) 0%, rgb(151,59,245) 100%);
+	text-transform: capitalize;
+	font-weight: 500;
+	letter-spacing: 0;
+}
+
 .pxl-shop-layout-5 .pxl-featured,
 .pxl-shop-layout-5 .onsale {
 	top: 25px;
