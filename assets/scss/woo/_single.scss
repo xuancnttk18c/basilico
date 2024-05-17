@@ -1307,6 +1307,27 @@ table.shop_attributes{
 				}
 			}
 		}
+		.commentlist {
+			.comment-reply-link {
+				color: #fff;
+				@include border-radius(17px);
+			}
+		}
+		.star-rating {
+			width: 100px;
+			font-size: 17px;
+			letter-spacing: 0;
+			&:before {
+				content: "\e948\e948\e948\e948\e948";
+				font-family: $pxli_font;
+				color: $secondary_color;
+			}
+			> span:before {
+				content: "\e949\e949\e949\e949\e949";
+				font-family: $pxli_font;	
+				color: $secondary_color;
+			}
+		}
 	}
 }
 
