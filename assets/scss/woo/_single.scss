@@ -980,12 +980,16 @@ input.qty[type="number"] {
 			color: $heading_color;
 		}
 	}
+	.pxl-variation-results .woocommerce-variation{
+		margin-top: 28px;
+	}
 	.woocommerce-variation-price {
 		.price {
 			display: inline-flex;
 			color: $primary_color;
 			font-weight: 600;
 			font-size: 25px;
+			line-height: 1;
 			letter-spacing: 0.02em;
 			margin-bottom: 0;
 			del {
