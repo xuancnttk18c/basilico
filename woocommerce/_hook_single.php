@@ -228,15 +228,13 @@ function basilico_variable_add_to_cart(){
 	$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
 	$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
 	?>
-	<a href="#ex1" rel="modal:open" class="pxl-btn btn">
+	<a href="#variations_cart_modal" rel="modal:open" class="pxl-btn btn">
 		<?php echo esc_html('Select Options', 'basilico'); ?>
 	</a>
-	<div id="ex1" class="modal">
+	<div id="variations_cart_modal" class="modal">
 		<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
-
 		<form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo esc_attr($variations_attr); ?>">
 			<?php do_action( 'woocommerce_before_variations_form' ); ?>
-
 			<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
 				<p class="stock out-of-stock"><?php echo esc_html( apply_filters( 'woocommerce_out_of_stock_message', esc_html__( 'This product is currently out of stock and unavailable.', 'basilico' ) ) ); ?></p>
 			<?php else : ?>
