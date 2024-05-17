@@ -1310,6 +1310,10 @@ table.shop_attributes{
 	}
 	.woocommerce-Tabs-panel--reviews {
 		.commentlist {
+			.comment-title {
+				font-size: 16px;
+				text-transform: capitalize;
+			}
 			.comment-reply-link {
 				color: #fff;
 				@include border-radius(17px);
