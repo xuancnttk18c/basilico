@@ -1295,9 +1295,9 @@ table.shop_attributes{
 				letter-spacing: 0.02em;
 				text-transform: capitalize;
 			}
-			.active {
+			&.active {
 				&:after {
-					width: 150px;
+					width: 150%;
 				}
 			}
 		}
