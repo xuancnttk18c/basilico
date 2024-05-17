@@ -980,6 +980,19 @@ input.qty[type="number"] {
 			color: $heading_color;
 		}
 	}
+	.woocommerce-variation-price {
+		.price {
+			display: inline-flex;
+			color: $primary_color;
+			font-weight: 600;
+			font-size: 25px;
+			letter-spacing: 0.02em;
+			margin-bottom: 0;
+			del {
+				color: #c8c8c8;
+			}
+		}
+	}
 	.pxl-addtocart-btn-wrap {
 		margin-top: 0;
 		margin-left: 15px;
