@@ -2,15 +2,9 @@
 	padding-bottom: 75px;
 }
 .pxl-single-product-gallery-summary-wraps{
-	margin: -15px -20px;
-	@media (max-width: $lg_max){
-		margin: -15px;
-	}
+	margin: -15px;
 	> div {
-		padding: 15px 20px;
-		@media (max-width: $lg_max){
-			padding: 15px;
-		}
+		padding: 15px;
 		&.pxl-single-product-gallery-wraps{
 			text-align: center;
 		}
@@ -163,20 +157,29 @@
 		}
 	}
 }
+
 .pxl-shop-layout-3 .woocommerce-product-gallery {
 	.woocommerce-product-gallery__image,
 	.flex-viewport {
 		@include border-radius(20px);
 		overflow: hidden;
 	}
+	.flex-viewport .woocommerce-product-gallery__image {
+		@include border-radius(0);
+	}
 }
+
 .pxl-shop-layout-5 .woocommerce-product-gallery {
 	.woocommerce-product-gallery__image,
 	.flex-viewport {
 		@include border-radius(10px);
 		overflow: hidden;
 	}
+	.flex-viewport .woocommerce-product-gallery__image {
+		@include border-radius(0);
+	}
 }
+
 .wc-gallery-sync {
 	position: relative;
 	margin-top: 30px;
@@ -466,6 +469,26 @@
 			text-transform: capitalize;
 		}
 	}
+	.woocommerce-product-varitions {
+		padding-top: 23px;
+		margin-top: 23px;
+		margin-bottom: 30px;
+		border-top: 1px solid rgba($divider_color_rgb, 0.6);
+		h4 {
+			font-size: 22px;
+			font-weight: 500;
+			letter-spacing: 0.02em;
+			margin-bottom: 10px;
+			text-transform: capitalize;
+		}
+		> div.d-flex {
+			align-items: center;
+		}
+		.stock-wishlist {
+			margin-left: 20px;
+    		margin-top: 0;
+		}
+	}
 	.woocommerce-product-details__short-description{
 		letter-spacing: 0.02em;
 		padding-top: 23px;
@@ -666,7 +689,7 @@
 		display: inline-flex;
 		margin-left: 27px;
 		position: relative;
-    	top: -2px;
+		top: -2px;
 		.star-rating {
 			width: 100px;
 			font-size: 17px;
