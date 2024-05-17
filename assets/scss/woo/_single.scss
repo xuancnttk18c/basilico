@@ -1330,6 +1330,35 @@ table.shop_attributes{
 				color: $secondary_color;
 			}
 		}
+		p.stars {
+			a {
+				&::before {
+					font-size: 20px;
+					font-family: $pxli_font;
+					content: '\e948';
+				}
+			}
+			&:hover a::before {
+				content: '\e949';
+				font-weight: normal;
+			}
+			&.selected {
+				a.active {
+					&::before {
+						content: '\e949';
+						font-weight: normal;
+					}
+					~ a::before {
+						content: '\e948';
+						font-weight: normal;
+					}
+				}
+				a:not(.active)::before {
+					content: '\e949';
+					font-weight: normal;
+				}
+			}
+		}
 	}
 }
 
