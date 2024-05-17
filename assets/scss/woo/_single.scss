@@ -745,6 +745,9 @@
 			color: $heading_color;
 			width: 42px;
 			height: 42px;
+			&:hover {
+				color: #fff;
+			}
 		}
 	}
 }
