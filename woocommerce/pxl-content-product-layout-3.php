@@ -9,9 +9,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 ?>
 <div <?php wc_product_class( '', $product ); ?>>
     <div class="pxl-shop-item-wrap">
-        <div class="hot-sale">
-            <?php woocommerce_show_product_sale_flash(); ?>
-        </div>
         <div class="pxl-products-thumb relative">
             <div class="image-wrap">
                 <?php
