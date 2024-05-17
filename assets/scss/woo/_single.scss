@@ -1332,10 +1332,17 @@ table.shop_attributes{
 		}
 		p.stars {
 			a {
+				color: $secondary_color;
+				height: 18px;
+    			width: 18px;
 				&::before {
 					font-size: 20px;
 					font-family: $pxli_font;
 					content: '\e948';
+				}
+				&:hover ~ a::before {
+					content: '\e948';
+					font-weight: normal;
 				}
 			}
 			&:hover a::before {
