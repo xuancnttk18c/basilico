@@ -879,6 +879,12 @@ if(class_exists('Woocommerce')) {
                     ),
                     'default' => 'btn-outline-secondary',
                 ),
+                array(
+                    'id'      => 'onsale_text',
+                    'type'    => 'text',
+                    'title'   => esc_html__('Sale Text', 'basilico'),
+                    'default' => '',
+                ),
             )
         )
     ));
