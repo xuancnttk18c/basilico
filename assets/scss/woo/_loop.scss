@@ -550,9 +550,7 @@ select.orderby{
 	}
 }
 
-.pxl-shop-layout-1 .pxl-shop-woosmart-wrap,
-.pxl-shop-layout-2 .pxl-shop-woosmart-wrap,
-.pxl-shop-layout-5 .pxl-shop-woosmart-wrap {
+.pxl-shop-woosmart-wrap {
 	.woosw-btn {
 		background-color: transparent;
 		border: none;
@@ -580,7 +578,7 @@ select.orderby{
 		&.woosw-adding {
 			&:before {
 				content: "\e95b";
-				font-family: "pxli" !important;
+				font-family: $pxli_font !important;
 				@include animation(pxl-spin 2s linear infinite);
 			}
 			&:after{
