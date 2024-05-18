@@ -494,29 +494,26 @@ function basilico_simple_add_to_cart(){
         		);
         		do_action( 'woocommerce_after_add_to_cart_quantity' );
         		?>
-        		<div class="btn-wrap d-flex">
-        			<div class="pxl-addtocart-btn-wrap">
-        				<div class="pxl-atc-btn">
-        					<?php
-        					$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
-        					$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
-        					?>
-        					<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
-        				</div>
+        		<div class="pxl-addtocart-btn-wrap">
+        			<div class="pxl-atc-btn">
+        				<?php
+        				$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
+        				$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
+        				?>
+        				<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
         			</div>
-        			<?php
-        			$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
-        			if( $product_wishlist == '1') : ?>
-        				<div class="stock-wishlist">
-        					<div class="pxl-shop-woosmart-wrap">
-        						<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
-        					</div>
-        				</div>
-        			<?php endif;?>
         		</div>
         	</form>
         	<?php
         	do_action( 'woocommerce_after_add_to_cart_form' );
+        	$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
+        	if( $product_wishlist == '1') : ?>
+        		<div class="stock-wishlist">
+        			<div class="pxl-shop-woosmart-wrap">
+        				<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
+        			</div>
+        		</div>
+        	<?php endif;
         endif;
     }
 
