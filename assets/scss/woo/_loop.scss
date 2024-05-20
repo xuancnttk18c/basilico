@@ -177,11 +177,11 @@ select.orderby{
 		background-image: -ms-linear-gradient( 90deg, rgb(169,0,1) 0%, rgb(237,43,44) 100%);
 		@include border-radius(20px);
 		font-weight: 500;
-		gap: 5px;
 		.price {
 			@include d-flex();
 			flex-direction: row-reverse;
 			font-weight: 600;
+			gap: 5px;
 			del {
 				color: rgba(255, 255, 255, 0.5);
 			}
