@@ -273,6 +273,17 @@ function basilico_page_options_register( $metabox ) {
 					'icon'   => 'el-icon-website',
 					'fields' => array_merge(
 						array(
+                            array(
+                                'id'       => 'gallery_layout',
+                                'type'     => 'button_set',
+                                'title'    => esc_html__('Single Gallery', 'basilico'),
+                                'options'  => array(
+                                    'simple' => esc_html__('Simple', 'basilico'),
+                                    'horizontal' => esc_html__('Horizontal', 'basilico'),
+                                    'vertical' => esc_html__('Vertical', 'basilico'),
+                                ),
+                                'default'  => 'simple'
+                            ),
 							array(
 					            'id'=> 'product_feature_text_1',
 					            'type' => 'text',
@@ -284,7 +295,7 @@ function basilico_page_options_register( $metabox ) {
                                 'type'     => 'color_rgba',
                                 'title'    => esc_html__('Featured Color 1', 'basilico'),
                                 'output'   => array('background-color' => '.pxl-featured.featured-1'),
-                                'required' => array( 'product_feature_text_1', '=', '' )
+                                'required' => array( 'product_feature_text_1', '!=', '' )
                             ),
                             array(
                                 'id'=> 'product_feature_text_2',
@@ -297,18 +308,7 @@ function basilico_page_options_register( $metabox ) {
                                 'type'     => 'color_rgba',
                                 'title'    => esc_html__('Featured Color 1', 'basilico'),
                                 'output'   => array('background-color' => '.pxl-featured.featured-1'),
-                                'required' => array( 'product_feature_text_1', '=', '' )
-                            ),
-                            array(
-                                'id'       => 'gallery_layout',
-                                'type'     => 'button_set',
-                                'title'    => esc_html__('Single Gallery', 'basilico'),
-                                'options'  => array(
-                                    'simple' => esc_html__('Simple', 'basilico'),
-                                    'horizontal' => esc_html__('Horizontal', 'basilico'),
-                                    'vertical' => esc_html__('Vertical', 'basilico'),
-                                ),
-                                'default'  => 'simple'
+                                'required' => array( 'product_feature_text_1', '!=', '' )
                             ),
                             array(
                                 'id'=> 'product_additional_info',
