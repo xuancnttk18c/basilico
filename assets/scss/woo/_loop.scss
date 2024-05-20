@@ -164,6 +164,19 @@ select.orderby{
 		@include border-radius(20px);
 		overflow: hidden;
 	}
+	.cal-price-wrap {
+		justify-content: space-between;
+		position: absolute;
+		padding: 6px 27px;
+		bottom: 14px;
+		right: 16px;
+		left: 16px;
+		color: #fff;
+		background-image: -moz-linear-gradient( 90deg, rgb(169,0,1) 0%, rgb(237,43,44) 100%);
+		background-image: -webkit-linear-gradient( 90deg, rgb(169,0,1) 0%, rgb(237,43,44) 100%);
+		background-image: -ms-linear-gradient( 90deg, rgb(169,0,1) 0%, rgb(237,43,44) 100%);
+		@include border-radius(20px);
+	}
 }
 
 .pxl-shop-layout-5 .grid-item {
