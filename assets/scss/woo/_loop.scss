@@ -470,8 +470,8 @@ select.orderby{
 
 .pxl-shop-layout-3 .hot-sale {
 	position: absolute;
-    top: 20px;
-    right: 20px;
+	top: 20px;
+	right: 20px;
 }
 
 .pxl-shop-layout-3 .products .pxl-featured + .onsale {
@@ -491,8 +491,8 @@ select.orderby{
 	font-weight: 500;
 	letter-spacing: 0;
 	min-height: 32px;
-    min-width: 70px;
-    @include border-radius(16px);
+	min-width: 70px;
+	@include border-radius(16px);
 }
 
 .pxl-shop-layout-5 .pxl-featured,
@@ -640,40 +640,42 @@ select.orderby{
 	}
 }
 
-.post-type-archive-product .pxl-shop-layout-3 .pxl-shop-woosmart-wrap {
+.post-type-archive-product .pxl-shop-layout-3 {
 	.pxl-add-to-cart,
 	.stock-wishlist {
 		display: inline-flex;
 	}
-	.woosw-btn {
-		font-size: 0;
-		width: 50px;
-		padding: 0;
-		height: 50px;
-		border-radius: 50%;
-		background-image: -moz-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(61, 61, 61) 100%);
-		background-image: -webkit-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(61, 61, 61) 100%);
-		background-image: -ms-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(61, 61, 61) 100%);
-		&:before {
-			content: "\e985";
-			color: #fff;
-			margin-right: 0;
-			font-family: $pxli_font;
-			font-size: 15px;
-			text-indent: 0;
-			line-height: 1;
-		}
-		&.woosw-adding {
+	.pxl-shop-woosmart-wrap {
+		.woosw-btn {
+			font-size: 0;
+			width: 50px;
+			padding: 0;
+			height: 50px;
+			border-radius: 50%;
+			background-image: -moz-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(61, 61, 61) 100%);
+			background-image: -webkit-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(61, 61, 61) 100%);
+			background-image: -ms-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(61, 61, 61) 100%);
 			&:before {
-				content: "\e95b";
-				font-family: $pxli_font;
-				@include animation(pxl-spin 2s linear infinite);
-			}
-		}
-		&.woosw-added {
-			&:before {
-				content: "\e90c";
+				content: "\e985";
+				color: #fff;
 				margin-right: 0;
+				font-family: $pxli_font;
+				font-size: 15px;
+				text-indent: 0;
+				line-height: 1;
+			}
+			&.woosw-adding {
+				&:before {
+					content: "\e95b";
+					font-family: $pxli_font;
+					@include animation(pxl-spin 2s linear infinite);
+				}
+			}
+			&.woosw-added {
+				&:before {
+					content: "\e90c";
+					margin-right: 0;
+				}
 			}
 		}
 	}
