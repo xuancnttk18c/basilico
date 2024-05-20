@@ -29,13 +29,16 @@ if ( empty( $product ) || ! $product->is_visible() ) {
                 woocommerce_show_product_loop_sale_flash();
                 ?>
             </div>
+            <div class="cal-price-wrap d-flex justify-content-center">
+                <div class="d-inline-flex">
+                    <?php $additional_text = get_post_meta($product->get_id(), 'product_loop_additional_text', true); ?>
+                </div>
+                <?php woocommerce_template_loop_price(); ?>
+            </div>
         </div>
         <div class="pxl-products-content">
             <div class="pxl-products-content-wrap">
                 <div class="pxl-products-content-inner">
-                    <div class="top-content-inner d-md-flex gx-30 justify-content-center">
-                        <?php woocommerce_template_loop_price(); ?>
-                    </div>
                     <?php
                     /**
                      * Hook: woocommerce_before_shop_loop_item_title.

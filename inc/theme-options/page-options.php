@@ -290,13 +290,13 @@ function basilico_page_options_register( $metabox ) {
 					            'title' => esc_html__('Featured Text 1', 'basilico'),
 					            'default' => '',
 					        ),
-                            // array(
-                            //     'id'       => 'product_feature_color_1',
-                            //     'type'     => 'color_rgba',
-                            //     'title'    => esc_html__('Featured Color 1', 'basilico'),
-                            //     'output'   => array('background-color' => '.pxl-featured'),
-                            //     'required' => array( 'product_feature_text', '!=', '' )
-                            // ),
+                            array(
+                                'id'=> 'product_loop_additional_text',
+                                'type' => 'text',
+                                'title' => esc_html__('Addtional Text', 'basilico'),
+                                'default' => esc_html('220gr / 600 cal', 'basilico'),
+                                'description' => esc_html('Use for Shop Layout 3', 'basilico')
+                            ),
                             array(
                                 'id'=> 'product_additional_info',
                                 'type' => 'editor',
