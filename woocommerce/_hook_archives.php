@@ -77,7 +77,10 @@ function basilico_woocommerce_loop_add_to_cart_link($button, $product, $args){
     $product_layout = basilico()->get_theme_opt('product_layout', 'layout-1');
     $btn_icon = '<span class="pxl-icon pxli-shopping-bag-2"></span>';
     $add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
-    if ($product_layout == 'layout-5') {
+    if ($product_layout == 'layout-3') {
+        $btn_icon = '';
+    }
+    elseif ($product_layout == 'layout-5') {
         $btn_icon = '<span class="pxl-icon pxli pxli-shopping-cart-plus"></span>';
     }
     return sprintf(
