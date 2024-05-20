@@ -522,10 +522,19 @@ select.orderby{
 }
 
 .pxl-shop-layout-3 .pxl-products-content {
+	.pxl-divider {
+		width: 60px;
+		height: 4px;
+		@include border-radius(2px);
+		&:before {
+			background-color: $secondary_color;
+		}
+	}
 	.pxl-product-title {
 		@include text-truncate-multi-line(25px, 1.4, 1);
 		font-weight: 600;
 		letter-spacing: 0.02em;
+		text-transform: capitalize;
 	}
 }
 
@@ -653,9 +662,12 @@ select.orderby{
 		@include d-flex();
     	gap: 10px;
 	}
-	.pxl-add-to-cart,
+	.pxl-add-to-cart {
+		display: inline-flex;
+	}
 	.stock-wishlist {
 		display: inline-flex;
+		margin-top: 0;
 	}
 	.pxl-shop-woosmart-wrap {
 		.woosw-btn {
