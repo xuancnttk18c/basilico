@@ -676,7 +676,8 @@ select.orderby{
 	}
 }
 
-.post-type-archive-product .pxl-shop-layout-3 {
+.post-type-archive-product .pxl-shop-layout-3,
+.pxl-shop-layout-3 .related.products .pxl-products-content {
 	.btn-wrapper {
 		@include d-flex();
     	gap: 10px;
