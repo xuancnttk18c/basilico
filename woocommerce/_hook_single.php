@@ -24,6 +24,7 @@ function basilico_woocommerce_remove_product_single_function() {
 add_action( 'init', 'basilico_woocommerce_remove_product_single_function' );
 
 if (!function_exists('basilico_woocommerce_featured_flash_sale')) {
+	add_action('woocommerce_before_single_product_summary','basilico_woocommerce_featured_flash_sale', 0);
 	function basilico_woocommerce_featured_flash_sale(){
 		?>
 		<div class="hot-sale">
