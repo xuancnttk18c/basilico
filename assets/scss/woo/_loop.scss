@@ -159,6 +159,13 @@ select.orderby{
 	}
 }
 
+.pxl-shop-layout-3 .pxl-products-thumb {
+	.image-wrap {
+		@include border-radius(20px);
+		overflow: hidden;
+	}
+}
+
 .pxl-shop-layout-5 .grid-item {
 	.pxl-products-thumb {
 		.image-wrap {
@@ -446,6 +453,16 @@ select.orderby{
 .pxl-shop-layout-2 .onsale {
 	background-color: $primary_color;
 	color: $heading_color;
+}
+
+.pxl-shop-layout-3 .hot-sale {
+	position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.pxl-shop-layout-3 .products .pxl-featured + .onsale {
+	margin-left: 6px;
 }
 
 .pxl-shop-layout-3 .pxl-featured,
