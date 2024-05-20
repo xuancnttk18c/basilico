@@ -177,6 +177,7 @@ select.orderby{
 		background-image: -ms-linear-gradient( 90deg, rgb(169,0,1) 0%, rgb(237,43,44) 100%);
 		@include border-radius(20px);
 		font-weight: 500;
+		gap: 5px;
 		.price {
 			@include d-flex();
 			flex-direction: row-reverse;
@@ -480,7 +481,8 @@ select.orderby{
 	color: $heading_color;
 }
 
-.post-type-archive-product .pxl-shop-layout-3 .hot-sale {
+.post-type-archive-product .pxl-shop-layout-3 .hot-sale,
+.related.products .pxl-shop-layout-3 .hot-sale {
 	position: absolute;
 	top: 20px;
 	right: 20px;
