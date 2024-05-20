@@ -31,8 +31,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
             </div>
             <div class="cal-price-wrap d-flex">
                 <?php
-                $additional_text = get_post_meta($product->get_id(), 'product_loop_additional_text', '');
-                var_dump($additional_text);
+                $additional_text = get_post_meta($product->get_id(), 'product_loop_additional_text1', '');
                 if (!empty($additional_text)) : ?>
                     <div class="d-inline-flex">
                         <?php echo esc_attr($additional_text); ?>

@@ -291,7 +291,7 @@ function basilico_page_options_register( $metabox ) {
 					            'default' => '',
 					        ),
                             array(
-                                'id'=> 'product_loop_additional_text',
+                                'id'=> 'product_loop_additional_text1',
                                 'type' => 'text',
                                 'title' => esc_html__('Addtional Text', 'basilico'),
                                 'default' => esc_html('', 'basilico'),
