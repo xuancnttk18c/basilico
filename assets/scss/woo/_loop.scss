@@ -182,7 +182,7 @@ select.orderby{
 			flex-direction: row-reverse;
 			gap: 15px;
 			font-weight: 600;
-			&:not(:has(del))del {
+			&:not(:has(del)) del {
 				color: rgba(255, 255, 255, 0.5);
 			}
 		}
