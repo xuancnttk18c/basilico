@@ -71,18 +71,30 @@ if ( empty( $product ) || ! $product->is_visible() ) {
                      */
                     do_action( 'woocommerce_after_shop_loop_item_title' );
                     ?>
+                    <div class="pxl-divider"></div>
                     <div class="pxl-loop-product-excerpt">
                         <?php
                         $excerpt = get_the_excerpt();
                         if (!empty($excerpt)) {
-                            echo wp_trim_words($excerpt, 30, '.');
+                            echo wp_trim_words($excerpt, 17, '...');
                         }
                         ?>
                     </div>
-                    <div class="pxl-add-to-cart">
-                        <div class="wrap-btn for-cart">
-                            <?php woocommerce_template_loop_add_to_cart(); ?>
+                    <div class="btn-wrapper">
+                        <div class="pxl-add-to-cart">
+                            <div class="wrap-btn for-cart">
+                                <?php woocommerce_template_loop_add_to_cart(); ?>
+                            </div>
                         </div>
+                        <?php
+                        $product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
+                        if ($product_wishlist == '1') : ?>
+                            <div class="stock-wishlist">
+                                <div class="pxl-shop-woosmart-wrap">
+                                    <?php do_action( 'woosw_button_position_single_woosmart' ); ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
