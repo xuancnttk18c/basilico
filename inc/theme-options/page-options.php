@@ -294,7 +294,7 @@ function basilico_page_options_register( $metabox ) {
                                 'id'=> 'product_loop_additional_text',
                                 'type' => 'text',
                                 'title' => esc_html__('Addtional Text', 'basilico'),
-                                'default' => esc_html('220gr / 600 cal', 'basilico'),
+                                'default' => esc_html('', 'basilico'),
                                 'description' => esc_html('Use for Shop Layout 3', 'basilico')
                             ),
                             array(
