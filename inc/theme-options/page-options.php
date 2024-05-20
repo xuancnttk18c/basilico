@@ -290,13 +290,13 @@ function basilico_page_options_register( $metabox ) {
 					            'title' => esc_html__('Featured Text 1', 'basilico'),
 					            'default' => '',
 					        ),
-                            array(
-                                'id'       => 'product_feature_color_1',
-                                'type'     => 'color_rgba',
-                                'title'    => esc_html__('Featured Color 1', 'basilico'),
-                                'output'   => array('background-color' => '.pxl-featured'),
-                                'required' => array( 'product_feature_text', '!=', '' )
-                            ),
+                            // array(
+                            //     'id'       => 'product_feature_color_1',
+                            //     'type'     => 'color_rgba',
+                            //     'title'    => esc_html__('Featured Color 1', 'basilico'),
+                            //     'output'   => array('background-color' => '.pxl-featured'),
+                            //     'required' => array( 'product_feature_text', '!=', '' )
+                            // ),
                             array(
                                 'id'=> 'product_additional_info',
                                 'type' => 'editor',
