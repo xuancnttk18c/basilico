@@ -176,6 +176,16 @@ select.orderby{
 		background-image: -webkit-linear-gradient( 90deg, rgb(169,0,1) 0%, rgb(237,43,44) 100%);
 		background-image: -ms-linear-gradient( 90deg, rgb(169,0,1) 0%, rgb(237,43,44) 100%);
 		@include border-radius(20px);
+		font-weight: 500;
+		.price {
+			@include d-flex();
+			flex-direction: row-reverse;
+			gap: 15px;
+			font-weight: 600;
+			del {
+				color: rgba(255, 255, 255, 0.5);
+			}
+		}
 	}
 }
 
