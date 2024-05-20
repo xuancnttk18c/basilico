@@ -76,14 +76,16 @@ add_filter('woocommerce_loop_add_to_cart_link', 'basilico_woocommerce_loop_add_t
 function basilico_woocommerce_loop_add_to_cart_link($button, $product, $args){
     $product_layout = basilico()->get_theme_opt('product_layout', 'layout-1');
     $btn_icon = '<span class="pxl-icon pxli-shopping-bag-2"></span>';
+    $add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
     if ($product_layout == 'layout-5') {
         $btn_icon = '<span class="pxl-icon pxli pxli-shopping-cart-plus"></span>';
     }
     return sprintf(
-        '<a href="%s" data-quantity="%s" class="pxl-btn %s" %s><span class="pxl-btn-text">%s</span>%s</a>',
+        '<a href="%s" data-quantity="%s" class="pxl-btn %s %s" %s><span class="pxl-btn-text">%s</span>%s</a>',
         esc_url( $product->add_to_cart_url() ),
         esc_attr( isset( $args['quantity'] ) ? $args['quantity'] : 1 ),
         esc_attr( isset( $args['class'] ) ? $args['class'] : 'button' ),
+        $add_to_cart_btn_style,
         isset( $args['attributes'] ) ? wc_implode_html_attributes( $args['attributes'] ) : '',
         esc_html( $product->add_to_cart_text() ),
         $btn_icon
