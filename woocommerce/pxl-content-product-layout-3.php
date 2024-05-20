@@ -34,7 +34,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
                 $additional_text = get_post_meta($product->get_id(), 'product_loop_additional_text1', '');
                 if (!empty($additional_text)) : ?>
                     <div class="d-inline-flex">
-                        <?php echo esc_html($additional_text); ?>
+                        <?php echo esc_html($additional_text[0]); ?>
                     </div>
                 <?php endif; ?>
                 <?php woocommerce_template_loop_price(); ?>
