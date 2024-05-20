@@ -24,12 +24,12 @@ function basilico_woocommerce_remove_product_single_function() {
 add_action( 'init', 'basilico_woocommerce_remove_product_single_function' );
 
 if (!function_exists('basilico_woocommerce_featured_flash_sale')) {
-	add_action('woocommerce_before_single_product_summary', 'basilico_woocommerce_featured_flash_sale', 5);
-	function basilico_woocommerce_featured_flash_sale() { ?>
+	function basilico_woocommerce_featured_flash_sale(){
+		?>
 		<div class="hot-sale">
 			<?php
 			if ( $product->is_featured() ) {
-				$feature_text = get_post_meta($product->get_id(), 'product_feature_text', true);
+				$feature_text = get_post_meta($product->get_id(),'product_feature_text', true);
 				if (empty($feature_text)){
 					$feature_text = "HOT";
 				}
@@ -46,7 +46,6 @@ if (!function_exists('basilico_woocommerce_featured_flash_sale')) {
 
 /* Custom Gallery Layout, Wrap open Gallery and Summary */
 if(!function_exists('basilico_woocommerce_before_single_product_summary')){
-	
 	add_action('woocommerce_before_single_product_summary','basilico_woocommerce_before_single_product_summary', 0);
 	function basilico_woocommerce_before_single_product_summary(){
 		$gallery_layout = isset($_GET['gallery_layout']) ? sanitize_text_field($_GET['gallery_layout']) : basilico()->get_page_opt('gallery_layout', 'simple');
