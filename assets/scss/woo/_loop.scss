@@ -180,10 +180,12 @@ select.orderby{
 		.price {
 			@include d-flex();
 			flex-direction: row-reverse;
-			gap: 15px;
 			font-weight: 600;
-			&:not(:has(del)) del {
+			del {
 				color: rgba(255, 255, 255, 0.5);
+			}
+			&:has(del) {
+				gap: 15px;
 			}
 		}
 	}
