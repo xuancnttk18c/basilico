@@ -526,7 +526,9 @@ select.orderby{
 		width: 60px;
 		height: 4px;
 		@include border-radius(2px);
+		overflow: hidden;
 		&:before {
+			width: 100%;
 			background-color: $secondary_color;
 		}
 	}
@@ -535,6 +537,9 @@ select.orderby{
 		font-weight: 600;
 		letter-spacing: 0.02em;
 		text-transform: capitalize;
+	}
+	.pxl-loop-product-excerpt {
+		margin-top: 15px;
 	}
 }
 
@@ -661,6 +666,7 @@ select.orderby{
 	.btn-wrapper {
 		@include d-flex();
     	gap: 10px;
+    	margin-top: 33px;
 	}
 	.pxl-add-to-cart {
 		display: inline-flex;
