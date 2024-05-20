@@ -521,6 +521,14 @@ select.orderby{
 	}
 }
 
+.pxl-shop-layout-3 .pxl-products-content {
+	.pxl-product-title {
+		@include text-truncate-multi-line(25px, 1.4, 1);
+		font-weight: 600;
+		letter-spacing: 0.02em;
+	}
+}
+
 .pxl-shop-layout-5 .pxl-products-content {
 	padding: 26px 0 0;
 	text-align: center;
@@ -641,6 +649,10 @@ select.orderby{
 }
 
 .post-type-archive-product .pxl-shop-layout-3 {
+	.btn-wrapper {
+		@include d-flex();
+    	gap: 10px;
+	}
 	.pxl-add-to-cart,
 	.stock-wishlist {
 		display: inline-flex;
