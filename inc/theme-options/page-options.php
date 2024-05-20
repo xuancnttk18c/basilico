@@ -294,7 +294,7 @@ function basilico_page_options_register( $metabox ) {
                                 'id'       => 'product_feature_color_1',
                                 'type'     => 'color_rgba',
                                 'title'    => esc_html__('Featured Color 1', 'basilico'),
-                                'output'   => array('background-color' => '.pxl-featured.featured-1'),
+                                'output'   => array('background-color' => '.pxl-featured'),
                                 'required' => array( 'product_feature_text_1', '!=', '' )
                             ),
                             array(
@@ -307,8 +307,8 @@ function basilico_page_options_register( $metabox ) {
                                 'id'       => 'product_feature_color_2',
                                 'type'     => 'color_rgba',
                                 'title'    => esc_html__('Featured Color 1', 'basilico'),
-                                'output'   => array('background-color' => '.pxl-featured.featured-1'),
-                                'required' => array( 'product_feature_text_1', '!=', '' )
+                                'output'   => array('background-color' => '.pxl-featured.featured-2'),
+                                'required' => array( 'product_feature_text_2', '!=', '' )
                             ),
                             array(
                                 'id'=> 'product_additional_info',
