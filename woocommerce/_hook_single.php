@@ -500,61 +500,60 @@ function basilico_simple_add_to_cart(){
 	if ( ! $product->is_purchasable() ) {
 		return;
 	}
-        echo wc_get_stock_html( $product ); // WPCS: XSS ok.
-        if ( $product->is_in_stock() ) : ?>
+    echo wc_get_stock_html( $product ); // WPCS: XSS ok.
+    if ( $product->is_in_stock() ) : ?>
+    	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+    	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
+    		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+    		<?php
+    		do_action( 'woocommerce_before_add_to_cart_quantity' );
+    		woocommerce_quantity_input(
+    			array(
+    				'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
+    				'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
+                    'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( sanitize_text_field( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
+                )
+    		);
+    		do_action( 'woocommerce_after_add_to_cart_quantity' );
+    		?>
+    		<div class="pxl-addtocart-btn-wrap">
+    			<div class="pxl-atc-btn">
+    				<?php
+    				$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
+    				$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
+    				?>
+    				<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
+    			</div>
+    		</div>
+    		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+    	</form>
+    	<?php
+    	$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
+    	if( $product_wishlist == '1') : ?>
+    		<div class="stock-wishlist">
+    			<div class="pxl-shop-woosmart-wrap">
+    				<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
+    			</div>
+    		</div>
+    	<?php endif;
+    endif;
+}
 
-        	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
-        	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
-        		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-        		<?php
-        		do_action( 'woocommerce_before_add_to_cart_quantity' );
-        		woocommerce_quantity_input(
-        			array(
-        				'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
-        				'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
-                        'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( sanitize_text_field( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
-                    )
-        		);
-        		do_action( 'woocommerce_after_add_to_cart_quantity' );
-        		?>
-        		<div class="pxl-addtocart-btn-wrap">
-        			<div class="pxl-atc-btn">
-        				<?php
-        				$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
-        				$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
-        				?>
-        				<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
-        			</div>
-        		</div>
-        	</form>
-        	<?php
-        	do_action( 'woocommerce_after_add_to_cart_form' );
-        	$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
-        	if( $product_wishlist == '1') : ?>
-        		<div class="stock-wishlist">
-        			<div class="pxl-shop-woosmart-wrap">
-        				<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
-        			</div>
-        		</div>
-        	<?php endif;
-        endif;
-    }
+/* Social Sharing */
+if(!function_exists('basilico_woocommerce_template_single_sharing')){
+	add_action('woocommerce_share', 'basilico_woocommerce_template_single_sharing');
+	function basilico_woocommerce_template_single_sharing(){
+		$product_social_share_on = basilico()->get_theme_opt('product_social_share_on', '0');
+		if($product_social_share_on != '1') return;
+		basilico()->blog->get_post_share();
+	}
+}
 
-    /* Social Sharing */
-    if(!function_exists('basilico_woocommerce_template_single_sharing')){
-    	add_action('woocommerce_share', 'basilico_woocommerce_template_single_sharing');
-    	function basilico_woocommerce_template_single_sharing(){
-    		$product_social_share_on = basilico()->get_theme_opt('product_social_share_on', '0');
-    		if($product_social_share_on != '1') return;
-    		basilico()->blog->get_post_share();
-    	}
-    }
-
-    /* Custom Details Tab */
-    if(!function_exists('basilico_woocommerce_rename_tabs')){
-    	add_filter( 'woocommerce_product_tabs', 'basilico_woocommerce_rename_tabs', 98 );
-    	function basilico_woocommerce_rename_tabs( $tabs ) {
-    		if(!empty($tabs['additional_information']['title']))
+/* Custom Details Tab */
+if(!function_exists('basilico_woocommerce_rename_tabs')){
+	add_filter( 'woocommerce_product_tabs', 'basilico_woocommerce_rename_tabs', 98 );
+	function basilico_woocommerce_rename_tabs( $tabs ) {
+		if(!empty($tabs['additional_information']['title']))
 			$tabs['additional_information']['title'] = esc_html__( 'Product details','basilico' );	// Rename the additional information tab
 
 		return $tabs;
