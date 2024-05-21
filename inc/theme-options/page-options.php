@@ -291,6 +291,18 @@ function basilico_page_options_register( $metabox ) {
 					            'default' => '',
 					        ),
                             array(
+                                'id'          => 'feature_color_01',
+                                'type'        => 'color_gradient',
+                                'title'       => esc_html__('Gradient Color 01', 'basilico'),
+                                'transparent' => false,
+                                'gradient-angle' => true,
+                                'default'  => array(
+                                    'from' => '#673AB7',
+                                    'to'   => '#973BF5',
+                                    'gradient-angle' => 180,
+                                ),
+                            ),
+                            array(
                                 'id'=> 'product_loop_additional_text1',
                                 'type' => 'text',
                                 'title' => esc_html__('Addtional Text', 'basilico'),

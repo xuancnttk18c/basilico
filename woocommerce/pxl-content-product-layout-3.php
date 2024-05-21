@@ -22,8 +22,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
                     if (empty($feature_text)){
                         $feature_text = "HOT";
                     }
+                    $feature_color_01_from = get_post_meta($product->get_id(), 'gradient_color_01', ['from' => '#673AB7'])['from'];
+                    $feature_color_01_to = get_post_meta($product->get_id(),'gradient_color_01', ['to' => '#973BF5'])['to'];
+                    $feature_color_01_angle = get_post_meta($product->get_id(), 'gradient_color_01', ['gradient-angle' => '180'])['gradient-angle'].'deg';
+                    $feature_color_01_style = printf("style='background-image: linear-gradient( %s, %s 0%, %s 100%);'", $feature_color_01_angle, $feature_color_01_from, $feature_color_01_to);
                     ?>
-                    <span class="pxl-featured"><?php echo esc_html($feature_text); ?></span>
+                    <span class="pxl-featured" <?php echo esc_html($feature_color_01_style); ?>><?php echo esc_html($feature_text); ?></span>
                     <?php
                 }
                 woocommerce_show_product_loop_sale_flash();
