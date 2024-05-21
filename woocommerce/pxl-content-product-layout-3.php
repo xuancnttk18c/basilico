@@ -19,16 +19,39 @@ if ( empty( $product ) || ! $product->is_visible() ) {
                 <?php
                 if ( $product->is_featured() ) {
                     $feature_text = get_post_meta($product->get_id(),'product_feature_text', true);
+                    $feature_text_02 = get_post_meta($product->get_id(),'product_feature_text_02', true);
                     if (empty($feature_text)){
                         $feature_text = "HOT";
                     }
-                    $feature_color_01_from = get_post_meta($product->get_id(), 'gradient_color_01', ['from' => '#673AB7'])['from'];
-                    $feature_color_01_to = get_post_meta($product->get_id(),'gradient_color_01', ['to' => '#973BF5'])['to'];
-                    $feature_color_01_angle = get_post_meta($product->get_id(), 'gradient_color_01', ['gradient-angle' => '180'])['gradient-angle'].'deg';
-                    $feature_color_01_style = printf("style='background-image: linear-gradient( %s, %s 0%, %s 100%);'", $feature_color_01_angle, $feature_color_01_from, $feature_color_01_to);
+                    if (!empty(get_post_meta($product->get_id(), 'feature_color_01', ''))) {
+                        $feature_color_01_from = get_post_meta($product->get_id(), 'feature_color_01', ['from' => '#673AB7'])['from'];
+                        $feature_color_01_to = get_post_meta($product->get_id(),'feature_color_01', ['to' => '#973BF5'])['to'];
+                        $feature_color_01_angle = get_post_meta($product->get_id(), 'feature_color_01', ['gradient-angle' => '180'])['gradient-angle'].'deg';
+                        $style_text = 'background-image: linear-gradient(%s, %s 0%%, %s 100%%);';
+                        $feature_color_01_style = sprintf($style_text, $feature_color_01_angle, $feature_color_01_from, $feature_color_01_to);
+                    }
+                    else {
+                        $feature_color_01_style = "background-image: inherit;";
+                    }
                     ?>
-                    <span class="pxl-featured" <?php echo esc_html($feature_color_01_style); ?>><?php echo esc_html($feature_text); ?></span>
-                    <?php
+                    <span class="pxl-featured" <?php echo 'style="'.esc_html($feature_color_01_style);.'";' ?>><?php echo esc_html($feature_text); ?></span>
+                    
+                    <?php 
+                    if (!empty($feature_text_02)) {
+                        if (!empty(get_post_meta($product->get_id(), 'feature_color_02', ''))) {
+                            $feature_color_02_from = get_post_meta($product->get_id(), 'feature_color_02', ['from' => '#a90001'])['from'];
+                            $feature_color_02_to = get_post_meta($product->get_id(),'feature_color_02', ['to' => '#ed2b2c'])['to'];
+                            $feature_color_02_angle = get_post_meta($product->get_id(), 'feature_color_02', ['gradient-angle' => '0'])['gradient-angle'].'deg';
+                            $style_text_02 = 'background-image: linear-gradient(%s, %s 0%%, %s 100%%);';
+                            $feature_color_02_style = sprintf($style_text, $feature_color_01_angle, $feature_color_01_from, $feature_color_01_to);
+                        }
+                        else {
+                            $feature_color_02_style = "none";
+                        }
+                        ?>
+                        <span class="pxl-featured" <?php echo 'style="'.esc_html($feature_color_02_style);.'";' ?>><?php echo esc_html($feature_text_02); ?></span>
+                        <?php
+                    }
                 }
                 woocommerce_show_product_loop_sale_flash();
                 ?>

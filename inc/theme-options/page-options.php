@@ -287,13 +287,13 @@ function basilico_page_options_register( $metabox ) {
 							array(
 					            'id'=> 'product_feature_text',
 					            'type' => 'text',
-					            'title' => esc_html__('Featured Text 1', 'basilico'),
+					            'title' => esc_html__('Featured Text 01', 'basilico'),
 					            'default' => '',
 					        ),
                             array(
                                 'id'          => 'feature_color_01',
                                 'type'        => 'color_gradient',
-                                'title'       => esc_html__('Gradient Color 01', 'basilico'),
+                                'title'       => esc_html__('Featured Color 01', 'basilico'),
                                 'transparent' => false,
                                 'gradient-angle' => true,
                                 'default'  => array(
@@ -301,6 +301,26 @@ function basilico_page_options_register( $metabox ) {
                                     'to'   => '#973BF5',
                                     'gradient-angle' => 180,
                                 ),
+                                'required' => array( 'product_feature_text', '!=', '' )
+                            ),
+                            array(
+                                'id'=> 'product_feature_text_02',
+                                'type' => 'text',
+                                'title' => esc_html__('Featured Text 02', 'basilico'),
+                                'default' => '',
+                            ),
+                            array(
+                                'id'          => 'feature_color_02',
+                                'type'        => 'color_gradient',
+                                'title'       => esc_html__('Featured Color 02', 'basilico'),
+                                'transparent' => false,
+                                'gradient-angle' => true,
+                                'default'  => array(
+                                    'from' => '#a90001',
+                                    'to'   => '#ed2b2c',
+                                    'gradient-angle' => 0,
+                                ),
+                                'required' => array( 'product_feature_text_02', '!=', '' )
                             ),
                             array(
                                 'id'=> 'product_loop_additional_text1',
