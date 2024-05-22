@@ -483,13 +483,17 @@ select.orderby{
 
 .post-type-archive-product .pxl-shop-layout-3 .hot-sale,
 .pxl-shop-layout-3 .related.products .hot-sale {
+	@include d-flex();
 	position: absolute;
 	top: 20px;
 	right: 20px;
 }
 
-.pxl-shop-layout-3 .products .pxl-featured + .onsale {
-	margin-left: 6px;
+.pxl-shop-layout-3 .products .pxl-featured {
+	+ .onsale,
+	+ .pxl-featured {
+		margin-left: 10px;
+	}
 }
 
 .pxl-shop-layout-3 .pxl-featured,
@@ -680,8 +684,8 @@ select.orderby{
 .pxl-shop-layout-3 .related.products .pxl-products-content {
 	.btn-wrapper {
 		@include d-flex();
-    	gap: 10px;
-    	margin-top: 33px;
+		gap: 10px;
+		margin-top: 33px;
 	}
 	.pxl-add-to-cart {
 		display: inline-flex;
