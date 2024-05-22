@@ -487,13 +487,7 @@ select.orderby{
 	position: absolute;
 	top: 20px;
 	right: 20px;
-}
-
-.pxl-shop-layout-3 .products .pxl-featured {
-	+ .onsale,
-	+ .pxl-featured {
-		margin-left: 10px;
-	}
+	gap: 10px;
 }
 
 .pxl-shop-layout-3 .pxl-featured,
