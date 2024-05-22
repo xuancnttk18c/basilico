@@ -34,7 +34,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
                         $feature_color_01_style = "";
                     }
                     ?>
-                    <span class="pxl-featured" <?php echo 'style="'.esc_html($feature_color_01_style).'";' ?>><?php echo esc_html($feature_text); ?></span>
+                    <span class="pxl-featured" <?php echo 'style="'.esc_html($feature_color_01_style).'"' ?>><?php echo esc_html($feature_text); ?></span>
 
                     <?php 
                     if (!empty($feature_text_02)) {
@@ -43,13 +43,13 @@ if ( empty( $product ) || ! $product->is_visible() ) {
                             $feature_color_02_to = get_post_meta($product->get_id(),'feature_color_02', ['to' => '#ed2b2c'])['to'];
                             $feature_color_02_angle = get_post_meta($product->get_id(), 'feature_color_02', ['gradient-angle' => '0'])['gradient-angle'].'deg';
                             $style_text_02 = 'background-image: linear-gradient(%s, %s 0%%, %s 100%%);';
-                            $feature_color_02_style = sprintf($style_text, $feature_color_01_angle, $feature_color_01_from, $feature_color_01_to);
+                            $feature_color_02_style = sprintf($style_text, $feature_color_02_angle, $feature_color_02_from, $feature_color_02_to);
                         }
                         else {
                             $feature_color_02_style = "";
                         }
                         ?>
-                        <span class="pxl-featured" <?php echo 'style="'.esc_html($feature_color_02_style).'";' ?>><?php echo esc_html($feature_text_02); ?></span>
+                        <span class="pxl-featured" <?php echo 'style="'.esc_html($feature_color_02_style).'"' ?>><?php echo esc_html($feature_text_02); ?></span>
                         <?php
                     }
                 }
