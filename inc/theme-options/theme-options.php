@@ -1001,15 +1001,15 @@ if(class_exists('Woocommerce')) {
         )
     ));
     Redux::setSection($opt_name, array(
-        'title'      => esc_html__('Extra Services', 'basilico'),
+        'title'      => esc_html__('Extra Options', 'basilico'),
         'icon' => 'el el-folder-open',
         'subsection' => true,
         'fields'     => array_merge(
             array(
                 array(
-                    'id'       =>'extra_services',
+                    'id'       =>'extra_options',
                     'type'     => 'multi_text',
-                    'title'    => __('Extra Service', 'basilico'),
+                    'title'    => __('Product Extra Options', 'basilico'),
                 ),
             )
         )

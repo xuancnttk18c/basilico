@@ -155,7 +155,7 @@ pxl_add_custom_widget(
                                 'is_external' => 'on'
                             ],
                             'condition' => [
-                                'layout' => ['2', '5']
+                                'layout' => ['2', '5', '6']
                             ],
                         ),
                     )
