@@ -2580,6 +2580,9 @@
             line-height: 1.2;
             letter-spacing: 0.08em;
             color: #fff;
+            &:hover {
+                color: $primary_color;
+            }            
         }
         .box-description {
             margin-top: 21px;
