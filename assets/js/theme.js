@@ -403,7 +403,7 @@
                     post_id: id
                 },
             }).always(function () {
-                alert(id);
+                console.log(response);
                 return false;
             });
         }
