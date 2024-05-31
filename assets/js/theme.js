@@ -396,10 +396,9 @@
         var id = document.querySelector('.status-publish').getAttribute('id').replace("post-", "");
         if (id) {
             $.ajax({
-                url: main_data.ajax_url,
+                url: main_data.ajaxurl,
                 type: 'POST',
                 cache: false,
-                dataType: 'json',
                 data: {
                     action: 'basilico_set_post_share',
                     post_id: id
