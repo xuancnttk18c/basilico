@@ -401,10 +401,7 @@
                 data: {
                     action: 'basilico_set_post_share',
                     post_id: id
-                },
-            })
-            .success(function (data) {
-                alert(data);
+                }
             })
             .always(function () {
                 return false;

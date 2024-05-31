@@ -343,7 +343,6 @@ function basilico_set_post_share()
         $count++;
         update_post_meta($postID, $countKey, $count);
     }
-    echo 'dhkjfhashjdfkjasd';
 }
 
 //* Convert Post Share Number
