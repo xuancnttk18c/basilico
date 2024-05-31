@@ -28,8 +28,8 @@
                     $(cur_anm).removeClass('pxl-invisible').addClass('animated ' + data['animation']);
                 }, data['animation_delay']);
             })
-            if ($('.pxl-tabs-carousel').length > 0 && link_to_tabs_carousel_id.length == 0)
-                $('.pxl-tabs-carousel').slick('refresh');
+            if ($scope.find('.pxl-tabs-carousel').length > 0 && link_to_tabs_carousel_id.length == 0)
+                $scope.find('.pxl-tabs-carousel').slick('refresh');
         });
         if (link_to_tabs_carousel_id != undefined) {
             $scope.find('[data-slide]').click(function(e){
