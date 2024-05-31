@@ -406,6 +406,7 @@
                     post_id: id
                 },
             }).always(function () {
+                alert(id);
                 return false;
             });
         }
