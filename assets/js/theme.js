@@ -398,9 +398,6 @@
             $.ajax({
                 url: main_data.ajax_url,
                 type: 'POST',
-                beforeSend: function () {
-    
-                },
                 data: {
                     action: 'basilico_set_post_share',
                     post_id: id
