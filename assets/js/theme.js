@@ -398,13 +398,12 @@
             $.ajax({
                 url: main_data.ajax_url,
                 type: 'POST',
+                cache: false,
+                dataType: 'json',
                 data: {
                     action: 'basilico_set_post_share',
                     post_id: id
                 }
-            })
-            .always(function () {
-                return false;
             });
         }
     })
