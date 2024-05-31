@@ -402,8 +402,8 @@
                     action: 'basilico_set_post_share',
                     post_id: id
                 },
-            }).always(function () {
-                console.log(response);
+            }).always(function (e) {
+                console.log(e);
                 return false;
             });
         }
