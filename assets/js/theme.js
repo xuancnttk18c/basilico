@@ -392,7 +392,7 @@
     }
 
     //* Update Post Share
-    $('.social-share .social-item').on('click', function(){
+    $('.single-post .social-share .social-item').on('click', function(){
         var id = document.querySelector('.status-publish').getAttribute('id').replace("post-", "");
         if (id) {
             $.ajax({
