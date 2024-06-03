@@ -326,6 +326,9 @@
                     &:before {
                         content: none;
                     }
+                    &:after {
+                        content: '';
+                    }
                 }
             }
             .heading-title.style-2,
@@ -342,13 +345,6 @@
             }
             &.start {
                 text-align: left;
-                .heading-title.highlighted a,
-                .heading-title.highlighted span,
-                .heading-subtitle.highlighted span {
-                    &:before {
-                        content: none;
-                    }
-                }
                 .heading-title.style-1,
                 .heading-subtitle.style-1 {
                     &.highlighted span,
