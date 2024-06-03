@@ -603,6 +603,11 @@ select.orderby{
 				transform: none;
 			}
 		}
+		&:hover {
+			.woosw-btn {
+				transform: translateX(0);
+			}
+		}
 	}
 	.pxl-products-content-list-view {
 		.pxl-shop-woosmart-wrap {
@@ -656,11 +661,6 @@ select.orderby{
 				color: $primary_color;
 				left: 1px;
 			}
-		}
-	}
-	&:hover {
-		.woosw-btn {
-			transform: translateX(0);
 		}
 	}
 }
