@@ -27,6 +27,7 @@
         basilico_footer_fixed();
         basilico_magnific_popup();
         basilico_scroll_to_id();
+        basilico_update_post_share();
 
         //* For Element
         basilico_element_parallax();
@@ -365,7 +366,6 @@
     //* Scroll To ID
     function basilico_scroll_to_id() {
         if ($('.pxl-links').length == 0) return;
-
         const sections = document.querySelectorAll("section[id]");
         window.addEventListener("scroll", navHighlighter);
         function navHighlighter() {
@@ -392,20 +392,22 @@
     }
 
     //* Update Post Share
-    $('.single-post .social-share .social-item').on('click', function(){
-        var id = document.querySelector('.status-publish').getAttribute('id').replace("post-", "");
-        if (id) {
-            $.ajax({
-                url: main_data.ajaxurl,
-                type: 'POST',
-                cache: false,
-                data: {
-                    action: 'basilico_set_post_share',
-                    post_id: id
-                }
-            });
-        }
-    })
+    function basilico_update_post_share() {
+        $('.single-post .social-share .social-item').on('click', function(){
+            var id = document.querySelector('.status-publish').getAttribute('id').replace("post-", "");
+            if (id) {
+                $.ajax({
+                    url: main_data.ajaxurl,
+                    type: 'POST',
+                    cache: false,
+                    data: {
+                        action: 'basilico_set_post_share',
+                        post_id: id
+                    }
+                });
+            }
+        });
+    }
 
     //* Video Popup
     function basilico_magnific_popup() {
