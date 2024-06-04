@@ -113,8 +113,6 @@
 		.sub-menu {
 			min-width: 260px;
 			max-height: 518px;
-			overflow-x: hidden;
-			overflow-y: scroll;
 			color: $submenu_regular;
 			background-color: $submenu_bg;
 			background-repeat: repeat-x;
@@ -128,12 +126,6 @@
 			visibility: hidden;
 			@include box-shadow($submenu_shadow);
 			transition: all .4s cubic-bezier(.19,1,.22,1);
-			-ms-overflow-style: none;
-  			scrollbar-width: none;
-			&::-webkit-scrollbar
-			{
-				display: none;
-			}
 			&:before{
 				content: "";
 				position: absolute;
