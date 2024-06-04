@@ -112,6 +112,8 @@
 		}
 		.sub-menu {
 			min-width: 260px;
+			max-height: 518px;
+			overflow-y: scroll;
 			color: $submenu_regular;
 			background-color: $submenu_bg;
 			background-repeat: repeat-x;
