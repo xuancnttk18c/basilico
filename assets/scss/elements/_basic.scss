@@ -1368,6 +1368,11 @@
             width: auto;
             height: calc(#{$input_height} - 2px);
             @include transition();
+            &:hover {
+                i  {
+                    animation: toRightFromLeft 0.3s ease-out;
+                }
+            }
         }
         
     }
