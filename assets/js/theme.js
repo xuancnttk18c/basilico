@@ -112,10 +112,9 @@
         'use strict';
 
         if($(document).find('.pxl-header-sticky').length > 0 && window_width >= 1200){
-            var header_height = $('.pxl-header-desktop').outerHeight();
-            var header_transparent_height = $('.pxl-header-transparent').outerHeight();
+            var header_height = $('.pxl-header-desktop').outerHeight();            
 
-            var offset_top_nimation = (header_height + header_transparent_height);
+            var offset_top_nimation = header_height + 150;
             console.log(offset_top_nimation);
             if (scroll_status == 'up' && scroll_top > offset_top_nimation){
                 $(document).find('.pxl-header-sticky').addClass('h-fixed');
