@@ -111,6 +111,8 @@
     function basilico_header_sticky() {
         'use strict';
         
+        console.log(scroll_status);
+
         if($(document).find('.pxl-header-sticky').length > 0 && window_width >= 1200){
             var header_height = $('.pxl-header-desktop').outerHeight();
             var header_transparent_height = $('.pxl-header-transparent').outerHeight();
