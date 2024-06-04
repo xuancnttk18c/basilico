@@ -74,10 +74,10 @@
 			} 
 			> .main-menu-toggle{
 				display: none;
-			    line-height: 1;
-			    align-self: center;
-			    margin-left: 7px;
-			    font-weight: 700;
+				line-height: 1;
+				align-self: center;
+				margin-left: 7px;
+				font-weight: 700;
 				&:before{
 					color: $menu_regular;
 					content: "\f2f2";
@@ -113,6 +113,7 @@
 		.sub-menu {
 			min-width: 260px;
 			max-height: 518px;
+			overflow-x: hidden;
 			overflow-y: scroll;
 			color: $submenu_regular;
 			background-color: $submenu_bg;
@@ -127,6 +128,21 @@
 			visibility: hidden;
 			@include box-shadow($submenu_shadow);
 			transition: all .4s cubic-bezier(.19,1,.22,1);
+			&::-webkit-scrollbar-track
+			{
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+				background-color: #F5F5F5;
+			}
+			&::-webkit-scrollbar
+			{
+				width: 10px;
+				background-color: #F5F5F5;
+			}
+			&::-webkit-scrollbar-thumb
+			{
+				background-color: #000000;
+				border: 2px solid #555555;
+			}
 			&:before{
 				content: "";
 				position: absolute;
@@ -296,5 +312,4 @@
 	}
 }
 
- 
- 
+
