@@ -116,13 +116,12 @@
             
             var offset_top_nimation = header_height + 150;
             if( scroll_status == 'down' && $('.pxl-header').hasClass('sticky-direction-scroll-down') && scroll_top > offset_top_nimation ){
-                $(document).find('.pxl-header-sticky').addClass('h-fixed');
+                $(document).find('.pxl-header-sticky').removeClass('h-fixed');
             }else if( scroll_status == 'up' && $('.pxl-header').hasClass('sticky-direction-scroll-up') && scroll_top > offset_top_nimation ){
                 $(document).find('.pxl-header-sticky').addClass('h-fixed');
             }else{
                 $(document).find('.pxl-header-sticky').removeClass('h-fixed');
             } 
-            
         } 
         if($(document).find('.pxl-header-main-sticky').length > 0 && window_width >= 1200){
             let tl = gsap.timeline({
