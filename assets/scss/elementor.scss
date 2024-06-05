@@ -192,3 +192,7 @@
 .elementor-widget-wrap{
     transition: all 100ms linear 0s;
 }
+
+.elementor-widget-image-carousel .elementor-image-carousel-wrapper {
+    overflow-x: hidden;
+}
