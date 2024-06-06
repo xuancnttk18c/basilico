@@ -674,6 +674,10 @@
 
 .pxl-shop-layout-3 .pxl-single-product-summary-wrap {
 	margin-top: 0;
+	.hot-sale {
+		@include d-flex();
+		column-gap: 5px;
+	}
 	.price {
 		display: inline-flex;
 		color: $primary_color;
@@ -1632,5 +1636,17 @@ table.shop_attributes{
 		letter-spacing: 0.03em;
 		text-align: center;
 		margin: 0 0 67px 0;
+	}
+}
+
+.pxl-shop-layout-3 .pxl-product-addons {
+	width: 100%;
+	.product-addon {
+		.addon-name {
+			font-size: 25px;
+			font-weight: 600;
+			letter-spacing: 0.02em;
+			text-transform: none;
+		}
 	}
 }
