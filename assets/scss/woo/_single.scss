@@ -1643,7 +1643,10 @@ table.shop_attributes{
 }
 
 .pxl-shop-layout-3 .pxl-product-addons {
-	width: 100%;
+	&.checkbox,
+	&.radio {
+		width: 100%;
+	}
 	.product-addon {
 		+ .product-addon {
 			margin-top: 15px;
@@ -1713,9 +1716,11 @@ table.shop_attributes{
 				}
 			}
 		}
+		.product-addons-total {
+			margin-top: 30px;
+		}
 		&.textarea {
 			.addon-wrapper .form-row{
-				width: 100%;
 				textarea {
 					height: 183px;
 				}
