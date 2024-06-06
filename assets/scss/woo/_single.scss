@@ -1645,7 +1645,9 @@ table.shop_attributes{
 .pxl-shop-layout-3 .pxl-product-addons {
 	&.checkbox,
 	&.radio {
-		width: 100%;
+		.product-addon .form-row {
+			width: 49%;
+		}
 	}
 	.product-addon {
 		+ .product-addon {
@@ -1671,7 +1673,6 @@ table.shop_attributes{
 			margin-top: 32px;
 			.form-row {
 				display: inline-flex;
-				width: 49%;
 				label {
 					line-height: 25px;
 					font-weight: 500;
