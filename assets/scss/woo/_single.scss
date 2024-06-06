@@ -1666,6 +1666,9 @@ table.shop_attributes{
 			.form-row {
 				display: inline-flex;
 				width: 49%;
+				~ textarea {
+					width: 100%;
+				}
 				label {
 					line-height: 25px;
 					font-weight: 500;
