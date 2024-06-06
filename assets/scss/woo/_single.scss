@@ -1682,7 +1682,9 @@ table.shop_attributes{
 				@include border-radius(50%);
 			}
 			.form-group input:checked {
-				background-color: $primary_color;
+				+ label:before {
+					background-color: $primary_color;
+				}
 				+ label:after {
 					content: '';
 					display: block;
