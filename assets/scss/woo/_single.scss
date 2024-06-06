@@ -1650,6 +1650,9 @@ table.shop_attributes{
 			padding-top: 30px;
 			border-top: 1px solid $divider_color;
 		}
+		&:last-child {
+			margin-bottom: 20px;
+		}
 		.addon-name {
 			font-size: 25px;
 			font-weight: 600;
@@ -1713,6 +1716,9 @@ table.shop_attributes{
 		&.textarea {
 			.addon-wrapper .form-row{
 				width: 100%;
+				textarea {
+					height: 183px;
+				}
 			}
 		}
 	}
