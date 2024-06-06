@@ -685,6 +685,9 @@
 		font-size: 25px;
 		letter-spacing: 0.02em;
 		margin-bottom: 0;
+		del {
+			font-size: 25px;
+		}
 	}
 	.product_meta {
 		margin-top: 25px;
@@ -1647,6 +1650,18 @@ table.shop_attributes{
 			font-weight: 600;
 			letter-spacing: 0.02em;
 			text-transform: none;
+			margin-bottom: 0;
+		}
+		.addon-description {
+			margin-top: 9px;
+			line-height: 25px;
+		}
+		.form-row {
+			display: inline-flex;
+			width: 49%;
+			label {
+				line-height: 25px;
+			}
 		}
 	}
 }
