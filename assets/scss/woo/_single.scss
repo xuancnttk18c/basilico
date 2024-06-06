@@ -1661,6 +1661,7 @@ table.shop_attributes{
 			width: 49%;
 			label {
 				line-height: 25px;
+				font-weight: 600;
 				position: relative;
 				cursor: pointer;
 			}
@@ -1683,16 +1684,17 @@ table.shop_attributes{
 			}
 			.form-group input:checked {
 				+ label:before {
+					border: none;
 					background-color: $primary_color;
 				}
 				+ label:after {
-					content: '';
+					content: "";
 					display: block;
 					position: absolute;
-					top: 2px;
-					left: 9px;
+					top: 5px;
+					left: 8px;
 					width: 6px;
-					height: 14px;
+					height: 12px;
 					border: solid #fff;
 					border-width: 0 2px 2px 0;
 					transform: rotate(45deg);
