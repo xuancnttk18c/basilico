@@ -1711,9 +1711,6 @@ table.shop_attributes{
 				}
 			}
 		}
-		.product-addons-total {
-			margin-top: 30px;
-		}
 		&.checkbox,
 		&.radio {
 			.addon-wrapper .form-row {
@@ -1727,5 +1724,8 @@ table.shop_attributes{
 				}
 			}
 		}
+	}
+	.product-addons-total {
+		margin-top: 30px;
 	}
 }
