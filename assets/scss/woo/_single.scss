@@ -1656,48 +1656,52 @@ table.shop_attributes{
 			margin-top: 9px;
 			line-height: 25px;
 		}
-		.form-row {
-			display: inline-flex;
-			width: 49%;
-			label {
-				line-height: 25px;
-				font-weight: 600;
-				position: relative;
-				cursor: pointer;
-			}
-			.form-group label {
-				@include d-flex();
-				align-items: center;
-				column-gap: 10px;
-			}
-			.form-group input {
-				display: none;
-			}
-			.form-group label:before {
-				content: '';
-				width: 22px;
-				height: 22px;
-				display: inline-block;
-				position: relative;
-				border: 1px solid #c9c9c9;
-				@include border-radius(50%);
-			}
-			.form-group input:checked {
-				+ label:before {
-					border: none;
-					background-color: $primary_color;
+		.addon-wrapper {
+			margin-top: 32px;
+			.form-row {
+				display: inline-flex;
+				width: 49%;
+				label {
+					line-height: 25px;
+					font-weight: 500;
+					position: relative;
+					cursor: pointer;
 				}
-				+ label:after {
-					content: "";
-					display: block;
-					position: absolute;
-					top: 5px;
-					left: 8px;
-					width: 6px;
-					height: 12px;
-					border: solid #fff;
-					border-width: 0 2px 2px 0;
-					transform: rotate(45deg);
+				.form-group label {
+					@include d-flex();
+					align-items: center;
+					column-gap: 10px;
+					margin-bottom: 2px;
+				}
+				.form-group input {
+					display: none;
+				}
+				.form-group label:before {
+					content: '';
+					width: 22px;
+					height: 22px;
+					display: inline-block;
+					position: relative;
+					border: 1px solid #c9c9c9;
+					@include border-radius(50%);
+				}
+				.form-group input:checked {
+					+ label:before {
+						border: none;
+						background-color: $primary_color;
+					}
+					+ label:after {
+						content: "";
+						display: block;
+						position: absolute;
+						top: 5px;
+						left: 8px;
+						width: 6px;
+						height: 12px;
+						border: solid #fff;
+						border-width: 0 2px 2px 0;
+						transform: rotate(45deg);
+					}
 				}
 			}
 		}
