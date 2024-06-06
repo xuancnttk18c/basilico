@@ -1664,6 +1664,11 @@ table.shop_attributes{
 				position: relative;
 				cursor: pointer;
 			}
+			.form-group label {
+				@include d-flex();
+				align-items: center;
+				column-gap: 10px;
+			}
 			.form-group input {
 				display: none;
 			}
@@ -1674,7 +1679,7 @@ table.shop_attributes{
 				background-color: $primary_color;
 				display: inline-block;
 				position: relative;
-				@include border-radius(5px);
+				@include border-radius(50%);
 			}
 			.form-group input:checked + label:after {
 				content: '';
@@ -1685,7 +1690,7 @@ table.shop_attributes{
 				width: 6px;
 				height: 14px;
 				border: solid #fff;
-				border-width: 0 1px 1px 0;
+				border-width: 0 2px 2px 0;
 				transform: rotate(45deg);
 			}
 		}
