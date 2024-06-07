@@ -3,7 +3,7 @@ add_filter('woocommerce_product_data_tabs', 'pxl_nutrition_tab');
 function pxl_nutrition_tab($tabs) {
     $tabs['pxl_nutrition'] = array(
         'label' => 'PXL Nutrition',
-        'target' => 'pxl_nitrition_opts',
+        'target' => 'pxl_nutrition_opts',
         'priority' => 65,
     );
     return $tabs;
@@ -11,11 +11,9 @@ function pxl_nutrition_tab($tabs) {
 
 add_action( 'woocommerce_product_data_panels', 'pxl_nutrition_tab_content' );
 function pxl_nutrition_tab_content() {
-    global $woocommerce, $post;
-    $opts = get_nutrition_opt();
     ?>
-    <div id="pxl_nitrition_opts" class="panel woocommerce_options_panel">
-        <?php foreach($opts as $opt => $data ): ?>
+    <div id="pxl_nutrition_opts" class="panel woocommerce_options_panel">
+        <?php foreach(get_nutrition_opts() as $opt => $data ): ?>
             <p class="form-field">
                 <label for="_<?php echo esc_attr( $opt ); ?>"><?php echo esc_html( $data['label'] ); ?></label>
                 <input type="text" name="_<?php echo esc_attr( $opt ); ?>" placeholder="<?php echo esc_attr( $data['placeholder'] ); ?>"
@@ -26,7 +24,20 @@ function pxl_nutrition_tab_content() {
     <?php
 }
 
-function get_nutrition_opt() {
+add_action( 'woocommerce_process_product_meta', 'save_meta_box', 1);
+public function save_meta_box($post_id ) {
+    $product = wc_get_product($post_id );
+    foreach ( get_nutrition_opts() as $opt => $data ) {
+        if ( isset( $_POST[ '_' . $opt ] ) ) {
+            $product->update_meta_data( '_' . $opt, $_POST[ '_' . $opt ] );
+        } else {
+            $product->update_meta_data( '_' . $opt, '' );
+        }
+    }
+    $product->save();
+}
+
+function get_nutrition_opts() {
     $opts = array(
         'pxl_nutrition_calories'  => array(
             'label'                 => esc_html__( 'Calories', 'basilico' ),
