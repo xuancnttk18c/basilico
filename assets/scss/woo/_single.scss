@@ -1729,3 +1729,21 @@ table.shop_attributes{
 		margin-top: 30px;
 	}
 }
+
+.pxl-nutritions-wrapper {
+    padding-top: 25px;
+    margin-top: 23px;
+    border-top: 1px solid $divider_color;
+    width: 100%;
+    .pxl-nutrition-list {
+    	.pxl-nutrition {
+    		display: inline-block;
+    		width: 50%;
+    		line-height: 35px;
+    		letter-spacing: 0.02em;
+    		.pxl-nutrition-value {
+    			color: $primary_color;
+    		}
+    	}
+    }
+}
