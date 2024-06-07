@@ -1731,14 +1731,13 @@ table.shop_attributes{
 }
 
 .pxl-nutritions-wrapper {
-	@include d-flex();
     padding-top: 25px;
     margin-top: 23px;
     border-top: 1px solid $divider_color;
     width: 100%;
     .pxl-nutrition-list {
+    	@include d-flex();
     	.pxl-nutrition {
-    		display: inline-block;
     		flex-basis: 50%;
     		color: $heading_color;
     		font-weight: 500;
@@ -1749,4 +1748,16 @@ table.shop_attributes{
     		}
     	}
     }
+}
+
+.pxl-shop-layout-3 .pxl-nutritions-wrapper {
+	h3 {
+		font-size: 20px;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+		text-transform: none;
+	}
+	.pxl-nutrition {
+		text-transform: uppercase;
+	}
 }
