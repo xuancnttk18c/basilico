@@ -63,7 +63,7 @@ function pxl_nutrition_frontend_display() {
     $opts = get_nutrition_opts();
     $title      = $product->get_meta( '_pxl_nutrition_title' );
 
-    if (!empty($product->get_meta('_pxl_nutrition_calories')) && !empty($product->get_meta('_pxl_nutrition_carbohydrates')) && !empty($product->get_meta('_pxl_nutrition_squirrels')) && !empty($product->get_meta('_pxl_nutrition_fats'))) return;
+    if (empty($product->get_meta('_pxl_nutrition_calories')) && empty($product->get_meta('_pxl_nutrition_carbohydrates')) && empty($product->get_meta('_pxl_nutrition_squirrels')) && empty($product->get_meta('_pxl_nutrition_fats'))) return;
     ?>
         <div class="pxl-nutritions-wrapper">
             <h3><?php if (!empty($title)) { echo esc_attr($title); } else { echo esc_html('Nutritional Value Per 100g:', 'basilico'); } ?></h3>
