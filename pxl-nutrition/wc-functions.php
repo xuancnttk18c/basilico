@@ -1,64 +1,47 @@
 <?php
-add_filter('woocommerce_product_data_tabs', 'add_ppwp_access_link_tab');
-function add_ppwp_access_link_tab($tabs) {
-    $tabs['ppwp_woo'] = array(
-        'label' => 'PPWP Access Link',
-        'target' => 'ppwp_woo_options',
-        'priority' => 65,
+add_filter('woocommerce_product_data_tabs', 'pxl_nutrition_tab');
+function pxl_nutrition_tab($tabs) {
+    $tabs['pxl_nutrition'] = array(
+        'label' => 'PXL Nutrition',
+        'target' => 'pxl_nitrition_opts',
+        'priority' => 10,
     );
     return $tabs;
 }
 
-add_action( 'woocommerce_product_data_panels' ,'show_ppwp_access_link_tab_content' );
-function show_ppwp_access_link_tab_content() {
+add_action( 'woocommerce_product_data_panels', 'pxl_nutrition_tab_content' );
+function pxl_nutrition_tab_content() {
     global $woocommerce, $post;
+    $opt = get_nutrition_opt();
     ?>
-    <div id="ppwp_woo_options" class="panel woocommerce_options_panel">
-        <?php
-        woocommerce_wp_select(
-            array(
-                'id'      => '_ppwp_woo_protected_post',
-                'label'   => __( 'Protected post', 'woocommerce' ),
-                'options' => array(
-                    '0' => '-- Select a password protected page --',
-                ),
-            )
-        );
-        woocommerce_wp_text_input(
-            array(
-                'id'                => '_ppwp_woo_usage_limit',
-                'label'             => __( 'Usage limit', 'woocommerce' ),
-                'desc_tip'          => 'true',
-                'description'       => __( 'Enter the number of times user can access the link.', 'woocommerce' ),
-                'type'              => 'number',
-                'custom_attributes' => array(
-                    'min'  => '1',
-                    'step' => '1',
-                ),
-            )
-        );
-        woocommerce_wp_text_input(
-            array(
-                'id'                => '_ppwp_woo_expiration',
-                'label'             => __( 'Expiration (minutes)', 'woocommerce' ),
-                'desc_tip'          => 'true',
-                'description'       => __( 'Enter the number of minutes the link is valid for.', 'woocommerce' ),
-                'type'              => 'number',
-                'custom_attributes' => array(
-                    'min'  => '1',
-                    'step' => '1',
-                ),
-            )
-        );
-        woocommerce_wp_textarea_input(
-            array(
-                'id'          => '_ppwp_woo_custom_text',
-                'label'       => __( 'Custom text', 'woocommerce' ),
-                'desc_tip'    => 'true',
-                'description' => __( 'Insert any text that you want to include in the order product details. The text within the percent sign % %  will become Bypass URL. Use {usage_limit} to display password usage limit and {expiration} to display expiry date.', 'woocommerce' ),
-            )
-        );
-        ?>
+    <div id="pxl_nitrition_opts" class="panel woocommerce_options_panel">
+        <?php foreach($opt as $nutrition_meta_field => $data ): ?>
+            <label for="_<?php echo esc_attr( $nutrition_meta_field ); ?>"><?php echo esc_html( $data['label'] ); ?></label>
+                <input type="text" name="_<?php echo esc_attr( $nutrition_meta_field ); ?>" placeholder="<?php echo esc_attr( $data['placeholder'] ); ?>"
+                       id="_<?php echo esc_attr( $nutrition_meta_field ); ?>" value="<?php echo esc_attr( ${$nutrition_meta_field} ); ?>">
+        <?php endforeach; ?>
     </div>
     <?php
+}
+
+function get_nutrition_opt() {
+    $opts = array(
+        'pxl_nutrition_calories'  => array(
+            'label'                 => esc_html__( 'Calories', 'basilico' ),
+            'placeholder'           => esc_html('550kcal', 'basilico'),
+        ),
+        'lafka_nutrition_carbohydrates' => array(
+            'label'                 => esc_html__( 'Carbohydrates', 'basilico' ),
+            'placeholder'           => esc_html('50G', 'basilico'),
+        ),
+        'lafka_nutrition_squirrels' => array(
+            'label'                 => esc_html__( 'Squirrels', 'basilico' ),
+            'placeholder'           => esc_html('50G', 'basilico'),
+        ),
+        'lafka_nutrition_fats' => array(
+            'label'                 => esc_html__( 'Fats', 'basilico' ),
+            'placeholder'           => esc_html('20G', 'basilico'),
+        ),
+    );
+    return $opts;
 }
