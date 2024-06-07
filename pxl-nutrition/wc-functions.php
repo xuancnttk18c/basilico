@@ -56,22 +56,49 @@ function save_meta_box($post_id ) {
     $product->save();
 }
 
+add_action( 'woocommerce_single_product_summary', 'pxl_nutrition_frontend_display', 8 );
+function pxl_nutrition_frontend_display() {
+    global $product;
+
+    $opts = get_nutrition_opts();
+    $title      = $product->get_meta( '_pxl_nutrition_title' );
+
+    if (count($opts) > 0 ): ?>
+        <div class="pxl-nutritions-wrapper">
+            <h3><?php if (!empty($title)) ? echo esc_attr($title) : esc_html('Nutritional Value Per 100g:', 'basilico'); ?></h3>
+            <ul class="pxl-nutrition-list">
+                <?php
+                    $i = 0;
+                    foreach ($opts as $opt => $value ): 
+                ?>
+                    <div class="pxl-nutrition">
+                        <span class="pxl-nutrition"><?php echo esc_html( $opt[$i]['label'] ); ?></span>
+                    </div>
+                <?php
+                    $i = $i + 1;
+                    endforeach;
+                ?>
+            </div>
+        </div>
+    <?php endif;
+}
+
 function get_nutrition_opts() {
     $opts = array(
         'pxl_nutrition_calories'  => array(
-            'label'                 => esc_html__( 'Calories', 'basilico' ),
+            'label'                 => esc_html__( 'Calories: ', 'basilico' ),
             'placeholder'           => esc_html('550kcal', 'basilico'),
         ),
         'lafka_nutrition_carbohydrates' => array(
-            'label'                 => esc_html__( 'Carbohydrates', 'basilico' ),
+            'label'                 => esc_html__( 'Carbohydrates: ', 'basilico' ),
             'placeholder'           => esc_html('50G', 'basilico'),
         ),
         'lafka_nutrition_squirrels' => array(
-            'label'                 => esc_html__( 'Squirrels', 'basilico' ),
+            'label'                 => esc_html__( 'Squirrels: ', 'basilico' ),
             'placeholder'           => esc_html('50G', 'basilico'),
         ),
         'lafka_nutrition_fats' => array(
-            'label'                 => esc_html__( 'Fats', 'basilico' ),
+            'label'                 => esc_html__( 'Fats: ', 'basilico' ),
             'placeholder'           => esc_html('20G', 'basilico'),
         ),
     );
