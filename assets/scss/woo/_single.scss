@@ -1731,6 +1731,7 @@ table.shop_attributes{
 }
 
 .pxl-nutritions-wrapper {
+	@include d-flex();
     padding-top: 25px;
     margin-top: 23px;
     border-top: 1px solid $divider_color;
@@ -1738,7 +1739,9 @@ table.shop_attributes{
     .pxl-nutrition-list {
     	.pxl-nutrition {
     		display: inline-block;
-    		width: 50%;
+    		flex-basis: 50%;
+    		color: $heading_color;
+    		font-weight: 500;
     		line-height: 35px;
     		letter-spacing: 0.02em;
     		.pxl-nutrition-value {
