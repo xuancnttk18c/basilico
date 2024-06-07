@@ -25,6 +25,7 @@ basilico()->require_folder('inc/theme-options');
 basilico()->require_folder('template-parts/widgets');
 if (class_exists('Woocommerce')) {
     basilico()->require_folder('woocommerce');
+    basilico()->require_folder('pxl-nutrition');
 }
 
 function numberOfDecimals( $value ) {
