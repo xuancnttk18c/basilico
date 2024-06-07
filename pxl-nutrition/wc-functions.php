@@ -16,9 +16,11 @@ function pxl_nutrition_tab_content() {
     ?>
     <div id="pxl_nitrition_opts" class="panel woocommerce_options_panel">
         <?php foreach($opts as $opt => $data ): ?>
-            <label for="_<?php echo esc_attr( $opt ); ?>"><?php echo esc_html( $data['label'] ); ?></label>
+            <p class="form-field">
+                <label for="_<?php echo esc_attr( $opt ); ?>"><?php echo esc_html( $data['label'] ); ?></label>
                 <input type="text" name="_<?php echo esc_attr( $opt ); ?>" placeholder="<?php echo esc_attr( $data['placeholder'] ); ?>"
-                       id="_<?php echo esc_attr( $opt ); ?>" value="<?php echo esc_attr( ${$opt} ); ?>">
+                id="_<?php echo esc_attr( $opt ); ?>" value="<?php echo esc_attr( ${$opt} ); ?>">
+            </p>
         <?php endforeach; ?>
     </div>
     <?php
