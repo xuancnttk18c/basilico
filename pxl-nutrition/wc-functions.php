@@ -4,7 +4,7 @@ function pxl_nutrition_tab($tabs) {
     $tabs['pxl_nutrition'] = array(
         'label' => 'PXL Nutrition',
         'target' => 'pxl_nitrition_opts',
-        'priority' => 10,
+        'priority' => 65,
     );
     return $tabs;
 }
