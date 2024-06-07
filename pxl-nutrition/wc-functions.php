@@ -15,6 +15,11 @@ function pxl_nutrition_tab_content() {
     $product = wc_get_product( $post );
     ?>
     <div id="pxl_nutrition_opts" class="panel woocommerce_options_panel">
+        <p class="form-field">
+            <label for="_pxl_nutrition_title"><?php echo esc_html( 'Title: ', 'basilico' ); ?></label>
+            <input type="text" name="_pxl_nutrition_title" placeholder="<?php echo esc_attr( 'Nutritional Value Per 100g: ', 'basilico' ); ?>"
+            id="_pxl_nutrition_title" value="<?php echo esc_attr($product->get_meta( '_pxl_nutrition_title')); ?>">
+        </p>
         <?php foreach(get_nutrition_opts() as $opt => $data ): ?>
             <p class="form-field">
                 <label for="_<?php echo esc_attr( $opt ); ?>"><?php echo esc_html( $data['label'] ); ?></label>
@@ -29,6 +34,13 @@ function pxl_nutrition_tab_content() {
 add_action( 'woocommerce_process_product_meta', 'save_meta_box');
 function save_meta_box($post_id ) {
     $product = wc_get_product($post_id );
+
+    if (isset($_POST['_pxl_nutrition_title']) {
+        $product->update_meta_data( '_pxl_nutrition_title', $_POST[ '_pxl_nutrition_title']);
+    } else {
+        $product->update_meta_data( '_pxl_nutrition_title', '');
+    }
+
     foreach ( get_nutrition_opts() as $opt => $data ) {
         if ( isset( $_POST[ '_' . $opt ] ) ) {
             $product->update_meta_data( '_' . $opt, $_POST[ '_' . $opt ] );
