@@ -56,48 +56,52 @@ function save_meta_box($post_id ) {
     $product->save();
 }
 
-add_action( 'woocommerce_single_product_summary', 'pxl_nutrition_frontend_display', 8 );
+add_action( 'woocommerce_single_product_summary', 'pxl_nutrition_frontend_display', 20 );
 function pxl_nutrition_frontend_display() {
     global $product;
 
     $opts = get_nutrition_opts();
     $title      = $product->get_meta( '_pxl_nutrition_title' );
 
-    if (count($opts) > 0 ): ?>
+    if (!empty($product->get_meta('_pxl_nutrition_calories')) && !empty($product->get_meta('_pxl_nutrition_carbohydrates')) && !empty($product->get_meta('_pxl_nutrition_squirrels')) && !empty($product->get_meta('_pxl_nutrition_fats'))) return;
+    ?>
         <div class="pxl-nutritions-wrapper">
-            <h3><?php if (!empty($title)) ? echo esc_attr($title) : esc_html('Nutritional Value Per 100g:', 'basilico'); ?></h3>
-            <ul class="pxl-nutrition-list">
+            <h3><?php if (!empty($title)) { echo esc_attr($title); } else { echo esc_html('Nutritional Value Per 100g:', 'basilico'); } ?></h3>
+            <div class="pxl-nutrition-list">
                 <?php
-                    $i = 0;
-                    foreach ($opts as $opt => $value ): 
-                ?>
-                    <div class="pxl-nutrition">
-                        <span class="pxl-nutrition"><?php echo esc_html( $opt[$i]['label'] ); ?></span>
-                    </div>
-                <?php
+                $i = 0;
+                foreach ($opts as $opt => $value ) :
+                    ?>
+                    <?php if (!empty($product->get_meta( '_' . $opt ))) : ?>
+                        <div class="pxl-nutrition">
+                            <span class="pxl-nutrition-title"><?php echo esc_html($value['label'] ); ?></span>
+                            <span class="pxl-nutrition-value"><?php echo esc_html($product->get_meta( '_' . $opt )); ?></span>
+                        </div>
+                    <?php endif; ?>
+                    <?php
                     $i = $i + 1;
-                    endforeach;
+                endforeach;
                 ?>
             </div>
         </div>
-    <?php endif;
+    <?php
 }
 
 function get_nutrition_opts() {
     $opts = array(
-        'pxl_nutrition_calories'  => array(
+        'pxl_nutrition_calories'    => array(
             'label'                 => esc_html__( 'Calories: ', 'basilico' ),
             'placeholder'           => esc_html('550kcal', 'basilico'),
         ),
-        'lafka_nutrition_carbohydrates' => array(
+        'pxl_nutrition_carbohydrates' => array(
             'label'                 => esc_html__( 'Carbohydrates: ', 'basilico' ),
             'placeholder'           => esc_html('50G', 'basilico'),
         ),
-        'lafka_nutrition_squirrels' => array(
+        'pxl_nutrition_squirrels' => array(
             'label'                 => esc_html__( 'Squirrels: ', 'basilico' ),
             'placeholder'           => esc_html('50G', 'basilico'),
         ),
-        'lafka_nutrition_fats' => array(
+        'pxl_nutrition_fats' => array(
             'label'                 => esc_html__( 'Fats: ', 'basilico' ),
             'placeholder'           => esc_html('20G', 'basilico'),
         ),
