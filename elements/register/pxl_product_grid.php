@@ -37,7 +37,7 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                     'controls' => array(
                         array(
-                            'id'       => 'product_layout',
+                            'name'       => 'product_layout',
                             'type'     => 'select',
                             'title'    => esc_html__('Product Layout', 'basilico'),
                             'options'  => [
