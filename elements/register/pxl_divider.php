@@ -80,8 +80,6 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Alignment', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::CHOOSE,
                             'control_type' => 'responsive',
-                            'render_type' => 'template',
-                            'frontend_available' => true,
                             'options' => [
                                 'left' => [
                                     'title' => esc_html__( 'Left', 'basilico' ),
@@ -96,92 +94,89 @@ pxl_add_custom_widget(
                                     'icon' => 'eicon-text-align-right',
                                 ],
                             ],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-widget-divider' => 'justify-content: {{VALUE}};',
-                            ],
                         ),
                     ),
-),
-array(
-    'name' => 'style_section',
-    'label' => esc_html__('Style Settings', 'basilico' ),
-    'tab' => \Elementor\Controls_Manager::TAB_STYLE,
-    'controls' => array(
-        array(
-            'name' => 'color',
-            'label' => esc_html__( 'Color', 'basilico' ),
-            'type' => \Elementor\Controls_Manager::COLOR,
-            'selectors' => [
-                '{{WRAPPER}} .pxl-divider' => 'background-color: {{VALUE}}',
-                '{{WRAPPER}} .pxl-divider .diamond-icon' => 'border-color: {{VALUE}}',
-                '{{WRAPPER}} .pxl-divider .diamond-icon:before' => 'background-color: {{VALUE}}',
-            ],
-        ),
-        array(
-            'name' => 'fill_color',
-            'label' => esc_html__( 'Fill Color', 'basilico' ),
-            'type' => \Elementor\Controls_Manager::COLOR,
-            'selectors' => [
-                '{{WRAPPER}} .pxl-divider:before' => 'background-color: {{VALUE}}',
-            ],
-            'condition' => [
-                'style' => 'style-1'
-            ],
-        ),
-        array(
-            'name' => 'icon_gap_color',
-            'label' => esc_html__( 'Icon Gap Color', 'basilico' ),
-            'type' => \Elementor\Controls_Manager::COLOR,
-            'selectors' => [
-                '{{WRAPPER}} .pxl-divider .diamond-icon' => 'background-color: {{VALUE}}',
-            ],
-            'condition' => [
-                'style' => 'style-2'
-            ],
-        ),
-        array(
-            'name' => 'weight',
-            'label' => esc_html__( 'Weight', 'basilico' ),
-            'type' => \Elementor\Controls_Manager::SLIDER,
-            'default' => [
-                'size' => 1,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 1,
-                    'max' => 10,
-                    'step' => 0.1,
-                ],
-            ],
-            'selectors' => [
-                '{{WRAPPER}} .pxl-divider' => 'height: {{SIZE}}{{UNIT}}',
-                '{{WRAPPER}} .pxl-divider:before' => 'height: {{SIZE}}{{UNIT}}',
-            ],
-        ),
-        array(
-            'name' => 'gap',
-            'label' => esc_html__( 'Gap', 'basilico' ),
-            'type' => \Elementor\Controls_Manager::DIMENSIONS,
-            'control_type' => 'responsive',
-            'size_units' => [ 'px' ],
-            'default' => [
-                'TOP' => 15,
-                'BOTTOM' => 15,
-            ],
-            'selectors' => [
-                '{{WRAPPER}} .pxl-divider' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-            ],
-        ),
-        array(
-            'name'  => 'draw',
-            'label' => esc_html__('Draw Animation', 'basilico'),
-            'type' => \Elementor\Controls_Manager::SWITCHER,
-            'separator' => 'before',
+                ),
+                array(
+                    'name' => 'style_section',
+                    'label' => esc_html__('Style Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+                    'controls' => array(
+                        array(
+                            'name' => 'color',
+                            'label' => esc_html__( 'Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-divider' => 'background-color: {{VALUE}}',
+                                '{{WRAPPER}} .pxl-divider .diamond-icon' => 'border-color: {{VALUE}}',
+                                '{{WRAPPER}} .pxl-divider .diamond-icon:before' => 'background-color: {{VALUE}}',
+                            ],
+                        ),
+                        array(
+                            'name' => 'fill_color',
+                            'label' => esc_html__( 'Fill Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-divider:before' => 'background-color: {{VALUE}}',
+                            ],
+                            'condition' => [
+                                'style' => 'style-1'
+                            ],
+                        ),
+                        array(
+                            'name' => 'icon_gap_color',
+                            'label' => esc_html__( 'Icon Gap Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-divider .diamond-icon' => 'background-color: {{VALUE}}',
+                            ],
+                            'condition' => [
+                                'style' => 'style-2'
+                            ],
+                        ),
+                        array(
+                            'name' => 'weight',
+                            'label' => esc_html__( 'Weight', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'default' => [
+                                'size' => 1,
+                            ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 1,
+                                    'max' => 10,
+                                    'step' => 0.1,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-divider' => 'height: {{SIZE}}{{UNIT}}',
+                                '{{WRAPPER}} .pxl-divider:before' => 'height: {{SIZE}}{{UNIT}}',
+                            ],
+                        ),
+                        array(
+                            'name' => 'gap',
+                            'label' => esc_html__( 'Gap', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'default' => [
+                                'TOP' => 15,
+                                'BOTTOM' => 15,
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-divider' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                        ),
+                        array(
+                            'name'  => 'draw',
+                            'label' => esc_html__('Draw Animation', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                            'separator' => 'before',
+                        ),
+                    ),
+                ),
+            ),
         ),
     ),
-),
-),
-),
-),
-basilico_get_class_widget_path()
+    basilico_get_class_widget_path()
 );
