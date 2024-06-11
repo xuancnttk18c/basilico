@@ -35,7 +35,6 @@ $product_layout = $widget->get_setting('product_layout', 'layout-1');
         while ($query->have_posts()) {
             $query->the_post();
             wc_get_template_part( 'pxl-content-product', esc_attr($product_layout) );
-            var_dump($product_layout);
         }
         ?>
         <?php wp_reset_postdata(); ?>
