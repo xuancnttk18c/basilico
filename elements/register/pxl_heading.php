@@ -80,6 +80,7 @@ pxl_add_custom_widget(
                                 'name' => 'text_align',
                                 'label' => esc_html__('Alignment', 'basilico' ),
                                 'type' => 'choose',
+                                'control_type' => 'responsive',
                                 'options' => [
                                     'start' => [
                                         'title' => esc_html__( 'Start', 'basilico' ),
