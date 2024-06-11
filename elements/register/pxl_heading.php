@@ -95,6 +95,9 @@ pxl_add_custom_widget(
                                         'icon' => 'eicon-text-align-right',
                                     ]
                                 ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-heading-inner' => 'text-align: {{VALUE}};',
+                                ],
                             ),
                             array(
                                 'name' => 'title_highlighted_line',
