@@ -37,6 +37,18 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                     'controls' => array(
                         array(
+                            'id'       => 'product_layout',
+                            'type'     => 'select',
+                            'title'    => esc_html__('Product Layout', 'basilico'),
+                            'options'  => [
+                                'layout-1'       => esc_html__('Layout 1', 'basilico'),
+                                'layout-2'       => esc_html__('Layout 2', 'basilico'),
+                                'layout-3'       => esc_html__('Layout 3', 'basilico'),
+                                'layout-5'       => esc_html__('Layout 5', 'basilico'),
+                            ],
+                            'default'  => 'layout-1',
+                        ),
+                        array(
                             'name'    => 'query_type',
                             'label'   => esc_html__( 'Select Query Type', 'basilico' ),
                             'type'    => 'select',
@@ -139,7 +151,7 @@ pxl_add_custom_widget(
                     ),
                 ),
             ),
-        ),
-    ),
-    basilico_get_class_widget_path()
+),
+),
+basilico_get_class_widget_path()
 );
