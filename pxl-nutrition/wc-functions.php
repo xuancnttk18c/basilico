@@ -90,7 +90,7 @@ function pxl_nutrition_frontend_display() {
 function get_nutrition_opts() {
     $opts = array(
         'pxl_nutrition_calories'    => array(
-            'label'                 => esc_html__( 'Calories: ', 'basilico' ),
+            'label'                 => esc_html_( 'Calories: ', 'basilico' ),
             'placeholder'           => esc_html('550kcal', 'basilico'),
         ),
         'pxl_nutrition_carbohydrates' => array(
