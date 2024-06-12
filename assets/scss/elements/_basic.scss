@@ -2009,7 +2009,7 @@
 }
 
 @mixin pxl-divider-align($alignment, $max-width) {
-    @media ( min-width: $max-width ) {
+    @media ( max-width: $max-width ) {
         .pxl-widget-divider {
             justify-content: $alignment;
             .pxl-divider {
@@ -2062,59 +2062,59 @@
 }
 
 .divider-align {
-    &--left {
+    // &--left {
+    //     @include pxl-divider-align(start, 1500px);
+    // }
+    // &--center {
+    //     @include pxl-divider-align(center, 99999px);
+    // }
+    // &--right {
+    //     @include pxl-divider-align(end, 99999px);
+    // }
+    &--laptopleft {
         @include pxl-divider-align(start, 1499px);
     }
-    &--center {
+    &--laptopcenter {
         @include pxl-divider-align(center, 1499px);
     }
-    &--right {
+    &--laptopright {
         @include pxl-divider-align(end, 1499px);
     }
-    &--laptopleft {
+    &--tablet_extraleft {
         @include pxl-divider-align(start, 1199px);
     }
-    &--laptopcenter {
+    &--tablet_extracenter {
         @include pxl-divider-align(center, 1199px);
     }
-    &--laptopright {
+    &--tablet_extraright {
         @include pxl-divider-align(end, 1199px);
     }
-    &--tablet_extraleft {
+    &--tabletleft {
         @include pxl-divider-align(start, 991px);
     }
-    &--tablet_extracenter {
+    &--tabletcenter {
         @include pxl-divider-align(center, 991px);
     }
-    &--tablet_extraright {
+    &--tabletright {
         @include pxl-divider-align(end, 991px);
     }
-    &--tabletleft {
+    &--mobile_extraleft {
         @include pxl-divider-align(start, 767px);
     }
-    &--tabletcenter {
+    &--mobile_extracenter {
         @include pxl-divider-align(center, 767px);
     }
-    &--tabletright {
+    &--mobile_extraright {
         @include pxl-divider-align(end, 767px);
     }
-    &--mobile_extraleft {
+    &--mobileleft {
         @include pxl-divider-align(start, 575px);
     }
-    &--mobile_extracenter {
+    &--mobilecenter {
         @include pxl-divider-align(center, 575px);
     }
-    &--mobile_extraright {
+    &--mobileright {
         @include pxl-divider-align(end, 575px);
-    }
-    &--mobile_left {
-        @include pxl-divider-align(start, 360px);
-    }
-    &--mobile_center {
-        @include pxl-divider-align(center, 360px);
-    }
-    &--mobile_right {
-        @include pxl-divider-align(end, 360px);
     }
 }
 
