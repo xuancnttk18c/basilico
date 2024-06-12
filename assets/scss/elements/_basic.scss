@@ -2006,39 +2006,7 @@
             }
         }
     }
-}
-
-.divider-align-left,
-.divider-align--laptopleft,
-.divider-align--table_extraleft,
-.divider-align--tabletleft,
-.divider-align--mobile_extraleft,
-.divider-align--mobileleft {
-    .pxl-widget-divider {
-        justify-content: start;
-        .pxl-divider {
-            transform-origin: left;
-            &.style-1 {
-                &:before {
-                    left: 0;
-                }
-            }
-            &.style-2 {
-                .diamond-icon {
-                    left: 0;
-                }
-            }
-        }
-    }
-}
-
-.divider-align-center,
-.divider-align--laptopcenter,
-.divider-align--table_extracenter
-.divider-align--tabletcenter,
-.divider-align--mobile_extracenter,
-.divider-align--mobilecenter {
-    .pxl-widget-divider {
+    &.center {
         justify-content: center;
         .pxl-divider {
             transform-origin: center;
@@ -2056,15 +2024,7 @@
             }
         }
     }
-}
-
-.divider-align-right,
-.divider-align--laptopright,
-.divider-align--table_extraright,
-.divider-align--tabletright,
-.divider-align--mobile_extraright,
-.divider-align--mobileright {
-    .pxl-widget-divider {
+    &.right {
         justify-content: end;
         .pxl-divider {
             transform-origin: right;
