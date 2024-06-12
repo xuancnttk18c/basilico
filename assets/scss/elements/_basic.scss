@@ -2006,7 +2006,15 @@
             }
         }
     }
-    &.center {
+}
+
+.content-align-center,
+.content-align--laptopcenter,
+.content-align--table_extracenter
+.content-align--tabletcenter,
+.content-align--mobile_extracenter,
+.content-align--mobilecenter {
+    .pxl-widget-divider {
         justify-content: center;
         .pxl-divider {
             transform-origin: center;
@@ -2024,7 +2032,15 @@
             }
         }
     }
-    &.right {
+}
+
+.content-align-right,
+.content-align--laptopright,
+.content-align--table_extraright,
+.content-align--tabletright,
+.content-align--mobile_extraright,
+.content-align--mobileright {
+    .pxl-widget-divider {
         justify-content: end;
         .pxl-divider {
             transform-origin: right;
