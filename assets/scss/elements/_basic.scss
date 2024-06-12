@@ -2008,61 +2008,53 @@
     }
 }
 
-.divider-align-left {
-    .pxl-widget-divider {
-        justify-content: start;
-        .pxl-divider {
-            transform-origin: left;
-            &.style-1 {
-                &:before {
-                    left: 0;
+@mixin pxl-divider-align($alignment, $max-width, $min-width) {
+    @media only screen and ( max-width: $max-width ) and ( min-width: $min-width ) {
+        .pxl-widget-divider {
+            justify-content: $alignment;
+            .pxl-divider {
+                @if ($alignment == start) {
+                    transform-origin: left;
+                    &.style-1 {
+                        &:before {
+                            left: 0;
+                        }
+                    }
+                    &.style-2 {
+                        .diamond-icon {
+                            left: 0;
+                        }
+                    }
                 }
-            }
-            &.style-2 {
-                .diamond-icon {
-                    left: 0;
+                @if ($alignment == center) {
+                    transform-origin: center;
+                    &.style-1 {
+                        &:before {
+                            left: 50%;
+                            @include transform(translateX(-50%));
+                        }
+                    }
+                    &.style-2 {
+                        .diamond-icon {
+                            left: 50%;
+                            @include transform(translate(-50%, -50%) rotate(45deg));
+                        }
+                    }
                 }
-            }
-        }
-    }
-}
-
-.divider-align-center {
-    .pxl-widget-divider {
-        justify-content: center;
-        .pxl-divider {
-            transform-origin: center;
-            &.style-1 {
-                &:before {
-                    left: 50%;
-                    @include transform(translateX(-50%));
-                }
-            }
-            &.style-2 {
-                .diamond-icon {
-                    left: 50%;
-                    @include transform(translate(-50%, -50%) rotate(45deg));
-                }
-            }
-        }
-    }
-}
-
-.divider-align-right {
-    .pxl-widget-divider {
-        justify-content: end;
-        .pxl-divider {
-            transform-origin: right;
-            &.style-1 {
-                &:before {
-                    left: auto;
-                    right: 0;
-                }
-            }
-            &.style-2 {
-                .diamond-icon {
-                    left: auto;
-                    right: 0;
+                @if ($alignment == end) {
+                    transform-origin: end;
+                    &.style-1 {
+                        &:before {
+                            right: 0;
+                            left: auto;
+                        }
+                    }
+                    &.style-2 {
+                        .diamond-icon {
+                            right: 0;
+                            left: auto;
+                        }
+                    }
                 }
             }
         }
@@ -2071,34 +2063,27 @@
 
 .divider-align {
     &--laptopleft {
-        @media only screen and (max-width: 1499px) and (min-width: 1200px) {
-            @extend .divider-align-left;
-        }
+        @include pxl-divider-align(start, 1499px, 1200px);
     }
     &--laptopcenter {
         @media only screen and (max-width: 1499px) and (min-width: 1200px) {
-            @extend .divider-align-center;
+            @extend .divider-align-center-ext;
         }
+        @include pxl-divider-align(center, 1499px, 1200px);
     }
     &--laptopright {
         @media only screen and (max-width: 1499px) and (min-width: 1200px) {
-            @extend .divider-align-right;
+            @include pxl-divider-align(end, 1499px, 1200px);
         }
     }
     &--tablet_extraleft {
-        @media only screen and (max-width: 1199px) and (min-width: 992px) {
-            @extend .divider-align-left;
-        }      
+        @include pxl-divider-align(start, 1199px, 992px);
     }
     &--tablet_extracenter {
-        @media only screen and (max-width: 1199px) and (min-width: 992px) {
-            @extend .divider-align-center;
-        }      
+        @include pxl-divider-align(center, 1199px, 992px);
     }
     &--tablet_extraright {
-        @media only screen and (max-width: 1199px) and (min-width: 992px) {
-            @extend .divider-align-right;
-        }
+        @include pxl-divider-align(end, 1199px, 992px);
     }
 }
 
