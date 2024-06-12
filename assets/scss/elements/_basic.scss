@@ -2008,44 +2008,97 @@
     }
 }
 
-.divider-align {
-    &--laptopright {
-        @media only screen and (max-width: 1499px) and (min-width: 1200px) {
-            justify-content: end;
-            .pxl-divider {
-                transform-origin: right;
-                &.style-1 {
-                    &:before {
-                        left: auto;
-                        right: 0;
-                    }
+.divider-align-left {
+    .pxl-widget-divider {
+        justify-content: start;
+        .pxl-divider {
+            transform-origin: left;
+            &.style-1 {
+                &:before {
+                    left: 0;
                 }
-                &.style-2 {
-                    .diamond-icon {
-                        left: auto;
-                        right: 0;
-                    }
+            }
+            &.style-2 {
+                .diamond-icon {
+                    left: 0;
                 }
             }
         }
     }
-    &--tablet_extracenter {
-        @media only screen and (max-width: 1199px) and (min-width: 992px) {
-            justify-content: center;
-            .pxl-divider {
-                transform-origin: center;
-                &.style-1 {
-                    &:before {
-                        left: 50%;
-                    }
-                }
-                &.style-2 {
-                    .diamond-icon {
-                        left: 50%;
-                    }
+}
+
+.divider-align-center {
+    .pxl-widget-divider {
+        justify-content: center;
+        .pxl-divider {
+            transform-origin: center;
+            &.style-1 {
+                &:before {
+                    left: 50%;
+                    @include transform(translateX(-50%));
                 }
             }
+            &.style-2 {
+                .diamond-icon {
+                    left: 50%;
+                    @include transform(translate(-50%, -50%) rotate(45deg));
+                }
+            }
+        }
+    }
+}
+
+.divider-align-right {
+    .pxl-widget-divider {
+        justify-content: end;
+        .pxl-divider {
+            transform-origin: right;
+            &.style-1 {
+                &:before {
+                    left: auto;
+                    right: 0;
+                }
+            }
+            &.style-2 {
+                .diamond-icon {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+.divider-align {
+    &--laptopleft {
+        @media only screen and (max-width: 1499px) and (min-width: 1200px) {
+            @extend .divider-align-left;
+        }
+    }
+    &--laptopcenter {
+        @media only screen and (max-width: 1499px) and (min-width: 1200px) {
+            @extend .divider-align-center;
+        }
+    }
+    &--laptopright {
+        @media only screen and (max-width: 1499px) and (min-width: 1200px) {
+            @extend .divider-align-right;
+        }
+    }
+    &--tablet_extraleft {
+        @media only screen and (max-width: 1199px) and (min-width: 992px) {
+            @extend .divider-align-left;
         }      
+    }
+    &--tablet_extracenter {
+        @media only screen and (max-width: 1199px) and (min-width: 992px) {
+            @extend .divider-align-center;
+        }      
+    }
+    &--tablet_extraright {
+        @media only screen and (max-width: 1199px) and (min-width: 992px) {
+            @extend .divider-align-right;
+        }
     }
 }
 
