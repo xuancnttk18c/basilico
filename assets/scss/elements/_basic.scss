@@ -2008,12 +2008,12 @@
     }
 }
 
-.content-align-center,
-.content-align--laptopcenter,
-.content-align--table_extracenter
-.content-align--tabletcenter,
-.content-align--mobile_extracenter,
-.content-align--mobilecenter {
+.divider-align-center,
+.divider-align--laptopcenter,
+.divider-align--table_extracenter
+.divider-align--tabletcenter,
+.divider-align--mobile_extracenter,
+.divider-align--mobilecenter {
     .pxl-widget-divider {
         justify-content: center;
         .pxl-divider {
@@ -2034,12 +2034,12 @@
     }
 }
 
-.content-align-right,
-.content-align--laptopright,
-.content-align--table_extraright,
-.content-align--tabletright,
-.content-align--mobile_extraright,
-.content-align--mobileright {
+.divider-align-right,
+.divider-align--laptopright,
+.divider-align--table_extraright,
+.divider-align--tabletright,
+.divider-align--mobile_extraright,
+.divider-align--mobileright {
     .pxl-widget-divider {
         justify-content: end;
         .pxl-divider {
