@@ -2008,34 +2008,43 @@
     }
 }
 
-.divider-align-right {
-    justify-content: end;
-    .pxl-divider {
-        transform-origin: right;
-        &.style-1 {
-            &:before {
-                left: auto;
-                right: 0;
-            }
-        }
-        &.style-2 {
-            .diamond-icon {
-                left: auto;
-                right: 0;
-            }
-        }
-    }
-}
-
 .divider-align {
     &--laptopright {
         @media only screen and (max-width: 1499px) and (min-width: 1200px) {
-            @extend .divider-align-right;
+            justify-content: end;
+            .pxl-divider {
+                transform-origin: right;
+                &.style-1 {
+                    &:before {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+                &.style-2 {
+                    .diamond-icon {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
         }
     }
-    &-table_extracenter {
+    &--tablet_extracenter {
         @media only screen and (max-width: 1199px) and (min-width: 992px) {
-            @extend .divider-align-right;
+            justify-content: center;
+            .pxl-divider {
+                transform-origin: center;
+                &.style-1 {
+                    &:before {
+                        left: 50%;
+                    }
+                }
+                &.style-2 {
+                    .diamond-icon {
+                        left: 50%;
+                    }
+                }
+            }
         }      
     }
 }
