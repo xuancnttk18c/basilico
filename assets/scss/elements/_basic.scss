@@ -2008,6 +2008,30 @@
     }
 }
 
+.divider-align-left,
+.divider-align--laptopleft,
+.divider-align--table_extraleft,
+.divider-align--tabletleft,
+.divider-align--mobile_extraleft,
+.divider-align--mobileleft {
+    .pxl-widget-divider {
+        justify-content: start;
+        .pxl-divider {
+            transform-origin: left;
+            &.style-1 {
+                &:before {
+                    left: 0;
+                }
+            }
+            &.style-2 {
+                .diamond-icon {
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
 .divider-align-center,
 .divider-align--laptopcenter,
 .divider-align--table_extracenter
