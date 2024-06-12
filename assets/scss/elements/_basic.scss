@@ -2049,58 +2049,6 @@
     }
 }
 
-.divider-align-center,
-.divider-align--laptopcenter,
-.divider-align--table_extracenter
-.divider-align--tabletcenter,
-.divider-align--mobile_extracenter,
-.divider-align--mobilecenter {
-    .pxl-widget-divider {
-        justify-content: center;
-        .pxl-divider {
-            transform-origin: center;
-            &.style-1 {
-                &:before {
-                    left: 50%;
-                    @include transform(translateX(-50%));
-                }
-            }
-            &.style-2 {
-                .diamond-icon {
-                    left: 50%;
-                    @include transform(translate(-50%, -50%) rotate(45deg));
-                }
-            }
-        }
-    }
-}
-
-.divider-align-right,
-.divider-align--laptopright,
-.content-align--table_extraright,
-.content-align--tabletright,
-.content-align--mobile_extraright,
-.content-align--mobileright {
-    .pxl-widget-divider {
-        justify-content: end;
-        .pxl-divider {
-            transform-origin: right;
-            &.style-1 {
-                &:before {
-                    left: auto;
-                    right: 0;
-                }
-            }
-            &.style-2 {
-                .diamond-icon {
-                    left: auto;
-                    right: 0;
-                }
-            }
-        }
-    }
-}
-
 //* Pie Chart
 .pxl-pie-chart {
     &.layout1 {
