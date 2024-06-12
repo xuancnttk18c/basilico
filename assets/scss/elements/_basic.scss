@@ -2008,8 +2008,8 @@
     }
 }
 
-@mixin pxl-divider-align($alignment, $min-width) {
-    @media ( min-width: $min-width ) {
+@mixin pxl-divider-align($alignment, $max-width) {
+    @media ( min-width: $max-width ) {
         .pxl-widget-divider {
             justify-content: $alignment;
             .pxl-divider {
@@ -2063,49 +2063,49 @@
 
 .divider-align {
     &--left {
-        @include pxl-divider-align(start, 1500px);
+        @include pxl-divider-align(start, 1499px);
     }
     &--center {
-        @include pxl-divider-align(center, 1500px);
+        @include pxl-divider-align(center, 1499px);
     }
     &--right {
-        @include pxl-divider-align(end, 1500px);
+        @include pxl-divider-align(end, 1499px);
     }
     &--laptopleft {
-        @include pxl-divider-align(start, 1200px);
+        @include pxl-divider-align(start, 1199px);
     }
     &--laptopcenter {
-        @include pxl-divider-align(center, 1200px);
+        @include pxl-divider-align(center, 1199px);
     }
     &--laptopright {
-        @include pxl-divider-align(end, 1200px);
+        @include pxl-divider-align(end, 1199px);
     }
     &--tablet_extraleft {
-        @include pxl-divider-align(start, 992px);
+        @include pxl-divider-align(start, 991px);
     }
     &--tablet_extracenter {
-        @include pxl-divider-align(center, 992px);
+        @include pxl-divider-align(center, 991px);
     }
     &--tablet_extraright {
-        @include pxl-divider-align(end, 992px);
+        @include pxl-divider-align(end, 991px);
     }
     &--tabletleft {
-        @include pxl-divider-align(start, 768px);
+        @include pxl-divider-align(start, 767px);
     }
     &--tabletcenter {
-        @include pxl-divider-align(center, 768px);
+        @include pxl-divider-align(center, 767px);
     }
     &--tabletright {
-        @include pxl-divider-align(end, 768px);
+        @include pxl-divider-align(end, 767px);
     }
     &--mobile_extraleft {
-        @include pxl-divider-align(start, 576px);
+        @include pxl-divider-align(start, 575px);
     }
     &--mobile_extracenter {
-        @include pxl-divider-align(center, 576px);
+        @include pxl-divider-align(center, 575px);
     }
     &--mobile_extraright {
-        @include pxl-divider-align(end, 576px);
+        @include pxl-divider-align(end, 575px);
     }
     &--mobile_left {
         @include pxl-divider-align(start, 360px);
