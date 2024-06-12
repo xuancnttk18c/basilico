@@ -2,6 +2,7 @@
 	$style = $widget->get_setting('style', 'style-1');
 	$draw = $widget->get_setting('draw', '');
 	extract($settings);
+	var_dump($settings);
 ?>
 
 <div class="pxl-widget-divider <?php echo esc_attr($settings['alignment']); ?>">
