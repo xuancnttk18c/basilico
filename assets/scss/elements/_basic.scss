@@ -261,6 +261,28 @@
     .pxl-heading-wrap {
         .pxl-heading-inner {
             width: 100%;
+            text-align: left;
+            .heading-title.style-1,
+            .heading-subtitle.style-1 {
+                &.highlighted span,
+                &.highlighted a {
+                    &:before {
+                        content: none;
+                    }
+                }
+            }
+            .heading-title.style-2,
+            .heading-subtitle.style-2 {
+                &.highlighted span,
+                &.highlighted a {
+                    &:before {
+                        content: '\e9e6';
+                    }
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
         }
         .heading-title {
             text-transform: uppercase;
