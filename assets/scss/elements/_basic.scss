@@ -2079,7 +2079,7 @@
         }
     }
 }
-.divider-align-center {
+.pxl-divider-align-center {
     .pxl-widget-divider {
         justify-content: center;
         .pxl-divider {
@@ -2099,7 +2099,7 @@
         }
     }
 }
-.divider-align-right {
+.pxl-divider-align-right {
     .pxl-widget-divider {
         justify-content: end;
         .pxl-divider {
@@ -2120,7 +2120,7 @@
     }
 }
 
-.divider-align {
+.pxl-divider-align {
     &--laptopleft {
         @include pxl-divider-align(start, 1499px);
     }
