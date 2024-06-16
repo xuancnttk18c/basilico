@@ -81,9 +81,9 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Alignment', 'basilico' ),
                                 'type' => 'choose',
                                 'prefix_class' => 'pxl-heading-align-%s',
-                                'control_type' => 'responsive'
+                                'control_type' => 'responsive',
                                 'options' => [
-                                    'start' => [
+                                    'left' => [
                                         'title' => esc_html__( 'Start', 'basilico' ),
                                         'icon' => 'eicon-text-align-left',
                                     ],
@@ -91,7 +91,7 @@ pxl_add_custom_widget(
                                         'title' => esc_html__( 'Center', 'basilico' ),
                                         'icon' => 'eicon-text-align-center',
                                     ],
-                                    'end' => [
+                                    'right' => [
                                         'title' => esc_html__( 'End', 'basilico' ),
                                         'icon' => 'eicon-text-align-right',
                                     ]
