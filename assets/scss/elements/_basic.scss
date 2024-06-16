@@ -272,7 +272,6 @@
                         position: relative;
                         &:before,
                         &:after {
-                            //content: "";
                             position: absolute;
                             width: 62px;
                             height: 1px;
@@ -301,7 +300,6 @@
                         align-items: center;
                         &:before,
                         &:after {
-                            //content: '\e9e6';
                             position: relative;
                             font-family: $pxli_font;
                             color: $primary_color;
@@ -313,108 +311,6 @@
                         }
                         &:after {
                             margin-left: 22px;
-                        }
-                    }
-                }
-            }
-        }
-        .pxl-heading-inner {
-            .heading-title.style-1,
-            .heading-subtitle.style-1 {
-                &.highlighted span,
-                &.highlighted a {
-                    &:before {
-                        content: none;
-                    }
-                    &:after {
-                        content: '';
-                    }
-                }
-            }
-            .heading-title.style-2,
-            .heading-subtitle.style-2 {
-                &.highlighted span,
-                &.highlighted a {
-                    &:before {
-                        content: '\e9e6';
-                    }
-                    &:after {
-                        content: none;
-                    }
-                }
-            }
-            &.start {
-                text-align: left;
-                .heading-title.style-1,
-                .heading-subtitle.style-1 {
-                    &.highlighted span,
-                    &.highlighted a {
-                        &:before {
-                            content: none;
-                        }
-                    }
-                }
-                .heading-title.style-2,
-                .heading-subtitle.style-2 {
-                    &.highlighted span,
-                    &.highlighted a {
-                        &:before {
-                            content: '\e9e6';
-                        }
-                        &:after {
-                            content: none;
-                        }
-                    }
-                }
-            }
-            &.center {
-                text-align: center;
-                .heading-title.style-1,
-                .heading-subtitle.style-1 {
-                    &.highlighted span,
-                    &.highlighted a {
-                        &:before {
-                            content: '';
-                        }
-                        &:after {
-                            content: '';
-                        }
-                    }
-                }
-                .heading-title.style-2,
-                .heading-subtitle.style-2 {
-                    &.highlighted span,
-                    &.highlighted a {
-                        &:before,
-                        &:after {
-                            content: '\e9e6';
-                        }
-                    }
-                }
-            }
-            &.end {
-                text-align: right;
-                .heading-title.style-1,
-                .heading-subtitle.style-1 {
-                    &.highlighted span,
-                    &.highlighted a {
-                        &:before {
-                            content: '';
-                        }
-                        &:after {
-                            content: none;
-                        }
-                    }
-                }
-                .heading-title.style-2,
-                .heading-subtitle.style-2 {
-                    &.highlighted span,
-                    &.highlighted a {
-                        &:before {
-                            content: none;
-                        }
-                        &:after {
-                            content: '\e9e6';
                         }
                     }
                 }
@@ -462,6 +358,137 @@
                 height: 3px;
             }
         }
+    }
+}
+
+@mixin pxl-heading-align($alignment, $max-width) {
+    @media ( max-width: $max-width ) {
+        .pxl-heading-inner {
+            @if ($alignment == start) {
+                text-align: left;
+                .heading-title.style-1,
+                .heading-subtitle.style-1 {
+                    &.highlighted span,
+                    &.highlighted a {
+                        &:before {
+                            content: none;
+                        }
+                    }
+                }
+                .heading-title.style-2,
+                .heading-subtitle.style-2 {
+                    &.highlighted span,
+                    &.highlighted a {
+                        &:before {
+                            content: '\e9e6';
+                        }
+                        &:after {
+                            content: none;
+                        }
+                    }
+                }
+            }
+            @if ($alignment == center) {
+                text-align: center;
+                .heading-title.style-1,
+                .heading-subtitle.style-1 {
+                    &.highlighted span,
+                    &.highlighted a {
+                        &:before {
+                            content: '';
+                        }
+                        &:after {
+                            content: '';
+                        }
+                    }
+                }
+                .heading-title.style-2,
+                .heading-subtitle.style-2 {
+                    &.highlighted span,
+                    &.highlighted a {
+                        &:before,
+                        &:after {
+                            content: '\e9e6';
+                        }
+                    }
+                }
+            }
+            @if ($alignment == end) {
+                text-align: right;
+                .heading-title.style-1,
+                .heading-subtitle.style-1 {
+                    &.highlighted span,
+                    &.highlighted a {
+                        &:before {
+                            content: '';
+                        }
+                        &:after {
+                            content: none;
+                        }
+                    }
+                }
+                .heading-title.style-2,
+                .heading-subtitle.style-2 {
+                    &.highlighted span,
+                    &.highlighted a {
+                        &:before {
+                            content: none;
+                        }
+                        &:after {
+                            content: '\e9e6';
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pxl-heading-align {
+    &--laptopleft {
+        @include pxl-heading-align(start, $xl_max);
+    }
+    &--laptopcenter {
+        @include pxl-heading-align(center, $xl_max);
+    }
+    &--laptopright {
+        @include pxl-heading-align(end, $xl_max);
+    }
+    &--tablet_extraleft {
+        @include pxl-heading-align(start, $lg_max);
+    }
+    &--tablet_extracenter {
+        @include pxl-heading-align(center, $lg_max);
+    }
+    &--tablet_extraright {
+        @include pxl-heading-align(end, $lg_max);
+    }
+    &--tabletleft {
+        @include pxl-heading-align(start, $md_max);
+    }
+    &--tabletcenter {
+        @include pxl-heading-align(center, $md_max);
+    }
+    &--tabletright {
+        @include pxl-heading-align(end, $md_max);
+    }
+    &--mobile_extraleft {
+        @include pxl-heading-align(start, $sm_max);
+    }
+    &--mobile_extracenter {
+        @include pxl-heading-align(center, $sm_max);
+    }
+    &--mobile_extraright {
+        @include pxl-heading-align(end, $sm_max);
+    }
+    &--mobileleft {
+        @include pxl-heading-align(start, $xs_max);
+    }
+    &--mobilecenter {
+        @include pxl-heading-align(center, $xs_max);
+    }
+    &--mobileright {
+        @include pxl-heading-align(end, $xs_max);
     }
 }
 
@@ -2061,7 +2088,7 @@
     }
 }
 
-.divider-align-left {
+.pxl-divider-align-left {
     .pxl-widget-divider {
         justify-content: start;
         .pxl-divider {
@@ -2122,49 +2149,49 @@
 
 .pxl-divider-align {
     &--laptopleft {
-        @include pxl-divider-align(start, 1499px);
+        @include pxl-divider-align(start, $xl_max);
     }
     &--laptopcenter {
-        @include pxl-divider-align(center, 1499px);
+        @include pxl-divider-align(center, $xl_max);
     }
     &--laptopright {
-        @include pxl-divider-align(end, 1499px);
+        @include pxl-divider-align(end, $xl_max);
     }
     &--tablet_extraleft {
-        @include pxl-divider-align(start, 1199px);
+        @include pxl-divider-align(start, $lg_max);
     }
     &--tablet_extracenter {
-        @include pxl-divider-align(center, 1199px);
+        @include pxl-divider-align(center, $lg_max);
     }
     &--tablet_extraright {
-        @include pxl-divider-align(end, 1199px);
+        @include pxl-divider-align(end, $lg_max);
     }
     &--tabletleft {
-        @include pxl-divider-align(start, 991px);
+        @include pxl-divider-align(start, $md_max);
     }
     &--tabletcenter {
-        @include pxl-divider-align(center, 991px);
+        @include pxl-divider-align(center, $md_max);
     }
     &--tabletright {
-        @include pxl-divider-align(end, 991px);
+        @include pxl-divider-align(end, $md_max);
     }
     &--mobile_extraleft {
-        @include pxl-divider-align(start, 767px);
+        @include pxl-divider-align(start, $sm_max);
     }
     &--mobile_extracenter {
-        @include pxl-divider-align(center, 767px);
+        @include pxl-divider-align(center, $sm_max);
     }
     &--mobile_extraright {
-        @include pxl-divider-align(end, 767px);
+        @include pxl-divider-align(end, $sm_max);
     }
     &--mobileleft {
-        @include pxl-divider-align(start, 575px);
+        @include pxl-divider-align(start, $xs_max);
     }
     &--mobilecenter {
-        @include pxl-divider-align(center, 575px);
+        @include pxl-divider-align(center, $xs_max);
     }
     &--mobileright {
-        @include pxl-divider-align(end, 575px);
+        @include pxl-divider-align(end, $xs_max);
     }
 }
 
