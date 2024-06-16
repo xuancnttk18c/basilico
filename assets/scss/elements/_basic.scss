@@ -467,7 +467,7 @@
 }
 
 .pxl-heading-align-left {
-    .pxl-heading-layout-1 .pxl-heading-inner {
+    &.pxl-heading-layout-1 .pxl-heading-inner {
         text-align: left;
         .heading-title.style-1,
         .heading-subtitle.style-1 {
@@ -494,7 +494,7 @@
 }
 
 .pxl-heading-align-center {
-    .pxl-heading-layout-1 .pxl-heading-inner {
+    &.pxl-heading-layout-1 .pxl-heading-inner {
         text-align: center;
         .heading-title.style-1,
         .heading-subtitle.style-1 {
@@ -522,7 +522,7 @@
 }
 
 .pxl-heading-align-end {
-    .pxl-heading-layout-1 .pxl-heading-inner {
+    &.pxl-heading-layout-1 .pxl-heading-inner {
         text-align: right;
         .heading-title.style-1,
         .heading-subtitle.style-1 {
