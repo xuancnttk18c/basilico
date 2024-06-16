@@ -385,7 +385,7 @@
 
 @mixin pxl-heading-align($alignment, $max-width) {
     @media ( max-width: $max-width ) {
-        .pxl-heading-wrap .pxl-heading-inner {
+        .pxl-heading-layout-1 .pxl-heading-wrap .pxl-heading-inner {
             @if ($alignment == start) {
                 text-align: left;
                 .heading-title.style-1,
