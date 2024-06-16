@@ -444,6 +444,91 @@
     }
 }
 
+.pxl-heading-align-left {
+    .pxl-heading-inner {
+        text-align: left;
+        .heading-title.style-1,
+        .heading-subtitle.style-1 {
+            &.highlighted span,
+            &.highlighted a {
+                &:before {
+                    content: none;
+                }
+            }
+        }
+        .heading-title.style-2,
+        .heading-subtitle.style-2 {
+            &.highlighted span,
+            &.highlighted a {
+                &:before {
+                    content: '\e9e6';
+                }
+                &:after {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+.pxl-heading-align-center {
+    .pxl-heading-inner {
+        text-align: center;
+        .heading-title.style-1,
+        .heading-subtitle.style-1 {
+            &.highlighted span,
+            &.highlighted a {
+                &:before {
+                    content: '';
+                }
+                &:after {
+                    content: '';
+                }
+            }
+        }
+        .heading-title.style-2,
+        .heading-subtitle.style-2 {
+            &.highlighted span,
+            &.highlighted a {
+                &:before,
+                &:after {
+                    content: '\e9e6';
+                }
+            }
+        }
+    }
+}
+
+.pxl-heading-align-end {
+    .pxl-heading-inner {
+        text-align: right;
+        .heading-title.style-1,
+        .heading-subtitle.style-1 {
+            &.highlighted span,
+            &.highlighted a {
+                &:before {
+                    content: '';
+                }
+                &:after {
+                    content: none;
+                }
+            }
+        }
+        .heading-title.style-2,
+        .heading-subtitle.style-2 {
+            &.highlighted span,
+            &.highlighted a {
+                &:before {
+                    content: none;
+                }
+                &:after {
+                    content: '\e9e6';
+                }
+            }
+        }
+    }
+}
+
 .pxl-heading-align {
     &--laptopleft {
         @include pxl-heading-align(start, $xl_max);
