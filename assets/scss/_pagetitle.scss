@@ -3,7 +3,9 @@
 	color: #fff;
 	position: relative;
 	z-index: 1;
-	@include d-flex();
+	&:has(.sub-title) {
+		@include d-flex();
+	}
 	.sub-title {
 		font-size: 17px;
 		letter-spacing: 0.03em;
