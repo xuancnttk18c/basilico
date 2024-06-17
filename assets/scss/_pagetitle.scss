@@ -18,7 +18,23 @@
 			font-size: 15px;
 		}
 	}
-	&.layout-1 {
+	&.style-1 {
+		.main-title {
+			color: #fff;
+			letter-spacing: 0.1em;
+			margin: 0 0 5px;
+			text-transform: uppercase;
+			> span {
+				display: inline-block;
+				position: relative;
+			}
+			@media (max-width: $sm_max) {
+				font-size: 50px;
+				line-height: 1;
+			}
+		}
+	}
+	&.style-2 {
 		.main-title {
 			color: #fff;
 			letter-spacing: 0.05em;
@@ -56,7 +72,7 @@
 			}
 		}
 	}
-	&.layout-2 {
+	&.style-3 {
 		.main-title {
 			color: #fff;
 			letter-spacing: 0.1em;
@@ -85,22 +101,6 @@
 				@media (max-width: $xs_max) {
 					max-width: 235px;
 				}
-			}
-			@media (max-width: $sm_max) {
-				font-size: 50px;
-				line-height: 1;
-			}
-		}
-	}
-	&.layout-3 {
-		.main-title {
-			color: #fff;
-			letter-spacing: 0.1em;
-			margin: 0 0 5px;
-			text-transform: uppercase;
-			> span {
-				display: inline-block;
-				position: relative;
 			}
 			@media (max-width: $sm_max) {
 				font-size: 50px;
