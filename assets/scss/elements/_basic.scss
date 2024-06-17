@@ -2157,6 +2157,7 @@
                     &.style-2 {
                         .diamond-icon {
                             left: 0;
+                            @include transform(translateY(-50%) rotate(45deg));
                         }
                     }
                 }
@@ -4040,6 +4041,7 @@
                 @include d-inline-flex();
                 gap: 36px;
                 @media (max-width: $sm_max) {
+                    flex-wrap: wrap;
                     row-gap: 10px;
                 }
             }
