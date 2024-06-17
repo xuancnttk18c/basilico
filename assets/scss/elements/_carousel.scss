@@ -400,15 +400,8 @@
                 margin-bottom: 35px;
                 line-height: 26px;
                 span {
-                    position: relative;
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        bottom: 3px;
-                        left: 0;
-                        right: 0;
-                        border-bottom: 2px solid $primary_color;
-                    }
+                    @include multiline-hover-underline();
+                    background-image: linear-gradient(transparent calc(100% - 2px), $primary_color 2px);
                 }
                 @media (max-width: $sm_max) {
                     font-size: 22px;

@@ -2209,6 +2209,7 @@
             &.style-2 {
                 .diamond-icon {
                     left: 0;
+                    @include transform(translateY(-50%) rotate(45deg));
                 }
             }
         }
