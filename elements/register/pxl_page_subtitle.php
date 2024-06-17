@@ -33,6 +33,7 @@ pxl_add_custom_widget(
                             ],
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-pt-wrap' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-pt-wrap .sub-title' => 'text_align: {{VALUE}};'
                             ],
                         ),
                         array(
