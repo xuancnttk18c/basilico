@@ -21,6 +21,7 @@ pxl_add_custom_widget(
                                 'style-2' => esc_html__('Style 2', 'basilico'),
                                 'style-3' => esc_html__('Style 3', 'basilico'),
                             ],
+                            'default' => 'style-1',
                         ),
                         array(
                             'name' => 'text_align',
