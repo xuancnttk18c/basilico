@@ -3,9 +3,6 @@
 	color: #fff;
 	position: relative;
 	z-index: 1;
-	&:has(.sub-title) {
-		@include d-flex();
-	}
 	.sub-title {
 		font-size: 17px;
 		letter-spacing: 0.03em;
@@ -110,6 +107,11 @@
 				line-height: 1;
 			}
 		}
+	}
+}
+.pxl-pt-wrap {
+	&:has(.sub-title) {
+		@include d-flex();
 	}
 }
 .pxl-breadcrumb {
