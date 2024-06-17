@@ -18,7 +18,7 @@ pxl_add_custom_widget(
                             'type' => 'choose',
                             'control_type' => 'responsive',
                             'options' => [
-                                'left' => [
+                                'start' => [
                                     'title' => esc_html__( 'Start', 'basilico' ),
                                     'icon' => 'eicon-text-align-left',
                                 ],
@@ -26,14 +26,29 @@ pxl_add_custom_widget(
                                     'title' => esc_html__( 'Center', 'basilico' ),
                                     'icon' => 'eicon-text-align-center',
                                 ],
-                                'right' => [
+                                'end' => [
                                     'title' => esc_html__( 'End', 'basilico' ),
                                     'icon' => 'eicon-text-align-right',
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .sub-title' => 'text-align: {{VALUE}};',
+                                '{{WRAPPER}} .sub-title' => 'justifty-content: {{VALUE}};',
                             ],
+                        ),
+                        array(
+                            'name'  => 'max_width',
+                            'label' => esc_html__( 'Max Width (px)', 'basilico' ),
+                            'type'  => 'slider',
+                            'control_type' => 'responsive',
+                            'range' => [
+                                'px' => [
+                                    'min' => 100,
+                                    'max' => 1920,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-pt-wrap .sub-title' => 'max-width: {{SIZE}}{{UNIT}};',
+                            ]
                         ),
                         array(
                             'name' => 'sub_title_color',
