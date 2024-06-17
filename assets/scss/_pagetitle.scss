@@ -98,7 +98,7 @@
 				&:after {
 					right: -80px;
 				}
-				@media (max-width: $xs_max) {
+				@media (max-width: $sm_max) {
 					max-width: 235px;
 				}
 			}
