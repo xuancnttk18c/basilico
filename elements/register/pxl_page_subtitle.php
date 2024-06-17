@@ -32,7 +32,7 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-pt-wrap' => 'justifty-content: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-pt-wrap' => 'justify-content: {{VALUE}};',
                             ],
                         ),
                         array(
