@@ -4537,14 +4537,16 @@
             width: 25%;
             padding: 0 15px;
             position: relative;
-            @media (max-width: $xs_max) {
-                width: 50%;
-                padding: 30px 15px;
-                &:nth-child(2) {
+            &:nth-child(2) {
+                @media (max-width: $xs_max) {
                     &:before {
                         display: none;
                     }
                 }
+            }
+            @media (max-width: $xs_max) {
+                width: 50%;
+                padding: 30px 15px;
             }
             .inner-number {
                 position: relative;
