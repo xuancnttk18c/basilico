@@ -4581,17 +4581,17 @@
                     background-color: $primary_color;
                     @include transform(translateY(-50%) rotate(45deg));
                 }
-                &:nth-child(2) {
-                    @media (max-width: $xs_max) {
-                        &:before {
-                            content: none;
-                        }
-                    }
-                }
             }
             .inner-number {
                 &:before {
                     content: none;
+                }
+            }
+            &:nth-child(2) {
+                @media (max-width: $xs_max) {
+                    .time-item-inner:before {
+                        content: none;
+                    }
                 }
             }
             &:last-child .time-item-inner:before {
