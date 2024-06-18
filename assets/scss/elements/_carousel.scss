@@ -1917,6 +1917,28 @@
                 @include transform(translateY(0));
             }
         }
+        @media (max-width: $sm_max) {
+            .item-title-wrap {
+                display: none;
+            }
+            .item-content {
+                padding: 55px 30px;
+                position: relative;
+                left: auto;
+                right: auto;
+                bottom: auto;
+                @include transform(none);
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    right: 15px;
+                    bottom: 15px;
+                    border: 1px solid $primary_color;
+                }
+            }
+        }
     }
 }
 
