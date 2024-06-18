@@ -4569,6 +4569,11 @@
             }
         }
         .time-item {
+            .inner-number {
+                &:before {
+                    content: none;
+                }
+            }
             .time-item-inner {
                 position: relative;
                 &:before {
@@ -4580,11 +4585,6 @@
                     height: 8px;
                     background-color: $primary_color;
                     @include transform(translateY(-50%) rotate(45deg));
-                }
-            }
-            .inner-number {
-                &:before {
-                    content: none;
                 }
             }
             &:nth-child(2) {
