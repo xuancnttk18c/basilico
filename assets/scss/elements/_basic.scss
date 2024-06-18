@@ -4537,13 +4537,6 @@
             width: 25%;
             padding: 0 15px;
             position: relative;
-            &:nth-child(2) {
-                @media (max-width: $xs_max) {
-                    &:before {
-                        display: none;
-                    }
-                }
-            }
             @media (max-width: $xs_max) {
                 width: 50%;
                 padding: 30px 15px;
@@ -4587,6 +4580,13 @@
                     height: 8px;
                     background-color: $primary_color;
                     @include transform(translateY(-50%) rotate(45deg));
+                }
+                &:nth-child(2) {
+                    @media (max-width: $xs_max) {
+                        &:before {
+                            content: none;
+                        }
+                    }
                 }
             }
             .inner-number {
