@@ -259,20 +259,11 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'border-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn::before' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-button-wrapper .btn .pxl-button-bg' => 'background-color: {{VALUE}};',
                                     '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-6:hover' => 'background-color: {{VALUE}};',
-                                ],
-                                'condition' => [
-                                    'style!' => ['btn-gradient'],
                                 ],
                             ),
                         ),
-                        basilico_gradient_option( [
-                            'prefix' => 'background',
-                            'selectors_class' => '.pxl-button-wrapper .btn',
-                            'return_value' => 'gradient01',
-                            'condition' => ['style' => 'btn-gradient']
-                        ]),
                         array(
                             array(
                                 'name' => 'border_type',
