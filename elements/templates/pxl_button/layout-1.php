@@ -4,6 +4,8 @@ use Elementor\Utils;
 $widget->add_render_attribute( 'wrapper', 'class', 'pxl-button-wrapper d-flex pxl-button-layout1' );
 $link_type = $settings['button_url_type'];
 $is_fullwidth = esc_attr($settings['is_fullwidth']) == 'yes' ? 'btn-fullwidth' : '';
+$btn_style = $settings['style'];
+
 if(($link_type == 'url') && !empty( $settings['link']['url'])){
     $widget->add_render_attribute( 'button', 'href', $settings['link']['url'] );
     if ( $settings['link']['is_external'] ) {
@@ -23,7 +25,7 @@ if ($link_type == 'page') {
     $widget->add_render_attribute( 'button', 'href', $page_url );
 }
 
-$widget->add_render_attribute( 'button', 'class', 'btn '.$settings['style'].' icon-ps-'.$settings['icon_align'].' '.$is_fullwidth );
+$widget->add_render_attribute( 'button', 'class', 'btn '.esc_attr($btn_style).' icon-ps-'.$settings['icon_align'].' '.$is_fullwidth );
 $html_id = pxl_get_element_id($settings);
 
 ?>
@@ -31,6 +33,7 @@ $html_id = pxl_get_element_id($settings);
     <a <?php pxl_print_html($widget->get_render_attribute_string( 'button' )); ?>>
         <?php
 		$widget->add_inline_editing_attributes( 'text', 'none' ); ?>
+        <div class="pxl-button-bg"></div>
         <span class="pxl-button-text"><?php echo esc_html($settings['text']); ?></span>
         <?php 
         if ( $settings['btn_icon'] ) 

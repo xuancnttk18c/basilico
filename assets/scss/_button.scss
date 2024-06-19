@@ -57,9 +57,9 @@
     span + i, i + span {
         margin-left: 13px;
     }
-    &.btn-default{
+    &.btn-default {
         border: 1px solid $secondary_color;
-        &:before {            
+        .pxl-button-bg {            
             content: '';
             position: absolute;
             left: -1px;
@@ -91,11 +91,7 @@
         overflow: visible;
         transition: all 0.3s ease;
         margin-bottom: 8px;
-        .pxl-button-icon {
-            color: $secondary_color;
-        }
-        &:before {
-            content: '';
+        .pxl-button-bg {
             position: absolute;
             left: -1px;
             right: -1px;
@@ -105,8 +101,11 @@
             transition: all 0.3s ease;
             transition-delay: 0ms;
         }
+        .pxl-button-icon {
+            color: $secondary_color;
+        }
         &.hover-bg-secondary {
-            &:before {
+            .pxl-button-bg {
                 background-color: $secondary_color; 
             }
         }
@@ -124,7 +123,7 @@
         }
         &:hover {
             transition-delay: 0.25s;
-            &:before {
+            .pxl-button-bg {
                 height: calc(100% + 2px);
                 transition-delay: 0.15s;
             }
@@ -147,8 +146,7 @@
         .pxl-button-icon {
             color: $secondary_color;
         }
-        &:before {
-            content: '';
+        .pxl-button-bg {
             position: absolute;
             left: -1px;
             right: -1px;
@@ -173,7 +171,7 @@
         &:hover {
             color: #fff !important;
             transition-delay: 0.25s;
-            &:before {
+            .pxl-button-bg {
                 height: calc(100% + 2px);
                 transition-delay: 0.15s;
             }
@@ -189,7 +187,7 @@
             color: $primary_color;
             &:hover {
                 color: $secondary_color !important;
-                &:before {
+                .pxl-button-bg {
                     background-color: #fff;
                 }
             }
@@ -206,8 +204,7 @@
         .pxl-button-icon {
             color: $heading_color;
         }
-        &:before {
-            content: '';
+        .pxl-button-bg {
             position: absolute;
             background-color: $primary_color;
             top: auto;
@@ -219,7 +216,6 @@
             transition-delay: 0ms;
         }
         &:after {
-            content: "";
             position: absolute;
             left: -1px;
             right: -1px;
@@ -233,7 +229,7 @@
         &:hover {
             border: 1px solid $primary_color;
             transition-delay: 0.25s;
-            &:before {
+            .pxl-button-bg {
                 height: 100%;
                 transition-delay: 0.15s;
             }
@@ -248,8 +244,7 @@
     &.btn-additional-1 {
         background-color: $primary_color;
         border-color: $primary_color;
-        &:before {
-            content: '';
+        .pxl-button-bg {
             position: absolute;
             left: 0;
             bottom: 0;
@@ -263,7 +258,7 @@
         &:hover {
             color: $secondary_color;
             transition-delay: 0.15s;
-            &:before {
+            .pxl-button-bg {
                 @include transform(scale(1));
             }
         }
@@ -271,8 +266,7 @@
     &.btn-additional-2 {
         background-color: transparent;
         border-color: #fff;
-        &:before {
-            content: '';
+        .pxl-button-bg {
             position: absolute;
             left: 0;
             bottom: 0;
@@ -300,8 +294,7 @@
         .pxl-button-icon {
             color: $heading_color;
         }
-        &:before {
-            content: '';
+        .pxl-button-icon {
             position: absolute;
             left: 0;
             bottom: 0;
@@ -328,7 +321,7 @@
         }
         &:hover {
             transition-delay: 0.25s;
-            &:before {
+            .pxl-button-icon {
                 transition-delay: 0.15s;
                 @include transform(scale(1));
             }
@@ -349,8 +342,7 @@
         .pxl-button-icon {
             color: $heading_color;
         }
-        &:before {
-            content: '';
+        .pxl-button-icon {
             @include transform(scale(0));
             height: 100%;
             background-color: $secondary_color;
@@ -373,7 +365,7 @@
         &:hover {
             transition-delay: 0.25s;
             color: #fff;
-            &:before {
+            .pxl-button-icon {
                 transition-delay: 0.15s;
                 @include transform(scale(1));
             }
@@ -458,44 +450,14 @@
         .pxl-button-icon {
             color: #fff;
         }
-        &:before {
-            content: '';
-            position: absolute;
-            width: 4px;
-            height: 100%;
-            top: 0;
-            right: 0;
-            @include transform(translate(5px, 5px));
-            background-color: $divider_color;
-            @include transition(all 300ms ease-out);
-        }
-        &:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 4px;
-            left: 0;
-            bottom: 0;
-            background-color: $divider_color;
-            @include transform(translate(5px, 5px));
-            @include transition(all 300ms ease-out);
-        }
         &:hover {
             color: #fff;
-            &:before {
-                width: 0;
-                @include transform(translate(1px, 1px));
-            }
-            &:after {
-                height: 0;
-                @include transform(translate(1px, 1px));
-            }
             i {
                 color: inherit;
             }
         }
         &.style-2 {
-            &:before, &:after {
+            .pxl-button-icon, &:after {
                 background-color: #fff;
             }
         }
