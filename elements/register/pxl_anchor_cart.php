@@ -22,7 +22,7 @@ pxl_add_custom_widget(
                                 'layout-text' => esc_html__('Text', 'basilico'),
                             ],
                             'default' => 'layout-df' 
-                        ), 
+                        ),
                         array(
                             'name' => 'link_target',
                             'label' => esc_html__('Link Target', 'basilico'),
@@ -33,7 +33,7 @@ pxl_add_custom_widget(
                                 'cart-canvas' => esc_html__('Cart Canvas', 'basilico'),
                             ],
                             'default' => 'cart_dropdown' 
-                        ), 
+                        ),
                         array(
                             'name'             => 'selected_icon',
                             'label'            => esc_html__( 'Icon', 'basilico' ),
@@ -57,6 +57,7 @@ pxl_add_custom_widget(
                             ],
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-anchor-cart.layout-df a.cart-anchor .pxl-anchor-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-anchor-cart.layout-df a.cart-anchor .pxl-anchor-icon svg' => 'width: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => ['layout_type' => 'layout-df']
                         ),
