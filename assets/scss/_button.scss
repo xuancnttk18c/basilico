@@ -321,7 +321,7 @@
         }
         &:hover {
             transition-delay: 0.25s;
-            .pxl-button-icon {
+            .pxl-button-bg {
                 transition-delay: 0.15s;
                 @include transform(scale(1));
             }
@@ -365,7 +365,7 @@
         &:hover {
             transition-delay: 0.25s;
             color: #fff;
-            .pxl-button-icon {
+            .pxl-button-bg {
                 transition-delay: 0.15s;
                 @include transform(scale(1));
             }
