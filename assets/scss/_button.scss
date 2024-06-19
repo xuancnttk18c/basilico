@@ -294,7 +294,7 @@
         .pxl-button-icon {
             color: $heading_color;
         }
-        .pxl-button-icon {
+        .pxl-button-bg {
             position: absolute;
             left: 0;
             bottom: 0;
@@ -342,7 +342,7 @@
         .pxl-button-icon {
             color: $heading_color;
         }
-        .pxl-button-icon {
+        .pxl-button-bg {
             @include transform(scale(0));
             height: 100%;
             background-color: $secondary_color;
