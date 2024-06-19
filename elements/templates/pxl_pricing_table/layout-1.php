@@ -72,6 +72,7 @@ $pxl_animate = $widget->get_setting('pxl_animate');
                 </ul>
                 <div class="pricing-button-container pxl-button-wrapper">
                     <a class="pricing-price-button btn btn-outline-secondary btn-fullwidth" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr($target); ?>" rel="<?php echo esc_attr($rel); ?>">
+                        <span class="pxl-button-bg"></span>
                         <span <?php pxl_print_html($widget->get_render_attribute_string('pricing_table_button_text')); ?>><?php echo esc_html($settings['pricing_table_button_text']); ?></span>
                     </a>
                 </div>

@@ -30,6 +30,7 @@
                         </div>
                         <div class="pxl-button-wrapper">
                             <a class="btn btn-outline" href="<?php echo esc_url(home_url('/')); ?>">
+                                <span class="pxl-button-wrapper"></span>
                                 <span><?php echo esc_html__('back to homepage', 'basilico') ?></span>
                             </a>
                         </div>

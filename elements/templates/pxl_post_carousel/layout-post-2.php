@@ -182,6 +182,7 @@ $arrows_on_hover_cls = $arrows_on_hover == 'true' ? 'arrow-on-hover' : '';
                                 <?php if ($show_button == 'true') : ?>
                                     <div class="item-readmore pxl-button-wrapper">
                                         <a class="btn-more" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                            <span class="pxl-button-bg"></span>
                                             <span><?php echo pxl_print_html($button_text); ?></span>
                                             <i class="zmdi zmdi-long-arrow-right"></i>
                                         </a>

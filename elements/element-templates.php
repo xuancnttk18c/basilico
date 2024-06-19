@@ -548,6 +548,7 @@ function basilico_get_post_list_layout1($posts = [], $settings = [], $args_m = [
                         <?php if ($show_button == 'true') : ?>
                             <div class="item-readmore pxl-button-wrapper">
                                 <a class="btn btn-outline-secondary" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                    <span class="pxl-button-bg"></span>
                                     <span><?php echo pxl_print_html($button_text); ?></span>
                                 </a>
                             </div>
@@ -957,6 +958,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
                         <?php if ($show_button == 'true') : ?>
                             <div class="item-readmore pxl-button-wrapper">
                                 <a class="btn-more style-2" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                    <span class="pxl-button-bg"></span>
                                     <span><?php echo pxl_print_html($button_text); ?></span>
                                     <i class="zmdi zmdi-long-arrow-right"></i>
                                 </a>
@@ -1222,6 +1224,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                             <?php if ($show_button == 'true') : ?>
                                 <div class="item-readmore pxl-button-wrapper">
                                     <a class="btn-more style-2" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                        <span class="pxl-button-bg"></span>
                                         <span><?php echo pxl_print_html($button_text); ?></span>
                                         <i class="zmdi zmdi-long-arrow-right"></i>
                                     </a>
@@ -1364,6 +1367,7 @@ function basilico_get_post_grid_layout1($posts = [], $settings = [], $args_m = [
             <?php if ($show_button == 'true') : ?>
                 <div class="item-readmore pxl-button-wrapper">
                     <a class="btn-more" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                        <span class="pxl-button-bg"></span>
                         <span><?php echo pxl_print_html($button_text); ?></span>
                         <i class="zmdi zmdi-long-arrow-right"></i>
                     </a>
@@ -1476,6 +1480,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                     <?php if ($show_button == 'true') : ?>
                         <div class="item-readmore pxl-button-wrapper">
                             <a class="btn btn-additional-6" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                <span class="pxl-button-bg"></span>
                                 <span><?php echo pxl_print_html($button_text); ?></span>
                             </a>
                         </div>
@@ -1581,6 +1586,7 @@ function basilico_get_post_grid_layout3($posts = [], $settings = [], $args_m = [
                     <?php if ($show_button == 'true') : ?>
                         <div class="item-readmore pxl-button-wrapper">
                             <a class="btn-more style-3" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                <span class="pxl-button-bg"></span>
                                 <span><?php echo pxl_print_html($button_text); ?></span>
                                 <i class="pxli pxli-arrow-right-solid"></i>
                             </a>
@@ -1680,6 +1686,7 @@ function basilico_get_pxl_portfolio_list_layout1($posts = [], $settings = [], $a
                         <?php if ($show_button == 'true') : ?>
                             <div class="item-readmore pxl-button-wrapper">
                                 <a class="btn" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                    <span class="pxl-button-bg"></span>
                                     <span><?php echo pxl_print_html($button_text); ?></span>
                                     <i class="zmdi zmdi-long-arrow-right"></i>
                                 </a>
