@@ -160,6 +160,13 @@ select.orderby{
 }
 
 .pxl-shop-layout-3 .pxl-products-thumb {
+	.hot-sale {
+		@include d-flex();
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		gap: 10px;
+	}
 	.image-wrap {
 		@include border-radius(20px);
 		overflow: hidden;
