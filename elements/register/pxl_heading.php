@@ -287,64 +287,6 @@ pxl_add_custom_widget(
                     ),
                 ),
                 array(
-                    'name' => 'underline_section',
-                    'label' => esc_html__('Underline Divider', 'basilico' ),
-                    'tab' => 'content',
-                    'controls' => array_merge(
-                        array(
-                            array(
-                                'name' => 'underline_type',
-                                'label' => esc_html__('Underline Type', 'basilico' ),
-                                'type' => \Elementor\Controls_Manager::SELECT,
-                                'default' => 'hide',
-                                'options' => [
-                                    'hide' => esc_html__('Hide', 'basilico' ),
-                                    'solid' => esc_html__('Solid', 'basilico' ),
-                                ],
-                            ),
-                            array(
-                                'name'  =>  'underline_width',
-                                'type'  =>  \Elementor\Controls_Manager::SLIDER,
-                                'label' => esc_html__('Underline Width', 'basilico'),
-                                'size_units' => ['px'],
-                                'control_type' => 'responsive',
-                                'range' => [
-                                    'px' => [
-                                        'min' => 50,
-                                        'max' => 1200,
-                                    ],
-                                ],
-                                'default'   => [
-                                    'unit' => 'px',
-                                ],
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-wrap .heading-underline.solid .pxl-divider' => 'width: {{SIZE}}{{UNIT}};',
-                                ],
-
-                            ),
-                            array(
-                                'name' => 'underline_background',
-                                'type' => \Elementor\Group_Control_Background::get_type(),
-                                'control_type' => 'group',
-                                'types' => ['gradient'],
-                                'selector' => '{{WRAPPER}} .pxl-heading-wrap .heading-underline .pxl-divider',
-                            ),
-                            array(
-                                'name' => 'underline_space',
-                                'label' => esc_html__('Margin(px)', 'basilico' ),
-                                'type' => 'dimensions',
-                                'allowed_dimensions' => 'vertical',
-                                'default' => ['top' => '', 'right' => '', 'bottom' => '', 'left' => ''],
-                                'control_type' => 'responsive',
-                                'size_units' => [ 'px' ],
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-wrap .heading-underline' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                ],
-                            ),
-                        )
-                    ),
-                ),
-                array(
                     'name' => 'highlight_section',
                     'label' => esc_html__('Highlight Text', 'basilico' ),
                     'tab' => 'content',
