@@ -261,9 +261,15 @@ select.orderby{
 					font-size: 15px;
 				}
 				&.woosw-adding {
-					&:after {
-						content: "\e95b" !important;
+					&:before {
+						content: "\e95b";
+						color: #fff;
+						font-family: $pxli_font;
+						font-size: 15px;
 						@include animation(pxl-spin 2s linear infinite);
+					}
+					&:after {
+						content: none;
 					}
 				}
 				&.woosw-added {
