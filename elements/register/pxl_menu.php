@@ -214,6 +214,22 @@ pxl_add_custom_widget(
                     ],
                     'controls' => array(
                         array(
+                            'name' => 'submenu_space_top',
+                            'label' => esc_html__('Space Top', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' , 'em' ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 300,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-primary-menu > li.active > .sub-menu, {{WRAPPER}} .pxl-primary-menu > li:hover > .sub-menu' => 'top: calc(100% + {{SIZE}}{{UNIT}});',
+                            ],
+                        ),
+                        array(
                             'name' => 'sub_color',
                             'label' => esc_html__('Text Color', 'basilico' ),
                             'type' => 'color',
@@ -244,15 +260,6 @@ pxl_add_custom_widget(
                             'type' => 'color',
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-nav-menu .sub-menu' => 'background-color: {{VALUE}};',
-                            ],
-                        ),
-                        array(
-                            'name' => 'border_radius',
-                            'label' => esc_html__('Border Radius', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                            'size_units' => [ 'px' ],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-primary-menu .sub-menu' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -290,6 +297,15 @@ pxl_add_custom_widget(
                                 'box_shadow_position',
                             ],
                             'selector' => '{{WRAPPER}} .pxl-primary-menu .sub-menu',
+                        ),
+                        array(
+                            'name' => 'border_radius',
+                            'label' => esc_html__('Border Radius', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'size_units' => [ 'px' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-primary-menu .sub-menu' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
                         ),
                     ),
                 ),
