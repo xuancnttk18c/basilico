@@ -246,6 +246,39 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-nav-menu .sub-menu' => 'background-color: {{VALUE}};',
                             ],
                         ),
+                        array(
+                            'name' => 'border_radius',
+                            'label' => esc_html__('Border Radius', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'size_units' => [ 'px' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'divider_type',
+                            'label' => esc_html__( 'Border Type', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'options' => [
+                                'none' => esc_html__( 'None', 'basilico' ),
+                                'solid' => esc_html__( 'Solid', 'basilico' ),
+                                'double' => esc_html__( 'Double', 'basilico' ),
+                                'dotted' => esc_html__( 'Dotted', 'basilico' ),
+                                'dashed' => esc_html__( 'Dashed', 'basilico' ),
+                                'groove' => esc_html__( 'Groove', 'basilico' ),
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-primary-menu .sub-menu li a' => 'border-bottom-style: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'divider_color',
+                            'label' => esc_html__('Divider Color', 'basilico' ),
+                            'type' => 'color',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-primary-menu .sub-menu li a' => 'border-bottom-color: {{VALUE}};',
+                            ],
+                        ),
                     ),
                 ),
 
