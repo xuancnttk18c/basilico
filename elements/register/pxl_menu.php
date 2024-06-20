@@ -252,12 +252,12 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-primary-menu .sub-menu' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ),
                         array(
                             'name' => 'divider_type',
-                            'label' => esc_html__( 'Border Type', 'basilico' ),
+                            'label' => esc_html__( 'Divider Type', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => [
                                 'none' => esc_html__( 'None', 'basilico' ),
@@ -270,6 +270,8 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-primary-menu .sub-menu li a' => 'border-bottom-style: {{VALUE}};',
                             ],
+
+                            'default' => 'solid',
                         ),
                         array(
                             'name' => 'divider_color',
