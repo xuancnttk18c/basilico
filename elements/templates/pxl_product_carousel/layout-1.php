@@ -71,7 +71,7 @@ if ( !empty( $item_animation) ) {
 }
 ?>
 <?php if(!empty($posts) && count($posts)): ?>
-    <div class="pxl-swiper-slider pxl-product-carousel layout-<?php echo esc_attr($settings['layout'])?> ">
+    <div class="pxl-swiper-slider pxl-product-carousel layout-<?php echo esc_attr($settings['layout'])?> pxl-shop-<?php echo esc_attr($product_layout); ?>">
         <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
                 <div class="pxl-swiper-wrapper swiper-wrapper">
