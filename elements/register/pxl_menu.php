@@ -226,7 +226,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-primary-menu .sub-menu' => 'top: calc(100% + 20px + {{SIZE}}{{UNIT}});',
+                                '{{WRAPPER}} .pxl-primary-menu > .menu-item > .sub-menu' => 'top: calc(100% + 20px + {{SIZE}}{{UNIT}});',
                                 '{{WRAPPER}} .pxl-primary-menu > li.active > .sub-menu, {{WRAPPER}} .pxl-primary-menu > li:hover > .sub-menu' => 'top: calc(100% + {{SIZE}}{{UNIT}});'
                             ],
                         ),
