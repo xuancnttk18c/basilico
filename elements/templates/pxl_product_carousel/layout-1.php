@@ -4,6 +4,7 @@ if (!class_exists('Woocommerce')){
     return true;
 }
 extract($settings);
+$product_layout = $widget->get_setting('product_layout', 'layout-1');
 $query_type = $widget->get_setting('query_type', 'recent_product');
 $post_per_page = $widget->get_setting('post_per_page', 8);
 $product_ids = $widget->get_setting('product_ids', '');
@@ -58,7 +59,6 @@ if ( ! empty( $settings['loadmore_link']['url'] ) ) {
     $widget->add_render_attribute( 'loadmore', 'class', 'btn');
 }
 
-
 $data_settings = $item_anm_cls = '';
 if ( !empty( $item_animation) ) {
 
@@ -79,7 +79,7 @@ if ( !empty( $item_animation) ) {
                     while ($query->have_posts()) {
                         $query->the_post();
                         echo '<div class="pxl-swiper-slide swiper-slide">';
-                        wc_get_template( 'pxl-content-product-df.php' );
+                        wc_get_template_part( 'pxl-content-product', esc_attr($product_layout) );
                         echo '</div>';
                     }
                     wp_reset_postdata();
