@@ -281,6 +281,16 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-primary-menu .sub-menu li a' => 'border-bottom-color: {{VALUE}};',
                             ],
                         ),
+                        array(
+                            'name'         => 'box_shadow',
+                            'label'        => esc_html__( 'Box Shadow', 'basilico' ),
+                            'type'         => \Elementor\Group_Control_Box_Shadow::get_type(),
+                            'control_type' => 'group',
+                            'exclude' => [
+                                'box_shadow_position',
+                            ],
+                            'selector' => '{{WRAPPER}} .pxl-primary-menu .sub-menu',
+                        ),
                     ),
                 ),
 
