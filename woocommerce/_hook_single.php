@@ -630,7 +630,7 @@ if (basilico()->get_theme_opt('product_related', '1') === '0' ){
 }
 add_filter( 'woocommerce_output_related_products_args', 'basilico_woocommerce_output_related_products_args',20 );
 function basilico_woocommerce_output_related_products_args( $args ) {
-	$args['posts_per_page'] = 3;
+	$args['posts_per_page'] = 6;
 	$args['columns'] = 3;
 	return $args;
 }
