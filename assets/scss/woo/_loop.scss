@@ -692,6 +692,13 @@ select.orderby{
 	}
 	.pxl-add-to-cart {
 		display: inline-flex;
+		a {
+			font-family: $heading_font_family;
+			font-size: 25px;
+			font-weight: 600;
+			letter-spacing: 0.02em;
+			@include border-radius(25px);
+		}
 	}
 	.stock-wishlist {
 		display: inline-flex;
