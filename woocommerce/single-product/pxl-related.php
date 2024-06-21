@@ -5,6 +5,51 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $product_layout = basilico()->get_theme_opt('product_layout', 'layout-1');
 
+$col_xs = '1';  
+$col_sm = '2';  
+$col_md = '2';  
+$col_lg = '3';
+$col_xl = basilico()->get_opt('product_related_col_xl', '3');
+$col_xxl = basilico()->get_opt('product_related_col_xxl', '3');
+
+wp_enqueue_script( 'swiper' );
+wp_enqueue_script( 'basilico-swiper' );
+$arrows_dots = basilico()->get_opt('product_related_arrows_dots', 'arrows');
+$arrows = $arrows_dots == 'arrows' ? true : false;  
+$dots = $arrows_dots == 'dots' ? true : false;  
+$loop_carousel = basilico()->get_theme_opt('product_related_loop_carousel', '0') == '1' ? true : false ;
+$opts = [
+	'slide_direction'               => 'horizontal',
+	'slide_percolumn'               => 1, 
+	'slide_mode'                    => 'slide', 
+	'slides_to_show_xxl'            => (int)$col_xxl, 
+	'slides_to_show'                => (int)$col_xl, 
+	'slides_to_show_lg'             => (int)$col_lg, 
+	'slides_to_show_md'             => (int)$col_md, 
+	'slides_to_show_sm'             => (int)$col_sm, 
+	'slides_to_show_xs'             => (int)$col_xs, 
+	'slides_to_scroll'              => 1, 
+	'slides_gutter'                 => 30,
+	'center_slide'                  => false,
+	'arrow'                         => $arrows,
+	'dots'                          => $dots,
+	'dots_style'                    => 'bullets',
+	'autoplay'                      => false,
+	'pause_on_hover'                => true,
+	'pause_on_interaction'          => true,
+	'delay'                         => 5000,
+	'loop'                          => $loop_carousel,
+	'speed'                         => 500,
+];
+basilico()->add_render_attribute( 'carousel', [
+	'class'         => 'pxl-swiper-container',
+	'dir'           => is_rtl() ? 'rtl' : 'ltr',
+	'data-settings' => wp_json_encode($opts)],
+	null,
+	true
+);
+
+
 if ( $related_products ) : ?>
 	<section class="related products">
 		<?php
@@ -24,16 +69,26 @@ if ( $related_products ) : ?>
 			<div class="pxl-divider"></div>
 		<?php endif; ?>
 
-		<?php woocommerce_product_loop_start(); ?>
-		<?php foreach ( $related_products as $related_product ) : ?>
-			<?php
-			$post_object = get_post( $related_product->get_id() );
-			setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
-			wc_get_template_part( 'pxl-content-product', esc_attr($product_layout));
-			?>
-		<?php endforeach; ?>
-		<?php woocommerce_product_loop_end(); ?>
-			</section>
-			<?php
-		endif;
-		wp_reset_postdata();
+		<div class="pxl-product-grid pxl-product-loop-carousel">
+			<div class="pxl-swiper-slider pxl-product-carousel relative">
+				<div class="pxl-swiper-slider-inner pxl-carousel-inner overflow-hidden">
+					<div <?php basilico()->print_render_attribute_string( 'carousel' ); ?>>
+						<div class="pxl-swiper-wrapper swiper-wrapper">
+							<?php foreach ( $related_products as $related_product ) : ?>
+								<div class="pxl-swiper-slide swiper-slide">
+									<?php
+									$post_object = get_post( $related_product->get_id() );
+                        			setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
+                        			wc_get_template_part( 'pxl-content-product', esc_attr($product_layout));
+                        			?>
+                        		</div>
+                        	<?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php
+endif;
+wp_reset_postdata();
