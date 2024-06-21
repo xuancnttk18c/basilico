@@ -66,8 +66,10 @@
                 observer.observe(document.querySelector('.animation'));
             }
         }, 3000);
-        if (!($('.btn').hasClass('pxl-jkkdfbutton-bg')))
-            $(this).addClass('fdsfsdfs');
+        $('.btn').each(function() {
+            if ($(this).hasClass('jdhkfjahsd'))
+                $(this).append('<span class="pxl-button-bg"></span>')
+        });
     });
     $(window).on('scroll', function () {
         scroll_top = $(window).scrollTop();
