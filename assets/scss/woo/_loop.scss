@@ -693,11 +693,16 @@ select.orderby{
 	.pxl-add-to-cart {
 		display: inline-flex;
 		a {
+			background-color: $secondary_color;
 			font-family: $heading_font_family;
-			font-size: 25px;
+			font-size: 15px;
 			font-weight: 600;
-			letter-spacing: 0.02em;
+			letter-spacing: 0.065em;
 			@include border-radius(25px);
+			&:hover {
+				background-color: $primary_color;
+				color: $heading_color;
+			}
 		}
 	}
 	.stock-wishlist {
