@@ -67,7 +67,7 @@
             }
         }, 3000);
         $('.btn').each(function() {
-            if (!$(this).hasClass('jdhkfjahsd'))
+            if (!$(this).children('pxl-button-bg').length > 0)
                 $(this).append('<span class="pxl-button-bg"></span>')
         });
     });
