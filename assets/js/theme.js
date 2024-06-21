@@ -66,7 +66,7 @@
                 observer.observe(document.querySelector('.animation'));
             }
         }, 3000);
-        if ($('.btn').hasClass('pxl-button-bg'))
+        if (!($('.btn').hasClass('pxl-button-bg')))
             $this.append('<div class="pxl-button-bg"></div>');
     });
     $(window).on('scroll', function () {
