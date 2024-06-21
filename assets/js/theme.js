@@ -67,7 +67,7 @@
             }
         }, 3000);
         if ($('.btn').hasClass('pxl-button-bg'))
-            $this.addClass('pxl-button-bg');
+            $this.append('<div class="pxl-button-bg"></div>');
     });
     $(window).on('scroll', function () {
         scroll_top = $(window).scrollTop();
