@@ -512,6 +512,7 @@ select.orderby{
 	min-height: 32px;
 	min-width: 70px;
 	@include border-radius(16px);
+	z-index: 0;
 }
 
 .pxl-shop-layout-5 .pxl-featured,
@@ -701,7 +702,7 @@ select.orderby{
 			@include border-radius(25px);
 			&:hover {
 				background-color: $primary_color;
-				color: $heading_color;
+				color: #fff;
 			}
 		}
 	}
