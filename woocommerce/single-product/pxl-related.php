@@ -23,6 +23,7 @@ if ( $related_products ) : ?>
 			<h2 class="related_title"><?php echo esc_html( $heading ); ?></h2>
 			<div class="pxl-divider"></div>
 		<?php endif; ?>
+
 		<?php woocommerce_product_loop_start(); ?>
 		<?php foreach ( $related_products as $related_product ) : ?>
 			<?php

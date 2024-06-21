@@ -286,6 +286,86 @@ if (!class_exists('Basilico_Main')) {
             }
             return $sidebar;
         }
+
+        public function add_render_attribute( $element, $key = null, $value = null, $overwrite = false ) {
+            if ( is_array( $element ) ) {
+                foreach ( $element as $element_key => $attributes ) {
+                    $this->add_render_attribute( $element_key, $attributes, null, $overwrite );
+                }
+
+                return $this;
+            }
+
+            if ( is_array( $key ) ) {
+                foreach ( $key as $attribute_key => $attributes ) {
+                    $this->add_render_attribute( $element, $attribute_key, $attributes, $overwrite );
+                }
+
+                return $this;
+            }
+
+            if ( empty( $this->render_attributes[ $element ][ $key ] ) ) {
+                $this->render_attributes[ $element ][ $key ] = [];
+            }
+
+            settype( $value, 'array' );
+
+            if ( $overwrite ) {
+                $this->render_attributes[ $element ][ $key ] = $value;
+            } else {
+                $this->render_attributes[ $element ][ $key ] = array_merge( $this->render_attributes[ $element ][ $key ], $value );
+            }
+
+            return $this;
+        }
+
+        public function get_render_attributes( $element = '', $key = '') {
+            $attributes = $this->render_attributes;
+
+            if ( $element ) {
+                if ( ! isset( $attributes[ $element ] ) ) {
+                    return null;
+                }
+
+                $attributes = $attributes[ $element ];
+
+                if ( $key ) {
+                    if ( ! isset( $attributes[ $key ] ) ) {
+                        return null;
+                    }
+
+                    $attributes = $attributes[ $key ];
+                }
+            }
+            
+            return $attributes;
+        }
+        
+        public function get_render_attribute_string( $element ) {
+            if ( empty( $this->render_attributes[ $element ] ) ) {
+                return '';
+            }
+
+            return $this->render_html_attributes( $this->render_attributes[ $element ] );
+        }
+
+        public function render_html_attributes( array $attributes ) {
+            $rendered_attributes = [];
+
+            foreach ( $attributes as $attribute_key => $attribute_values ) {
+                if ( is_array( $attribute_values ) ) {
+                    $attribute_values = implode( ' ', $attribute_values );
+                }
+
+                $rendered_attributes[] = sprintf( '%1$s="%2$s"', $attribute_key, esc_attr( $attribute_values ) );
+            }
+
+            return implode( ' ', $rendered_attributes );
+        }
+
+        public function print_render_attribute_string( $element ) {
+            echo ''.$this->get_render_attribute_string( $element );  
+        }
     }
 }
  
