@@ -237,6 +237,7 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu li .sub-menu a' => 'color: {{VALUE}};',
                                 '{{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu li .sub-menu a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-primary-menu .sub-menu li.menu-item-has-children:after' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
