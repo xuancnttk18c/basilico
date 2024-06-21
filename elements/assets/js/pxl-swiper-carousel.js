@@ -272,6 +272,22 @@
         });
     };
 
+    $( document ).ready( function() {
+        $('.pxl-theme-carousel').each(function() {
+            pxl_swiper_handler($(this));
+        });
+        
+        pxl_swiper_handler( $('.product-loop-carousel') );
+        pxl_swiper_handler( $('.pxl-product-swiper-slider') );
+        pxl_swiper_handler( $('.pxl-product-loop-carousel .pxl-product-carousel') );
+         
+    });
+    $(document).ajaxComplete(function(event, xhr, settings){  
+        "use strict";
+        pxl_swiper_handler( $('.product-loop-carousel') );
+         
+    });
+
     // Make sure you run this code under Elementor.
     $(window).on("elementor/frontend/init", function () {
         elementorFrontend.hooks.addAction(
