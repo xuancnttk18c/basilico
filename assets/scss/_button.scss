@@ -44,6 +44,9 @@
     overflow: hidden;
     @include box-shadow(none);
     @include transition(all 250ms linear 0s);
+    .pxl-button-bg {
+        z-index: 1;
+    }
     .pxl-button-icon {
         color: $primary_color;
         top: -1px;
