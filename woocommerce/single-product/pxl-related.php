@@ -86,6 +86,10 @@ if ( $related_products ) : ?>
                         </div>
                     </div>
                 </div>
+                <div class="pxl-swiper-arrows single-loop-swiper-arrows">
+                	<div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon lnil lnil-arrow-left"></span></div>
+                	<div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon lnil lnil-arrow-right"></span></div>
+                </div>
             </div>
         </div>
     </section>
