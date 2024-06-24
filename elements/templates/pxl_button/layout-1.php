@@ -48,8 +48,7 @@ if(!empty($settings['button_split_text_anm']) ){
     <a <?php pxl_print_html($widget->get_render_attribute_string( 'button' )); ?>>
         <?php
 		$widget->add_inline_editing_attributes( 'text', 'none' );
-        echo $btn_style == esc_attr('btn-additional-7')  ? '<span class="pxl-button-bg"></span>' : ''; ?>
-        <span class="pxl-button-bg"></span>
+        echo esc_attr($btn_style) == 'btn-additional-7' ? '<span class="pxl-button-bg"></span>' : ''; ?>
         <span class="pxl-button-text"><?php echo esc_html($settings['text']); ?></span>
         <?php 
         if ( $settings['btn_icon'] ) 
