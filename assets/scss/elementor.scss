@@ -3,7 +3,23 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+    &.pxl-section-static-pos-yes{
+        .elementor-container{
+            position: static;
+        }
+        .elementor-column, 
+        .elementor-column-wrap{
+            position: static;
+        }
+        .elementor-widget-wrap{
+            position: static;
+        }
+    }
+    &.pxl-section-overflow-hidden-yes{
+        overflow: hidden !important;
+    }
 }
+
 .elementor-editor-active{
     .pxl-header-sticky{
         display: none;
@@ -15,6 +31,7 @@
         margin: 0 !important;
     }
 }
+
 .elementor-lightbox .swiper-zoom-container > canvas,
 .elementor-lightbox .swiper-zoom-container > img,
 .elementor-lightbox .swiper-zoom-container > svg {
