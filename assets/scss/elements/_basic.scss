@@ -2443,10 +2443,8 @@
 }
 
 //* Pxl Image
-.pxl-image-wg {
-    overflow: hidden;
-    line-height: 1;
-    &.pxl-bg-parallax {
+.pxl-image-wg{
+    &.pxl-bg-parallax{
         img{
             opacity: 0;
             visibility: hidden;
@@ -2479,7 +2477,83 @@
             }
         }
     }
-}
+    &.draw-from-right {
+        img {
+            clip-path: inset(0 0 0 100%);
+            @include transition(1.2s cubic-bezier(.63,.25,.25,1));
+        }
+        &.pxl-animated {
+            img{
+                clip-path: inset(0 0 0 0);
+            }
+        }
+    }
+    &.move-from-left{
+        clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+        img{
+            transform-origin: 50% 50%;
+            transition: 2s cubic-bezier(0.5, 0.5, 0, 1);
+            @include transform(scale(1.5) translate(-150px, 0px));
+        }
+        &.pxl-animated{
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            img{
+                @include transform(scale(1) translate(0px, 0px));
+            }
+        }
+    }
+    &.move-from-right{
+        clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+        img{
+            transform-origin: 50% 50%;
+            transition: 2s cubic-bezier(0.5, 0.5, 0, 1);
+            @include transform(scale(1.5) translate(150px, 0px));
+        }
+        &.pxl-animated{
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            img{
+                @include transform(scale(1) translate(0px, 0px));
+            }
+        }
+    }
+    &.skew-in{
+        visibility: hidden;
+        &.pxl-animated{
+            visibility: visible;
+            -webkit-animation-name:pxl_skew_in;
+            animation-name:pxl_skew_in;
+            -webkit-animation-fill-mode:both;
+            animation-fill-mode:both;
+            -webkit-animation-duration:1s!important;
+            animation-duration:1s!important;
+            -webkit-animation-timing-function:cubic-bezier(.4,0,.2,1);
+            animation-timing-function:cubic-bezier(.4,0,.2,1);
+            will-change:transform;
+            -webkit-backface-visibility:hidden;
+            backface-visibility:hidden
+        }
+    }
+    &.skew-in-right{
+        visibility: hidden;
+        &.pxl-animated{
+            visibility: visible;
+            -webkit-animation-name:pxl_skew_in_right;
+            animation-name:pxl_skew_in_right;
+            -webkit-animation-fill-mode:both;
+            animation-fill-mode:both;
+            -webkit-animation-duration:1s!important;
+            animation-duration:1s!important;
+            -webkit-animation-timing-function:cubic-bezier(.4,0,.2,1);
+            animation-timing-function:cubic-bezier(.4,0,.2,1);
+            will-change:transform;
+            -webkit-backface-visibility:hidden;
+            backface-visibility:hidden
+        }
+    }
+    .parallax-inner{
+        background-image: var(--pxl-image-bg-parallax-inner);
+    }
+} 
 
 .framed-image .pxl-image-wg {
     padding: 13px;
