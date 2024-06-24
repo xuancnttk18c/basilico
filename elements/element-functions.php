@@ -9,6 +9,8 @@ if (!function_exists('basilico_elements_scripts')) {
     function basilico_elements_scripts(){
         wp_enqueue_style( 'e-animations');
         wp_register_style( 'odometer', get_template_directory_uri() . '/elements/assets/css/odometer-theme-default.css', array(), '1.1.0');
+        wp_register_script( 'scroll-trigger', get_template_directory_uri() . '/elements/assets/js/libs/scroll-trigger.js', array( 'jquery' ), '3.10.5', true );
+        wp_register_script( 'pxl-split-text', get_template_directory_uri() . '/elements/assets/js/libs/split-text.js', array( 'jquery' ), '3.6.1', true );
         wp_enqueue_script('basilico-elements', get_template_directory_uri() . '/elements/assets/js/pxl-elements.js', [ 'jquery' ], basilico()->get_version(), true);
         wp_register_script('basilico-tabs', get_template_directory_uri() . '/elements/assets/js/pxl-tabs.js', ['jquery'], basilico()->get_version(), true);
         wp_register_script('basilico-typewrite', get_template_directory_uri() . '/elements/assets/js/pxl-typewrite.js', ['jquery'], basilico()->get_version(), true);
@@ -907,4 +909,27 @@ function pxl_get_product_grid_term_options($args=[]){
         $options[$category->slug] = $category->name;
     }
     return $options;
+}
+
+function basilico_split_text_option($name=''){
+    return [
+        'name' => $name.'split_text_anm',
+        'label' => ucfirst( str_replace('_', ' ', $name) ).' '.esc_html__('Split Text Animation', 'basilico' ),
+        'type' => 'select',
+        'options' => [
+            ''               => esc_html__( 'None', 'basilico' ),
+            'split-in-fade' => esc_html__( 'In Fade', 'basilico' ),
+            'split-in-right' => esc_html__( 'In Right', 'basilico' ),
+            'split-in-left'  => esc_html__( 'In Left', 'basilico' ),
+            'split-in-up'    => esc_html__( 'In Up', 'basilico' ),
+            'split-in-down'  => esc_html__( 'In Down', 'basilico' ),
+            'split-in-rotate'  => esc_html__( 'In Rotate', 'basilico' ),
+            'split-in-scale'  => esc_html__( 'In Scale', 'basilico' ),
+            'split-words-scale'  => esc_html__( 'Words Scale', 'basilico' ),
+            'split-lines-transform'  => esc_html__( 'Lines Transform', 'basilico' ),
+            'split-lines-rotation-x'  => esc_html__( 'Lines Transform rotate rotate', 'basilico' ),
+        ],
+        'label_block' => true,
+        'default' => '',
+    ];
 }

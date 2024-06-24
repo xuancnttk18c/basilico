@@ -7,7 +7,8 @@ pxl_add_custom_widget(
         'categories' => array('pxltheme-core'),
         'scripts'    => array(
             'basilico-typewrite',
-            'basilico-animation'
+            'scroll-trigger',
+            'pxl-split-text'
         ),
         'params' => array(
             'sections' => array(
@@ -153,6 +154,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Link', 'basilico' ),
                                 'type' => \Elementor\Controls_Manager::URL,
                             ),
+                            basilico_split_text_option('title_'),
                         ),
                         basilico_elementor_animation_opts([
                             'name'   => 'title',
@@ -218,6 +220,7 @@ pxl_add_custom_widget(
                                     '{{WRAPPER}} .pxl-heading-wrap .heading-subtitle' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
                             ),
+                            basilico_split_text_option('subtitle_'),
                         ),
                         basilico_elementor_animation_opts([
                             'name'   => 'sub_title',
