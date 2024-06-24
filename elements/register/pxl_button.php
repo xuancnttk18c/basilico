@@ -159,11 +159,7 @@ pxl_add_custom_widget(
                     'label' => esc_html__('Animation Settings', 'basilico' ),
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                     'controls' => array_merge(
-                        basilico_elementor_animation_opts([
-                            'name'   => 'button',
-                            'label'  => '',
-                        ]),
-                        [
+                        array(
                             basilico_split_text_option('button_'),
                             array(
                                 'name' => 'hover_split_text_anm',
@@ -177,7 +173,7 @@ pxl_add_custom_widget(
                                 'default' => '',
                                 'condition' => ['button_split_text_anm!' => '']
                             ),
-                        ]
+                        )
                     )
                 ),
                 array(
