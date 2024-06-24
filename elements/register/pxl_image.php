@@ -227,84 +227,99 @@ pxl_add_custom_widget(
                     'name'     => 'bg_parallax_section',
                     'label'    => esc_html__('Background Parallax', 'basilico' ),
                     'tab'      => 'content',
-                    'controls' => [
+                    'controls' => array_merge(
                         [
-                            'name'    => 'pxl_bg_parallax',
-                            'label'   => esc_html__( 'Background Parallax Type', 'basilico' ),
-                            'type'    => \Elementor\Controls_Manager::SELECT,
-                            'options' => [
-                                ''                  => esc_html__( 'None', 'basilico' ),
-                                'basic'             => esc_html__( 'Basic', 'basilico' ),
-                                'rotate'            => esc_html__( 'Rotate', 'basilico' ),
-                                'mouse-move'        => esc_html__( 'Mouse Move', 'basilico' ),
-                                'mouse-move-rotate' => esc_html__( 'Mouse Move Rotate', 'basilico' ),
+                            [
+                                'name'    => 'pxl_bg_parallax',
+                                'label'   => esc_html__( 'Background Parallax Type', 'basilico' ),
+                                'type'    => \Elementor\Controls_Manager::SELECT,
+                                'options' => [
+                                    ''                  => esc_html__( 'None', 'basilico' ),
+                                    'basic'             => esc_html__( 'Basic', 'basilico' ),
+                                    'rotate'            => esc_html__( 'Rotate', 'basilico' ),
+                                    'mouse-move'        => esc_html__( 'Mouse Move', 'basilico' ),
+                                    'mouse-move-rotate' => esc_html__( 'Mouse Move Rotate', 'basilico' ),
+                                    'transform-mouse-move' => esc_html__( 'Transform Mouse Move', 'basilico' ),
+                                    'transform' => esc_html__( 'Transform', 'basilico' ),
+                                ],
                             ],
+                            [
+                                'name' => 'bg_parallax_width',
+                                'label' => esc_html__('Background Width', 'basilico' ),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'control_type' => 'responsive',
+                                'default' => [
+                                    'unit' => '%',
+                                ],
+                                'tablet_default' => [
+                                    'unit' => '%',
+                                ],
+                                'mobile_default' => [
+                                    'unit' => '%',
+                                ],
+                                'size_units' => [ '%', 'px', 'vw' ],
+                                'range' => [
+                                    '%' => [
+                                        'min' => 1,
+                                        'max' => 100,
+                                    ],
+                                    'px' => [
+                                        'min' => 1,
+                                        'max' => 1920,
+                                    ],
+                                    'vw' => [
+                                        'min' => 1,
+                                        'max' => 100,
+                                    ],
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-image-wg' => 'width: {{SIZE}}{{UNIT}};',
+                                ],
+                                'condition' => [ 'pxl_bg_parallax!' => '']  
+                            ],
+                            [
+                                'name' => 'bg_parallax_height',
+                                'label' => esc_html__('Background Height', 'basilico' ),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'control_type' => 'responsive',
+                                'default' => [
+                                    'unit' => 'px',
+                                ],
+                                'tablet_default' => [
+                                    'unit' => 'px',
+                                ],
+                                'mobile_default' => [
+                                    'unit' => 'px',
+                                ],
+                                'size_units' => [ 'px', 'vh' ],
+                                'range' => [
+                                    'px' => [
+                                        'min' => 1,
+                                        'max' => 1000,
+                                    ],
+                                    'vh' => [
+                                        'min' => 1,
+                                        'max' => 100,
+                                    ],
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-image-wg' => 'height: {{SIZE}}{{UNIT}};',
+                                ],
+                                'condition' => [ 'pxl_bg_parallax!' => '']  
+                            ]
                         ],
-                        [
-                            'name' => 'bg_parallax_width',
-                            'label' => esc_html__('Background Width', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::SLIDER,
-                            'control_type' => 'responsive',
-                            'default' => [
-                                'unit' => '%',
-                            ],
-                            'tablet_default' => [
-                                'unit' => '%',
-                            ],
-                            'mobile_default' => [
-                                'unit' => '%',
-                            ],
-                            'size_units' => [ '%', 'px', 'vw' ],
-                            'range' => [
-                                '%' => [
-                                    'min' => 1,
-                                    'max' => 100,
-                                ],
-                                'px' => [
-                                    'min' => 1,
-                                    'max' => 1920,
-                                ],
-                                'vw' => [
-                                    'min' => 1,
-                                    'max' => 100,
-                                ],
-                            ],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-image-wg' => 'width: {{SIZE}}{{UNIT}};',
-                            ],
-                            'condition' => [ 'pxl_bg_parallax!' => '']  
-                        ],
-                        [
-                            'name' => 'bg_parallax_height',
-                            'label' => esc_html__('Background Height', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::SLIDER,
-                            'control_type' => 'responsive',
-                            'default' => [
-                                'unit' => 'px',
-                            ],
-                            'tablet_default' => [
-                                'unit' => 'px',
-                            ],
-                            'mobile_default' => [
-                                'unit' => 'px',
-                            ],
-                            'size_units' => [ 'px', 'vh' ],
-                            'range' => [
-                                'px' => [
-                                    'min' => 1,
-                                    'max' => 1000,
-                                ],
-                                'vh' => [
-                                    'min' => 1,
-                                    'max' => 100,
-                                ],
-                            ],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-image-wg' => 'height: {{SIZE}}{{UNIT}};',
-                            ],
-                            'condition' => [ 'pxl_bg_parallax!' => '']  
-                        ],
-                    ]
+                        basilico_position_option_base([
+                                'prefix' => '',
+                                'selectors_class' => '.parallax-inner',
+                                'condition' => ['pxl_bg_parallax' => 'transform']
+                            ]
+                        ),
+                        basilico_parallax_effect_option([
+                                'prefix' => '',
+                                'condition' => ['pxl_bg_parallax' => 'transform']
+                            ]
+                        )
+                    )
                 ],
                 [
                     'name'     => 'style_section',

@@ -908,6 +908,189 @@ function pxl_get_product_grid_term_options($args=[]){
     return $options;
 }
 
+function basilico_position_option_base($args = []){
+    $args = wp_parse_args($args, [
+        'prefix' => '',
+        'selectors_class' => '',
+        'condition' => []
+    ]);
+    $options = array(
+        array(
+            'name'         => $args['prefix'] .'position_popover',
+            'label'        => ucfirst( str_replace('_', ' ', $args['prefix']) ).' '. esc_html__( 'Position', 'basilico' ),
+            'type'         => Controls_Manager::POPOVER_TOGGLE,
+            'label_off'    => esc_html__( 'Default', 'basilico' ),
+            'label_on'     => esc_html__( 'Custom', 'basilico' ),
+            'return_value' => 'yes',
+            'condition'    => $args['condition'],
+        ),
+        array(
+            'name'        => $args['prefix'] .'pxl_start_popover',
+            'label'       => ucfirst( str_replace('_', '', $args['prefix']) ).' '. esc_html__( 'Start Popover', 'basilico' ),
+            'type'        => 'pxl_start_popover',
+            'condition'   => $args['condition'],
+        ), 
+         
+        array(
+            'name'        => $args['prefix'] .'pos_offset_left',
+            'label' => esc_html__( 'Left', 'basilico' ).' (50px) px,%,vw,auto',
+            'type' => 'text',
+            'default' => '',
+            'control_type' => 'responsive',
+            'selectors' => [
+                '{{WRAPPER}} '.$args['selectors_class'] => 'left: {{VALUE}}',
+            ],
+            'condition'   => $args['condition'],
+        ),  
+        array(
+            'name'        => $args['prefix'] .'pos_offset_right',
+            'label' => esc_html__( 'Right', 'basilico' ).' (50px) px,%,vw,auto',
+            'type' => 'text',
+            'default' => '',
+            'control_type' => 'responsive',
+            'selectors' => [
+                '{{WRAPPER}} '.$args['selectors_class'] => 'right: {{VALUE}}',
+            ],
+            'condition'   => $args['condition'],
+             
+        ),
+        array(
+            'name'        => $args['prefix'] .'pos_offset_top',
+            'label' => esc_html__( 'Top', 'basilico' ).' (50px) px,%,vh,auto',
+            'type' => 'text',
+            'default' => '',
+            'control_type' => 'responsive',
+            'selectors' => [
+                '{{WRAPPER}} '.$args['selectors_class'] => 'top: {{VALUE}}',
+            ],
+            'condition'   => $args['condition'],
+              
+        ),  
+        array(
+            'name'        => $args['prefix'] .'pos_offset_bottom',
+            'label' => esc_html__( 'Bottom', 'basilico' ).' (50px) px,%,vh,auto',
+            'type' => 'text',
+            'default' => '',
+            'control_type' => 'responsive',
+            'selectors' => [
+                '{{WRAPPER}} '.$args['selectors_class'] => 'bottom: {{VALUE}}',
+            ],
+            'condition'   => $args['condition'],
+        ),
+        array(
+            'name'        => $args['prefix'] .'pxl_end_popover',
+            'label'       => ucfirst( str_replace('_', '', $args['prefix']) ).' '. esc_html__( 'End Popover', 'basilico' ),
+            'type'        => 'pxl_end_popover',
+            'condition'   => $args['condition'],
+        )
+        
+    );
+    return $options;
+}
+
+function basilico_parallax_effect_option($args = []){
+     
+    $args = wp_parse_args($args, [
+        'prefix' => '',
+        'condition' => []
+    ]);
+    $options = array(
+        array(
+            'name'         => $args['prefix'] .'parallax_effect_popover',
+            'label'        => ucfirst( str_replace('_', ' ', $args['prefix']) ).' '. esc_html__( 'Parallax Effect', 'basilico' ),
+            'type'         => Controls_Manager::POPOVER_TOGGLE,
+            'label_off'    => esc_html__( 'Default', 'basilico' ),
+            'label_on'     => esc_html__( 'Custom', 'basilico' ),
+            'return_value' => 'yes',
+            'condition'    => $args['condition'],
+        ),
+        array(
+            'name'        => $args['prefix'] .'pxl_start_popover',
+            'label'       => ucfirst( str_replace('_', '', $args['prefix']) ).' '. esc_html__( 'Start Popover', 'basilico' ),
+            'type'        => 'pxl_start_popover',
+            'condition'   => $args['condition'],
+        ),
+        array(
+            'name'      => $args['prefix'] .'parallax_effect_x',
+            'label'     => esc_html__( 'TranslateX', 'basilico' ).' (-80)', 
+            'type'      => Controls_Manager::NUMBER,
+            'default'   => '',
+            'condition' => $args['condition'],
+        ),
+        array(
+            'name'      => $args['prefix'] .'parallax_effect_y',
+            'label'     => esc_html__( 'TranslateY', 'basilico' ).' (-80)', 
+            'type'      => Controls_Manager::NUMBER,
+            'default'   => '',
+            'condition' => $args['condition'],
+        ),
+        array(
+            'name'      => $args['prefix'] .'parallax_effect_z',
+            'label'     => esc_html__( 'TranslateZ', 'basilico' ).' (-80)', 
+            'type'      => Controls_Manager::NUMBER,
+            'default'   => '',
+            'condition' => $args['condition'],
+        ),
+        array(
+            'name'      => $args['prefix'] .'parallax_effect_rotate_x',
+            'label'     => esc_html__( 'Rotate X', 'basilico' ).' (30)', 
+            'type'      => Controls_Manager::NUMBER,
+            'default'   => '',
+            'condition' => $args['condition'],
+        ),
+        array(
+            'name'      => $args['prefix'] .'parallax_effect_rotate_y',
+            'label'     => esc_html__( 'Rotate Y', 'basilico' ).' (30)', 
+            'type'      => Controls_Manager::NUMBER,
+            'default'   => '',
+            'condition' => $args['condition'],
+        ),
+        array(
+            'name'      => $args['prefix'] .'parallax_effect_rotate_z',
+            'label'     => esc_html__( 'Rotate Z', 'basilico' ).' (30)', 
+            'type'      => Controls_Manager::NUMBER,
+            'default'   => '',
+            'condition' => $args['condition'],
+        ),
+        array(
+            'name'      => $args['prefix'] .'parallax_effect_scale_x',
+            'label'     => esc_html__( 'Scale X', 'basilico' ).' (0.8)', 
+            'type'      => Controls_Manager::NUMBER,
+            'default'   => '',
+            'condition' => $args['condition'],
+        ),
+        array(
+            'name'      => $args['prefix'] .'parallax_effect_scale_y',
+            'label'     => esc_html__( 'Scale Y', 'basilico' ).' (0.8)', 
+            'type'      => Controls_Manager::NUMBER,
+            'default'   => '',
+            'condition' => $args['condition'],
+        ),
+        array(
+            'name'      => $args['prefix'] .'parallax_effect_scale_z',
+            'label'     => esc_html__( 'Scale Z', 'basilico' ).' (0.8)', 
+            'type'      => Controls_Manager::NUMBER,
+            'default'   => '',
+            'condition' => $args['condition'],
+        ),
+        array(
+            'name'      => $args['prefix'] .'parallax_effect_scale',
+            'label'     => esc_html__( 'Scale', 'basilico' ).' (0.8)', 
+            'type'      => Controls_Manager::NUMBER,
+            'default'   => '',
+            'condition' => $args['condition'],
+        ),
+        array(
+            'name'        => $args['prefix'] .'pxl_end_popover',
+            'label'       => ucfirst( str_replace('_', '', $args['prefix']) ).' '. esc_html__( 'End Popover', 'basilico' ),
+            'type'        => 'pxl_end_popover',
+            'condition'   => $args['condition'],
+        ), 
+       
+    );
+    return $options;
+}
+
 function basilico_split_text_option($name=''){
     return [
         'name' => $name.'split_text_anm',
