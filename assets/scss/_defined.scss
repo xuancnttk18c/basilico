@@ -1119,3 +1119,10 @@
 		}
 	}
 }
+
+.pxl-split-text{
+	font-kerning: none;
+	.split-line{
+		overflow: hidden;
+	}
+}

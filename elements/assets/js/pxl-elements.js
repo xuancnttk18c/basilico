@@ -121,11 +121,252 @@
         });
     }
 
+    function pxl_split_text($scope){
+          
+        var st = $scope.find(".pxl-split-text");
+        if(st.length == 0) return;
+
+        gsap.registerPlugin(SplitText);
+        
+        st.each(function(index, el) {
+           var els = $(el).find('p').length > 0 ? $(el).find('p')[0] : el;
+            const pxl_split = new SplitText(els, { 
+                type: "lines, words, chars",
+                lineThreshold: 0.5,
+                linesClass: "split-line"
+            });
+            var split_type_set = pxl_split.chars;
+           
+            gsap.set(els, { perspective: 400 });
+ 
+            var settings = {
+                scrollTrigger: {
+                    trigger: els,
+                    toggleActions: "play reverse play reverse", //play reset play reset 
+                    start: "top 86%",
+                },
+                duration: 0.8, 
+                stagger: 0.02,
+                ease: "power3.out",
+            };
+            if( $(el).hasClass('split-in-fade') ){
+                settings.opacity = 0;
+            }
+            if( $(el).hasClass('split-in-right') ){
+                settings.opacity = 0;
+                settings.x = "50";
+            }
+            if( $(el).hasClass('split-in-left') ){
+                settings.opacity = 0;
+                settings.x = "-50";
+            }
+            if( $(el).hasClass('split-in-up') ){
+                settings.opacity = 0;
+                settings.y = "80";
+            }
+            if( $(el).hasClass('split-in-down') ){
+                settings.opacity = 0;
+                settings.y = "-80";
+            }
+            if( $(el).hasClass('split-in-rotate') ){
+                settings.opacity = 0;
+                settings.rotateX = "50deg";
+            }
+            if( $(el).hasClass('split-in-scale') ){
+                settings.opacity = 0;
+                settings.scale = "0.5";
+            }
+ 
+            if( $(el).hasClass('split-lines-transform') ){
+                pxl_split.split({
+                    type:"lines",
+                    lineThreshold: 0.5,
+                    linesClass: "split-line"
+                }); 
+                split_type_set = pxl_split.lines;
+                settings.opacity = 0;
+                settings.yPercent = 100;
+                settings.autoAlpha = 0;
+                settings.stagger = 0.1;
+            }
+            if( $(el).hasClass('split-lines-rotation-x') ){
+                pxl_split.split({
+                    type:"lines",
+                    lineThreshold: 0.5,
+                    linesClass: "split-line"
+                }); 
+                split_type_set = pxl_split.lines;
+                settings.opacity = 0;
+                settings.rotationX = -120;
+                settings.transformOrigin = "top center -50";
+                settings.autoAlpha = 0;
+                settings.stagger = 0.1;
+            }
+             
+            if( $(el).hasClass('split-words-scale') ){
+                pxl_split.split({type:"words"}); 
+                split_type_set = pxl_split.words;
+               
+                $(split_type_set).each(function(index,elw) {
+                    gsap.set(elw, {
+                        opacity: 0,
+                        scale:index % 2 == 0  ? 0 : 2,
+                        force3D:true,
+                        duration: 0.1,
+                        ease: "power3.out",
+                        stagger: 0.02,
+                    },index * 0.01);
+                });
+
+                var pxl_anim = gsap.to(split_type_set, {
+                    scrollTrigger: {
+                        trigger: el,
+                        toggleActions: "play reverse play reverse",
+                        start: "top 86%",
+                    },
+                    rotateX: "0",
+                    scale: 1,
+                    opacity: 1,
+                });
+  
+            }else{
+                var pxl_anim = gsap.from(split_type_set, settings);
+            }
+             
+            if( $(el).hasClass('hover-split-text') ){
+                $(el).mouseenter(function(e) {
+                    pxl_anim.restart();
+                });
+            }
+        });
+    }
+
+    function pxl_split_text_hover(){
+        var st = $(document).find(".pxl-split-text-only-hover");
+ 
+        if(st.length == 0) return;
+        gsap.registerPlugin(SplitText);
+        
+        st.each(function(index, el) {
+            var els = $(el).find('p').length > 0 ? $(el).find('p')[0] : el; 
+            const pxl_split_hover = new SplitText(els, { 
+                type: "lines, words, chars",
+                lineThreshold: 0.5,
+                linesClass: "split-line"
+            });
+            var split_type_set = pxl_split_hover.chars;
+           
+            gsap.set(els, { perspective: 400 });
+ 
+            var settings = {
+                duration: 0.8, 
+                stagger: 0.02,
+                ease: "power3.out" //circ.out
+            };
+            if( $(el).hasClass('split-in-fade') ){
+                settings.opacity = 0;
+            }
+            if( $(el).hasClass('split-in-right') ){
+                settings.opacity = 0;
+                settings.x = "50";
+            }
+            if( $(el).hasClass('split-in-left') ){
+                settings.opacity = 0;
+                settings.x = "-50";
+            }
+            if( $(el).hasClass('split-in-up') ){
+                settings.opacity = 0;
+                settings.y = "80";
+            }
+            if( $(el).hasClass('split-in-down') ){
+                settings.opacity = 0;
+                settings.y = "-80";
+            }
+            if( $(el).hasClass('split-in-rotate') ){
+                settings.opacity = 0;
+                settings.rotateX = "50deg";
+            }
+            if( $(el).hasClass('split-in-scale') ){
+                settings.opacity = 0;
+                settings.scale = "0.5";
+            }
+ 
+            if( $(el).hasClass('split-lines-transform') ){
+                pxl_split_hover.split({
+                    type:"lines",
+                    lineThreshold: 0.5,
+                    linesClass: "split-line"
+                }); 
+                split_type_set = pxl_split_hover.lines;
+                settings.opacity = 0;
+                settings.yPercent = 100;
+                settings.autoAlpha = 0;
+                settings.stagger = 0.1;
+            }
+            if( $(el).hasClass('split-lines-rotation-x') ){
+                pxl_split_hover.split({
+                    type:"lines",
+                    lineThreshold: 0.5,
+                    linesClass: "split-line"
+                }); 
+                split_type_set = pxl_split_hover.lines;
+                settings.opacity = 0;
+                settings.rotationX = -120;
+                settings.transformOrigin = "top center -50";
+                settings.autoAlpha = 0;
+                settings.stagger = 0.1;
+            }
+             
+            if( $(el).hasClass('split-words-scale') ){
+                pxl_split_hover.split({type:"words"}); 
+                split_type_set = pxl_split_hover.words;
+               
+                $(split_type_set).each(function(index,elw) {
+                    gsap.set(elw, {
+                        opacity: 0,
+                        scale:index % 2 == 0  ? 0 : 2,
+                        force3D:true,
+                        duration: 0.1,
+                        ease: "power3.out", //circ.out
+                        stagger: 0.02,
+                    },index * 0.01);
+                });
+                var pxl_anim = gsap.to(split_type_set, {
+                    rotateX: "0",
+                    scale: 1,
+                    opacity: 1,
+                });
+
+                $(el).mouseenter(function(e) {
+                    pxl_anim.restart();
+                });
+                 
+            }else{
+                $(el).mouseenter(function(e) {  
+                    gsap.from(split_type_set, settings);
+                });
+            }
+        });
+    }
+
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {
         elementorFrontend.hooks.addAction( 'frontend/element_ready/global', Pxl_Global_Animation_Handler );
         pxlMouseDirection();
         pxlParticles();
         pxl_parallax_bg();
+
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_heading.default', function( $scope ) {
+            pxl_split_text($scope);
+            elementorFrontend.waypoint($scope.find('.heading-subtitle.style-1'), function () {
+                $(this).addClass('pxl-animated');
+            });
+        } );
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_button.default', function( $scope ) {
+            pxl_split_text($scope);
+        } );
+        setTimeout(function () { 
+            pxl_split_text_hover();
+        }, 500)
     } );
 } )( jQuery );
