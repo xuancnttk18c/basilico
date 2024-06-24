@@ -15,7 +15,7 @@ if (!function_exists('basilico_elements_scripts')) {
         wp_register_script('basilico-tabs', get_template_directory_uri() . '/elements/assets/js/pxl-tabs.js', ['jquery'], basilico()->get_version(), true);
         wp_register_script('basilico-typewrite', get_template_directory_uri() . '/elements/assets/js/pxl-typewrite.js', ['jquery'], basilico()->get_version(), true);
         wp_enqueue_script('pxl-parallax-scroll', get_template_directory_uri() . '/elements/assets/js/libs/parallax-scroll.js', [ 'jquery' ], basilico()->get_version(), true);
-        wp_enqueue_script('pxl-parallax-background', get_template_directory_uri() . '/elements/assets/js/parallax-background.js', [ 'jquery' ], basilico()->get_version(), true);
+        wp_enqueue_script('pxl-parallax-background', get_template_directory_uri() . '/elements/assets/js/libs/parallax-background.js', [ 'jquery' ], basilico()->get_version(), true);
 
         wp_register_script('basilico-post-grid', get_template_directory_uri() . '/elements/assets/js/pxl-post-grid.js', ['isotope', 'jquery'], basilico()->get_version(), true);
         wp_localize_script('basilico-post-grid', 'main_data', array('ajax_url' => admin_url('admin-ajax.php')));
