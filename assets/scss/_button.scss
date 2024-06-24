@@ -220,6 +220,7 @@
             transition-delay: 0ms;
         }
         &:after {
+            content: '';
             position: absolute;
             left: -1px;
             right: -1px;
