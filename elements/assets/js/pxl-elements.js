@@ -386,7 +386,7 @@
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {
         pxl_section_start_render();
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/section', function( $scope ) {
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/global', function( $scope ) {
             pxl_animation_handler($scope);
         } );
         
