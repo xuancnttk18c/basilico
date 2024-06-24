@@ -17,7 +17,7 @@
                 return '<span class="pxl-swiper-pagination-bullet ' + settings['dots_style'] + '"></span>';
             },
         });
-        $(".pxl-tabs-carousel").on("beforeChange", function (event, slick, currentSlide, nextSlide){
+        $scope.find(".pxl-tabs-carousel").on("beforeChange", function (event, slick, currentSlide, nextSlide){
             $(currentSlide).siblings().find('.pxl-animate').each(function(){
                 var data = $(this).data('settings');
                 $(this).removeClass('animated '+data['animation']).addClass('pxl-invisible');
