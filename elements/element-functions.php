@@ -908,6 +908,64 @@ function pxl_get_product_grid_term_options($args=[]){
     return $options;
 }
 
+function basilico_get_img_link_url( $settings ) {
+    if ( 'none' === $settings['link_to'] ) {
+        return false;
+    }
+
+    if ( 'custom' === $settings['link_to'] ) {
+        if ( empty( $settings['link']['url'] ) ) {
+            return false;
+        }
+
+        return $settings['link'];
+    }
+
+    return [
+        'url' => $settings['image']['url'],
+    ];
+}
+
+function basilico_get_parallax_effect_settings($settings){
+    if(!empty($settings['pxl_bg_parallax']) && $settings['pxl_bg_parallax'] == 'transform'){
+        $effects = [];
+        if(!empty($settings['parallax_effect_x'])){
+            $effects['x'] = (int)$settings['parallax_effect_x'];
+        }
+        if(!empty($settings['parallax_effect_y'])){
+            $effects['y'] = (int)$settings['parallax_effect_y'];
+        }
+        if(!empty($settings['parallax_effect_z'])){
+            $effects['z'] = (int)$settings['parallax_effect_z'];
+        }
+        if(!empty($settings['parallax_effect_rotate_x'])){
+            $effects['rotateX'] = (float)$settings['parallax_effect_rotate_x'];
+        }
+        if(!empty($settings['parallax_effect_rotate_y'])){
+            $effects['rotateY'] = (float)$settings['parallax_effect_rotate_y'];
+        }
+        if(!empty($settings['parallax_effect_scale_z'])){
+            $effects['rotateZ'] = (float)$settings['parallax_effect_scale_z'];
+        }
+        if(!empty($settings['parallax_effect_scale_x'])){
+            $effects['scaleX'] = (float)$settings['parallax_effect_scale_x'];
+        }
+        if(!empty($settings['parallax_effect_scale_y'])){
+            $effects['scaleY'] = (float)$settings['parallax_effect_scale_y'];
+        }
+        if(!empty($settings['parallax_effect_scale_z'])){
+            $effects['scalez'] = (float)$settings['parallax_effect_scale_z'];
+        }
+        if(!empty($settings['parallax_effect_scale'])){
+            $effects['scale'] = (float)$settings['parallax_effect_scale'];
+        }
+ 
+        return json_encode($effects);
+    }else{
+        return '';
+    }
+}
+
 function basilico_position_option_base($args = []){
     $args = wp_parse_args($args, [
         'prefix' => '',
