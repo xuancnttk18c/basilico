@@ -155,6 +155,32 @@ pxl_add_custom_widget(
                     ),
                 ),
                 array(
+                    'name' => 'animation_section',
+                    'label' => esc_html__('Animation Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                    'controls' => array_merge(
+                        basilico_elementor_animation_opts([
+                            'name'   => 'button',
+                            'label'  => '',
+                        ]),
+                        [
+                            basilico_split_text_option('button_'),
+                            array(
+                                'name' => 'hover_split_text_anm',
+                                'label' => esc_html__('Hover Split Text Animation', 'basilico' ),
+                                'type' => 'select',
+                                'options' => [
+                                    ''               => esc_html__( 'None', 'basilico' ),
+                                    'hover-split-text' => esc_html__( 'Yes', 'basilico' ),
+                                    'only-hover-split-text' => esc_html__( 'Only for Hover', 'basilico' ),
+                                ],
+                                'default' => '',
+                                'condition' => ['button_split_text_anm!' => '']
+                            ),
+                        ]
+                    )
+                ),
+                array(
                     'name' => 'style_section',
                     'label' => esc_html__('Style Settings', 'basilico' ),
                     'tab' => \Elementor\Controls_Manager::TAB_STYLE,

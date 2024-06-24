@@ -28,14 +28,28 @@ if ($link_type == 'page') {
 $widget->add_render_attribute( 'button', 'class', 'btn '.esc_attr($btn_style).' icon-ps-'.$settings['icon_align'].' '.$is_fullwidth );
 $html_id = pxl_get_element_id($settings);
 
+if(!empty($settings['button_split_text_anm']) ){
+    switch ($settings['hover_split_text_anm']) {
+        case 'hover-split-text':
+            $split_cls = 'pxl-split-text hover-split-text '.$settings['button_split_text_anm'];
+            break;
+        case 'only-hover-split-text':
+            $split_cls = 'pxl-split-text-only-hover '.$settings['button_split_text_anm'];
+            break;
+        default:
+            $split_cls = 'pxl-split-text '.$settings['button_split_text_anm'];
+            break;
+    }
+    $widget->add_render_attribute( 'button', 'class', $split_cls );
+}
+
 ?>
 <div id="<?php echo esc_attr($html_id); ?>" <?php pxl_print_html($widget->get_render_attribute_string( 'wrapper' )); ?>>
     <a <?php pxl_print_html($widget->get_render_attribute_string( 'button' )); ?>>
         <?php
-		$widget->add_inline_editing_attributes( 'text', 'none' ); ?>
-        <?php if ($btn_style == esc_attr('btn-additional-7')) : ?>
+		$widget->add_inline_editing_attributes( 'text', 'none' );
+        echo $btn_style == esc_attr('btn-additional-7')  ? '<span class="pxl-button-bg"></span>' : ''; ?>
         <span class="pxl-button-bg"></span>
-        <?php endif; ?>
         <span class="pxl-button-text"><?php echo esc_html($settings['text']); ?></span>
         <?php 
         if ( $settings['btn_icon'] ) 
