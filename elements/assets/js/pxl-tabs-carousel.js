@@ -12,6 +12,8 @@
             swipe: (settings["swipe"] === "true"),
             dots: (settings["dots"] === "true"),
             waitForAnimate: false,
+            cssEase: 'ease-in-out',
+            touchThreshold: 100,
             customPaging : function(slider, i) {
                 return '<span class="pxl-swiper-pagination-bullet ' + settings['dots_style'] + '"></span>';
             },
