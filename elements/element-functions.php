@@ -908,24 +908,6 @@ function pxl_get_product_grid_term_options($args=[]){
     return $options;
 }
 
-function basilico_get_img_link_url( $settings ) {
-    if ( 'none' === $settings['link_to'] ) {
-        return false;
-    }
-
-    if ( 'custom' === $settings['link_to'] ) {
-        if ( empty( $settings['link']['url'] ) ) {
-            return false;
-        }
-
-        return $settings['link'];
-    }
-
-    return [
-        'url' => $settings['image']['url'],
-    ];
-}
-
 function basilico_get_parallax_effect_settings($settings){
     if(!empty($settings['pxl_bg_parallax']) && $settings['pxl_bg_parallax'] == 'transform'){
         $effects = [];
