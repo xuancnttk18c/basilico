@@ -3,6 +3,7 @@
         var settings = $scope.find(".pxl-tabs-carousel").first().data("settings");
         $scope.find(".pxl-tabs-carousel").first().slick({
             infinite: false,
+            useTransform: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             adaptiveHeight: true,
@@ -12,8 +13,7 @@
             swipe: (settings["swipe"] === "true"),
             dots: (settings["dots"] === "true"),
             waitForAnimate: false,
-            cssEase: 'ease-in-out',
-            touchThreshold: 100,
+            cssEase: 'cubic-bezier(0.600, -0.280, 0.735, 0.045)',
             customPaging : function(slider, i) {
                 return '<span class="pxl-swiper-pagination-bullet ' + settings['dots_style'] + '"></span>';
             },
