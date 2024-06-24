@@ -23,20 +23,17 @@ if (!function_exists('basilico_elements_scripts')) {
         wp_register_script('basilico-swiper', get_template_directory_uri() . '/elements/assets/js/pxl-swiper-carousel.js', ['jquery'], basilico()->get_version(), true);
         wp_register_script('basilico-accordion', get_template_directory_uri() . '/elements/assets/js/pxl-accordion.js', [ 'jquery' ], basilico()->get_version(), true);
         wp_register_script('basilico-progressbar', get_template_directory_uri() . '/elements/assets/js/pxl-progressbar.js', [ 'jquery' ], basilico()->get_version(), true);
-        wp_register_script('odometer', get_template_directory_uri() . '/elements/assets/js/odometer.min.js', [ 'jquery' ], basilico()->get_version(), true);
-        wp_register_script('gsMotionPath', get_template_directory_uri() . '/elements/assets/js/gsMotionPath.js', [ 'jquery' ], basilico()->get_version(), true);
+        wp_register_script('odometer', get_template_directory_uri() . '/elements/assets/js/libs/odometer.min.js', [ 'jquery' ], basilico()->get_version(), true);
+        wp_register_script('gsMotionPath', get_template_directory_uri() . '/elements/assets/js/libs/gsMotionPath.js', [ 'jquery' ], basilico()->get_version(), true);
         wp_register_script('basilico-moving-path', get_template_directory_uri() . '/elements/assets/js/pxl-moving-path.js', [ 'jquery' ], basilico()->get_version(), true);
-        wp_register_script('pie-chart', get_template_directory_uri() . '/elements/assets/js/pie-chart.min.js', [ 'jquery' ], basilico()->get_version(), true);
-        wp_register_script('pxl-pie-chart', get_template_directory_uri() . '/elements/assets/js/pxl-pie-chart.js', [ 'jquery' ], basilico()->get_version(), true);
         wp_register_script('basilico-counter', get_template_directory_uri() . '/elements/assets/js/pxl-counter.js', [ 'jquery' ], basilico()->get_version(), true);
         wp_register_script('basilico-clock', get_template_directory_uri() . '/elements/assets/js/pxl-clock.js', [ 'jquery' ], basilico()->get_version(), true);
-        wp_register_script('google-chart', get_template_directory_uri() . '/elements/assets/js/google-chart.js', [ 'jquery' ], basilico()->get_version(), true);
         wp_register_script('basilico-google-chart', get_template_directory_uri() . '/elements/assets/js/pxl-google-chart.js', [ 'jquery' ], basilico()->get_version(), true);
         wp_register_script('basilico-countdown', get_template_directory_uri() . '/elements/assets/js/pxl-countdown.js', [ 'jquery' ], basilico()->get_version(), true);
         wp_register_script('basilico-post-create', get_template_directory_uri() . '/elements/assets/js/pxl-post-create.js', [ 'jquery' ], basilico()->get_version(), true);
         wp_register_script('pxl-tabs-carousel', get_template_directory_uri() . '/elements/assets/js/pxl-tabs-carousel.js', [ 'jquery' ], basilico()->get_version(), true);
         /* Particles Background Libs */
-        wp_register_script('particles-background', get_template_directory_uri() . '/elements/assets/js/particles.min.js', [ 'jquery' ], basilico()->get_version(), true);
+        wp_register_script('particles-background', get_template_directory_uri() . '/elements/assets/js/libs/particles.min.js', [ 'jquery' ], basilico()->get_version(), true);
     }
 }
  
