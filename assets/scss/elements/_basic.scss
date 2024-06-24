@@ -3943,67 +3943,66 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        .sub-title {
-            color: $primary_color;
-            font-size: 17px;
-            line-height: 32px;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-        .title-wrap {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-        }
-        .tab-title {
-            font-family: $heading_font_family;
-            font-size: 22px;
-            font-weight: 700;
-            color: $heading_color;
-            text-transform: uppercase;
-            line-height: 60px;
-            letter-spacing: 0.05em;
-            cursor: pointer;
-            @include transition(all 300ms linear 0ms);
-            span {
-                position: relative;
-                &:before,
-                &:after {
-                    content: '';
-                    position: absolute;
-                    width: 0px;
-                    height: 2px;
-                    background-color: $primary_color;
-                    top: 50%;
-                    @include transition(width 400ms ease);
-                }
-                &:before {
-                    left: -15px;
-                    transform: translate(-100%, -50%);
-                }
-                &:after {
-                    right: -15px;
-                    transform: translate(100%, -50%);
-                }
+            background-color: $secondary_color;
+            padding: 46px 92px 55px;
+            .sub-title {
+                color: $primary_color;
+                font-size: 17px;
+                line-height: 32px;
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+                margin-bottom: 10px;
             }
-            &.active {
+            .title-wrap {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+            .tab-title {
+                font-family: $heading_font_family;
+                font-size: 22px;
+                font-weight: 700;
+                color: $heading_color;
+                text-transform: uppercase;
+                line-height: 60px;
+                letter-spacing: 0.05em;
+                cursor: pointer;
+                @include transition(all 300ms linear 0ms);
                 span {
+                    position: relative;
                     &:before,
                     &:after {
-                        width: 27px;
+                        content: '';
+                        position: absolute;
+                        width: 0px;
+                        height: 2px;
+                        background-color: $primary_color;
+                        top: 50%;
+                        @include transition(width 400ms ease);
+                    }
+                    &:before {
+                        left: -15px;
+                        transform: translate(-100%, -50%);
+                    }
+                    &:after {
+                        right: -15px;
+                        transform: translate(100%, -50%);
+                    }
+                }
+                &.active {
+                    span {
+                        &:before,
+                        &:after {
+                            width: 27px;
+                        }
                     }
                 }
             }
         }
         .tabs-content {
             flex-grow: 1;
-            .tab-content {
-                @include animation(pxlFadeInRight 400ms linear 1 forwards);
-            }
         }
         .btn-wrapper {
             margin-top: 30px;
