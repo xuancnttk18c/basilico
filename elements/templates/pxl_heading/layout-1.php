@@ -24,6 +24,9 @@ if ( $settings['title_highlighted_line'] == "true") {
     $widget->add_render_attribute( 'large-title', 'class', 'highlighted');
     $widget->add_render_attribute( 'large-title', 'class', $settings['title_highlighted_style']);
 }
+if(!empty($settings['title_split_text_anm'])){
+    $widget->add_render_attribute( 'large-title', 'class', 'pxl-split-text '.$settings['title_split_text_anm']);
+}
 if ( $settings['title_animation'] ) {
     $widget->add_render_attribute( 'large-title', 'class', 'pxl-animate pxl-invisible animated-'.$settings['title_animation_duration']);
     $widget->add_render_attribute( 'large-title', 'data-settings',
@@ -47,6 +50,11 @@ if ( $settings['sub_title_animation'] ) {
             'animation_delay' => $settings['sub_title_animation_delay']
         ])
     );
+}
+
+$widget->add_render_attribute( 'sub-title-text', 'class', 'subtitle-text ');
+if(!empty($settings['subtitle_split_text_anm'])){
+    $widget->add_render_attribute( 'sub-title-text', 'class', 'pxl-split-text '.$settings['subtitle_split_text_anm']);
 }
 
 $widget->add_render_attribute( 'description', 'class', 'heading-description');
