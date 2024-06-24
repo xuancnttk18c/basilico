@@ -582,7 +582,7 @@ pxl_add_custom_widget(
                         ],
                         [
                             'name'      => 'draw_animation_delay',
-                            'label'     => esc_html__( 'Draw Animation Delay', 'carmelina' ),
+                            'label'     => esc_html__( 'Draw Animation Delay(ms)', 'basilico' ),
                             'type'      => \Elementor\Controls_Manager::NUMBER,
                             'min'       => 0,
                             'step'      => 100,
