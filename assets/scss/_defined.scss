@@ -1145,6 +1145,82 @@
 	}
 }
 
+.pxl-section-bg-parallax{
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+} 
+.pxl-section-bg-ken-burns{
+	background-image: var(--pxl-ken-burns-bg-img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-position: center center;
+} 
+.elementor-column.pxl-bg-ken-burns .elementor-widget-wrap{
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include animation(pxl-ken-burns-in-out 30s linear infinite); 
+}
+.pxl-ken-burns{
+	-webkit-transition-property:-webkit-transform;
+	transition-property:-webkit-transform;
+	-o-transition-property:transform;
+	transition-property:transform;
+	transition-property:transform,
+	-webkit-transform;
+	-webkit-transition-duration:10s;
+	-o-transition-duration:10s;
+	transition-duration:10s;
+	-webkit-transition-timing-function:linear;
+	-o-transition-timing-function:linear;
+	transition-timing-function:linear
+}
+.pxl-ken-burns--out{
+	-webkit-transform:scale(1.3);
+	-ms-transform:scale(1.3);
+	transform:scale(1.3)
+}
+.pxl-ken-burns--active{
+	-webkit-transition-duration:20s;
+	-o-transition-duration:20s;
+	transition-duration:20s
+}
+.pxl-ken-burns--active.pxl-ken-burns--out{
+	@include animation(pxl-ken-burns-out 30s linear infinite);  
+}
+.pxl-ken-burns--active.pxl-ken-burns--in{
+	@include animation(pxl-ken-burns-in 30s linear infinite); 
+} 
+.pxl-ken-burns--active.pxl-ken-burns--in-out{
+	@include animation(pxl-ken-burns-in-out 60s linear infinite); 
+} 
+.pxl-section-ken-burns{
+	overflow: hidden !important;
+	.pxl-section-bg-parallax{
+		-webkit-transition-duration:20s;
+		-o-transition-duration:20s;
+		transition-duration:20s
+	}
+	&.pxl-ken-burns--out .pxl-section-bg-ken-burns{
+		@include animation(pxl-ken-burns-out 30s linear infinite);  
+	}
+	&.pxl-ken-burns--in .pxl-section-bg-ken-burns{
+		@include animation(pxl-ken-burns-in 30s linear infinite); 
+	} 
+	&.pxl-ken-burns--in-out .pxl-section-bg-ken-burns{
+		@include animation(pxl-ken-burns-in-out 60s linear infinite); 
+	} 
+}
 .pxl-split-text{
 	font-kerning: none;
 	.split-line{
