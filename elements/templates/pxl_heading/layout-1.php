@@ -92,7 +92,7 @@ extract($settings);
 
 ?>
 <div <?php pxl_print_html($widget->get_render_attribute_string( 'wrap-heading' )); ?>>
-    <div class="pxl-heading-inner <?php echo esc_attr($text_align); ?>">
+    <div class="pxl-heading-inner">
         <?php if(!empty($sub_title)) : ?>
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'sub-title' )); ?>>
                 <span <?php pxl_print_html($widget->get_render_attribute_string( 'sub-title-text' )); ?>><?php pxl_print_html(nl2br($sub_title)); ?></span>
