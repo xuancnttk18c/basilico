@@ -17,11 +17,18 @@
                 return '<span class="pxl-swiper-pagination-bullet ' + settings['dots_style'] + '"></span>';
             },
         });
-        $(".pxl-tabs-carousel").on("beforeChange", function (){
-            $(".content").find('.pxl-animate').each(function(){
+        $(".pxl-tabs-carousel").on("beforeChange", function (event, slick, currentSlide, nextSlide){
+            $(currentSlide).siblings().find('.pxl-animate').each(function(){
                 var data = $(this).data('settings');
                 $(this).removeClass('animated '+data['animation']).addClass('pxl-invisible');
             });
+            $(currentSlide).find('.pxl-animate').each(function(){
+                var data = $(this).data('settings');
+                var cur_anm = $(this);
+                setTimeout(function () {  
+                    $(cur_anm).removeClass('pxl-invisible').addClass('animated ' + data['animation']);
+                }, data['animation_delay']);
+            })
         });
     };
     // Make sure you run this code under Elementor.
