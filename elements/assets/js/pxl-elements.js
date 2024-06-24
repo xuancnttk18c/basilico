@@ -3,8 +3,20 @@
      * @param $scope The Widget wrapper element as a jQuery element
      * @param $ The jQuery alias
      */
-
-    var Pxl_Global_Animation_Handler = function( $scope, $ ) {
+    function pxl_section_start_render(){
+        var _elementor = typeof elementor != 'undefined' ? elementor : elementorFrontend;
+        _elementor.hooks.addFilter( 'pxl_section_start_render', function( html, settings, el ) {
+            if(typeof settings.pxl_parallax_bg_img != 'undefined' && settings.pxl_parallax_bg_img.url != ''){
+                html += '<div class="pxl-section-bg-parallax"></div>';
+            }
+            if(typeof settings.pxl_bg_ken_burns_bg_img != 'undefined' && settings.pxl_bg_ken_burns_bg_img.url != ''){
+                html += '<div class="pxl-section-bg-ken-burns"></div>';
+            }
+              
+            return html;
+        } );
+    }  
+    function pxl_animation_handler( $scope ) {
         elementorFrontend.waypoint($scope.find('.pxl-animate'), function () {
             var $animate_el = $(this),
                 data = $animate_el.data('settings');
@@ -18,12 +30,36 @@
             $(this).addClass('pxl-animated');
         });
         elementorFrontend.waypoint($scope.find('.pxl-image-wg.draw-from-top'), function () {
-            $(this).addClass('pxl-animated');
+            var $el = $(this),
+                data = $el.data('settings');
+            if(typeof data != 'undefined'){
+                setTimeout(function () {
+                    $el.addClass('pxl-animated');
+                }, data['animation_delay']);
+            }else{
+                $el.addClass('pxl-animated');
+            }
         });
         elementorFrontend.waypoint($scope.find('.pxl-image-wg.draw-from-left'), function () {
             $(this).addClass('pxl-animated');
         });
-    };
+        elementorFrontend.waypoint($scope.find('.pxl-image-wg.draw-from-right'), function () {
+            $(this).addClass('pxl-animated');
+        });
+        elementorFrontend.waypoint($scope.find('.pxl-image-wg.move-from-left'), function () {
+            $(this).addClass('pxl-animated');
+        });
+        elementorFrontend.waypoint($scope.find('.pxl-image-wg.move-from-right'), function () {
+            $(this).addClass('pxl-animated');
+        }); 
+        elementorFrontend.waypoint($scope.find('.pxl-image-wg.skew-in'), function () {
+            $(this).addClass('pxl-animated');
+        });
+        elementorFrontend.waypoint($scope.find('.pxl-image-wg.skew-in-right'), function () {
+            $(this).addClass('pxl-animated');
+        });
+
+    }
     function pxlMouseDirection(){
         $('.pxl-grid-direction .item-direction').each(function () {
             $(this).on('mouseenter',function(ev){
@@ -120,7 +156,6 @@
             rotate_perspective: 1000
         });
     }
-
     function pxl_split_text($scope){
           
         var st = $scope.find(".pxl-split-text");
@@ -240,7 +275,6 @@
             }
         });
     }
-
     function pxl_split_text_hover(){
         var st = $(document).find(".pxl-split-text-only-hover");
  
@@ -351,7 +385,11 @@
 
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/global', Pxl_Global_Animation_Handler );
+        pxl_section_start_render();
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/section', function( $scope ) {
+            pxl_animation_handler($scope);
+        } );
+        
         pxlMouseDirection();
         pxlParticles();
         pxl_parallax_bg();
@@ -363,10 +401,11 @@
             });
         } );
         elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_button.default', function( $scope ) {
+
             pxl_split_text($scope);
         } );
         setTimeout(function () { 
             pxl_split_text_hover();
-        }, 500)
+        }, 500);
     } );
 } )( jQuery );
