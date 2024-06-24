@@ -45,6 +45,11 @@
         basilico_canvas_dropdown_mini_cart();
         basilico_mini_cart_body_caculate_height();
         basilico_update_cart_quantity();
+
+        $('.btn').each(function() {
+            if (!$(this).children('.pxl-button-bg').length > 0)
+                $(this).append('<span class="pxl-button-bg"></span>')
+        });
     });
     $(window).on('load', function () {
         setTimeout(function() {
@@ -66,10 +71,6 @@
                 observer.observe(document.querySelector('.animation'));
             }
         }, 3000);
-        $('.btn').each(function() {
-            if (!$(this).children('.pxl-button-bg').length > 0)
-                $(this).append('<span class="pxl-button-bg"></span>')
-        });
     });
     $(window).on('scroll', function () {
         scroll_top = $(window).scrollTop();
