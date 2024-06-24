@@ -44,7 +44,7 @@
     overflow: hidden;
     @include box-shadow(none);
     @include transition(all 250ms linear 0s);
-    .pxl-button-bg {
+    &:before {
         z-index: 1;
     }
     .pxl-button-icon {
@@ -62,7 +62,7 @@
     }
     &.btn-default {
         border: 1px solid $secondary_color;
-        .pxl-button-bg {            
+        &:before {
             content: '';
             position: absolute;
             left: -1px;
@@ -94,7 +94,8 @@
         overflow: visible;
         transition: all 0.3s ease;
         margin-bottom: 8px;
-        .pxl-button-bg {
+        &:before {
+            content: '';
             position: absolute;
             left: -1px;
             right: -1px;
@@ -109,12 +110,12 @@
             color: $secondary_color;
         }
         &.hover-bg-secondary {
-            .pxl-button-bg {
+            &:before {
                 background-color: $secondary_color; 
             }
         }
         &:after {
-            content: "";
+            content: '';
             position: absolute;
             left: -1px;
             right: -1px;
@@ -127,7 +128,7 @@
         }
         &:hover {
             transition-delay: 0.25s;
-            .pxl-button-bg {
+            &:before {
                 height: calc(100% + 2px);
                 transition-delay: 0.15s;
             }
@@ -150,7 +151,8 @@
         .pxl-button-icon {
             color: $secondary_color;
         }
-        .pxl-button-bg {
+        &:before {
+            content: '';
             position: absolute;
             left: -1px;
             right: -1px;
@@ -175,7 +177,7 @@
         &:hover {
             color: #fff !important;
             transition-delay: 0.25s;
-            .pxl-button-bg {
+            &:before {
                 height: calc(100% + 2px);
                 transition-delay: 0.15s;
             }
@@ -191,7 +193,7 @@
             color: $primary_color;
             &:hover {
                 color: $secondary_color !important;
-                .pxl-button-bg {
+                &:before {
                     background-color: #fff;
                 }
             }
@@ -208,7 +210,8 @@
         .pxl-button-icon {
             color: $heading_color;
         }
-        .pxl-button-bg {
+        &:before {
+            content: '';
             position: absolute;
             background-color: $primary_color;
             top: auto;
@@ -234,7 +237,7 @@
         &:hover {
             border: 1px solid $primary_color;
             transition-delay: 0.25s;
-            .pxl-button-bg {
+            &:before {
                 height: 101%;
                 transition-delay: 0.15s;
             }
@@ -249,7 +252,8 @@
     &.btn-additional-1 {
         background-color: $primary_color;
         border-color: $primary_color;
-        .pxl-button-bg {
+        &:before {
+            content: '';
             position: absolute;
             left: 0;
             bottom: 0;
@@ -263,7 +267,7 @@
         &:hover {
             color: $secondary_color;
             transition-delay: 0.15s;
-            .pxl-button-bg {
+            &:before {
                 @include transform(scale(1));
             }
         }
@@ -271,7 +275,8 @@
     &.btn-additional-2 {
         background-color: transparent;
         border-color: #fff;
-        .pxl-button-bg {
+        &:before {
+            content: '';
             position: absolute;
             left: 0;
             bottom: 0;
@@ -299,7 +304,8 @@
         .pxl-button-icon {
             color: $heading_color;
         }
-        .pxl-button-bg {
+        &:before {
+            content: '';
             position: absolute;
             z-index: 0;
             left: 0;
@@ -327,7 +333,7 @@
         }
         &:hover {
             transition-delay: 0.25s;
-            .pxl-button-bg {
+            &:before {
                 transition-delay: 0.15s;
                 @include transform(scale(1));
             }
@@ -348,7 +354,8 @@
         .pxl-button-icon {
             color: $heading_color;
         }
-        .pxl-button-bg {
+        &:before {
+            content: '';
             @include transform(scale(0));
             height: 100%;
             background-color: $secondary_color;
@@ -371,7 +378,7 @@
         &:hover {
             transition-delay: 0.25s;
             color: #fff;
-            .pxl-button-bg {
+            &:before {
                 transition-delay: 0.15s;
                 @include transform(scale(1));
             }

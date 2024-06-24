@@ -33,6 +33,9 @@ $html_id = pxl_get_element_id($settings);
     <a <?php pxl_print_html($widget->get_render_attribute_string( 'button' )); ?>>
         <?php
 		$widget->add_inline_editing_attributes( 'text', 'none' ); ?>
+        <?php if ($btn_style == esc_attr('btn-additional-7')) : ?>
+        <span class="pxl-button-bg"></span>
+        <?php endif; ?>
         <span class="pxl-button-text"><?php echo esc_html($settings['text']); ?></span>
         <?php 
         if ( $settings['btn_icon'] ) 
