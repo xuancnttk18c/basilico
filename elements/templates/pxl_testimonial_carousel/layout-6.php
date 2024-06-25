@@ -133,8 +133,8 @@ $widget->add_render_attribute( 'carousel', [
         ];
         $data_thumb_settings = wp_json_encode($thumb_opts);
         ?>
-        <div class="d-flex">
-            <div class="pxl-swiper-thumbs-wrap">
+        <div class="pxl-swiper-slider-thumbs d-flex">
+            <div class="pxl-swiper-slider-inner pxl-carousel-inner">
                 <div class="pxl-swiper-thumbs overflow-hidden" data-settings="<?php echo esc_attr($data_thumb_settings) ?>">
                     <div class="pxl-thumbs-wrapper swiper-wrapper ">
                         <?php
@@ -152,7 +152,7 @@ $widget->add_render_attribute( 'carousel', [
                                 $thumbnail = $img['thumbnail'];
                             }
                             ?>
-                            <div class="thumb-item swiper-slide">
+                            <div class="pxl-swiper-slide thumb-item swiper-slide">
                                 <div class="thumbs-wrap">
                                     <div class="item-wrap">
                                         <?php if(!empty($thumbnail)) :?>
