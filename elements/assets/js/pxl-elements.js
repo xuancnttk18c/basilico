@@ -156,6 +156,70 @@
             rotate_perspective: 1000
         });
     }
+
+    function pxl_parallax_effect(){ 
+        if( $(document).find('.pxl-parallax-effect.mouse-move').length > 0 ){
+
+            setTimeout(function(){
+                $('.pxl-parallax-effect.mouse-move').each(function(index, el) {
+                    var $this = $(this);
+                    var $bound = 'undefined'; 
+                    
+                    if( $this.closest('.mouse-move-bound').length > 0 ){
+                        $bound = $this.closest('.mouse-move-bound');
+                    }
+                    if ( $(this).hasClass('bound-section') ){
+                        $bound = $this.closest('.elementor-section');
+                    }
+                    if ( $(this).hasClass('bound-column') ){
+                        $bound = $this.closest('.elementor-column');
+                    }
+                    if ( $(this).hasClass('mouse-move-scope') ){
+                        $bound = $this.parents('.mouse-move-scope');
+                        if( $bound.length <= 0 )
+                            $bound = $this;
+                    }
+
+                    if( $bound != 'undefined' && $bound.length > 0 )
+                        pxl_parallax_effect_mousemove($this, $bound);
+                });
+            }, 600);
+        }
+    }
+    function pxl_parallax_effect_mousemove($this, $bound){  
+        
+        var rect = $bound[0].getBoundingClientRect();
+         
+        var mouse = {x: 0, y: 0, moved: false};
+       
+        $bound.on("mouseenter", function() { 
+            mouse.moved = true;  
+        }); 
+        $bound.on("mouseleave", function() { 
+            mouse.moved = false;
+            gsap.to($this[0], {
+                duration: 0.5,
+                x: 0,
+                y: 0,
+            });  
+        });   
+
+        $bound.mousemove(function(e) {
+            mouse.moved = true;
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+            gsap.to($this[0], {
+                duration: 0.5,
+                x: (mouse.x - rect.width / 2) / rect.width * -100,
+                y: (mouse.y - rect.height / 2) / rect.height * -100
+            });
+        });
+          
+        $(window).on('resize scroll', function(){
+            rect = $bound[0].getBoundingClientRect();
+        })
+    }
+
     function pxl_split_text($scope){
           
         var st = $scope.find(".pxl-split-text");
@@ -275,6 +339,7 @@
             }
         });
     }
+
     function pxl_split_text_hover(){
         var st = $(document).find(".pxl-split-text-only-hover");
  
@@ -393,6 +458,7 @@
         pxlMouseDirection();
         pxlParticles();
         pxl_parallax_bg();
+        pxl_parallax_effect();
 
         elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_heading.default', function( $scope ) {
             pxl_split_text($scope);
