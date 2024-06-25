@@ -614,6 +614,26 @@
     }
 }
 
+@-webkit-keyframes pxlFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pxlFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 @-webkit-keyframes pxlFadeInUp {
     from {
         opacity: 0;
