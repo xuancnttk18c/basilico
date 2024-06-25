@@ -86,6 +86,19 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
     );
 
     $element->add_control(
+        'pxl_section_border_animated',
+        [
+            'label' => esc_html__('Border Animated', 'carmelina'),
+            'type' => \Elementor\Controls_Manager::SWITCHER,
+            'label_on' => esc_html__( 'Yes', 'carmelina' ),
+            'label_off' => esc_html__( 'No', 'carmelina' ),
+            'return_value' => 'yes',
+            'default' => 'no',
+            'separator' => 'after',
+        ]
+    );
+
+    $element->add_control(
         'pxl_parallax_bg_img',
         [
             'label' => esc_html__( 'Parallax Background Image', 'basilico' ),
@@ -204,7 +217,6 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
         [
             'label' => esc_html__( 'Background Size', 'basilico' ),
             'type'         => \Elementor\Controls_Manager::SELECT,
-            //'hide_in_inner' => true,
             'options'      => array(
                 ''              => esc_html__( 'Default', 'basilico' ),
                 'auto' => esc_html__( 'Auto', 'basilico' ),
@@ -226,7 +238,6 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
         [
             'label' => esc_html__( 'Background Width', 'basilico' ),
             'type' => \Elementor\Controls_Manager::SLIDER,  
-            //'hide_in_inner' => true,
             'size_units' => [ 'px', 'em', '%', 'vw' ],
             'range' => [
                 'px' => [
