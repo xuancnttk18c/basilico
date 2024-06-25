@@ -100,4 +100,19 @@ $spacers: (
 	}
 }
 
-
+.pxl-border-anm.bw-no{
+    border-width: 0;
+}
+.pxl-border-anm.bw-yes{
+    border-width: var(--bd-width);
+}
+@each $breakpoint, $max_width in $screen_breakpoints {
+    @media (max-width: $max_width){
+        .pxl-border-anm.bw-#{$breakpoint}-no{
+            border-width: 0;
+        }
+        .pxl-border-anm.bw-#{$breakpoint}-yes{
+            border-width: var(--bd-width);
+        }
+    }
+} 

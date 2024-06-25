@@ -1238,6 +1238,18 @@
 	}
 }
 
+.elementor-section.pxl-border-section-anm{
+    border-width: 0 !important;
+}
+.elementor-column.pxl-border-column-anm > .elementor-element-populated{
+    border-width: 0 !important;
+}
+.elementor-element.pxl-border-wg-anm > .elementor-widget-container{
+    border-width: 0 !important;
+    position: relative;
+}
+
+
 .pxl-border-animated{
 	.pxl-border-anm{
 		position: absolute;
@@ -1270,7 +1282,7 @@
 	&.num-3 .pxl-border-anm,
 	&.num-4 .pxl-border-anm{
 		&.br,
-		&.bb{
+		&.bb {
 			transition-delay: 1s;
 		}
 	}
