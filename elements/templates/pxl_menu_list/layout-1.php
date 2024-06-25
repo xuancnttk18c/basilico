@@ -35,16 +35,14 @@ $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : 
             $increase = $key + 1;
             $data_settings = '';
             if (!empty($item_animation)) {
-                $item_animation =  json_encode([
+                $data_animation =  json_encode([
                     'animation'      => $item_animation,
                     'animation_delay' => ((float)$item_animation_delay * $increase)
                 ]);
-                $data_settings = 'data-settings="' . esc_attr($item_animation) . '"';
+                $data_settings = 'data-settings="' . esc_attr($data_animation) . '"';
             }
-
             ?>
             <div class="pxl-menu-item <?php echo esc_attr($animate_cls); ?>" <?php pxl_print_html($data_settings); ?>>
-                <?php var_dump($data_settings); ?>
                 <?php if ($value['tag_1'] === 'yes' || $value['tag_2'] === 'yes') : ?>
                     <div class="custom-tags d-flex">
                         <?php if ($value['tag_1'] === 'yes' && !empty($value['tag_1_text'])) : ?>
