@@ -153,6 +153,10 @@ pxl_add_custom_widget(
                             ),
                             'title_field' => '{{{ title }}}',
                         ),
+                        basilico_elementor_animation_opts([
+                            'name'   => 'item',
+                            'label' => esc_html__('Item', 'basilico'),
+                        ])
                     ),
                 ),
                 array(
