@@ -1,9 +1,7 @@
 <?php
 
 add_action( 'elementor/element/section/section_structure/after_section_end', 'basilico_add_custom_section_controls' );
-add_action( 'elementor/element/column/layout/after_section_end', 'basilico_add_custom_columns_controls' );
 function basilico_add_custom_section_controls( \Elementor\Element_Base $element) {
-
     $element->start_controls_section(
         'section_pxl',
         [
@@ -88,10 +86,10 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
     $element->add_control(
         'pxl_section_border_animated',
         [
-            'label' => esc_html__('Border Animated', 'carmelina'),
+            'label' => esc_html__('Border Animated', 'basilico'),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => esc_html__( 'Yes', 'carmelina' ),
-            'label_off' => esc_html__( 'No', 'carmelina' ),
+            'label_on' => esc_html__( 'Yes', 'basilico' ),
+            'label_off' => esc_html__( 'No', 'basilico' ),
             'return_value' => 'yes',
             'default' => 'no',
             'separator' => 'after',
@@ -566,8 +564,7 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
     $element->end_controls_section();
 };
 
-
-
+add_action( 'elementor/element/column/layout/after_section_end', 'basilico_add_custom_columns_controls' );
 function basilico_add_custom_columns_controls( \Elementor\Element_Base $element) {
     $element->start_controls_section(
         'columns_pxl',
@@ -591,6 +588,17 @@ function basilico_add_custom_columns_controls( \Elementor\Element_Base $element)
             'prefix_class' => 'pxl-column-element-'
         ]
     );
+    $element->add_control(
+        'pxl_border_animated',
+        [
+            'label' => esc_html__('Border Animated', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SWITCHER,
+            'label_on' => esc_html__( 'Yes', 'basilico' ),
+            'label_off' => esc_html__( 'No', 'basilico' ),
+            'return_value' => 'yes',
+            'default' => 'no',
+        ]
+    ); 
 
     $element->end_controls_section();
 }
@@ -631,6 +639,43 @@ function basilico_custom_el_attributes($el){
         }
         if ( isset( $settings['pxl_header_mobile_type'] ) && !empty($settings['pxl_header_mobile_type'] ) ) {
             $el->add_render_attribute( '_wrapper', 'class', 'pxl-header-mobile-'.$settings['pxl_header_mobile_type']);
+        }
+        if ( isset( $settings['pxl_section_border_animated'] ) && $settings['pxl_section_border_animated'] == 'yes'  ) {
+            $el->add_render_attribute( '_wrapper', 'class', 'pxl-border-section-anm');
+        }
+    }
+    if( 'column' == $el->get_name() ) {
+        if ( isset( $settings['pxl_border_animated'] ) && $settings['pxl_border_animated'] == 'yes'  ) {
+            $el->add_render_attribute( '_wrapper', 'class', 'pxl-border-column-anm');
+        }
+        if(!empty($settings['pxl_column_parallax']) && !empty($settings['pxl_column_parallax_value'])){
+            $parallax_settings = json_encode([
+                $settings['pxl_column_parallax'] => $settings['pxl_column_parallax_value']
+            ]);
+            $el->add_render_attribute( '_widget_wrapper', 'data-parallax', $parallax_settings );
+        }
+    }
+    if( 'image' == $el->get_name() ) {
+        if (strpos($settings['_css_classes'], 'parallax-') !== false) {
+            $parl_arg = explode('--', $settings['_css_classes']); //parallax--y_50 , parallax--x_-50
+            
+            $parl_arg1 = explode('_', $parl_arg[1]);  
+           
+            $data_parallax = json_encode([
+                $parl_arg1[0] => $parl_arg1[1]
+            ]); 
+            $el->add_render_attribute( '_wrapper', 'data-parallax', esc_attr($data_parallax));
+        } 
+    }
+
+    $_animation = ! empty( $settings['_animation'] );
+    $animation = ! empty( $settings['animation'] );
+    $has_animation = $_animation && 'none' !== $settings['_animation'] || $animation && 'none' !== $settings['animation'];
+
+    if ( $has_animation ) {
+        $is_static_render_mode = \Elementor\Plugin::$instance->frontend->is_static_render_mode();
+        if ( ! $is_static_render_mode ) {
+            $el->add_render_attribute( '_wrapper', 'class', 'pxl-elementor-animate' );
         }
     }
 }
@@ -907,24 +952,6 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
     $element->end_controls_section();
 }
 
-//widget render
-add_filter('elementor/widget/before_render_content','basilico_custom_widget_el_before_render', 10, 1 );
-function basilico_custom_widget_el_before_render($el){
-    $settings = $el->get_settings();
-    $effects = [];
-    if(!empty($settings['pxl_parallax_pos_x']['size']) || !empty($settings['pxl_parallax_pos_y']['size'])){
-        $el->add_render_attribute( '_wrapper', 'class', 'pxl-element-parallax' );
-        if(!empty($settings['pxl_parallax_pos_x'])){
-            $effects['x'] = $settings['pxl_parallax_pos_x']['size'].$settings['pxl_parallax_pos_x']['unit'];
-        }
-        if(!empty($settings['pxl_parallax_pos_y'])){
-            $effects['y'] = $settings['pxl_parallax_pos_y']['size'].$settings['pxl_parallax_pos_y']['unit'];
-        }
-        $data_parallax = json_encode($effects);
-        $el->add_render_attribute( '_wrapper', 'data-parallax', $data_parallax );
-    }
-}
-
 add_filter( 'pxl-custom-section/before-render', 'basilico_custom_section_before_render', 10, 3 );
 function basilico_custom_section_before_render($html, $settings, $el){  
     if( isset($settings['pxl_section_border_animated']) && $settings['pxl_section_border_animated'] == 'yes' ){
@@ -953,4 +980,280 @@ function basilico_custom_section_before_render($html, $settings, $el){
     }
     
     return $html;
+}
+
+//columns render
+add_filter( 'pxl-custom-column/before-render', 'basilico_custom_column_before_render', 10, 3 );
+function basilico_custom_column_before_render($html, $settings, $el){  
+    if(!empty($settings['pxl_parallax_col_bg_img']['url'])){
+        if( $settings['pxl_bg_parallax_type'] == 'transform'){
+            $effects = [];
+            if(!empty($settings['pxl_parallax_col_bg_img_effect_x'])){
+                $effects['x'] = (int)$settings['pxl_parallax_col_bg_img_effect_x'];
+            }
+            if(!empty($settings['pxl_parallax_col_bg_img_effect_y'])){
+                $effects['y'] = (int)$settings['pxl_parallax_col_bg_img_effect_y'];
+            }
+            if(!empty($settings['pxl_parallax_col_bg_img_effect_z'])){
+                $effects['z'] = (int)$settings['pxl_parallax_col_bg_img_effect_z'];
+            }
+            if(!empty($settings['pxl_parallax_col_bg_img_effect_rotate_x'])){
+                $effects['rotateX'] = (float)$settings['pxl_parallax_col_bg_img_effect_rotate_x'];
+            }
+            if(!empty($settings['pxl_parallax_col_bg_img_effect_rotate_y'])){
+                $effects['rotateY'] = (float)$settings['pxl_parallax_col_bg_img_effect_rotate_y'];
+            }
+            if(!empty($settings['pxl_parallax_col_bg_img_effect_rotate_z'])){
+                $effects['rotateZ'] = (float)$settings['pxl_parallax_col_bg_img_effect_rotate_z'];
+            } 
+            if(!empty($settings['pxl_parallax_col_bg_img_effect_scale_x'])){
+                $effects['scaleX'] = (float)$settings['pxl_parallax_col_bg_img_effect_scale_x'];
+            }
+            if(!empty($settings['pxl_parallax_col_bg_img_effect_scale_y'])){
+                $effects['scaleY'] = (float)$settings['pxl_parallax_col_bg_img_effect_scale_y'];
+            }
+            if(!empty($settings['pxl_parallax_col_bg_img_effect_scale_z'])){
+                $effects['scaleZ'] = (float)$settings['pxl_parallax_col_bg_img_effect_scale_z'];
+            }
+            if(!empty($settings['pxl_parallax_col_bg_img_effect_scale'])){
+                $effects['scale'] = (float)$settings['pxl_parallax_col_bg_img_effect_scale'];
+            }
+            $data_parallax = json_encode($effects);
+            $html .= '<div class="pxl-column-bg-parallax-outer"><div class="pxl-column-bg-parallax" data-parallax="'.esc_attr($data_parallax).'"></div></div>';
+        }else{
+            $html .= '<div class="pxl-column-bg-parallax parallax-inner"></div>';
+        }
+    } 
+    if( isset($settings['pxl_border_animated']) && $settings['pxl_border_animated'] == 'yes' ){
+        
+        $breakpoints = ['laptop','tablet_extra','tablet','mobile_extra','mobile'];
+ 
+        $unit = $settings['border_width']['unit'];
+        $border_num = 0;
+
+        $bt_width = $settings['border_width']['top'];
+        $br_width = $settings['border_width']['right'];
+        $bb_width = $settings['border_width']['bottom'];
+        $bl_width = $settings['border_width']['left'];
+        foreach ($breakpoints as $v) {
+            if( isset($settings['border_width_'.$v]['top']) && (int)$settings['border_width_'.$v]['top'] > 0 )
+                $bt_width = $settings['border_width_'.$v]['top'];
+            if( isset($settings['border_width_'.$v]['right']) && (int)$settings['border_width_'.$v]['right'] > 0 )
+                $br_width = $settings['border_width_'.$v]['right'];
+            if( isset($settings['border_width_'.$v]['bottom']) && (int)$settings['border_width_'.$v]['bottom'] > 0 )
+                $bb_width = $settings['border_width_'.$v]['bottom'];
+            if( isset($settings['border_width_'.$v]['left']) && (int)$settings['border_width_'.$v]['left'] > 0 )
+                $bl_width = $settings['border_width_'.$v]['left'];
+        }
+
+        $bd_top_style = 'style="--bd-width: '.$bt_width.$unit.' 0 0 0; border-style: '.$settings['border_border'].'; border-color: '.$settings['border_color'].';"';
+        $bd_right_style = 'style="--bd-width: 0 '.$br_width.$unit.' 0 0; border-style: '.$settings['border_border'].'; border-color: '.$settings['border_color'].';"';
+        $bd_bottom_style = 'style="--bd-width: 0 0 '.$bb_width.$unit.' 0; border-style: '.$settings['border_border'].'; border-color: '.$settings['border_color'].';"';
+        $bd_left_style = 'style="--bd-width: 0 0 0 '.$bl_width.$unit.'; border-style: '.$settings['border_border'].'; border-color: '.$settings['border_color'].';"';
+  
+         
+        $bd_top_w = $bd_right_w = $bd_bottom_w = $bd_left_w = '';
+
+        if( isset($settings['border_width']['top'])){
+            if( $settings['border_width']['top'] == '0' )
+                $bd_top_w.= ' bw-no';
+            if( (int)$settings['border_width']['top'] > 0 )
+                $bd_top_w.= ' bw-yes';
+        }
+        if( isset($settings['border_width']['right'])){
+            if( $settings['border_width']['right'] == '0' )
+                $bd_right_w.= ' bw-no';
+            if( (int)$settings['border_width']['right'] > 0 )
+                $bd_right_w.= ' bw-yes';
+        }
+        if( isset($settings['border_width']['bottom'])){
+            if( $settings['border_width']['bottom'] == '0' )
+                $bd_bottom_w.= ' bw-no';
+            if( (int)$settings['border_width']['bottom'] > 0 )
+                $bd_bottom_w.= ' bw-yes';
+        }
+        if( isset($settings['border_width']['left'])){
+            if( $settings['border_width']['left'] == '0' )
+                $bd_left_w.= ' bw-no';
+            if( (int)$settings['border_width']['left'] > 0 )
+                $bd_left_w.= ' bw-yes';
+        }    
+ 
+
+        foreach ($breakpoints as $v) {
+
+            if( isset($settings['border_width_'.$v]['top']) ){
+                if( $settings['border_width_'.$v]['top'] == '0' )
+                    $bd_top_w.= ' bw-'.$v.'-no';
+                if( (int)$settings['border_width_'.$v]['top'] > 0 )
+                    $bd_top_w.= ' bw-'.$v.'-yes';
+            }
+
+            if( isset($settings['border_width_'.$v]['right']) ){
+                if( $settings['border_width_'.$v]['right'] == '0' )
+                    $bd_right_w.= ' bw-'.$v.'-no';
+                if( (int)$settings['border_width_'.$v]['right'] > 0 )
+                    $bd_right_w.= ' bw-'.$v.'-yes';
+            }
+ 
+
+            if( isset($settings['border_width_'.$v]['bottom']) ){
+                if( $settings['border_width_'.$v]['bottom'] == '0' )
+                    $bd_bottom_w.= ' bw-'.$v.'-no';
+                if( (int)$settings['border_width_'.$v]['bottom'] > 0 )
+                    $bd_bottom_w.= ' bw-'.$v.'-yes';
+            }
+ 
+            if( isset($settings['border_width_'.$v]['left']) ){
+                if( $settings['border_width_'.$v]['left'] == '0' )
+                    $bd_left_w.= ' bw-'.$v.'-no';
+                if( (int)$settings['border_width_'.$v]['left'] > 0 )
+                    $bd_left_w.= ' bw-'.$v.'-yes';
+            }
+  
+        }
+
+        if( (int)$settings['border_width']['top'] > 0) $border_num++;
+        if( (int)$settings['border_width']['right'] > 0) $border_num++;
+        if( (int)$settings['border_width']['bottom'] > 0) $border_num++;
+        if( (int)$settings['border_width']['left'] > 0) $border_num++;
+
+        $html .= '<div class="pxl-border-animated num-'.$border_num.'">
+        <div class="pxl-border-anm bt w-100 '.$bd_top_w.'" '.$bd_top_style.'></div>
+        <div class="pxl-border-anm br h-100 '.$bd_right_w.'" '.$bd_right_style.'></div>
+        <div class="pxl-border-anm bb w-100 '.$bd_bottom_w.'" '.$bd_bottom_style.'></div>
+        <div class="pxl-border-anm bl h-100 '.$bd_left_w.'" '.$bd_left_style.'></div>
+        </div>';
+    }   
+    return $html;
+}
+
+
+//widget render
+add_filter('elementor/widget/before_render_content','basilico_custom_widget_el_before_render', 10, 1 );
+function basilico_custom_widget_el_before_render($el){
+    $settings = $el->get_settings();
+    $effects = [];
+    if(!empty($settings['pxl_parallax_pos_x']['size']) || !empty($settings['pxl_parallax_pos_y']['size'])){
+        $el->add_render_attribute( '_wrapper', 'class', 'pxl-element-parallax' );
+        if(!empty($settings['pxl_parallax_pos_x'])){
+            $effects['x'] = $settings['pxl_parallax_pos_x']['size'].$settings['pxl_parallax_pos_x']['unit'];
+        }
+        if(!empty($settings['pxl_parallax_pos_y'])){
+            $effects['y'] = $settings['pxl_parallax_pos_y']['size'].$settings['pxl_parallax_pos_y']['unit'];
+        }
+        $data_parallax = json_encode($effects);
+        $el->add_render_attribute( '_wrapper', 'data-parallax', $data_parallax );
+    }
+}
+
+add_filter('elementor/widget/render_content','basilico_custom_widget_el_render_content', 10, 2 );
+function basilico_custom_widget_el_render_content($widget_content, $el){  
+    $settings = $el->get_settings();
+    if( isset($settings['pxl_widget_el_border_animated']) && $settings['pxl_widget_el_border_animated'] == 'yes' ){
+
+        $el->add_render_attribute( '_wrapper', 'class', 'pxl-border-wg-anm');
+
+        $breakpoints = ['laptop','tablet_extra','tablet','mobile_extra','mobile'];
+         
+        $unit = $settings['_border_width']['unit'];
+        $border_num = 0;
+
+        $bt_width = $settings['_border_width']['top'];
+        $br_width = $settings['_border_width']['right'];
+        $bb_width = $settings['_border_width']['bottom'];
+        $bl_width = $settings['_border_width']['left'];
+        foreach ($breakpoints as $v) {
+            if( isset($settings['_border_width_'.$v]['top']) && (int)$settings['_border_width_'.$v]['top'] > 0 )
+                $bt_width = $settings['_border_width_'.$v]['top'];
+            if( isset($settings['_border_width_'.$v]['right']) && (int)$settings['_border_width_'.$v]['right'] > 0 )
+                $br_width = $settings['_border_width_'.$v]['right'];
+            if( isset($settings['_border_width_'.$v]['bottom']) && (int)$settings['_border_width_'.$v]['bottom'] > 0 )
+                $bb_width = $settings['_border_width_'.$v]['bottom'];
+            if( isset($settings['_border_width_'.$v]['left']) && (int)$settings['_border_width_'.$v]['left'] > 0 )
+                $bl_width = $settings['_border_width_'.$v]['left'];
+        }
+
+        $bd_top_style = 'style="--bd-width: '.$bt_width.$unit.' 0 0 0; border-style: '.$settings['_border_border'].'; border-color: '.$settings['_border_color'].';"';
+        $bd_right_style = 'style="--bd-width: 0 '.$br_width.$unit.' 0 0; border-style: '.$settings['_border_border'].'; border-color: '.$settings['_border_color'].';"';
+        $bd_bottom_style = 'style="--bd-width: 0 0 '.$bb_width.$unit.' 0; border-style: '.$settings['_border_border'].'; border-color: '.$settings['_border_color'].';"';
+        $bd_left_style = 'style="--bd-width: 0 0 0 '.$bl_width.$unit.'; border-style: '.$settings['_border_border'].'; border-color: '.$settings['_border_color'].';"';
+  
+         
+        $bd_top_w = $bd_right_w = $bd_bottom_w = $bd_left_w = '';
+
+        if( isset($settings['_border_width']['top'])){
+            if( $settings['_border_width']['top'] == '0' )
+                $bd_top_w.= ' bw-no';
+            if( (int)$settings['_border_width']['top'] > 0 )
+                $bd_top_w.= ' bw-yes';
+        }
+        if( isset($settings['_border_width']['right'])){
+            if( $settings['_border_width']['right'] == '0' )
+                $bd_right_w.= ' bw-no';
+            if( (int)$settings['_border_width']['right'] > 0 )
+                $bd_right_w.= ' bw-yes';
+        }
+        if( isset($settings['_border_width']['bottom'])){
+            if( $settings['_border_width']['bottom'] == '0' )
+                $bd_bottom_w.= ' bw-no';
+            if( (int)$settings['_border_width']['bottom'] > 0 )
+                $bd_bottom_w.= ' bw-yes';
+        }
+        if( isset($settings['_border_width']['left'])){
+            if( $settings['_border_width']['left'] == '0' )
+                $bd_left_w.= ' bw-no';
+            if( (int)$settings['_border_width']['left'] > 0 )
+                $bd_left_w.= ' bw-yes';
+        }    
+ 
+
+        foreach ($breakpoints as $v) {
+
+            if( isset($settings['_border_width_'.$v]['top']) ){
+                if( $settings['_border_width_'.$v]['top'] == '0' )
+                    $bd_top_w.= ' bw-'.$v.'-no';
+                if( (int)$settings['_border_width_'.$v]['top'] > 0 )
+                    $bd_top_w.= ' bw-'.$v.'-yes';
+            }
+
+            if( isset($settings['_border_width_'.$v]['right']) ){
+                if( $settings['_border_width_'.$v]['right'] == '0' )
+                    $bd_right_w.= ' bw-'.$v.'-no';
+                if( (int)$settings['_border_width_'.$v]['right'] > 0 )
+                    $bd_right_w.= ' bw-'.$v.'-yes';
+            }
+ 
+
+            if( isset($settings['_border_width_'.$v]['bottom']) ){
+                if( $settings['_border_width_'.$v]['bottom'] == '0' )
+                    $bd_bottom_w.= ' bw-'.$v.'-no';
+                if( (int)$settings['_border_width_'.$v]['bottom'] > 0 )
+                    $bd_bottom_w.= ' bw-'.$v.'-yes';
+            }
+ 
+            if( isset($settings['_border_width_'.$v]['left']) ){
+                if( $settings['_border_width_'.$v]['left'] == '0' )
+                    $bd_left_w.= ' bw-'.$v.'-no';
+                if( (int)$settings['_border_width_'.$v]['left'] > 0 )
+                    $bd_left_w.= ' bw-'.$v.'-yes';
+            }
+  
+        }
+
+        if( (int)$settings['_border_width']['top'] > 0) $border_num++;
+        if( (int)$settings['_border_width']['right'] > 0) $border_num++;
+        if( (int)$settings['_border_width']['bottom'] > 0) $border_num++;
+        if( (int)$settings['_border_width']['left'] > 0) $border_num++;
+
+        $html = '<div class="pxl-border-animated num-'.$border_num.'">
+        <div class="pxl-border-anm bt w-100 '.$bd_top_w.'" '.$bd_top_style.'></div>
+        <div class="pxl-border-anm br h-100 '.$bd_right_w.'" '.$bd_right_style.'></div>
+        <div class="pxl-border-anm bb w-100 '.$bd_bottom_w.'" '.$bd_bottom_style.'></div>
+        <div class="pxl-border-anm bl h-100 '.$bd_left_w.'" '.$bd_left_style.'></div>
+        </div>';
+        return $html.$widget_content;
+    }else{
+        return $widget_content;
+    }
 }
