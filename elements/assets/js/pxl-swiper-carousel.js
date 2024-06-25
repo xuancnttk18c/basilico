@@ -2,54 +2,42 @@
     // Make sure you run this code under Elementor.
     if( typeof Swiper == 'undefined') return;
     $(window).on("elementor/frontend/init", function () {
-        elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_team_carousel.default",
-            pxl_swiper_handler
-        );
-        elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_menu_carousel.default",
-            pxl_swiper_handler
-        );
-        elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_post_carousel.default",
-            pxl_swiper_handler
-        );
-        elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_testimonial_carousel.default",
-            pxl_swiper_handler
-        );
-        elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_fancy_box_carousel.default",
-            pxl_swiper_handler
-        );
-        elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_banner_carousel.default",
-            pxl_swiper_handler
-        );
-        elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_clients.default",
-            pxl_swiper_handler
-        );
-        elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_history.default",
-            pxl_swiper_handler
-        );
-        elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_video_slider.default",
-            pxl_swiper_handler
-        );
-        elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_carousel_landing.default",
-            pxl_swiper_handler
-        );
-        elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_image_carousel.default",
-            pxl_swiper_handler
-        );
-        elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_product_carousel.default",
-            pxl_swiper_handler
-        );
+        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_team_carousel.default", function($scope) {
+            pxl_swiper_handler($scope);
+        });
+        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_menu_carousel.default", function($scope) {
+            pxl_swiper_handler($scope);
+        });
+        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_post_carousel.default", function($scope) {
+            pxl_swiper_handler($scope);
+        });
+        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_testimonial_carousel.default", function($scope) {
+            pxl_swiper_handler($scope);
+        });
+        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_fancy_box_carousel.default", function($scope) {
+            pxl_swiper_handler($scope);
+        });
+        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_banner_carousel.default", function($scope) {
+            pxl_swiper_handler($scope);
+        });
+        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_clients.default", function($scope) {
+            pxl_swiper_handler($scope);
+        });
+        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_history.default", function($scope) {
+            pxl_swiper_handler($scope);
+        });
+        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_video_slider.default", function($scope) {
+            pxl_swiper_handler($scope);
+        });
+        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_carousel_landing.default", function($scope) {
+            pxl_swiper_handler($scope);
+        });
+        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_image_carousel.default", function($scope) {
+            pxl_swiper_handler($scope);
+        });
+        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_product_carousel.default", function($scope) {
+            pxl_swiper_handler($scope);
+        });
     });
 
     $( document ).ready( function() {
