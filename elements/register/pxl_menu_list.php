@@ -51,112 +51,114 @@ pxl_add_custom_widget(
                     'name' => 'tab_content',
                     'label' => esc_html__( 'Content', 'basilico' ),
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-                    'controls' => array(
+                    'controls' => array_merge(
                         array(
-                            'name' => 'list',
-                            'label' => esc_html__('Items', 'basilico'),
-                            'type' => \Elementor\Controls_Manager::REPEATER,
-                            'controls' => array(
-                                array(
-                                    'name' => 'selected_img',
-                                    'label' => esc_html__('Image', 'basilico' ),
-                                    'type' => \Elementor\Controls_Manager::MEDIA,
-                                    'default' => '',
-                                    'description' => esc_html__('This is the heading', 'basilico' )
+                            array(
+                                'name' => 'list',
+                                'label' => esc_html__('Items', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::REPEATER,
+                                'controls' => array(
+                                    array(
+                                        'name' => 'selected_img',
+                                        'label' => esc_html__('Image', 'basilico' ),
+                                        'type' => \Elementor\Controls_Manager::MEDIA,
+                                        'default' => '',
+                                        'description' => esc_html__('This is the heading', 'basilico' )
+                                    ),
+                                    array(
+                                        'name' => 'title',
+                                        'label' => esc_html__('Title', 'basilico'),
+                                        'type' => \Elementor\Controls_Manager::TEXT,
+                                        'label_block' => true,
+                                        'default' => esc_html__('This is the heading', 'basilico' )
+                                    ),
+                                    array(
+                                        'name' => 'sub_title',
+                                        'label' => esc_html__('Sub Title', 'basilico'),
+                                        'type' => \Elementor\Controls_Manager::TEXT,
+                                        'label_block' => true,
+                                    ),
+                                    array(
+                                        'name' => 'price',
+                                        'label' => esc_html__('Price', 'basilico'),
+                                        'type' => \Elementor\Controls_Manager::TEXT,
+                                        'label_block' => true,
+                                        'default' => esc_html__('$25', 'basilico' )
+                                    ),
+                                    array(
+                                        'name' => 'link',
+                                        'label' => esc_html__('Item Link', 'basilico'),
+                                        'type' => \Elementor\Controls_Manager::URL,
+                                        'label_block' => true,
+                                    ),
+                                    array(
+                                        'name' => 'is_featured',
+                                        'label' => esc_html__('Is Featured?', 'basilico'),
+                                        'type' => \Elementor\Controls_Manager::SWITCHER,
+                                        'return_value' => 'yes',
+                                        'default' => 'no',
+                                        'description' => esc_html__('For Layout 6. Highlight product and show custom tags.', 'basilico')
+                                    ),
+                                    array(
+                                        'name' => 'tag_1',
+                                        'label' => esc_html__('Show Custom Tag 1 (Optional)', 'basilico'),
+                                        'type' => \Elementor\Controls_Manager::SWITCHER,
+                                        'return_value' => 'yes',
+                                        'default' => 'no'
+                                    ),
+                                    array(
+                                        'name' => 'tag_1_text',
+                                        'label' => esc_html__('Custom Tag 1 Text', 'basilico'),
+                                        'type' => \Elementor\Controls_Manager::TEXT,
+                                        'default' => esc_html__('Recommended', 'basilico'),
+                                        'label_block' => true,
+                                        'condition' => [
+                                            'tag_1' => 'yes'
+                                        ]
+                                    ),
+                                    array(
+                                        'name' => 'tag_1_color',
+                                        'label' => esc_html__('Custom Tag 1 Color', 'basilico'),
+                                        'type' => \Elementor\Controls_Manager::COLOR,
+                                        'default' => '#374ccb',
+                                        'condition' => [
+                                            'tag_1' => 'yes'
+                                        ]
+                                    ),
+                                    array(
+                                        'name' => 'tag_2',
+                                        'label' => esc_html__('Show Custom Tag 2 (Optional)', 'basilico'),
+                                        'type' => \Elementor\Controls_Manager::SWITCHER,
+                                        'return_value' => 'yes',    
+                                        'default' => 'no'
+                                    ),
+                                    array(
+                                        'name' => 'tag_2_text',
+                                        'label' => esc_html__('Custom Tag 2 Text', 'basilico'),
+                                        'type' => \Elementor\Controls_Manager::TEXT,
+                                        'default' => esc_html__('Recommended', 'basilico'),
+                                        'label_block' => true,
+                                        'condition' => [
+                                            'tag_2' => 'yes'
+                                        ]
+                                    ),
+                                    array(
+                                        'name' => 'tag_2_color',
+                                        'label' => esc_html__('Custom Tag 2 Color', 'basilico'),
+                                        'type' => \Elementor\Controls_Manager::COLOR,
+                                        'default' => '#8560a8',
+                                        'condition' => [
+                                            'tag_2' => 'yes'
+                                        ]
+                                    ),
                                 ),
-                                array(
-                                    'name' => 'title',
-                                    'label' => esc_html__('Title', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::TEXT,
-                                    'label_block' => true,
-                                    'default' => esc_html__('This is the heading', 'basilico' )
-                                ),
-                                array(
-                                    'name' => 'sub_title',
-                                    'label' => esc_html__('Sub Title', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::TEXT,
-                                    'label_block' => true,
-                                ),
-                                array(
-                                    'name' => 'price',
-                                    'label' => esc_html__('Price', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::TEXT,
-                                    'label_block' => true,
-                                    'default' => esc_html__('$25', 'basilico' )
-                                ),
-                                array(
-                                    'name' => 'link',
-                                    'label' => esc_html__('Item Link', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::URL,
-                                    'label_block' => true,
-                                ),
-                                array(
-                                    'name' => 'is_featured',
-                                    'label' => esc_html__('Is Featured?', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::SWITCHER,
-                                    'return_value' => 'yes',
-                                    'default' => 'no',
-                                    'description' => esc_html__('For Layout 6. Highlight product and show custom tags.', 'basilico')
-                                ),
-                                array(
-                                    'name' => 'tag_1',
-                                    'label' => esc_html__('Show Custom Tag 1 (Optional)', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::SWITCHER,
-                                    'return_value' => 'yes',
-                                    'default' => 'no'
-                                ),
-                                array(
-                                    'name' => 'tag_1_text',
-                                    'label' => esc_html__('Custom Tag 1 Text', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::TEXT,
-                                    'default' => esc_html__('Recommended', 'basilico'),
-                                    'label_block' => true,
-                                    'condition' => [
-                                        'tag_1' => 'yes'
-                                    ]
-                                ),
-                                array(
-                                    'name' => 'tag_1_color',
-                                    'label' => esc_html__('Custom Tag 1 Color', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::COLOR,
-                                    'default' => '#374ccb',
-                                    'condition' => [
-                                        'tag_1' => 'yes'
-                                    ]
-                                ),
-                                array(
-                                    'name' => 'tag_2',
-                                    'label' => esc_html__('Show Custom Tag 2 (Optional)', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::SWITCHER,
-                                    'return_value' => 'yes',    
-                                    'default' => 'no'
-                                ),
-                                array(
-                                    'name' => 'tag_2_text',
-                                    'label' => esc_html__('Custom Tag 2 Text', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::TEXT,
-                                    'default' => esc_html__('Recommended', 'basilico'),
-                                    'label_block' => true,
-                                    'condition' => [
-                                        'tag_2' => 'yes'
-                                    ]
-                                ),
-                                array(
-                                    'name' => 'tag_2_color',
-                                    'label' => esc_html__('Custom Tag 2 Color', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::COLOR,
-                                    'default' => '#8560a8',
-                                    'condition' => [
-                                        'tag_2' => 'yes'
-                                    ]
-                                ),
+                                'title_field' => '{{{ title }}}',
                             ),
-                            'title_field' => '{{{ title }}}',
                         ),
                         basilico_elementor_animation_opts([
                             'name'   => 'item',
                             'label' => esc_html__('Item', 'basilico'),
-                        ])
+                        ]),
                     ),
                 ),
                 array(

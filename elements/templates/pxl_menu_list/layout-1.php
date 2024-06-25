@@ -33,11 +33,11 @@ $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : 
             $link_attributes = $widget->get_render_attribute_string( $link_key );
 
             if (!empty($item_animation)) {
-                $data_animation =  json_encode([
+                $item_animation =  json_encode([
                     'animation'      => $item_animation,
                     'animation_delay' => ((float)$item_animation_delay * $increase)
                 ]);
-                $data_settings = 'data-settings="' . esc_attr($data_animation) . '"';
+                $data_settings = 'data-settings="' . esc_attr($item_animation) . '"';
             }
 
             ?>
