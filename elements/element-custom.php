@@ -122,7 +122,7 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
             ]        
         ]
     );
-     
+    
     $element->add_responsive_control(
         'pxl_parallax_bg_pos_custom_x',
         [
@@ -271,62 +271,62 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
         ]
     );
     $element->start_popover();
-        $element->add_responsive_control(
-            'pxl_parallax_pos_left',
-            [
-                'label' => esc_html__( 'Left', 'basilico' ).' (50px) px,%,vw,auto',
-                'type' => 'text',
-                'default' => '',
-                'selectors' => [
-                    '{{WRAPPER}} .pxl-section-bg-parallax' => 'left: {{VALUE}}',
-                ],
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        );
-        $element->add_responsive_control(
-            'pxl_parallax_pos_top',
-            [
-                'label' => esc_html__( 'Top', 'basilico' ).' (50px) px,%,vw,auto',
-                'type' => 'text',
-                'default' => '',
-                'selectors' => [
-                    '{{WRAPPER}} .pxl-section-bg-parallax' => 'top: {{VALUE}}',
-                ],
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        ); 
-        $element->add_responsive_control(
-            'pxl_parallax_pos_right',
-            [
-                'label' => esc_html__( 'Right', 'basilico' ).' (50px) px,%,vw,auto',
-                'type' => 'text',
-                'default' => '',
-                'selectors' => [
-                    '{{WRAPPER}} .pxl-section-bg-parallax' => 'right: {{VALUE}}',
-                ],
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        );
-        $element->add_responsive_control(
-            'pxl_parallax_pos_bottom',
-            [
-                'label' => esc_html__( 'Bottom', 'basilico' ).' (50px) px,%,vw,auto',
-                'type' => 'text',
-                'default' => '',
-                'selectors' => [
-                    '{{WRAPPER}} .pxl-section-bg-parallax' => 'bottom: {{VALUE}}',
-                ],
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        ); 
+    $element->add_responsive_control(
+        'pxl_parallax_pos_left',
+        [
+            'label' => esc_html__( 'Left', 'basilico' ).' (50px) px,%,vw,auto',
+            'type' => 'text',
+            'default' => '',
+            'selectors' => [
+                '{{WRAPPER}} .pxl-section-bg-parallax' => 'left: {{VALUE}}',
+            ],
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    );
+    $element->add_responsive_control(
+        'pxl_parallax_pos_top',
+        [
+            'label' => esc_html__( 'Top', 'basilico' ).' (50px) px,%,vw,auto',
+            'type' => 'text',
+            'default' => '',
+            'selectors' => [
+                '{{WRAPPER}} .pxl-section-bg-parallax' => 'top: {{VALUE}}',
+            ],
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    ); 
+    $element->add_responsive_control(
+        'pxl_parallax_pos_right',
+        [
+            'label' => esc_html__( 'Right', 'basilico' ).' (50px) px,%,vw,auto',
+            'type' => 'text',
+            'default' => '',
+            'selectors' => [
+                '{{WRAPPER}} .pxl-section-bg-parallax' => 'right: {{VALUE}}',
+            ],
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    );
+    $element->add_responsive_control(
+        'pxl_parallax_pos_bottom',
+        [
+            'label' => esc_html__( 'Bottom', 'basilico' ).' (50px) px,%,vw,auto',
+            'type' => 'text',
+            'default' => '',
+            'selectors' => [
+                '{{WRAPPER}} .pxl-section-bg-parallax' => 'bottom: {{VALUE}}',
+            ],
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    ); 
     $element->end_popover();
 
     $element->add_control(
@@ -343,116 +343,116 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
         ]
     );
     $element->start_popover();
-        $element->add_control(
-            'pxl_parallax_bg_img_effect_x',
-            [
-                'label' => esc_html__( 'TranslateX', 'basilico' ).' (-80)',
-                'type' => 'text',
-                'default' => '',
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        );
-        $element->add_control(
-            'pxl_parallax_bg_img_effect_y',
-            [
-                'label' => esc_html__( 'TranslateY', 'basilico' ).' (-80)',
-                'type' => 'text',
-                'default' => '',
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        );
-        $element->add_control(
-            'pxl_parallax_bg_img_effect_z',
-            [
-                'label' => esc_html__( 'TranslateZ', 'basilico' ).' (-80)',
-                'type' => 'text',
-                'default' => '',
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        );
-        $element->add_control(
-            'pxl_parallax_bg_img_effect_rotate_x',
-            [
-                'label' => esc_html__( 'Rotate X', 'basilico' ).' (30)',
-                'type' => 'text',
-                'default' => '',
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        );
-        $element->add_control(
-            'pxl_parallax_bg_img_effect_rotate_y',
-            [
-                'label' => esc_html__( 'Rotate Y', 'basilico' ).' (30)',
-                'type' => 'text',
-                'default' => '',
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        );
-        $element->add_control(
-            'pxl_parallax_bg_img_effect_rotate_z',
-            [
-                'label' => esc_html__( 'Rotate Z', 'basilico' ).' (30)',
-                'type' => 'text',
-                'default' => '',
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        );
-        $element->add_control(
-            'pxl_parallax_bg_img_effect_scale_x',
-            [
-                'label' => esc_html__( 'Scale X', 'basilico' ).' (1.2)',
-                'type' => 'text',
-                'default' => '',
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        ); 
-        $element->add_control(
-            'pxl_parallax_bg_img_effect_scale_y',
-            [
-                'label' => esc_html__( 'Scale Y', 'basilico' ).' (1.2)',
-                'type' => 'text',
-                'default' => '',
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        );
-        $element->add_control(
-            'pxl_parallax_bg_img_effect_scale_z',
-            [
-                'label' => esc_html__( 'Scale Z', 'basilico' ).' (1.2)',
-                'type' => 'text',
-                'default' => '',
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        );
-        $element->add_control(
-            'pxl_parallax_bg_img_effect_scale',
-            [
-                'label' => esc_html__( 'Scale', 'basilico' ).' (1.2)',
-                'type' => 'text',
-                'default' => '',
-                'condition'     => [
-                    'pxl_parallax_bg_img[url]!' => ''
-                ] 
-            ]
-        );
+    $element->add_control(
+        'pxl_parallax_bg_img_effect_x',
+        [
+            'label' => esc_html__( 'TranslateX', 'basilico' ).' (-80)',
+            'type' => 'text',
+            'default' => '',
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    );
+    $element->add_control(
+        'pxl_parallax_bg_img_effect_y',
+        [
+            'label' => esc_html__( 'TranslateY', 'basilico' ).' (-80)',
+            'type' => 'text',
+            'default' => '',
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    );
+    $element->add_control(
+        'pxl_parallax_bg_img_effect_z',
+        [
+            'label' => esc_html__( 'TranslateZ', 'basilico' ).' (-80)',
+            'type' => 'text',
+            'default' => '',
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    );
+    $element->add_control(
+        'pxl_parallax_bg_img_effect_rotate_x',
+        [
+            'label' => esc_html__( 'Rotate X', 'basilico' ).' (30)',
+            'type' => 'text',
+            'default' => '',
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    );
+    $element->add_control(
+        'pxl_parallax_bg_img_effect_rotate_y',
+        [
+            'label' => esc_html__( 'Rotate Y', 'basilico' ).' (30)',
+            'type' => 'text',
+            'default' => '',
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    );
+    $element->add_control(
+        'pxl_parallax_bg_img_effect_rotate_z',
+        [
+            'label' => esc_html__( 'Rotate Z', 'basilico' ).' (30)',
+            'type' => 'text',
+            'default' => '',
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    );
+    $element->add_control(
+        'pxl_parallax_bg_img_effect_scale_x',
+        [
+            'label' => esc_html__( 'Scale X', 'basilico' ).' (1.2)',
+            'type' => 'text',
+            'default' => '',
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    ); 
+    $element->add_control(
+        'pxl_parallax_bg_img_effect_scale_y',
+        [
+            'label' => esc_html__( 'Scale Y', 'basilico' ).' (1.2)',
+            'type' => 'text',
+            'default' => '',
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    );
+    $element->add_control(
+        'pxl_parallax_bg_img_effect_scale_z',
+        [
+            'label' => esc_html__( 'Scale Z', 'basilico' ).' (1.2)',
+            'type' => 'text',
+            'default' => '',
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    );
+    $element->add_control(
+        'pxl_parallax_bg_img_effect_scale',
+        [
+            'label' => esc_html__( 'Scale', 'basilico' ).' (1.2)',
+            'type' => 'text',
+            'default' => '',
+            'condition'     => [
+                'pxl_parallax_bg_img[url]!' => ''
+            ] 
+        ]
+    );
     $element->end_popover(); 
     
     $element->add_responsive_control(
@@ -493,7 +493,7 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
             ] 
         ]
     );
-      
+    
     $element->add_control(
         'pxl_section_static_position',
         [
@@ -523,7 +523,7 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
     $element->add_control(
         'pxl_bg_ken_burns_bg_img',
         [
-            'label' => esc_html__( 'Ken Burns Background Image', 'carmelina' ),
+            'label' => esc_html__( 'Ken Burns Background Image', 'basilico' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'hide_in_inner' => true,
             'selectors' => [
@@ -534,14 +534,14 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
     $element->add_control(
         'pxl_bg_ken_burns_effect',
         [
-            'label' => esc_html__('Ken Burns Effect', 'carmelina'),
+            'label' => esc_html__('Ken Burns Effect', 'basilico'),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => '',
             'options' => [
-                '' => esc_html__( 'None', 'carmelina' ),
-                'in' => esc_html__( 'In', 'carmelina' ),
-                'out' => esc_html__( 'Out', 'carmelina' ),
-                'in-out' => esc_html__( 'In Out', 'carmelina' ),
+                '' => esc_html__( 'None', 'basilico' ),
+                'in' => esc_html__( 'In', 'basilico' ),
+                'out' => esc_html__( 'Out', 'basilico' ),
+                'in-out' => esc_html__( 'In Out', 'basilico' ),
             ],
             'prefix_class' => 'pxl-section-ken-burns pxl-ken-burns--', 
             'hide_in_inner' => true,
@@ -624,8 +624,8 @@ function basilico_custom_el_attributes($el){
     }
 }
 
-add_filter( 'pxl_section_start_render', 'carmelina_custom_section_start_render', 10, 3 );
-function carmelina_custom_section_start_render($html, $settings, $el){  
+add_filter( 'pxl_section_start_render', 'basilico_custom_section_start_render', 10, 3 );
+function basilico_custom_section_start_render($html, $settings, $el){  
     if(!empty($settings['pxl_parallax_bg_img']['url'])){
         $effects = [];
         if(!empty($settings['pxl_parallax_bg_img_effect_x'])){
@@ -671,11 +671,11 @@ function carmelina_custom_section_start_render($html, $settings, $el){
     if(!empty($settings['pxl_divider_bot_img']['url'])){
         $html .= '<div class="pxl-section-divider-bot-img"></div>';
     }
- 
+    
     if(!empty($settings['pxl_section_shape_anm']) && count($settings['pxl_section_shape_anm']) > 0){
         foreach ($settings['pxl_section_shape_anm'] as $v) {
             $html .= '<span class="pxl-section-shape-item elementor-repeater-item-'.$v['_id'].' '.$v['shape_animate'].'">
-                <img src="'.$v['shape_img']['url'].'" alt="'.$v['shape_title'].'"/>
+            <img src="'.$v['shape_img']['url'].'" alt="'.$v['shape_title'].'"/>
             </span>';
         }
     } 
@@ -693,69 +693,206 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
             'tab' => \Elementor\Controls_Manager::TAB_ADVANCED,
         ]
     );
+    $element->start_popover();
     $element->add_responsive_control(
-        'pxl_parallax_pos_x',
+        'pxl_widget_el_position',
         [
-            'label' => esc_html__( 'X Position', 'basilico' ),
-            'type' => \Elementor\Controls_Manager::SLIDER,
-            //'hide_in_inner' => true,
-            'size_units' => [ 'px', 'em', '%', 'vw' ],
-            'default' => [
-                'unit' => 'px',
-                'size' => 0,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => -800,
-                    'max' => 800,
-                ],
-                'em' => [
-                    'min' => -100,
-                    'max' => 100,
-                ],
-                '%' => [
-                    'min' => -100,
-                    'max' => 100,
-                ],
-                'vw' => [
-                    'min' => -100,
-                    'max' => 100,
-                ],
+            'label' => esc_html__( 'Position', 'basilico' ),
+            'type'         => \Elementor\Controls_Manager::SELECT,
+            'options'      => array(
+                ''         => esc_html__( 'Default', 'basilico' ),
+                'absolute' => esc_html__( 'Absolute', 'basilico' ),
+                'relative' => esc_html__( 'Relative', 'basilico' ),
+                'fixed'    => esc_html__( 'Fixed', 'basilico' ),
+            ),
+            'default'      => '',
+            'selectors' => [
+                '{{WRAPPER}}' => 'position: {{VALUE}};',
             ],
         ]
     );
     $element->add_responsive_control(
-        'pxl_parallax_pos_y',
+        'pxl_widget_el_pos_left',
         [
-            'label' => esc_html__( 'Y Position', 'basilico' ),
-            'type' => \Elementor\Controls_Manager::SLIDER,
-            //'hide_in_inner' => true,
-            'size_units' => [ 'px', 'em', '%', 'vw' ],
-            'default' => [
-                'unit' => 'px',
-                'size' => 0,
+            'label' => esc_html__( 'Left', 'basilico' ).' (50px) px,%,vw,auto',
+            'type' => 'text',
+            'default' => '',
+            'selectors' => [
+                '{{WRAPPER}}' => 'left: {{VALUE}}',
             ],
-            'range' => [
-                'px' => [
-                    'min' => -800,
-                    'max' => 800,
-                ],
-                'em' => [
-                    'min' => -100,
-                    'max' => 100,
-                ],
-                '%' => [
-                    'min' => -100,
-                    'max' => 100,
-                ],
-                'vw' => [
-                    'min' => -100,
-                    'max' => 100,
-                ],
-            ],
+            'condition'     => [
+                'pxl_widget_el_position!' => ''
+            ] 
         ]
     );
+    $element->add_responsive_control(
+        'pxl_widget_el_pos_top',
+        [
+            'label' => esc_html__( 'Top', 'basilico' ).' (50px) px,%,vw,auto',
+            'type' => 'text',
+            'default' => '',
+            'selectors' => [
+                '{{WRAPPER}}' => 'top: {{VALUE}}',
+            ],
+            'condition'     => [
+                'pxl_widget_el_position!' => ''
+            ] 
+        ]
+    ); 
+    $element->add_responsive_control(
+        'pxl_widget_el_pos_right',
+        [
+            'label' => esc_html__( 'Right', 'basilico' ).' (50px) px,%,vw,auto',
+            'type' => 'text',
+            'default' => '',
+            'selectors' => [
+                '{{WRAPPER}}' => 'right: {{VALUE}}',
+            ],
+            'condition'     => [
+                'pxl_widget_el_position!' => ''
+            ] 
+        ]
+    );
+    $element->add_responsive_control(
+        'pxl_widget_el_pos_bottom',
+        [
+            'label' => esc_html__( 'Bottom', 'basilico' ).' (50px) px,%,vw,auto',
+            'type' => 'text',
+            'default' => '',
+            'selectors' => [
+                '{{WRAPPER}}' => 'bottom: {{VALUE}}',
+            ],
+            'condition'     => [
+                'pxl_widget_el_position!' => ''
+            ] 
+        ]
+    ); 
+    $element->end_popover();
 
+    $element->add_responsive_control(
+        'widget_width',
+        [
+            'label' => esc_html__('Widget Width', 'basilico' ),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'control_type' => 'responsive',
+            'default' => [
+                'unit' => '%',
+            ],
+            'tablet_default' => [
+                'unit' => '%',
+            ],
+            'mobile_default' => [
+                'unit' => '%',
+            ],
+            'size_units' => [ '%', 'px', 'vw' ],
+            'range' => [
+                '%' => [
+                    'min' => 1,
+                    'max' => 100,
+                ],
+                'px' => [
+                    'min' => 1,
+                    'max' => 1920,
+                ],
+                'vw' => [
+                    'min' => 1,
+                    'max' => 100,
+                ],
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .elementor-widget-container, {{WRAPPER}} .elementor-widget-container > div' => 'width: {{SIZE}}{{UNIT}};',
+            ]
+        ]
+    );
+    $element->add_responsive_control(
+        'widget_height',
+        [
+            'label' => esc_html__('Widget Height', 'basilico' ),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'control_type' => 'responsive',
+            'default' => [
+                'unit' => '%',
+            ],
+            'tablet_default' => [
+                'unit' => '%',
+            ],
+            'mobile_default' => [
+                'unit' => '%',
+            ],
+            'size_units' => [ '%', 'px', 'vw' ],
+            'range' => [
+                '%' => [
+                    'min' => 1,
+                    'max' => 100,
+                ],
+                'px' => [
+                    'min' => 1,
+                    'max' => 1000,
+                ],
+                'vh' => [
+                    'min' => 1,
+                    'max' => 100,
+                ],
+            ],
+            'selectors' => [
+                '{{WRAPPER}}, {{WRAPPER}} .elementor-widget-container, {{WRAPPER}} .elementor-widget-container > div' => 'height: {{SIZE}}{{UNIT}};',
+            ]
+        ]
+    );
+    $element->add_control(
+        'pxl_widget_el_border_animated',
+        [
+            'label' => esc_html__('Border Animated', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SWITCHER,
+            'label_on' => esc_html__( 'Yes', 'basilico' ),
+            'label_off' => esc_html__( 'No', 'basilico' ),
+            'return_value' => 'yes',
+            'default' => 'no',
+            'separator' => 'after',
+        ]
+    );
+    $element->add_control(
+        'pxl_widget_el_parallax_effect',
+        [
+            'label' => esc_html__('Pxl Parallax Effect', 'basilico' ),
+            'type' => \Elementor\Controls_Manager::SELECT,
+            'options' => [
+                ''               => esc_html__( 'None', 'basilico' ),
+                'effect mouse-move bound-section' => esc_html__( 'Mouse Move (section hover)', 'basilico' ),
+                'effect mouse-move bound-column' => esc_html__( 'Mouse Move (column hover)', 'basilico' ),
+                'effect mouse-move mouse-move-scope' => esc_html__( 'Mouse Move Scope Class (mouse-move-scope)', 'basilico' ),
+            ],
+            'label_block' => true,
+            'default' => '',
+            'prefix_class' => 'pxl-parallax-'
+        ]
+    );
+    
+    $element->add_responsive_control(
+        'pxl_widget_align',
+        [
+            'label' => esc_html__('Alignment', 'basilico' ),
+            'type' => \Elementor\Controls_Manager::CHOOSE,
+            'options' => [
+                'start' => [
+                    'title' => esc_html__( 'Start', 'basilico' ),
+                    'icon' => 'eicon-text-align-left',
+                ],
+                'center' => [
+                    'title' => esc_html__( 'Center', 'basilico' ),
+                    'icon' => 'eicon-text-align-center',
+                ],
+                'end' => [
+                    'title' => esc_html__( 'End', 'basilico' ),
+                    'icon' => 'eicon-text-align-right',
+                ]
+            ],
+            'default' => '',
+            'selectors' => [
+                '{{WRAPPER}} .elementor-widget-container' => 'display:flex; flex-wrap:wrap; justify-content: {{VALUE}};'
+            ],
+        ]
+    );
     $element->end_controls_section();
 }
 
