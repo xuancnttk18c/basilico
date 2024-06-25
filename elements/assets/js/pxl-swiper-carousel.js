@@ -44,16 +44,15 @@
         $('.pxl-theme-carousel').each(function() {
             pxl_swiper_handler($(this));
         });
-        
         pxl_swiper_handler( $('.product-loop-carousel') );
         pxl_swiper_handler( $('.pxl-product-swiper-slider') );
         pxl_swiper_handler( $('.pxl-product-loop-carousel .pxl-product-carousel') );
          
     });
+
     $(document).ajaxComplete(function(event, xhr, settings){  
         "use strict";
-        pxl_swiper_handler( $('.product-loop-carousel') );
-         
+        pxl_swiper_handler( $('.product-loop-carousel') );     
     });
  
     function pxl_swiper_handler($scope){
@@ -284,6 +283,7 @@
     function getDirection($thumb_node) {
         var windowWidth = window.innerWidth;
         var thumbs_settings = $thumb_node.data().settings;
+        console.log(thumbs_settings);
         var direction = (window.innerWidth <= 991 && typeof thumbs_settings['slide_direction_mobile'] !== 'undefined' ) ? thumbs_settings['slide_direction_mobile'] : thumbs_settings['slide_direction'];
         
         return direction;

@@ -112,9 +112,30 @@ $widget->add_render_attribute( 'carousel', [
                 <div class="pxl-swiper-dots <?php echo esc_attr($pagination_style); ?>"></div>
             <?php endif; ?>
         </div>
+        <?php
+        $thumb_opts = [
+            'slide_direction'               => 'horizontal',
+            'slide_percolumn'               => 1,
+            'slide_mode'                    => 'slide', 
+            'slides_to_show_xxl'            => 1, 
+            'slides_to_show'                => 1, 
+            'slides_to_show_lg'             => 1, 
+            'slides_to_show_md'             => 1, 
+            'slides_to_show_sm'             => 1, 
+            'slides_to_show_xs'             => 1, 
+            'slides_to_scroll'              => 1, 
+            'slides_gutter'                 => 70, 
+            'slides_gutter_md'              => 50, 
+            'arrow'                         => false,
+            'dots'                          => false,
+            'loop'                          => true,
+            'speed'                         => 500,
+        ];
+        $data_thumb_settings = wp_json_encode($thumb_opts);
+        ?>
         <div class="d-flex">
             <div class="pxl-swiper-thumbs-wrap">
-                <div class="pxl-swiper-thumbs overflow-hidden" data-item="5" data-gutter="20">
+                <div class="pxl-swiper-thumbs overflow-hidden" data-settings="<?php echo esc_attr($data_thumb_settings) ?>">
                     <div class="pxl-thumbs-wrapper swiper-wrapper ">
                         <?php
                         $idx = 0;
