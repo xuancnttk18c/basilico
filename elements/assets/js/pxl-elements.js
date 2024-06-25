@@ -26,6 +26,9 @@
                 }, data['animation_delay']);
             }
         });
+        elementorFrontend.waypoint($scope.find('.pxl-border-animated'), function () {
+            $(this).addClass('pxl-animated');
+        });
         elementorFrontend.waypoint($scope.find('.pxl-scroll'), function () {
             $(this).addClass('pxl-animated');
         });
@@ -94,42 +97,6 @@
     $.fn.ctDeriction = function () {
     }
     $('.pxl-grid-direction .item-direction').ctDeriction();
-
-    function pxlParticles(){
-        /* Section Particles */
-        setTimeout(function() {
-            $(".pxl-row-particles").each(function() {
-                particlesJS($(this).attr('id'), {
-                    "particles": {
-                        "number": {
-                            "value": $(this).data('number'),
-                        },
-                        "color": {
-                            "value": $(this).data('color')
-                        },
-                        "shape": {
-                            "type": "circle",
-                        },
-                        "size": {
-                            "value": $(this).data('size'),
-                            "random": $(this).data('size-random'),
-                        },
-                        "line_linked": {
-                            "enable": false,
-                        },
-                        "move": {
-                            "enable": true,
-                            "speed": 2,
-                            "direction": $(this).data('move-direction'),
-                            "random": true,
-                            "out_mode": "out",
-                        }
-                    },
-                    "retina_detect": true
-                });
-            });
-        }, 400);
-    }
 
     function pxl_parallax_bg(){
         $(document).find('.pxl-parallax-background').parallaxBackground({
@@ -456,7 +423,6 @@
         } );
         
         pxlMouseDirection();
-        pxlParticles();
         pxl_parallax_bg();
         pxl_parallax_effect();
 

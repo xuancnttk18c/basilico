@@ -914,126 +914,32 @@ function basilico_custom_widget_el_before_render($el){
     }
 }
 
-// Particles effect
-add_action( 'elementor/element/section/section_structure/after_section_end', 'basilico_add_custom_section_particles' );
-function basilico_add_custom_section_particles( \Elementor\Element_Base $element) {
-    $element->start_controls_section(
-        'section_particles',
-        [
-            'label' => esc_html__( 'Basilico Particles', 'asri' ),
-            'tab' => \Elementor\Controls_Manager::TAB_LAYOUT,
-        ]
-    );
-
-    $element->add_control(
-        'row_particles_display',
-        [
-            'label'   => esc_html__( 'Particles', 'asri' ),
-            'type' => \Elementor\Controls_Manager::SWITCHER,
-            'default' => 'false',
-        ]
-    );
-
-    $element->add_control(
-        'number',
-        [
-            'label' => esc_html__('Number', 'asri'),
-            'type' => \Elementor\Controls_Manager::NUMBER,
-            'default' => 4,
-            'condition' => [
-                'row_particles_display' => ['yes'],
-            ],
-        ]
-    );
-
-    $element->add_control(
-        'size',
-        [
-            'label' => esc_html__('Size', 'asri'),
-            'type' => \Elementor\Controls_Manager::NUMBER,
-            'default' => 3,
-            'condition' => [
-                'row_particles_display' => ['yes'],
-            ],
-        ]
-    );
-
-    $element->add_control(
-        'size_random',
-        [
-            'label' => esc_html__('Size Random', 'asri'),
-            'type' => \Elementor\Controls_Manager::SWITCHER,
-            'default' => 'false',
-            'condition' => [
-                'row_particles_display' => ['yes'],
-            ],
-        ]
-    );
-
-    $element->add_control(
-        'move_direction',
-        [
-            'label'   => esc_html__( 'Move Direction', 'asri' ),
-            'type'    => \Elementor\Controls_Manager::SELECT,
-            'options' => array(
-                'none'        => esc_html__( 'None', 'asri' ),
-                'top'        => esc_html__( 'Top', 'asri' ),
-                'top-right'        => esc_html__( 'Top Right', 'asri' ),
-                'right'        => esc_html__( 'Right', 'asri' ),
-                'bottom-right'        => esc_html__( 'Bottom Right', 'asri' ),
-                'bottom'        => esc_html__( 'Bottom', 'asri' ),
-                'bottom-left'        => esc_html__( 'Bottom Left', 'asri' ),
-                'left'        => esc_html__( 'Left', 'asri' ),
-                'top-left'        => esc_html__( 'Top Left', 'asri' ),
-            ),
-            'default'      => 'none',
-            'condition' => [
-                'row_particles_display' => ['yes'],
-            ],
-        ]
-    );
-    $repeater = new \Elementor\Repeater();
-    $repeater->add_control(
-        'particle_color',
-        [
-            'label' => esc_html__('Color', 'basilico' ),
-            'type' => \Elementor\Controls_Manager::COLOR,
-        ]
-    );
-    $element->add_control(
-        'particle_color_item',
-        [
-            'label' => esc_html__('Color', 'basilico'),
-            'type' => \Elementor\Controls_Manager::REPEATER,
-            'fields' => $repeater->get_controls(),
-            'default' => [],
-            'condition' => [
-                'row_particles_display' => ['yes'],
-            ],
-        ]
-    );
-    $element->end_controls_section();
-};
-
 add_filter( 'pxl-custom-section/before-render', 'basilico_custom_section_before_render', 10, 3 );
-function basilico_custom_section_before_render($html ,$settings, $el) {
-    if(!empty($settings['row_particles_display']) && $settings['row_particles_display'] == 'yes') {
-        wp_enqueue_script('particles-background');
-        $s_random = '';
-        if($settings['size_random'] == 'yes') {
-            $s_random = 'true';
-        } else {
-            $s_random = 'false';
-        }
-        $colors = [];
-        foreach($settings['particle_color_item'] as $values) {
-            $colors[] = $values['particle_color'];
-        }
-        if(empty($colors)) {
-            $colors = ["#b73490","#006b41","#cd3000","#608ecb","#ffb500","#6e4e00","#6b541b","#305686","#00ffb4","#8798ff","#0044c1"];
-        }
-        $el->add_render_attribute( 'color', 'data-color', json_encode($colors) );
-        $html = '<div id="pxl-row-particles-'.uniqid().'" class="pxl-row-particles" data-number="'.$settings['number'].'" data-size="'.$settings['size'].'" data-size-random="'.$s_random.'" data-move-direction="'.$settings['move_direction'].'" '.$el->get_render_attribute_string( 'color' ).'></div>';
-        return $html;
+function basilico_custom_section_before_render($html, $settings, $el){  
+    if( isset($settings['pxl_section_border_animated']) && $settings['pxl_section_border_animated'] == 'yes' ){
+        $unit = $settings['border_width']['unit'];
+        $border_num = 0;
+        $bd_top_style = 'style="border-width: '.$settings['border_width']['top'].$unit.' 0 0 0; border-style: '.$settings['border_border'].'; border-color: '.$settings['border_color'].';"';
+        $bd_right_style = 'style="border-width: 0 '.$settings['border_width']['right'].$unit.' 0 0; border-style: '.$settings['border_border'].'; border-color: '.$settings['border_color'].';"';
+        $bd_bottom_style = 'style="border-width: 0 0 '.$settings['border_width']['bottom'].$unit.' 0; border-style: '.$settings['border_border'].'; border-color: '.$settings['border_color'].';"';
+        $bd_left_style = 'style="border-width: 0 0 0 '.$settings['border_width']['left'].$unit.'; border-style: '.$settings['border_border'].'; border-color: '.$settings['border_color'].';"';
+
+        if ((int)$settings['border_width']['top'] > 0)
+            $border_num++;
+        if ((int)$settings['border_width']['right'] > 0)
+            $border_num++;
+        if ((int)$settings['border_width']['bottom'] > 0)
+            $border_num++;
+        if ((int)$settings['border_width']['left'] > 0)
+            $border_num++;
+        
+        $html = '<div class="pxl-border-animated num-'.$border_num.'">
+        <div class="pxl-border-anm bt w-100" '.$bd_top_style.'></div>
+        <div class="pxl-border-anm br h-100" '.$bd_right_style.'></div>
+        <div class="pxl-border-anm bb w-100" '.$bd_bottom_style.'></div>
+        <div class="pxl-border-anm bl h-100" '.$bd_left_style.'></div>
+        </div>';
     }
+    
+    return $html;
 }

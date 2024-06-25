@@ -32,8 +32,6 @@ if (!function_exists('basilico_elements_scripts')) {
         wp_register_script('basilico-countdown', get_template_directory_uri() . '/elements/assets/js/pxl-countdown.js', [ 'jquery' ], basilico()->get_version(), true);
         wp_register_script('basilico-post-create', get_template_directory_uri() . '/elements/assets/js/pxl-post-create.js', [ 'jquery' ], basilico()->get_version(), true);
         wp_register_script('pxl-tabs-carousel', get_template_directory_uri() . '/elements/assets/js/pxl-tabs-carousel.js', [ 'jquery' ], basilico()->get_version(), true);
-        /* Particles Background Libs */
-        wp_register_script('particles-background', get_template_directory_uri() . '/elements/assets/js/libs/particles.min.js', [ 'jquery' ], basilico()->get_version(), true);
     }
 }
  
