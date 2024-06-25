@@ -274,20 +274,17 @@
                     swiper = new Swiper($this.find('.pxl-swiper-container')[0], carousel_settings);
                 }
             });
-
-        });  
-
-        
+        });
     }
 
     function getDirection($thumb_node) {
         var windowWidth = window.innerWidth;
         var thumbs_settings = $thumb_node.data().settings;
-        console.log(thumbs_settings);
         var direction = (window.innerWidth <= 991 && typeof thumbs_settings['slide_direction_mobile'] !== 'undefined' ) ? thumbs_settings['slide_direction_mobile'] : thumbs_settings['slide_direction'];
         
         return direction;
     }
+
     function pxl_get_thumbs_setting($thumb_node){  
         var thumbs_settings = $thumb_node.data().settings, 
             thumbs_settings_params = {

@@ -115,7 +115,7 @@ $widget->add_render_attribute( 'carousel', [
         <?php
         $thumb_opts = [
             'slide_direction'               => 'horizontal',
-            'slide_percolumn'               => 1,
+            'slide_percolumn'               => 5,
             'slide_mode'                    => 'slide', 
             'slides_to_show_xxl'            => 1, 
             'slides_to_show'                => 1, 
@@ -124,8 +124,8 @@ $widget->add_render_attribute( 'carousel', [
             'slides_to_show_sm'             => 1, 
             'slides_to_show_xs'             => 1, 
             'slides_to_scroll'              => 1, 
-            'slides_gutter'                 => 70, 
-            'slides_gutter_md'              => 50, 
+            'slides_gutter'                 => 20, 
+            'slides_gutter_md'              => 20, 
             'arrow'                         => false,
             'dots'                          => false,
             'loop'                          => true,
