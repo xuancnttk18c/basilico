@@ -3861,7 +3861,7 @@
         .tab-content {
             display: none;
             opacity: 0;
-            @include animation(pxlFadeIn 300ms linear 1 forwards);
+            @include animation(pxlFadeInUp 300ms linear 1 forwards);
             &.active {
                 display: block;
             }
@@ -4003,6 +4003,9 @@
         }
         .tabs-content {
             flex-grow: 1;
+            .tab-content {
+                @include animation(pxlFadeIn 300ms linear 1 forwards);
+            }
         }
         .btn-wrapper {
             margin-top: 30px;
