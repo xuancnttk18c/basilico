@@ -3861,6 +3861,7 @@
         .tab-content {
             display: none;
             opacity: 0;
+            @include animation(pxlFadeInUp 300ms linear 1 forwards);
             &.active {
                 display: block;
             }
@@ -4400,100 +4401,6 @@
             padding: 30px 30px 0px;
             @media (max-width: $xs_max) {
                 padding: 30px 0 0 0;
-            }
-        }
-    }
-}
-
-//* Circle Tab
-.pxl-circle-tabs {
-    position: relative;
-    display: inline-block;
-    .tabs-icon {
-        border: 1px solid $divider_color;
-        @include d-inline-flex();
-        border-radius: 50%;
-        position: relative;
-        width: 480px;
-        height: 480px;
-        .tab-icon {
-            @include d-inline-flex();
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background-color: #fff;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            @include box-shadow(0 0 18px 0 rgba(0, 0, 0, 0.1));
-            width: 100px;
-            height: 100px;
-            transition: all 200ms ease 0s;
-            i,
-            svg {
-                position: relative;
-                z-index: 1;
-                transition: all 100ms ease 0s;
-            }
-            i {
-                font-size: 35px;
-            }
-            svg {
-                height: 42px;
-                width: auto;
-            }
-            @media (max-width: 500px) {
-                i {
-                    font-size: 20px;
-                }
-                svg {
-                    height: 25px;
-                    width: auto;
-                }
-            }
-            &.active {
-                @include gradient-x(0deg, #45a8e3, #2eccbe);
-                i,
-                svg {
-                    filter: brightness(0) invert(1);
-                }
-            }
-        }
-    }
-    .tabs-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 60%;
-        text-align: center;
-        .tab-content {
-            display: none;
-            opacity: 0;
-            @include animation(pxlFadeInUp 300ms linear 1 forwards);
-            &.active {
-                display: block;
-            }
-        }
-        .pxl-divider {
-            width: 56px;
-            height: 2px;
-        }
-        .tab-title {
-            font-size: 22px;
-            margin-bottom: 3px;
-        }
-        .tab-description {
-            margin-top: 10px;
-        }
-        @media (max-width: 500px) {
-            width: 75%;
-            .tab-title {
-                font-size: 16px;
-            }
-            .tab-description {
-                font-size: 13px;
             }
         }
     }
