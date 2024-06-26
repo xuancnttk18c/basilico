@@ -136,40 +136,38 @@ if ( !empty( $item_animation) ) {
                                 </div>
                             <?php endif; ?>
                             <div class="item-content d-flex <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
-                                <div class="content-inner">
-                                    <h4 class="item-title">
-                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
-                                    </h4>
-                                    <?php if ($show_category == 'true') : ?>
-                                        <div class="item-tags">
-                                            <?php the_terms($post->ID, 'pxl-portfolio-tag', '', '&nbsp-&nbsp', ''); ?>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if ($show_divider == 'true') : ?>
-                                        <div class="pxl-divider"></div>
-                                    <?php endif; ?>
-                                    <?php if ($show_excerpt == 'true') : ?>
-                                        <div class="item-excerpt">
-                                            <?php
-                                            if (!empty($post->post_excerpt)) {
-                                                echo wp_trim_words($post->post_excerpt, $num_words, null);
-                                            } else {
-                                                $content = strip_shortcodes($post->post_content);
-                                                $content = apply_filters('the_content', $content);
-                                                $content = str_replace(']]>', ']]&gt;', $content);
-                                                echo wp_trim_words($content, $num_words, null);
-                                            }
-                                            ?>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if ($show_button == 'true') : ?>
-                                        <div class="item-readmore">
-                                            <a class="bt-more-plus" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                                <i class="zmdi zmdi-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    <?php endif; ?>
-                                </div>
+                                <h4 class="item-title">
+                                    <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                                </h4>
+                                <?php if ($show_category == 'true') : ?>
+                                    <div class="item-tags">
+                                        <?php the_terms($post->ID, 'pxl-portfolio-tag', '', '&nbsp-&nbsp', ''); ?>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($show_divider == 'true') : ?>
+                                    <div class="pxl-divider"></div>
+                                <?php endif; ?>
+                                <?php if ($show_excerpt == 'true') : ?>
+                                    <div class="item-excerpt">
+                                        <?php
+                                        if (!empty($post->post_excerpt)) {
+                                            echo wp_trim_words($post->post_excerpt, $num_words, null);
+                                        } else {
+                                            $content = strip_shortcodes($post->post_content);
+                                            $content = apply_filters('the_content', $content);
+                                            $content = str_replace(']]>', ']]&gt;', $content);
+                                            echo wp_trim_words($content, $num_words, null);
+                                        }
+                                        ?>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($show_button == 'true') : ?>
+                                    <div class="item-readmore">
+                                        <a class="bt-more-plus" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                            <i class="zmdi zmdi-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                <?php endif; ?>
                             </div>
                             <div class="item-border"></div>
                         </div>
