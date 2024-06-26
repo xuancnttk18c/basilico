@@ -2899,6 +2899,15 @@
         }
         .item-inner {
             position: relative;
+            .item-border {
+                position: absolute;
+                top: 85px;
+                bottom: 85px;
+                left: 30px;
+                right: 30px;
+                border: 1px solid $primary_color;
+                opacity: 0;
+            }
             .item-content {
                 position: absolute;
                 flex-direction: column;
@@ -2920,15 +2929,11 @@
                 .item-content {
                     clip-path: inset(0 0 0 0);
                 }
+                .item-border {
+                    opacity: 1;
+                    @include transition(all 300ms ease 500ms);
+                }
             }
-        }
-        .item-border {
-            position: absolute;
-            top: 85px;
-            bottom: 85px;
-            left: 30px;
-            right: 30px;
-            border: 1px solid $primary_color;
         }
     }
     &.layout-pxl-portfolio-4 {
