@@ -2903,19 +2903,19 @@
             .item-content {
                 flex-direction: column;
                 align-items: center;
+                position: absolute;
+                top: 60px;
+                left: 60px;
+                right: 60px;
+                bottom: 60px;
+                margin: 0 auto;
+                max-width: 644px;
+                padding: 73px 15px 75px;
+                text-align: center;
+                width: 100%;
+                background-color: $secondary_color;
                 .content-inner {
-                    position: absolute;
-                    top: 60px;
-                    left: 60px;
-                    right: 60px;
-                    bottom: 60px;
-                    margin: 0 auto;
-                    max-width: 644px;
                     //@include transform(translateY(-50%));
-                    padding: 73px 15px 75px;
-                    text-align: center;
-                    width: 100%;
-                    background-color: $secondary_color;
                     // > * {
                     //     opacity: 0;
                     //     transform: translateY(10px);
