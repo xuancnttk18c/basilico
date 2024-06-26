@@ -2902,26 +2902,12 @@
             position: relative;
             .item-content {
                 position: absolute;
-                z-index: 2;
                 top: 50%;
                 left: 60px;
                 right: 60px;
                 margin: 0 auto;
                 max-width: 644px;
-                @include transition(0.5s cubic-bezier(0.63, 0.25, 0.25, 1));
-                //clip-path: inset(100% 0 100% 0);
                 @include transform(translateY(-50%));
-                &:before {
-                    content: '';
-                    position: absolute;
-                    left: -28px;
-                    right: -28px;
-                    top: 26px;
-                    bottom: 26px;
-                    border: 1px solid $primary_color;
-                    z-index: 1;
-                    transition: all 400ms ease 400ms;
-                }
                 .content-inner {
                     position: relative;
                     z-index: 2;
@@ -2961,7 +2947,6 @@
             }
             &:hover {
                 .item-content {
-                    clip-path: inset(0 0 0 0);
                     .content-inner > * {
                         opacity: 1;
                         transform: translateY(0px);
