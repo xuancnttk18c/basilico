@@ -190,15 +190,15 @@
                 },
             };
               
-            if(settings['center_slide'] || settings['center_slide'] == 'true')
+            if(settings['center_slide'] == 'true')
                 carousel_settings['centeredSlides'] = true;
 
             // loop
-            if(settings['loop'] || settings['loop'] == 'true'){
+            if(settings['loop'] == 'true'){
                 carousel_settings['loop'] = true;
             }
             // auto play
-            if(settings['autoplay'] || settings['autoplay'] == 'true'){
+            if(settings['autoplay'] == 'true'){
                 carousel_settings['autoplay'] = {
                     delay : settings['delay'],
                     disableOnInteraction : settings['pause_on_interaction']
