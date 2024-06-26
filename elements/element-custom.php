@@ -619,23 +619,18 @@ if (!function_exists('basilico_additional_shapes_divider')) {
     }
 }
 
-//* Animation
+//* Section Render
 add_action( 'elementor/element/after_add_attributes', 'basilico_custom_el_attributes', 10, 1 );
 function basilico_custom_el_attributes($el){
+    
     $settings = $el->get_settings();
-    $_animation = ! empty( $settings['_animation'] );
-    $animation = ! empty( $settings['animation'] );
-    $has_animation = $_animation && 'none' !== $settings['_animation'] || $animation && 'none' !== $settings['animation'];
-    if ( $has_animation ) {
-        $is_static_render_mode = \Elementor\Plugin::$instance->frontend->is_static_render_mode();
-        if ( ! $is_static_render_mode ) {
-            // Hide the element until the animation begins
-            $el->add_render_attribute( '_wrapper', 'class', 'pxl-elementor-animate' );
-        }
-    }
+     
     if( 'section' == $el->get_name() ) {
         if ( isset( $settings['pxl_header_type'] ) && !empty($settings['pxl_header_type'] ) ) {
             $el->add_render_attribute( '_wrapper', 'class', 'pxl-header-'.$settings['pxl_header_type']);
+        }
+        if ( isset( $settings['pxl_header_sticky_effect'] ) && !empty($settings['pxl_header_sticky_effect'] ) ) {
+            $el->add_render_attribute( '_wrapper', 'class', 'pxl-header-'.$settings['pxl_header_sticky_effect']);
         }
         if ( isset( $settings['pxl_header_mobile_type'] ) && !empty($settings['pxl_header_mobile_type'] ) ) {
             $el->add_render_attribute( '_wrapper', 'class', 'pxl-header-mobile-'.$settings['pxl_header_mobile_type']);
@@ -643,6 +638,12 @@ function basilico_custom_el_attributes($el){
         if ( isset( $settings['pxl_section_border_animated'] ) && $settings['pxl_section_border_animated'] == 'yes'  ) {
             $el->add_render_attribute( '_wrapper', 'class', 'pxl-border-section-anm');
         }
+
+        if ( isset( $settings['pxl_section_offset'] ) && $settings['pxl_section_offset'] !='none' ) {
+            if( $settings['gap'] === 'no' )
+                $el->add_render_attribute( '_wrapper', 'class', 'pxl-section-gap-no');
+        }
+         
     }
     if( 'column' == $el->get_name() ) {
         if ( isset( $settings['pxl_border_animated'] ) && $settings['pxl_border_animated'] == 'yes'  ) {
@@ -658,9 +659,7 @@ function basilico_custom_el_attributes($el){
     if( 'image' == $el->get_name() ) {
         if (strpos($settings['_css_classes'], 'parallax-') !== false) {
             $parl_arg = explode('--', $settings['_css_classes']); //parallax--y_50 , parallax--x_-50
-            
             $parl_arg1 = explode('_', $parl_arg[1]);  
-           
             $data_parallax = json_encode([
                 $parl_arg1[0] => $parl_arg1[1]
             ]); 
