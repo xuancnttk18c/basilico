@@ -120,52 +120,29 @@
             } else {
                 $(document).find('.pxl-header-sticky').removeClass('h-fixed');
             } 
-            
         }
 
         if($(document).find('.pxl-header-main-sticky').length > 0 && window_width >= 1200){
+            let tl = gsap.timeline({
+                defaults: {
+                    duration: 0.2
+                }
+            });
             var header_height = $('.pxl-header-desktop').outerHeight();
-
             var offset_top_nimation = header_height + 150;
+
             if (scroll_status == 'up' && scroll_top > offset_top_nimation){
                 $(document).find('.pxl-header-main-sticky').addClass('h-fixed');
+                tl.to('.pxl-header-main-sticky', {
+                    y: 0
+                });
             } else {
                 $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
-            } 
-            
+                tl.to('.pxl-header-main-sticky', {
+                    y: 0
+                });
+            }
         }
-
-        // if($(document).find('.pxl-header-main-sticky').length > 0 && window_width >= 1200){
-        //     let tl = gsap.timeline({
-        //         defaults: {
-        //             duration: 0.2
-        //         }
-        //     });
-        //     var header_height = $('.pxl-header-desktop').outerHeight();
-        //     var main_sticky_height = $('.pxl-header-main-sticky').outerHeight();
-        //     if( scroll_top > (header_height + main_sticky_height) ){    
-        //         if (scroll_status == 'down' && $('.pxl-header').hasClass('sticky-direction-scroll-down') ) {
-        //             $(document).find('.pxl-header-main-sticky').addClass('h-fixed');
-        //             tl.to('.pxl-header-main-sticky', {
-        //                 y: 0
-        //             });
-        //         }else if( scroll_status == 'up' && $('.pxl-header').hasClass('sticky-direction-scroll-up') ){
-        //             $(document).find('.pxl-header-main-sticky').addClass('h-fixed');
-        //             tl.to('.pxl-header-main-sticky', {
-        //                 y: 0
-        //             });
-        //         }else{
-        //             tl.to('.pxl-header-main-sticky', {
-        //                 y: (main_sticky_height * -1)
-        //             });
-        //         }
-        //     }else{
-        //         $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
-        //         tl.to('.pxl-header-main-sticky', {
-        //             y: 0
-        //         });
-        //     }
-        // }
 
         if ( $(document).find('.pxl-header-mobile-sticky').length > 0 && window_width < 1200  ) {
             var offset_top = $('.pxl-header-mobile').outerHeight();
