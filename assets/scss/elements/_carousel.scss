@@ -2897,62 +2897,62 @@
             margin-left: auto;
             margin-right: auto;
         }
-        // .item-inner {
-        //     position: relative;
-        //     .item-content {
-        //         flex-direction: column;
-        //         justify-content: center;
-        //         position: absolute;
-        //         top: 60px;
-        //         left: 60px;
-        //         right: 60px;
-        //         bottom: 60px;
-        //         margin: 0 auto;
-        //         max-width: 644px;
-        //         padding: 73px 15px 75px;
-        //         text-align: center;
-        //         width: 100%;
-        //         background-color: $secondary_color;
-        //         // .content-inner {
-        //         //     @include transform(translateY(-50%));
-        //         //     > * {
-        //         //         opacity: 0;
-        //         //         transform: translateY(10px);
-        //         //         transition: all 200ms ease-out;
-        //         //         max-width: 406px;
-        //         //         &:nth-child(1) {
-        //         //             transition-delay: 250ms;
-        //         //         }
-        //         //         &:nth-child(2) {
-        //         //             transition-delay: 320ms;
-        //         //         }
-        //         //         &:nth-child(3) {
-        //         //             transition-delay: 390ms;
-        //         //         }
-        //         //         &:nth-child(4) {
-        //         //             transition-delay: 460ms;
-        //         //         }
-        //         //         &:nth-child(5) {
-        //         //             transition-delay: 510ms;
-        //         //         }
-        //         //     }
-        //         //     @media (max-width: $sm_max) {
-        //         //         padding: 35px 20px 35px;
-        //         //     }
-        //         //     @media (max-width: $xs_max) {
-        //         //         padding: 20px;
-        //         //     }
-        //         // }
-        //     }
-        //     // &:hover {
-        //     //     .item-content {
-        //     //         .content-inner > * {
-        //     //             opacity: 1;
-        //     //             transform: translateY(0px);
-        //     //         }
-        //     //     }
-        //     // }
-        // }
+        .item-inner {
+            position: relative;
+            .item-content {
+                flex-direction: column;
+                justify-content: center;
+                //position: absolute;
+                top: 60px;
+                left: 60px;
+                right: 60px;
+                bottom: 60px;
+                margin: 0 auto;
+                max-width: 644px;
+                padding: 73px 15px 75px;
+                text-align: center;
+                width: 100%;
+                background-color: $secondary_color;
+                // .content-inner {
+                //     @include transform(translateY(-50%));
+                //     > * {
+                //         opacity: 0;
+                //         transform: translateY(10px);
+                //         transition: all 200ms ease-out;
+                //         max-width: 406px;
+                //         &:nth-child(1) {
+                //             transition-delay: 250ms;
+                //         }
+                //         &:nth-child(2) {
+                //             transition-delay: 320ms;
+                //         }
+                //         &:nth-child(3) {
+                //             transition-delay: 390ms;
+                //         }
+                //         &:nth-child(4) {
+                //             transition-delay: 460ms;
+                //         }
+                //         &:nth-child(5) {
+                //             transition-delay: 510ms;
+                //         }
+                //     }
+                //     @media (max-width: $sm_max) {
+                //         padding: 35px 20px 35px;
+                //     }
+                //     @media (max-width: $xs_max) {
+                //         padding: 20px;
+                //     }
+                // }
+            }
+            // &:hover {
+            //     .item-content {
+            //         .content-inner > * {
+            //             opacity: 1;
+            //             transform: translateY(0px);
+            //         }
+            //     }
+            // }
+        }
         .item-border {
             position: absolute;
             top: 85px;
