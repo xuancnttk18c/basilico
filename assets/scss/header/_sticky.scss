@@ -30,7 +30,8 @@
 }
 
 .pxl-header-main-sticky,
-.pxl-header-mobile-main-sticky{
+.pxl-header-mobile-main-sticky {
+	@include transition(0.6s cubic-bezier(0.43, 0.46, 0.64, 0.66) !important);
 	&.h-fixed, &.mh-fixed {
 		position: fixed;
 		top: 0;
