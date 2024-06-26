@@ -2710,7 +2710,7 @@
                 transition: all 400ms ease-out 0s;
                 opacity: 0;
                 visibility: hidden;
-                transform: scaleY(0);
+                clip-path: inset(100% 0 0 0);
                 transform-origin: bottom;
                 .content-inner {
                     background-color: $secondary_color;
@@ -2722,7 +2722,7 @@
                 .item-content {
                     opacity: 1;
                     visibility: visible;
-                    transform: scaleY(1);
+                    clip-path: inset(0 0 0 0);
                 }
             }
         }
