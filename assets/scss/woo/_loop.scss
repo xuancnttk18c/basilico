@@ -126,7 +126,7 @@ select.orderby{
 		right: 40px;
 		height: auto;
 		transform-origin: top;
-		@include transform(scaleY(0));
+		clip-path: inset(0 0 100% 0);
 		@include transition(.35s cubic-bezier(.48,.57,.33,.89));
 		.pxl-icon {
 			opacity: 0;
@@ -142,7 +142,7 @@ select.orderby{
 		.button.product_type_grouped,
 		.product_type_external,
 		.added_to_cart {
-			@include transform(scaleY(1));
+			clip-path: inset(0 0 0 0);
 			.pxl-icon {
 				opacity: 1;
 			}
