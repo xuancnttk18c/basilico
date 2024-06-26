@@ -190,15 +190,15 @@
                 },
             };
               
-            if(settings['center_slide'] == 'true')
+            if(settings['center_slide'] == true || settings['center_slide'] == 'true')
                 carousel_settings['centeredSlides'] = true;
 
             // loop
-            if(settings['loop'] == 'true'){
+            if(settings['loop'] == true || settings['loop'] == 'true'){
                 carousel_settings['loop'] = true;
             }
             // auto play
-            if(settings['autoplay'] == 'true'){
+            if(settings['autoplay'] == true || settings['autoplay'] == 'true'){
                 carousel_settings['autoplay'] = {
                     delay : settings['delay'],
                     disableOnInteraction : settings['pause_on_interaction']
@@ -227,7 +227,6 @@
                 thumb_carousel_settings['slideThumbActiveClass'] = 'swiper-slide-thumb-active';
                 thumb_carousel_settings['thumbsContainerClass'] = 'swiper-container-thumbs';
                 
-
                 var slide_thumbs = new Swiper($this.find('.pxl-swiper-thumbs')[0], thumb_carousel_settings);
 
                 slide_thumbs.on('resize', function () {
