@@ -331,8 +331,8 @@
                 },
             };
 
-            if(thumbs_settings['allow_touch_move'] || thumbs_settings['allow_touch_move'] == 'true')
-                thumbs_settings_params['allowTouchMove'] = true;
+            if(thumbs_settings['allow_touch_move'] == 'false')
+                thumbs_settings_params['allowTouchMove'] = false;
 
             if(thumbs_settings['center_slide'] || thumbs_settings['center_slide'] == 'true')
                 thumbs_settings_params['centeredSlides'] = true;
