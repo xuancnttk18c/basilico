@@ -290,7 +290,7 @@
             thumbs_settings_params = {
                 direction: getDirection($thumb_node),
                 effect: thumbs_settings['slide_mode'],
-                wrapperClass : 'pxl-swiper-wrapper',
+                wrapperClass : 'pxl-thumbs-wrapper',
                 slideClass: 'pxl-swiper-slide',
                 slidesPerView: thumbs_settings['slides_to_show'],
                 slidesPerGroup: thumbs_settings['slides_to_scroll'],
