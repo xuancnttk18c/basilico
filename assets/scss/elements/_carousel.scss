@@ -2702,14 +2702,12 @@
             position: relative;
             .item-content {
                 position: absolute;
-                overflow: hidden;
                 z-index: 2;
                 left: 38px;
                 right: 38px;
                 bottom: -55px;
-                @include transition(0.8s cubic-bezier(0.63, 0.25, 0.25, 1));
+                @include transition(0.5s cubic-bezier(0.63, 0.25, 0.25, 1));
                 clip-path: inset(100% 0 0 0);
-                transform-origin: bottom;
                 .content-inner {
                     background-color: $secondary_color;
                     padding: 66px 25px 68px;
