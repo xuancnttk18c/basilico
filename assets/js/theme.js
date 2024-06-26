@@ -117,6 +117,7 @@
 
             var offset_top_nimation = (header_height + header_transparent_height);
 
+
             if (scroll_top > offset_top_nimation) {
                 $(document).find('.pxl-header-sticky').addClass('h-fixed');
             }else{
