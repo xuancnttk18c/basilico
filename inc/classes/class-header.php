@@ -17,7 +17,7 @@ if (!class_exists('Basilico_Header')) {
             $header_type = $header_layout <=0 ? 'df' : 'el';
             $header_mobile_type = $header_mobile_layout <=0 ? 'df' : 'el';
 
-            $sticky_header_direction = basilico()->get_theme_opt('sticky_header_direction', 'scroll-down'); 
+            $sticky_header_direction = basilico()->get_theme_opt('sticky_header_direction', 'scroll-up'); 
              
             $classes = [
                 'pxl-header',
