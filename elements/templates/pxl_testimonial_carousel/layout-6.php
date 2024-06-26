@@ -127,7 +127,6 @@ $widget->add_render_attribute( 'carousel', [
             'slides_gutter'                 => 20,
             'arrow'                         => 'false',
             'dots'                          => 'false',
-            'loop'                          => 'true',
             'speed'                         => '500',
         ];
         $data_thumb_settings = wp_json_encode($thumb_opts);

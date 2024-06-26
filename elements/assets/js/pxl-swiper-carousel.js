@@ -329,13 +329,11 @@
                         spaceBetween: thumbs_settings['slides_gutter'],
                     }
                 },
-                  
             }; 
-            
 
             if(thumbs_settings['center_slide'] || thumbs_settings['center_slide'] == 'true')
                 thumbs_settings_params['centeredSlides'] = true;
-
+            
             // loop
             if(thumbs_settings['loop'] || thumbs_settings['loop'] === 'true'){
                 thumbs_settings_params['loop'] = true;
@@ -349,7 +347,6 @@
             } else {
                 thumbs_settings_params['autoplay'] = false;
             }
-
             
             if(thumbs_settings['slides_gutter_md']){
                 thumbs_settings_params['breakpoints'][0]['spaceBetween'] = parseInt(thumbs_settings['slides_gutter_md']);
