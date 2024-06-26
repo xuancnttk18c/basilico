@@ -2798,9 +2798,8 @@
                 left: 38px;
                 right: 38px;
                 bottom: 0px;
-                transition: all 400ms ease-out 0s;
-                transform: scaleY(0);
-                transform-origin: bottom;
+                @include transition(0.5s cubic-bezier(0.63, 0.25, 0.25, 1));
+                clip-path: inset(100% 0 0 0);
                 .content-inner {
                     background-color: $secondary_color;
                     padding: 66px 25px 68px;
@@ -2809,7 +2808,7 @@
             }
             &:hover {
                 .item-content {
-                    transform: scaleY(1);
+                    clip-path: inset(0 0 0 0);
                 }
             }
         }
@@ -2909,9 +2908,8 @@
                 right: 60px;
                 margin: 0 auto;
                 max-width: 644px;
-                transition: .35s cubic-bezier(.48,.57,.33,.89);
-                visibility: hidden;
-                transform: scaleY(0) translateY(-50%);
+                @include transition(0.5s cubic-bezier(0.63, 0.25, 0.25, 1));
+                clip-path: inset(100% 0 100% 0);
                 &:before {
                     content: '';
                     position: absolute;
@@ -2962,8 +2960,7 @@
             }
             &:hover {
                 .item-content {
-                    transform: scaleY(1) translateY(-50%);
-                    visibility: visible;
+                    clip-path: inset(0 0 0 0);
                     &:before {
                         transform: translateZ(-1px);
                     }
