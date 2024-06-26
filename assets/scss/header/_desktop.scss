@@ -68,9 +68,9 @@
      
 }
 
-.pxl-header-main-sticky{ 
+.pxl-header-main-sticky { 
     z-index: 1;
-    @include transition( all .3s ease-out !important);
+    @include transition(all .3s ease-out !important);
     &.h-fixed{
         position: fixed;
         left: 0;
@@ -79,14 +79,6 @@
         z-index: 99;
         background-color: #fff;
         @include box-shadow(0 3px 18px rgba(#02154e, 0.09));
-    }
-}
-
-.sticky-direction-scroll-down{
-    .pxl-header-main-sticky{ 
-        &.h-fixed{
-            @include animation(0.95s linear 0s normal forwards 1 running headerSlideDown); 
-        }
     }
 }
 
