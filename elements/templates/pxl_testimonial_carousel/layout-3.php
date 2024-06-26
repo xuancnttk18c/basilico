@@ -27,11 +27,11 @@ $opts = [
     'arrow'                         => $arrows,
     'dots'                          => $dots,
     'dots_style'                    => 'bullets',
-    'autoplay'                      => (bool)$widget->get_setting('autoplay', 'false'),
+    'autoplay'                      => $widget->get_setting('autoplay', 'false'),
     'pause_on_hover'                => $widget->get_setting('pause_on_hover', 'true'),
     'pause_on_interaction'          => 'true',
     'delay'                         => $widget->get_setting('autoplay_speed', '5000'),
-    'loop'                          => (bool)$widget->get_setting('infinite', 'false'),
+    'loop'                          => $widget->get_setting('infinite', 'false'),
     'speed'                         => $widget->get_setting('speed', '500'),
 ];
 
