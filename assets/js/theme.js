@@ -130,7 +130,7 @@
             });
             var header_height = $('.pxl-header-desktop').outerHeight();
             var main_sticky_height = $('.pxl-header-main-sticky').outerHeight();
-            if( scroll_top > (header_height + main_sticky_height) ){    
+            if( scroll_top < (header_height + main_sticky_height) ){    
                 if (scroll_status == 'down' && $('.pxl-header').hasClass('sticky-direction-scroll-down') ) {
                     $(document).find('.pxl-header-main-sticky').addClass('h-fixed');
                     tl.to('.pxl-header-main-sticky', {
