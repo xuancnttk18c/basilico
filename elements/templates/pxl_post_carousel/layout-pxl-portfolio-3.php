@@ -171,6 +171,7 @@ if ( !empty( $item_animation) ) {
                                     <?php endif; ?>
                                 </div>
                             </div>
+                            <div class="item-border"></div>
                         </div>
                     </div>
                 <?php endforeach; ?>
