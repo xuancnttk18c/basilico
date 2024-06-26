@@ -124,7 +124,7 @@
                 $(document).find('.pxl-header-sticky').removeClass('h-fixed');
             }
         }
-
+        
         if($(document).find('.pxl-header-main-sticky').length > 0 && window_width >= 1200){
             let tl = gsap.timeline({
                 defaults: {
@@ -134,11 +134,6 @@
             var header_height = $('.pxl-header-desktop').outerHeight();
             var main_sticky_height = $('.pxl-header-main-sticky').outerHeight();
             if( scroll_top > (header_height + main_sticky_height) ){    
-                $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
-                tl.to('.pxl-header-main-sticky', {
-                    y: 0
-                });
-            } else {
                 if (scroll_status == 'down' && $('.pxl-header').hasClass('sticky-direction-scroll-down') ) {
                     $(document).find('.pxl-header-main-sticky').addClass('h-fixed');
                     tl.to('.pxl-header-main-sticky', {
@@ -154,6 +149,11 @@
                         y: (main_sticky_height * -1)
                     });
                 }
+            } else {
+                $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
+                tl.to('.pxl-header-main-sticky', {
+                    y: 0
+                });
             }
         }
 
