@@ -2901,7 +2901,7 @@
         .item-inner {
             position: relative;
             .item-content {
-                .content-inner {
+                
                     position: absolute;
                     top: 60px;
                     left: 60px;
@@ -2943,12 +2943,12 @@
                 }
             }
             &:hover {
-                .item-content {
+                //.item-content {
                     // .content-inner > * {
                     //     opacity: 1;
                     //     transform: translateY(0px);
                     // }
-                }
+                //}
             }
         }
     }
