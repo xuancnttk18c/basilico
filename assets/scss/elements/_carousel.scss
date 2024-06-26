@@ -2907,11 +2907,15 @@
                 right: 30px;
                 border: 1px solid $primary_color;
                 opacity: 0;
+                max-width: 700px;
+                margin: 0 auto;
+                z-index: 1;
             }
             .item-content {
                 position: absolute;
                 flex-direction: column;
                 justify-content: center;
+                z-index: 2;
                 top: 60px;
                 left: 60px;
                 right: 60px;
