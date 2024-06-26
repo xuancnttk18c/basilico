@@ -74,13 +74,13 @@
     }
      
 }
-.sticky-direction-scroll-down{
-    .pxl-header-main-sticky{ 
-        &.h-fixed{
-            @include animation(0.95s linear 0s normal forwards 1 running headerSlideDown); 
-        }
-    }
-}
+// .sticky-direction-scroll-down{
+//     .pxl-header-main-sticky{ 
+//         &.h-fixed{
+//             @include animation(0.95s linear 0s normal forwards 1 running headerSlideDown); 
+//         }
+//     }
+// }
 
 .pxl-header-fixed-top{
     width: 100%;
