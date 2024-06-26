@@ -155,8 +155,8 @@
                 $(document).find('.pxl-header-mobile-sticky').removeClass('mh-fixed');
             }
         }
+
         if ( $(document).find('.pxl-header-mobile-main-sticky').length > 0 && window_width < 1200  ) {
-           
             let timel = gsap.timeline({
                 defaults: {
                     duration: 0.2
@@ -186,7 +186,7 @@
                     y: 0
                 });
             }
-        } 
+        }
 
         if ( $(document).find('.pxl-header-mobile-transparent-sticky').length > 0 && window_width < 1200  ) {
             let timel = gsap.timeline({
