@@ -288,7 +288,6 @@
     function pxl_get_thumbs_setting($thumb_node){  
         var thumbs_settings = $thumb_node.data().settings, 
             thumbs_settings_params = {
-                allowTouchMove: false,
                 direction: getDirection($thumb_node),
                 effect: thumbs_settings['slide_mode'],
                 wrapperClass : 'pxl-thumbs-wrapper',
@@ -330,7 +329,10 @@
                         spaceBetween: thumbs_settings['slides_gutter'],
                     }
                 },
-            }; 
+            };
+
+            if(thumbs_settings['allow_touch_move'] || thumbs_settings['allow_touch_move'] == 'true')
+                thumbs_settings_params['allowTouchMove'] = true;
 
             if(thumbs_settings['center_slide'] || thumbs_settings['center_slide'] == 'true')
                 thumbs_settings_params['centeredSlides'] = true;
