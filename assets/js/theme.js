@@ -128,9 +128,9 @@
 
             var offset_top_nimation = header_height + 150;
             if (scroll_status == 'up' && scroll_top > offset_top_nimation){
-                $(document).find('.pxl-header-sticky').addClass('h-fixed');
+                $(document).find('.pxl-header-main-sticky').addClass('h-fixed');
             } else {
-                $(document).find('.pxl-header-sticky').removeClass('h-fixed');
+                $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
             } 
             
         }
