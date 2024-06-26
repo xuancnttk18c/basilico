@@ -116,7 +116,7 @@
 
             var offset_top_animation = header_height + 150;
 
-            if (scroll_top > offset_top_animation) {
+            if (scroll_status == 'up' && scroll_top > offset_top_animation) {
                 $(document).find('.pxl-header-sticky').addClass('h-fixed');
             }else{
                 $(document).find('.pxl-header-sticky').removeClass('h-fixed');
