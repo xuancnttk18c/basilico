@@ -116,9 +116,10 @@
             var header_transparent_height = $('.pxl-header-transparent').outerHeight();
 
             var offset_top_nimation = (header_height + header_transparent_height);
-            if ( scroll_status == 'up' && scroll_top > offset_top_nimation ){
+
+            if (scroll_top > offset_top_animation) {
                 $(document).find('.pxl-header-sticky').addClass('h-fixed');
-            } else {
+            }else{
                 $(document).find('.pxl-header-sticky').removeClass('h-fixed');
             }
         }
