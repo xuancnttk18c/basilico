@@ -133,14 +133,8 @@
 
             if (scroll_status == 'up' && scroll_top > offset_top_nimation){
                 $(document).find('.pxl-header-main-sticky').addClass('h-fixed');
-                tl.to('.pxl-header-main-sticky', {
-                    y: 0
-                });
             } else {
                 $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
-                tl.to('.pxl-header-main-sticky', {
-                    y: 0
-                });
             }
         }
 
