@@ -467,10 +467,19 @@
 			letter-spacing: 0.15em;
 			@include transition(all .3s linear);
 			&:before {
+				content: '';
+				bottom: 0;
+				top: 0;
+				left: 0;
+				right: 0;
 				background-color: $secondary_color;
+				clip-path: inset(0 0 100% 0);
 			}
 			&:hover {
 				color: #fff;
+				&:before {
+					clip-path: inset(0 0 0 0);
+				}
 			}
 		}
 	}
