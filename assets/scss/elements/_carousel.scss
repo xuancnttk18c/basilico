@@ -2707,9 +2707,7 @@
                 left: 38px;
                 right: 38px;
                 bottom: -55px;
-                transition: all 400ms ease-out 0s;
-                opacity: 0;
-                visibility: hidden;
+                @include transition(0.8s cubic-bezier(0.63, 0.25, 0.25, 1));
                 clip-path: inset(100% 0 0 0);
                 transform-origin: bottom;
                 .content-inner {
@@ -2720,8 +2718,6 @@
             }
             &:hover {
                 .item-content {
-                    opacity: 1;
-                    visibility: visible;
                     clip-path: inset(0 0 0 0);
                 }
             }
