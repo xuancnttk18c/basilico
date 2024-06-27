@@ -16,8 +16,6 @@ if(!empty($settings['link']['url'])){
 }
 
 $link_attributes = $widget->get_render_attribute_string( 'link' );
-$background_img = $settings['background_img']['url'] ? 'style=background-image: url('.$settings['background_img']['url'].')' : '';
-
 $thumbnail = '';
 if( ! empty( $settings['selected_img']['id'] ) ){
     $img  = pxl_get_image_by_size( array(
@@ -29,7 +27,7 @@ if( ! empty( $settings['selected_img']['id'] ) ){
 ?>
 
 <div class="pxl-fancy-box layout-7">
-    <div class="box-inner" <?php echo esc_attr($background_img); ?>>
+    <div class="box-inner" <?php echo esc_url($settings['background_img']['url']) ? 'style=background-image: url('.esc_url($settings['background_img']['url']).')' : ''; ?>>
         <div class="box-content">
             <?php if(!empty($widget->get_setting('title'))): ?>
                 <h3 class="box-title">
@@ -50,7 +48,7 @@ if( ! empty( $settings['selected_img']['id'] ) ){
             <?php endif; ?>
             <div class="box-btn">
                 <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
-                <i class="zmdi zmdi-arrow-right"></i>
+                i.zmdi.zmdi-arrow-right
                 <?php if ( $link_attributes ) echo '</a>'; ?> 
             </div>
         </div>
