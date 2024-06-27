@@ -48,7 +48,7 @@ if( ! empty( $settings['selected_img']['id'] ) ){
             <?php endif; ?>
             <div class="box-btn">
                 <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
-                i.zmdi.zmdi-arrow-right
+                <i class="zmdi zmdi-arrow-right"></i>
                 <?php if ( $link_attributes ) echo '</a>'; ?> 
             </div>
         </div>
