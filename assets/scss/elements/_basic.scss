@@ -3045,10 +3045,12 @@
                         color: $heading_color;
                         font-size: 21px;
                         font-weight: 700;
-                        &:hover {
+                    }
+                    &:hover {
+                        a {
                             animation: toRightFromLeft 0.3s ease;
                         }
-                    }   
+                    }
                 }
             }
             &:hover {
