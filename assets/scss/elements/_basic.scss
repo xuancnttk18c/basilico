@@ -3044,7 +3044,10 @@
                     i {
                         color: $heading_color;
                         font-size: 21px;
-                        font-weight: 700;   
+                        font-weight: 700;
+                        &:hover {
+                            animation: toRightFromLeft 0.3s ease;
+                        }
                     }   
                 }
             }
