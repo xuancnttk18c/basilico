@@ -3025,7 +3025,7 @@
                     left: 50%;
                     max-width: 240px;
                     @include transition(all 0.3s ease);
-                    @include transform(translate(-50%, 23%));
+                    @include transform(translate(-50%, 50%));
                 }
             }
             .box-btn {
@@ -3057,7 +3057,7 @@
             &:hover {
                 .box-image img {
                     left: 0;
-                    @include transform(translate(-11%, 23%));
+                    @include transform(translate(-11%, 50%));
                 }
                 .box-btn {
                     opacity: 1;
