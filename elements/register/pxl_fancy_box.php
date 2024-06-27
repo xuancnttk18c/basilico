@@ -43,6 +43,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 6', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-1.jpg'
                                 ],
+                                '7' => [
+                                    'label' => esc_html__( 'Layout 7', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-1.jpg'
+                                ],
                             ],
                         )
                     )
@@ -60,6 +64,7 @@ pxl_add_custom_widget(
                                 'library' => 'flaticon',
                                 'value'   => 'flaticon-calling'
                             ],
+                            'condition' => ['layout!' => '7']
                         ),
                         array(
                             'name'  => 'icon_size',
@@ -112,7 +117,7 @@ pxl_add_custom_widget(
                                 'url' => \Elementor\Utils::get_placeholder_image_src()
                             ],
                             'condition' => [
-                                'layout'    => ['5', '6']
+                                'layout'    => ['5', '6', '7']
                             ]
                         ),
                         array(
@@ -155,7 +160,7 @@ pxl_add_custom_widget(
                                 'is_external' => 'on'
                             ],
                             'condition' => [
-                                'layout' => ['2', '5', '6']
+                                'layout' => ['2', '5', '6', '7']
                             ],
                         ),
                     )
