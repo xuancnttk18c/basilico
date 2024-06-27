@@ -3019,10 +3019,12 @@
             text-transform: none;
         }
         .box-image {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, 22%);
+            img {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 22%);
+            }
         }
         .box-btn {
             position: absolute;
