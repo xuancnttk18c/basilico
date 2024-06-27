@@ -3023,7 +3023,8 @@
                     position: absolute;
                     bottom: 0;
                     left: 50%;
-                    max-width: 240px;
+                    max-height: 250px;
+                    object-fit: contain;
                     @include transition(all 0.3s ease);
                     @include transform(translate(-50%, 50%));
                 }
