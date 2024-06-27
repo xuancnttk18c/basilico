@@ -3023,6 +3023,7 @@
                     position: absolute;
                     bottom: 0;
                     left: 50%;
+                    @include transition(all 0.3s ease);
                     @include transform(translate(-50%, 23%));
                 }
             }
@@ -3031,7 +3032,7 @@
                 bottom: 27px;
                 right: 60px;
                 opacity: 0;
-                @include transition();
+                @include transition(all 0.3s ease);
                 a {
                     @include border-radius(10px);
                     background-color: #fff;
@@ -3049,9 +3050,11 @@
             }
             &:hover {
                 .box-image img {
+                    left: 0;
                     @include transform(translate(-11%, 23%));
                 }
                 .box-btn {
+                    opacity: 1;
                     right: 40px;
                 }
             }
