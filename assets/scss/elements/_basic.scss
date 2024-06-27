@@ -3009,7 +3009,7 @@
         text-align: left;
         .box-inner {
             position: relative;
-            padding: 35px 40px;
+            padding: 43px 70px 181px 40px;
             @include border-radius(20px);
         }
         .box-title {
@@ -3017,6 +3017,12 @@
             font-weight: 600;
             letter-spacing: 0.02em;
             text-transform: none;
+        }
+        .box-image {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 22%);
         }
         .box-btn {
             position: absolute;
