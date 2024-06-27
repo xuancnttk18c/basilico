@@ -3058,7 +3058,7 @@
             &:hover {
                 .box-image img {
                     left: 0;
-                    @include transform(translate(-11%, 50%));
+                    @include transform(translate(-25%, 50%));
                 }
                 .box-btn {
                     opacity: 1;
