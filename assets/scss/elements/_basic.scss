@@ -3020,13 +3020,18 @@
             position: absolute;
             bottom: 27px;
             right: 40px;
-            display: inline-flex;
-            width: 75px;
-            height: 75px;
-            @include border-radius(10px);
             a {
-                font-size: 21px;
-                font-weight: 700;   
+                @include border-radius(10px);
+                background-color: #fff;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 75px;
+                height: 75px;
+                i {
+                    font-size: 21px;
+                    font-weight: 700;   
+                }   
             }
         }
     }
