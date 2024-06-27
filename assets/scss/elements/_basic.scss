@@ -3005,6 +3005,31 @@
             }
         }
     }
+    &.layout-7 {
+        text-align: left;
+        .box-inner {
+            position: relative;
+            padding: 35px 40px;
+            @include border-radius(20px);
+        }
+        .box-title {
+            font-size: 35px;
+            letter-spacing: 0.02em;
+        }
+        .box-btn {
+            position: absolute;
+            bottom: 27px;
+            right: 40px;
+            display: inline-flex;
+            width: 75px;
+            height: 75px;
+            @include border-radius(10px);
+            a {
+                font-size: 21px;
+                font-weight: 700;   
+            }
+        }
+    }
 }
 
 .elementor-widget-pxl_fancy_box + .elementor-widget-pxl_fancy_box {
