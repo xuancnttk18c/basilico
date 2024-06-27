@@ -107,6 +107,20 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'background_img',
+                            'label' => esc_html__( 'Background Image', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::MEDIA,
+                            'dynamic' => [
+                                'active' => true,
+                            ],
+                            'default' => [
+                                'url' => \Elementor\Utils::get_placeholder_image_src()
+                            ],
+                            'condition' => [
+                                'layout'    => ['7']
+                            ]
+                        ),
+                        array(
                             'name' => 'selected_img',
                             'label' => esc_html__( 'Choose Image', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::MEDIA,
