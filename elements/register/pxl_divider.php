@@ -169,6 +169,16 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'border_radius',
+                            'label' => esc_html__( 'Border Radius', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-divider' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; overflow: hidden;',
+                            ],
+                        ),
+                        array(
                             'name'  => 'draw',
                             'label' => esc_html__('Draw Animation', 'basilico'),
                             'type' => \Elementor\Controls_Manager::SWITCHER,
