@@ -27,6 +27,7 @@ if( ! empty( $settings['selected_img']['id'] ) ){
 ?>
 
 <div class="pxl-fancy-box layout-7">
+    <?php var_dump($settings['background_img']['url']); ?>
     <div class="box-inner" <?php echo esc_url($settings['background_img']['url']) ? 'style=background-image: url('.esc_url($settings['background_img']['url']).')' : ''; ?>>
         <div class="box-content">
             <?php if(!empty($widget->get_setting('title'))): ?>
