@@ -274,7 +274,7 @@
                 }
             });
 
-            if ($(this).hasClass('layout-post-3')) {
+            if ($(this).hasClass('layout-post-3') || $(this).hasClass('layout-post-4')) {
                 $(this).find('.swiper-slide').each(function() {
                     var excerptHeight = $(this).find('.item-excerpt').get(0).scrollHeight;
                     var imageHeight = $(this).find('.post-image').outerHeight();
