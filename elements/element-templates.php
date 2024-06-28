@@ -1443,7 +1443,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                                     <?php
                                     $posttags = get_the_tags($post->ID);
                                     if ($posttags && $show_category == 'true') : ?>
-                                        <span class="post-tags d-flex align-items-center">
+                                        <div class="post-tags d-flex align-items-center">
                                             <i class="pxli pxli-tag1"></i>
                                             <?php
                                             $last_key = array_key_last($posttags);
@@ -1454,7 +1454,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                                                 }
                                             }
                                             ?>
-                                        </span>
+                                        </div>
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -1480,7 +1480,6 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                     <?php if ($show_button == 'true') : ?>
                         <div class="item-readmore pxl-button-wrapper">
                             <a class="btn btn-additional-6" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                <span class="pxl-button-bg"></span>
                                 <span><?php echo pxl_print_html($button_text); ?></span>
                             </a>
                         </div>

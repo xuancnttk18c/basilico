@@ -122,7 +122,7 @@ $arrows_on_hover_cls = $arrows_on_hover == 'true' ? 'arrow-on-hover' : '';
                     <div class="pxl-swiper-slide swiper-slide" data-filter="<?php echo esc_attr($filter_class) ?>">
                         <div class="item-inner relative">
                             <?php if (isset( $thumbnail )): ?>
-                                <div class="post-featured">
+                                <div class="item-featured">
                                     <div class="post-image">
                                         <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>">
                                             <?php echo wp_kses_post($thumbnail); ?>
@@ -177,10 +177,8 @@ $arrows_on_hover_cls = $arrows_on_hover == 'true' ? 'arrow-on-hover' : '';
                                 <?php endif; ?>
                                 <?php if ($show_button == 'true') : ?>
                                     <div class="item-readmore pxl-button-wrapper">
-                                        <a class="btn-more style-3" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                            <span class="pxl-button-bg"></span>
+                                        <a class="btn btn-additional-6" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
                                             <span><?php echo pxl_print_html($button_text); ?></span>
-                                            <i class="zmdi zmdi-long-arrow-right"></i>
                                         </a>
                                     </div>
                                 <?php endif; ?>
