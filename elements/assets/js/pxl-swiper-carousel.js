@@ -190,15 +190,16 @@
                 },
             };
 
-            if(settings['center_slide'] == true || settings['center_slide'] == 'true')
+            //center slide
+            if(settings['center_slide'] === true || settings['center_slide'] == 'true')
                 carousel_settings['centeredSlides'] = true;
 
             // loop
-            if(settings['loop'] == true || settings['loop'] == 'true'){
+            if(settings['loop'] === true || settings['loop'] == 'true'){
                 carousel_settings['loop'] = true;
             }
             // auto play
-            if(settings['autoplay'] == true || settings['autoplay'] == 'true'){
+            if(settings['autoplay'] === true || settings['autoplay'] == 'true'){
                 carousel_settings['autoplay'] = {
                     delay : settings['delay'],
                     disableOnInteraction : settings['pause_on_interaction']
