@@ -84,7 +84,8 @@ pxl_add_custom_widget(
                         array(
                             'name' => 'text_typography',
                             'label' => esc_html__('Text Typography', 'basilico' ),
-                             'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-button-more .btn-more',
                             ],
