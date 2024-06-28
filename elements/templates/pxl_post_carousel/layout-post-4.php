@@ -14,7 +14,7 @@ if($select_post_by === 'post_selected'){
 $orderby = $widget->get_setting('orderby', 'date');
 $order = $widget->get_setting('order', 'desc');
 $limit = $widget->get_setting('limit', -1);
-$num_words = $widget->get_setting('num_words', 17);
+$num_words = $widget->get_setting('num_words', 17); 
 
 $settings['layout']    = $settings['layout_'.$settings['post_type']];
 
@@ -128,32 +128,38 @@ $arrows_on_hover_cls = $arrows_on_hover == 'true' ? 'arrow-on-hover' : '';
                                             <?php echo wp_kses_post($thumbnail); ?>
                                         </a>
                                     </div>
+                                    <?php if ($show_category == 'true' || $show_date == 'true') : ?>
+                                        <div class="post-metas hover-underline">
+                                            <div class="meta-inner d-flex">
+                                                <?php
+                                                if ($show_date == 'true') : ?>
+                                                    <div class="post-date d-flex align-items-center">
+                                                        <i class="pxli pxli-calendar-days"></i>
+                                                        <?php echo get_the_date(get_option('date_format'), $post->ID); ?>
+                                                    </div>
+                                                <?php endif; ?>
+                                                <?php
+                                                $posttags = get_the_tags($post->ID);
+                                                if ($posttags && $show_category == 'true') : ?>
+                                                    <span class="post-tags d-flex align-items-center">
+                                                        <i class="pxli pxli-tag1"></i>
+                                                        <?php
+                                                        $last_key = array_key_last($posttags);
+                                                        foreach ($posttags as $key => $tag) {
+                                                            echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                                                            if ($key != $last_key) {
+                                                                echo ', ';
+                                                            }
+                                                        }
+                                                        ?>
+                                                    </span>
+                                                <?php endif; ?>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             <?php endif; ?>
-                            <div class="item-content <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
-                                <?php if ($show_category == 'true' || $show_author == 'true' || $show_date == 'true') : ?>
-                                    <div class="post-metas hover-underline">
-                                        <div class="meta-inner d-flex">
-                                            <?php if ($show_author == 'true') : ?>
-                                                <span class="post-author">
-                                                    <span class="label"><?php echo esc_html__('By', 'basilico'); ?></span>
-                                                    <a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->display_name); ?></a>
-                                                </span>
-                                            <?php endif; ?>
-                                            <?php
-                                            if ($show_date == 'true') : ?>
-                                                <span class="post-date d-flex align-items-center">
-                                                    <?php echo get_the_date(get_option('date_format'), $post->ID); ?>
-                                                </span>
-                                            <?php endif; ?>
-                                            <?php if ($show_category == 'true') : ?>
-                                                <span class="post-category">
-                                                    <span><?php the_terms($post->ID, 'category', '', ', ', ''); ?></span>
-                                                </span>
-                                            <?php endif; ?>
-                                        </div>
-                                    </div>
-                                <?php endif; ?>
+                            <div class="item-content d-flex justify-content-center <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
                                 <h4 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h4>
                                 <?php if ($show_excerpt == true) : ?>
                                     <div class="item-excerpt">
