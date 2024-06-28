@@ -91,6 +91,15 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'icon_color',
+                            'label' => esc_html__('Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-button-more .btn-more i' => 'color: {{VALUE}};',
+                            ],
+                            'separator' => 'before',
+                        ),
+                        array(
                             'name' => 'icon_font_size',
                             'label' => esc_html__('Icon Size', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SLIDER,
