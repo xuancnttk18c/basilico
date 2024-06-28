@@ -81,6 +81,30 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-button-more .btn-more:hover' => 'color: {{VALUE}};',
                             ],
                         ),
+                        array(
+                            'name' => 'text_typography',
+                            'label' => esc_html__('Text Typography', 'basilico' ),
+                             'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-button-more .btn-more',
+                            ],
+                        ),
+                        array(
+                            'name' => 'icon_font_size',
+                            'label' => esc_html__('Icon Size', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 300,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-button-more .btn-more i' => 'font-size: {{SIZE}}{{UNIT}};',
+                            ],
+                        ),
                     ),
                 ),
             ),
