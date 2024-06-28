@@ -87,7 +87,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-button-more .btn-more',
+                                '{{WRAPPER}} .pxl-button-more .btn-more .pxl-button-text',
                             ],
                         ),
                         array(
