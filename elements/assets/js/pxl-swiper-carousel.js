@@ -1,5 +1,23 @@
 ( function( $ ) {
     // Make sure you run this code under Elementor.
+    function pxl_update_layout_height() {
+        if ($('.pxl-post-carousel.layout-post-3 .swiper-slide').length > 0) {
+            $('.pxl-post-carousel.layout-post-3 .swiper-slide').each(function() {
+                var excerptHeight = $(this).find('.item-excerpt').get(0).scrollHeight;
+                var imageHeight = $(this).find('.post-image').outerHeight();
+                $(this).find('.item-excerpt').css('max-height', '0px');
+                $(this).find('.post-image').css('max-height', imageHeight + 'px');
+                $(this).hover(function() {
+                    $(this).find('.item-excerpt').css('max-height', excerptHeight + 'px');
+                    $(this).find('.post-image').css('max-height', (imageHeight - (excerptHeight  + 14)) + 'px');
+                }, function() {
+                    $(this).find('.item-excerpt').css('max-height', '0px');
+                    $(this).find('.post-image').css('max-height', imageHeight + 'px');
+                });
+            });
+        }
+    }
+
     if( typeof Swiper == 'undefined') return;
     $(window).on("elementor/frontend/init", function () {
         elementorFrontend.hooks.addAction("frontend/element_ready/pxl_team_carousel.default", function($scope) {
@@ -47,6 +65,7 @@
         pxl_swiper_handler( $('.product-loop-carousel') );
         pxl_swiper_handler( $('.pxl-product-swiper-slider') );
         pxl_swiper_handler( $('.pxl-product-loop-carousel .pxl-product-carousel') );
+        pxl_update_layout_height();
          
     });
 
