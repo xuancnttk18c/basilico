@@ -47,20 +47,20 @@
         pxl_swiper_handler( $('.product-loop-carousel') );
         pxl_swiper_handler( $('.pxl-product-swiper-slider') );
         pxl_swiper_handler( $('.pxl-product-loop-carousel .pxl-product-carousel') );
-        
+
     });
 
     $(document).ajaxComplete(function(event, xhr, settings){  
         "use strict";
         pxl_swiper_handler( $('.product-loop-carousel') );     
     });
-    
+
     function pxl_swiper_handler($scope){
 
         var $carousel_dom = $scope.find('.pxl-swiper-slider');
         if( $scope.hasClass('pxl-swiper-slider') )
             $carousel_dom = $scope;
-        
+
         $carousel_dom.each(function(index, element) { 
             var $this = $(this);
             var settings = $this.find('.pxl-swiper-container').data().settings; 
@@ -75,7 +75,7 @@
                 prev_el = $this.find('.pxl-swiper-arrow-prev.swiper-parent')[0];
                 dots_el = $this.find('.pxl-swiper-dots.swiper-parent')[0];
             }
-            
+
             if( $this.find('.pxl-swiper-slider-thumbs .pxl-swiper-arrows').length > 0){
                 next_el = [$this.find('.pxl-swiper-arrow-next')[0], $this.find('.pxl-swiper-arrow-next')[1]];
                 prev_el = [$this.find('.pxl-swiper-arrow-prev')[0], $this.find('.pxl-swiper-arrow-prev')[1]]; 
@@ -83,7 +83,7 @@
             if( $this.find('.pxl-swiper-slider-thumbs .pxl-swiper-dots').length > 0){
                 dots_el = [$this.find('.pxl-swiper-dots')[0], $this.find('.pxl-swiper-dots')[1]];
             }
-            
+
             var carousel_settings = {
                 direction: settings['slide_direction'],
                 effect: settings['slide_mode'],
@@ -184,12 +184,12 @@
                         $this.find('.pxl-bd-anm').each(function(){
                             $(this).addClass('pxl-animated');
                         });
-                        
+
                     },
                     
                 },
             };
-            
+
             if(settings['center_slide'] == true || settings['center_slide'] == 'true')
                 carousel_settings['centeredSlides'] = true;
 
@@ -219,10 +219,10 @@
                 carousel_settings['breakpoints'][576]['spaceBetween'] = parseInt(settings['slides_gutter_md']);
                 carousel_settings['breakpoints'][768]['spaceBetween'] = parseInt(settings['slides_gutter_md']);
             }
-            
+
             
             if($this.find('.pxl-swiper-thumbs').length > 0){  
-                
+
                 var thumb_carousel_settings = pxl_get_thumbs_setting($this.find('.pxl-swiper-thumbs'));
                 thumb_carousel_settings['slideThumbActiveClass'] = 'swiper-slide-thumb-active';
                 thumb_carousel_settings['thumbsContainerClass'] = 'swiper-container-thumbs';
@@ -234,12 +234,12 @@
                 });
 
                 carousel_settings['thumbs'] = { swiper: slide_thumbs, autoScrollOffset: 1 };
-                
+
             }
             
             //initial swiper
             var swiper = new Swiper($this.find('.pxl-swiper-container')[0], carousel_settings);
-            
+
             if(settings['autoplay'] && settings['pause_on_hover'] ){
                 $( $this.find('.pxl-swiper-container') ).on({
                     mouseenter: function mouseenter() {
@@ -265,7 +265,7 @@
                     swiper = new Swiper($this.find('.pxl-swiper-container')[0], carousel_settings);
 
                 }else {
-                   
+
                     parent.find(".swiper-slide").not("[data-filter^='"+target+"'], [data-filter*=' "+target+"']").addClass("non-swiper-slide").removeClass("swiper-slide");
                     parent.find("[data-filter^='"+target+"'], [data-filter*=' "+target+"']").removeClass("non-swiper-slide").addClass("swiper-slide");
                     
@@ -274,8 +274,8 @@
                 }
             });
 
-            if ($('.pxl-post-carousel.layout-post-3 .swiper-slide').length > 0) {
-                $('.pxl-post-carousel.layout-post-3 .swiper-slide').each(function() {
+            if ($(this).hasClass('layout-post-3')) {
+                $(this).find('.swiper-slide').each(function() {
                     var excerptHeight = $(this).find('.item-excerpt').get(0).scrollHeight;
                     var imageHeight = $(this).find('.post-image').outerHeight();
                     $(this).find('.item-excerpt').css('max-height', '0px');
@@ -296,7 +296,7 @@ function getDirection($thumb_node) {
     var windowWidth = window.innerWidth;
     var thumbs_settings = $thumb_node.data().settings;
     var direction = (window.innerWidth <= 991 && typeof thumbs_settings['slide_direction_mobile'] !== 'undefined' ) ? thumbs_settings['slide_direction_mobile'] : thumbs_settings['slide_direction'];
-    
+
     return direction;
 }
 
@@ -365,7 +365,7 @@ function pxl_get_thumbs_setting($thumb_node){
     } else {
         thumbs_settings_params['autoplay'] = false;
     }
-    
+
     if(thumbs_settings['slides_gutter_md']){
         thumbs_settings_params['breakpoints'][0]['spaceBetween'] = parseInt(thumbs_settings['slides_gutter_md']);
         thumbs_settings_params['breakpoints'][576]['spaceBetween'] = parseInt(thumbs_settings['slides_gutter_md']);
