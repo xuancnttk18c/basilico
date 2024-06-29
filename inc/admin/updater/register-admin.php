@@ -20,7 +20,7 @@ class Basilico_Register {
 	protected $version = null;
 	protected $renew_url = null;
 	protected $strings = null;
-
+	protected $author = null;
 
 	/**
 	 * Initialize the class.
