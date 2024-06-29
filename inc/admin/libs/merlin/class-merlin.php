@@ -1399,7 +1399,7 @@ class Merlin {
 					}
 				}
 			}
-		} 
+		}
 
 		return $plugins;
 	}

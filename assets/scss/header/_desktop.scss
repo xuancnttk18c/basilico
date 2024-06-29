@@ -11,6 +11,8 @@
 }
 
 #pxl-header{
+    position: relative;
+    z-index: 9;
     @include transition(all 0.3s cubic-bezier(.3,.4,.5, 1) 0s);
 }
 
