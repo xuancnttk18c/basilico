@@ -14,6 +14,12 @@ class Basilico_Admin_Page extends Basilico_Base {
 
 	public $icon = 'dashicons-art';
 	
+	public $id;
+	
+	public $page_title;
+	
+	public $menu_title;
+	
     public $position;
   
 	public function __construct() {

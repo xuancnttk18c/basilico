@@ -8,11 +8,6 @@ if( !defined( 'ABSPATH' ) )
 
 class Basilico_Admin_Dashboard extends Basilico_Admin_Page {
 
-	protected $id;
-	protected $page_title;
-	protected $menu_title;
-	protected $position;
-
 	public function __construct() {
 		$this->id = 'pxlart';
 		$this->page_title = basilico()->get_name();

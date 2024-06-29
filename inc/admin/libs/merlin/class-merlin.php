@@ -212,6 +212,12 @@ class Merlin {
 	 */
 	public $logger;
 
+	protected $ready_big_button_url;
+
+	protected $slug;
+
+	protected $hook_suffix;
+
 	/**
 	 * Setup plugin version.
 	 *
@@ -398,7 +404,7 @@ class Merlin {
 	public function ignore() {
 
 		// Bail out if not on correct page.
-		if ( !isset( $_GET['_wpnonce'] ) || ( !wp_verify_nonce( $_GET['_wpnonce'], 'merlinwp-ignore-nounce' ) || !is_admin() || !isset( $_GET[ $this->ignore ] ) || !current_user_can( 'manage_options' ) ) ) {
+		if ( ! isset( $_GET['_wpnonce'] ) || ( ! wp_verify_nonce( $_GET['_wpnonce'], 'merlinwp-ignore-nounce' ) || ! is_admin() || ! isset( $_GET[ $this->ignore ] ) || ! current_user_can( 'manage_options' ) ) ) {
 			return;
 		}
 
@@ -470,7 +476,7 @@ class Merlin {
 		wp_enqueue_script( 'pxlart-admin', get_template_directory_uri() . '/inc/admin/assets/js/admin.js', array( 'jquery'), false, true );
 
 		$texts = array(
-			'something_went_wrong' => esc_html__( 'Something went wrong. Please refresh the page and try again!', 'basilico' ),
+			'something_went_wrong' => esc_html__( 'Something went wrong. Please refresh the page and try again!', 'carmelina' ),
 		);
 
 		// Localize the javascript.
@@ -617,12 +623,12 @@ class Merlin {
 
 		// Make sure $args are an array.
 		if ( empty( $args ) ) {
-			return esc_html__( 'Please define default parameters in the form of an array.', 'basilico' );
+			return esc_html__( 'Please define default parameters in the form of an array.', 'carmelina' );
 		}
 
 		// Define an icon.
 		if ( false === array_key_exists( 'icon', $args ) ) {
-			return esc_html__( 'Please define an SVG icon filename.', 'basilico' );
+			return esc_html__( 'Please define an SVG icon filename.', 'carmelina' );
 		}
 
 		// Set defaults.
@@ -731,20 +737,20 @@ class Merlin {
 
 		$this->steps = array(
 			'welcome' => array(
-				'name'    => esc_html__( 'Welcome', 'basilico' ),
+				'name'    => esc_html__( 'Welcome', 'carmelina' ),
 				'view'    => array( $this, 'welcome' ),
 				'handler' => array( $this, 'welcome_handler' ),
 			),
 		);
 
 		/*$this->steps['child'] = array(
-			'name' => esc_html__( 'Child', 'basilico' ),
+			'name' => esc_html__( 'Child', 'carmelina' ),
 			'view' => array( $this, 'child' ),
 		);*/
 
 		if ( $this->license_step_enabled ) {
 			$this->steps['license'] = array(
-				'name' => esc_html__( 'License', 'basilico' ),
+				'name' => esc_html__( 'License', 'carmelina' ),
 				'view' => array( $this, 'license' ),
 			);
 		}
@@ -752,7 +758,7 @@ class Merlin {
 		// Show the plugin importer, only if TGMPA is included.
 		if ( class_exists( 'TGM_Plugin_Activation' ) ) {
 			$this->steps['plugins'] = array(
-				'name' => esc_html__( 'Plugins', 'basilico' ),
+				'name' => esc_html__( 'Plugins', 'carmelina' ),
 				'view' => array( $this, 'plugins' ),
 			);
 		}
@@ -760,13 +766,13 @@ class Merlin {
 		// Show the content importer, only if there's demo content added.
 		if ( ! empty( $this->import_files ) ) {
 			$this->steps['content'] = array(
-				'name' => esc_html__( 'Content', 'basilico' ),
+				'name' => esc_html__( 'Content', 'carmelina' ),
 				'view' => array( $this, 'content' ),
 			);
 		}
 
 		$this->steps['ready'] = array(
-			'name' => esc_html__( 'Ready', 'basilico' ),
+			'name' => esc_html__( 'Ready', 'carmelina' ),
 			'view' => array( $this, 'ready' ),
 		);
 
@@ -885,7 +891,7 @@ class Merlin {
 		</footer>
 
 	<?php
-		$this->logger->debug( esc_html__( 'The welcome step has been displayed', 'basilico' ) );
+		$this->logger->debug( esc_html__( 'The welcome step has been displayed', 'carmelina' ) );
 	}
 
 	/**
@@ -927,7 +933,7 @@ class Merlin {
 		$next      = $strings['btn-next']; 
 		$paragraph = ! $is_theme_registered ? $strings['license%s'] : $strings['license-success%s'];
 		$install   = $strings['btn-license-activate']; 
-		$register = new Basilico_Register;
+		$register = new Carmelina_Register;
 		?>
 
 		<?php 
@@ -991,7 +997,7 @@ class Merlin {
 			<?php wp_nonce_field( 'merlin' ); ?>
 		</footer>
 		<?php
-		$this->logger->debug( esc_html__( 'The license activation step has been displayed', 'basilico' ) );
+		$this->logger->debug( esc_html__( 'The license activation step has been displayed', 'carmelina' ) );
 	}
 
 
@@ -1001,7 +1007,7 @@ class Merlin {
 	 * @return boolean
 	 */
 	private function is_theme_registered() {
-		$dev_mode = (defined('DEV_MODE') && DEV_MODE);
+		$dev_mode = apply_filters( 'pxl_set_dev_mode', (defined('DEV_MODE') && DEV_MODE)) ;
 		if( $dev_mode === true) return true;
 		$is_registered = get_option( $this->edd_theme_slug . '_license_key_status', false ) === 'valid';
 		return apply_filters( 'merlin_is_theme_registered', $is_registered );
@@ -1063,7 +1069,7 @@ class Merlin {
 			<?php wp_nonce_field( 'merlin' ); ?>
 		</footer>
 	<?php
-		$this->logger->debug( esc_html__( 'The child theme installation step has been displayed', 'basilico' ) );
+		$this->logger->debug( esc_html__( 'The child theme installation step has been displayed', 'carmelina' ) );
 	}
 
 	/**
@@ -1150,8 +1156,8 @@ class Merlin {
 								<span><?php echo esc_html( $plugin['name'] ); ?></span>
 
 								<span class="badge">
-									<span class="hint--top" aria-label="<?php esc_html_e( 'Required', 'basilico' ); ?>">
-										<?php esc_html_e( 'Required', 'basilico' ); ?>
+									<span class="hint--top" aria-label="<?php esc_html_e( 'Required', 'carmelina' ); ?>">
+										<?php esc_html_e( 'Required', 'carmelina' ); ?>
 									</span>
 								</span>
 							</label>
@@ -1191,7 +1197,7 @@ class Merlin {
 		</form>
 
 	<?php
-		$this->logger->debug( esc_html__( 'The plugin installation step has been displayed', 'basilico' ) );
+		$this->logger->debug( esc_html__( 'The plugin installation step has been displayed', 'carmelina' ) );
 	}
 
 	/**
@@ -1241,7 +1247,7 @@ class Merlin {
 					</select>
 
 					<div class="merlin__select-control-help">
-						<span class="hint--top" aria-label="<?php echo esc_attr__( 'Select Demo', 'basilico' ); ?>">
+						<span class="hint--top" aria-label="<?php echo esc_attr__( 'Select Demo', 'carmelina' ); ?>">
 							<?php echo wp_kses( $this->svg( array( 'icon' => 'downarrow' ) ), $this->svg_allowed_html() ); ?>
 						</span>
 					</div>
@@ -1287,7 +1293,7 @@ class Merlin {
 		</form>
 
 	<?php
-		$this->logger->debug( esc_html__( 'The content import step has been displayed', 'basilico' ) );
+		$this->logger->debug( esc_html__( 'The content import step has been displayed', 'carmelina' ) );
 	}
 
 
@@ -1367,7 +1373,7 @@ class Merlin {
 		</footer>
 
 	<?php
-		$this->logger->debug( esc_html__( 'The final step has been displayed', 'basilico' ) );
+		$this->logger->debug( esc_html__( 'The final step has been displayed', 'carmelina' ) );
 	}
 
 	/**
@@ -1399,7 +1405,7 @@ class Merlin {
 					}
 				}
 			}
-		}
+		} 
 
 		return $plugins;
 	}
@@ -1444,7 +1450,7 @@ class Merlin {
 				switch_theme( $slug );
 			endif;
 
-			$this->logger->debug( esc_html__( 'The existing child theme was activated', 'basilico' ) );
+			$this->logger->debug( esc_html__( 'The existing child theme was activated', 'carmelina' ) );
 
 			wp_send_json(
 				array(
@@ -1461,7 +1467,7 @@ class Merlin {
 			switch_theme( $slug );
 		endif;
 
-		$this->logger->debug( esc_html__( 'The newly generated child theme was activated', 'basilico' ) );
+		$this->logger->debug( esc_html__( 'The newly generated child theme was activated', 'carmelina' ) );
 
 		wp_send_json(
 			array(
@@ -1482,7 +1488,7 @@ class Merlin {
 			wp_send_json(
 				array(
 					'success' => false,
-					'message' => esc_html__( 'Yikes! The theme activation failed. Please try again or contact support.', 'basilico' ),
+					'message' => esc_html__( 'Yikes! The theme activation failed. Please try again or contact support.', 'carmelina' ),
 				)
 			);
 		}
@@ -1491,7 +1497,7 @@ class Merlin {
 			wp_send_json(
 				array(
 					'success' => false,
-					'message' => esc_html__( 'Please add your license key before attempting to activate one.', 'basilico' ),
+					'message' => esc_html__( 'Please add your license key before attempting to activate one.', 'carmelina' ),
 				)
 			);
 		}
@@ -1504,7 +1510,7 @@ class Merlin {
 			$result = apply_filters( 'merlin_ajax_activate_license', $license_key );
 		}
 
-		$this->logger->debug( esc_html__( 'The license activation was performed with the following results', 'basilico' ), $result );
+		$this->logger->debug( esc_html__( 'The license activation was performed with the following results', 'carmelina' ), $result );
 
 		wp_send_json( array_merge( array( 'done' => 1 ), $result ) );
 	}
@@ -1550,7 +1556,7 @@ class Merlin {
 			if ( is_wp_error( $response ) ) {
 				$message = $response->get_error_message();
 			} else {
-				$message = esc_html__( 'An error occurred, please try again.', 'basilico' );
+				$message = esc_html__( 'An error occurred, please try again.', 'carmelina' );
 			}
 		} else {
 
@@ -1563,35 +1569,35 @@ class Merlin {
 					case 'expired':
 						$message = sprintf(
 							/* translators: Expiration date */
-							esc_html__( 'Your license key expired on %s.', 'basilico' ),
+							esc_html__( 'Your license key expired on %s.', 'carmelina' ),
 							date_i18n( get_option( 'date_format' ), strtotime( $license_data->expires, current_time( 'timestamp' ) ) )
 						);
 						break;
 
 					case 'revoked':
-						$message = esc_html__( 'Your license key has been disabled.', 'basilico' );
+						$message = esc_html__( 'Your license key has been disabled.', 'carmelina' );
 						break;
 
 					case 'missing':
-						$message = esc_html__( 'This appears to be an invalid license key. Please try again or contact support.', 'basilico' );
+						$message = esc_html__( 'This appears to be an invalid license key. Please try again or contact support.', 'carmelina' );
 						break;
 
 					case 'invalid':
 					case 'site_inactive':
-						$message = esc_html__( 'Your license is not active for this URL.', 'basilico' );
+						$message = esc_html__( 'Your license is not active for this URL.', 'carmelina' );
 						break;
 
 					case 'item_name_mismatch':
 						/* translators: EDD Item Name */
-						$message = sprintf( esc_html__( 'This appears to be an invalid license key for %s.', 'basilico' ), $this->edd_item_name );
+						$message = sprintf( esc_html__( 'This appears to be an invalid license key for %s.', 'carmelina' ), $this->edd_item_name );
 						break;
 
 					case 'no_activations_left':
-						$message = esc_html__( 'Your license key has reached its activation limit.', 'basilico' );
+						$message = esc_html__( 'Your license key has reached its activation limit.', 'carmelina' );
 						break;
 
 					default:
-						$message = esc_html__( 'An error occurred, please try again.', 'basilico' );
+						$message = esc_html__( 'An error occurred, please try again.', 'carmelina' );
 						break;
 				}
 			} else {
@@ -1681,7 +1687,7 @@ class Merlin {
 		// Let's remove the tabs so that it displays nicely.
 		$output = trim( preg_replace( '/\t+/', '', $output ) );
 
-		$this->logger->debug( esc_html__( 'The child theme functions.php content was generated', 'basilico' ) );
+		$this->logger->debug( esc_html__( 'The child theme functions.php content was generated', 'carmelina' ) );
 
 		// Filterable return.
 		return apply_filters( 'merlin_generate_child_functions_php', $output, $slug );
@@ -1712,7 +1718,7 @@ class Merlin {
 		// Let's remove the tabs so that it displays nicely.
 		$output = trim( preg_replace( '/\t+/', '', $output ) );
 
-		$this->logger->debug( esc_html__( 'The child theme style.css content was generated', 'basilico' ) );
+		$this->logger->debug( esc_html__( 'The child theme style.css content was generated', 'carmelina' ) );
 
 		return apply_filters( 'merlin_generate_child_style_css', $output, $slug, $parent, $version );
 	}
@@ -1746,9 +1752,9 @@ class Merlin {
 		if ( ! empty( $screenshot ) && file_exists( $screenshot ) ) {
 			$copied = copy( $screenshot, $path . '/screenshot.' . $screenshot_ext );
 
-			$this->logger->debug( esc_html__( 'The child theme screenshot was copied to the child theme, with the following result', 'basilico' ), array( 'copied' => $copied ) );
+			$this->logger->debug( esc_html__( 'The child theme screenshot was copied to the child theme, with the following result', 'carmelina' ), array( 'copied' => $copied ) );
 		} else {
-			$this->logger->debug( esc_html__( 'The child theme screenshot was not generated, because of these results', 'basilico' ), array( 'screenshot' => $screenshot ) );
+			$this->logger->debug( esc_html__( 'The child theme screenshot was not generated, because of these results', 'carmelina' ), array( 'screenshot' => $screenshot ) );
 		}
 	}
 
@@ -1777,7 +1783,7 @@ class Merlin {
 					'_wpnonce'      => wp_create_nonce( 'bulk-plugins' ),
 					'action'        => 'tgmpa-bulk-activate',
 					'action2'       => - 1,
-					'message'       => esc_html__( 'Activating', 'basilico' ),
+					'message'       => esc_html__( 'Activating', 'carmelina' ),
 				);
 				break;
 			}
@@ -1793,7 +1799,7 @@ class Merlin {
 					'_wpnonce'      => wp_create_nonce( 'bulk-plugins' ),
 					'action'        => 'tgmpa-bulk-update',
 					'action2'       => - 1,
-					'message'       => esc_html__( 'Updating', 'basilico' ),
+					'message'       => esc_html__( 'Updating', 'carmelina' ),
 				);
 				break;
 			}
@@ -1809,7 +1815,7 @@ class Merlin {
 					'_wpnonce'      => wp_create_nonce( 'bulk-plugins' ),
 					'action'        => 'tgmpa-bulk-install',
 					'action2'       => - 1,
-					'message'       => esc_html__( 'Installing', 'basilico' ),
+					'message'       => esc_html__( 'Installing', 'carmelina' ),
 				);
 				break;
 			}
@@ -1817,7 +1823,7 @@ class Merlin {
  
 		if ( $json ) {
 			$this->logger->debug(
-				__( 'A plugin with the following data will be processed', 'basilico' ),
+				__( 'A plugin with the following data will be processed', 'carmelina' ),
 				array(
 					'plugin_slug' => sanitize_title($_POST['slug']),
 					'message'     => $json['message'],
@@ -1825,11 +1831,11 @@ class Merlin {
 			);
 
 			$json['hash']    = md5( serialize( $json ) );
-			$json['message'] = esc_html__( 'Installing', 'basilico' );
+			$json['message'] = esc_html__( 'Installing', 'carmelina' );
 			wp_send_json( $json );
 		} else {
 			$this->logger->debug(
-				__( 'A plugin with the following data was processed', 'basilico' ),
+				__( 'A plugin with the following data was processed', 'carmelina' ),
 				array(
 					'plugin_slug' => sanitize_title($_POST['slug']),
 				)
@@ -1838,7 +1844,7 @@ class Merlin {
 			wp_send_json(
 				array(
 					'done'    => 1,
-					'message' => esc_html__( 'Success', 'basilico' ),
+					'message' => esc_html__( 'Success', 'carmelina' ),
 				)
 			);
 		}
@@ -1861,12 +1867,12 @@ class Merlin {
 		}
 
 		if ( ! check_ajax_referer( 'merlin_nonce', 'wpnonce' ) || empty( $_POST['content'] ) && isset( $content[ $_POST['content'] ] ) ) {
-			$this->logger->error( esc_html__( 'The content importer AJAX call failed to start, because of incorrect data', 'basilico' ) );
+			$this->logger->error( esc_html__( 'The content importer AJAX call failed to start, because of incorrect data', 'carmelina' ) );
 
 			wp_send_json_error(
 				array(
 					'error'   => 1,
-					'message' => esc_html__( 'Invalid content!', 'basilico' ),
+					'message' => esc_html__( 'Invalid content!', 'carmelina' ),
 				)
 			);
 		}
@@ -1877,7 +1883,7 @@ class Merlin {
 		if ( isset( $_POST['proceed'] ) ) {
 			if ( is_callable( $this_content['install_callback'] ) ) {
 				$this->logger->info(
-					__( 'The content import AJAX call will be executed with this import data', 'basilico' ),
+					__( 'The content import AJAX call will be executed with this import data', 'carmelina' ),
 					array(
 						'title' => $this_content['title'],
 						'data'  => $this_content['data'],
@@ -1919,7 +1925,7 @@ class Merlin {
 			wp_send_json( $json );
 		} else {
 			$this->logger->error(
-				__( 'The content import AJAX call failed with this passed data', 'basilico' ),
+				__( 'The content import AJAX call failed with this passed data', 'carmelina' ),
 				array(
 					'selected_content_index' => $selected_import,
 					'importing_content'      => $_POST['content'],
@@ -1930,7 +1936,7 @@ class Merlin {
 			wp_send_json(
 				array(
 					'error'   => 1,
-					'message' => esc_html__( 'Error', 'basilico' ),
+					'message' => esc_html__( 'Error', 'carmelina' ),
 					'logs'    => '',
 					'errors'  => '',
 				)
@@ -1944,12 +1950,12 @@ class Merlin {
 	 */
 	public function _ajax_get_total_content_import_items() {
 		if ( ! check_ajax_referer( 'merlin_nonce', 'wpnonce' ) && empty( $_POST['selected_index'] ) ) {
-			$this->logger->error( esc_html__( 'The content importer AJAX call for retrieving total content import items failed to start, because of incorrect data.', 'basilico' ) );
+			$this->logger->error( esc_html__( 'The content importer AJAX call for retrieving total content import items failed to start, because of incorrect data.', 'carmelina' ) );
 
 			wp_send_json_error(
 				array(
 					'error'   => 1,
-					'message' => esc_html__( 'Invalid data!', 'basilico' ),
+					'message' => esc_html__( 'Invalid data!', 'carmelina' ),
 				)
 			);
 		}
@@ -2040,11 +2046,11 @@ class Merlin {
 
 		if ( ! empty( $import_files['content'] ) ) {
 			$content['content'] = array(
-				'title'            => esc_html__( 'Content', 'basilico' ),
-				'description'      => esc_html__( 'Demo content data.', 'basilico' ),
-				'pending'          => esc_html__( 'Pending', 'basilico' ),
-				'installing'       => esc_html__( 'Installing', 'basilico' ),
-				'success'          => esc_html__( 'Success', 'basilico' ),
+				'title'            => esc_html__( 'Content', 'carmelina' ),
+				'description'      => esc_html__( 'Demo content data.', 'carmelina' ),
+				'pending'          => esc_html__( 'Pending', 'carmelina' ),
+				'installing'       => esc_html__( 'Installing', 'carmelina' ),
+				'success'          => esc_html__( 'Success', 'carmelina' ),
 				'checked'          => $this->is_possible_upgrade() ? 0 : 1,
 				'install_callback' => array( $this->importer, 'import' ),
 				'data'             => $import_files['content'],
@@ -2053,11 +2059,11 @@ class Merlin {
 
 		if ( ! empty( $import_files['widgets'] ) ) {
 			$content['widgets'] = array(
-				'title'            => esc_html__( 'Widgets', 'basilico' ),
-				'description'      => esc_html__( 'Sample widgets data.', 'basilico' ),
-				'pending'          => esc_html__( 'Pending', 'basilico' ),
-				'installing'       => esc_html__( 'Installing', 'basilico' ),
-				'success'          => esc_html__( 'Success', 'basilico' ),
+				'title'            => esc_html__( 'Widgets', 'carmelina' ),
+				'description'      => esc_html__( 'Sample widgets data.', 'carmelina' ),
+				'pending'          => esc_html__( 'Pending', 'carmelina' ),
+				'installing'       => esc_html__( 'Installing', 'carmelina' ),
+				'success'          => esc_html__( 'Success', 'carmelina' ),
 				'install_callback' => array( 'Merlin_Widget_Importer', 'import' ),
 				'checked'          => $this->is_possible_upgrade() ? 0 : 1,
 				'data'             => $import_files['widgets'],
@@ -2066,11 +2072,11 @@ class Merlin {
 
 		if ( ! empty( $import_files['sliders'] ) ) {
 			$content['sliders'] = array(
-				'title'            => esc_html__( 'Revolution Slider', 'basilico' ),
-				'description'      => esc_html__( 'Sample Revolution sliders data.', 'basilico' ),
-				'pending'          => esc_html__( 'Pending', 'basilico' ),
-				'installing'       => esc_html__( 'Installing', 'basilico' ),
-				'success'          => esc_html__( 'Success', 'basilico' ),
+				'title'            => esc_html__( 'Revolution Slider', 'carmelina' ),
+				'description'      => esc_html__( 'Sample Revolution sliders data.', 'carmelina' ),
+				'pending'          => esc_html__( 'Pending', 'carmelina' ),
+				'installing'       => esc_html__( 'Installing', 'carmelina' ),
+				'success'          => esc_html__( 'Success', 'carmelina' ),
 				'install_callback' => array( $this, 'import_revolution_sliders' ),
 				'checked'          => $this->is_possible_upgrade() ? 0 : 1,
 				'data'             => $import_files['sliders'],
@@ -2079,11 +2085,11 @@ class Merlin {
 
 		if ( ! empty( $import_files['options'] ) ) {
 			$content['options'] = array(
-				'title'            => esc_html__( 'Options', 'basilico' ),
-				'description'      => esc_html__( 'Sample theme options data.', 'basilico' ),
-				'pending'          => esc_html__( 'Pending', 'basilico' ),
-				'installing'       => esc_html__( 'Installing', 'basilico' ),
-				'success'          => esc_html__( 'Success', 'basilico' ),
+				'title'            => esc_html__( 'Options', 'carmelina' ),
+				'description'      => esc_html__( 'Sample theme options data.', 'carmelina' ),
+				'pending'          => esc_html__( 'Pending', 'carmelina' ),
+				'installing'       => esc_html__( 'Installing', 'carmelina' ),
+				'success'          => esc_html__( 'Success', 'carmelina' ),
 				'install_callback' => array( 'Merlin_Customizer_Importer', 'import' ),
 				'checked'          => $this->is_possible_upgrade() ? 0 : 1,
 				'data'             => $import_files['options'],
@@ -2092,11 +2098,11 @@ class Merlin {
 
 		if ( ! empty( $import_files['redux'] ) ) {
 			$content['redux'] = array(
-				'title'            => esc_html__( 'Redux Options', 'basilico' ),
-				'description'      => esc_html__( 'Redux framework options.', 'basilico' ),
-				'pending'          => esc_html__( 'Pending', 'basilico' ),
-				'installing'       => esc_html__( 'Installing', 'basilico' ),
-				'success'          => esc_html__( 'Success', 'basilico' ),
+				'title'            => esc_html__( 'Redux Options', 'carmelina' ),
+				'description'      => esc_html__( 'Redux framework options.', 'carmelina' ),
+				'pending'          => esc_html__( 'Pending', 'carmelina' ),
+				'installing'       => esc_html__( 'Installing', 'carmelina' ),
+				'success'          => esc_html__( 'Success', 'carmelina' ),
 				'install_callback' => array( 'Merlin_Redux_Importer', 'import' ),
 				'checked'          => $this->is_possible_upgrade() ? 0 : 1,
 				'data'             => $import_files['redux'],
@@ -2105,11 +2111,11 @@ class Merlin {
 
 		if ( false !== has_action( 'merlin_after_all_import' ) ) {
 			$content['after_import'] = array(
-				'title'            => esc_html__( 'After import setup', 'basilico' ),
-				'description'      => esc_html__( 'After import setup.', 'basilico' ),
-				'pending'          => esc_html__( 'Pending', 'basilico' ),
-				'installing'       => esc_html__( 'Installing', 'basilico' ),
-				'success'          => esc_html__( 'Success', 'basilico' ),
+				'title'            => esc_html__( 'After import setup', 'carmelina' ),
+				'description'      => esc_html__( 'After import setup.', 'carmelina' ),
+				'pending'          => esc_html__( 'Pending', 'carmelina' ),
+				'installing'       => esc_html__( 'Installing', 'carmelina' ),
+				'success'          => esc_html__( 'Success', 'carmelina' ),
 				'install_callback' => array( $this->hooks, 'after_all_import_action' ),
 				'checked'          => $this->is_possible_upgrade() ? 0 : 1,
 				'data'             => $selected_import_index,
@@ -2135,7 +2141,7 @@ class Merlin {
 
 		$response = $importer->importSliderFromPost( true, true, $file );
 
-		$this->logger->info( esc_html__( 'The revolution slider import was executed', 'basilico' ) );
+		$this->logger->info( esc_html__( 'The revolution slider import was executed', 'carmelina' ) );
 
 		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 			return 'true';
@@ -2151,7 +2157,7 @@ class Merlin {
 	 */
 	public function pt_importer_new_ajax_request_response_data( $data ) {
 		$data['url']      = admin_url( 'admin-ajax.php' );
-		$data['message']  = esc_html__( 'Installing', 'basilico' );
+		$data['message']  = esc_html__( 'Installing', 'carmelina' );
 		$data['proceed']  = 'true';
 		$data['action']   = 'merlin_content';
 		$data['content']  = 'content';
@@ -2172,7 +2178,7 @@ class Merlin {
 			update_option( 'page_on_front', $homepage->ID );
 			update_option( 'show_on_front', 'page' );
 
-			$this->logger->debug( esc_html__( 'The home page was set', 'basilico' ), array( 'homepage_id' => $homepage ) );
+			$this->logger->debug( esc_html__( 'The home page was set', 'carmelina' ), array( 'homepage_id' => $homepage ) );
 		}
 
 		// Set static blog page.
@@ -2182,7 +2188,7 @@ class Merlin {
 			update_option( 'page_for_posts', $blogpage->ID );
 			update_option( 'show_on_front', 'page' );
 
-			$this->logger->debug( esc_html__( 'The blog page was set', 'basilico' ), array( 'blog_page_id' => $blogpage ) );
+			$this->logger->debug( esc_html__( 'The blog page was set', 'carmelina' ), array( 'blog_page_id' => $blogpage ) );
 		}
 	}
 
@@ -2197,7 +2203,7 @@ class Merlin {
 			$hello_world->post_status = 'draft';
 			wp_update_post( $hello_world );
 
-			$this->logger->debug( esc_html__( 'The Hello world post status was set to draft', 'basilico' ) );
+			$this->logger->debug( esc_html__( 'The Hello world post status was set to draft', 'carmelina' ) );
 		}
 	}
 
@@ -2221,7 +2227,7 @@ class Merlin {
 			if ( ! empty( $import_file['import_file_name'] ) ) {
 				$filtered_import_file_info[] = $import_file;
 			} else {
-				$this->logger->warning( esc_html__( 'This predefined demo import does not have the name parameter: import_file_name', 'basilico' ), $import_file );
+				$this->logger->warning( esc_html__( 'This predefined demo import does not have the name parameter: import_file_name', 'carmelina' ), $import_file );
 			}
 		}
 
