@@ -11,7 +11,7 @@ class Basilico_Admin_Dashboard extends Basilico_Admin_Page {
 	private $id;
 	private $page_title;
 	private $menu_title;
-	private $position;
+	public $position;
 
 	public function __construct() {
 		$this->id = 'pxlart';
