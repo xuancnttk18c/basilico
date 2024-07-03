@@ -11,6 +11,7 @@ $widget->add_render_attribute('opts', [
         'swipe' => $widget->get_setting("swipe", "false")
     ])
 ]);
+$fade = $widget->get_setting("fade", "false");
 $arrows = $widget->get_setting("arrows", "false");
 $arrows_style = $widget->get_setting("arrows_style", "style-df");
 $dots_style = basilico()->get_theme_opt('swiper_pagination_style', 'style-df');

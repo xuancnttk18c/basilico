@@ -64,6 +64,12 @@ pxl_add_custom_widget(
                     'controls' => array_merge(
                         array(
                             array(
+                                'name' => 'fade',
+                                'label' => esc_html__('Fade Effect', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                                'default' => 'false',
+                            ),
+                            array(
                                 'name' => 'arrows',
                                 'label' => esc_html__('Show Arrows', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
