@@ -3717,9 +3717,9 @@
                 top: 0;
                 background-color: rgba(0, 0, 0, 0.5);
                 backdrop-filter: blur(10px);
-                transform: scaleY(0);
+                clip-path: inset(100% 0 0 0);
                 transform-origin: bottom;
-                transition: all 400ms ease;
+                transition: all 400ms ease-out;
             }
             &:hover {
                 &:after {
@@ -3729,7 +3729,7 @@
                     opacity: 0;
                 }
                 .content-inner {
-                    transform: scaleX(1);
+                    clip-path: inset(0 0 0 0);
                 }
             }
         }
