@@ -496,7 +496,7 @@ if (!class_exists('Basilico_Blog')) {
         {
             $post_social_share = basilico()->get_theme_opt('post_social_share', false);
             $share_icons = basilico()->get_theme_opt('post_social_share_icon', []);
-            $count    = get_post_meta($post_id, 'post_share_count', true);
+            $count = get_post_meta($post_id, 'post_share_count', true);
             $count_number = $count ? ' ' . basilico_convert_post_count($count) : '';
             if ($post_social_share != '1') return;
             $post = get_post($post_id);
