@@ -6,6 +6,7 @@ $default_settings = [
 $settings = array_merge($default_settings, $settings);
 $widget->add_render_attribute('opts', [
     'data-settings' => wp_json_encode([
+        'fade' => $widget->get_setting("fade", "false"),
         'dots' => $widget->get_setting("dots", "false"),
         'dots_style' => basilico()->get_theme_opt('swiper_pagination_style', 'style-df'),
         'swipe' => $widget->get_setting("swipe", "false")
