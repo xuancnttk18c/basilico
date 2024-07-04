@@ -93,10 +93,15 @@ body:has(.pxl-header-sticky.h-fixed) {
 
 .btn-location-btn-custom {
     a {
+        &:after {
+            content: none !important;
+        }
         span {
+            @include d-flex();
             align-items: center;
             &:after {
                 content: '\e9ab';
+                display: inline-flex;
                 font-family: $pxli_font;
                 line-height: 1;
                 max-width: 0px;
