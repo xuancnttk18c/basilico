@@ -551,7 +551,7 @@
     function basilico_cursor_animate() {
         if($(document).find("#circle-cursor").length > 0) {
             const cursor = document.querySelector("#circle-cursor");
-            let anchors  = document.querySelectorAll(".custom-style");
+            let anchors  = document.querySelectorAll(".add-custom-cursor");
             let anchorsremove  = document.querySelectorAll(".remove-cursor");
             const circleStyle = cursor.style;
 

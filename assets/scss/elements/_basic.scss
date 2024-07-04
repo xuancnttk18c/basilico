@@ -45,6 +45,30 @@
     }
 }
 
+#circle-cursor {
+    line-height: 102px;
+    width: 102px;
+    height: 102px;
+    background-color: $white;
+    @include border-radius(100%);
+    position: fixed;
+    font-family: $heading_font_family;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: $heading_color;
+    z-index: 86;
+    text-transform: uppercase;
+    pointer-events: none;
+    opacity: 0;
+    @include transform(scale(0.5));
+    @include transition( all .18s ease);
+    &.enlarged {
+        @include transform(scale(1));
+        opacity: 1;
+    }
+}
+
 //* Swiper Button
 .e-widget-swiper {
     .elementor-swiper-button {
