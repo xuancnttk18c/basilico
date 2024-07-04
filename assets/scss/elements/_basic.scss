@@ -4243,7 +4243,7 @@
             .title-wrap {
                 @include d-inline-flex();
                 gap: 15px;
-                flex-wrap: nowrap;
+                flex-wrap: wrap;
             }
         }
         .tab-title {
