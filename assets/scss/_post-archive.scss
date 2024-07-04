@@ -379,6 +379,10 @@
 			max-height: none;
 			object-fit: cover;
 		}
+		@media (max-width: $sm_max) {
+			border-right: 1px solid $divider_color;
+			border-bottom: none;
+		}
 	}
 	.post-content {
 		border: 1px solid $divider_color;
