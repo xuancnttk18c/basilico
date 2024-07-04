@@ -4243,10 +4243,6 @@
             .title-wrap {
                 @include d-inline-flex();
                 gap: 15px;
-                @media (max-width: $sm_max) {
-                    flex-direction: column;
-                    gap: 15px;
-                }
             }
         }
         .tab-title {
@@ -4263,7 +4259,6 @@
             align-items: center;
             letter-spacing: 0.1em;
             padding: 0 42px;
-            flex-grow: 1;
             cursor: pointer;
             @include transition(all 300ms linear 0ms);
             &.active {

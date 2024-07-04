@@ -12,7 +12,9 @@ $custom_cursor = basilico()->get_theme_opt( 'custom_cursor', false );
 ?>
 <?php wp_footer(); ?>
 <?php if ($custom_cursor) : ?>
-	<div class="pxl-cursor"></div>
+	<div class="pxl-cursor">
+		<span>Drag</span>
+	</div>
 <?php endif; ?>
 </body>
 </html>
