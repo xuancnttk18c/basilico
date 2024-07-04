@@ -28,6 +28,7 @@
         basilico_magnific_popup();
         basilico_scroll_to_id();
         basilico_update_post_share();
+        basilico_cursor_animate();
 
         //* For Element
         basilico_element_parallax();
@@ -503,7 +504,7 @@
         });
     }
 
-    //* PXL Cursor
+    // PXL Cursor
     function basilico_pxlCursor() {
         $(document).ready(function(){
             $(".pxl-cursor").each(function(index) {
@@ -545,6 +546,50 @@
                 });
             });
         });
+    }
+
+    function basilico_cursor_animate() {
+        if($(document).find("#circle-cursor").length > 0) {
+            const cursor = document.querySelector("#circle-cursor");
+            let anchors  = document.querySelectorAll(".custom-style");
+            let anchorsremove  = document.querySelectorAll(".remove-cursor");
+            const circleStyle = cursor.style;
+
+            document.addEventListener('mousemove', e => {
+                window.requestAnimationFrame(() => {
+                   circleStyle.top = `${ e.clientY - cursor.offsetHeight/2 }px`;
+                   circleStyle.left = `${ e.clientX - cursor.offsetWidth/2 }px`;
+               });
+            });
+
+            /** Hover Effect */
+            anchors.forEach(function (item) {
+                item.addEventListener("mouseenter", linkEnterHandler);
+                item.addEventListener("mouseleave", linkLeaveHandler);
+            });
+
+            function linkEnterHandler() {
+                cursor.classList.add("enlarged");
+            }
+
+            function linkLeaveHandler() {
+                cursor.classList.remove("enlarged");
+            }
+
+            /** Hover Effect Remove */
+            anchorsremove.forEach(function (item) {
+                item.addEventListener("mouseenter", linkaEnterHandler);
+                item.addEventListener("mouseleave", linkaLeaveHandler);
+            });
+
+            function linkaEnterHandler() {
+                cursor.classList.remove("enlarged");
+            }
+
+            function linkaLeaveHandler() {
+                cursor.classList.add("enlarged");
+            }
+        }        
     }
 
     function basilico_shop_view_layout(){
