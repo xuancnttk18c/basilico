@@ -4243,6 +4243,9 @@
             .title-wrap {
                 @include d-inline-flex();
                 gap: 15px;
+                @media (max-width: $sm_max) {
+                    flex-wrap: nowrap;
+                }
             }
         }
         .tab-title {
