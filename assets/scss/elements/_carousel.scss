@@ -1941,6 +1941,28 @@
             }
         }
     }
+    &.layout-2 {
+        .item-content {
+            .item-title {
+                color: #fff;
+                font-size: 25px;
+                font-weight: 600;
+                letter-spacing: 0.02em;
+                ~ .item-description {
+                    &:after {
+                        content: '';
+                        width: 60px;
+                        height: 4px;
+                        background-color: $secondary_color;
+                        @include border-radius(2px);
+                    }
+                }
+            }
+            .item-description {
+                color: #fff;
+            }
+        }
+    }
 }
 
 //* Banner Carousel
