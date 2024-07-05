@@ -322,7 +322,6 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => [
                                 'style-1' => esc_html__('Style 1'),
-                                'style-2' => esc_html__('Style 2'),
                             ],
                             'default' => 'style-1',
                             'condition' => [
