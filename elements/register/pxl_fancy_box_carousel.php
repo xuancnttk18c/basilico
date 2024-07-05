@@ -67,11 +67,11 @@ pxl_add_custom_widget(
                                     'default' => esc_html__('Sub Title', 'basilico'),
                                     'placeholder' => esc_html__('Sub Title', 'basilico'),
                                     'show_label' => false,
-                                ),  
+                                ),
                                 array(
                                     'name' => 'description_text',
                                     'label' => esc_html__('Description', 'basilico'),
-                                    'type' => \Elementor\Controls_Manager::TEXTAREA,
+                                    'type' => \Elementor\Controls_Manager::WYSIWYG,
                                     'default' => esc_html__('Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'basilico'),
                                     'placeholder' => esc_html__('Enter your description', 'basilico'),
                                     'rows' => 6,
