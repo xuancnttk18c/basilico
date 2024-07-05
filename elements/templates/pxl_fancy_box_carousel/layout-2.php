@@ -46,8 +46,8 @@ $widget->add_render_attribute( 'carousel', [
             <div class="pxl-swiper-wrapper swiper-wrapper">
                 <?php foreach ($boxs as $box): ?>
                     <div class="pxl-swiper-slide swiper-slide">
-                        <div class="item-inner">
-                            <div class="item-content">
+                        <div class="item-inner row">
+                            <div class="item-content col-6">
                                 <?php
                                 if (!empty($box['title_text'])){
                                     ?>
@@ -97,7 +97,7 @@ $widget->add_render_attribute( 'carousel', [
                                 ) );
                                 $thumbnail = $img['thumbnail'];
                                 ?>
-                                <div class="item-image">
+                                <div class="item-image col-6">
                                     <?php echo wp_kses_post($thumbnail); ?>
                                 </div>
                                 <?php
