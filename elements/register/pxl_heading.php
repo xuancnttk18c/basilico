@@ -289,44 +289,6 @@ pxl_add_custom_widget(
                         ])
                     ),
                 ),
-                array(
-                    'name' => 'highlight_section',
-                    'label' => esc_html__('Highlight Text', 'basilico' ),
-                    'tab' => 'content',
-                    'controls' => array_merge(
-                        array(
-                            array(
-                                'name' => 'text_list',
-                                'label' => esc_html__('Text List', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::REPEATER,
-                                'controls' => array(
-                                    array(
-                                        'name' => 'highlight_text',
-                                        'label' => esc_html__('Text', 'basilico'),
-                                        'type' => \Elementor\Controls_Manager::TEXT,
-                                        'label_block' => true,
-                                    ),
-                                ),
-                                'title_field' => '{{{ highlight_text }}}',
-                            ),
-                            array(
-                                'name' => 'highlight_color',
-                                'label' => esc_html__('Highlight Color', 'basilico' ),
-                                'type' => 'color',
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-wrap .heading-highlight' => 'color: {{VALUE}};',
-                                ],
-                            ),
-                            array(
-                                'name' => 'highlight_typography',
-                                'label' => esc_html__('Highlight Typography', 'basilico' ),
-                                'type' => \Elementor\Group_Control_Typography::get_type(),
-                                'control_type' => 'group',
-                                'selector' => '{{WRAPPER}} .pxl-heading-wrap .heading-highlight',
-                            ),
-                        )
-                    ),
-                ),
             ),
         ),
     ),
