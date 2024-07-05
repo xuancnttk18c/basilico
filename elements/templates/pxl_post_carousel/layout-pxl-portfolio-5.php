@@ -77,11 +77,7 @@ if ( !empty( $item_animation) ) {
 ?>
 <?php if(!empty($posts) && count($posts)): ?>
 <div class="pxl-swiper-slider pxl-portfolio-carousel layout-<?php echo esc_attr($settings['layout']);?> ">
-    <?php if ($cursor !== 'false') : ?>            
-        <div class="pxl-cursor">
-            <span><?php echo esc_attr($cursor_text); ?></span>
-        </div>
-    <?php endif; ?>
+    <div id="circle-cursor"><span><?php echo esc_html('Drag', 'basilico'); ?></span></div>
     <?php if ($select_post_by === 'term_selected' && $filter == "true"): ?>
         <div class="swiper-filter-wrap <?php echo esc_attr($tab_style); ?> d-flex <?php echo esc_html($settings['filter_alignment']);?>">
             <?php if(!empty($filter_default_title)): ?>
@@ -99,7 +95,7 @@ if ( !empty( $item_animation) ) {
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
-    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
+    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative add-custom-cursor">
         <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
             <div class="pxl-swiper-wrapper swiper-wrapper">
                 <?php
@@ -131,7 +127,7 @@ if ( !empty( $item_animation) ) {
                                     <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
                                 </div>
                             <?php endif; ?>
-                            <div class="item-content d-flex <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
+                            <div class="item-content remove-cursor d-flex <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
                                 <div class="content-inner">
                                     <h4 class="item-title">
                                         <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
