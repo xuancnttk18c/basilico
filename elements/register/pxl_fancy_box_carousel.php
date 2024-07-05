@@ -153,74 +153,88 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-fancy-box-carousel .item-description' => 'color: {{VALUE}};',
                             ],
                         ),
+                        array(
+                            'name' => 'btn_style',
+                            'label' => esc_html__('Button Styles', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'default' => 'btn-default',
+                            'options' => [
+                                'btn-default' => esc_html__('Default', 'basilico' ),
+                                'btn-gradient' => esc_html__('Gradient', 'basilico' ),
+                                'btn-white' => esc_html__('White', 'basilico' ),
+                                'btn-fullwidth' => esc_html__('Full Width', 'basilico' ),
+                                'btn-outline' => esc_html__('Out Line', 'basilico' ),
+                                'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
+                            ],
+                        ),
                     ),
-),
-array(
-    'name' => 'carousel_setting',
-    'label' => esc_html__('Carousel Settings', 'basilico' ),
-    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
-    'controls' => array_merge(
-        basilico_carousel_column_settings(),
-        array( 
-            array(
-                'name' => 'slides_to_scroll',
-                'label' => esc_html__('Slides to scroll', 'basilico' ),
-                'type' => \Elementor\Controls_Manager::SELECT,
-                'default' => '1',
-                'options' => [
-                    '1' => '1',
-                    '2' => '2',
-                    '3' => '3',
-                    '4' => '4',
-                    '5' => '5',
-                    '6' => '6',
-                ],
+                ),
+                array(
+                    'name' => 'carousel_setting',
+                    'label' => esc_html__('Carousel Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
+                    'controls' => array_merge(
+                        basilico_carousel_column_settings(),
+                        array( 
+                            array(
+                                'name' => 'slides_to_scroll',
+                                'label' => esc_html__('Slides to scroll', 'basilico' ),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'default' => '1',
+                                'options' => [
+                                    '1' => '1',
+                                    '2' => '2',
+                                    '3' => '3',
+                                    '4' => '4',
+                                    '5' => '5',
+                                    '6' => '6',
+                                ],
+                            ),
+                        array(
+                            'name' => 'arrows',
+                            'label' => esc_html__('Show Arrows', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                        ),
+                        array(
+                            'name' => 'dots',
+                            'label' => esc_html__('Show Dots', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                        ),
+                        array(
+                            'name' => 'pause_on_hover',
+                            'label' => esc_html__('Pause on Hover', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                        ),
+                        array(
+                            'name' => 'autoplay',
+                            'label' => esc_html__('Autoplay', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                        ),
+                        array(
+                            'name' => 'autoplay_speed',
+                            'label' => esc_html__('Autoplay Speed', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::NUMBER,
+                            'default' => 5000,
+                            'condition' => [
+                                'autoplay' => 'true'
+                            ]
+                        ),
+                        array(
+                            'name' => 'infinite',
+                            'label' => esc_html__('Infinite Loop', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                        ),
+                        array(
+                            'name' => 'speed',
+                            'label' => esc_html__('Animation Speed', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::NUMBER,
+                            'default' => 400,
+                        ),
+                    )
+                ),
             ),
-            array(
-                'name' => 'arrows',
-                'label' => esc_html__('Show Arrows', 'basilico'),
-                'type' => \Elementor\Controls_Manager::SWITCHER,
-            ),
-            array(
-                'name' => 'dots',
-                'label' => esc_html__('Show Dots', 'basilico'),
-                'type' => \Elementor\Controls_Manager::SWITCHER,
-            ),
-            array(
-                'name' => 'pause_on_hover',
-                'label' => esc_html__('Pause on Hover', 'basilico'),
-                'type' => \Elementor\Controls_Manager::SWITCHER,
-            ),
-            array(
-                'name' => 'autoplay',
-                'label' => esc_html__('Autoplay', 'basilico'),
-                'type' => \Elementor\Controls_Manager::SWITCHER,
-            ),
-            array(
-                'name' => 'autoplay_speed',
-                'label' => esc_html__('Autoplay Speed', 'basilico'),
-                'type' => \Elementor\Controls_Manager::NUMBER,
-                'default' => 5000,
-                'condition' => [
-                    'autoplay' => 'true'
-                ]
-            ),
-            array(
-                'name' => 'infinite',
-                'label' => esc_html__('Infinite Loop', 'basilico'),
-                'type' => \Elementor\Controls_Manager::SWITCHER,
-            ),
-            array(
-                'name' => 'speed',
-                'label' => esc_html__('Animation Speed', 'basilico'),
-                'type' => \Elementor\Controls_Manager::NUMBER,
-                'default' => 400,
-            ),
-        )
+        ),
     ),
-),
-),
-),
 ),
 basilico_get_class_widget_path()
 );

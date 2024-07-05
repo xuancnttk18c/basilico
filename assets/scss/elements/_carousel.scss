@@ -1959,6 +1959,13 @@
             }
             .item-description {
             }
+            ul li {
+                &::marker {
+                    color: $secondary_color;
+                    font-size: 17px;
+                    font-weight: 500;
+                }
+            }
         }
     }
 }
