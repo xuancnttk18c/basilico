@@ -161,7 +161,6 @@ pxl_add_custom_widget(
                             'options' => [
                                 'btn-default' => esc_html__('Default', 'basilico' ),
                                 'btn-white' => esc_html__('White', 'basilico' ),
-                                'btn-fullwidth' => esc_html__('Full Width', 'basilico' ),
                                 'btn-outline' => esc_html__('Out Line', 'basilico' ),
                                 'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
                                 'btn-additional-1' => esc_html__('Additional Button 01', 'basilico' ),
@@ -173,6 +172,102 @@ pxl_add_custom_widget(
                                 'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
                                 'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
                             ],
+                            'condition' => [
+                                'layout' => '2'
+                            ]
+                        ),
+                        array(
+                            'name' => 'btn_padding',
+                            'label' => esc_html__('Padding', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'size_units' => [ 'px' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                            'control_type' => 'responsive',
+                            'condition' => [
+                                'layout' => '2'
+                            ]
+                        ),
+                        array(
+                            'name' => 'typography',
+                            'label' => esc_html__('Typography', 'basilico' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}} .pxl-fancy-box-carousel .btn',
+                            'condition' => [
+                                'layout' => '2'
+                            ]
+                        ),
+                        array(
+                            'name' => 'btn_color',
+                            'label' => esc_html__('Text Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn' => 'color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'layout' => '2'
+                            ]
+                        ),
+                        array(
+                            'name' => 'btn_color_hover',
+                            'label' => esc_html__('Text Color Hover', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn:hover' => 'color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'layout' => '2'
+                            ]
+                        ),
+                        array(
+                            'name' => 'btn_color_icon',
+                            'label' => esc_html__('Icon Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn .pxl-button-icon' => 'color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'layout' => '2'
+                            ]
+                        ),
+                        array(
+                            'name' => 'btn_color_icon_hover',
+                            'label' => esc_html__('Icon Color Hover', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn:hover .pxl-button-icon' => 'color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'layout' => '2'
+                            ]
+                        ),
+                        array(
+                            'name' => 'btn_bg_color',
+                            'label' => esc_html__('Background Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn' => 'background-image: none; background-color: {{VALUE}}; border-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn::after' => 'background-image: none; background-color: {{VALUE}};'
+                            ],
+                            'condition' => [
+                                'layout' => '2'
+                            ]
+                        ),
+                        array(
+                            'name' => 'btn_bg_color_hover',
+                            'label' => esc_html__('Background Color Hover', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn:hover' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn.btn-additional-6' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn:not(.btn-additional-7):before' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn.btn-additional-7 .pxl-button-bg' => 'background-color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'layout' => '2'
+                            ]
                         ),
                     ),
                 ),
