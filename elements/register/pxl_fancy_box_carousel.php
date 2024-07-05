@@ -154,6 +154,17 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'background_color',
+                            'label' => esc_html__('Background Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-inner .overlay-1' => 'background-color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'layout' => '2'
+                            ]
+                        ),
+                        array(
                             'name' => 'btn_style',
                             'label' => esc_html__('Button Styles', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SELECT,
