@@ -76,6 +76,11 @@ pxl_add_custom_widget(
                                     'show_label' => false,
                                 ),
                                 array(
+                                    'name'        => 'button_text',
+                                    'label'       => esc_html__( 'Button Text', 'basilico' ),
+                                    'type'        => \Elementor\Controls_Manager::TEXT,
+                                ),
+                                array(
                                     'name'        => 'link',
                                     'label'       => esc_html__( 'Custom Link', 'basilico' ),
                                     'type'        => 'url',
