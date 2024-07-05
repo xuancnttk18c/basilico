@@ -8,6 +8,7 @@ extract($settings);
 
 $arrows = $widget->get_setting('arrows','false');  
 $dots = $widget->get_setting('dots','false');  
+$arrows_style = $widget->get_setting('arrows_style', 'style-1');
 
 $opts = [
     'slide_direction'               => 'horizontal',
@@ -111,7 +112,7 @@ $widget->add_render_attribute( 'carousel', [
             </div>
         </div>
         <?php if ($arrows !== 'false'): ?>
-            <div class="pxl-swiper-arrows nav-vertical-in">
+            <div class="pxl-swiper-arrows nav-vertical-in <?php echo esc_attr($arrows_style);?>">
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon pxli-arrow-next"></span></div>
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
             </div>
