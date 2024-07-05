@@ -1971,7 +1971,9 @@
                     font-weight: 600;
                     letter-spacing: 0.02em;
                     text-transform: none;
+                    @include transition();
                     + .item-description {
+                        @include transition();
                         &:before {
                             content: '';
                             display: inline-block;
