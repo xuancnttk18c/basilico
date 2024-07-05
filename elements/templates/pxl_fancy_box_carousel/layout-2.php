@@ -48,47 +48,45 @@ $widget->add_render_attribute( 'carousel', [
                     <div class="pxl-swiper-slide swiper-slide">
                         <div class="item-inner">
                             <div class="item-content">
-                                <div class="content-inner">
+                                <?php
+                                if (!empty($box['title_text'])){
+                                    ?>
+                                    <h3 class="item-title">
+                                        <span><?php echo pxl_print_html($box['title_text']); ?></span>
+                                    </h3>
                                     <?php
-                                    if (!empty($box['title_text'])){
-                                        ?>
-                                        <h3 class="item-title">
-                                            <span><?php echo pxl_print_html($box['title_text']); ?></span>
-                                        </h3>
-                                        <?php
-                                    }
-                                    if (!empty($box['description_text'])){
-                                        ?>
-                                        <div class="item-description">
-                                            <?php echo pxl_print_html($box['description_text']); ?>
-                                        </div>
-                                        <?php
-                                    }
+                                }
+                                if (!empty($box['description_text'])){
+                                    ?>
+                                    <div class="item-description">
+                                        <?php echo pxl_print_html($box['description_text']); ?>
+                                    </div>
+                                    <?php
+                                }
 
-                                    if(!empty($box['link']['url'])){
-                                        $widget->add_render_attribute( 'link', 'href', $box['link']['url'] );
-                                        $widget->add_render_attribute( 'link', 'class', 'btn '.$settings['btn_style'] );
-                                        if ( $box['link']['is_external'] ) {
-                                            $widget->add_render_attribute( 'link', 'target', '_blank' );
-                                        }
-                                        if ( $box['link']['nofollow'] ) {
-                                            $widget->add_render_attribute( 'link', 'rel', 'nofollow' );
-                                        }
-                                        if ( ! empty( $box['link']['custom_attributes'] ) ) {
-                                            $custom_attributes = Utils::parse_custom_attributes( $box['link']['custom_attributes'] );
-                                            $widget->add_render_attribute( 'link', $custom_attributes);
-                                        }
+                                if(!empty($box['link']['url'])){
+                                    $widget->add_render_attribute( 'link', 'href', $box['link']['url'] );
+                                    $widget->add_render_attribute( 'link', 'class', 'btn '.$settings['btn_style'] );
+                                    if ( $box['link']['is_external'] ) {
+                                        $widget->add_render_attribute( 'link', 'target', '_blank' );
                                     }
-                                    $link_attributes = $widget->get_render_attribute_string( 'link' );
+                                    if ( $box['link']['nofollow'] ) {
+                                        $widget->add_render_attribute( 'link', 'rel', 'nofollow' );
+                                    }
+                                    if ( ! empty( $box['link']['custom_attributes'] ) ) {
+                                        $custom_attributes = Utils::parse_custom_attributes( $box['link']['custom_attributes'] );
+                                        $widget->add_render_attribute( 'link', $custom_attributes);
+                                    }
+                                }
+                                $link_attributes = $widget->get_render_attribute_string( 'link' );
 
-                                    if (!empty($box['button_text'])) { ?>
-                                        <div class="item-button">
-                                            <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
-                                            <span><?php pxl_print_html( nl2br($box['button_text'])); ?></span>
-                                            <?php if ( $link_attributes ) echo '</a>'; ?> 
-                                        </div>
-                                    <?php } ?>
-                                </div>
+                                if (!empty($box['button_text'])) { ?>
+                                    <div class="item-button">
+                                        <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
+                                        <span><?php pxl_print_html( nl2br($box['button_text'])); ?></span>
+                                        <?php if ( $link_attributes ) echo '</a>'; ?> 
+                                    </div>
+                                <?php } ?>
                             </div>
                             <?php
                             if(!empty( $box['selected_img']['id'])){
