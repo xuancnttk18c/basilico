@@ -165,6 +165,13 @@ pxl_add_custom_widget(
                                 'layout' => '2'
                             ]
                         ),
+                    ),
+                ),
+                array(
+                    'name' => 'icon_section',
+                    'label' => esc_html__('Icon Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                    'controls' => array(
                         array(
                             'name' => 'btn_style',
                             'label' => esc_html__('Button Styles', 'basilico' ),
@@ -281,7 +288,7 @@ pxl_add_custom_widget(
                                 'layout' => '2'
                             ]
                         ),
-                    ),
+                    )
                 ),
                 array(
                     'name' => 'carousel_setting',
