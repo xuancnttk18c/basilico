@@ -1956,6 +1956,9 @@
                 + .item-description {
                     &:before {
                         content: '';
+                        display: inline-block;
+                        margin-top: 19px;
+                        margin-bottom: 11px;
                         width: 60px;
                         height: 4px;
                         background-color: $secondary_color;
@@ -1963,14 +1966,16 @@
                     }
                 }
             }
-            .item-description {
-            }
             ul li {
+                color: $heading_color;
                 font-size: 17px;
                 font-weight: 500;
                 &::marker {
                     color: $secondary_color;
                 }
+            }
+            .item-button {
+                margin-top: 31px;
             }
         }
     }
