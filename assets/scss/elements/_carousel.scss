@@ -2009,6 +2009,9 @@
                     .item-description {
                         color: #fff;
                     }
+                    ul li::marker {
+                        color: $secondary_color;
+                    }
                 }
             }
         }
