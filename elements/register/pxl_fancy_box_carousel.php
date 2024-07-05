@@ -168,8 +168,8 @@ pxl_add_custom_widget(
                     ),
                 ),
                 array(
-                    'name' => 'icon_section',
-                    'label' => esc_html__('Icon Settings', 'basilico' ),
+                    'name' => 'btn_section',
+                    'label' => esc_html__('Button Settings', 'basilico' ),
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                     'controls' => array(
                         array(
