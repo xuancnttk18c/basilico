@@ -48,6 +48,7 @@ $widget->add_render_attribute( 'carousel', [
                     <div class="pxl-swiper-slide swiper-slide">
                         <div class="item-inner row">
                             <div class="overlay-1"></div>
+                            <div class="overlay-2"></div>
                             <div class="item-content col-6">
                                 <?php
                                 if (!empty($box['title_text'])){
