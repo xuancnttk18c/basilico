@@ -1943,12 +1943,24 @@
     }
     &.layout-2 {
         .item-inner {
-            padding: 44px 16px 20px 50px;
+            position: relative;
+            padding: 43px 5px 50px 35px;
             background-color: #fff;
             box-shadow: 0px 8px 38px 0px rgba(0, 0, 0, 0.09);
+            overflow: hidden;
             @include border-radius(20px);
+            .overlay-1 {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
         }
         .item-content {
+            position: relative;
+            z-index: 2;
             .item-title {
                 font-size: 25px;
                 font-weight: 600;
@@ -1958,7 +1970,7 @@
                     &:before {
                         content: '';
                         display: inline-block;
-                        margin-top: 19px;
+                        margin-top: 4px;
                         margin-bottom: 11px;
                         width: 60px;
                         height: 4px;
@@ -1972,7 +1984,7 @@
                 font-size: 17px;
                 font-weight: 500;
                 &::marker {
-                    color: $secondary_color;
+                    color: $primary_color;
                 }
             }
             .item-button {
