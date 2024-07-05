@@ -82,7 +82,7 @@ $widget->add_render_attribute( 'carousel', [
                                     if (!empty($box['description_text'])){
                                         ?>
                                         <div class="item-description">
-                                            <?php echo esc_html($box['description_text']); ?>
+                                            <?php echo pxl_print_html($box['description_text']); ?>
                                         </div>
                                         <?php
                                     }
