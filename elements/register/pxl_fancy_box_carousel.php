@@ -91,6 +91,7 @@ pxl_add_custom_widget(
                                     ],
                                 ),
                             ),
+                            'title_field' => '{{{ title_text }}}',
                         ),
                         array(
                             'name' => 'icon_size',
@@ -158,7 +159,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Background Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-inner .overlay-1' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-inner .overlay-1, {{WRAPPER}} .pxl-fancy-box-carousel .item-inner .overlay-2' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => '2'
