@@ -129,14 +129,14 @@ if ( !empty( $item_animation) ) {
                     $data_animation =  json_encode($data_animations);
                     $data_settings = 'data-settings="'.esc_attr($data_animation).'"';
                     ?>
-                    <div class="pxl-swiper-slide remove-cursor swiper-slide" data-filter="<?php echo esc_attr($filter_class) ?>">
+                    <div class="pxl-swiper-slide swiper-slide" data-filter="<?php echo esc_attr($filter_class) ?>">
                         <div class="item-inner relative">
                             <?php if(!empty($thumbnail)) :?>
                                 <div class="item-featured">
                                     <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
                                 </div>
                             <?php endif; ?>
-                            <div class="item-content d-flex <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
+                            <div class="item-content remove-cursor d-flex <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
                                 <h4 class="item-title">
                                     <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
                                 </h4>
