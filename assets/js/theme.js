@@ -105,7 +105,7 @@
             $('.product-main-img .pxl-cursor-icon').addClass('hide'); 
         }
     });
-    if ($('.pxl-fancy-box-carousel.layout-2').find('.item-inner') > 0) {
+    if ($('.pxl-fancy-box-carousel.layout-2').find('.item-inner')) {
         console.log($(this));
         $(this).find('.overlay-1').height($(this).find('.item-inner').height());
     }
