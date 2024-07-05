@@ -1990,6 +1990,7 @@
                     color: $heading_color;
                     font-size: 17px;
                     font-weight: 500;
+                    @include transition();
                     &::marker {
                         color: $primary_color;
                     }
