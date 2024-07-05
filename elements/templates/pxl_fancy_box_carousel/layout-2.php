@@ -47,21 +47,6 @@ $widget->add_render_attribute( 'carousel', [
                 <?php foreach ($boxs as $box): ?>
                     <div class="pxl-swiper-slide swiper-slide">
                         <div class="item-inner">
-                            <?php
-                            if(!empty( $box['selected_img']['id'])){
-                                $thumbnail = '';
-                                $img  = pxl_get_image_by_size( array(
-                                    'attach_id'  => $box['selected_img']['id'],
-                                    'thumb_size' => 'full',
-                                ) );
-                                $thumbnail = $img['thumbnail'];
-                                ?>
-                                <div class="item-image">
-                                    <?php echo wp_kses_post($thumbnail); ?>
-                                </div>
-                                <?php
-                            }
-                            ?>
                             <div class="item-content">
                                 <div class="content-inner">
                                     <?php
@@ -105,6 +90,21 @@ $widget->add_render_attribute( 'carousel', [
                                     <?php } ?>
                                 </div>
                             </div>
+                            <?php
+                            if(!empty( $box['selected_img']['id'])){
+                                $thumbnail = '';
+                                $img  = pxl_get_image_by_size( array(
+                                    'attach_id'  => $box['selected_img']['id'],
+                                    'thumb_size' => 'full',
+                                ) );
+                                $thumbnail = $img['thumbnail'];
+                                ?>
+                                <div class="item-image">
+                                    <?php echo wp_kses_post($thumbnail); ?>
+                                </div>
+                                <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 <?php endforeach; ?>
