@@ -39,11 +39,6 @@
         opacity: 0.3;
     }
 }
-@media (max-width: $lg_max) {
-    .pxl-cursor{
-        display: none !important;
-    }
-}
 
 #circle-cursor {
     line-height: 102px;
@@ -67,6 +62,15 @@
     &.enlarged {
         @include transform(scale(1));
         opacity: 1;
+    }
+}
+
+@media (max-width: $lg_max) {
+    .pxl-cursor {
+        display: none !important;
+    }
+    #circle-cursor {
+        display: none !important;
     }
 }
 

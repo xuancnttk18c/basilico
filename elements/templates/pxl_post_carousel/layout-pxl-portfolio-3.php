@@ -86,6 +86,7 @@ if ( !empty( $item_animation) ) {
 ?>
 <?php if(!empty($posts) && count($posts)): ?>
 <div class="pxl-swiper-slider pxl-portfolio-carousel <?php echo esc_attr($tab_style); ?> layout-<?php echo esc_attr($settings['layout']);?> ">
+    <div id="circle-cursor"><span><?php echo esc_html('Drag', 'basilico'); ?></span></div>
     <?php if ($select_post_by === 'term_selected' && $filter == "true"): ?>
         <div class="swiper-filter-wrap d-flex <?php echo esc_html($settings['filter_alignment']);?>">
             <?php if(!empty($filter_default_title)): ?>
@@ -103,7 +104,7 @@ if ( !empty( $item_animation) ) {
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
-    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
+    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative add-custom-cursor">
         <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
             <div class="pxl-swiper-wrapper swiper-wrapper">
                 <?php
@@ -128,7 +129,7 @@ if ( !empty( $item_animation) ) {
                     $data_animation =  json_encode($data_animations);
                     $data_settings = 'data-settings="'.esc_attr($data_animation).'"';
                     ?>
-                    <div class="pxl-swiper-slide swiper-slide" data-filter="<?php echo esc_attr($filter_class) ?>">
+                    <div class="pxl-swiper-slide remove-cursor swiper-slide" data-filter="<?php echo esc_attr($filter_class) ?>">
                         <div class="item-inner relative">
                             <?php if(!empty($thumbnail)) :?>
                                 <div class="item-featured">

@@ -88,7 +88,7 @@ if ( !empty( $item_animation) ) {
 ?>
 <?php if(!empty($posts) && count($posts)): ?>
 <div class="pxl-swiper-slider pxl-portfolio-carousel layout-<?php echo esc_attr($settings['layout']);?> ">
-    <div id="circle-cursor"><span>Drag</span></div>
+    <div id="circle-cursor"><span><?php echo esc_html('Drag', 'basilico'); ?></span></div>
     <?php if ($select_post_by === 'term_selected' && $filter == "true"): ?>
         <div class="swiper-filter-wrap <?php echo esc_attr($tab_style); ?> d-flex <?php echo esc_html($settings['filter_alignment']);?>">
             <?php if(!empty($filter_default_title)): ?>
