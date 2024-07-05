@@ -261,7 +261,6 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box-carousel .btn:hover' => 'border-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn.btn-additional-6' => 'background-color: {{VALUE}};',
                                 '{{WRAPPER}} .pxl-fancy-box-carousel .btn:not(.btn-additional-7):before' => 'background-color: {{VALUE}};',
                                 '{{WRAPPER}} .pxl-fancy-box-carousel .btn.btn-additional-7 .pxl-button-bg' => 'background-color: {{VALUE}};',
                             ],
