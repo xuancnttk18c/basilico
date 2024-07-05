@@ -1942,6 +1942,10 @@
         }
     }
     &.layout-2 {
+        .item-inner {
+            background-color: #fff;
+            box-shadow: 0px 8px 38px 0px rgba(0, 0, 0, 0.09);
+        }
         .item-content {
             .item-title {
                 font-size: 25px;
