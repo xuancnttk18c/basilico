@@ -351,7 +351,7 @@ pxl_add_custom_widget(
                 array(
                     'name' => 'arrow_settings',
                     'label' => esc_html__('Arrow Settings', 'basilico' ),
-                    'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
                     'controls' => array(
                         array(
                             'name' => 'arrows',
