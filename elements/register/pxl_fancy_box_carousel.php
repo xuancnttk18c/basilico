@@ -345,6 +345,22 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'arrows_icon',
+                            'label' => esc_html__('Arrows Icon Color', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'background-color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'arrows_icon_hover',
+                            'label' => esc_html__('Arrows Icon Color Hover', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover .pxl-icon' => 'background-color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
                             'name' => 'arrow_prev_position',
                             'label' => esc_html__('Arrow Previous Position', 'basilico'),
                             'type' => \Elementor\Controls_Manager::SELECT,
