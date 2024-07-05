@@ -79,6 +79,22 @@ $widget->add_render_attribute( 'carousel', [
                                         </div>
                                         <?php
                                     }
+
+                                    if(!empty($box['link']['url'])){
+                                        $widget->add_render_attribute( 'link', 'href', $box['link']['url'] );
+                                        //$widget->add_render_attribute( 'link', 'class', 'btn '.$box['btn_style'] );
+                                        if ( $box['link']['is_external'] ) {
+                                            $widget->add_render_attribute( 'link', 'target', '_blank' );
+                                        }
+                                        if ( $box['link']['nofollow'] ) {
+                                            $widget->add_render_attribute( 'link', 'rel', 'nofollow' );
+                                        }
+                                        if ( ! empty( $box['link']['custom_attributes'] ) ) {
+                                            $custom_attributes = Utils::parse_custom_attributes( $box['link']['custom_attributes'] );
+                                            $widget->add_render_attribute( 'link', $custom_attributes);
+                                        }
+                                    }
+                                    $link_attributes = $widget->get_render_attribute_string( 'link' );
                                     if (!empty($widget->get_setting('button_text'))) { ?>
                                         <div class="item-button">
                                             <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
