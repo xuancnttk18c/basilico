@@ -95,8 +95,8 @@ $widget->add_render_attribute( 'carousel', [
                                         }
                                     }
                                     $link_attributes = $widget->get_render_attribute_string( 'link' );
-                                    
-                                    if (!empty($widget->get_setting('button_text'))) { ?>
+
+                                    if (!empty($box['button_text'])) { ?>
                                         <div class="item-button">
                                             <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
                                             <span><?php pxl_print_html( nl2br($widget->get_setting('button_text'))); ?></span>
