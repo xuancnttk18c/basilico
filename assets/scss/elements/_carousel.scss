@@ -1996,6 +1996,10 @@
                     margin-top: 31px;
                 }
             }
+            .item-image {
+                position: relative;
+                z-index: 2;
+            }
             &:hover {
                 .overlay-1 {
                     left: 100%;
