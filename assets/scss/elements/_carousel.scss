@@ -2017,9 +2017,6 @@
                         color: $primary_color;
                     }
                 }
-                .item-image img {
-                    object-fit: contain;
-                }
                 .item-button {
                     margin-top: 31px;
                 }
@@ -2027,6 +2024,9 @@
             .item-image {
                 position: relative;
                 z-index: 2;
+                img {
+                    object-fit: contain;
+                }
             }
             &:hover {
                 .overlay-1 {
