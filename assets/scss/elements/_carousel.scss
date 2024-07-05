@@ -1955,7 +1955,7 @@
                 width: 758px;
                 height: 758px;
                 top: 50%;
-                left: 0;
+                left: 65%;
                 @include transform(translateY(-50%));
                 background-color: $primary_color;
                 border-radius: 50%;
@@ -1968,6 +1968,7 @@
                 height: 100%;
                 background-color: $primary_color;
                 opacity: 0;
+                visibility: hidden;
                 @include transition();
             }
             .item-content {
@@ -2015,7 +2016,13 @@
             }
             &:hover {
                 .overlay-1 {
-                    left: 0;
+                    left: 0%;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                .overlay-2 {
+                    opacity: 1;
+                    visibility: visible;
                 }
                 .item-content {
                     .item-title,
