@@ -329,6 +329,22 @@ pxl_add_custom_widget(
                             ]
                         ),
                         array(
+                            'name' => 'arrows_bg',
+                            'label' => esc_html__('Arrows Background', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .pxl-swiper-arrows .pxl-swiper-arrow' => 'background-color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'arrows_bg_hover',
+                            'label' => esc_html__('Arrows Background Hover', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover' => 'background-color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
                             'name' => 'arrow_prev_position',
                             'label' => esc_html__('Arrow Previous Position', 'basilico'),
                             'type' => \Elementor\Controls_Manager::SELECT,
