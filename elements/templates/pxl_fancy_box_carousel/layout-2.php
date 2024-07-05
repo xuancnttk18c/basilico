@@ -82,7 +82,7 @@ $widget->add_render_attribute( 'carousel', [
 
                                     if(!empty($box['link']['url'])){
                                         $widget->add_render_attribute( 'link', 'href', $box['link']['url'] );
-                                        $widget->add_render_attribute( 'link', 'class', 'btn '.$widget->get_setting('btn_style', 'btn-additional-7');
+                                        $widget->add_render_attribute( 'link', 'class', 'btn '.$settings['btn_style'] );
                                         if ( $box['link']['is_external'] ) {
                                             $widget->add_render_attribute( 'link', 'target', '_blank' );
                                         }
