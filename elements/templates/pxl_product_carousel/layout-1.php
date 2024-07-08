@@ -72,30 +72,44 @@ if ( !empty( $item_animation) ) {
 }
 ?>
 <?php if(!empty($posts) && count($posts)): ?>
-    <div class="pxl-swiper-slider pxl-product-carousel layout-<?php echo esc_attr($settings['layout'])?> pxl-shop-<?php echo esc_attr($product_layout); ?>">
-        <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
-            <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-                <div class="pxl-swiper-wrapper swiper-wrapper">
-                    <?php
-                    while ($query->have_posts()) {
-                        $query->the_post();
-                        echo '<div class="pxl-swiper-slide swiper-slide">';
-                        wc_get_template_part( 'pxl-content-product', esc_attr($product_layout) );
-                        echo '</div>';
-                    }
-                    wp_reset_postdata();
+<div class="pxl-swiper-slider pxl-product-carousel layout-<?php echo esc_attr($settings['layout'])?> pxl-shop-<?php echo esc_attr($product_layout); ?>">
+    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
+        <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+            <div class="pxl-swiper-wrapper swiper-wrapper">
+                <?php
+                while ($query->have_posts()) {
+                    $query->the_post();
+                    echo '<div class="pxl-swiper-slide swiper-slide">';
+                    wc_get_template_part( 'pxl-content-product', esc_attr($product_layout) );
+                    echo '</div>';
+                }
+                wp_reset_postdata();
+                ?>
+            </div>
+        </div>
+        <?php if($arrows !== 'false'): ?>
+            <div class="pxl-swiper-arrows <?php echo esc_attr($arrows_style);?>">
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
+                    <?php 
+                    if ( $settings['arrow_icon_next']['value'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_next'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon pxli-arrow-right"></span>';
+                    ?>
+                </div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev">
+                    <?php 
+                    if ( $settings['arrow_icon_previous']['value'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon pxli-arrow-left"></span>';
                     ?>
                 </div>
             </div>
-            <?php if($arrows !== 'false'): ?>
-                <div class="pxl-swiper-arrows <?php echo esc_attr($arrows_style);?>">
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxli-arrow-left"></span></div>
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxli-arrow-right"></span></div>
-                </div>
-            <?php endif; ?>
-            <?php if($dots !== 'false'): ?>
-                <div class="pxl-swiper-dots"></div>
-            <?php endif; ?>
-        </div>
+        <?php endif; ?>
+        <?php if($dots !== 'false'): ?>
+            <div class="pxl-swiper-dots"></div>
+        <?php endif; ?>
     </div>
+</div>
 <?php endif; ?>

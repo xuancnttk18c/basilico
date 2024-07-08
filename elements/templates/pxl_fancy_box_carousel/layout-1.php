@@ -2,7 +2,7 @@
 $default_settings = [
     'boxs' => [],
 ];
-   
+
 $settings = array_merge($default_settings, $settings);
 extract($settings);
 
@@ -32,7 +32,7 @@ $opts = [
     'loop'                          => (bool)$widget->get_setting('infinite', false),
     'speed'                         => (int)$widget->get_setting('speed', 500)
 ];
-  
+
 
 $widget->add_render_attribute( 'carousel', [
     'class'         => 'pxl-swiper-container overflow-hidden',
@@ -41,10 +41,10 @@ $widget->add_render_attribute( 'carousel', [
 ]);
 ?>
 <?php if(isset($boxs) && !empty($boxs) && count($boxs)): ?>
-    <div class="pxl-swiper-slider pxl-fancy-box-carousel layout-<?php echo esc_attr($settings['layout'])?>">
-        <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
-            <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-                <div class="pxl-swiper-wrapper swiper-wrapper">
+<div class="pxl-swiper-slider pxl-fancy-box-carousel layout-<?php echo esc_attr($settings['layout'])?>">
+    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
+        <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+            <div class="pxl-swiper-wrapper swiper-wrapper">
                 <?php foreach ($boxs as $box): ?>
                     <div class="pxl-swiper-slide swiper-slide">
                         <div class="item-inner">
@@ -111,17 +111,31 @@ $widget->add_render_attribute( 'carousel', [
                         </div>
                     </div>
                 <?php endforeach; ?>
+            </div>
+        </div>
+        <?php if($arrows !== 'false'): ?>
+            <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style); ?>">
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
+                    <?php 
+                    if ( $settings['arrow_icon_next']['value'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_next'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon pxli-arrow-next"></span>';
+                    ?>
+                </div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev">
+                    <?php 
+                    if ( $settings['arrow_icon_previous']['value'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon pxli-arrow-prev"></span>';
+                    ?>
                 </div>
             </div>
-            <?php if($arrows !== 'false'): ?>
-                <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style); ?>">
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon pxli-arrow-next"></span></div>
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
-                </div>
-            <?php endif; ?>
-            <?php if($dots !== 'false'): ?>
-                <div class="pxl-swiper-dots"></div>
-            <?php endif; ?>
-        </div>
+        <?php endif; ?>
+        <?php if($dots !== 'false'): ?>
+            <div class="pxl-swiper-dots"></div>
+        <?php endif; ?>
     </div>
+</div>
 <?php endif; ?>

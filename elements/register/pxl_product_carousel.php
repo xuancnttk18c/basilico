@@ -112,22 +112,6 @@ pxl_add_custom_widget(
                                 ],
                             ),
                             array(
-                                'name' => 'arrows',
-                                'label' => esc_html__('Show Arrows', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::SWITCHER,
-                            ),
-                            array(
-                                'name' => 'arrows_on_hover',
-                                'label' => esc_html__('Show Arrows on Hover', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::SWITCHER,
-                                'default' => 'false',
-                                'condition' => [
-                                    'post_type' => 'post',
-                                    'layout_post' => ['post-1'],
-                                    'arrows' => 'true'
-                                ]
-                            ),
-                            array(
                                 'name' => 'dots',
                                 'label' => esc_html__('Show Dots', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
@@ -198,6 +182,14 @@ pxl_add_custom_widget(
                                 'default' => 400,
                             ),
                         )
+                    ),
+                ),
+                array(
+                    'name' => 'arrow_settings',
+                    'label' => esc_html__('Arrow Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
+                    'controls' => array_merge(
+                        basilico_arrow_settings(),
                     ),
                 ),
             ),
