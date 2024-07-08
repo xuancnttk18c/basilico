@@ -193,6 +193,9 @@ pxl_add_custom_widget(
                                 'type' => 'icons',
                                 'label_block' => true,
                                 'fa4compatibility' => 'icon',
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
                             ),
                             array(
                                 'name' => 'arrow_icon_next',
@@ -200,6 +203,9 @@ pxl_add_custom_widget(
                                 'type' => 'icons',
                                 'label_block' => true,
                                 'fa4compatibility' => 'icon',
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
                             ),
                             array(
                                 'name' => 'arrows_bg',
@@ -209,6 +215,7 @@ pxl_add_custom_widget(
                                     '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow' => 'background-color: {{VALUE}};',
                                 ],
                                 'condition' => [
+                                    'arrows' => 'true',
                                     'arrows_style' => 'style-2'
                                 ]
                             ),
@@ -220,6 +227,7 @@ pxl_add_custom_widget(
                                     '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover' => 'background-color: {{VALUE}};',
                                 ],
                                 'condition' => [
+                                    'arrows' => 'true',
                                     'arrows_style' => 'style-2'
                                 ]
                             ),
@@ -231,6 +239,9 @@ pxl_add_custom_widget(
                                     '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'color: {{VALUE}};',
                                     '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow svg' => 'fill: {{VALUE}};'
                                 ],
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
                             ),
                             array(
                                 'name' => 'arrows_icon_hover',
@@ -239,6 +250,9 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover .pxl-icon' => 'color: {{VALUE}};',
                                 ],
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
                             ),
                             array(
                                 'name' => 'arrow_prev_position',
