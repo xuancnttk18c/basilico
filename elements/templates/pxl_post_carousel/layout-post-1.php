@@ -65,119 +65,133 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('READ MORE', 'ba
 ?>
 <?php if (!empty($posts) && count($posts)) : ?>
 
-    <div class="pxl-swiper-slider pxl-post-carousel layout-<?php echo esc_attr($settings['layout']); ?> center-mode-<?php echo esc_attr($opts['center_slide']); ?>">
-        <?php if ($select_post_by === 'term_selected' && $filter == "true") : ?>
-            <div class="swiper-filter-wrap <?php echo esc_attr($tab_style); ?>">
-                <?php if (!empty($filter_default_title)) : ?>
-                    <span class="filter-item active" data-filter-target="all"><?php echo esc_html($filter_default_title); ?></span>
-                <?php endif; ?>
-                <?php foreach ($categories as $category) :
-                    $category_arr = explode('|', $category);
-                    $term = get_term_by('slug', $category_arr[0], $category_arr[1]);
+<div class="pxl-swiper-slider pxl-post-carousel layout-<?php echo esc_attr($settings['layout']); ?> center-mode-<?php echo esc_attr($opts['center_slide']); ?>">
+    <?php if ($select_post_by === 'term_selected' && $filter == "true") : ?>
+        <div class="swiper-filter-wrap <?php echo esc_attr($tab_style); ?>">
+            <?php if (!empty($filter_default_title)) : ?>
+                <span class="filter-item active" data-filter-target="all"><?php echo esc_html($filter_default_title); ?></span>
+            <?php endif; ?>
+            <?php foreach ($categories as $category) :
+                $category_arr = explode('|', $category);
+                $term = get_term_by('slug', $category_arr[0], $category_arr[1]);
                 ?>
-                    <span class="filter-item" data-filter-target="<?php echo esc_attr($term->slug); ?>"><?php echo esc_html($term->name); ?></span>
-                <?php endforeach; ?>
-            </div>
-        <?php endif; ?>
-        <div class="pxl-swiper-slider-wrap pxl-carousel-inner realative">
-            <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
-                <div class="pxl-swiper-wrapper swiper-wrapper">
-                    <?php
-                    $i = 0;
-                    foreach ($posts as $post) :
-                        $i = $i + 50;
-                        $thumbnail = '';
-                        if (has_post_thumbnail($post->ID)) {
-                            $img = pxl_get_image_by_size(array(
-                                'post_id'  => $post->ID,
-                                'thumb_size' => $img_size,
-                                'class' => 'no-lazyload',
-                            ));
-                            $thumbnail = $img['thumbnail'];
-                        }
-                        $filter_class = '';
-                        if ($select_post_by === 'term_selected' && $filter == "true")
-                            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+                <span class="filter-item" data-filter-target="<?php echo esc_attr($term->slug); ?>"><?php echo esc_html($term->name); ?></span>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
+    <div class="pxl-swiper-slider-wrap pxl-carousel-inner realative">
+        <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
+            <div class="pxl-swiper-wrapper swiper-wrapper">
+                <?php
+                $i = 0;
+                foreach ($posts as $post) :
+                    $i = $i + 50;
+                    $thumbnail = '';
+                    if (has_post_thumbnail($post->ID)) {
+                        $img = pxl_get_image_by_size(array(
+                            'post_id'  => $post->ID,
+                            'thumb_size' => $img_size,
+                            'class' => 'no-lazyload',
+                        ));
+                        $thumbnail = $img['thumbnail'];
+                    }
+                    $filter_class = '';
+                    if ($select_post_by === 'term_selected' && $filter == "true")
+                        $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
 
-                        $author = get_user_by('id', $post->post_author);
+                    $author = get_user_by('id', $post->post_author);
                     ?>
-                        <div class="pxl-swiper-slide swiper-slide" data-filter="<?php echo esc_attr($filter_class) ?>">
-                            <div class="item-inner text-center">
-                                <div class="">
-                                    <?php if (isset($thumbnail)) : ?>
-                                        <div class="post-featured">
-                                            <div class="post-image scale-hover">
-                                                <a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                                    <?php echo wp_kses_post($thumbnail); ?>
-                                                </a>
-                                            </div>
+                    <div class="pxl-swiper-slide swiper-slide" data-filter="<?php echo esc_attr($filter_class) ?>">
+                        <div class="item-inner text-center">
+                            <div class="">
+                                <?php if (isset($thumbnail)) : ?>
+                                    <div class="post-featured">
+                                        <div class="post-image scale-hover">
+                                            <a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                                <?php echo wp_kses_post($thumbnail); ?>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+                                <div class="post-content">
+                                    <?php if ($show_category == 'true') : ?>
+                                        <div class="post-category">
+                                            <?php the_terms($post->ID, 'category', '', ', ', ''); ?>
                                         </div>
                                     <?php endif; ?>
-                                    <div class="post-content">
-                                        <?php if ($show_category == 'true') : ?>
-                                            <div class="post-category">
-                                                <?php the_terms($post->ID, 'category', '', ', ', ''); ?>
+                                    <h3 class="item-title">
+                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                                    </h3>
+                                    <?php if ($show_excerpt == true) : ?>
+                                        <div class="item-excerpt">
+                                            <?php
+                                            if (!empty($post->post_excerpt)) {
+                                                echo wp_trim_words($post->post_excerpt, $num_words, '.');
+                                            } else {
+                                                $content = strip_shortcodes($post->post_content);
+                                                $content = apply_filters('the_content', $content);
+                                                $content = str_replace(']]>', ']]&gt;', $content);
+                                                echo wp_trim_words($content, $num_words, null);
+                                            }
+                                            ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php
+                                    if ($show_category == 'true' || $show_author == 'true') : ?>
+                                        <div class="post-metas">
+                                            <div class="meta-inner d-flex justify-content-center">
+                                                <?php if ($show_author == 'true') : ?>
+                                                    <span class="post-author">
+                                                        <span class="label"><?php echo esc_html__('by', 'basilico'); ?></span>
+                                                        <a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->display_name); ?></a>
+                                                    </span>
+                                                <?php endif; ?>
+                                                <?php if ($show_date == 'true') : ?>
+                                                    <span class="post-date">
+                                                        <?php echo get_the_date('', $post->ID); ?>
+                                                    </span>
+                                                <?php endif; ?>
+                                                <?php if ($show_comment == 'true') : ?>
+                                                    <span class="post-comments">
+                                                        <a href="<?php echo get_comments_link($post->ID); ?>">
+                                                            <span><?php comments_number(esc_html__('No Comments', 'basilico'), esc_html__(' 1 Comment', 'basilico'), esc_html__(' % Comments', 'basilico'), $post->ID); ?></span>
+                                                        </a>
+                                                    </span>
+                                                <?php endif; ?>
                                             </div>
-                                        <?php endif; ?>
-                                        <h3 class="item-title">
-                                            <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
-                                        </h3>
-                                        <?php if ($show_excerpt == true) : ?>
-                                            <div class="item-excerpt">
-                                                <?php
-                                                if (!empty($post->post_excerpt)) {
-                                                    echo wp_trim_words($post->post_excerpt, $num_words, '.');
-                                                } else {
-                                                    $content = strip_shortcodes($post->post_content);
-                                                    $content = apply_filters('the_content', $content);
-                                                    $content = str_replace(']]>', ']]&gt;', $content);
-                                                    echo wp_trim_words($content, $num_words, null);
-                                                }
-                                                ?>
-                                            </div>
-                                        <?php endif; ?>
-                                        <?php
-                                        if ($show_category == 'true' || $show_author == 'true') : ?>
-                                            <div class="post-metas">
-                                                <div class="meta-inner d-flex justify-content-center">
-                                                    <?php if ($show_author == 'true') : ?>
-                                                        <span class="post-author">
-                                                            <span class="label"><?php echo esc_html__('by', 'basilico'); ?></span>
-                                                            <a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->display_name); ?></a>
-                                                        </span>
-                                                    <?php endif; ?>
-                                                    <?php if ($show_date == 'true') : ?>
-                                                        <span class="post-date">
-                                                            <?php echo get_the_date('', $post->ID); ?>
-                                                        </span>
-                                                    <?php endif; ?>
-                                                    <?php if ($show_comment == 'true') : ?>
-                                                        <span class="post-comments">
-                                                            <a href="<?php echo get_comments_link($post->ID); ?>">
-                                                                <span><?php comments_number(esc_html__('No Comments', 'basilico'), esc_html__(' 1 Comment', 'basilico'), esc_html__(' % Comments', 'basilico'), $post->ID); ?></span>
-                                                            </a>
-                                                        </span>
-                                                    <?php endif; ?>
-                                                </div>
-                                            </div>
-                                        <?php endif;
-                                        ?>
-                                    </div>
+                                        </div>
+                                    <?php endif;
+                                    ?>
                                 </div>
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <?php if ($arrows !== 'false') : ?>
+            <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style);?>">
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
+                    <?php 
+                    if ( $settings['arrow_icon_next']['value'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_next'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon pxli-arrow-next"></span>';
+                    ?>
+                </div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev">
+                    <?php 
+                    if ( $settings['arrow_icon_previous']['value'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon pxli-arrow-next"></span>';
+                    ?>
                 </div>
             </div>
-            <?php if ($arrows !== 'false') : ?>
-                <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style);?>">
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxli-arrow-prev"></span></div>
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxli-arrow-next"></span></div>
-                </div>
-            <?php endif; ?>
-            <?php if ($dots !== 'false') : ?>
-                <div class="pxl-swiper-dots"></div>
-            <?php endif; ?>
-        </div>
+        <?php endif; ?>
+        <?php if ($dots !== 'false') : ?>
+            <div class="pxl-swiper-dots"></div>
+        <?php endif; ?>
     </div>
+</div>
 <?php endif; ?>

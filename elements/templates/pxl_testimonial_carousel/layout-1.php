@@ -123,7 +123,7 @@ $widget->add_render_attribute('carousel', [
                     if ( $settings['arrow_icon_previous']['value'] ) 
                         \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
                     else
-                        echo '<span class="pxl-icon pxli-arrow-next"></span>';
+                        echo '<span class="pxl-icon pxli-arrow-prev"></span>';
                     ?>
                 </div>
             </div>
