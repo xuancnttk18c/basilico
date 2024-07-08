@@ -322,6 +322,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => [
                                 'style-1' => esc_html__('Style 1'),
+                                'style-2' => esc_html__('Style 1'),
                             ],
                             'default' => 'style-1',
                             'condition' => [
@@ -335,6 +336,9 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box-carousel .pxl-swiper-arrows .pxl-swiper-arrow' => 'background-color: {{VALUE}};',
                             ],
+                            'condition' => [
+                                'arrows' => 'true'
+                            ]
                         ),
                         array(
                             'name' => 'arrows_bg_hover',
@@ -343,6 +347,9 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover' => 'background-color: {{VALUE}};',
                             ],
+                            'condition' => [
+                                'arrows' => 'true'
+                            ]
                         ),
                         array(
                             'name' => 'arrows_icon',
@@ -351,6 +358,9 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box-carousel .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'background-color: {{VALUE}};',
                             ],
+                            'condition' => [
+                                'arrows' => 'true'
+                            ]
                         ),
                         array(
                             'name' => 'arrows_icon_hover',
@@ -359,6 +369,9 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover .pxl-icon' => 'background-color: {{VALUE}};',
                             ],
+                            'condition' => [
+                                'arrows' => 'true'
+                            ]
                         ),
                         array(
                             'name' => 'arrow_prev_position',
