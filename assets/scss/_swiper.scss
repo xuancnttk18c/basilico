@@ -129,6 +129,7 @@ $slider-outer-space: 0;
             align-items: center;
             justify-content: center;
             transform: none;
+            opacity: 1;
             @include transition();
             &.slick-disabled {
                 cursor: not-allowed;

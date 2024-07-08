@@ -191,7 +191,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Arrows Background', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-fancy-box-carousel .pxl-swiper-arrows .pxl-swiper-arrow' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow' => 'background-color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -199,7 +199,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Arrows Background Hover', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-fancy-box-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover' => 'background-color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -207,7 +207,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Arrows Icon Color', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-fancy-box-carousel .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'background-color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -215,7 +215,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Arrows Icon Color Hover', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-fancy-box-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover .pxl-icon' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover .pxl-icon' => 'background-color: {{VALUE}};',
                                 ],
                             ),
                             array(
