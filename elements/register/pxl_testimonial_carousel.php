@@ -209,7 +209,7 @@ pxl_add_custom_widget(
                                     '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow' => 'background-color: {{VALUE}};',
                                 ],
                                 'condition' => [
-                                    'layout' => ['2']
+                                    'arrows_style' => 'style-2'
                                 ]
                             ),
                             array(
@@ -220,7 +220,7 @@ pxl_add_custom_widget(
                                     '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover' => 'background-color: {{VALUE}};',
                                 ],
                                 'condition' => [
-                                    'layout' => ['2']
+                                    'arrows_style' => 'style-2'
                                 ]
                             ),
                             array(
