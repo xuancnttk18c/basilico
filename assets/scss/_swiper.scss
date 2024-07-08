@@ -120,6 +120,15 @@ $slider-outer-space: 0;
 .pxl-swiper-arrows {
     &.style-1 {
         .pxl-swiper-arrow {
+            .pxl-icon {
+                font-size: 40px;
+                line-height: 1;
+                color: $primary_color;                
+            }
+        }
+    }
+    &.style-2 {
+        .pxl-swiper-arrow {
             background-color: $heading_color;
             width: 65px;
             height: 65px;
@@ -139,15 +148,6 @@ $slider-outer-space: 0;
             .pxl-icon {
                 font-size: 25px;
                 color: #fff;
-            }
-        }
-    }
-    &.style-2 {
-        .pxl-swiper-arrow {
-            .pxl-icon {
-                font-size: 40px;
-                line-height: 1;
-                color: $primary_color;                
             }
         }
     }
