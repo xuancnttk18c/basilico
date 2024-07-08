@@ -744,7 +744,7 @@ function basilico_arrow_settings(){
             'label' => esc_html__('Arrows Background', 'basilico'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} pxl-swiper-arrows .pxl-swiper-arrow' => 'background-color: {{VALUE}};',
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow' => 'background-color: {{VALUE}};',
             ],
             'condition' => [
                 'arrows' => 'true',

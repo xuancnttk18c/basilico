@@ -97,27 +97,13 @@ $slider-outer-space: 0;
 }
 
 //* Pxl Swiper arrows
-.pxl-swiper-arrows{
-    &.style-default{
-        .pxl-swiper-arrow {
-            font-size: 37px;
-            z-index: 2;
-            cursor: pointer;
-            color: $primary_color;
-            opacity: 0.4;
-            transition: all 450ms ease;
-            &:hover{
-                opacity: 1;
-            }
-        }
-    }
-    .pxl-swiper-arrow{
+.pxl-swiper-arrows {
+    .pxl-swiper-arrow {
+        cursor: pointer;
         &.swiper-button-disabled {
             cursor: not-allowed;
         }
     }
-}
-.pxl-swiper-arrows {
     &.style-1 {
         .pxl-swiper-arrow {
             .pxl-icon {
@@ -143,9 +129,6 @@ $slider-outer-space: 0;
             transform: none;
             opacity: 1;
             @include transition();
-            &.slick-disabled {
-                cursor: not-allowed;
-            }
             .pxl-icon {
                 font-size: 25px;
             }
@@ -176,6 +159,7 @@ $slider-outer-space: 0;
         right: 30px;
     }
 }
+
 .nav-vertical-out{
     .pxl-swiper-arrow-prev {
         left: -155px;
@@ -234,26 +218,6 @@ $slider-outer-space: 0;
         margin: 0 10px;
     }
 }
-
-// .pxl-swiper-slider:hover,
-// .pxl-swiper-slider:focus{
-//     .nav-vertical-out{
-//         @media (max-width: $lg_max){
-//             .pxl-swiper-arrow-prev,
-//             .pxl-swiper-arrow-next {
-//                 opacity: 1;
-//             }
-//         }
-//         @media (min-width: $xl_min){
-//             &.arrow-on-hover{
-//                 .pxl-swiper-arrow-prev,
-//                 .pxl-swiper-arrow-next{
-//                     opacity: 1;
-//                 }
-//             }
-//         }
-//     }
-// } 
 
 .pxl-swiper-dots,
 .slick-dots {
