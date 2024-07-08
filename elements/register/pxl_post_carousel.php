@@ -180,6 +180,63 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
                             ),
                             array(
+                                'name' => 'arrows_style',
+                                'label' => esc_html__('Arrows Style', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'options' => [
+                                    'style-1' => esc_html__('Style 1'),
+                                    'style-2' => esc_html__('Style 1'),
+                                ],
+                                'default' => 'style-1',
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
+                            ),
+                            array(
+                                'name' => 'arrows_bg',
+                                'label' => esc_html__('Arrows Background', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::COLOR,
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-post-carousel .pxl-swiper-arrows .pxl-swiper-arrow' => 'background-color: {{VALUE}};',
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
+                            ),
+                            array(
+                                'name' => 'arrows_bg_hover',
+                                'label' => esc_html__('Arrows Background Hover', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::COLOR,
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-post-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover' => 'background-color: {{VALUE}};',
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
+                            ),
+                            array(
+                                'name' => 'arrows_icon',
+                                'label' => esc_html__('Arrows Icon Color', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::COLOR,
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-post-carousel .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'background-color: {{VALUE}};',
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
+                            ),
+                            array(
+                                'name' => 'arrows_icon_hover',
+                                'label' => esc_html__('Arrows Icon Color Hover', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::COLOR,
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-post-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover .pxl-icon' => 'background-color: {{VALUE}};',
+                                ],
+                                'condition' => [
+                                    'arrows' => 'true'
+                                ]
+                            ),
+                            array(
                                 'name' => 'arrow_prev_position',
                                 'label' => esc_html__('Arrow Previous Position', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SELECT,
@@ -594,17 +651,6 @@ pxl_add_custom_widget(
                                     'arrow_next_offset_orientation_v' => 'bottom',
                                     'arrow_next_position' => 'absolute',
                                 ],
-                            ),
-                            array(
-                                'name' => 'arrows_on_hover',
-                                'label' => esc_html__('Show Arrows on Hover', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::SWITCHER,
-                                'default' => 'false',
-                                'condition' => [
-                                    'post_type' => 'post',
-                                    'layout_post' => ['post-1'],
-                                    'arrows' => 'true'
-                                ]
                             ),
                             array(
                                 'name' => 'dots',

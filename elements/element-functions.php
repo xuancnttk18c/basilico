@@ -34,8 +34,8 @@ if (!function_exists('basilico_elements_scripts')) {
         wp_register_script('pxl-tabs-carousel', get_template_directory_uri() . '/elements/assets/js/pxl-tabs-carousel.js', [ 'jquery' ], basilico()->get_version(), true);
     }
 }
- 
- 
+
+
 if (!function_exists('basilico_register_custom_icon_library')) {
     add_filter('elementor/icons_manager/native', 'basilico_register_custom_icon_library');
     function basilico_register_custom_icon_library($tabs){
@@ -232,33 +232,33 @@ function basilico_get_list_layout_options($posttype_name){
     $option_layouts = [];
     switch ($posttype_name) {
         case 'pxl-portfolio':
-            $option_layouts = [
-                'pxl-portfolio-list-1' => [
-                    'label' => esc_html__('Layout 1', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-pxl-portfolio-1.jpg'
-                ],
-            ];
-            break;
+        $option_layouts = [
+            'pxl-portfolio-list-1' => [
+                'label' => esc_html__('Layout 1', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-pxl-portfolio-1.jpg'
+            ],
+        ];
+        break;
         case 'post':
-            $option_layouts = [
-                'post-list-1' => [
-                    'label' => esc_html__('Layout 1', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-layout1.jpg'
-                ],
-                'post-list-2' => [
-                    'label' => esc_html__('Layout 2', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-layout2.jpg'
-                ],
-                'post-list-3' => [
-                    'label' => esc_html__('Layout 3', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-layout3.jpg'
-                ],
-                'post-list-4' => [
-                    'label' => esc_html__('Layout 4', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-layout3.jpg'
-                ],
-            ];
-            break;
+        $option_layouts = [
+            'post-list-1' => [
+                'label' => esc_html__('Layout 1', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-layout1.jpg'
+            ],
+            'post-list-2' => [
+                'label' => esc_html__('Layout 2', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-layout2.jpg'
+            ],
+            'post-list-3' => [
+                'label' => esc_html__('Layout 3', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-layout3.jpg'
+            ],
+            'post-list-4' => [
+                'label' => esc_html__('Layout 4', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_list-layout3.jpg'
+            ],
+        ];
+        break;
     }
     return $option_layouts;
 }
@@ -288,13 +288,13 @@ function basilico_get_create_layout_options($posttype_name){
     $option_layouts = [];
     switch ($posttype_name) {
         case 'post':
-            $option_layouts = [
-                'post-create-1' => [
-                    'label' => esc_html__('Layout 1', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_create-1.jpg'
-                ],
-            ];
-            break;
+        $option_layouts = [
+            'post-create-1' => [
+                'label' => esc_html__('Layout 1', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_create-1.jpg'
+            ],
+        ];
+        break;
     }
     return $option_layouts;
 }
@@ -340,7 +340,7 @@ function basilico_get_grid_ids_by_posttype($pt_supports = [], $args = []){
     foreach ($post_types as $name => $label) {
 
         $posts = basilico_list_post($name, false);
- 
+
         $result[] = array(
             'name' => 'source_' . $name . '_post_ids',
             'label' => sprintf(esc_html__('Select posts', 'basilico'), $label),
@@ -385,81 +385,81 @@ function basilico_get_carousel_layout_options($posttype_name){
     $option_layouts = [];
     switch ($posttype_name) {
         case 'post':
-            $option_layouts = [
-                'post-1' => [
-                    'label' => esc_html__('Layout 1', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-1.jpg'
-                ],
-                'post-2' => [
-                    'label' => esc_html__('Layout 2', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-2.jpg'
-                ],
-                'post-3' => [
-                    'label' => esc_html__('Layout 3', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-2.jpg'
-                ],
-                'post-4' => [
-                    'label' => esc_html__('Layout 4', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-2.jpg'
-                ],
-            ];
-            break;
+        $option_layouts = [
+            'post-1' => [
+                'label' => esc_html__('Layout 1', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-1.jpg'
+            ],
+            'post-2' => [
+                'label' => esc_html__('Layout 2', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-2.jpg'
+            ],
+            'post-3' => [
+                'label' => esc_html__('Layout 3', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-2.jpg'
+            ],
+            'post-4' => [
+                'label' => esc_html__('Layout 4', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-2.jpg'
+            ],
+        ];
+        break;
         case 'pxl-portfolio':
-            $option_layouts = [
-                'pxl-portfolio-1' => [
-                    'label' => esc_html__('Layout 1', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-1.jpg'
-                ],
-                'pxl-portfolio-2' => [
-                    'label' => esc_html__('Layout 2', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-2.jpg'
-                ],
-                'pxl-portfolio-3' => [
-                    'label' => esc_html__('Layout 3', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-3.jpg'
-                ],
-                'pxl-portfolio-4' => [
-                    'label' => esc_html__('Layout 4', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-4.jpg'
-                ],
-                'pxl-portfolio-5' => [
-                    'label' => esc_html__('Layout 5', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-5.jpg'
-                ],
-                'pxl-portfolio-6' => [
-                    'label' => esc_html__('Layout 6', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-6.jpg'
-                ],
-                'pxl-portfolio-7' => [
-                    'label' => esc_html__('Layout 7', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-7.jpg'
-                ],
-                'pxl-portfolio-8' => [
-                    'label' => esc_html__('Layout 8', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-8.jpg'
-                ],
-                'pxl-portfolio-9' => [
-                    'label' => esc_html__('Layout 9', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-7.jpg'
-                ],
-                'pxl-portfolio-10' => [
-                    'label' => esc_html__('Layout 10', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-7.jpg'
-                ],
-            ];
-            break;
+        $option_layouts = [
+            'pxl-portfolio-1' => [
+                'label' => esc_html__('Layout 1', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-1.jpg'
+            ],
+            'pxl-portfolio-2' => [
+                'label' => esc_html__('Layout 2', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-2.jpg'
+            ],
+            'pxl-portfolio-3' => [
+                'label' => esc_html__('Layout 3', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-3.jpg'
+            ],
+            'pxl-portfolio-4' => [
+                'label' => esc_html__('Layout 4', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-4.jpg'
+            ],
+            'pxl-portfolio-5' => [
+                'label' => esc_html__('Layout 5', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-5.jpg'
+            ],
+            'pxl-portfolio-6' => [
+                'label' => esc_html__('Layout 6', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-6.jpg'
+            ],
+            'pxl-portfolio-7' => [
+                'label' => esc_html__('Layout 7', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-7.jpg'
+            ],
+            'pxl-portfolio-8' => [
+                'label' => esc_html__('Layout 8', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-8.jpg'
+            ],
+            'pxl-portfolio-9' => [
+                'label' => esc_html__('Layout 9', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-7.jpg'
+            ],
+            'pxl-portfolio-10' => [
+                'label' => esc_html__('Layout 10', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-7.jpg'
+            ],
+        ];
+        break;
         case 'pxl-service':
-            $option_layouts = [
-                'pxl-service-1' => [
-                    'label' => esc_html__('Layout 1', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-1.jpg'
-                ],
-                'pxl-service-2' => [
-                    'label' => esc_html__('Layout 1', 'basilico'),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-1.jpg'
-                ],
-            ];
-            break;
+        $option_layouts = [
+            'pxl-service-1' => [
+                'label' => esc_html__('Layout 1', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-1.jpg'
+            ],
+            'pxl-service-2' => [
+                'label' => esc_html__('Layout 1', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-1.jpg'
+            ],
+        ];
+        break;
     }
     return $option_layouts;
 }
@@ -504,7 +504,7 @@ function basilico_get_carousel_ids_by_posttype($pt_supports = [], $args = []){
     foreach ($post_types as $name => $label) {
 
         $posts = basilico_list_post($name, false);
- 
+
         $result[] = array(
             'name' => 'source_' . $name . '_post_ids',
             'label' => sprintf(esc_html__('Select posts', 'basilico'), $label),
@@ -522,7 +522,7 @@ function basilico_get_carousel_ids_by_posttype($pt_supports = [], $args = []){
     return $result;
 }
 
- 
+
 
 /* grid columns setting */
 function basilico_grid_column_settings(){
@@ -699,6 +699,530 @@ function basilico_carousel_column_settings(){
     );
 }
 
+function basilico_arrow_settings(){
+    return array(
+        array(
+            'name' => 'arrows',
+            'label' => esc_html__('Show Arrows', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SWITCHER,
+        ),
+        array(
+            'name' => 'arrows_style',
+            'label' => esc_html__('Arrows Style', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SELECT,
+            'options' => [
+                'style-1' => esc_html__('Style 1'),
+                'style-2' => esc_html__('Style 2'),
+            ],
+            'default' => 'style-1',
+            'condition' => [
+                'arrows' => 'true'
+            ]
+        ),
+        array(
+            'name' => 'arrow_icon_previous',
+            'label' => esc_html__('Icon Previous', 'basilico' ),
+            'type' => 'icons',
+            'label_block' => true,
+            'fa4compatibility' => 'icon',
+            'condition' => [
+                'arrows' => 'true'
+            ]
+        ),
+        array(
+            'name' => 'arrow_icon_next',
+            'label' => esc_html__('Icon Next', 'basilico' ),
+            'type' => 'icons',
+            'label_block' => true,
+            'fa4compatibility' => 'icon',
+            'condition' => [
+                'arrows' => 'true'
+            ]
+        ),
+        array(
+            'name' => 'arrows_bg',
+            'label' => esc_html__('Arrows Background', 'basilico'),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} pxl-swiper-arrows .pxl-swiper-arrow' => 'background-color: {{VALUE}};',
+            ],
+            'condition' => [
+                'arrows' => 'true',
+                'arrows_style' => 'style-2'
+            ]
+        ),
+        array(
+            'name' => 'arrows_bg_hover',
+            'label' => esc_html__('Arrows Background Hover', 'basilico'),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow:hover' => 'background-color: {{VALUE}};',
+            ],
+            'condition' => [
+                'arrows' => 'true',
+                'arrows_style' => 'style-2'
+            ]
+        ),
+        array(
+            'name' => 'arrow_icon_size',
+            'label' => esc_html__('Arrow Icon Size', 'basilico' ),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'control_type' => 'responsive',
+            'size_units' => [ 'px' ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                ],
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow svg' => 'width: {{SIZE}}{{UNIT}};',
+            ],
+        ),
+        array(
+            'name' => 'arrows_icon_color',
+            'label' => esc_html__('Arrows Icon Color', 'basilico'),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow svg' => 'fill: {{VALUE}};'
+            ],
+            'condition' => [
+                'arrows' => 'true'
+            ]
+        ),
+        array(
+            'name' => 'arrows_icon_hover',
+            'label' => esc_html__('Arrows Icon Color Hover', 'basilico'),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow:hover .pxl-icon' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow:hover svg' => 'fill: {{VALUE}};',
+            ],
+            'condition' => [
+                'arrows' => 'true'
+            ]
+        ),
+        array(
+            'name' => 'arrow_prev_position',
+            'label' => esc_html__('Arrow Previous Position', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SELECT,
+            'default' => 'default',
+            'label_block' => true,
+            'options' => [
+                'default' => esc_html('Default', 'basilico'),
+                'absolute' => esc_html('Custom', 'basilico'),
+            ],
+            'condition' => [
+                'arrows' => 'true'
+            ]
+        ),
+        array(
+            'name' => 'arrow_prev_offset_orientation_h',
+            'label' => esc_html__('Horizontal Orientation', 'basilico'),
+            'type' => \Elementor\Controls_Manager::CHOOSE,
+            'default' => 'left',
+            'options' => [
+                'left' => [
+                    'title' => 'Start',
+                    'icon' => 'eicon-h-align-left',
+                ],
+                'right' => [
+                    'title' => 'End',
+                    'icon' => 'eicon-h-align-right',
+                ],
+            ],
+            'render_type' => 'ui',
+            'condition' => [
+                'arrows' => 'true',
+                'arrow_prev_position' => 'absolute'
+            ]
+        ),
+        array(
+            'name' => 'arrow_prev_offset_x',
+            'label' => esc_html__('Offset', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'range' => [
+                'px' => [
+                    'min' => -1000,
+                    'max' => 1000,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vw' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vh' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+            ],
+            'control_type' => 'responsive',
+            'default' => [
+                'size' => 0,
+                'unit' => 'px'
+            ],
+            'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; left: {{SIZE}}{{UNIT}}; right: auto;',
+            ],
+            'condition' => [
+                'arrows' => 'true',
+                'arrow_prev_offset_orientation_h!' => 'right',
+                'arrow_prev_position' => 'absolute',
+            ],
+        ),
+        array(
+            'name' => 'arrow_prev_offset_x_end',
+            'label' => esc_html__('Offset', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'range' => [
+                'px' => [
+                    'min' => -1000,
+                    'max' => 1000,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vw' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vh' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+            ],
+            'control_type' => 'responsive',
+            'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+            'default' => [
+                'size' => 0,
+                'unit' => 'px'
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; right: {{SIZE}}{{UNIT}}; left: auto;',
+            ],
+            'condition' => [
+                'arrows' => 'true',
+                'arrow_prev_offset_orientation_h' => 'right',
+                'arrow_prev_position' => 'absolute',
+            ],
+        ),
+        array(
+            'name' => 'arrow_prev_offset_orientation_v',
+            'label' => esc_html__('Vertical Orientation', 'basilico'),
+            'type' => \Elementor\Controls_Manager::CHOOSE,
+            'default' => 'top',
+            'options' => [
+                'top' => [
+                    'title' => 'Top',
+                    'icon' => 'eicon-v-align-top',
+                ],
+                'bottom' => [
+                    'title' => 'Bottom',
+                    'icon' => 'eicon-v-align-bottom',
+                ],
+            ],
+            'render_type' => 'ui',
+            'condition' => [
+                'arrows' => 'true',
+                'arrow_prev_position' => 'absolute'
+            ]
+        ),
+        array(
+            'name' => 'arrow_prev_offset_y',
+            'label' => esc_html__('Offset', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'range' => [
+                'px' => [
+                    'min' => -1000,
+                    'max' => 1000,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vw' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vh' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+            ],
+            'control_type' => 'responsive',
+            'default' => [
+                'size' => 0,
+                'unit' => 'px'
+            ],
+            'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; top: {{SIZE}}{{UNIT}}; bottom: auto;',
+            ],
+            'condition' => [
+                'arrows' => 'true',
+                'arrow_prev_offset_orientation_v!' => 'bottom',
+                'arrow_prev_position' => 'absolute',
+            ],
+        ),
+        array(
+            'name' => 'arrow_prev_offset_y_end',
+            'label' => esc_html__('Offset', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'range' => [
+                'px' => [
+                    'min' => -1000,
+                    'max' => 1000,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vw' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vh' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+            ],
+            'control_type' => 'responsive',
+            'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+            'default' => [
+                'size' => 0,
+                'unit' => 'px'
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; bottom: {{SIZE}}{{UNIT}}; top: auto;',
+            ],
+            'condition' => [
+                'arrows' => 'true',
+                'arrow_prev_offset_orientation_v' => 'bottom',
+                'arrow_prev_position' => 'absolute',
+            ],
+        ),
+        array(
+            'name' => 'arrow_next_position',
+            'label' => esc_html__('Arrow Next Position', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SELECT,
+            'default' => 'default',
+            'label_block' => true,
+            'options' => [
+                'default' => esc_html('Default', 'basilico'),
+                'absolute' => esc_html('Custom', 'basilico'),
+            ],
+            'condition' => [
+                'arrows' => 'true'
+            ]
+        ),
+        array(
+            'name' => 'arrow_next_offset_orientation_h',
+            'label' => esc_html__('Horizontal Orientation', 'basilico'),
+            'type' => \Elementor\Controls_Manager::CHOOSE,
+            'default' => 'left',
+            'options' => [
+                'left' => [
+                    'title' => 'Start',
+                    'icon' => 'eicon-h-align-left',
+                ],
+                'right' => [
+                    'title' => 'End',
+                    'icon' => 'eicon-h-align-right',
+                ],
+            ],
+            'render_type' => 'ui',
+            'condition' => [
+                'arrows' => 'true',
+                'arrow_next_position' => 'absolute'
+            ]
+        ),
+        array(
+            'name' => 'arrow_next_offset_x',
+            'label' => esc_html__('Offset', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'range' => [
+                'px' => [
+                    'min' => -1000,
+                    'max' => 1000,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vw' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vh' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+            ],
+            'control_type' => 'responsive',
+            'default' => [
+                'size' => 0,
+                'unit' => 'px'
+            ],
+            'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'position: absolute !important; left: {{SIZE}}{{UNIT}}; right: auto;',
+            ],
+            'condition' => [
+                'arrows' => 'true',
+                'arrow_next_offset_orientation_h!' => 'right',
+                'arrow_next_position' => 'absolute',
+            ],
+        ),
+        array(
+            'name' => 'arrow_next_offset_x_end',
+            'label' => esc_html__('Offset', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'range' => [
+                'px' => [
+                    'min' => -1000,
+                    'max' => 1000,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vw' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vh' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+            ],
+            'control_type' => 'responsive',
+            'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+            'default' => [
+                'size' => 0,
+                'unit' => 'px'
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'position: absolute !important; right: {{SIZE}}{{UNIT}}; left: auto;',
+            ],
+            'condition' => [
+                'arrows' => 'true',
+                'arrow_next_offset_orientation_h' => 'right',
+                'arrow_next_position' => 'absolute',
+            ],
+        ),
+        array(
+            'name' => 'arrow_next_offset_orientation_v',
+            'label' => esc_html__('Vertical Orientation', 'basilico'),
+            'type' => \Elementor\Controls_Manager::CHOOSE,
+            'default' => 'top',
+            'options' => [
+                'top' => [
+                    'title' => 'Top',
+                    'icon' => 'eicon-v-align-top',
+                ],
+                'bottom' => [
+                    'title' => 'Bottom',
+                    'icon' => 'eicon-v-align-bottom',
+                ],
+            ],
+            'render_type' => 'ui',
+            'condition' => [
+                'arrows' => 'true',
+                'arrow_next_position' => 'absolute'
+            ]
+        ),
+        array(
+            'name' => 'arrow_next_offset_y',
+            'label' => esc_html__('Offset', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'range' => [
+                'px' => [
+                    'min' => -1000,
+                    'max' => 1000,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vw' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vh' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+            ],
+            'control_type' => 'responsive',
+            'default' => [
+                'size' => 0,
+                'unit' => 'px'
+            ],
+            'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'position: absolute !important; top: {{SIZE}}{{UNIT}}; bottom: auto;',
+            ],
+            'condition' => [
+                'arrows' => 'true',
+                'arrow_next_offset_orientation_v!' => 'bottom',
+                'arrow_next_position' => 'absolute',
+            ],
+        ),
+        array(
+            'name' => 'arrow_next_offset_y_end',
+            'label' => esc_html__('Offset', 'basilico'),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'range' => [
+                'px' => [
+                    'min' => -1000,
+                    'max' => 1000,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vw' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+                'vh' => [
+                    'min' => -200,
+                    'max' => 200,
+                ],
+            ],
+            'control_type' => 'responsive',
+            'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
+            'default' => [
+                'size' => 0,
+                'unit' => 'px'
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'position: absolute !important; bottom: {{SIZE}}{{UNIT}}; top: auto;',
+            ],
+            'condition' => [
+                'arrows' => 'true',
+                'arrow_next_offset_orientation_v' => 'bottom',
+                'arrow_next_position' => 'absolute',
+            ]
+        )
+    );
+}
+
 function basilico_elementor_animation_opts($args = []){
     $args = wp_parse_args($args, [
         'name'   => '',
@@ -757,7 +1281,7 @@ function basilico_position_option($args = []){
             'frontend_available' => true,
             'condition'   => $args['condition'],
         ),
-         
+
         array(
             'name'        => $args['prefix'] .'pos_offset_left',
             'label' => esc_html__( 'Left', 'basilico' ).' (50px) px,%,vw,auto',
@@ -779,7 +1303,7 @@ function basilico_position_option($args = []){
                 '{{WRAPPER}} '.$args['selectors_class'] => 'right: {{VALUE}}',
             ],
             'condition'   => array_merge($args['condition'], [ $args['prefix'] .'position!' => '' ]),
-             
+
         ),
         array(
             'name'        => $args['prefix'] .'pos_offset_top',
@@ -791,7 +1315,7 @@ function basilico_position_option($args = []){
                 '{{WRAPPER}} '.$args['selectors_class'] => 'top: {{VALUE}}',
             ],
             'condition'   => array_merge($args['condition'], [ $args['prefix'] .'position!' => '']),
-              
+
         ),  
         array(
             'name'        => $args['prefix'] .'pos_offset_bottom',
@@ -943,7 +1467,7 @@ function basilico_get_parallax_effect_settings($settings){
         if(!empty($settings['parallax_effect_scale'])){
             $effects['scale'] = (float)$settings['parallax_effect_scale'];
         }
- 
+
         return json_encode($effects);
     }else{
         return '';
@@ -972,7 +1496,7 @@ function basilico_position_option_base($args = []){
             'type'        => 'pxl_start_popover',
             'condition'   => $args['condition'],
         ), 
-         
+
         array(
             'name'        => $args['prefix'] .'pos_offset_left',
             'label' => esc_html__( 'Left', 'basilico' ).' (50px) px,%,vw,auto',
@@ -994,7 +1518,7 @@ function basilico_position_option_base($args = []){
                 '{{WRAPPER}} '.$args['selectors_class'] => 'right: {{VALUE}}',
             ],
             'condition'   => $args['condition'],
-             
+
         ),
         array(
             'name'        => $args['prefix'] .'pos_offset_top',
@@ -1006,7 +1530,7 @@ function basilico_position_option_base($args = []){
                 '{{WRAPPER}} '.$args['selectors_class'] => 'top: {{VALUE}}',
             ],
             'condition'   => $args['condition'],
-              
+
         ),  
         array(
             'name'        => $args['prefix'] .'pos_offset_bottom',
@@ -1031,7 +1555,7 @@ function basilico_position_option_base($args = []){
 }
 
 function basilico_parallax_effect_option($args = []){
-     
+
     $args = wp_parse_args($args, [
         'prefix' => '',
         'condition' => []
@@ -1128,9 +1652,9 @@ function basilico_parallax_effect_option($args = []){
             'type'        => 'pxl_end_popover',
             'condition'   => $args['condition'],
         ), 
-       
+
     );
-    return $options;
+return $options;
 }
 
 function basilico_split_text_option($name=''){
