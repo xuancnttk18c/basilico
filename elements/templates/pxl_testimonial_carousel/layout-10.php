@@ -64,14 +64,6 @@ $widget->add_render_attribute( 'carousel', [
     <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
         <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
             <div class="pxl-swiper-wrapper swiper-wrapper">
-                <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) { ?>
-                    <div class="icon-wrapper">
-                        <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
-                    </div>
-                <?php } ?>
-                <?php if ($quote_icon_type == 'text') { ?>
-                    <div class="item-quote-icon">“</div>
-                <?php } ?>
                 <?php foreach ($content_list as $key => $value):
                     $description = isset($value['description']) ? $value['description'] : '';
                     $title       = isset($value['title']) ? $value['title'] : '';
@@ -79,6 +71,14 @@ $widget->add_render_attribute( 'carousel', [
                     ?>
                     <div class="pxl-swiper-slide swiper-slide">
                         <div class="item-inner">
+                            <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) { ?>
+                                <div class="icon-wrapper">
+                                    <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon pxl-icon'], 'i'); ?>
+                                </div>
+                            <?php } ?>
+                            <?php if ($quote_icon_type == 'text') { ?>
+                                <div class="item-quote-icon">“</div>
+                            <?php } ?>
                             <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
                             <div class="item-info d-flex align-items-center">
                                 <div class="item-info-wrapper">
