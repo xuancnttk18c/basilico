@@ -208,6 +208,9 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow' => 'background-color: {{VALUE}};',
                                 ],
+                                'condition' => [
+                                    'layout' => ['2']
+                                ]
                             ),
                             array(
                                 'name' => 'arrows_bg_hover',
@@ -216,13 +219,16 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover' => 'background-color: {{VALUE}};',
                                 ],
+                                'condition' => [
+                                    'layout' => ['2']
+                                ]
                             ),
                             array(
                                 'name' => 'arrows_icon',
                                 'label' => esc_html__('Arrows Icon Color', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -230,7 +236,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Arrows Icon Color Hover', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover .pxl-icon' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover .pxl-icon' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
