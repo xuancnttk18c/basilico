@@ -105,6 +105,22 @@ $widget->add_render_attribute( 'carousel', [
         </div>
         <?php if($arrows !== 'false'): ?>
             <div class="pxl-swiper-arrows style-default nav-vertical-out <?php echo esc_attr($arrows_style);?>">
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
+                    <?php 
+                    if ( $settings['arrow_icon_next']['value'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_next'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon pxli-arrow-right"></span>';
+                    ?>
+                </div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev">
+                    <?php 
+                    if ( $settings['arrow_icon_previous']['value'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon pxli-arrow-left"></span>';
+                    ?>
+                </div>
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxli-arrow-left"></span></div>
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxli-arrow-right"></span></div>
             </div>
