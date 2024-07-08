@@ -46,10 +46,10 @@ $opts = [
     'dots'                          => $dots,
     'dots_style'                    => 'bullets',
     'autoplay'                      => (bool)$widget->get_setting('autoplay', false),
-    'pause_on_hover'                => (bool)$widget->get_setting('pause_on_hover', true),
+    'pause_on_hover'                => (bool)$widget->get_setting('pause_on_hover', false),
     'pause_on_interaction'          => true,
     'delay'                         => (int)$widget->get_setting('autoplay_speed', 5000),
-    'loop'                          => (bool)$widget->get_setting('infinite', true),
+    'loop'                          => (bool)$widget->get_setting('infinite', false),
     'speed'                         => (int)$widget->get_setting('speed', 500)
 ];
 
@@ -104,8 +104,22 @@ $widget->add_render_attribute( 'carousel', [
         </div>
         <?php if($arrows !== 'false'): ?>
             <div class="pxl-swiper-arrows style-default nav-vertical-out <?php echo esc_attr($arrows_style);?>">
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon zmdi zmdi-arrow-left"></span></div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon zmdi zmdi-arrow-right"></span></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev">
+                    <?php 
+                    if ( $settings['arrow_icon_previous'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['btn_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon zmdi zmdi-arrow-left"></span>';
+                    ?>
+                </div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
+                    <?php 
+                    if ( $settings['arrow_icon_next'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['btn_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon zmdi zmdi-arrow-right"></span>';
+                    ?>
+                </div>
             </div>
         <?php endif; ?>
         <?php if($dots !== 'false'): ?>

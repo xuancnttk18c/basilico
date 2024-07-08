@@ -180,11 +180,26 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::SELECT,
                                 'options' => [
                                     'style-1' => esc_html__('Style 1'),
+                                    'style-2' => esc_html__('Style 1'),
                                 ],
                                 'default' => 'style-1',
                                 'condition' => [
                                     'arrows' => 'true'
                                 ]
+                            ),
+                            array(
+                                'name' => 'arrow_icon_previous',
+                                'label' => esc_html__('Icon Previous', 'basilico' ),
+                                'type' => 'icons',
+                                'label_block' => true,
+                                'fa4compatibility' => 'icon',
+                            ),
+                            array(
+                                'name' => 'arrow_icon_next',
+                                'label' => esc_html__('Icon Next', 'basilico' ),
+                                'type' => 'icons',
+                                'label_block' => true,
+                                'fa4compatibility' => 'icon',
                             ),
                             array(
                                 'name' => 'arrows_bg',
