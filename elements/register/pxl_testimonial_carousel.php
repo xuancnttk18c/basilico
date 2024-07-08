@@ -133,7 +133,7 @@ pxl_add_custom_widget(
                                 'icon' => esc_html__('Icon', 'basilico'),
                                 'none' => esc_html__('None', 'basilico'),
                             ],
-                            'default' => 'text' 
+                            'default' => 'text'
                         ),
                         array(
                             'name' => 'selected_icon',
