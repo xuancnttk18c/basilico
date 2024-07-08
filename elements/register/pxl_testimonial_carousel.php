@@ -247,7 +247,7 @@ pxl_add_custom_widget(
                 array(
                     'name' => 'style_section',
                     'label' => esc_html__('Style', 'basilico' ),
-                    'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                    'tab' => \Elementor\Controls_Manager::TAB_STYLE,
                     'controls' => array(
                         array(
                             'name' => 'quote_icon_type',
