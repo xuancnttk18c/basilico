@@ -347,7 +347,7 @@ function pxl_get_thumbs_setting($thumb_node){
         },
     };
 
-    if(thumbs_settings['allow_touch_move'] == 'false')
+    if(thumbs_settings['allow_touch_move'] == false)
         thumbs_settings_params['allowTouchMove'] = false;
 
     if(thumbs_settings['center_slide'] || thumbs_settings['center_slide'] == 'true')
