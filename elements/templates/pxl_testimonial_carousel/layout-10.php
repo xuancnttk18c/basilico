@@ -52,7 +52,6 @@ $opts = [
     'speed'                         => (int)$widget->get_setting('speed', 500)
 ];
 
-
 $widget->add_render_attribute( 'carousel', [
     'class'         => 'pxl-swiper-container',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
@@ -80,7 +79,7 @@ $widget->add_render_attribute( 'carousel', [
                                 <div class="item-quote-icon">“</div>
                             <?php } ?>
                             <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
-                            <div class="item-info d-flex align-items-center">
+                            <div class="item-info d-flex align-items-center justify-content-center">
                                 <div class="item-info-wrapper">
                                     <h4 class="item-title"><?php echo esc_html($title); ?></h4>
                                     <div class="item-position"><?php echo esc_html($position); ?></div>
@@ -132,7 +131,7 @@ $widget->add_render_attribute( 'carousel', [
     ];
     $data_thumb_settings = wp_json_encode($thumb_opts);
     ?>
-    <div class="pxl-swiper-slider-thumbs d-flex">
+    <div class="pxl-swiper-slider-thumbs d-flex justify-content-center">
         <div class="pxl-swiper-slider-inner pxl-carousel-inner">
             <div class="pxl-swiper-thumbs overflow-hidden" data-settings="<?php echo esc_attr($data_thumb_settings) ?>">
                 <div class="pxl-thumbs-wrapper swiper-wrapper ">
