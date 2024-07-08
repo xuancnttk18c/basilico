@@ -779,6 +779,9 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'font-size: {{SIZE}}{{UNIT}};',
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow svg' => 'width: {{SIZE}}{{UNIT}};',
             ],
+            'condition' => [
+                'arrows' => 'true'
+            ]
         ),
         array(
             'name' => 'arrows_icon_color',

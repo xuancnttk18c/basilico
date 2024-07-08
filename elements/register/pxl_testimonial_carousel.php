@@ -241,6 +241,14 @@ pxl_add_custom_widget(
                                 'separator' => 'after'
                             ),
                         ),
+                        //basilico_arrow_settings(),
+                    ),
+                ),
+                array(
+                    'name' => 'arrow_settings',
+                    'label' => esc_html__('Arrow Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
+                    'controls' => array_merge(
                         basilico_arrow_settings(),
                     ),
                 ),
