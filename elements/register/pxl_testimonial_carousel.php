@@ -232,7 +232,24 @@ pxl_add_custom_widget(
                                 ]
                             ),
                             array(
-                                'name' => 'arrows_icon',
+                                'name' => 'arrow_icon_size',
+                                'label' => esc_html__('Arrow Icon Size', 'basilico' ),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'control_type' => 'responsive',
+                                'size_units' => [ 'px' ],
+                                'range' => [
+                                    'px' => [
+                                        'min' => 0,
+                                        'max' => 100,
+                                    ],
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow svg' => 'width: {{SIZE}}{{UNIT}};',
+                                ],
+                            ),
+                            array(
+                                'name' => 'arrows_icon_color',
                                 'label' => esc_html__('Arrows Icon Color', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
@@ -249,6 +266,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover .pxl-icon' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow:hover svg' => 'fill: {{VALUE}};',
                                 ],
                                 'condition' => [
                                     'arrows' => 'true'

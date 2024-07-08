@@ -123,7 +123,10 @@ $slider-outer-space: 0;
             .pxl-icon {
                 font-size: 40px;
                 line-height: 1;
-                color: $primary_color;                
+                color: $primary_color;
+            }
+            svg {
+                width: 40px;
             }
         }
     }
@@ -142,11 +145,11 @@ $slider-outer-space: 0;
             &.slick-disabled {
                 cursor: not-allowed;
             }
-            &.pxl-swiper-arrow-next {
-                margin-left: 30px;
-            }
             .pxl-icon {
                 font-size: 25px;
+            }
+            svg {
+                width: 25px;
             }
         }
     }
