@@ -919,11 +919,11 @@
             }   
         }
         .item-quote-icon {
-            font-family: $heading_font_family;
+            font-family: none;
             color: $primary_color;
-            font-size: 60px;
+            font-size: 100px;
+            line-height: 70px;
             font-weight: 700;
-            line-height: 1;
         }
         .pxl-icon {
             font-size: 20px;
