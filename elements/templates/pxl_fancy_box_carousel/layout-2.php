@@ -112,7 +112,7 @@ $widget->add_render_attribute( 'carousel', [
             </div>
         </div>
         <?php if ($arrows !== 'false'): ?>
-            <div class="pxl-swiper-arrows nav-vertical-in <?php echo esc_attr($arrows_style);?>">
+            <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style);?>">
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon zmdi zmdi-arrow-right"></span></div>
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon zmdi zmdi-arrow-left"></span></div>
             </div>
