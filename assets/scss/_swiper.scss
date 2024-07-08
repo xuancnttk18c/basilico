@@ -131,10 +131,12 @@ $slider-outer-space: 0;
             @include transition();
             .pxl-icon {
                 font-size: 25px;
+                transition: inherit;
             }
             svg {
                 width: 25px;
                 height: auto;
+                transition: inherit;
             }
         }
     }
