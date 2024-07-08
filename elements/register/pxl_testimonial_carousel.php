@@ -696,6 +696,7 @@ pxl_add_custom_widget(
                                 'name' => 'infinite',
                                 'label' => esc_html__('Infinite Loop', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
+                                'default' => false,
                             ),
                             array(
                                 'name' => 'speed',
