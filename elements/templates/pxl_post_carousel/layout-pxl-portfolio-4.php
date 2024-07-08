@@ -26,31 +26,32 @@ extract(pxl_get_posts_of_grid(
     $tax
 ));
 
-$arrows = $widget->get_setting('arrows','false');  
+$arrows = $widget->get_setting('arrows','false');
+$arrows_style = $widget->get_setting('arrows_style', 'style-1');
 $dots = $widget->get_setting('dots','false');
 
 $opts = [
     'slide_direction'               => 'horizontal',
-    'slide_percolumn'               => '1',
+    'slide_percolumn'               => 1,
     'slide_mode'                    => 'slide', 
-    'slides_to_show_xxl'            => $widget->get_setting('col_xxl', '4'),
-    'slides_to_show'                => $widget->get_setting('col_xl', '3'), 
-    'slides_to_show_lg'             => $widget->get_setting('col_lg', '3'), 
-    'slides_to_show_md'             => $widget->get_setting('col_md', '2'),
-    'slides_to_show_sm'             => $widget->get_setting('col_sm', '2'), 
-    'slides_to_show_xs'             => $widget->get_setting('col_xs', '1'), 
-    'slides_to_scroll'              => $widget->get_setting('slides_to_scroll', '1'), 
+    'slides_to_show_xxl'            => (float)$widget->get_setting('col_xxl', 4),
+    'slides_to_show'                => (float)$widget->get_setting('col_xl', 3), 
+    'slides_to_show_lg'             => (float)$widget->get_setting('col_lg', 3), 
+    'slides_to_show_md'             => (float)$widget->get_setting('col_md', 2),
+    'slides_to_show_sm'             => (float)$widget->get_setting('col_sm', 2), 
+    'slides_to_show_xs'             => (float)$widget->get_setting('col_xs', 1), 
+    'slides_to_scroll'              => (int)$widget->get_setting('slides_to_scroll', 1), 
     'slides_gutter'                 => (int)$gutter, 
-    'center_slide'                  => $widget->get_setting('center_slide', 'false'),
+    'center_slide'                  => (bool)$widget->get_setting('center_slide', false),
     'arrow'                         => $arrows,
     'dots'                          => $dots,
     'dots_style'                    => 'bullets',
-    'autoplay'                      => $widget->get_setting('autoplay', 'false'),
-    'pause_on_hover'                => $widget->get_setting('pause_on_hover', 'true'),
-    'pause_on_interaction'          => 'true',
-    'delay'                         => $widget->get_setting('autoplay_speed', '5000'),
-    'loop'                          => $widget->get_setting('infinite','false'),
-    'speed'                         => $widget->get_setting('speed', '500')
+    'autoplay'                      => (bool)$widget->get_setting('autoplay', false),
+    'pause_on_hover'                => (bool)$widget->get_setting('pause_on_hover', false),
+    'pause_on_interaction'          => true,
+    'delay'                         => (int)$widget->get_setting('autoplay_speed', 5000),
+    'loop'                          => (bool)$widget->get_setting('infinite', false),
+    'speed'                         => (int)$widget->get_setting('speed', 5000)
 ];
 
 
@@ -184,9 +185,23 @@ if ( !empty( $item_animation) ) {
             </div>
         </div>
         <?php if($arrows !== 'false'): ?>
-            <div class="pxl-swiper-arrows style-default nav-horizontal">
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxli pxli-arrow-prev"></span></div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxli pxli-arrow-next"></span></div>
+            <div class="pxl-swiper-arrows nav-horizontal <?php echo esc_attr($arrows_style);?>">
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
+                    <?php 
+                    if ( $settings['arrow_icon_next']['value'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_next'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon pxli-arrow-next"></span>';
+                    ?>
+                </div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev">
+                    <?php 
+                    if ( $settings['arrow_icon_previous']['value'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon pxli-arrow-next"></span>';
+                    ?>
+                </div>
             </div>
         <?php endif; ?>
         <?php if($dots !== 'false'): ?>

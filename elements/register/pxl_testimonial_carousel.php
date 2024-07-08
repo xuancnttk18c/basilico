@@ -126,7 +126,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'quote_icon_type',
-                            'label' => esc_html__('Select Icon Type', 'basilico'),
+                            'label' => esc_html__('Select Quote Type', 'basilico'),
                             'type' => 'select',
                             'options' => [
                                 'text' => esc_html__('Default', 'basilico'),
@@ -146,7 +146,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'quote_typography',
-                            'label' => esc_html__('Icon Typography', 'basilico' ),
+                            'label' => esc_html__('Quote Typography', 'basilico' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-testimonial-carousel .item-quote-icon',
