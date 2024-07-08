@@ -238,7 +238,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Animation Speed', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::NUMBER,
                                 'default' => 400,
-                                'seperator' => 'after'
+                                'separator' => 'after'
                             ),
                         ),
                         basilico_arrow_settings(),
