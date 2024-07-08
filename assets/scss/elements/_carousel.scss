@@ -538,6 +538,7 @@
             .thumb-item {
                 cursor: pointer;
                 padding-top: 42px;
+                width: auto !important;
                 &.swiper-slide-thumb-active {
                     .img-outer {
                         border-color: $secondary_color;
@@ -549,8 +550,7 @@
             }
         }
         .btn-circle-more {
-            margin-top: 44px;
-            margin-left: 20px;
+            margin-top: 44px;   
             cursor: pointer;
             width: 68px;
             height: 68px;
