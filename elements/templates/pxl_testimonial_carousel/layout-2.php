@@ -74,6 +74,7 @@ $widget->add_render_attribute('carousel', [
                             <?php if ($quote_icon_type == 'text') { ?>
                                 <div class="item-quote-icon">“</div>
                             <?php } ?>
+                            <?php var_dump($settings['arrow_icon_next']); ?>
                             <?php if (!empty($testimonial_title)) { ?>
                                 <h4 class="testimonial-title"><?php echo esc_html($testimonial_title); ?></h4>
                             <?php } ?>
