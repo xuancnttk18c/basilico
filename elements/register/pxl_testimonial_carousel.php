@@ -229,6 +229,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow svg' => 'fill: {{VALUE}};'
                                 ],
                             ),
                             array(
