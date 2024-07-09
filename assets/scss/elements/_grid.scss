@@ -2270,18 +2270,62 @@
         }
     }
     &.layout-5 {
-        &:has(.image-caption) {
-            .item-inner {
-                border: 1px solid $divider_color;
-            }
-        }
         .pxl-grid-inner {
             background-color: #fff;
             border: solid $divider_color;
             border-width: 1px 0 0 1px;
             .grid-item {
                 border: solid $divider_color;
-                border-width: 0 1px 1px 0;  
+                border-width: 0 1px 1px 0;
+                .item-inner {
+                    &:before {
+                        background-color: $primary_color;
+                        z-index: 1;
+                        opacity: 1;
+                        visibility: visible;
+                        @include transform(scaleY(0));
+                        @include transition(all 300ms cubic-bezier(0, 0, 0.2, 1) 0s);
+                        transform-origin: top;
+                    }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-image: url(../images/dot-bg-overlay.png);
+                        background-repeat: repeat-x;
+                        animation: pxl-bg-scroll-x 10s linear infinite;
+                        z-index: 2;
+                        opacity: 0;
+                        visibility: hidden;
+                        @include transition();
+                    }
+                    .up-icon {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 60px;
+                        height: 60px;
+                        background-color: $secondary_color;
+                        border-radius: 50%;
+                        z-index: 3;
+                        a i {
+                            font-size: 21px !important;
+                            color: $heading_color;
+                        }
+                    }
+                    &:hover {
+                        &:before {
+                            @include transform(scaleY(1));
+                        }
+                        &:after {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
             }
         }
         .image-caption {
