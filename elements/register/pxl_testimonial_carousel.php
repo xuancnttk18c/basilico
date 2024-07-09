@@ -159,7 +159,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Show Button', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SWITCHER,
                             'condition' => [
-                                'layout' => '6'
+                                'layout' => ['6', '10']
                             ]
                         ),
                         array(
@@ -172,7 +172,7 @@ pxl_add_custom_widget(
                                 'is_external' => 'on'
                             ],
                             'condition' => [
-                                'layout' => '6',
+                                'layout' => ['6', '10'],
                                 'show_button' => 'true'
                             ]
                         ),
