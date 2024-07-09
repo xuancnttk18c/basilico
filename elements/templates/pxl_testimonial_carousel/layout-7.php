@@ -66,7 +66,7 @@ $widget->add_render_attribute( 'carousel', [
     $thumb_opts = [
         'allow_touch_move'              => false,
         'slide_direction'               => 'horizontal',
-        'slide_percolumn'               => 6,
+        'slide_percolumn'               => 1,
         'slide_mode'                    => 'slide', 
         'slides_to_show_xxl'            => 6,
         'slides_to_show'                => 5, 
