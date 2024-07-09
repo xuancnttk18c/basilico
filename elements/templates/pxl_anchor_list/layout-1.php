@@ -36,7 +36,7 @@ extract($settings);
 			
 			if ($selected_template == 'cart-dropdown')
 				$anchor_cls = 'pxl-anchor cart_anchor';
-			if ($selected_template == 'cart-page')
+			else if ($selected_template == 'cart-page')
 				$anchor_cls = 'cart_anchor';
 			else
 				$anchor_cls = 'pxl-anchor side-panel';
