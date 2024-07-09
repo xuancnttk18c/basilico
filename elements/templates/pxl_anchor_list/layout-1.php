@@ -56,17 +56,17 @@ extract($settings);
 				echo '</div>';
 				?>
 			</a>
-		<?php endforeach; ?>
-		<?php if ($selected_template == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
-			<div class="pxl-cart-dropdown">
-				<div class="pxl-cart-dropdown-inner relative">
-					<div class="cart-content-body widget_shopping_cart">
-						<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+			<?php if ($selected_template == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
+				<div class="pxl-cart-dropdown">
+					<div class="pxl-cart-dropdown-inner relative">
+						<div class="cart-content-body widget_shopping_cart">
+							<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+						</div>
+						<div class="cart-content-footer"><div class="cart-footer-wrap"><?php wc_get_template( 'cart/mini-cart-totals.php' ); ?></div></div>
 					</div>
-					<div class="cart-content-footer"><div class="cart-footer-wrap"><?php wc_get_template( 'cart/mini-cart-totals.php' ); ?></div></div>
 				</div>
-			</div>
-		<?php endif; ?>
+			<?php endif; ?>
+		<?php endforeach; ?>
 	</div>
 </div>
 <?php endif; ?>
