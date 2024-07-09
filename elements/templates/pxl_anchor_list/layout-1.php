@@ -15,16 +15,15 @@ extract($settings);
 			if (esc_attr($anchor['template']) == 'cart-dropdown') {
 				$target = '.pxl-cart-dropdown';
 				$template = '0';
+				$anchor_link = wc_get_cart_url();
 			}
 			else {
 				$template = (int)$anchor['template'];
 				$target = '.pxl-hidden-template-'.$template;
+				$anchor_link = '#pxl-'.esc_attr($template);
 			}
-
-			if (esc_attr($anchor['template']) == 'cart-dropdown')
-				$widget->add_render_attribute('anchor'.$key, 'class', 'cart-anchor side-panel');
-			else
-				$widget->add_render_attribute('anchor'.$key, 'class', 'pxl-anchor side-panel');
+			
+			$widget->add_render_attribute('anchor'.$key, 'class', 'pxl-anchor side-panel');
 			if ($template > 0 ){
 				if ( !has_action( 'pxl_anchor_target_hidden_panel_'.$template) ){
 					add_action( 'pxl_anchor_target_hidden_panel_'.$template, 'basilico_hook_anchor_hidden_panel' );
@@ -33,7 +32,7 @@ extract($settings);
 				add_action( 'pxltheme_anchor_target', 'basilico_hook_anchor_custom' );
 			}
 			?>
-			<a href="#pxl-<?php echo esc_attr($template)?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor'.$key )); ?> data-target="<?php echo esc_attr($target)?>">
+			<a href="<?php echo esc_attr($anchor_link); ?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor'.$key )); ?> data-target="<?php echo esc_attr($target)?>">
 				<?php
 				echo '<div class="pxl-anchor-icon d-inline-flex align-items-center justify-content-center">';
 				\Elementor\Icons_Manager::render_icon( $anchor['selected_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'span' );
