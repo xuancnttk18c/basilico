@@ -18,7 +18,7 @@ extract($settings);
 				$template = 0;
 				$anchor_link = 'javascript:void(0)';
 			}
-			if ($selected_template == 'cart-canvas') {
+			else if ($selected_template == 'cart-canvas') {
 				$target = '.pxl-hidden-template-canvas-cart';
 				$template = 0;
 				$anchor_link = 'javascript:void(0)';
@@ -35,7 +35,7 @@ extract($settings);
 			}
 			
 			if ($selected_template == 'cart-dropdown' || $selected_template == 'cart-page')
-				$anchor_cls = 'cart_anchor';
+				$anchor_cls = 'pxl-anchor cart_anchor';
 			else
 				$anchor_cls = 'pxl-anchor side-panel';
 
