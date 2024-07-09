@@ -12,6 +12,7 @@ extract($settings);
 	<div class="pxl-anchor-list-wrap d-inline-flex relative">
 		<?php foreach ($anchors as $key => $anchor): ?>
 			<?php
+			var_dump($anchor['template']);
 			if (esc_attr($anchor['template']) == 'cart-url') {
 				$target = 'pxl-0';
 				$template = '0';
@@ -46,16 +47,6 @@ extract($settings);
 				?>
 			</a>
 		<?php endforeach; ?>
-		<?php if ($link_target == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
-			<div class="pxl-cart-dropdown">
-				<div class="pxl-cart-dropdown-inner relative">
-					<div class="cart-content-body widget_shopping_cart">
-						<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
-					</div>
-					<div class="cart-content-footer"><div class="cart-footer-wrap"><?php wc_get_template( 'cart/mini-cart-totals.php' ); ?></div></div>
-				</div>
-			</div>
-		<?php endif; ?>
 	</div>
 </div>
 <?php endif; ?>
