@@ -1,7 +1,8 @@
 <?php
 $templates_df = [
     0 => esc_html__('None', 'basilico'),
-    'cart-url' => esc_html__('Cart Page', 'basilico')
+    'cart-dropdown' => esc_html__('Cart Page', 'basilico'),
+    'cart-canvas' => esc_html__('Cart Canvas', 'basilico')
 ];
 $templates = $templates_df + basilico_get_templates_option('hidden-panel');
 

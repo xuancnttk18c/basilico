@@ -12,10 +12,34 @@ extract($settings);
 	<div class="pxl-anchor-list-wrap d-inline-flex relative">
 		<?php foreach ($anchors as $key => $anchor): ?>
 			<?php
-			$template = (int)$anchor['template'];
-			$target = '.pxl-hidden-template-'.$template;
+			$selected_template = esc_attr($anchor['template']);
+			if ($selected_template == 'cart-dropdown') {
+				$target = '.pxl-cart-dropdown';
+				$template = 0;
+				$anchor_link = 'javascript:void(0)';
+			}
+			if ($selected_template == 'cart-canvas') {
+				$target = '.pxl-hidden-template-canvas-cart';
+				$template = 0;
+				$anchor_link = 'javascript:void(0)';
+			}
+			else if ($selected_template == 'cart-page') {
+				$target = '';
+				$template = 0;
+				$anchor_link = wc_get_cart_url();
+			}
+			else {
+				$template = (int)$anchor['template'];
+				$target = '.pxl-hidden-template-'.$template;
+				$anchor_link = '#pxl-'.esc_attr($template);
+			}
+			
+			if ($selected_template == 'cart-dropdown' || $selected_template == 'cart-page')
+				$anchor_cls = 'cart_anchor';
+			else
+				$anchor_cls = 'pxl-anchor side-panel';
 
-			$widget->add_render_attribute('anchor'.$key, 'class', 'pxl-anchor side-panel');
+			$widget->add_render_attribute('anchor'.$key, 'class', esc_atr($anchor_cls));
 
 			if ($template > 0 ){
 				if ( !has_action( 'pxl_anchor_target_hidden_panel_'.$template) ){
@@ -25,7 +49,7 @@ extract($settings);
 				add_action( 'pxltheme_anchor_target', 'basilico_hook_anchor_custom' );
 			}
 			?>
-			<a href="#pxl-<?php echo esc_attr($template); ?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor'.$key )); ?> data-target=".pxl-cart-dropdown">
+			<a href="<?php echo esc_attr($anchor_link); ?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor'.$key )); ?> data-target="<?php echo esc_attr($target)?>">
 				<?php
 				echo '<div class="pxl-anchor-icon d-inline-flex align-items-center justify-content-center">';
 				\Elementor\Icons_Manager::render_icon( $anchor['selected_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'span' );
@@ -33,14 +57,16 @@ extract($settings);
 				?>
 			</a>
 		<?php endforeach; ?>
-		<div class="pxl-cart-dropdown">
-			<div class="pxl-cart-dropdown-inner relative">
-				<div class="cart-content-body widget_shopping_cart">
-					<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+		<?php if ($selected_template == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
+			<div class="pxl-cart-dropdown">
+				<div class="pxl-cart-dropdown-inner relative">
+					<div class="cart-content-body widget_shopping_cart">
+						<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+					</div>
+					<div class="cart-content-footer"><div class="cart-footer-wrap"><?php wc_get_template( 'cart/mini-cart-totals.php' ); ?></div></div>
 				</div>
-				<div class="cart-content-footer"><div class="cart-footer-wrap"><?php wc_get_template( 'cart/mini-cart-totals.php' ); ?></div></div>
 			</div>
-		</div>
+		<?php endif; ?>
 	</div>
 </div>
 <?php endif; ?>
