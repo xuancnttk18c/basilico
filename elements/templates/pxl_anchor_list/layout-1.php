@@ -35,7 +35,7 @@ extract($settings);
 			}
 			
 			if ($selected_template == 'cart-dropdown')
-				$anchor_cls = 'pxl-anchor pxl-anchor-cart cart_anchor';
+				$anchor_cls = 'pxl-anchor cart_anchor';
 			else if ($selected_template == 'cart-page')
 				$anchor_cls = 'pxl-anchor';
 			else
@@ -51,7 +51,7 @@ extract($settings);
 				add_action( 'pxltheme_anchor_target', 'basilico_hook_anchor_custom' );
 			}
 			?>
-			<div class="pxl-anchor-wrapper relative">
+			<div class="pxl-anchor-wrapper relative <?php echo esc_attr($selected_template) == 'cart-dropdown' ? 'pxl-anchor-cart' : ''; ?>">
 				<a href="<?php echo esc_attr($anchor_link); ?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor'.$key )); ?> data-target="<?php echo esc_attr($target)?>">
 					<?php
 					\Elementor\Icons_Manager::render_icon( $anchor['selected_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'span' );
