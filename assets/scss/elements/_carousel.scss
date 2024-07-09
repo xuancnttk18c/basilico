@@ -978,12 +978,11 @@
             }
             &:before {
                 left: 0;
-                @include transform(translate(-30px, -50%));
+                @include transform(translate(-20px, -50%));
             }
             &:after {
-                top: 50%;
                 right: 0;
-                @include transform(translate(-30px, 50%));
+                @include transform(translate(20px, -50%));
             }
         }
         .item-position {
