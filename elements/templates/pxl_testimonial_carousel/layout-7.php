@@ -62,8 +62,28 @@ $widget->add_render_attribute( 'carousel', [
 ?>
 <?php if(isset($content_list) && !empty($content_list) && count($content_list)): ?>
 <div class="pxl-swiper-slider pxl-testimonial-carousel d-flex justify-content-center layout-<?php echo esc_attr($settings['layout'])?>">
+    <?php
+    $thumb_opts = [
+        'allow_touch_move'              => false,
+        'slide_direction'               => 'horizontal',
+        'slide_percolumn'               => 1,
+        'slide_mode'                    => 'slide', 
+        'slides_to_show_xxl'            => 6,
+        'slides_to_show'                => 5, 
+        'slides_to_show_lg'             => 4, 
+        'slides_to_show_md'             => 3, 
+        'slides_to_show_sm'             => 2, 
+        'slides_to_show_xs'             => 1, 
+        'slides_to_scroll'              => 1, 
+        'slides_gutter'                 => 35,
+        'arrow'                         => false,
+        'dots'                          => false,
+        'speed'                         => 500,
+    ];
+    $data_thumb_settings = wp_json_encode($thumb_opts);
+    ?>
     <div class="pxl-swiper-thumbs-wrap">
-        <div class="pxl-swiper-thumbs overflow-hidden" data-item="6" data-gutter="35">
+        <div class="pxl-swiper-thumbs overflow-hidden" data-settings="<?php echo esc_attr($data_thumb_settings) ?>">
             <div class="pxl-thumbs-wrapper swiper-wrapper">
                 <?php
                 $idx = 0;
@@ -147,7 +167,7 @@ $widget->add_render_attribute( 'carousel', [
             </div>
         </div>
         <?php if($arrows !== 'false'): ?>
-            <div class="pxl-swiper-arrows style-default nav-vertical-out <?php echo esc_attr($arrows_style);?>">
+            <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style);?>">
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
                     <?php
                     if ( $settings['arrow_icon_next']['value'] ) 

@@ -149,7 +149,7 @@ $widget->add_render_attribute( 'carousel', [
     <div class="pxl-swiper-slider-thumbs d-flex justify-content-center">
         <div class="pxl-swiper-slider-inner pxl-carousel-inner">
             <div class="pxl-swiper-thumbs overflow-hidden" data-settings="<?php echo esc_attr($data_thumb_settings) ?>">
-                <div class="pxl-thumbs-wrapper swiper-wrapper ">
+                <div class="pxl-thumbs-wrapper swiper-wrapper">
                     <?php
                     $idx = 0;
                     foreach ($content_list as $key => $value):

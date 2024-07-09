@@ -163,7 +163,7 @@ pxl_add_custom_widget(
                             ]
                         ),
                         array(
-                            'name'        => 'button_link',
+                            'name'        => 'button_link_more',
                             'label'       => esc_html__( 'Button Link', 'basilico' ),
                             'type'        => \Elementor\Controls_Manager::URL,
                             'placeholder' => esc_html__( 'https://your-link.com', 'basilico' ),
