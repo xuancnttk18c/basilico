@@ -100,7 +100,7 @@ $widget->add_render_attribute( 'carousel', [
                         $thumbnail = $img['thumbnail'];
                     }
                     ?>
-                    <div class="thumb-item swiper-slide">
+                    <div class="pxl-swiper-slide thumb-item swiper-slide">
                         <div class="thumbs-wrap">
                             <div class="item-wrap">
                                 <?php if(!empty($thumbnail)) :?>
