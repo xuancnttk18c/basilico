@@ -22,7 +22,7 @@ extract($settings);
 			}
 
 			if (esc_attr($anchor['template']) == 'cart-dropdown')
-				$widget->add_render_attribute('anchor'.$key, 'class', 'pxl-anchor cart-anchor side-panel');
+				$widget->add_render_attribute('anchor'.$key, 'class', 'cart-anchor side-panel');
 			else
 				$widget->add_render_attribute('anchor'.$key, 'class', 'pxl-anchor side-panel');
 			if ($template > 0 ){
