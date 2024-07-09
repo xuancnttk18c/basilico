@@ -1061,7 +1061,10 @@
                 color: #fff;
                 overflow: hidden;
                 @include transition();
-                @include border-radius(50%);
+                span, svg {
+                    position: relative;
+                    z-index: 2;
+                }
                 svg {
                     width: 15px;
                     fill: $heading_color;
@@ -1073,6 +1076,7 @@
                     height: 100%;
                     background-color: $heading_color;
                     @include transition();
+                    @include border-radius(50%);
                     @include transform(scale(0));
                 }
                 &:hover {
