@@ -12,23 +12,10 @@ extract($settings);
 	<div class="pxl-anchor-list-wrap d-inline-flex relative">
 		<?php foreach ($anchors as $key => $anchor): ?>
 			<?php
-			if (esc_attr($anchor['template']) == 'cart-url') {
-				$target = '';
-				$template = '0';
-				$anchor_link = wc_get_cart_url();
-			}
-			else {
-				$template = (int)$anchor['template'];
-				$target = '.pxl-hidden-template-'.$template;
-				$anchor_link = '#pxl-'.esc_attr($template);
-			}
-			
-			if (esc_attr($anchor['template']) == 'cart-url')
-				$anchor_cls = 'cart_anchor';
-			else
-				$anchor_cls = 'pxl-anchor side-panel';
+			$template = (int)$anchor['template'];
+			$target = '.pxl-hidden-template-'.$template;
 
-			$widget->add_render_attribute('anchor'.$key, 'class', esc_attr($anchor_cls));
+			$widget->add_render_attribute('anchor'.$key, 'class', 'pxl-anchor side-panel');
 
 			if ($template > 0 ){
 				if ( !has_action( 'pxl_anchor_target_hidden_panel_'.$template) ){
@@ -38,7 +25,7 @@ extract($settings);
 				add_action( 'pxltheme_anchor_target', 'basilico_hook_anchor_custom' );
 			}
 			?>
-			<a href="<?php echo esc_attr($anchor_link); ?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor'.$key )); ?> data-target="<?php echo esc_attr($target)?>">
+			<a href="#pxl-<?php echo esc_attr($template); ?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor'.$key )); ?> data-target=".pxl-cart-dropdown">
 				<?php
 				echo '<div class="pxl-anchor-icon d-inline-flex align-items-center justify-content-center">';
 				\Elementor\Icons_Manager::render_icon( $anchor['selected_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'span' );
@@ -46,6 +33,14 @@ extract($settings);
 				?>
 			</a>
 		<?php endforeach; ?>
+		<div class="pxl-cart-dropdown">
+			<div class="pxl-cart-dropdown-inner relative">
+				<div class="cart-content-body widget_shopping_cart">
+					<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+				</div>
+				<div class="cart-content-footer"><div class="cart-footer-wrap"><?php wc_get_template( 'cart/mini-cart-totals.php' ); ?></div></div>
+			</div>
+		</div>
 	</div>
 </div>
 <?php endif; ?>
