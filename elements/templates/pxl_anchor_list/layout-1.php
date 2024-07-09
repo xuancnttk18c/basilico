@@ -24,7 +24,6 @@ extract($settings);
 				add_action( 'pxltheme_anchor_target', 'basilico_hook_anchor_custom' );
 			}
 			?>
-			
 			<a href="#pxl-<?php echo esc_attr($template)?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor'.$key )); ?> data-target="<?php echo esc_attr($target)?>">
 				<?php
 				echo '<div class="pxl-anchor-icon d-inline-flex align-items-center justify-content-center">';
