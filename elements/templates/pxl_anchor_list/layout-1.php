@@ -12,7 +12,6 @@ extract($settings);
 	<div class="pxl-anchor-list-wrap d-inline-flex relative">
 		<?php foreach ($anchors as $key => $anchor): ?>
 			<?php
-			var_dump($anchor['template']);
 			if (esc_attr($anchor['template']) == 'cart-url') {
 				$target = 'pxl-0';
 				$template = '0';
