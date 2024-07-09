@@ -1076,7 +1076,9 @@
                     @include transform(scale(0));
                 }
                 &:hover {
-                    @include transform(scale(1));   
+                    &:before {
+                        @include transform(scale(1));
+                    }
                 }
             }
         }
