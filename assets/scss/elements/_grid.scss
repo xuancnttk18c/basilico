@@ -2272,11 +2272,7 @@
     &.layout-5 {
         .pxl-grid-inner {
             background-color: #fff;
-            border: solid $divider_color;
-            border-width: 1px 0 0 1px;
             .grid-item {
-                border: solid $divider_color;
-                border-width: 0 1px 1px 0;
                 .item-inner {
                     &:before {
                         background-color: $primary_color;
@@ -2306,14 +2302,14 @@
                         display: inline-flex;
                         align-items: center;
                         justify-content: center;
-                        width: 60px;
-                        height: 60px;
-                        background-color: $secondary_color;
+                        width: 71px;
+                        height: 71px;
+                        background-color: $primary_color;
                         border-radius: 50%;
                         z-index: 3;
                         a i {
-                            font-size: 21px !important;
-                            color: $heading_color;
+                            font-size: 22px !important;
+                            color: #fff;
                         }
                     }
                     &:hover {
