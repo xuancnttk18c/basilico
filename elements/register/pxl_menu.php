@@ -277,7 +277,7 @@ pxl_add_custom_widget(
                                 'groove' => esc_html__( 'Groove', 'basilico' ),
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu > li a' => 'border-bottom-style: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-nav-menu .menu-menu-main-container .pxl-primary-menu .sub-menu > li a' => 'border-bottom-style: {{VALUE}};',
                             ],
 
                             'default' => 'solid',
@@ -287,7 +287,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Divider Color', 'basilico' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu > li a' => 'border-bottom-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-nav-menu .menu-menu-main-container .pxl-primary-menu .sub-menu > li a' => 'border-bottom-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -298,7 +298,7 @@ pxl_add_custom_widget(
                             'exclude' => [
                                 'box_shadow_position',
                             ],
-                            'selector' => '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu',
+                            'selector' => '{{WRAPPER}} .pxl-nav-menu .menu-menu-main-container .pxl-primary-menu .sub-menu',
                         ),
                         array(
                             'name' => 'border_radius',
@@ -306,7 +306,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-primary-menu .sub-menu' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-nav-menu .menu-menu-main-container .pxl-primary-menu .sub-menu' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ),
                     ),
