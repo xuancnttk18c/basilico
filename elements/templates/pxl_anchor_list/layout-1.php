@@ -12,7 +12,7 @@ extract($settings);
 	<div class="pxl-anchor-list-wrap d-inline-flex relative">
 		<?php foreach ($anchors as $key => $anchor): ?>
 			<?php
-			if (esc_attr($anchor['template']) == 'cart-url') {
+			if (esc_attr($anchor['template']) == 'cart') {
 				$target = 'pxl-0';
 				$template = '0';
 				$anchor_link = wc_get_cart_url();
@@ -23,12 +23,12 @@ extract($settings);
 				$anchor_link = '#pxl-'.esc_attr($template);
 			}
 			
-			if (esc_attr($anchor['template']) == 'cart-url')
+			if (esc_attr($anchor['template']) == 'cart')
 				$anchor_cls = 'cart_anchor';
 			else
 				$anchor_cls = 'pxl-anchor side-panel';
 
-			$widget->add_render_attribute('anchor'.$key, 'class', esc_atr($anchor_cls));
+			$widget->add_render_attribute('anchor'.$key, 'class', esc_attr($anchor_cls));
 
 			if ($template > 0 ){
 				if ( !has_action( 'pxl_anchor_target_hidden_panel_'.$template) ){
