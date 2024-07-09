@@ -23,22 +23,21 @@ extract($settings);
 			add_action( 'pxltheme_anchor_target', 'basilico_hook_anchor_custom' );
 		}
 		?>
-		?>
 		<div class="pxl-anchor-wrap">
 			<a href="#pxl-<?php echo esc_attr($template)?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor'.$key )); ?> data-target="<?php echo esc_attr($target)?>">
 				<?php 
-				if( $widget->get_setting('icon_type','none') == 'lib'){
+				if ($anchor['icon_type'] == 'lib'){
 					echo '<div class="pxl-anchor-icon d-inline-flex">';
 					\Elementor\Icons_Manager::render_icon( $anchor['selected_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'span' );
 					echo '</div>';
 				}
-				if($widget->get_setting('icon_type','none') == 'custom'){
+				if ($anchor['icon_type'] == 'custom'){
 					echo '<div class="pxl-icon pxl-anchor-icon custom"><span></span><span></span><span></span></div>';
 				}
-				if($widget->get_setting('icon_type', 'none') == 'custom-2'){
+				if ($anchor['icon_type'] == 'custom-2'){
 					echo '<div class="pxl-icon pxl-anchor-icon custom-2"><span></span><span></span><span></span><span></span></div>';
 				}
-				if($widget->get_setting('icon_type', 'none') == 'custom-3'){
+				if ($anchor['icon_type'] == 'custom-3'){
 					echo '<div class="pxl-icon pxl-anchor-icon custom-3"></div>';
 				}
 				?>
