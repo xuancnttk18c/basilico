@@ -156,15 +156,15 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'show_button',
-                            'label' => esc_html__('Show Button', 'basilico' ),
+                            'label' => esc_html__('Show Button More', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SWITCHER,
                             'condition' => [
                                 'layout' => ['6', '10']
                             ]
                         ),
                         array(
-                            'name'        => 'button_link_more',
-                            'label'       => esc_html__( 'Button Link', 'basilico' ),
+                            'name'        => 'button_link',
+                            'label'       => esc_html__( 'Button More Link', 'basilico' ),
                             'type'        => \Elementor\Controls_Manager::URL,
                             'placeholder' => esc_html__( 'https://your-link.com', 'basilico' ),
                             'default'     => [
