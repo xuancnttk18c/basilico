@@ -9,12 +9,17 @@ extract($settings);
 
 <?php if (isset($anchors) && !empty($anchors) && count($anchors)): ?>
 <div class="pxl-anchor-list layout-1">
-	<div class="pxl-anchor-list-wrap d-inline-flex">
+	<div class="pxl-anchor-list-wrap d-inline-flex relative">
 		<?php foreach ($anchors as $key => $anchor): ?>
 			<?php
-			$template = (int)$anchor['template'];
+			if (esc_attr($anchor['template']) == 'cart-dropdown')
+				$target = '.pxl-cart-dropdown';
+			else {
+				$template = (int)$anchor['template'];
+				$target = '.pxl-hidden-template-'.$template;
+			}
+
 			$widget->add_render_attribute('anchor'.$key, 'class', 'pxl-anchor side-panel');
-			$target = '.pxl-hidden-template-'.$template;
 
 			if ($template > 0 ){
 				if ( !has_action( 'pxl_anchor_target_hidden_panel_'.$template) ){
@@ -32,6 +37,16 @@ extract($settings);
 				?>
 			</a>
 		<?php endforeach; ?>
+		<?php if ($link_target == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
+			<div class="pxl-cart-dropdown">
+				<div class="pxl-cart-dropdown-inner relative">
+					<div class="cart-content-body widget_shopping_cart">
+						<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+					</div>
+					<div class="cart-content-footer"><div class="cart-footer-wrap"><?php wc_get_template( 'cart/mini-cart-totals.php' ); ?></div></div>
+				</div>
+			</div>
+		<?php endif; ?>
 	</div>
 </div>
 <?php endif; ?>
