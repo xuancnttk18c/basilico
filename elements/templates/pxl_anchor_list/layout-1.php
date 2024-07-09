@@ -9,7 +9,7 @@ extract($settings);
 
 <?php if (isset($anchors) && !empty($anchors) && count($anchors)): ?>
 <div class="pxl-anchor-list layout-1">
-	<div class="pxl-anchor-list-wrap d-inline-flex relative">
+	<div class="pxl-anchor-list-wrap d-inline-flex">
 		<?php foreach ($anchors as $key => $anchor): ?>
 			<?php
 			$selected_template = esc_attr($anchor['template']);
@@ -49,23 +49,25 @@ extract($settings);
 				add_action( 'pxltheme_anchor_target', 'basilico_hook_anchor_custom' );
 			}
 			?>
-			<a href="<?php echo esc_attr($anchor_link); ?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor'.$key )); ?> data-target="<?php echo esc_attr($target)?>">
-				<?php
-				echo '<div class="pxl-anchor-icon d-inline-flex align-items-center justify-content-center">';
-				\Elementor\Icons_Manager::render_icon( $anchor['selected_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'span' );
-				echo '</div>';
-				?>
-			</a>
-			<?php if ($selected_template == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
-				<div class="pxl-cart-dropdown">
-					<div class="pxl-cart-dropdown-inner relative">
-						<div class="cart-content-body widget_shopping_cart">
-							<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+			<div class="pxl-anchor-wrapper relative">
+				<a href="<?php echo esc_attr($anchor_link); ?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor'.$key )); ?> data-target="<?php echo esc_attr($target)?>">
+					<?php
+					echo '<div class="pxl-anchor-icon d-inline-flex align-items-center justify-content-center">';
+					\Elementor\Icons_Manager::render_icon( $anchor['selected_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'span' );
+					echo '</div>';
+					?>
+				</a>
+				<?php if ($selected_template == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
+					<div class="pxl-cart-dropdown">
+						<div class="pxl-cart-dropdown-inner relative">
+							<div class="cart-content-body widget_shopping_cart">
+								<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+							</div>
+							<div class="cart-content-footer"><div class="cart-footer-wrap"><?php wc_get_template( 'cart/mini-cart-totals.php' ); ?></div></div>
 						</div>
-						<div class="cart-content-footer"><div class="cart-footer-wrap"><?php wc_get_template( 'cart/mini-cart-totals.php' ); ?></div></div>
 					</div>
-				</div>
-			<?php endif; ?>
+				<?php endif; ?>
+			</div>
 		<?php endforeach; ?>
 	</div>
 </div>
