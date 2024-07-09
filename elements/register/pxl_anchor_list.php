@@ -50,19 +50,6 @@ pxl_add_custom_widget(
                                     'default' => 'df' 
                                 ),
                                 array(
-                                    'name' => 'icon_type',
-                                    'label' => esc_html__('Select Icon Type', 'basilico'),
-                                    'type' => 'select',
-                                    'options' => [
-                                        'none' => esc_html__('None', 'basilico'),
-                                        'lib' => esc_html__('Library', 'basilico'),
-                                        'custom' => esc_html__('Custom 1', 'basilico'),
-                                        'custom-2' => esc_html__('Custom 2', 'basilico'),
-                                        'custom-3' => esc_html__('Custom 3', 'basilico'),
-                                    ],
-                                    'default' => 'lib' 
-                                ),
-                                array(
                                     'name'             => 'selected_icon',
                                     'label'            => esc_html__( 'Icon', 'basilico' ),
                                     'type'             => 'icons',
@@ -70,7 +57,6 @@ pxl_add_custom_widget(
                                         'library' => 'pxli',
                                         'value'   => 'pxli-search-400'
                                     ],
-                                    'condition' => ['icon_type' => 'lib']
                                 ),
                             ),
                         ),
