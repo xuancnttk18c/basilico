@@ -103,7 +103,7 @@ $widget->add_render_attribute( 'carousel', [
             </div>
         </div>
         <?php if($arrows !== 'false'): ?>
-            <div class="pxl-swiper-arrows style-default nav-vertical-out <?php echo esc_attr($arrows_style);?>">
+            <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style);?>">
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-prev">
                     <?php 
                     if ( $settings['arrow_icon_previous']['value'] ) 

@@ -898,7 +898,7 @@
         .swiper-slide {
             justify-content: center;
             .item-inner {
-                max-width: 885px;
+                max-width: 990px;
                 text-align: center;
             }
         }
@@ -1019,6 +1019,14 @@
                 line-height: 42px;
                 text-align: center;
                 letter-spacing: 0.03em;
+            }
+        }
+        .pxl-swiper-arrows {
+            .pxl-swiper-arrow-prev {
+                left: -105px;
+            }
+            .pxl-swiper-arrow-next {
+                right: -105px;
             }
         }
     }
