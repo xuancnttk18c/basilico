@@ -16,12 +16,12 @@ extract($settings);
 			if ($selected_template == 'cart-dropdown') {
 				$target = '.pxl-cart-dropdown';
 				$template = 0;
-				$anchor_link = 'javascript:void(0)';
+				$anchor_link = '#pxl-0';
 			}
 			else if ($selected_template == 'cart-canvas') {
 				$target = '.pxl-hidden-template-canvas-cart';
 				$template = 0;
-				$anchor_link = 'javascript:void(0)';
+				$anchor_link = '#pxl-0';
 			}
 			else if ($selected_template == 'cart-page') {
 				$target = '';
