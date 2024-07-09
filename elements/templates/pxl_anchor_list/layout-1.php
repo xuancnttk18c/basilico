@@ -35,9 +35,9 @@ extract($settings);
 			}
 			
 			if ($selected_template == 'cart-dropdown')
-				$anchor_cls = 'pxl-anchor cart_anchor';
+				$anchor_cls = 'pxl-anchor pxl-anchor-cart cart_anchor';
 			else if ($selected_template == 'cart-page')
-				$anchor_cls = 'cart_anchor';
+				$anchor_cls = 'pxl-anchor';
 			else
 				$anchor_cls = 'pxl-anchor side-panel';
 

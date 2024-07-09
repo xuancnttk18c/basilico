@@ -296,7 +296,7 @@
             },1000);
         });
 
-        $(document).on('click','.pxl-anchor.cart_anchor',function(e){
+        $(document).on('click','.pxl-anchor-cart.cart_anchor',function(e){
             e.preventDefault();
             e.stopPropagation();
             var target = $(this).attr('data-target');
@@ -741,7 +741,6 @@
     function basilico_mini_cart_dropdown_offset(){
         if( $( '.pxl-cart-dropdown' ).length > 0 ){
             var window_w = $(window).width();
-            
             $( '.pxl-cart-dropdown' ).each(function(index, el) {
                 var anchor_cart_offset_right = $(this).closest('.pxl-anchor-cart').offset().left;
                 if ( ($(this).offset().left + $(this).width() ) > window_w) {
