@@ -12,14 +12,16 @@ extract($settings);
 	<div class="pxl-anchor-list-wrap d-inline-flex relative">
 		<?php foreach ($anchors as $key => $anchor): ?>
 			<?php
-			if (esc_attr($anchor['template']) == 'cart-dropdown')
+			if (esc_attr($anchor['template']) == 'cart-dropdown') {
 				$target = '.pxl-cart-dropdown';
+				$template = '#';
+			}
 			else {
 				$template = (int)$anchor['template'];
 				$target = '.pxl-hidden-template-'.$template;
 			}
 
-			$widget->add_render_attribute('anchor'.$key, 'class', 'pxl-anchor side-panel');
+			$widget->add_render_attribute('anchor'.$key, 'class', 'pxl-anchor side-panel '.esc_attr($anchor['template']) == 'cart-dropdown' ? 'cart-anchor' : '');
 
 			if ($template > 0 ){
 				if ( !has_action( 'pxl_anchor_target_hidden_panel_'.$template) ){
