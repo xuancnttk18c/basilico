@@ -13,7 +13,7 @@ extract($settings);
 		<?php foreach ($anchors as $key => $anchor): ?>
 			<?php
 			if (esc_attr($anchor['template']) == 'cart-url') {
-				$target = 'pxl-0';
+				$target = '';
 				$template = '0';
 				$anchor_link = wc_get_cart_url();
 			}
