@@ -905,9 +905,9 @@
         .icon-wrapper {
             margin-bottom: 30px;
             svg {
-                width: 79px;
-                fill: $secondary_color;
-            }   
+                width: 71px;
+                fill: $primary_color;
+            }
         }
         .item-quote-icon {
             font-family: none;
@@ -947,10 +947,10 @@
             }
         }
         .item-desc {
+            font-family: $heading_font_family;
             font-size: 20px;
-            font-weight: 500;
-            line-height: 35px;
-            letter-spacing: 0.01em;
+            line-height: 2;
+            letter-spacing: 0.03em;
             color: $heading_color;
             padding-bottom: 34px;
         }
@@ -965,11 +965,26 @@
             }
         }
         .item-title {
-            font-family: $body_font_family;
-            font-size: 17px;
-            font-weight: 700;
-            letter-spacing: 0.03em;
+            position: relative;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
             margin-bottom: 3px;
+            &:before, &:after {
+                content: "-";
+                position: absolute;
+                top: 50%:
+                color: $secondary_color;
+            }
+            &:before {
+                left: 0;
+                @include transform(translate(-30px, -50%));
+            }
+            &:after {
+                top: 50%:
+                right: 0;
+                @include transform(translate(-30px, 50%));
+            }
         }
         .item-position {
             font-size: 15px;

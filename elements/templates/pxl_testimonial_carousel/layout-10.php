@@ -82,7 +82,7 @@ $widget->add_render_attribute( 'carousel', [
                             <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
                             <div class="item-info d-flex align-items-center justify-content-center">
                                 <div class="item-info-wrapper">
-                                    <h4 class="item-title"><?php echo esc_html($title); ?></h4>
+                                    <h4 class="item-title"><span><?php echo esc_html($title); ?></span></h4>
                                     <div class="item-position"><?php echo esc_html($position); ?></div>
                                 </div>
                                 <?php if(!empty($value['rating']) && $value['rating'] != 'none') : ?>
