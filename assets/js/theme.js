@@ -295,6 +295,14 @@
                 $('.pxl-search-form input[name="s"]').focus();
             },1000);
         });
+
+        $(document).on('click','.pxl-anchor.cart_anchor',function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            var target = $(this).attr('data-target');
+            $(target).toggleClass('open');
+            $(document).find('.pxl-header-sticky').removeClass('h-fixed');
+        });
     }
     
     function basilico_sidebar_tabs_toggle(){

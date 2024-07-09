@@ -16,12 +16,12 @@ extract($settings);
 			if ($selected_template == 'cart-dropdown') {
 				$target = '.pxl-cart-dropdown';
 				$template = 0;
-				$anchor_link = '#pxl-0';
+				$anchor_link = '#';
 			}
 			else if ($selected_template == 'cart-canvas') {
 				$target = '.pxl-hidden-template-canvas-cart';
 				$template = 0;
-				$anchor_link = '#pxl-0';
+				$anchor_link = '#';
 			}
 			else if ($selected_template == 'cart-page') {
 				$target = '';
@@ -34,7 +34,7 @@ extract($settings);
 				$anchor_link = '#pxl-'.esc_attr($template);
 			}
 			
-			if ($selected_template == 'cart-dropdown' || $selected_template == 'cart-page')
+			if ($selected_template == 'cart-dropdown')
 				$anchor_cls = 'pxl-anchor cart_anchor';
 			else
 				$anchor_cls = 'pxl-anchor side-panel';
