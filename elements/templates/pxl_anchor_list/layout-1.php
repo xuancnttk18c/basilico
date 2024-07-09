@@ -39,7 +39,7 @@ extract($settings);
 			else
 				$anchor_cls = 'pxl-anchor side-panel';
 
-			$widget->add_render_attribute('anchor'.$key, 'class', esc_atr($anchor_cls));
+			$widget->add_render_attribute('anchor'.$key, 'class', esc_attr($anchor_cls));
 
 			if ($template > 0 ){
 				if ( !has_action( 'pxl_anchor_target_hidden_panel_'.$template) ){
