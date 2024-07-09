@@ -21,7 +21,7 @@ extract($settings);
 				$target = '.pxl-hidden-template-'.$template;
 			}
 
-			$widget->add_render_attribute('anchor'.$key, 'class', 'pxl-anchor side-panel '.esc_attr($anchor['template']) == 'cart-dropdown' ? 'cart-anchor' : '');
+			$widget->add_render_attribute('anchor'.$key, 'class', 'pxl-anchor side-panel');
 
 			if ($template > 0 ){
 				if ( !has_action( 'pxl_anchor_target_hidden_panel_'.$template) ){
