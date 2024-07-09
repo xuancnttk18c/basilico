@@ -75,62 +75,17 @@ pxl_add_custom_widget(
                                     'max' => 300,
                                 ],
                             ],
-                            'condition' => ['icon_type' => 'lib'],
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-anchor-icon' => 'font-size: {{SIZE}}{{UNIT}};',
                                 '{{WRAPPER}} .pxl-anchor-icon svg' => 'width: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(
-                            'name'  => 'icon_size_custom',
-                            'label' => esc_html__( 'Icon Size(px)', 'basilico' ),
-                            'type'  => 'slider',
-                            'range' => [
-                                'px' => [
-                                    'min' => 15,
-                                    'max' => 300,
-                                ],
-                            ],
-                            'condition' => ['icon_type' => 'custom-2'],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-icon.custom-2' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-                            ],
-                        ),
-                        array(
-                            'name'  => 'dot_size_custom',
-                            'label' => esc_html__( 'Dot Size(px)', 'basilico' ),
-                            'type'  => 'slider',
-                            'range' => [
-                                'px' => [
-                                    'min' => 15,
-                                    'max' => 300,
-                                ],
-                            ],
-                            'condition' => ['icon_type' => 'custom-2'],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-icon.custom-2 span' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-                            ],
-                        ),
-                        array(
-                            'name' => 'icon_margin',
-                            'label' => esc_html__('Icon Margin(px)', 'basilico' ),
-                            'type' => 'dimensions',
-                            'control_type' => 'responsive',
-                            'size_units' => [ 'px' ],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                            ],
-                            'condition' => ['icon_type!' => 'none'],
-                        ),
-                        array(
                             'name' => 'icon_color',
                             'label' => esc_html__('Color', 'basilico' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-anchor-wrap .pxl-anchor-icon.custom span' => 'background-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-anchor-wrap .pxl-anchor-icon.custom-2 span' => 'background-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-anchor-icon svg' => 'fill: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-anchor' => 'color: {{VALUE}};'
                             ],
                         ), 
                         array(
@@ -138,33 +93,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Hover Color', 'basilico' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor:hover' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-anchor-wrap .pxl-anchor-icon.custom.pxl-bars:hover span' => 'background-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-anchor-wrap .pxl-anchor-icon.custom-2.pxl-bars:hover span' => 'background-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-anchor:hover pxl-anchor-icon svg' => 'fill: {{VALUE}};',
-                            ],
-                        ),
-                        array(
-                            'name'         => 'align',
-                            'label'        => esc_html__( 'Alignment', 'basilico' ),
-                            'type'         => 'choose',
-                            'control_type' => 'responsive',
-                            'options' => [
-                                'start' => [
-                                    'title' => esc_html__( 'Start', 'basilico' ),
-                                    'icon' => 'eicon-text-align-left',
-                                ],
-                                'center' => [
-                                    'title' => esc_html__( 'Center', 'basilico' ),
-                                    'icon' => 'eicon-text-align-center',
-                                ],
-                                'end' => [
-                                    'title' => esc_html__( 'End', 'basilico' ),
-                                    'icon' => 'eicon-text-align-right',
-                                ]
-                            ],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-wrap' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor:before' => 'background-color: {{VALUE}};'
                             ],
                         ),
                     ),

@@ -54,9 +54,7 @@ extract($settings);
 			<div class="pxl-anchor-wrapper relative">
 				<a href="<?php echo esc_attr($anchor_link); ?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor'.$key )); ?> data-target="<?php echo esc_attr($target)?>">
 					<?php
-					echo '<div class="pxl-anchor-icon d-inline-flex align-items-center justify-content-center">';
 					\Elementor\Icons_Manager::render_icon( $anchor['selected_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'span' );
-					echo '</div>';
 					?>
 				</a>
 				<?php if ($selected_template == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
