@@ -243,11 +243,7 @@
         'use strict';
         //* Add toggle button to parent Menu
         $('.sub-menu .current-menu-item').parents('.menu-item-has-children').addClass('current-menu-ancestor');
-
-        if ($('.is-arrow .pxl-primary-menu')) {
-            $(this).find('> li.menu-item-has-children').append('<span class="main-menu-toggle"></span>');
-            console.log($(this));
-        }            
+        $('.is-arrow .pxl-primary-menu > li.menu-item-has-children').append('<span class="main-menu-toggle"></span>');
         $('.pxl-mobile-menu li.menu-item-has-children').append('<span class="main-menu-toggle"></span>');
         $('.main-menu-toggle').on('click', function () {
             $(this).toggleClass('open');

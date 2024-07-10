@@ -648,11 +648,11 @@
     ol {
         list-style: none;
     }
-    // &.is-arrow{
-    //     .pxl-primary-menu > li > .main-menu-toggle{
-    //         display: inline-flex;
-    //     }
-    // }
+    &.is-arrow{
+        .pxl-primary-menu > li > .main-menu-toggle{
+            display: inline-flex;
+        }
+    }
     ul.cat-list-item li {
         padding-left: 13px;
         &:hover a,
