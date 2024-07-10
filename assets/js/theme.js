@@ -245,7 +245,7 @@
         $('.sub-menu .current-menu-item').parents('.menu-item-has-children').addClass('current-menu-ancestor');
 
         if ($('.is-arrow .pxl-primary-menu')) {
-            $(this).find('> li.menu-item-has-children').append('<span class="main-menu-toggle"></span>');
+            $(this).find('li.menu-item-has-children').append('<span class="main-menu-toggle"></span>');
             alert('fkdjafjkadfhj');
         }            
         $('.pxl-mobile-menu li.menu-item-has-children').append('<span class="main-menu-toggle"></span>');
