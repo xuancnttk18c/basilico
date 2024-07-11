@@ -42,7 +42,7 @@ $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : 
                 $data_settings = 'data-settings="' . esc_attr($data_animation) . '"';
             }
             ?>
-            <div class="pxl-menu-item<?php echo esc_attr($value['is_featured'] == 'yes' ? ' featured' : ''); ?> <?php echo esc_attr($animate_cls); ?>" <?php pxl_print_html($data_settings); ?>>
+            <div class="pxl-menu-item<?php echo esc_attr($value['is_featured'] == 'yes' ? ' featured' : ''); ?> <?php echo esc_attr($animate_cls); ?> <?php echo 'elementor-repeater-item-' . $value['_id'] ?>" <?php pxl_print_html($data_settings); ?>>
                 <?php if ($value['tag_1'] === 'yes' || $value['tag_2'] === 'yes') : ?>
                     <div class="custom-tags d-flex">
                         <?php if ($value['tag_1'] === 'yes' && !empty($value['tag_1_text'])) : ?>
