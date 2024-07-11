@@ -29,10 +29,6 @@ if(count($tabs_list) > 0){
                     </span>
                 <?php endforeach; ?>
             </div>
-            <div class="pxl-tabs-arrows">
-                <div class="pxl-tab-arrow pxl-tab-arrow-next"><span class="pxl-icon pxli-arrow-next"></span></div>
-                <div class="pxl-tab-arrow pxl-tab-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
-            </div>
         </div>
         <div class="tabs-content">
             <?php foreach ($tabs_list as $key => $tab):

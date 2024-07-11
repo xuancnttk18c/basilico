@@ -51,6 +51,7 @@ $slider-outer-space: 0;
 
 .slick-slide {
     opacity: 0 !important;
+    @include transition();
 }
 
 .slick-active {
