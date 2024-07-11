@@ -34,10 +34,19 @@
             $scope.find(".pxl-tabs .pxl-tabs-arrows .pxl-tab-arrow-next").on("click", function(e) {
                 e.preventDefault();
                 $scope.find(".pxl-tabs .tabs-title .tab-title.active").next().addClass('active').siblings().removeClass('active');
-                var target = $scope.find(".pxl-tabs .tabs-title .tab-title.active").next().data("target");
+                var target = $scope.find(".pxl-tabs .tabs-title .tab-title.active").data("target");
+                $(target).addClass('active').siblings().removeClass('active'); 
                 $(target).siblings().find('.pxl-animate').each(function(){
                     var data = $(this).data('settings');
                     $(this).removeClass('animated '+data['animation']).addClass('pxl-invisible');
+                });
+                $(target).find('.pxl-animate').each(function(){
+                    var data = $(this).data('settings');
+                    var cur_anm = $(this);
+                    setTimeout(function () {  
+                        $(cur_anm).removeClass('pxl-invisible').addClass('animated ' + data['animation']);
+                    }, data['animation_delay']);
+
                 });
             });
         }
