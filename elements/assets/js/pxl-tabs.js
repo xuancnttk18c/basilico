@@ -25,6 +25,10 @@
             $(this).addClass('active').siblings().removeClass('active');
             var target = $(this).data("target");
             basilico_tab_active(target);
+            if (link_to_tabs_carousel_id != undefined) {
+                var slideno = $(this).data('slide');
+                $('#' + link_to_tabs_carousel_id).slick('slickGoTo', slideno);
+            }
         });
 
         if ($scope.find(".pxl-tabs .pxl-tabs-arrows")) {
