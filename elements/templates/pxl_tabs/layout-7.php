@@ -17,7 +17,7 @@ if(count($tabs_list) > 0){
                     $tabs_title[$title_key] = $tab['tab_title'];
                     $widget->add_inline_editing_attributes( $title_key, 'basic' );
                     $widget->add_render_attribute( $title_key, [
-                        'class' => [ 'tab-title d-flex align-items-center flex-column' ],
+                        'class' => [ 'tab-title' ],
                         'data-target' => '#' . $element_id.'-'.$tab['_id'],
                     ] );
                     if($active_tab == $key + 1){

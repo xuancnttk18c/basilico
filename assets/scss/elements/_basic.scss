@@ -4425,10 +4425,7 @@
                 @include d-flex();
                 justify-content: space-between;
                 border-bottom: 1px solid rgba(200, 200, 200, 0.7);
-                @media (max-width: $sm_max) {
-                    flex-direction: column;
-                    gap: 12px;
-                }
+                gap: 85px;
             }
         }
         .tab-title {
@@ -4439,7 +4436,6 @@
             color: $heading_color;
             display: inline-flex;
             letter-spacing: 0.02em;
-            flex-grow: 1;
             cursor: pointer;
             @include transition(all 300ms linear 0ms);
             span {
