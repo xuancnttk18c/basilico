@@ -30,6 +30,18 @@
         }
     }
 
+    if ($scope.find(".pxl-tabs .pxl-tabs-arrows")) {
+        $scope.find(".pxl-tabs .pxl-tabs-arrows .pxl-tab-arrow-next").on("click", function(e) {
+            e.preventDefault();
+            $scope.find(".pxl-tabs .tabs-title .tab-title").next().addClass('active').siblings().removeClass('active');
+            var target = $scope.find(".pxl-tabs .tabs-title .tab-title").next().data("target");
+            $(target).siblings().find('.pxl-animate').each(function(){
+                var data = $(this).data('settings');
+                $(this).removeClass('animated '+data['animation']).addClass('pxl-invisible');
+            });
+        });
+    }
+
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {
         elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_tabs.default', function($scope) {
