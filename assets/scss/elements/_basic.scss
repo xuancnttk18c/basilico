@@ -693,7 +693,7 @@
         &.style-2 {
             .pxl-primary-menu {
                 > li {
-                    &:before{
+                    a:before{
                         content: "";
                         width: 0;
                         height: 3px;
@@ -712,7 +712,7 @@
                     &.current-menu-item,
                     &.current-menu-ancestor,
                     &:hover {
-                        &:before {
+                        a:before {
                             width: 100%;
                         }
                     }
