@@ -59,7 +59,6 @@
                 else
                     $scope.find(".pxl-tabs .tabs-title .tab-title.active").last().addClass('active').siblings().removeClass('active');
 
-                $scope.find(".pxl-tabs .tabs-title .tab-title.active").prev().addClass('active').siblings().removeClass('active');
                 var target = $scope.find(".pxl-tabs .tabs-title .tab-title.active").data("target");
                 $(target).addClass('active').siblings().removeClass('active'); 
                 $(target).siblings().find('.pxl-animate').each(function(){
