@@ -4599,7 +4599,7 @@
                 }
             }
             &.active {
-                color: $heading_color;
+                color: $heading_color;  
                 span:after {
                     opacity: 1;
                     transform: scaleX(1);
@@ -4608,9 +4608,24 @@
         }
         .tabs-content {
             position: relative;
-            padding: 80px 0px 0px;
-            @media (max-width: $xs_max) {
-                padding: 50px 0 0 0;
+            padding: 50px 0px 0px;
+        }
+        .pxl-tabs-arrow {
+            .pxl-tab-arrow {
+                position: absolute;
+                bottom: 0;
+                background-color: $primary_color;
+                color: #fff;
+                width: 47px;
+                height: 47px;
+                display: inline-flex;
+                border-radius: 50%;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+                &.pxl-tab-arrow-prev {
+                    left: 0;
+                }
             }
         }
     }
