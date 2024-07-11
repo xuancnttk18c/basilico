@@ -1,6 +1,7 @@
 ( function( $ ) {
     function basilico_tabs_handler($scope){
         var link_to_tabs_carousel_id = $scope.find('.link-to-tabs-carousel-id').text().trim();
+        
         $scope.find(".pxl-tabs .tabs-title .tab-title").on("click", function(e){
             e.preventDefault();
             var target = $(this).data("target");
@@ -28,18 +29,18 @@
                 $('#' + link_to_tabs_carousel_id).slick('slickGoTo', slideno);
             });
         }
-    }
 
-    if ($scope.find(".pxl-tabs .pxl-tabs-arrows")) {
-        $scope.find(".pxl-tabs .pxl-tabs-arrows .pxl-tab-arrow-next").on("click", function(e) {
-            e.preventDefault();
-            $scope.find(".pxl-tabs .tabs-title .tab-title").next().addClass('active').siblings().removeClass('active');
-            var target = $scope.find(".pxl-tabs .tabs-title .tab-title").next().data("target");
-            $(target).siblings().find('.pxl-animate').each(function(){
-                var data = $(this).data('settings');
-                $(this).removeClass('animated '+data['animation']).addClass('pxl-invisible');
+        if ($scope.find(".pxl-tabs .pxl-tabs-arrows")) {
+            $scope.find(".pxl-tabs .pxl-tabs-arrows .pxl-tab-arrow-next").on("click", function(e) {
+                e.preventDefault();
+                $scope.find(".pxl-tabs .tabs-title .tab-title").next().addClass('active').siblings().removeClass('active');
+                var target = $scope.find(".pxl-tabs .tabs-title .tab-title").next().data("target");
+                $(target).siblings().find('.pxl-animate').each(function(){
+                    var data = $(this).data('settings');
+                    $(this).removeClass('animated '+data['animation']).addClass('pxl-invisible');
+                });
             });
-        });
+        }
     }
 
     // Make sure you run this code under Elementor.
