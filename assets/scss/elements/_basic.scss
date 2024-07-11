@@ -852,6 +852,7 @@
                             bottom: 0;
                             left: 0;
                             background-color: $secondary_color;
+                            @include border-radius(2px);
                             @include transition(width .5s cubic-bezier(0.35,.7,.35,1));
                         }
                         > a {
@@ -879,6 +880,9 @@
                         }
                         a {
                             text-transform: capitalize;
+                            &:before {
+                                content: none;
+                            }
                             &:hover {
                                 color: $secondary_color;
                             }
