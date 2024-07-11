@@ -31,8 +31,8 @@
             }
         });
 
-        if ($scope.find(".pxl-tabs .pxl-tabs-arrows")) {
-            $scope.find(".pxl-tabs .pxl-tabs-arrows .pxl-tab-arrow-next").on("click", function(e) {
+        if ($scope.find(".pxl-tabs .pxl-tab-arrows")) {
+            $scope.find(".pxl-tabs .pxl-tab-arrows .pxl-tab-arrow-next").on("click", function(e) {
                 e.preventDefault();
                 if ($scope.find(".pxl-tabs .tabs-title .tab-title.active").next())
                     $scope.find(".pxl-tabs .tabs-title .tab-title.active").next().addClass('active').siblings().removeClass('active');
@@ -47,7 +47,7 @@
                     $('#' + link_to_tabs_carousel_id).slick('slickGoTo', slideno);
                 }
             });
-            $scope.find(".pxl-tabs .pxl-tabs-arrows .pxl-tab-arrow-prev").on("click", function(e) {
+            $scope.find(".pxl-tabs .pxl-tab-arrows .pxl-tab-arrow-prev").on("click", function(e) {
                 e.preventDefault();
                 if ($scope.find(".pxl-tabs .tabs-title .tab-title.active").prev())
                     $scope.find(".pxl-tabs .tabs-title .tab-title.active").prev().addClass('active').siblings().removeClass('active');

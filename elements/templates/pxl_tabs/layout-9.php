@@ -29,7 +29,7 @@ if(count($tabs_list) > 0){
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="pxl-tabs-arrows">
+            <div class="pxl-tab-arrows">
                 <div class="pxl-tab-arrow pxl-tab-arrow-next"><span class="pxl-icon pxli-arrow-next"></span></div>
                 <div class="pxl-tab-arrow pxl-tab-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
             </div>
