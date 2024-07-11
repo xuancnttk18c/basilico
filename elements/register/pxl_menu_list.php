@@ -151,7 +151,7 @@ pxl_add_custom_widget(
                                         'type' => \Elementor\Controls_Manager::COLOR,
                                         'default' => '#8560a8',
                                         'selectors' => [
-                                            '{{WRAPPER}} {{CURRENT_ITEM}} .custom-tag.tag-1' => 'background-color: {{VALUE}};'
+                                            '{{WRAPPER}} {{CURRENT_ITEM}} .custom-tag.tag-2' => 'background-color: {{VALUE}};'
                                         ],
                                         'condition' => [
                                             'tag_2' => 'yes'
