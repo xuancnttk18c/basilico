@@ -36,4 +36,3 @@ $custom_cls = $widget->get_setting('custom_class','');
 	    } ?>
 	</a>
 </div>
- 
