@@ -121,9 +121,12 @@ pxl_add_custom_widget(
                                         'label' => esc_html__('Custom Tag 1 Color', 'basilico'),
                                         'type' => \Elementor\Controls_Manager::COLOR,
                                         'default' => '#374ccb',
+                                        'selectors' => [
+                                            '{{WRAPPER}} {{CURRENT_ITEM}} .custom-tag.tag-1' => 'background-color: {{VALUE}};'
+                                        ],
                                         'condition' => [
                                             'tag_1' => 'yes'
-                                        ]
+                                        ],
                                     ),
                                     array(
                                         'name' => 'tag_2',
@@ -147,6 +150,9 @@ pxl_add_custom_widget(
                                         'label' => esc_html__('Custom Tag 2 Color', 'basilico'),
                                         'type' => \Elementor\Controls_Manager::COLOR,
                                         'default' => '#8560a8',
+                                        'selectors' => [
+                                            '{{WRAPPER}} {{CURRENT_ITEM}} .custom-tag.tag-1' => 'background-color: {{VALUE}};'
+                                        ],
                                         'condition' => [
                                             'tag_2' => 'yes'
                                         ]
