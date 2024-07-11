@@ -60,7 +60,7 @@ pxl_add_custom_widget(
                                 '2' => esc_html__('Underline Bottom', 'basilico'),
                                 '3' => esc_html__('Vertical', 'basilico'),
                                 '4' => esc_html__('Slash Between', 'basilico'),
-                                '5' => esc_html__('Luxury', 'basilico'),
+                                '5' => esc_html__('Rounded', 'basilico'),
                                 '6' => esc_html__('Coffee Bean', 'basilico'),
                             ],
                             'default' => '1',
