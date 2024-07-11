@@ -717,6 +717,11 @@
                         }
                     }
                 }
+                .sub-menu {
+                    a:before {
+                        content: none;
+                    }
+                }
             }
         }
         &.style-3 {
