@@ -1,11 +1,16 @@
 ( function( $ ) {
+    'use strict';
     function basilico_tabs_handler($scope){
         var link_to_tabs_carousel_id = $scope.find('.link-to-tabs-carousel-id').text().trim();
 
         $scope.find(".pxl-tabs .tabs-title .tab-title").on("click", function(e){
             e.preventDefault();
-            var target = $(this).data("target");
             $(this).addClass('active').siblings().removeClass('active');
+            var target = $(this).data("target");
+            basilico_tab_active(target);
+        });
+
+        function basilico_tab_active(target) {
             $(target).addClass('active').siblings().removeClass('active'); 
             $(target).siblings().find('.pxl-animate').each(function(){
                 var data = $(this).data('settings');
@@ -17,11 +22,10 @@
                 setTimeout(function () {  
                     $(cur_anm).removeClass('pxl-invisible').addClass('animated ' + data['animation']);
                 }, data['animation_delay']);
-
             });
             if ($scope.find('.pxl-tabs-carousel').length > 0 && link_to_tabs_carousel_id.length == 0)
                 $scope.find('.pxl-tabs-carousel').slick('refresh');
-        });
+        }
 
         if (link_to_tabs_carousel_id != undefined) {
             $scope.find('[data-slide]').click(function(e){
