@@ -228,11 +228,11 @@
             }
             if( $(el).hasClass('split-in-up') ){
                 settings.opacity = 0;
-                settings.y = "30";
+                settings.y = "80";
             }
             if( $(el).hasClass('split-in-down') ){
                 settings.opacity = 0;
-                settings.y = "-30";
+                settings.y = "-80";
             }
             if( $(el).hasClass('split-in-rotate') ){
                 settings.opacity = 0;
