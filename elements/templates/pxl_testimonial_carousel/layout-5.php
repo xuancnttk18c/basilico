@@ -31,7 +31,7 @@ $opts = [
     'autoplay'                      => (bool)$widget->get_setting('autoplay', false),
     'pause_on_hover'                => (bool)$widget->get_setting('pause_on_hover', false),
     'pause_on_interaction'          => true,
-    'delay'                         => (bool)$widget->get_setting('autoplay_speed', 5000),
+    'delay'                         => (int)$widget->get_setting('autoplay_speed', 5000),
     'loop'                          => (bool)$widget->get_setting('infinite', false),
     'speed'                         => (int)$widget->get_setting('speed', 500)
 ];
