@@ -46,7 +46,7 @@ $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : 
                 <?php if ($value['tag_1'] === 'yes' || $value['tag_2'] === 'yes') : ?>
                     <div class="custom-tags d-flex">
                         <?php if ($value['tag_1'] === 'yes' && !empty($value['tag_1_text'])) : ?>
-                            <div class="custom-tag tag-1">>
+                            <div class="custom-tag tag-1">
                                 <?php echo esc_html($value['tag_1_text']); ?>
                             </div>
                         <?php endif;?>
