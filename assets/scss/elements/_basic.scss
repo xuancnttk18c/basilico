@@ -4592,7 +4592,7 @@
                     left: 0;
                     right: 0;
                     height: 4px;
-                    background: $primary_color;
+                    background-color: $secondary_color;
                     @include border-radius(2px);
                     opacity: 0;
                     transform: scaleX(0);

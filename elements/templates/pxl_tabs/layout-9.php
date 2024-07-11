@@ -17,7 +17,7 @@ if(count($tabs_list) > 0){
                     $tabs_title[$title_key] = $tab['tab_title'];
                     $widget->add_inline_editing_attributes( $title_key, 'basic' );
                     $widget->add_render_attribute( $title_key, [
-                        'class' => [ 'tab-title d-flex align-items-center flex-column' ],
+                        'class' => [ 'tab-title d-flex' ],
                         'data-target' => '#' . $element_id.'-'.$tab['_id'],
                     ] );
                     if($active_tab == $key + 1){
@@ -34,7 +34,6 @@ if(count($tabs_list) > 0){
                 <div class="pxl-tab-arrow pxl-tab-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
             </div>
         </div>
-
         <div class="tabs-content">
             <?php foreach ($tabs_list as $key => $tab):
                 $content_key = $widget->get_repeater_setting_key( 'tab_content', 'tabs_list', $key );
