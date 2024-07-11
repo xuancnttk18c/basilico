@@ -4616,7 +4616,6 @@
                 position: absolute;
                 bottom: 0;
                 background-color: $primary_color;
-                font-weight: bold;
                 color: #fff;
                 width: 47px;
                 height: 47px;
@@ -4631,6 +4630,9 @@
                 }
                 &.pxl-tab-arrow-next {
                     right: 0;
+                }
+                .pxl-icon {
+                    font-weight: 700;
                 }
             }
         }
