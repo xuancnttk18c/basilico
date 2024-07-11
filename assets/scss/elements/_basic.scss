@@ -4564,6 +4564,7 @@
         .tabs-title {
             @include d-flex();
             align-items: center;
+            position: relative;
             .title-wrap {
                 width: 100%;
                 @include d-flex();
@@ -4618,6 +4619,7 @@
                 color: #fff;
                 width: 47px;
                 height: 47px;
+                @include transform(translateY(50%));
                 display: inline-flex;
                 border-radius: 50%;
                 justify-content: center;
