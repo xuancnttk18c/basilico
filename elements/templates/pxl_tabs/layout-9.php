@@ -4,7 +4,7 @@ extract($settings);
 if(count($tabs_list) > 0){
 	$tab_bd_ids = [];
     ?>
-    <div class="pxl-tabs layout-7">
+    <div class="pxl-tabs layout-9">
         <?php if (!empty($link_to_carousel)) : ?>
             <div class="link-to-tabs-carousel-id d-none">
                 <?php echo esc_attr($link_to_carousel); ?>
