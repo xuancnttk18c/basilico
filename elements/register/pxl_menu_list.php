@@ -2,7 +2,7 @@
 pxl_add_custom_widget(
     array(
         'name' => 'pxl_menu_list',
-        'title' => esc_html__('PXL Menu List', 'basilico' ),
+        'title' => esc_html__('PXL Food Menu', 'basilico' ),
         'icon' => 'eicon-bullet-list',
         'categories' => array('pxltheme-core'),
         'scripts'    => array(),

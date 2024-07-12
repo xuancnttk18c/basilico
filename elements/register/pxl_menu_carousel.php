@@ -2,7 +2,7 @@
 pxl_add_custom_widget(
     array(
         'name' => 'pxl_menu_carousel',
-        'title' => esc_html__('PXL Menu Carousel', 'basilico'),
+        'title' => esc_html__('PXL Food Menu Carousel', 'basilico'),
         'icon' => 'eicon-info-box',
         'categories' => array('pxltheme-core'),
         'scripts' => [
