@@ -2448,8 +2448,9 @@
         .pxl-grid-inner {
             background-color: #fff;
             .grid-item {
-                margin: 0px !important;
-                padding: 15px !important;
+                padding: 15px;
+                margin-left: -1px;
+                margin-bottom: -1px;
                 border: 1px solid $divider_color;
                 .item-inner {
                     overflow: hidden;
