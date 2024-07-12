@@ -215,6 +215,9 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-grid.layout-5 .grid-item' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px; padding-top: {{VALUE}}px; padding-bottom: {{VALUE}}px; margin-top: 0; margin-bottom: 0;',
                                 '{{WRAPPER}} .pxl-grid .grid-sizer' => 'padding-left: {{VALUE}}px; padding-right: {{VALUE}}px;',
                             ],
+                            'condition' => [
+                                'layout!' => '8'
+                            ]
                         ),
                         array(
                             'name'         => 'image_border_radius',

@@ -2449,6 +2449,11 @@
             background-color: #fff;
             .grid-item {
                 margin-right: -1px;
+                margin-bottom: -1px !important;
+                margin-top: 0px !important;
+                padding: 15px;
+                border: 1px solid $divider_color;
+                margin-right: -1px;
                 margin-bottom: -1px;
                 .item-inner {
                     overflow: hidden;
