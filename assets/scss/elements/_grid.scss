@@ -2273,11 +2273,13 @@
         .pxl-grid-inner {
             background-color: #fff;
             .grid-item {
+                margin-left: -1px;
+                margin-bottom: -1px;
+                border: 1px solid $secondary_color;
                 .item-inner {
-                    @include border-radius(20px);
                     overflow: hidden;
                     &:before {
-                        background-color: $secondary_color;
+                        background-color: $primary_color;
                         z-index: 1;
                         opacity: 1;
                         visibility: visible;
