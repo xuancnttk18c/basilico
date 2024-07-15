@@ -114,6 +114,15 @@ pxl_add_custom_widget(
                                 'selector' => '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor-list-wrap',
                             ),
                             array(
+                                'name' => 'icon_color',
+                                'label' => esc_html__('Icon Hover', 'basilico' ),
+                                'type' => 'color',
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor svg' => 'fill: {{VALUE}};'
+                                ],
+                            ),
+                            array(
                                 'name' => 'icon_color_background',
                                 'label' => esc_html__('Icon Background Hover', 'basilico' ),
                                 'type' => 'color',
