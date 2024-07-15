@@ -53,13 +53,11 @@ extract($settings);
 			?>
 			<div class="pxl-anchor-wrapper relative <?php echo esc_attr($selected_template) == 'cart-dropdown' ? 'pxl-anchor-cart' : ''; ?>">
 				<a href="<?php echo esc_attr($anchor_link); ?>" <?php pxl_print_html($widget->get_render_attribute_string( 'anchor'.$key )); ?> data-target="<?php echo esc_attr($target)?>">
-					<?php
-					\Elementor\Icons_Manager::render_icon( $anchor['selected_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'span' );
-					?>
+					<?php \Elementor\Icons_Manager::render_icon( $anchor['selected_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'span' ); ?>
+					<?php if ( !\Elementor\Plugin::$instance->editor->is_edit_mode() && isset($anchor['cart_count']) && esc_attr($anchor['cart_count'] == 'true') ): ?>
+						<span class="anchor-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>
+					<?php endif; ?>
 				</a>
-				<?php if ( !\Elementor\Plugin::$instance->editor->is_edit_mode() && isset($anchor['cart_count']) && esc_attr($anchor['cart_count'] == 'true') ): ?>
-					<span class="anchor-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>
-				<?php endif; ?>
 				<?php if ($selected_template == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
 					<div class="pxl-cart-dropdown">
 						<div class="pxl-cart-dropdown-inner relative">
