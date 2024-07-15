@@ -815,22 +815,20 @@
 	.woocommerce-product-rating {
 		position: relative;
 		.star-rating {
-			width: 100px;
-			font-size: 16px;
+			width: 93px;
+			font-size: 20px;
 			letter-spacing: 0;
-			&:before {
-				content: "\e948\e948\e948\e948\e948";
-				font-size: 13px;
-				font-family: $pxli_font;
-				color: $divider_color;
-			}
 			> span:before {
 				content: "\e999\e999\e999\e999\e999";
 				font-family: $pxli_font;
 				color: $divider_color;
 			}
 		}
+		.woocommerce-review-link{
+			margin-left: 18px;
+		}
 		.woocommerce-product-details__short-description {
+			border-top-color: $divider_color;
 			padding-top: 28px;
 		}
 	}
