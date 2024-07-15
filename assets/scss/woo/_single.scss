@@ -819,13 +819,14 @@
 			font-size: 16px;
 			letter-spacing: 0;
 			&:before {
-				content: "\e999\e999\e999\e999\e999";
+				content: "\e948\e948\e948\e948\e948";
 				font-family: $pxli_font;
 				color: $divider_color;
 			}
 			> span:before {
-				content: "\e948\e948\e948\e948\e948";
-				font-family: $pxli_font;	
+				content: "\e999\e999\e999\e999\e999";
+				font-size: 13px;
+				font-family: $pxli_font;
 				color: $divider_color;
 			}
 		}
