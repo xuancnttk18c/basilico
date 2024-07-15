@@ -91,7 +91,6 @@
 		padding: 0;
 		margin: 0;
 		position: relative;
-		background-color: #fff;
 	}
 	.woocommerce-product-gallery__image {
 		background: #F9F9F9;
@@ -161,6 +160,22 @@
 	.flex-viewport {
 		@include border-radius(20px);
 		overflow: hidden;
+	}
+	.flex-viewport .woocommerce-product-gallery__image {
+		@include border-radius(0);
+	}
+}
+
+.pxl-shop-layout-4 .woocommerce-product-gallery {
+	.woocommerce-product-gallery__image,
+	.flex-viewport {
+		border: 1px solid $divider_color;
+		img {
+			background-size: cover;
+			background-position: center;
+			background-image: url('../assets/images/dirt_explosion_overlay_2.png');
+			background-color: #fff;
+		}
 	}
 	.flex-viewport .woocommerce-product-gallery__image {
 		@include border-radius(0);
