@@ -114,7 +114,7 @@ pxl_add_custom_widget(
                                 'selector' => '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor-list-wrap',
                             ),
                             array(
-                                'name' => 'icon_color',
+                                'name' => 'icon_color_hover',
                                 'label' => esc_html__('Icon Hover', 'basilico' ),
                                 'type' => 'color',
                                 'selectors' => [
