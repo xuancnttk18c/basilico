@@ -63,6 +63,11 @@ pxl_add_custom_widget(
                                         'value'   => 'pxli-search-400'
                                     ],
                                 ),
+                                array(
+                                    'name'  => 'cart_count',
+                                    'label' => esc_html__('Show Cart Count', 'basilico'),
+                                    'type'  => \Elementor\Controls_Manager::SWITCHER,
+                                ),
                             ),
                         ),
                         array(
@@ -99,7 +104,7 @@ pxl_add_custom_widget(
                     ),
                 )
             )
-        )
-    ),
-    basilico_get_class_widget_path()
+)
+),
+basilico_get_class_widget_path()
 );
