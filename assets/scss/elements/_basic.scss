@@ -2836,7 +2836,7 @@
             @include border-radius(20px);
             max-height: 96px;
             transform-origin: top;
-            @include transition(all 400ms ease);
+            @include transition(all 0ms linear 400ms);
             i {
                 font-size: 47px;
                 color: #fff;
