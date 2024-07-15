@@ -167,18 +167,15 @@
 }
 
 .pxl-shop-layout-4 .woocommerce-product-gallery {
+	border: 1px solid $divider_color;
 	.woocommerce-product-gallery__image,
 	.flex-viewport {
-		border: 1px solid $divider_color;
 		img {
 			background-size: cover;
 			background-position: center;
 			background-image: url('../images/dirt_explosion_overlay_2.png');
 			background-color: #fff;
 		}
-	}
-	.flex-viewport .woocommerce-product-gallery__image {
-		@include border-radius(0);
 	}
 }
 
