@@ -67,48 +67,65 @@ pxl_add_custom_widget(
                                     'name'  => 'cart_count',
                                     'label' => esc_html__('Show Cart Count', 'basilico'),
                                     'type'  => \Elementor\Controls_Manager::SWITCHER,
-                                    'default' => 'true',
+                                    'default' => 'false',
                                     'condition' => [
                                         'template' => ['cart-dropdown', 'cart-canvas', 'cart-page']
                                     ],
                                 ),
                             ),
                         ),
+                    ),
+                ),
+                array(
+                    'name' => 'style_section',
+                    'label' => esc_html__('Style Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+                    'controls' => array_merge(
                         array(
-                            'name'  => 'icon_size',
-                            'label' => esc_html__( 'Icon Size(px)', 'basilico' ),
-                            'type'  => 'slider',
-                            'range' => [
-                                'px' => [
-                                    'min' => 15,
-                                    'max' => 300,
+                            array(
+                                'name'  => 'icon_size',
+                                'label' => esc_html__( 'Icon Size(px)', 'basilico' ),
+                                'type'  => 'slider',
+                                'range' => [
+                                    'px' => [
+                                        'min' => 15,
+                                        'max' => 300,
+                                    ],
                                 ],
-                            ],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-icon' => 'font-size: {{SIZE}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-anchor-icon svg' => 'width: {{SIZE}}{{UNIT}};',
-                            ],
-                        ),
-                        array(
-                            'name' => 'icon_color',
-                            'label' => esc_html__('Color', 'basilico' ),
-                            'type' => 'color',
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor' => 'color: {{VALUE}};'
-                            ],
-                        ), 
-                        array(
-                            'name' => 'icon_color_hover',
-                            'label' => esc_html__('Hover Color', 'basilico' ),
-                            'type' => 'color',
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor:before' => 'background-color: {{VALUE}};'
-                            ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-anchor-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+                                    '{{WRAPPER}} .pxl-anchor-icon svg' => 'width: {{SIZE}}{{UNIT}};',
+                                ],
+                            ),
+                            array(
+                                'name' => 'icon_color',
+                                'label' => esc_html__('Color', 'basilico' ),
+                                'type' => 'color',
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-anchor' => 'color: {{VALUE}};'
+                                ],
+                            ),
+                            array(
+                                'name' => 'container_background',
+                                'label' => esc_html__('Background Hover', 'basilico' ),
+                                'type' => \Elementor\Group_Control_Background::get_type(),
+                                'control_type' => 'group',
+                                'types' => ['classic', 'gradient'],
+                                'selectors' => '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor-list-wrap',
+                            ),
+                            array(
+                                'name' => 'icon_color_background',
+                                'label' => esc_html__('Icon Background Hover', 'basilico' ),
+                                'type' => 'color',
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor:before' => 'background-color: {{VALUE}};'
+                                ],
+                            ),
                         ),
                     ),
-                )
-            )
-)
+                ),
+            ),
+),
 ),
 basilico_get_class_widget_path()
 );
