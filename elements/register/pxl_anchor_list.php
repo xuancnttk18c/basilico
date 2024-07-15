@@ -93,8 +93,8 @@ pxl_add_custom_widget(
                                     ],
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-anchor-icon' => 'font-size: {{SIZE}}{{UNIT}};',
-                                    '{{WRAPPER}} .pxl-anchor-icon svg' => 'width: {{SIZE}}{{UNIT}};',
+                                    '{{WRAPPER}} .pxl-anchor' => 'font-size: {{SIZE}}{{UNIT}};',
+                                    '{{WRAPPER}} .pxl-anchor svg' => 'width: {{SIZE}}{{UNIT}};',
                                 ],
                             ),
                             array(
@@ -125,7 +125,7 @@ pxl_add_custom_widget(
                     ),
                 ),
             ),
-),
-),
-basilico_get_class_widget_path()
+        ),
+    ),
+    basilico_get_class_widget_path()
 );
