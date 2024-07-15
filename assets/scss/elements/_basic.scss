@@ -2879,9 +2879,8 @@
         }
         .box-inner:hover {
             .box-icon {
+                margin-top: -96px;
                 margin-bottom: 0px;
-                max-height: 0px;
-                @include border-radius(0px);
             }
             .box-description {
                 margin-top: 19px;
