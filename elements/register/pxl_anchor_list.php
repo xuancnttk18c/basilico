@@ -111,7 +111,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Group_Control_Background::get_type(),
                                 'control_type' => 'group',
                                 'types' => ['classic', 'gradient'],
-                                'selectors' => '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor-list-wrap',
+                                'selector' => '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor-list-wrap',
                             ),
                             array(
                                 'name' => 'icon_color_background',
