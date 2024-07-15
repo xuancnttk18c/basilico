@@ -2450,8 +2450,9 @@
             .grid-item {
                 padding: 15px;
                 margin-right: -1px;
-                //margin-bottom: -1px;
+                margin-bottom: -1px;
                 border: 1px solid $divider_color;
+                border-right: none;
                 .item-inner {
                     overflow: hidden;
                     &:before {
