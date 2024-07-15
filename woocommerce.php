@@ -1,8 +1,8 @@
 <?php
 get_header();
-if(is_singular('product')){
+if (is_singular('product')){
     $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'product', 'content_col'=> '8']); // type: blog, post, page, shop, product
-}else{
+} else {
     $pxl_sidebar = basilico()->get_sidebar_args(['type' => 'shop', 'content_col'=> '8']); // type: blog, post, page, shop, product
 }
 
