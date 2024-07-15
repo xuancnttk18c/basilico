@@ -118,8 +118,8 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Icon Hover', 'basilico' ),
                                 'type' => 'color',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor' => 'color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor svg' => 'fill: {{VALUE}};'
+                                    '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor:hover' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor:hover svg' => 'fill: {{VALUE}};'
                                 ],
                                 'separator' => 'before'
                             ),
