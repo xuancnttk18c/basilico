@@ -236,6 +236,16 @@
 	}
 }
 
+.pxl-shop-layout-3 .wc-gallery-sync {
+	.flex-control-thumb {
+		border: 1px solid $divider_color;
+		overflow: hidden;
+		&:after {
+			content: none;
+		}
+	}
+}
+
 .pxl-shop-layout-5 .wc-gallery-sync {
 	.flex-control-thumb {
 		border: none;
