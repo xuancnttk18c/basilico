@@ -820,12 +820,12 @@
 			letter-spacing: 0;
 			&:before {
 				content: "\e948\e948\e948\e948\e948";
+				font-size: 13px;
 				font-family: $pxli_font;
 				color: $divider_color;
 			}
 			> span:before {
 				content: "\e999\e999\e999\e999\e999";
-				font-size: 13px;
 				font-family: $pxli_font;
 				color: $divider_color;
 			}
