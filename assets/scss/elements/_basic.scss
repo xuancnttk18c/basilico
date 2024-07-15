@@ -1070,6 +1070,19 @@
                 color: #fff;
                 overflow: hidden;
                 @include transition();
+                .anchor-cart-count {
+                    position: absolute;
+                    right: -12px;
+                    top: -12px;
+                    width: 21px;
+                    height: 21px;
+                    @include border-radius(50%);
+                    background-color: $secondary_color;
+                    color: #fff;
+                    font-size: 13px;
+                    display: inline-block;
+                    text-align: center;
+                }
                 span, svg {
                     position: relative;
                     z-index: 2;
