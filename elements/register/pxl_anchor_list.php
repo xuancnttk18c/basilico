@@ -121,6 +121,7 @@ pxl_add_custom_widget(
                                     '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor' => 'color: {{VALUE}};',
                                     '{{WRAPPER}} .pxl-anchor-list.layout-1 .pxl-anchor svg' => 'fill: {{VALUE}};'
                                 ],
+                                'separator' => 'before'
                             ),
                             array(
                                 'name' => 'icon_color_background',
