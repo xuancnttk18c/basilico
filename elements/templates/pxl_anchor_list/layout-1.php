@@ -57,7 +57,7 @@ extract($settings);
 					\Elementor\Icons_Manager::render_icon( $anchor['selected_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'span' );
 					?>
 				</a>
-				<?php if ( !\Elementor\Plugin::$instance->editor->is_edit_mode() && esc_attr($cart_count) ): ?>
+				<?php if ( !\Elementor\Plugin::$instance->editor->is_edit_mode() && esc_attr($anchors['cart_count'] == 'true') ): ?>
 					<span class="anchor-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>
 				<?php endif; ?>
 				<?php if ($selected_template == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
