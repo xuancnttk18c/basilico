@@ -817,6 +817,40 @@
 			margin-top: 0;
 		}
 	}
+	.quantity {
+		max-width: 123px;
+		margin-right: 4px;
+		.label {
+			display: none;
+		}
+		.qty-field .quantity-inner {
+			position: relative;
+			input.qty[type="number"] {
+				background-color: transparent;
+				border: none;
+			}
+			.quantity-button {
+				background-color: $primary_color;
+				width: 34px;
+				height: 34px;
+				@include border-radius(50%);
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				&:before {
+					font-family: 'Rowdies';
+					font-size: 23px;
+					
+				}
+				&.quantity-up:before {
+					content: '+';
+				}
+				&.quantity-down:before {
+					content: '-';
+				}
+			}
+		}
+	}
 	.woocommerce-product-rating {
 		position: relative;
 		margin-top: 16px;
