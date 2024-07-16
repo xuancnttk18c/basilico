@@ -234,7 +234,11 @@ if(!function_exists('basilico_wc_template_single_meta')){
 
 /* Add to cart */
 if(!function_exists('basilico_single_add_to_cart')){
-	add_action('woocommerce_single_product_summary', 'basilico_single_add_to_cart', 40);
+	if (basilico()->get_theme_opt('product_layout', 'layout-1') == 'layout-4')
+		add_action('woocommerce_single_product_summary', 'basilico_single_add_to_cart', 40);
+	else
+		add_action('woocommerce_single_product_summary', 'basilico_single_add_to_cart', 30);
+	
 	function basilico_single_add_to_cart(){
 		global $product;
 		switch ($product->get_type()) {
