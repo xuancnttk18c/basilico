@@ -1698,9 +1698,9 @@ table.shop_attributes{
 			a {
 				font-family: $heading_font_family;
 				font-size: 20px;
-				font-weight: 600;
+				font-weight: 400;
 				line-height: 60px;
-				letter-spacing: 0.02em;
+				letter-spacing: 0.03em;
 				text-transform: capitalize;
 			}
 		}
@@ -1712,8 +1712,9 @@ table.shop_attributes{
 				text-transform: capitalize;
 			}
 			.comment-reply-link {
+				background-color: $primary_color;
 				color: #fff;
-				@include border-radius(17px);
+				@include border-radius(5px);
 			}
 		}
 		.star-rating {
