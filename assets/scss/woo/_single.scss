@@ -1718,8 +1718,8 @@ table.shop_attributes{
 			}
 		}
 		.star-rating {
-			width: 100px;
-			font-size: 17px;
+			width: 84px;
+			font-size: 20px;
 			letter-spacing: 0;
 			&:before {
 				content: "\f27c\f27c\f27c\f27c\f27c";
@@ -1734,36 +1734,36 @@ table.shop_attributes{
 		}
 		p.stars {
 			a {
-				color: $secondary_color;
-				height: 18px;
-				width: 18px;
+				color: $heading_color;
+				height: 20px;
+				width: 20px;
 				&::before {
 					font-size: 20px;
-					font-family: $pxli_font;
-					content: '\e948';
+					font-family: 'Material-Design-Iconic-Font';
+					content: '\f27c';
 				}
 				&:hover ~ a::before {
-					content: '\e948';
+					content: '\f27c';
 					font-weight: normal;
 				}
 			}
 			&:hover a::before {
-				content: '\e949';
+				content: '\f27d';
 				font-weight: normal;
 			}
 			&.selected {
 				a.active {
 					&::before {
-						content: '\e949';
+						content: '\f27d';
 						font-weight: normal;
 					}
 					~ a::before {
-						content: '\e948';
+						content: '\f27d';
 						font-weight: normal;
 					}
 				}
 				a:not(.active)::before {
-					content: '\e949';
+					content: '\f27d';
 					font-weight: normal;
 				}
 			}
