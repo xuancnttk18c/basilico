@@ -835,6 +835,7 @@
 				font-weight: 500;
 			}
 			.quantity-button {
+				cursor: pointer;
 				background-color: $primary_color;
 				width: 34px;
 				height: 34px;
@@ -877,6 +878,10 @@
 		}
 		.woocommerce-review-link{
 			margin-left: 18px;
+			font-size: 15px;
+			&:hover {
+				color: $primary_color;
+			}
 		}
 	}
 	.woocommerce-product-details__short-description {
