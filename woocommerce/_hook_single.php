@@ -585,7 +585,7 @@ if(!function_exists('basilico_woocommerce_rename_tabs')){
 	add_filter( 'woocommerce_product_tabs', 'basilico_woocommerce_rename_tabs', 98 );
 	function basilico_woocommerce_rename_tabs( $tabs ) {
 		if(!empty($tabs['additional_information']['title']))
-			$tabs['additional_information']['title'] = esc_html__( 'Product details','basilico' );	// Rename the additional information tab
+			$tabs['additional_information']['title'] = esc_html__( 'Additional information','basilico' );	// Rename the additional information tab
 
 		return $tabs;
 	}
