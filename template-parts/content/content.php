@@ -149,7 +149,6 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
                     ?>
                         <div class="post-btn-wrap col-sm-6">
                             <a class="btn btn-outline-secondary" href="<?php echo esc_url(get_permalink()); ?>">
-                                <span class="pxl-button-bg"></span>
                                 <span><?php echo esc_html($archive_readmore_text); ?></span>
                             </a>
                         </div>

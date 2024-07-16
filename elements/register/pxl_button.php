@@ -282,8 +282,7 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'border-color: {{VALUE}};',
                                     '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-6:hover, {{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-5:hover' => 'background-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn:not(.btn-additional-7):before' => 'background-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-7 .pxl-button-bg' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-button-wrapper .btn:before' => 'background-color: {{VALUE}};',
                                 ],
                             ),
                         ),
