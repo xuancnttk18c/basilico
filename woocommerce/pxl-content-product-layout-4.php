@@ -74,11 +74,11 @@ $item_class          = ['grid-item'];
                             <?php woocommerce_template_loop_add_to_cart(); ?>
                         </div>
                         <?php
-                        if(class_exists( 'WPCleverWoosw' )){
+                        if (class_exists( 'WPCleverWoosw' )) :
                             echo '<div class="pxl-shop-woosmart-wrap">';
                             do_action( 'woosw_button_position_archive_woosmart' );
                             echo '</div>';
-                        }
+                        endif;
                         ?>
                     </div>
                 </div>
