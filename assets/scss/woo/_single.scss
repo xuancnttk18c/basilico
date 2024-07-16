@@ -899,11 +899,17 @@
 	form.cart {
 		align-items: center;
 		gap: 30px;
-		margin-top: 0;
+		margin-top: 27px;
 		padding-top: 0;
+		border-top: none;
 	}
 	.pxl-addtocart-btn-wrap {
 		margin-top: 0;
+		.single_add_to_cart_button {
+			span:after {
+				content: none;
+			}
+		}
 	}
 	.post-shares {
 		margin-top: 28px;
