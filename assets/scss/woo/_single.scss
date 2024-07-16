@@ -1685,6 +1685,91 @@ table.shop_attributes{
 	}
 }
 
+.pxl-shop-layout-4 .woocommerce-tabs {
+	margin-top: 45px;
+	ul.wc-tabs {
+		overflow: hidden;
+		li {
+			&:after {
+				background-color: $primary_color;
+				height: 4px;
+				bottom: -1px;
+			}
+			a {
+				font-family: $heading_font_family;
+				font-size: 20px;
+				font-weight: 600;
+				line-height: 60px;
+				letter-spacing: 0.02em;
+				text-transform: capitalize;
+			}
+		}
+	}
+	.woocommerce-Tabs-panel--reviews {
+		.commentlist {
+			.comment-title {
+				font-size: 16px;
+				text-transform: capitalize;
+			}
+			.comment-reply-link {
+				color: #fff;
+				@include border-radius(17px);
+			}
+		}
+		.star-rating {
+			width: 100px;
+			font-size: 17px;
+			letter-spacing: 0;
+			&:before {
+				content: "\e948\e948\e948\e948\e948";
+				font-family: $pxli_font;
+				color: $secondary_color;
+			}
+			> span:before {
+				content: "\e949\e949\e949\e949\e949";
+				font-family: $pxli_font;	
+				color: $secondary_color;
+			}
+		}
+		p.stars {
+			a {
+				color: $secondary_color;
+				height: 18px;
+				width: 18px;
+				&::before {
+					font-size: 20px;
+					font-family: $pxli_font;
+					content: '\e948';
+				}
+				&:hover ~ a::before {
+					content: '\e948';
+					font-weight: normal;
+				}
+			}
+			&:hover a::before {
+				content: '\e949';
+				font-weight: normal;
+			}
+			&.selected {
+				a.active {
+					&::before {
+						content: '\e949';
+						font-weight: normal;
+					}
+					~ a::before {
+						content: '\e948';
+						font-weight: normal;
+					}
+				}
+				a:not(.active)::before {
+					content: '\e949';
+					font-weight: normal;
+				}
+			}
+		}
+	}
+}
+
 
 /** ------------------------------------------------
  * Related Product
