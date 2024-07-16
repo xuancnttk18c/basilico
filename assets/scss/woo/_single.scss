@@ -910,9 +910,13 @@
 				content: none;
 			}
 		}
-		.single_add_to_cart_button {
-			height: auto;
-			padding: 0;
+	}
+	.stock-wishlist {
+		.pxl-shop-woosmart-wrap {
+			.woosw-btn {
+				height: auto;
+				padding: 0;
+			}
 		}
 	}
 	.post-shares {
