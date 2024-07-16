@@ -20,8 +20,6 @@ function basilico_woocommerce_remove_product_single_function() {
 	remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
 	add_action( 'woocommerce_single_product_summary' , 'woocommerce_template_single_price', 10 );
 	add_action( 'woocommerce_single_product_summary' , 'woocommerce_template_single_rating', 10 );
-	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
-	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 40);
 }
 add_action( 'init', 'basilico_woocommerce_remove_product_single_function' );
 
@@ -236,7 +234,7 @@ if(!function_exists('basilico_wc_template_single_meta')){
 
 /* Add to cart */
 if(!function_exists('basilico_single_add_to_cart')){
-	add_action('woocommerce_single_product_summary', 'basilico_single_add_to_cart', 30);
+	add_action('woocommerce_single_product_summary', 'basilico_single_add_to_cart', 40);
 	function basilico_single_add_to_cart(){
 		global $product;
 		switch ($product->get_type()) {
