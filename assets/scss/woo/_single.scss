@@ -905,6 +905,10 @@
 	}
 	.pxl-addtocart-btn-wrap {
 		margin-top: 0;
+		.pxl-atc-btn {
+			position: relative;
+			z-index: 1;
+		}
 		.single_add_to_cart_button {
 			span:after {
 				content: none;
