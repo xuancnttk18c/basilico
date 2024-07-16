@@ -278,7 +278,7 @@
 	text-transform: capitalize;
 }
 .pxl-shop-layout-4 .product_title {
-	margin-bottom: 19px;
+	margin-bottom: 9px;
 	font-size: 40px;
 	line-height: 55px;
 	letter-spacing: 0.03em;
@@ -1876,6 +1876,22 @@ table.shop_attributes{
 	}
 	.pxl-nutrition {
 		text-transform: uppercase;
+	}
+}
+
+.pxl-shop-layout-2 .pxl-nutritions-wrapper {
+	border-color: $divider_color;
+	h3 {
+		font-size: 20px;
+		font-weight: 400;
+		letter-spacing: 0.03em;
+		text-transform: none;
+	}
+	.pxl-nutrition {
+		text-transform: uppercase;
+		font-weight: 600;
+		line-height: 35px;
+		letter-spacing: 0.02em;
 	}
 }
 
