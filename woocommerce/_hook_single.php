@@ -238,7 +238,7 @@ if(!function_exists('basilico_single_add_to_cart')){
 		add_action('woocommerce_single_product_summary', 'basilico_single_add_to_cart', 40);
 	else
 		add_action('woocommerce_single_product_summary', 'basilico_single_add_to_cart', 30);
-	
+
 	function basilico_single_add_to_cart(){
 		global $product;
 		switch ($product->get_type()) {
@@ -553,7 +553,7 @@ function basilico_simple_add_to_cart(){
     				$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
     				$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
     				?>
-    				<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
+    				<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="<?php echo esc_attr($single_btn_cls); ?>"><span class="pxl-button-bg"></span><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
     			</div>
     		</div>
     		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
