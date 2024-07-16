@@ -1722,14 +1722,14 @@ table.shop_attributes{
 			font-size: 17px;
 			letter-spacing: 0;
 			&:before {
-				content: "\e948\e948\e948\e948\e948";
-				font-family: $pxli_font;
-				color: $secondary_color;
+				content: "\f27c\f27c\f27c\f27c\f27c";
+				font-family: 'Material-Design-Iconic-Font';
+				color: $heading_color;
 			}
 			> span:before {
-				content: "\e949\e949\e949\e949\e949";
-				font-family: $pxli_font;	
-				color: $secondary_color;
+				content: "\f27d\f27d\f27d\f27d\f27d";
+				font-family: 'Material-Design-Iconic-Font';
+				color: $heading_color;
 			}
 		}
 		p.stars {
