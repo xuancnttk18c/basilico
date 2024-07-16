@@ -828,7 +828,7 @@
 			input.qty[type="number"] {
 				background-color: transparent;
 				border: none;
-				padding: 0;
+				padding: 0 15px;
 				width: 55px;
 				font-size: 20px;
 				color: $heading_color;
@@ -895,6 +895,15 @@
 		.stock-wishlist {
 			margin-left: 13px;
 		}
+	}
+	form.cart {
+		align-items: center;
+		gap: 30px;
+		margin-top: 0;
+		padding-top: 0;
+	}
+	.pxl-addtocart-btn-wrap {
+		margin-top: 0;
 	}
 	.post-shares {
 		margin-top: 28px;
