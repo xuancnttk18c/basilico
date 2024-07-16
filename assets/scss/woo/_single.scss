@@ -840,7 +840,8 @@
 				&:before {
 					font-family: 'Rowdies';
 					font-size: 23px;
-					
+					line-height: 1;
+					color: #fff;
 				}
 				&.quantity-up:before {
 					content: '+';
