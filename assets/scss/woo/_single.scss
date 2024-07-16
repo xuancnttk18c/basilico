@@ -1732,42 +1732,6 @@ table.shop_attributes{
 				color: $heading_color;
 			}
 		}
-		p.stars {
-			a {
-				color: $heading_color;
-				height: 20px;
-				width: 20px;
-				&::before {
-					font-size: 20px;
-					font-family: 'Material-Design-Iconic-Font';
-					content: '\f27c';
-				}
-				&:hover ~ a::before {
-					content: '\f27c';
-					font-weight: normal;
-				}
-			}
-			&:hover a::before {
-				content: '\f27d';
-				font-weight: normal;
-			}
-			&.selected {
-				a.active {
-					&::before {
-						content: '\f27d';
-						font-weight: normal;
-					}
-					~ a::before {
-						content: '\f27d';
-						font-weight: normal;
-					}
-				}
-				a:not(.active)::before {
-					content: '\f27d';
-					font-weight: normal;
-				}
-			}
-		}
 	}
 }
 
