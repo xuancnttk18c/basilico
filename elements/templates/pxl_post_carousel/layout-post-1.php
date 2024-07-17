@@ -184,7 +184,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('READ MORE', 'ba
                     if ( $settings['arrow_icon_previous']['value'] ) 
                         \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
                     else
-                        echo '<span class="pxl-icon pxli-arrow-next"></span>';
+                        echo '<span class="pxl-icon pxli-arrow-prev"></span>';
                     ?>
                 </div>
             </div>
