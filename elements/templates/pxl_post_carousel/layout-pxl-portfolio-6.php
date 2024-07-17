@@ -33,7 +33,7 @@ $cursor_text = $widget->get_setting('custom_cursor_text', '');
 
 $opts = [
     'slide_direction'               => 'horizontal',
-    'slide_percolumn'               => '1', 
+    'slide_percolumn'               => 1, 
     'slide_mode'                    => 'slide', 
     'slides_to_show_xxl'            => $widget->get_setting('col_xxl', '3'),
     'slides_to_show'                => $widget->get_setting('col_xl', '3'), 
