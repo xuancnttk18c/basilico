@@ -70,7 +70,7 @@ $widget->add_render_attribute( 'carousel', [
     <?php if ($quote_icon_type == 'text') { ?>
         <div class="item-quote-icon">“</div>
     <?php } ?>
-    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
+    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative overflow-hidden">
         <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
             <div class="pxl-swiper-wrapper swiper-wrapper">
                 <?php foreach ($content_list as $key => $value):
