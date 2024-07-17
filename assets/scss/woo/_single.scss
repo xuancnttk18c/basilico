@@ -1688,12 +1688,11 @@ table.shop_attributes{
 .pxl-shop-layout-4 .woocommerce-tabs {
 	margin-top: 45px;
 	ul.wc-tabs {
+		margin-bottom: -1px;
 		overflow: hidden;
 		li {
 			&:after {
-				background-color: $primary_color;
 				height: 4px;
-				bottom: -1px;
 			}
 			a {
 				font-family: $heading_font_family;
