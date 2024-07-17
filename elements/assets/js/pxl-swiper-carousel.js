@@ -163,19 +163,15 @@
                         $this.find('.swiper-slide .pxl-init-invisible').each(function(){
                             $(this).addClass('pxl-animated');
                         });
-                        if ($(this).is('.layout-3'))
-                            setSlideHeight(this);
-                        console.log(this);
-                        console.log($(this).is('.layout-3'));
+                        if (settings['auto_height']) setSlideHeight(this);
                     },
                     slideChangeTransitionStart : function (swiper){
                         var activeIndex = this.activeIndex;
                     },
                     slideChangeTransitionEnd : function(){
-                        setSlideHeight(this);
+                        if (settings['auto_height']) setSlideHeight(this);
                     },
                     slideChange: function (swiper) {
-
                         $this.find('.swiper-slide .pxl-animate').each(function(){
                             var data = $(this).data('settings');
                             $(this).removeClass('animated '+data['animation']).addClass('pxl-invisible');
@@ -191,15 +187,16 @@
                         $this.find('.pxl-bd-anm').each(function(){
                             $(this).addClass('pxl-animated');
                         });
-
                     },
-                    
                 },
             };
 
             //center slide
             if(settings['center_slide'] === true || settings['center_slide'] == 'true')
                 carousel_settings['centeredSlides'] = true;
+
+            if(settings['auto_height'] === true || settings['auto_height'] == 'true')
+                carousel_settings['auto_height'] = true;
 
             // loop
             if(settings['loop'] === true || settings['loop'] == 'true'){

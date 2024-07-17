@@ -34,6 +34,7 @@ $opts = [
     'delay'                         => (int)$widget->get_setting('autoplay_speed', 5000),
     'loop'                          => (bool)$widget->get_setting('infinite', false),
     'speed'                         => (int)$widget->get_setting('speed', 500),
+    'auto_height'                   => true,
 ];
 
 
