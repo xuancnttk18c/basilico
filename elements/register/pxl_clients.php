@@ -28,11 +28,11 @@ pxl_add_custom_widget(
                                 ],
                                 '2' => [
                                     'label' => esc_html__('Layout 2', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_client-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_client-2.jpg'
                                 ],
                                 '3' => [
                                     'label' => esc_html__('Layout 3', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_client-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_client-3.jpg'
                                 ]
                             ],
                             'prefix_class' => 'pxl-clients-layout-'
