@@ -75,7 +75,6 @@ $widget->add_render_attribute( 'carousel', [
 ]);
 
 $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'basilico');
-$arrows_on_hover_cls = $arrows_on_hover == 'true' ? 'arrow-on-hover' : '';
 
 ?>
 <?php if(!empty($posts) && count($posts)): ?>
@@ -185,7 +184,7 @@ $arrows_on_hover_cls = $arrows_on_hover == 'true' ? 'arrow-on-hover' : '';
             </div>
         </div>
         <?php if($arrows !== 'false'): ?>
-            <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style);?> <?php echo esc_attr($arrows_on_hover_cls) ?>">
+            <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style);?>">
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
                     <?php 
                     if ( $settings['arrow_icon_next']['value'] ) 
