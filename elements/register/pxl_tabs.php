@@ -36,7 +36,7 @@ pxl_add_custom_widget(
                                 ],
                                 '4' => [
                                     'label' => esc_html__( 'Layout 4', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-4.jpg'
                                 ],
                                 '5' => [
                                     'label' => esc_html__( 'Layout 5', 'basilico' ),
