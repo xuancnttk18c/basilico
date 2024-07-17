@@ -10,7 +10,7 @@ $default_settings = [
     'text_list' => '',
 ];
 $settings = array_merge($default_settings, $settings);
-$widget->add_render_attribute( 'wrap-heading', 'class', 'pxl-heading-wrap d-flex layout1');
+$widget->add_render_attribute( 'wrap-heading', 'class', 'pxl-heading-layout-1 pxl-heading-wrap d-flex layout1');
 
 $widget->add_render_attribute( 'large-title', 'class', 'heading-title');
 if ( $settings['title_highlighted_line'] == "true") {
