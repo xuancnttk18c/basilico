@@ -163,13 +163,16 @@
                         $this.find('.swiper-slide .pxl-init-invisible').each(function(){
                             $(this).addClass('pxl-animated');
                         });
-                        //setSlideHeight(this);
+                        if ($(this).is('.layout-3'))
+                            setSlideHeight(this);
+                        console.log(this);
+                        console.log($(this).is('.layout-3'));
                     },
                     slideChangeTransitionStart : function (swiper){
                         var activeIndex = this.activeIndex;
                     },
                     slideChangeTransitionEnd : function(){
-                        //setSlideHeight(this);
+                        setSlideHeight(this);
                     },
                     slideChange: function (swiper) {
 
