@@ -25,7 +25,7 @@ pxl_add_custom_widget(
                                 ],
                                 '2' => [
                                     'label' => esc_html__('Layout 2', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_history-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_history-2.jpg'
                                 ]
                             ],
                             'prefix_class' => 'pxl-history-layout-'

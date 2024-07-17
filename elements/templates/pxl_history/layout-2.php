@@ -10,23 +10,23 @@ $dots = $widget->get_setting('dots','false');
 $opts = [
     'slide_direction'               => 'horizontal',
     'slide_mode'                    => 'slide',
-    'slides_to_show_xxl'            => $widget->get_setting('col_xxl', '3'),
-    'slides_to_show'                => $widget->get_setting('col_xl', '3'),
-    'slides_to_show_lg'             => $widget->get_setting('col_lg', '3'),
-    'slides_to_show_md'             => $widget->get_setting('col_md', '2'),
-    'slides_to_show_sm'             => $widget->get_setting('col_sm', '2'),
-    'slides_to_show_xs'             => $widget->get_setting('col_xs', '1'),
-    'slides_to_scroll'              => $widget->get_setting('slides_to_scroll', '1'),
+    'slides_to_show_xxl'            => (float)$widget->get_setting('col_xxl', 3),
+    'slides_to_show'                => (float)$widget->get_setting('col_xl', 3),
+    'slides_to_show_lg'             => (float)$widget->get_setting('col_lg', 3),
+    'slides_to_show_md'             => (float)$widget->get_setting('col_md', 2),
+    'slides_to_show_sm'             => (float)$widget->get_setting('col_sm', 2),
+    'slides_to_show_xs'             => (float)$widget->get_setting('col_xs', 1),
+    'slides_to_scroll'              => (int)$widget->get_setting('slides_to_scroll', 1),
     'slides_gutter'                 => 0,
     'arrow'                         => $arrows,
     'dots'                          => $dots,
     'dots_style'                    => 'bullets',
-    'autoplay'                      => $widget->get_setting('autoplay', 'false'),
-    'pause_on_hover'                => $widget->get_setting('pause_on_hover', 'true'),
-    'pause_on_interaction'          => 'true',
-    'delay'                         => $widget->get_setting('autoplay_speed', '5000'),
-    'loop'                          => $widget->get_setting('infinite','false'),
-    'speed'                         => $widget->get_setting('speed', '500')
+    'autoplay'                      => (bool)$widget->get_setting('autoplay', false),
+    'pause_on_hover'                => (bool)$widget->get_setting('pause_on_hover', false),
+    'pause_on_interaction'          => true,
+    'delay'                         => (int)$widget->get_setting('autoplay_speed', 5000),
+    'loop'                          => (bool)$widget->get_setting('infinite', false),
+    'speed'                         => (int)$widget->get_setting('speed', 500)
 ];
 
 
@@ -43,11 +43,11 @@ $widget->add_render_attribute( 'carousel', [
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
                 <div class="pxl-swiper-wrapper swiper-wrapper">
                     <?php foreach ($history_items as $key => $value):
-                        $title             = isset($value['title']) ? $value['title'] : '';
-                        $description             = isset($value['description']) ? $value['description'] : '';
-                        $year             = isset($value['year']) ? $value['year'] : '';
-                        $history_img       = isset($value['history_img']) ? $value['history_img'] : [];
-                        $image_link       = isset($value['image_link']) ? $value['image_link'] : [];
+                        $title = isset($value['title']) ? $value['title'] : '';
+                        $description = isset($value['description']) ? $value['description'] : '';
+                        $year = isset($value['year']) ? $value['year'] : '';
+                        $history_img = isset($value['history_img']) ? $value['history_img'] : [];
+                        $image_link = isset($value['image_link']) ? $value['image_link'] : [];
                         $thumbnail1 = '';
                         if(!empty($history_img['id'])) {
                             $img = pxl_get_image_by_size( array(
@@ -76,7 +76,6 @@ $widget->add_render_attribute( 'carousel', [
                                     $_custom_attributes = explode(':', $atts_value);
                                     $widget->add_render_attribute( $link_key, $_custom_attributes[0], $_custom_attributes[1] );
                                 }
-
                             }
                         }
                         $link_attributes = $widget->get_render_attribute_string( $link_key );
