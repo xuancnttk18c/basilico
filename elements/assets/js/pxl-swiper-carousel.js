@@ -163,10 +163,13 @@
                         $this.find('.swiper-slide .pxl-init-invisible').each(function(){
                             $(this).addClass('pxl-animated');
                         });
-                        
+                        setSlideHeight(this);
                     },
                     slideChangeTransitionStart : function (swiper){
                         var activeIndex = this.activeIndex;
+                    },
+                    slideChangeTransitionEnd : function(){
+                        setSlideHeight(this);
                     },
                     slideChange: function (swiper) {
 
@@ -253,6 +256,15 @@
                         swiper.autoplay.start();
                     }
                 });
+            }
+
+            function setSlideHeight(that){
+                $('.swiper-slide').css({height:'auto'});
+                var currentSlide = that.activeIndex;
+                var newHeight = $(that.slides[currentSlide]).height();
+
+                $('.swiper-wrapper, .swiper-slide').css({ height : newHeight })
+                that.update();
             }
 
             $this.find(".swiper-filter-wrap .filter-item").on("click", function(){
