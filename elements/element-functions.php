@@ -183,7 +183,7 @@ function basilico_get_grid_layout_options($posttype_name){
             ],
             'pxl-portfolio-7' => [
                 'label' => esc_html__('Layout 7', 'basilico'),
-                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-6.jpg'
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-7.jpg'
             ],
         ];
         break;
@@ -396,11 +396,11 @@ function basilico_get_carousel_layout_options($posttype_name){
             ],
             'post-3' => [
                 'label' => esc_html__('Layout 3', 'basilico'),
-                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-2.jpg'
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-3.jpg'
             ],
             'post-4' => [
                 'label' => esc_html__('Layout 4', 'basilico'),
-                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-2.jpg'
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-4.jpg'
             ],
         ];
         break;
@@ -440,11 +440,11 @@ function basilico_get_carousel_layout_options($posttype_name){
             ],
             'pxl-portfolio-9' => [
                 'label' => esc_html__('Layout 9', 'basilico'),
-                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-7.jpg'
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-9.jpg'
             ],
             'pxl-portfolio-10' => [
                 'label' => esc_html__('Layout 10', 'basilico'),
-                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-7.jpg'
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-10.jpg'
             ],
         ];
         break;

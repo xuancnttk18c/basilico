@@ -2859,25 +2859,6 @@
             }
         }
         .pxl-swiper-arrows.nav-vertical-out {
-            .pxl-swiper-arrow {
-                opacity: 1;
-                top: 50%;
-            }
-            .pxl-swiper-arrow {
-                @include d-flex();
-                align-items: center;
-                justify-content: center;
-                @include border-radius(50%);
-                background-color: $primary_color;
-                color: #fff;
-                width: 57px;
-                height: 57px;
-                font-size: 22px;
-                @include transform(translateY(-50%));
-                &.swiper-button-disabled {
-                    opacity: 0.6;
-                }
-            }
             .pxl-swiper-arrow-prev {
                 left: -153px;
             }
