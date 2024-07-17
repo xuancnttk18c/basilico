@@ -40,23 +40,23 @@ pxl_add_custom_widget(
                                 ],
                                 '5' => [
                                     'label' => esc_html__( 'Layout 5', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-5.jpg'
                                 ],
                                 '6' => [
                                     'label' => esc_html__( 'Layout 6', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-6.jpg'
                                 ],
                                 '7' => [
                                     'label' => esc_html__( 'Layout 7', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-7.jpg'
                                 ],
                                 '8' => [
                                     'label' => esc_html__( 'Layout 8', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-8.jpg'
                                 ],
                                 '9' => [
                                     'label' => esc_html__( 'Layout 9', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-9.jpg'
                                 ],
                             ],
                             'prefix_class' => 'pxl-tabs-layout-',
