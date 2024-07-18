@@ -1101,6 +1101,8 @@
             }
         }
         .item-title {
+            color: $primary_color;
+            font-family: $body_font_family;
             font-size: 20px;
             text-transform: none;
             font-weight: 700;
