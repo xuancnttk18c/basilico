@@ -3203,7 +3203,9 @@
         }
         .box-title {
             font-size: 25px;
+            font-weight: 400;
             margin-bottom: 18px;
+            text-transform: capitalize;
         }
         .box-description {
             color: $body_color;
