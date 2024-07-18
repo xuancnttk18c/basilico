@@ -59,8 +59,12 @@ pxl_add_custom_widget(
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-9.jpg'
                                 ],
                                 '10' => [
-                                    'label' => esc_html__( 'Layout 9', 'basilico' ),
+                                    'label' => esc_html__( 'Layout 10', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-10.jpg'
+                                ],
+                                '11' => [
+                                    'label' => esc_html__( 'Layout 10', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-11.jpg'
                                 ],
                             ],
                             'prefix_class' => 'pxl-testimonial-carousel-layout-',
