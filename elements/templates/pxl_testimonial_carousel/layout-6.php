@@ -121,8 +121,6 @@ $widget->add_render_attribute( 'carousel', [
                         echo '<span class="pxl-icon pxli-arrow-left"></span>';
                     ?>
                 </div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxli-arrow-left"></span></div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxli-arrow-right"></span></div>
             </div>
         <?php endif; ?>
         <?php if($dots !== 'false'): ?>

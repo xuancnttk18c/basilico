@@ -1862,6 +1862,35 @@ table.shop_attributes{
 	}
 }
 
+.pxl-shop-layout-3 .products.related,
+.pxl-shop-layout-3 .products.upsells,
+.pxl-shop-layout-3 .cross-sells {
+	.related_subtitle {
+		font-size: 17px;
+		font-weight: 600;
+		line-height: 26px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: $primary_color;
+		text-align: center;
+		margin-bottom: 13px;
+		span {
+			&:before,
+			&:after {
+				content: none;
+			}
+		}
+	}
+	.related_title {
+		margin: 0;
+		font-weight: 400;
+		font-size: 50px;
+		line-height: 55px;
+		letter-spacing: 0.03em;
+		text-align: center;
+	}
+}
+
 .pxl-shop-layout-5 .products.related,
 .pxl-shop-layout-5 .products.upsells,
 .pxl-shop-layout-5 .cross-sells {
