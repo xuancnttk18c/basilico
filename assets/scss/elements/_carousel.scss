@@ -1115,12 +1115,13 @@
             font-size: 15px;
             font-weight: 600;
             color: $heading_color;
+            text-transform: uppercase;
         }
         .pxl-swiper-thumbs {
             width: auto;
         }
         .pxl-thumbs-wrapper {
-            margin-top: 8px;
+            margin-top: 35px;
             .thumb-item {
                 cursor: pointer;
                 width: auto !important;
