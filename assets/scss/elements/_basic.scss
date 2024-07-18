@@ -3174,6 +3174,41 @@
             }
         }
     }
+    &.layout-8 {
+        .box-inner {
+            position: relative;
+        }
+        .box-icon {
+            width: 126px;
+            height: 126px;
+            @include d-inline-flex();
+            align-items: center;
+            justify-content: center;
+            border: 5px solid $secondary_color;
+            border-radius: 50%;
+            background-color: $heading_color;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 300ms ease-out 0s;
+            i {
+                font-size: 64px;
+                color: #fff;
+            }
+            svg {
+                width: 64px;
+                height: auto;
+                fill: #fff;
+            }
+        }
+        .box-title {
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+        .box-description {
+            color: $body_color;
+        }
+    }
 }
 
 .elementor-widget-pxl_fancy_box + .elementor-widget-pxl_fancy_box {
