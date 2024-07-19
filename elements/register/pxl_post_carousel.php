@@ -226,7 +226,6 @@ pxl_add_custom_widget(
                                 'type'         => 'number',
                                 'control_type' => 'responsive',
                                 'default'      => 30,
-                                'condition' => ['layout!' => 'pxl-portfolio-11'],
                             ),
                             array(
                                 'name' => 'center_slide',
@@ -255,7 +254,6 @@ pxl_add_custom_widget(
                     'controls' => array_merge(
                         basilico_arrow_settings(),
                     ),
-                    'condition' => ['layout!' => 'pxl-portfolio-11'],
                 ),
                 array(
                     'name' => 'display_section',
