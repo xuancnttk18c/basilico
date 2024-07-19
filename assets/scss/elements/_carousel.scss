@@ -3995,7 +3995,7 @@
             font-size: 15px;
             line-height: 26px;
             color: #fff;
-            text-transform: capitalize;
+            text-transform: uppercase;
             a {
                 color: inherit;
                 &:hover {
@@ -4020,6 +4020,7 @@
             }
         }
         .box-title {
+            padding: 48px 0;
             width: 100%;
             text-align: center;
             background-color: $heading_color;
