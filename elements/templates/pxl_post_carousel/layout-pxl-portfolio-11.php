@@ -157,7 +157,7 @@ if ( !empty( $item_animation) ) {
                             </div>
                             <div class="item-content <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
                                 <div class="content-inner">
-                                    <i class="item-icon pxli pxli-coffee-bean"></i>
+                                    <i class="item-icon pxli pxli-pizza-slice"></i>
                                     <h4 class="item-title">
                                         <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
                                     </h4>
@@ -182,9 +182,8 @@ if ( !empty( $item_animation) ) {
                                     <?php endif; ?>
                                     <?php if ($show_button == 'true') : ?>
                                         <div class="item-readmore">
-                                            <a class="btn-more style-4" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                            <a class="btn btn-additional-7" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
                                                 <span><?php echo esc_attr($button_text); ?></span>
-                                                <i class="zmdi zmdi-arrow-right"></i>
                                             </a>
                                         </div>
                                     <?php endif; ?>

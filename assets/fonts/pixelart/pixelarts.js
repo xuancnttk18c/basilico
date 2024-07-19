@@ -231,6 +231,7 @@
 		"save-money",
 		"coffee-bean",
 		"telegram-plane",
-		"calendar3"
+		"calendar3",
+		"pizza-slice"
     ]
 }
