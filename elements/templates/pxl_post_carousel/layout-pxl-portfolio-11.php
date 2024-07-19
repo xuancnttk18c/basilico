@@ -113,8 +113,8 @@ if ( !empty( $item_animation) ) {
         </div>
     <?php endif; ?>
     <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
+        <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><?php echo esc_html('Previous', 'basilico'); ?></div>
         <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-            <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><?php echo esc_html('Previous', 'basilico'); ?></div>
             <div class="pxl-swiper-wrapper swiper-wrapper">
                 <?php
                 $i = 0;
@@ -196,8 +196,8 @@ if ( !empty( $item_animation) ) {
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><?php echo esc_html('Next', 'basilico'); ?></div>
         </div>
+        <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><?php echo esc_html('Next', 'basilico'); ?></div>
         <?php if($dots !== 'false'): ?>
             <div class="pxl-swiper-dots"></div>
         <?php endif; ?>

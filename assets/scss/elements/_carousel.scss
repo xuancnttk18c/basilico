@@ -3962,6 +3962,107 @@
             }
         }
     }
+    &.layout-pxl-portfolio-11 {
+        .pxl-swiper-container {
+            width: calc(100% - 200px);
+        }
+        .pxl-swiper-dots {
+            margin-top: 112px;
+        }
+        .item-icon {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #fff;
+        }
+        .item-title {
+            font-size: 24px;
+            line-height: 1.3;
+            letter-spacing: 0.08em;
+            color: $primary_color;
+            margin-bottom: 0;
+        }
+        .item-tags {
+            margin-top: 5px;
+            font-size: 15px;
+            line-height: 28px;
+            letter-spacing: 0.02em;
+            color: #fff;
+            a {
+                color: inherit;
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+            @media (max-width: $xs_max) {
+                font-size: 13px;
+            }
+        }
+        .item-excerpt {
+            font-size: 15px;
+            line-height: 25px;
+            color: #dedede;
+            letter-spacing: 0.02em;
+            margin-top: 20px;
+            margin-bottom: 48px;
+        }
+        .item-readmore {
+            .btn-more {
+                color: #fff;
+            }
+        }
+        .box-title {
+            position: absolute;
+            bottom: 41px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+            transition: all 300ms ease-out 0s;
+            .item-title {
+                &:before,
+                &:after {
+                    content: none;
+                }
+            }
+        }
+        .item-inner {
+            position: relative;
+            @include border-radius(10px);
+            overflow: hidden;
+            .item-featured {
+                position: relative;
+            }
+            .item-content {
+                padding: 20px 80px;
+                @include d-flex();
+                align-items: center;
+                position: absolute;
+                overflow: hidden;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                transition: all 400ms ease-out 0s;
+                opacity: 0;
+                visibility: hidden;
+                background-color: rgba(18, 15, 13, 0.55);
+                backdrop-filter: blur(2px);
+                .content-inner {
+                    text-align: center;
+                }
+            }
+            &:hover {
+                .item-content {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .box-title {
+                    opacity: 0;
+                }
+            }
+        }
+    }
 }
 
 //* Pxl Service Carousel
