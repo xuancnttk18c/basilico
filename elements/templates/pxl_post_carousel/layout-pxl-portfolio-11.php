@@ -165,7 +165,7 @@ if ( !empty( $item_animation) ) {
                                     </h4>
                                     <?php if ($show_category == 'true') : ?>
                                         <div class="item-tags">
-                                            <?php the_terms($post->ID, 'pxl-portfolio-tag', '', '&nbsp/&nbsp', ''); ?>
+                                            <?php the_terms($post->ID, 'pxl-portfolio-tag', '', '&nbsp-&nbsp', ''); ?>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($show_excerpt == 'true') : ?>

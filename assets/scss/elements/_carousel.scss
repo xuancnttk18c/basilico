@@ -3982,17 +3982,18 @@
             color: #fff;
         }
         .item-title {
-            font-size: 24px;
-            line-height: 1.3;
-            letter-spacing: 0.08em;
-            color: $primary_color;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: 0.03em;
+            color: $secondary_color;
             margin-bottom: 0;
+            text-transform: capitalize;
         }
         .item-tags {
             margin-top: 5px;
             font-size: 15px;
-            line-height: 28px;
-            letter-spacing: 0.02em;
+            line-height: 26px;
             color: #fff;
             a {
                 color: inherit;
@@ -4021,6 +4022,8 @@
             width: 100%;
             text-align: center;
             z-index: 1;
+            background-image: url('https://demo.7iquid.tech/basilico/pizza/wp-content/themes/basilico/assets/images/dirt_explosion_overlay.png');
+            background-repeat: no-repeat;
         }
         .item-inner {
             position: relative;
