@@ -16,7 +16,7 @@ $orderby = $widget->get_setting('orderby', 'date');
 $order = $widget->get_setting('order', 'desc');
 $limit = $widget->get_setting('limit', -1);
 $num_words = $widget->get_setting('num_words', 30);
-$settings['layout']    = $settings['layout_'.$settings['post_type']];
+$settings['layout'] = $settings['layout_'.$settings['post_type']];
 
 $tab_style = basilico()->get_theme_opt('tab_style', 'style-df');
 
@@ -114,6 +114,7 @@ if ( !empty( $item_animation) ) {
     <?php endif; ?>
     <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
         <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+            <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><?php echo esc_html('Previous', 'basilico'); ?></div>
             <div class="pxl-swiper-wrapper swiper-wrapper">
                 <?php
                 $i = 0;
@@ -195,13 +196,8 @@ if ( !empty( $item_animation) ) {
                     </div>
                 <?php endforeach; ?>
             </div>
+            <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><?php echo esc_html('Previous', 'basilico'); ?></div>
         </div>
-        <?php if($arrows !== 'false'): ?>
-            <div class="pxl-swiper-arrows style-default nav-horizontal">
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="zmdi zmdi-arrow-left"></span></div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="zmdi zmdi-arrow-right"></span></div>
-            </div>
-        <?php endif; ?>
         <?php if($dots !== 'false'): ?>
             <div class="pxl-swiper-dots"></div>
         <?php endif; ?>
