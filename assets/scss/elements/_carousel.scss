@@ -3968,7 +3968,7 @@
         }
         .swiper-slide {
             padding: 25px;
-            border: 1px solid $primary_color;
+            border: 1px solid $divider_color;
             &:not(:first-child) {
                 border-left: none;
             }
@@ -4047,6 +4047,18 @@
                 .content-inner {
                     text-align: center;
                 }
+            }
+        }
+        .pxl-swiper-arrow {
+            width: 100%;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            border: 1px solid $divider_color;
+            &.pxl-swiper-arrow-prev {
+                margin-right: -1px;
+            }
+            &.pxl-swiper-arrow-next {
+                margin-left: -1px;
             }
         }
     }
