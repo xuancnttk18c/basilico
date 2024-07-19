@@ -778,15 +778,15 @@
 			.quantity-button {
 				cursor: pointer;
 				background-color: $primary_color;
-				width: 34px;
-				height: 34px;
+				width: 28px;
+				height: 28px;
 				@include border-radius(50%);
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
 				&:before {
-					font-family: 'Rowdies';
-					font-size: 23px;
+					font-family: 'Cerebri Sans';
+					font-size: 17px;
 					font-weight: 400;
 					line-height: 1;
 					color: #fff;
@@ -812,6 +812,11 @@
 		}
 		.stock-wishlist {
 			margin-left: 13px;
+		}
+	}
+	.pxl-atc-btn .btn {
+		span:after {
+			display: none;
 		}
 	}
 	.post-shares {
