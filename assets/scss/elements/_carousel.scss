@@ -4054,6 +4054,9 @@
             writing-mode: vertical-rl;
             text-orientation: mixed;
             border: 1px solid $divider_color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             &.pxl-swiper-arrow-prev {
                 margin-right: -1px;
             }

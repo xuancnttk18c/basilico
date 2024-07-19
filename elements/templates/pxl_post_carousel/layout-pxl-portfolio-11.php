@@ -57,7 +57,7 @@ $opts = [
 
 
 $widget->add_render_attribute( 'carousel', [
-    'class'         => 'pxl-swiper-container',
+    'class'         => 'pxl-swiper-container overflow-hidden',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
