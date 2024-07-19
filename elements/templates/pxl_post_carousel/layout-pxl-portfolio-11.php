@@ -112,7 +112,7 @@ if ( !empty( $item_animation) ) {
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
-    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
+    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative d-flex">
         <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><?php echo esc_html('Previous', 'basilico'); ?></div>
         <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
             <div class="pxl-swiper-wrapper swiper-wrapper">
