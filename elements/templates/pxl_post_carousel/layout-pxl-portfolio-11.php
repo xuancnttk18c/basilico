@@ -157,7 +157,6 @@ if ( !empty( $item_animation) ) {
                             </div>
                             <div class="item-content <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
                                 <div class="content-inner">
-                                    <i class="item-icon pxli pxli-pizza-slice"></i>
                                     <h4 class="item-title">
                                         <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
                                     </h4>
@@ -166,6 +165,7 @@ if ( !empty( $item_animation) ) {
                                             <?php the_terms($post->ID, 'pxl-portfolio-tag', '', '&nbsp-&nbsp', ''); ?>
                                         </div>
                                     <?php endif; ?>
+                                    <i class="item-icon pxli pxli-pizza-slice"></i> 
                                     <?php if ($show_excerpt == 'true') : ?>
                                         <div class="item-excerpt">
                                             <?php

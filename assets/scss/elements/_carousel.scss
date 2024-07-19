@@ -4014,9 +4014,10 @@
             margin-top: 20px;
             margin-bottom: 48px;
         }
-        .item-readmore {
-            .btn-more {
-                color: #fff;
+        .item-readmore .btn{
+            border-color: #fff;
+            &:before {
+                background-color: #fff;
             }
         }
         .box-title {
@@ -4027,7 +4028,6 @@
             background-image: url(../images/dirt_explosion_overlay.png);
             background-repeat: no-repeat;
             background-position: center center;
-
         }
         .item-inner {
             position: relative;
@@ -4035,6 +4035,9 @@
             border: 1px solid $divider_color;
             .item-featured {
                 position: relative;
+            }
+            .item-icon {
+                color: $primary_color;
             }
             .item-content {
                 padding: 20px 55px;
