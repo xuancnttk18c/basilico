@@ -62,7 +62,7 @@ $widget->add_render_attribute( 'carousel', [
     'data-settings' => wp_json_encode($opts)
 ]);
 
-$img_size = !empty( $img_size ) ? $img_size : '800x820';
+$img_size = !empty( $img_size ) ? $img_size : '800x680';
 $button_text = !empty($button_text) ? $button_text : esc_html__('READ MORE', 'basilico');
 
 if ( ! empty( $settings['loadmore_link']['url'] ) ) {
