@@ -4025,6 +4025,7 @@
         .item-inner {
             position: relative;
             overflow: hidden;
+            border: 1px solid $divider_color;
             .item-featured {
                 position: relative;
             }
@@ -4050,6 +4051,7 @@
             }
         }
         .pxl-swiper-arrow {
+            cursor: pointer;
             width: 100px;
             writing-mode: vertical-rl;
             text-orientation: mixed;
