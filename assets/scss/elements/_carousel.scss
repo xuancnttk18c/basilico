@@ -4052,7 +4052,7 @@
         }
         .pxl-swiper-arrow {
             cursor: pointer;
-            width: 100px;
+            width: 101px;
             writing-mode: vertical-rl;
             text-orientation: mixed;
             border: 1px solid $divider_color;
@@ -4069,7 +4069,6 @@
             }
             &.pxl-swiper-arrow-next {
                 margin-left: -1px;
-                border-left: none;
             }
             &:hover {
                 background-color: $secondary_color;
