@@ -145,6 +145,18 @@ if ( !empty( $item_animation) ) {
                                     <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
                                 </div>
                             <?php endif; ?>
+                            <div class="box-title">
+                                <div class="title-wrap">
+                                    <h4 class="item-title">
+                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                                    </h4>
+                                    <?php if ($show_category == 'true') : ?>
+                                        <div class="item-tags">
+                                            <?php the_terms($post->ID, 'pxl-portfolio-tag', '', '&nbsp/&nbsp', ''); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
                             <div class="item-content <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
                                 <div class="content-inner">
                                     <i class="item-icon pxli pxli-coffee-bean"></i>
@@ -176,18 +188,6 @@ if ( !empty( $item_animation) ) {
                                                 <span><?php echo esc_attr($button_text); ?></span>
                                                 <i class="zmdi zmdi-arrow-right"></i>
                                             </a>
-                                        </div>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                            <div class="box-title">
-                                <div class="title-wrap">
-                                    <h4 class="item-title">
-                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
-                                    </h4>
-                                    <?php if ($show_category == 'true') : ?>
-                                        <div class="item-tags">
-                                            <?php the_terms($post->ID, 'pxl-portfolio-tag', '', '&nbsp/&nbsp', ''); ?>
                                         </div>
                                     <?php endif; ?>
                                 </div>

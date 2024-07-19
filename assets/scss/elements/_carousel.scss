@@ -3966,6 +3966,9 @@
         .pxl-swiper-container {
             width: calc(100% - 200px);
         }
+        .swiper-slide {
+            padding: 25px;
+        }
         .pxl-swiper-dots {
             margin-top: 112px;
         }
@@ -4011,23 +4014,13 @@
             }
         }
         .box-title {
-            position: absolute;
-            bottom: 41px;
-            left: 0;
             width: 100%;
             text-align: center;
             z-index: 1;
-            transition: all 300ms ease-out 0s;
-            .item-title {
-                &:before,
-                &:after {
-                    content: none;
-                }
-            }
         }
         .item-inner {
+            border: 1px solid $divider_color;
             position: relative;
-            @include border-radius(10px);
             overflow: hidden;
             .item-featured {
                 position: relative;
