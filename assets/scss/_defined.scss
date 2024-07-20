@@ -1091,6 +1091,15 @@
 	}
 }
 
+@keyframes text-horizontal-scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-2520px);
+	}
+}
+
 .shape-animate1 {
 	animation: animationFramesTwo 12s infinite linear alternate;
 }
@@ -1127,6 +1136,9 @@
 	transform-origin: bottom;
 	animation-name: up-down-move;
 	animation-timing-function: linear;
+}
+.text-horizontal-scroll {
+	animation: text-horizontal-scroll 20s linear infinite;
 }
 
 @keyframes iconHoverSpin {
