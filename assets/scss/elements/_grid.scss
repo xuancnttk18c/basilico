@@ -1818,8 +1818,9 @@
                         @include transition();
                     }
                     &:hover {
+                        background-color: #fff;
                         i {
-                            animation: none;
+                            color: $primary_color;
                         }
                         &:before {
                             top: 0;
