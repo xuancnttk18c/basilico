@@ -922,18 +922,6 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
             'prefix_class' => 'pxl-parallax-'
         ]
     );
-
-    $element->add_control(
-        'pxl_widget_show_on_column_hover',
-        [
-            'label' => esc_html__('Show On Column Hover', 'basilico' ),
-            'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => esc_html__( 'Yes', 'basilico' ),
-            'label_off' => esc_html__( 'No', 'basilico' ),
-            'return_value' => 'yes',
-            'default' => 'no'
-        ]
-    );
     
     $element->add_responsive_control(
         'pxl_widget_align',
@@ -958,6 +946,19 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
             'selectors' => [
                 '{{WRAPPER}} .elementor-widget-container' => 'display:flex; flex-wrap:wrap; justify-content: {{VALUE}};'
             ],
+        ]
+    );
+
+    $element->add_control(
+        'pxl_widget_show_on_column_hover',
+        [
+            'label' => esc_html__('Show On Column Hover', 'basilico' ),
+            'type' => \Elementor\Controls_Manager::SWITCHER,
+            'label_on' => esc_html__( 'Yes', 'basilico' ),
+            'label_off' => esc_html__( 'No', 'basilico' ),
+            'return_value' => 'yes',
+            'default' => 'no',
+            'separator' => 'before',
         ]
     );
     $element->end_controls_section();
