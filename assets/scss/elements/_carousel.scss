@@ -3074,6 +3074,7 @@
     }
     &.layout-post-5 {
         .pxl-swiper-container {
+            border-left: 1px solid $divider_color;
             .pxl-swiper-slide {
                 border: 1px solid $divider_color;
                 + .pxl-swiper-slide {
