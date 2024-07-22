@@ -3107,19 +3107,23 @@
                     }
                 }
             }
+            .item-content {
+                padding-right: 10px;
+            }
             .item-title {
                 @include text-truncate-multi-line(25px, 1.28, 2);
                 font-weight: 400;
                 text-transform: none;
-                letter-spacing: 0.05em;
-                margin-top: 23px;
+                letter-spacing: 0.03em;
+                margin-top: 27px;
                 margin-bottom: 0;
             }
             .item-excerpt {
+                margin-top: 20px;
                 @include text-truncate-multi-line(15px, 1.733333333333333, 3);
             }
             .item-readmore {
-                margin-top: 33px;
+                
             }
         }
         .pxl-swiper-arrows.nav-vertical-out {
