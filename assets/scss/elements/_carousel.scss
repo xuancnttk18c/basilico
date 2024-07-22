@@ -3088,18 +3088,17 @@
             }
             .post-metas {
                 margin-bottom: 0;
-                padding: 10px;
+                padding: 14px 24px;
                 border-top: 1px solid $divider_color;
                 background-color: $secondary_color;
+                color: $heading_color;
                 i {
                     font-size: 15px;
                     margin-right: 6px;
+                    color: $heading_color;
                 }
                 .meta-inner {
-                    padding-left: 6px;
-                    padding-right: 6px;
-                    justify-content: center;
-                    column-gap: 22px;
+                    column-gap: 34px;
                     .post-tags {
                         a + a {
                             margin-left: 5px;
