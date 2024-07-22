@@ -3,6 +3,11 @@
      * @param $scope The Widget wrapper element as a jQuery element
      * @param $ The jQuery alias
      */
+    function pxl_widget_show_on_column_hover() {
+        if ($('.elementor-column').has('.pxl-show-on-column-hover')) {
+            console.log(this);
+        }
+    }
     function pxl_section_start_render(){
         var _elementor = typeof elementor != 'undefined' ? elementor : elementorFrontend;
         _elementor.hooks.addFilter( 'pxl_section_start_render', function( html, settings, el ) {
