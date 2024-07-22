@@ -3073,6 +3073,12 @@
         }
     }
     &.layout-post-5 {
+        .pxl-swiper-wrapper {
+            border-left: 1px solid $divider_color;
+            border-right: 1px solid $divider_color;
+            margin-left: -1px;
+            margin-right: -1px;
+        }
         .pxl-swiper-slide {
             padding: 25px;
             border: 1px solid $divider_color;
