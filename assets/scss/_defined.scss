@@ -1339,9 +1339,13 @@
 	}
 }
 
-.elementor-show-on-column-hover {
-	.elementor-widget-container {
-		opacity: 0;
-		@include transition();
+.pxl-show-on-column-hover {
+	opacity: 0;
+	@include transition();
+}
+
+.pxl-column-hover-show-widget:hover {
+	.pxl-show-on-column-hover {
+		opacity: 1;
 	}
 }

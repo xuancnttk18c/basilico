@@ -4,9 +4,9 @@
      * @param $ The jQuery alias
      */
     function pxl_widget_show_on_column_hover() {
-        if ($('.elementor-column elementor-widget-wrap').each(function(){
+        $('.elementor-column .elementor-widget-wrap').each(function(){
             if ($(this).find('> .pxl-show-on-column-hover').length > 0) {
-                console.log($(this));
+                $(this).addClass('pxl-column-hover-show-widget');
             }
         });
     }
