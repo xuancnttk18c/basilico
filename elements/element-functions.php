@@ -403,7 +403,7 @@ function basilico_get_carousel_layout_options($posttype_name){
                 'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-4.jpg'
             ],
             'post-5' => [
-                'label' => esc_html__('Layout 4', 'basilico'),
+                'label' => esc_html__('Layout 5', 'basilico'),
                 'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-5.jpg'
             ],
         ];

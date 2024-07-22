@@ -41,7 +41,7 @@ $opts = [
     'slides_to_show_sm'             => (float)$widget->get_setting('col_sm', 1),
     'slides_to_show_xs'             => (float)$widget->get_setting('col_xs', 1),
     'slides_to_scroll'              => (float)$widget->get_setting('slides_to_scroll', 1),
-    'slides_gutter'                 => 30,
+    'slides_gutter'                 => 0,
     'center_slide'                  => (bool)$widget->get_setting('center_slide', false),
     'arrow'                         => $arrows,
     'dots'                          => $dots,
@@ -130,7 +130,7 @@ $arrows_on_hover_cls = $arrows_on_hover == 'true' ? 'arrow-on-hover' : '';
                                         </a>
                                     </div>
                                     <?php if ($show_category == 'true' || $show_date == 'true') : ?>
-                                        <div class="post-metas hover-underline">
+                                        <div class="post-metas">
                                             <div class="meta-inner d-flex">
                                                 <?php
                                                 if ($show_date == 'true') : ?>
