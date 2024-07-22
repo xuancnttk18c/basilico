@@ -3100,8 +3100,11 @@
                 .meta-inner {
                     column-gap: 34px;
                     .post-tags {
-                        a + a {
-                            margin-left: 5px;
+                        a {
+                            color: $heading_color;
+                            + a {
+                                margin-left: 5px;
+                            }
                         }
                     }
                 }
