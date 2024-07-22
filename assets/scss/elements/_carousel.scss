@@ -3105,6 +3105,9 @@
                             + a {
                                 margin-left: 5px;
                             }
+                            &:hover {
+                                color: $primary_color;
+                            }
                         }
                     }
                 }
