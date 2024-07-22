@@ -176,15 +176,15 @@ $arrows_on_hover_cls = $arrows_on_hover == 'true' ? 'arrow-on-hover' : '';
                                         ?>
                                     </div>
                                 <?php endif; ?>
-                                <?php if ($show_button == 'true') : ?>
-                                    <div class="item-readmore pxl-button-wrapper">
-                                        <a class="btn btn-additional-7" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                            <span><?php echo pxl_print_html($button_text); ?></span>
-                                            <i class="pxl-button-icon zmdi zmdi-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                <?php endif; ?>
                             </div>
+                            <?php if ($show_button == 'true') : ?>
+                                <div class="item-readmore pxl-button-wrapper">
+                                    <a class="btn btn-additional-7" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                        <span><?php echo pxl_print_html($button_text); ?></span>
+                                        <i class="pxl-button-icon zmdi zmdi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endforeach; ?>
