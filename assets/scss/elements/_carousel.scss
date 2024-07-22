@@ -3073,11 +3073,11 @@
         }
     }
     &.layout-post-5 {
-        .pxl-swiper-container {
-            border: 1px solid $divider_color;
-            .pxl-swiper-slide {
-                padding: 25px;
-                border-right: 1px solid $divider_color;
+        .pxl-swiper-slide {
+            padding: 25px;
+            border-right: 1px solid $divider_color;
+            &:last-child {
+                border-left: none;
             }
         }
         .item-inner {
