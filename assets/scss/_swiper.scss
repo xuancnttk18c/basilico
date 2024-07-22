@@ -141,6 +141,25 @@ $slider-outer-space: 0;
             }
         }
     }
+    &.style-3 {
+        .pxl-swiper-arrow {
+            width: 87px;
+            height: 199px;
+            @include d-flex();
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $divider_color;
+            .pxl-icon {
+                font-size: 25px;
+                @include transition();
+            }
+            svg {
+                width: 25px;
+                height: auto;
+                @include transition();
+            }
+        }
+    }
 }
 
 .pxl-swiper-arrow{
