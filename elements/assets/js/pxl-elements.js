@@ -4,9 +4,11 @@
      * @param $ The jQuery alias
      */
     function pxl_widget_show_on_column_hover() {
-        if ($('.elementor-column').find('.pxl-show-on-column-hover').length > 0) {
-            console.log($('.elementor-column'));
-        }
+        if ($('.elementor-column elementor-widget-wrap').each(function(){
+            if ($(this).find('> .pxl-show-on-column-hover').length > 0) {
+                console.log($(this));
+            }
+        });
     }
     function pxl_section_start_render(){
         var _elementor = typeof elementor != 'undefined' ? elementor : elementorFrontend;
