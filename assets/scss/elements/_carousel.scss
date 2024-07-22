@@ -3122,8 +3122,8 @@
             }
             .item-readmore {
                 position: absolute;
-                left: 0;
-                bottom: 0;
+                left: -1px;
+                bottom: -1px;
                 .btn:before {
                     content: none;
                 }
