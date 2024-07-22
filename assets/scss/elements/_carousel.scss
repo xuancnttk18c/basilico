@@ -3075,6 +3075,8 @@
     &.layout-post-5 {
         .pxl-swiper-slide {
             padding: 25px;
+            border: 1px solid $divider_color;
+            margin-right: -1px;
         }
         .item-inner {
             .item-featured {
