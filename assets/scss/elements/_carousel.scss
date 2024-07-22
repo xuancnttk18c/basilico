@@ -3076,7 +3076,9 @@
         .pxl-swiper-container {
             .pxl-swiper-slide {
                 border: 1px solid $divider_color;
-                border-right: none;
+                + .pxl-swiper-slide {
+                    margin-left: -1px;
+                }
             }
         }
         .item-inner {
