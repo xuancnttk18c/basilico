@@ -3075,11 +3075,13 @@
     &.layout-post-5 {
         .pxl-swiper-container {
             border: 1px solid $divider_color;
+            .pxl-swiper-slide {
+                margin-right: 1px;
+                border-right: 1px solid $divider_color;
+            }
         }
         .item-inner {
-            margin-right: 1px;
             padding: 25px 25px 101px 25px;
-            border-right: 1px solid $divider_color;
             .item-featured {
                 position: relative;
                 border: 1px solid $divider_color;
