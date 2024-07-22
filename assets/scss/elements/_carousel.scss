@@ -3072,6 +3072,64 @@
             }
         }
     }
+    &.layout-post-5 {
+        .pxl-swiper-slide {
+            padding: 25px;
+        }
+        .item-inner {
+            .item-featured {
+                position: relative;
+                border: 1px solid $divider_color;
+            }
+            .post-metas {
+                margin-bottom: 0;
+                padding: 10px;
+                border-top: 1px solid $divider_color;
+                background-color: $secondary_color;
+                i {
+                    font-size: 15px;
+                    margin-right: 6px;
+                }
+                .meta-inner {
+                    padding-left: 6px;
+                    padding-right: 6px;
+                    justify-content: center;
+                    column-gap: 22px;
+                    .post-tags {
+                        a + a {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+            .item-title {
+                @include text-truncate-multi-line(25px, 1.28, 2);
+                font-weight: 400;
+                text-transform: none;
+                text-align: center;
+                letter-spacing: 0.05em;
+                margin-top: 23px;
+                margin-bottom: 0;
+            }
+            .item-excerpt {
+                @include text-truncate-multi-line(15px, 1,733333333333333, 3);
+                overflow: hidden;
+                text-align: center;
+                transition: all 400ms ease-out;
+            }
+            .item-readmore {
+                margin-top: 33px;
+            }
+        }
+        .pxl-swiper-arrows.nav-vertical-out {
+            .pxl-swiper-arrow-prev {
+                left: -153px;
+            }
+            .pxl-swiper-arrow-next {
+                right: -153px;
+            }
+        }
+    }
 }
 
 //* Pxl Portfolio Carousel
