@@ -3075,7 +3075,9 @@
     &.layout-post-5 {
         .pxl-swiper-container {
             border: 1px solid $divider_color;
-            width: calc(100% - 1px);
+            .pxl-swiper-wrapper {
+                margin-right: -1px;
+            }
             .pxl-swiper-slide {
                 border-right: 1px solid $divider_color;
             }
