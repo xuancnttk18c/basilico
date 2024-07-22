@@ -744,7 +744,7 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
     $element->start_controls_section(
         'section_pxl_widget_el',
         [
-            'label' => esc_html__( 'Pxl Parallax', 'basilico' ),
+            'label' => esc_html__( 'PXL Settings', 'basilico' ),
             'tab' => \Elementor\Controls_Manager::TAB_ADVANCED,
         ]
     );
@@ -920,6 +920,18 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
             'label_block' => true,
             'default' => '',
             'prefix_class' => 'pxl-parallax-'
+        ]
+    );
+
+    $element->add_control(
+        'pxl_widget_show_on_column_hover',
+        [
+            'label' => esc_html__('Show On Column Hover', 'basilico' ),
+            'type' => \Elementor\Controls_Manager::SWITCHER,
+            'label_on' => esc_html__( 'Yes', 'basilico' ),
+            'label_off' => esc_html__( 'No', 'basilico' ),
+            'return_value' => 'yes',
+            'default' => 'no'
         ]
     );
     
@@ -1133,6 +1145,11 @@ add_filter('elementor/widget/before_render_content','basilico_custom_widget_el_b
 function basilico_custom_widget_el_before_render($el){
     $settings = $el->get_settings();
     $effects = [];
+
+    if(isset($settings['pxl_widget_show_on_column_hover']) && $settings['pxl_widget_show_on_column_hover'] == 'yes') {
+        $el->add_render_attribute( '_wrapper', 'class', 'pxl-show-on-column-hover' );
+    }
+
     if(!empty($settings['pxl_parallax_pos_x']['size']) || !empty($settings['pxl_parallax_pos_y']['size'])){
         $el->add_render_attribute( '_wrapper', 'class', 'pxl-element-parallax' );
         if(!empty($settings['pxl_parallax_pos_x'])){
