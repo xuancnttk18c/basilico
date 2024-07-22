@@ -3077,6 +3077,9 @@
             border-left: 1px solid $divider_color;
             .pxl-swiper-slide {
                 border: 1px solid $divider_color;
+                &:first-child {
+                    border-left: none;
+                }
                 + .pxl-swiper-slide {
                     border-left: 1px;
                 }
