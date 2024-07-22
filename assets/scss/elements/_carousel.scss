@@ -545,6 +545,7 @@
             cursor: pointer;
             width: 68px;
             height: 68px;
+            flex-shrink: 0;
             background-color: $heading_color;
             border-radius: 50%;
             font-family: Myriad-Pro;
