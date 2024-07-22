@@ -1338,3 +1338,15 @@
 		transform: scale(1);
 	}
 }
+
+.elementor-show-on-column-hover {
+	.elementor-widget-container {
+		opacity: 0;
+		@include transition();
+	}
+	.elementor-column:hover {
+		.elementor-widget-container {
+			opacity: 1;
+		}
+	}
+}
