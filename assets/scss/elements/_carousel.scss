@@ -3076,6 +3076,7 @@
         .pxl-swiper-container {
             border: 1px solid $divider_color;
             .pxl-swiper-slide {
+                margin-right: 1px;
                 padding: 25px;
                 border-right: 1px solid $divider_color;
             }
