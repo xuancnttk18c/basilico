@@ -3074,9 +3074,9 @@
     }
     &.layout-post-5 {
         .pxl-swiper-container {
-            border: 1px solid $divider_color;
             .pxl-swiper-slide {
-                border-right: 1px solid $divider_color;
+                border: 1px solid $divider_color;
+                margin-left: -1px;
             }
         }
         .item-inner {
