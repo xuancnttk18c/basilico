@@ -3075,7 +3075,7 @@
     &.layout-post-5 {
         .pxl-swiper-slide {
             padding: 25px;
-            right: 1px solid $divider_color;
+            border: 1px solid $divider_color;
             &:last-child {
                 border-left: none;
             }
