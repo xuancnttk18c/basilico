@@ -158,6 +158,9 @@ $slider-outer-space: 0;
                 height: auto;
                 @include transition();
             }
+            &:hover {
+                background-color: $secondary_color;
+            }
         }
     }
 }
