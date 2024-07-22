@@ -5,7 +5,7 @@
      */
     function pxl_widget_show_on_column_hover() {
         if ($('.elementor-column').find('.pxl-show-on-column-hover').length > 0) {
-            console.log(this);
+            console.log($('.elementor-column'));
         }
     }
     function pxl_section_start_render(){
