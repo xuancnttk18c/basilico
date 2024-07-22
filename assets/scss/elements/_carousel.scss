@@ -3077,7 +3077,7 @@
             border: 1px solid $divider_color;
             .pxl-swiper-slide {
                 margin-right: 1px;
-                padding: 25px;
+                padding: 25px 25px 101px 25px;
                 border-right: 1px solid $divider_color;
             }
         }
@@ -3124,8 +3124,8 @@
             }
             .item-readmore {
                 position: absolute;
-                left: 0;
-                bottom: 0;
+                left: -27px;
+                bottom: -26px;
                 .btn:before {
                     content: none;
                 }
