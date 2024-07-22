@@ -197,7 +197,7 @@ $arrows_on_hover_cls = $arrows_on_hover == 'true' ? 'arrow-on-hover' : '';
                     if ( $settings['arrow_icon_next']['value'] ) 
                         \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_next'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
                     else
-                        echo '<span class="pxl-icon zmdi zmdi-arrow-right"></span>';
+                        echo '<span class="pxl-icon pxli pxli-angle-right1"></span>';
                     ?>
                 </div>
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-prev">
@@ -205,7 +205,7 @@ $arrows_on_hover_cls = $arrows_on_hover == 'true' ? 'arrow-on-hover' : '';
                     if ( $settings['arrow_icon_previous']['value'] ) 
                         \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
                     else
-                        echo '<span class="pxl-icon zmdi zmdi-arrow-left"></span>';
+                        echo '<span class="pxl-icon pxli pxli-angle-left1"></span>';
                     ?>
                 </div>
             </div>
