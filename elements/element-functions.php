@@ -721,6 +721,7 @@ function basilico_arrow_settings(){
             'options' => [
                 'style-1' => esc_html__('Style 1'),
                 'style-2' => esc_html__('Style 2'),
+                'style-3' => esc_html__('Style 3'),
             ],
             'default' => 'style-1',
             'condition' => [
