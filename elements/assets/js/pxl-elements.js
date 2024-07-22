@@ -427,6 +427,7 @@
             pxl_animation_handler($scope);
         } );
         
+        pxl_widget_show_on_column_hover();
         pxlMouseDirection();
         pxl_parallax_bg();
         pxl_parallax_effect();
