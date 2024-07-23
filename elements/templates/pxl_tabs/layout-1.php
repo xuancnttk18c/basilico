@@ -3,6 +3,7 @@ extract($settings);
 
 if(count($tabs_list) > 0){
 	$tab_bd_ids = [];
+    $tab_animation = $widget->get_setting('tab_animation', 'fadeInUp');
     ?>
     <div class="pxl-tabs layout-1">
         <?php if (!empty($link_to_carousel)) : ?>
