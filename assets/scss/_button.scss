@@ -19,31 +19,33 @@
 
 }
 
-.btn, button, .button, input[type="submit"], input[type="button"], .added_to_cart, .btn {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $button_font_family;
-    font-size: $button_font_size;
-    font-weight: $button_font_weight;
-    letter-spacing: $button_letter_spacing;
-    padding: $button_padding;
-    @include border-radius($button_radius);
-    background-color: $secondary_color;
-    color: #fff;
-    line-height: $input_height;
-    height: $input_height;
-    text-transform: uppercase;
-    white-space: nowrap;
-    outline: none;
-    cursor: pointer;
-    vertical-align: top;
-    text-align: center;
-    text-decoration: none;
-    overflow: hidden;
-    @include box-shadow(none);
-    @include transition(all 250ms linear 0s);
+.btn, button, .button, input[type="submit"], input[type="button"], .added_to_cart, {
+    &:not(.btn-additional-7) {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $button_font_family;
+        font-size: $button_font_size;
+        font-weight: $button_font_weight;
+        letter-spacing: $button_letter_spacing;
+        padding: $button_padding;
+        @include border-radius($button_radius);
+        background-color: $secondary_color;
+        color: #fff;
+        line-height: $input_height;
+        height: $input_height;
+        text-transform: uppercase;
+        white-space: nowrap;
+        outline: none;
+        cursor: pointer;
+        vertical-align: top;
+        text-align: center;
+        text-decoration: none;
+        overflow: hidden;
+        @include box-shadow(none);
+        @include transition(all 250ms linear 0s);
+    }
     &:before {
         z-index: 1;
     }
@@ -443,7 +445,7 @@
         }
     }
     &.btn-additional-7 {
-        padding: 0;
+        padding: 0 42px;
         color: #fff;
         span {
             position: relative;
