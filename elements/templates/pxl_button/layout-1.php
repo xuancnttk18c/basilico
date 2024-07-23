@@ -52,7 +52,7 @@ if(!empty($settings['button_split_text_anm']) ){
         <span class="pxl-button-text"><?php echo esc_html($settings['text']); ?></span>
         <?php 
         if ( $settings['btn_icon'] ) 
-            \Elementor\Icons_Manager::render_icon( $settings['btn_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-button-icon pxl-icon '.$settings['icon_align'] ], 'span' ); 
+            \Elementor\Icons_Manager::render_icon( $settings['btn_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-button-icon pxl-icon '.$settings['icon_align'] ], 'i' ); 
         ?>
     </a>
 </div>
