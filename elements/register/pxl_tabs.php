@@ -344,6 +344,17 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-tabs.layout-6 .title-wrap .tab-title' => 'align-items: {{VALUE}};'
                             ],
                         ),
+                        array(
+                            'name' => 'tab_animation',
+                            'label' => esc_html__('Active Animation', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'option' => [
+                                'fadeInUp' => esc_html__('Fade In Up', 'basilico'),
+                                'fadeIn' => esc_html__('Fade In', 'basilico'),
+                                'zoomIn' => esc_html__('Zoom In', 'basilico')
+                            ],
+                            'default' => 'fadeInUp'
+                        ),
                     ),
                 )
             )
