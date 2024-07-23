@@ -94,7 +94,7 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-primary-menu' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu' => 'justify-content: {{VALUE}};',
                                 '{{WRAPPER}} .pxl-nav-menu.style-3 .menu-item' => 'justify-content: {{VALUE}};'
                             ],
                             'condition' => [
@@ -170,7 +170,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Typography', 'basilico' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu > li > a, {{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu > li > a',
+                            'selector' => '{{WRAPPER}} .pxl-nav-menu .menu-menu-main-container .pxl-primary-menu > li > a, {{WRAPPER}} .pxl-nav-menu .menu-menu-main-container .pxl-mobile-menu > li > a',
                         ),
                         array(
                             'name'  => 'show_arrow',
@@ -199,8 +199,8 @@ pxl_add_custom_widget(
                             'control_type' => 'responsive',
                             'size_units' => [ 'px', 'em', '%', 'rem' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-primary-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-mobile-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .menu-menu-main-container .pxl-primary-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .menu-menu-main-container .pxl-mobile-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ),
                     ),
