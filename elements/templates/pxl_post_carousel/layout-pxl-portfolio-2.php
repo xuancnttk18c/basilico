@@ -135,7 +135,7 @@ if ( !empty( $item_animation) ) {
                                     <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
                                 </div>
                             <?php endif; ?>
-                            <div class="item-content remove cursor d-flex <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
+                            <div class="item-content remove-cursor d-flex <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
                                 <div class="content-inner">
                                     <h4 class="item-title">
                                         <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
