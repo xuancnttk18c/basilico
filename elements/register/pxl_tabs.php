@@ -348,7 +348,7 @@ pxl_add_custom_widget(
                             'name' => 'tab_animation',
                             'label' => esc_html__('Active Animation', 'basilico'),
                             'type' => \Elementor\Controls_Manager::SELECT,
-                            'option' => [
+                            'options' => [
                                 'fadeInUp' => esc_html__('Fade In Up', 'basilico'),
                                 'fadeIn' => esc_html__('Fade In', 'basilico'),
                                 'zoomIn' => esc_html__('Zoom In', 'basilico')
