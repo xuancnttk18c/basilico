@@ -4070,7 +4070,9 @@
             &.active {
                 display: block;
             }
-            &.fadeInUp {
+        }
+        &.fadeInUp {
+            .tab-content {
                 @include animation(pxlFadeInUp 300ms linear 1 forwards);
             }
         }

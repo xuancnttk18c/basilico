@@ -30,7 +30,7 @@ if(count($tabs_list) > 0){
                 <?php endforeach; ?>
             </div>
         </div>
-        <div class="tabs-content">
+        <div class="tabs-content <?php echo esc_attr($tab_animation); ?>">
             <?php foreach ($tabs_list as $key => $tab):
                 $content_key = $widget->get_repeater_setting_key( 'tab_content', 'tabs_list', $key );
                 $tabs_content = '';
@@ -46,9 +46,6 @@ if(count($tabs_list) > 0){
                 $widget->add_render_attribute( $content_key, [
                     'class' => [ 'tab-content' ],
                     'id' => $element_id.'-'.$tab['_id'],
-                ]);
-                $widget->add_render_attribute( $content_key, [
-                    'class' => esc_attr($tab_animation),
                 ]);
                 if($tab['content_type'] == 'df'){
                     $widget->add_inline_editing_attributes( $content_key, 'advanced' );
