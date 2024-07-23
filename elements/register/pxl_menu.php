@@ -201,6 +201,7 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .menu-menu-main-container .pxl-primary-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 '{{WRAPPER}} .menu-menu-main-container .pxl-mobile-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-nav-menu.pxl-nav-menu-main.style-4 .pxl-primary-menu > li:not(:last-child):after' => 'right: calc(({{LEFT}}{{UNIT}} + {{RIGHT}}{{UNIT}}) / 2);',
                             ],
                         ),
                     ),
