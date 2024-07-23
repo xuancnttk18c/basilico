@@ -4071,6 +4071,11 @@
                 display: block;
             }
         }
+        &.fadeIn {
+            .tab-content {
+                @include animation(pxlFadeIn 300ms linear 1 forwards);
+            }
+        }
         &.fadeInUp {
             .tab-content {
                 @include animation(pxlFadeInUp 300ms linear 1 forwards);
@@ -4213,9 +4218,6 @@
         }
         .tabs-content {
             flex-grow: 1;
-            .tab-content {
-                @include animation(pxlFadeIn 300ms linear 1 forwards);
-            }
         }
         .btn-wrapper {
             margin-top: 30px;

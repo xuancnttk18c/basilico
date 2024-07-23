@@ -631,6 +631,18 @@
     }
 }
 
+@-webkit-keyframes pxlZoomIn {
+    from {
+        opacity: 0;
+        @include transform(scale(0.8));
+    }
+
+    to {
+        opacity: 1;
+        @include transform(scale(1));
+    }
+}
+
 @-webkit-keyframes pxlFadeIn {
     from {
         opacity: 0;

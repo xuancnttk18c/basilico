@@ -34,7 +34,7 @@ if(count($tabs_list) > 0){
                 <div class="pxl-tab-arrow pxl-tab-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
             </div>
         </div>
-        <div class="tabs-content">
+        <div class="tabs-content <?php echo esc_attr($tab_animation); ?>">
             <?php foreach ($tabs_list as $key => $tab):
                 $content_key = $widget->get_repeater_setting_key( 'tab_content', 'tabs_list', $key );
                 $tabs_content = '';
