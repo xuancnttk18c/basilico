@@ -4083,7 +4083,7 @@
         }
         &.zoomIn {
             .tab-content {
-                @include animation(pxlZoomIn 300ms linear 1 forwards);
+                @include animation(pxlZoomIn 450ms linear 1 forwards);
             }
         }
     }
