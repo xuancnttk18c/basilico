@@ -60,18 +60,9 @@ $widget->add_render_attribute('carousel', [
                     $position    = isset($value['position']) ? $value['position'] : '';
                     $testimonial_title = isset($value['testimonial_title']) ? $value['testimonial_title'] : '';
                     $description = isset($value['description']) ? $value['description'] : '';
-                    $thumbnail = '';
-                    if (!empty($image['id'])) {
-                        $img = pxl_get_image_by_size(array(
-                            'attach_id'  => $image['id'],
-                            'thumb_size' => 'full',
-                            'class' => 'no-lazyload',
-                        ));
-                        $thumbnail = $img['thumbnail'];
-                    }
                     ?>
                     <div class="pxl-swiper-slide swiper-slide">
-                        <div class="item-inner">
+                        <div class="item-inner d-flex">
                             <?php if (!empty($image['id'])) : ?>
                                 <div class="item-image" style="background-image: url(<?php echo esc_attr($image['id']) ? esc_url($image['url']) : ''; ?>); "></div>
                             <?php endif; ?>
@@ -97,7 +88,7 @@ $widget->add_render_attribute('carousel', [
                                     <?php if (!empty($title)) : ?>
                                         <h4 class="item-title"><span><?php echo esc_html($title); ?></span></h4>
                                     <?php endif; ?>
-                                    <?php if (!empty($description)) : ?>
+                                    <?php if (!empty($position)) : ?>
                                         <div class="item-position"><?php echo esc_html($position); ?></div>
                                     <?php endif; ?>
                                 </div>
