@@ -1163,7 +1163,6 @@
             width: calc(100% - 200px);
         }
         .swiper-slide {
-            padding: 25px;
             border: 1px solid $divider_color;
             &:not(:first-child) {
                 border-left: none;
