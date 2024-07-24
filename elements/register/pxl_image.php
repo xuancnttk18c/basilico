@@ -606,7 +606,17 @@ pxl_add_custom_widget(
                                 'zoom-in-out-custom'   => esc_html__( 'zoom in out custom', 'basilico' ),
                             ),
                             'default'      => 'default',
-                        ]
+                        ],
+                        [
+                            'name'      => 'animation_delay',
+                            'label'     => esc_html__( 'Animation Delay (ms)', 'basilico' ),
+                            'type'      => \Elementor\Controls_Manager::NUMBER,
+                            'min'       => 0,
+                            'step'      => 100,
+                            'selectors'    => [
+                                '{{WRAPPER}} .pxl-image-wg' => 'animation-delay: {{VALUE}}ms;',
+                            ],
+                        ],
                     ]
                 ],
             ], 
