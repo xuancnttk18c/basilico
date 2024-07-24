@@ -1172,6 +1172,7 @@
             width: 100%;
             .item-image {
                 width: 39%;
+                border-right: 1px solid $divider_color;
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -1191,15 +1192,20 @@
                 text-transform: none;
             }
             .item-title {
+                margin-top: 20px;
                 font-size: 17px;
                 font-weight: 400;
                 letter-spacing: 0.03em;
                 text-transform: capitalize;
+                + .item-position {
+                    margin-top: 15px;
+                }
             }
             .item-rating-star {
+                margin-top: 20px;
                 .item-rating i {
                     font-size: 17px;
-                    color: $secondary_color;
+                    color: #ffa421;
                 }
             }
         }
