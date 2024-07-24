@@ -1171,6 +1171,9 @@
         .item-inner {
             .item-image {
                 width: 39%;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
             }
             .item-content {
                 width: 61%;
