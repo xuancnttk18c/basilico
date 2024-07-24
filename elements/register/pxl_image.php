@@ -586,6 +586,9 @@ pxl_add_custom_widget(
                             'type'      => \Elementor\Controls_Manager::NUMBER,
                             'min'       => 0,
                             'step'      => 100,
+                            'condition' => [
+                                'custom_style!' => ''
+                            ],
                         ],
                         [
                             'name' => 'img_animation',
@@ -615,6 +618,9 @@ pxl_add_custom_widget(
                             'step'      => 100,
                             'selectors'    => [
                                 '{{WRAPPER}} .pxl-image-wg' => 'animation-delay: {{VALUE}}ms;',
+                            ],
+                            'condition' => [
+                                'img_animation!' => 'default'
                             ],
                         ],
                     ]
