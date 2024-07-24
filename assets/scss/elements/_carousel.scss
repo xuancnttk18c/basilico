@@ -1214,6 +1214,8 @@
             }
         }
         .pxl-swiper-arrow {
+            position: relative;
+            z-index: 1;
             cursor: pointer;
             width: 101px;
             writing-mode: vertical-rl;
