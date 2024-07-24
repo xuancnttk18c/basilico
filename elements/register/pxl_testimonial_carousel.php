@@ -66,6 +66,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 11', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-11.jpg'
                                 ],
+                                '12' => [
+                                    'label' => esc_html__( 'Layout 12', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-12.jpg'
+                                ],
                             ],
                             'prefix_class' => 'pxl-testimonial-carousel-layout-',
                         ),
