@@ -42,7 +42,7 @@ $widget->add_render_attribute('carousel', [
 ?>
 <?php if (isset($content_list) && !empty($content_list) && count($content_list)) : ?>
 <div class="pxl-swiper-slider pxl-testimonial-carousel layout-<?php echo esc_attr($settings['layout']) ?>">
-    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
+    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative d-flex">
         <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><?php echo esc_html('Previous', 'basilico'); ?></div>
         <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
             <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) { ?>
