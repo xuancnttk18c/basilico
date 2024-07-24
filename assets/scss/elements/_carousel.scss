@@ -1158,6 +1158,42 @@
             }
         }
     }
+    &.layout-12 {
+        .pxl-swiper-container {
+            width: calc(100% - 200px);
+        }
+        .swiper-slide {
+            padding: 25px;
+            border: 1px solid $divider_color;
+            &:not(:first-child) {
+                border-left: none;
+            }
+        }
+        .pxl-swiper-arrow {
+            cursor: pointer;
+            width: 101px;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            border: 1px solid $divider_color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            @include transition();
+            &.pxl-swiper-arrow-prev {
+                margin-right: -1px;
+            }
+            &.pxl-swiper-arrow-next {
+                margin-left: -1px;
+            }
+            &:hover {
+                background-color: $secondary_color;
+            }
+        }
+    }
 }
 
 //* Menu Carousel

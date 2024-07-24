@@ -21,7 +21,7 @@ $opts = [
     'slides_to_show_sm'             => (float)$widget->get_setting('col_sm', 2), 
     'slides_to_show_xs'             => (float)$widget->get_setting('col_xs', 1), 
     'slides_to_scroll'              => (int)$widget->get_setting('slides_to_scroll', 1),
-    'slides_gutter'                 => 30,
+    'slides_gutter'                 => 0,
     'arrow'                         => $arrows,
     'dots'                          => $dots,
     'dots_style'                    => 'bullets',
@@ -64,19 +64,34 @@ $widget->add_render_attribute('carousel', [
                     if (!empty($image['id'])) {
                         $img = pxl_get_image_by_size(array(
                             'attach_id'  => $image['id'],
-                            'thumb_size' => '250x250',
+                            'thumb_size' => 'full',
                             'class' => 'no-lazyload',
                         ));
                         $thumbnail = $img['thumbnail'];
                     }
                     ?>
                     <div class="pxl-swiper-slide swiper-slide">
-                        <div class="item-inner relative text-center">
-                            <?php if (!empty($testimonial_title)) { ?>
-                                <h4 class="testimonial-title"><span><?php echo esc_html($testimonial_title); ?></span></h4>
-                            <?php } ?>
-                            <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
-                            <div class="item-wrap row gx-20 justify-content-center">
+                        <div class="item-inner">
+                            <div class="item-image">
+                                <?php if (!empty($thumbnail)) : ?>
+                                    <div class="item-image col-auto">
+                                        <?php echo wp_kses_post($thumbnail); ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <div class="item-content">
+                                <?php if (!empty($testimonial_title)) { ?>
+                                    <h4 class="testimonial-title"><span><?php echo esc_html($testimonial_title); ?></span></h4>
+                                <?php } ?>
+                                <?php if (!empty($description)) : ?>
+                                    <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
+                                <?php endif; ?>
+                                <?php if (!empty($title)) : ?>
+                                    <h4 class="item-title"><span><?php echo esc_html($title); ?></span></h4>
+                                <?php endif; ?>
+                                <?php if (!empty($description)) : ?>
+                                    <div class="item-position"><?php echo esc_html($position); ?></div>
+                                <?php endif; ?>
                                 <?php if (!empty($value['rating']) && $value['rating'] != 'none') : ?>
                                     <div class="item-rating-star">
                                         <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
@@ -88,17 +103,6 @@ $widget->add_render_attribute('carousel', [
                                         </div>
                                     </div>
                                 <?php endif; ?>
-                                <div class="item-info col-auto">
-                                    <h4 class="item-title"><span><?php echo esc_html($title); ?></span></h4>
-                                    <div class="item-position"><?php echo esc_html($position); ?></div>
-                                    <?php if (!empty($thumbnail)) : ?>
-                                        <div class="item-image col-auto">
-                                            <span class="img-outer">
-                                                <?php echo wp_kses_post($thumbnail); ?>
-                                            </span>
-                                        </div>
-                                    <?php endif; ?>
-                                </div>
                             </div>
                         </div>
                     </div>
