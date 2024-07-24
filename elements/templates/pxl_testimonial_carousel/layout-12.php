@@ -71,11 +71,9 @@ $widget->add_render_attribute('carousel', [
                     }
                     ?>
                     <div class="pxl-swiper-slide swiper-slide">
-                        <div class="item-inner">
-                            <div class="item-image" style="background-image: <?php echo esc_attr($image['id']) ? esc_url($image['url']) : ''; ?>">>
-                                <?php var_dump($image); ?>
-                            </div>
-                            <div class="item-content">
+                        <div class="item-inner row">
+                            <div class="item-image col-5" style="background-image: <?php echo esc_attr($image['id']) ? esc_url($image['url']) : ''; ?>">></div>
+                            <div class="item-content col-7">
                                 <?php if (!empty($testimonial_title)) { ?>
                                     <h4 class="testimonial-title"><span><?php echo esc_html($testimonial_title); ?></span></h4>
                                 <?php } ?>
