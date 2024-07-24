@@ -83,11 +83,11 @@ $widget->add_render_attribute('carousel', [
                                 <?php if (!empty($value['rating']) && $value['rating'] != 'none') : ?>
                                     <div class="item-rating-star">
                                         <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
-                                            <i class="zmdi zmdi-star"></i>
-                                            <i class="zmdi zmdi-star"></i>
-                                            <i class="zmdi zmdi-star"></i>
-                                            <i class="zmdi zmdi-star"></i>
-                                            <i class="zmdi zmdi-star"></i>
+                                            <i class="pxli pxli-star1"></i>
+                                            <i class="pxli pxli-star1"></i>
+                                            <i class="pxli pxli-star1"></i>
+                                            <i class="pxli pxli-star1"></i>
+                                            <i class="pxli pxli-star1"></i>
                                         </div>
                                     </div>
                                 <?php endif; ?>
