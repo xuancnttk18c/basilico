@@ -73,11 +73,7 @@ $widget->add_render_attribute('carousel', [
                     <div class="pxl-swiper-slide swiper-slide">
                         <div class="item-inner">
                             <div class="item-image">
-                                <?php if (!empty($thumbnail)) : ?>
-                                    <div class="item-image col-auto">
-                                        <?php echo wp_kses_post($thumbnail); ?>
-                                    </div>
-                                <?php endif; ?>
+                                <?php var_dump($image); ?>
                             </div>
                             <div class="item-content">
                                 <?php if (!empty($testimonial_title)) { ?>
