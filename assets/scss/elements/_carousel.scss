@@ -1193,6 +1193,7 @@
             }
             .item-title {
                 margin-top: 20px;
+                margin-bottom: 0;
                 font-size: 17px;
                 font-weight: 400;
                 letter-spacing: 0.03em;
@@ -1200,6 +1201,9 @@
                 + .item-position {
                     margin-top: 15px;
                 }
+            }
+            .item-desc {
+                margin-top: 11px;
             }
             .item-rating-star {
                 margin-top: 20px;
