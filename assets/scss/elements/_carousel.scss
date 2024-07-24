@@ -1168,6 +1168,20 @@
                 border-left: none;
             }
         }
+        .item-inner {
+            .testimonial-title {
+                font-size: 25px;
+                font-weight: 400;
+                letter-spacing: 0.03em;
+                text-transform: none;
+            }
+            .item-title {
+                font-size: 17px;
+                font-weight: 400;
+                letter-spacing: 0.03em;
+                text-transform: capitalize;
+            }
+        }
         .pxl-swiper-arrow {
             cursor: pointer;
             width: 101px;
