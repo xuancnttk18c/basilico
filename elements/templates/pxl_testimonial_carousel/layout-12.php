@@ -71,32 +71,34 @@ $widget->add_render_attribute('carousel', [
                     }
                     ?>
                     <div class="pxl-swiper-slide swiper-slide">
-                        <div class="item-inner row">
-                            <div class="item-image col-5" style="background-image: url(<?php echo esc_attr($image['id']) ? esc_url($image['url']) : ''; ?>); "></div>
-                            <div class="item-content col-7">
-                                <?php if (!empty($testimonial_title)) { ?>
-                                    <h4 class="testimonial-title"><span><?php echo esc_html($testimonial_title); ?></span></h4>
-                                <?php } ?>
-                                <?php if (!empty($description)) : ?>
-                                    <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
-                                <?php endif; ?>
-                                <?php if (!empty($value['rating']) && $value['rating'] != 'none') : ?>
-                                    <div class="item-rating-star">
-                                        <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
-                                            <i class="pxli pxli-star1"></i>
-                                            <i class="pxli pxli-star1"></i>
-                                            <i class="pxli pxli-star1"></i>
-                                            <i class="pxli pxli-star1"></i>
-                                            <i class="pxli pxli-star1"></i>
+                        <div class="item-inner">
+                            <div class="item-image" style="background-image: url(<?php echo esc_attr($image['id']) ? esc_url($image['url']) : ''; ?>); "></div>
+                            <div class="item-content">
+                                <div class="content-wrapper">
+                                    <?php if (!empty($testimonial_title)) { ?>
+                                        <h4 class="testimonial-title"><span><?php echo esc_html($testimonial_title); ?></span></h4>
+                                    <?php } ?>
+                                    <?php if (!empty($description)) : ?>
+                                        <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
+                                    <?php endif; ?>
+                                    <?php if (!empty($value['rating']) && $value['rating'] != 'none') : ?>
+                                        <div class="item-rating-star">
+                                            <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
+                                                <i class="pxli pxli-star1"></i>
+                                                <i class="pxli pxli-star1"></i>
+                                                <i class="pxli pxli-star1"></i>
+                                                <i class="pxli pxli-star1"></i>
+                                                <i class="pxli pxli-star1"></i>
+                                            </div>
                                         </div>
-                                    </div>
-                                <?php endif; ?>
-                                <?php if (!empty($title)) : ?>
-                                    <h4 class="item-title"><span><?php echo esc_html($title); ?></span></h4>
-                                <?php endif; ?>
-                                <?php if (!empty($description)) : ?>
-                                    <div class="item-position"><?php echo esc_html($position); ?></div>
-                                <?php endif; ?>
+                                    <?php endif; ?>
+                                    <?php if (!empty($title)) : ?>
+                                        <h4 class="item-title"><span><?php echo esc_html($title); ?></span></h4>
+                                    <?php endif; ?>
+                                    <?php if (!empty($description)) : ?>
+                                        <div class="item-position"><?php echo esc_html($position); ?></div>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
