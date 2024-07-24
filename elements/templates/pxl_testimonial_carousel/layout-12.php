@@ -72,7 +72,7 @@ $widget->add_render_attribute('carousel', [
                     ?>
                     <div class="pxl-swiper-slide swiper-slide">
                         <div class="item-inner">
-                            <div class="item-image">
+                            <div class="item-image" style="background-image: <?php echo esc_attr($image['id']) ? esc_url($image['url']) : ''; ?>">>
                                 <?php var_dump($image); ?>
                             </div>
                             <div class="item-content">
