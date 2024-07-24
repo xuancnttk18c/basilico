@@ -1194,8 +1194,10 @@
                 text-transform: capitalize;
             }
             .item-rating-star {
-                font-size: 17px;
-                color: $secondary_color;
+                .item-rating i {
+                    font-size: 17px;
+                    color: $secondary_color;
+                }
             }
         }
         .pxl-swiper-arrow {
