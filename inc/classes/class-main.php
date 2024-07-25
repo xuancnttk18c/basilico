@@ -13,6 +13,7 @@ if (!class_exists('Basilico_Main')) {
         public $pagetitle;
         public $blog;
         public $comment;
+        public $render_attributes = [];
 
         function __construct(){
              
