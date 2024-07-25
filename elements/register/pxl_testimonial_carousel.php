@@ -91,9 +91,6 @@ pxl_add_custom_widget(
                                     'name' => 'image',
                                     'label' => esc_html__('Image', 'basilico' ),
                                     'type' => \Elementor\Controls_Manager::MEDIA,
-                                    'selectors' => [
-                                        '{{WRAPPER}} .pxl-testimonial-carousel.layout-12 .item-inner .item-image' => 'background-image: url({{URL}});'
-                                    ],
                                 ),
                                 array(
                                     'name' => 'title',
