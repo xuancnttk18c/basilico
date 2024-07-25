@@ -8,7 +8,6 @@ $categories = $widget->get_setting('taxonomies', '');
 $param_args=[];
 $loop = Pxl_Woo_Query::instance()->basilico_woocommerce_query($query_type,$post_per_page,$product_ids,$categories,$param_args);
 extract($loop);
-$grid_layout          = $widget->get_setting('grid_layout', 'layout-1');
 $pagination_type      = $widget->get_setting('pagination_type', 'false');
 
 $row_cols_class = basilico_get_shop_loop_row_column_class([
@@ -29,7 +28,7 @@ if( $total <= 0){
 $product_layout = $widget->get_setting('product_layout', 'layout-1');
 ?>
 
-<div id="<?php echo esc_attr($wg_id) ?>" class="pxl-product-grid <?php echo esc_attr($grid_layout) ?> <?php echo 'pxl-shop-'.esc_attr($product_layout); ?>" data-layout=".<?php echo esc_attr($grid_layout) ?>">
+<div id="<?php echo esc_attr($wg_id) ?>" class="pxl-product-grid <?php echo 'pxl-shop-'.esc_attr($product_layout); ?>" data-layout=".<?php echo esc_attr($grid_layout) ?>">
     <div <?php pxl_print_html($widget->get_render_attribute_string('grid')); ?>>
         <?php
         while ($query->have_posts()) {
