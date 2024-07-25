@@ -130,7 +130,7 @@ $arrows_on_hover_cls = $arrows_on_hover == 'true' ? 'arrow-on-hover' : '';
                                         </a>
                                     </div>
                                     <?php if ($show_category == 'true' || $show_date == 'true') : ?>
-                                        <div class="post-metas hover-underline">
+                                        <div class="post-metas">
                                             <div class="meta-inner d-flex">
                                                 <?php
                                                 if ($show_date == 'true') : ?>
