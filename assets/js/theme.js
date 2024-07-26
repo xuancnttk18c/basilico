@@ -190,7 +190,7 @@
                     y: 0
                 });
             }
-        } 
+        }
 
         if ( $(document).find('.pxl-header-mobile-transparent-sticky').length > 0 && window_width < 1200  ) {
             let timel = gsap.timeline({
