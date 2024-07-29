@@ -607,9 +607,10 @@ select.orderby{
 		margin-right: -20px;
 		border-top: 1px solid $divider_color;
 		.pxl-btn {
+			color: $heading_color;
 			font-size: 15px;
 			font-weight: 600;
-			letter-spacing: 0;
+			letter-spacing: 0.1em;
 			width: 100%;
 			line-height: 60px;
 			background-color: transparent;
