@@ -206,10 +206,8 @@ select.orderby{
 	.grid-item {
 		margin-top: 30px;
 		padding: 33px 40px 0px;
+		border: 1px solid $divider_color;
 		margin-right: -1px;
-		&:not(:last-child) {
-			border-right: none;
-		}
 	}
 }
 
