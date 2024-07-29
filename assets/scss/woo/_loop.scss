@@ -601,6 +601,17 @@ select.orderby{
 		font-weight: 600;
 		color: $primary_color;
 	}
+	.btn-wrapper {
+		margin-top: 42px;
+		.pxl-btn {
+			color: #fff;
+			font-size: 20px;
+			font-weight: 600;
+			width: 100%;
+			line-height: 60px;
+			background-color: $divider_color;
+		}
+	}
 }
 
 .pxl-shop-layout-5 .pxl-products-content {
