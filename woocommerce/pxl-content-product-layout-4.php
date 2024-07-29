@@ -68,7 +68,6 @@ $item_class          = ['grid-item'];
                      */
                     do_action( 'woocommerce_after_shop_loop_item_title' );
                     ?>
-                    <?php woocommerce_template_loop_rating(); ?>
                     <div class="btn-wrapper">
                         <div class="pxl-add-to-cart">
                             <?php woocommerce_template_loop_add_to_cart(); ?>

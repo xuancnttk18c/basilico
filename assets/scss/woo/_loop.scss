@@ -103,6 +103,7 @@ select.orderby{
 		position: relative;
 	}
 }
+
 .pxl-products-thumb {
 	position: relative;
 	overflow: hidden;
@@ -195,6 +196,17 @@ select.orderby{
 			&:has(del) {
 				gap: 15px;
 			}
+		}
+	}
+}
+
+.pxl-shop-layout-4 .products {
+	margin-top: -30px;
+	.grid-item {
+		margin-top: 30px;
+		padding: 33px 40px 0px;
+		&:not(:last-child) {
+			border-right: none;
 		}
 	}
 }
@@ -417,6 +429,12 @@ select.orderby{
 				@include transform(scale(1));
 			}
 		}
+	}
+}
+
+.pxl-shop-layout-4 .pxl-shop-item-wrap {
+	.pxl-shop-item-wrap {
+		border: 1px solid $divider_color;
 	}
 }
 
