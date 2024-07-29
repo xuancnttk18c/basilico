@@ -72,13 +72,6 @@ $item_class          = ['grid-item'];
                         <div class="pxl-add-to-cart">
                             <?php woocommerce_template_loop_add_to_cart(); ?>
                         </div>
-                        <?php
-                        if (class_exists( 'WPCleverWoosw' )) :
-                            echo '<div class="pxl-shop-woosmart-wrap">';
-                            do_action( 'woosw_button_position_archive_woosmart' );
-                            echo '</div>';
-                        endif;
-                        ?>
                     </div>
                 </div>
             </div>
