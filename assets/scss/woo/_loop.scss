@@ -607,14 +607,15 @@ select.orderby{
 		margin-right: -20px;
 		border-top: 1px solid $divider_color;
 		.pxl-btn {
-			color: #fff;
-			font-size: 20px;
+			font-size: 15px;
 			font-weight: 600;
+			letter-spacing: 0;
 			width: 100%;
 			line-height: 60px;
 			background-color: transparent;
 			&:hover {
 				background-color: $divider_color;
+				color: #fff;
 			}
 		}
 	}
