@@ -37,9 +37,6 @@ $item_class          = ['grid-item'];
         <div class="pxl-products-content">
             <div class="pxl-products-content-wrap">
                 <div class="pxl-products-content-inner">
-                    <div class="top-content-inner d-md-flex gx-30 justify-content-between">
-                        <?php woocommerce_template_loop_price(); ?>
-                    </div>
                     <?php
                     /**
                      * Hook: woocommerce_before_shop_loop_item_title.
@@ -68,6 +65,7 @@ $item_class          = ['grid-item'];
                      */
                     do_action( 'woocommerce_after_shop_loop_item_title' );
                     ?>
+                    <?php woocommerce_template_loop_price(); ?>
                     <div class="btn-wrapper">
                         <div class="pxl-add-to-cart">
                             <?php woocommerce_template_loop_add_to_cart(); ?>
