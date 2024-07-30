@@ -802,8 +802,10 @@ select.orderby{
 				line-height: 60px;
 				background-color: transparent;
 			}
-			.pxl-btn ~ .added_to_cart {
-				display: none;
+			.pxl-add-to-cart:has(.added_to_cart) {
+				.pxl-btn {
+					display: none;
+				}
 			}
 		}
 	}
