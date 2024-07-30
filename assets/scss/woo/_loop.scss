@@ -766,9 +766,6 @@ select.orderby{
 }
 
 .pxl-shop-layout-4 {
-	.pxl-shop-item-wrap {
-		position: relative;
-	}
 	.pxl-products-content {
 		text-align: center;
 		padding: 0;
@@ -785,7 +782,6 @@ select.orderby{
 			font-size: 20px;
 			font-weight: 600;
 			color: $primary_color;
-			margin-bottom: 42px;
 			del {
 				color: #777777;
 				+ ins:before {
@@ -825,7 +821,8 @@ select.orderby{
 			margin-right: -1px;
 			@include transition();
 			.pxl-shop-item-wrap {
-				padding: 20px 20px 0px;
+				padding: 20px 20px 41px;
+				position: relative;
 			}
 			.image-wrap {
 				position: relative;
