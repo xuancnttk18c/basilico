@@ -57,7 +57,7 @@ $item_class          = ['grid-item'];
                     do_action( 'woocommerce_shop_loop_item_title' );
                     ?>
                     <h3 class="pxl-product-title">
-                        <a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
+                        <a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>"><?php the_title(); ?></a>
                     </h3>
                     <?php
                     /**
