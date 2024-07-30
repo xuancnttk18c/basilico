@@ -787,6 +787,12 @@ select.orderby{
 			font-size: 20px;
 			font-weight: 600;
 			color: $primary_color;
+			del {
+				color: #fff;
+				+ ins:before {
+					content: "-";
+				}
+			}
 		}
 		.btn-wrapper {
 			margin-top: 42px;
@@ -855,7 +861,6 @@ select.orderby{
 	.related {
 		padding: 0;
 		.pxl-product-loop-carousel {
-			border-right: 1px solid $divider_color;
 			.grid-item {
 				margin-top: 0;
 			}	
@@ -874,6 +879,10 @@ select.orderby{
 		color: #fff;
 		background-color: $divider_color;
 	}
+	.pxl-featured + .hotsale {
+		top: 20px;
+	}
+
 }
 
 .pxl-shop-layout-5 {
