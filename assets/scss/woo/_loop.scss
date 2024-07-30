@@ -611,7 +611,7 @@ select.orderby{
 		margin-right: -1px;
 		@include transition();
 		.image-wrap {
-			position: absolute;
+			position: relative;
 			img {
 				padding: 30px;
 			}
