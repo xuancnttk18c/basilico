@@ -621,7 +621,6 @@ select.orderby{
 				top: -5px;
 				left: -20px;
 				opacity: 0;
-				@include transition();
 			}
 		}
 		&:hover {
@@ -639,6 +638,7 @@ select.orderby{
 			}
 			.pxl-clown {
 				opacity: 1;
+				animation: pxlZoomIn 300ms forwards;
 			}
 		}
 	}
