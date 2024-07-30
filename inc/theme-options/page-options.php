@@ -332,9 +332,9 @@ function basilico_page_options_register( $metabox ) {
                             array(
                                 'id'          => 'product_layout_style',
                                 'type'        => 'image_select',
-                                'title'       => esc_html__( 'Style', 'basilico' ),
+                                'title'       => esc_html__( 'Image Style', 'basilico' ),
                                 'description' => esc_html__('Use for Shop Layout 4', 'basilico'),
-                                'option'      => array(
+                                'options'      => array(
                                     'style-df' => array(
                                         'alt' => 'Style 1',
                                         'img' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-3.jpg'
