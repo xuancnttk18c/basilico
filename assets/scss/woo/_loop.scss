@@ -820,6 +820,7 @@ select.orderby{
 		padding: 0 15px;
 		.grid-item {
 			margin-top: 30px;
+			padding: 0;
 			border: 1px solid $divider_color;
 			margin-right: -1px;
 			@include transition();
