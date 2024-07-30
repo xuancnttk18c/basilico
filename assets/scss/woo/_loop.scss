@@ -611,8 +611,17 @@ select.orderby{
 		margin-right: -1px;
 		@include transition();
 		.image-wrap {
+			position: absolute;
 			img {
 				padding: 30px;
+			}
+			.pxl-clown {
+				position: absolute;
+				z-index: 9;
+				top: -5px;
+				left: -20px;
+				opacity: 0;
+				@include transition();
 			}
 		}
 		&:hover {
@@ -627,6 +636,9 @@ select.orderby{
 			.pxl-btn {
 				background-color: $divider_color;
 				color: #fff;
+			}
+			.pxl-clown {
+				opacity: 1;
 			}
 		}
 	}
