@@ -954,6 +954,12 @@ select.orderby{
 			}
 		}
 	}
+	.pxl-product-loop-carousel {
+		border-right: 1px solid $divider_color;
+		.grid-item {
+			margin-top: 0;
+		}	
+	}
 	.pxl-shop-item-wrap {
 		.add_to_cart_button,
 		.product_type_grouped,
