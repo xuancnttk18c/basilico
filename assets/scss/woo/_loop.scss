@@ -841,13 +841,13 @@ select.orderby{
 				.price {
 					color: $secondary_color;
 				}
-				.pxl-btn {
+				.pxl-btn, .added_to_cart {
 					background-color: $divider_color;
 					color: #fff;
 				}
 				.pxl-clown {
 					opacity: 1;
-					animation: pxlZoomIn 300ms forwards;
+					animation: pxlZoomIn 400ms forwards;
 				}
 			}
 		}
