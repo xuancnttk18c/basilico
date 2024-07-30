@@ -341,7 +341,7 @@ function basilico_page_options_register( $metabox ) {
                                     ),
                                     'style-2' => array(
                                         'alt' => 'Style 2',
-                                        'img' => get_template_directory_uri() . '/assets/image/pizza-layout/pizza-df.jpg'
+                                        'img' => get_template_directory_uri() . '/assets/image/pizza-layout/pizza-style-2.jpg'
                                     ),
                                 ),
                             ),
