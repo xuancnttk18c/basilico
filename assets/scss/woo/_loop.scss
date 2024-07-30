@@ -820,10 +820,12 @@ select.orderby{
 		padding: 0 15px;
 		.grid-item {
 			margin-top: 30px;
-			padding: 20px 20px 0px;
 			border: 1px solid $divider_color;
 			margin-right: -1px;
 			@include transition();
+			.pxl-shop-item-wrap {
+				padding: 20px 20px 0px;
+			}
 			.image-wrap {
 				position: relative;
 				img {
@@ -846,6 +848,9 @@ select.orderby{
 				}
 				.price {
 					color: $secondary_color;
+					del {
+						color: rgba($secondary_color_rgb, 0.6);
+					}
 				}
 				.pxl-btn, .added_to_cart {
 					background-color: $divider_color;
