@@ -19,7 +19,7 @@ $item_class          = ['grid-item'];
                 woocommerce_template_loop_product_thumbnail();
                 ?>
                 <div class="pxl-clown">
-                    <img src="<?php echo get_template_directory_uri() . 'assets/images/pizza-clown.png'; ?>" />
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/pizza-clown.png'; ?>" />
                 </div>
             </div>
             <div class="hot-sale">
