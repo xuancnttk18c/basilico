@@ -14,10 +14,14 @@ $col_xxl = basilico()->get_opt('product_related_col_xxl', '3');
 
 wp_enqueue_script( 'swiper' );
 wp_enqueue_script( 'basilico-swiper' );
+
 $arrows_dots = basilico()->get_opt('product_related_arrows_dots', 'arrows');
 $arrows = $arrows_dots == 'arrows' ? true : false;  
 $dots = $arrows_dots == 'dots' ? true : false;  
 $loop_carousel = basilico()->get_theme_opt('product_related_loop_carousel', '0') == '1' ? true : false ;
+$gutter = 30;
+if ($product_layout == 'layout-4') $gutter = 0;
+
 $opts = [
 	'slide_direction'               => 'horizontal',
 	'slide_percolumn'               => 1, 
@@ -41,6 +45,7 @@ $opts = [
 	'loop'                          => $loop_carousel,
 	'speed'                         => 500,
 ];
+
 basilico()->add_render_attribute( 'carousel', [
 	'class'         => 'pxl-swiper-container',
 	'dir'           => is_rtl() ? 'rtl' : 'ltr',
@@ -48,7 +53,6 @@ basilico()->add_render_attribute( 'carousel', [
 	null,
 	true
 );
-
 
 if ( $related_products ) : ?>
 	<section class="related products">
@@ -68,7 +72,6 @@ if ( $related_products ) : ?>
 			<h2 class="related_title"><?php echo esc_html( $heading ); ?></h2>
 			<div class="pxl-divider"></div>
 		<?php endif; ?>
-
 		<div class="pxl-product-grid pxl-product-loop-carousel">
 			<div class="pxl-swiper-slider pxl-product-carousel relative">
 				<div class="pxl-swiper-slider-inner pxl-carousel-inner overflow-hidden">
