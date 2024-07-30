@@ -337,11 +337,11 @@ function basilico_page_options_register( $metabox ) {
                                 'options'      => array(
                                     'style-df' => array(
                                         'alt' => 'Style 1',
-                                        'img' => get_template_directory_uri() . '/assets/image/pizza-layout/pizza-df.jpg'
+                                        'img' => get_template_directory_uri() . '/assets/images/pizza-layout/pizza-df.jpg'
                                     ),
                                     'style-2' => array(
                                         'alt' => 'Style 2',
-                                        'img' => get_template_directory_uri() . '/assets/image/pizza-layout/pizza-style-2.jpg'
+                                        'img' => get_template_directory_uri() . '/assets/images/pizza-layout/pizza-style-2.jpg'
                                     ),
                                 ),
                             ),
