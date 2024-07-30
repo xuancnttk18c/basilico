@@ -609,6 +609,7 @@ select.orderby{
 		padding: 20px 20px 0px;
 		border: 1px solid $divider_color;
 		margin-right: -1px;
+		@include transition();
 		.image-wrap {
 			img {
 				padding: 30px;
@@ -619,6 +620,9 @@ select.orderby{
 			background-image: url(../assets/images/bg-pizza-overlay.png);
 			.pxl-product-title {
 				color: #fff;
+			}
+			.price {
+				color: $secondary_color;
 			}
 			.pxl-btn {
 				background-color: $divider_color;
