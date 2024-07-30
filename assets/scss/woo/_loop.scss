@@ -793,7 +793,7 @@ select.orderby{
 			margin-left: -20px;
 			margin-right: -20px;
 			border-top: 1px solid $divider_color;
-			.pxl-btn {
+			.pxl-btn, .added_to_cart {
 				color: $heading_color;
 				font-size: 15px;
 				font-weight: 700;
@@ -801,6 +801,9 @@ select.orderby{
 				width: 100%;
 				line-height: 60px;
 				background-color: transparent;
+			}
+			.pxl-btn ~ .added_to_cart {
+				display: none;
 			}
 		}
 	}
