@@ -788,9 +788,9 @@ select.orderby{
 			font-weight: 600;
 			color: $primary_color;
 			del {
-				color: #fff;
+				color: #777777;
 				+ ins:before {
-					content: "-";
+					content: "- ";
 				}
 			}
 		}
@@ -869,7 +869,7 @@ select.orderby{
 	.pxl-products-thumb {
 		overflow: visible;
 	}
-	.pxl-featured, .hotsale {
+	.pxl-featured, .onsale {
 		position: absolute;
 		right: -20px;
 		top: -20px;
@@ -879,7 +879,7 @@ select.orderby{
 		color: #fff;
 		background-color: $divider_color;
 	}
-	.pxl-featured + .hotsale {
+	.pxl-featured + .onsale {
 		top: 20px;
 	}
 
