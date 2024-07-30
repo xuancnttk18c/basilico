@@ -107,7 +107,7 @@ function basilico_page_options_register( $metabox ) {
                                 'title'       => esc_html__( 'Format Link Cite', 'basilico' ),
                             ),
                             array(
-                                'id'          => 'layout_style',
+                                'id'          => 'product_layout_style',
                                 'type'        => 'image_select',
                                 'title'       => esc_html__( 'Style', 'basilico' ),
                                 'description' => esc_html__('Use for Shop Layout 4', 'basilico'),
