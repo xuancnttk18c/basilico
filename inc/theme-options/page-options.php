@@ -333,7 +333,7 @@ function basilico_page_options_register( $metabox ) {
                                 'id'          => 'product_layout_style',
                                 'type'        => 'image_select',
                                 'title'       => esc_html__( 'Image Style', 'basilico' ),
-                                'description' => esc_html__('Use for Shop Layout 4', 'basilico'),
+                                'description' => esc_html__('Use for Shop Layout 4 Shop Page', 'basilico'),
                                 'options'      => array(
                                     'style-df' => array(
                                         'alt' => 'Style 1',

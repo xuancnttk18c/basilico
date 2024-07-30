@@ -824,6 +824,7 @@ select.orderby{
 			.pxl-shop-item-wrap {
 				padding: 20px 20px 100px;
 				position: relative;
+				height: 100%;
 			}
 			.image-wrap {
 				position: relative;
@@ -840,11 +841,6 @@ select.orderby{
 				&.style-df {
 					border: 1px solid $divider_color;
 					margin-bottom: 30px;
-				}
-				&.style-2 {
-					img {
-						padding: 30px;
-					}
 				}
 			}
 			&:hover {
