@@ -856,6 +856,18 @@ select.orderby{
 			}	
 		}
 	}
+	.pxl-products-thumb {
+		overflow: visible;
+	}
+	.pxl-featured, .hotsale {
+		position: absolute;
+		right: -20px;
+		top: -20px;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		color: #fff;
+		background-color: $divider_color;
+	}
 }
 
 .pxl-shop-layout-5 {
