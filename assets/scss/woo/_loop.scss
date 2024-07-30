@@ -834,13 +834,16 @@ select.orderby{
 				.pxl-clown {
 					position: absolute;
 					z-index: 9;
-					top: -5px;
-					left: -20px;
+					top: 25px;
+					left: 10px;
 					opacity: 0;
 				}
 				&.style-df {
 					border: 1px solid $divider_color;
 					margin-bottom: 30px;
+				}
+				&.style-2 {
+					margin-bottom: 8px;
 				}
 			}
 			&:hover {
