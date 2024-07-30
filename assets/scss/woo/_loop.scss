@@ -767,14 +767,11 @@ select.orderby{
 
 .pxl-shop-layout-4 {
 	.pxl-shop-item-wrap {
-		.pxl-shop-item-wrap {
-			border: 1px solid $divider_color;
-		}
+		position: relative;
 	}
 	.pxl-products-content {
 		text-align: center;
 		padding: 0;
-		flex-grow: 1;
 		.pxl-product-title {
 			@include text-truncate-multi-line(25px, 1.2 , 1);
 			font-weight: 400;
@@ -788,6 +785,7 @@ select.orderby{
 			font-size: 20px;
 			font-weight: 600;
 			color: $primary_color;
+			margin-bottom: 42px;
 			del {
 				color: #777777;
 				+ ins:before {
@@ -796,9 +794,10 @@ select.orderby{
 			}
 		}
 		.btn-wrapper {
-			margin-top: 42px;
-			margin-left: -20px;
-			margin-right: -20px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
 			border-top: 1px solid $divider_color;
 			.pxl-btn, .added_to_cart {
 				color: $heading_color;
@@ -826,8 +825,6 @@ select.orderby{
 			margin-right: -1px;
 			@include transition();
 			.pxl-shop-item-wrap {
-				display: flex;
-				flex-direction: column;
 				padding: 20px 20px 0px;
 			}
 			.image-wrap {
