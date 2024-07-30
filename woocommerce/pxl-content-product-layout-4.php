@@ -9,12 +9,13 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 $product_id          = $product->get_id();
 $item_class          = ['grid-item'];
+$image_class         = get_post_meta($product->get_id(),'product_layout_style', 'style-df');
 
 ?>
 <div <?php wc_product_class( $item_class, $product ); ?>>
     <div class="pxl-shop-item-wrap">
         <div class="pxl-products-thumb relative">
-            <div class="image-wrap">
+            <div class="image-wrap <?php echo esc_attr($image_class); ?>">
                 <?php
                 woocommerce_template_loop_product_thumbnail();
                 ?>
