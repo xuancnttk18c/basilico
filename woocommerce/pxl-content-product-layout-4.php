@@ -19,9 +19,11 @@ $image_class         = get_post_meta($product->get_id(),'product_layout_style', 
                 <?php
                 woocommerce_template_loop_product_thumbnail();
                 ?>
-                <div class="pxl-clown">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/pizza-clown.png'; ?>" />
-                </div>
+                <?php if ($image_class == 'style-2'): ?>
+                    <div class="pxl-clown">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/pizza-clown.png'; ?>" />
+                    </div>
+                <?php endif; ?>
             </div>
             <div class="hot-sale">
                 <?php

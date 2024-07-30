@@ -829,8 +829,10 @@ select.orderby{
 			}
 			.image-wrap {
 				position: relative;
+				&.style-df {
+					border: 1px solid $divider_color;
+				}
 				img {
-					padding: 30px;
 					box-sizing: border-box;
 				}
 				.pxl-clown {
