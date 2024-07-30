@@ -578,6 +578,9 @@ select.orderby{
 		font-weight: 400;
 		letter-spacing: 0.03em;
 		text-transform: capitalize;
+		&:hover {
+			color: inherit;
+		}
 	}
 	.price {
 		font-size: 20px;
