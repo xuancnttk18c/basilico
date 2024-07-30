@@ -53,13 +53,16 @@ if(!function_exists('basilico_woocommerce_catalog_result')){
         $row_cols_class = basilico_get_shop_loop_row_column_class();
         ?>
         <div class="pxl-shop-topbar-wrap row justify-content-between align-items-center g-30">
-            <div class="pxl-view-layout-wrap col-12 col-sm-auto order-md-3">
-                <ul class="pxl-view-layout d-flex align-items-center">
-                    <li class="lbl"><?php echo esc_html__( 'View','basilico' ) ?></li>
-                    <li class="view-icon view-grid <?php echo esc_attr($active_grid) ?>"><a href="javascript:void(0);" class="pxl-ttip tt-top-left" data-cls="products <?php echo implode(' ', $row_cols_class);?>" data-col="grid"><span class="tt-txt"><?php echo esc_html__('View Grid','basilico') ?></span><span class="pxli-grid"></span></a></li>
-                    <li class="view-icon view-list <?php echo esc_attr($active_list) ?>"><a href="javascript:void(0);" class="pxl-ttip tt-top-left" data-cls="products shop-view-list" data-col="list"><span class="tt-txt"><?php echo esc_html__('View List','basilico') ?></span><span class="pxli-list"></span></a></li>
-                </ul>
-            </div>
+            <?php $style_shop = basilico()->get_theme_opt('product_layout', 'layout-1'); ?>
+            <?php if ($style_shop == 'layout-1' || $style_shop == 'layout-2' || $style_shop == 'layout-5') : ?>
+                <div class="pxl-view-layout-wrap col-12 col-sm-auto order-md-3">
+                    <ul class="pxl-view-layout d-flex align-items-center">
+                        <li class="lbl"><?php echo esc_html__( 'View','basilico' ) ?></li>
+                        <li class="view-icon view-grid <?php echo esc_attr($active_grid) ?>"><a href="javascript:void(0);" class="pxl-ttip tt-top-left" data-cls="products <?php echo implode(' ', $row_cols_class);?>" data-col="grid"><span class="tt-txt"><?php echo esc_html__('View Grid','basilico') ?></span><span class="pxli-grid"></span></a></li>
+                        <li class="view-icon view-list <?php echo esc_attr($active_list) ?>"><a href="javascript:void(0);" class="pxl-ttip tt-top-left" data-cls="products shop-view-list" data-col="list"><span class="tt-txt"><?php echo esc_html__('View List','basilico') ?></span><span class="pxli-list"></span></a></li>
+                    </ul>
+                </div>
+            <?php endif; ?>
             <div class="col-12 col-sm-auto order-md-2">
                 <?php do_action('basilico_woocommerce_catalog_ordering'); ?>
             </div>
