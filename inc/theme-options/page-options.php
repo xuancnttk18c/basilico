@@ -326,7 +326,7 @@ function basilico_page_options_register( $metabox ) {
                                 'id'=> 'product_loop_additional_text1',
                                 'type' => 'text',
                                 'title' => esc_html__('Additional Text', 'basilico'),
-                                'default' => esc_html('', 'basilico'),
+                                'default' => esc_html('220gr / 600 cal', 'basilico'),
                                 'description' => esc_html('Use for Shop Layout 3', 'basilico')
                             ),
                             array(
@@ -344,6 +344,7 @@ function basilico_page_options_register( $metabox ) {
                                         'img' => get_template_directory_uri() . '/assets/images/pizza-layout/pizza-style-2.jpg'
                                     ),
                                 ),
+                                'default' => 'style-df'
                             ),
 						)
 				    )
