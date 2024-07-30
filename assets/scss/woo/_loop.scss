@@ -829,9 +829,6 @@ select.orderby{
 			}
 			.image-wrap {
 				position: relative;
-				&.style-df {
-					border: 1px solid $divider_color;
-				}
 				img {
 					box-sizing: border-box;
 				}
@@ -841,6 +838,15 @@ select.orderby{
 					top: -5px;
 					left: -20px;
 					opacity: 0;
+				}
+				&.style-df {
+					border: 1px solid $divider_color;
+					margin-bottom: 30px;
+				}
+				&.style-2 {
+					img {
+						padding: 30px;
+					}
 				}
 			}
 			&:hover {
