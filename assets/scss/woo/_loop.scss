@@ -200,23 +200,6 @@ select.orderby{
 	}
 }
 
-.pxl-shop-layout-4 .products {
-	margin-top: -30px;
-	padding: 0 15px;
-	.grid-item {
-		margin-top: 30px;
-		padding: 20px 20px 0px;
-		border: 1px solid $divider_color;
-		margin-right: -1px;
-		.image-wrap {
-			img {
-				padding: 30px;
-				filter: drop-shadow(8 , 5, 27, rgba(0, 0, 0, 0.2));
-			}
-		}
-	}
-}
-
 .pxl-shop-layout-5 .grid-item {
 	.pxl-products-thumb {
 		.image-wrap {
@@ -614,7 +597,30 @@ select.orderby{
 			width: 100%;
 			line-height: 60px;
 			background-color: transparent;
-			&:hover {
+		}
+	}
+}
+
+.pxl-shop-layout-4 .products {
+	margin-top: -30px;
+	padding: 0 15px;
+	.grid-item {
+		margin-top: 30px;
+		padding: 20px 20px 0px;
+		border: 1px solid $divider_color;
+		margin-right: -1px;
+		.image-wrap {
+			img {
+				padding: 30px;
+			}
+		}
+		&:hover {
+			background-color: $primary_color;
+			background-image: url(../assets/images/bg-pizza-overlay.png);
+			.pxl-product-title {
+				color: #fff;
+			}
+			.pxl-btn {
 				background-color: $divider_color;
 				color: #fff;
 			}

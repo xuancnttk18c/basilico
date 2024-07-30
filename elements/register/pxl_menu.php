@@ -177,7 +177,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Show Arrow', 'basilico'),
                             'type'  => 'switcher',
                             'return_value' => 'yes',
-                            'default' => 'yes',
+                            'default' => 'no',
                             'condition' => [
                                 'type' => ['1'],
                             ],
