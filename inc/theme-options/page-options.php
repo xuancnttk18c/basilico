@@ -79,10 +79,10 @@ function basilico_page_options_register( $metabox ) {
                                 'msg'         => 'Url error!',
                             ),
                             array(
-                                'id'=>'featured-quote-text',
-                                'type' => 'textarea',
-                                'title' => esc_html__('Quote Text', 'basilico'),
-                                'default' => '',
+                                'id'        =>'featured-quote-text',
+                                'type'      => 'textarea',
+                                'title'     => esc_html__('Quote Text', 'basilico'),
+                                'default'   => '',
                             ),
                             array(
                                 'id'          => 'featured-quote-cite',
@@ -325,15 +325,9 @@ function basilico_page_options_register( $metabox ) {
                             array(
                                 'id'=> 'product_loop_additional_text1',
                                 'type' => 'text',
-                                'title' => esc_html__('Addtional Text', 'basilico'),
+                                'title' => esc_html__('Additional Text', 'basilico'),
                                 'default' => esc_html('', 'basilico'),
                                 'description' => esc_html('Use for Shop Layout 3', 'basilico')
-                            ),
-                            array(
-                                'id'=> 'product_additional_info',
-                                'type' => 'editor',
-                                'title' => esc_html__('Addtional Info', 'basilico'),
-                                'default' => '',
                             ),
 						)
 				    )
