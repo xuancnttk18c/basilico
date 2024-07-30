@@ -847,6 +847,15 @@ select.orderby{
 			}
 		}
 	}
+	.related {
+		padding: 0;
+		.pxl-product-loop-carousel {
+			border-right: 1px solid $divider_color;
+			.grid-item {
+				margin-top: 0;
+			}	
+		}
+	}
 }
 
 .pxl-shop-layout-5 {
@@ -952,15 +961,6 @@ select.orderby{
 			.pxl-shop-woosmart-wrap {
 				@include transition(all 400ms ease 150ms);
 			}
-		}
-	}
-	.related {
-		padding: 0;
-		.pxl-product-loop-carousel {
-			border-right: 1px solid $divider_color;
-			.grid-item {
-				margin-top: 0;
-			}	
 		}
 	}
 	.pxl-shop-item-wrap {
