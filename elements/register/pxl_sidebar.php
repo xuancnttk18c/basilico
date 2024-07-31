@@ -31,7 +31,7 @@ pxl_add_custom_widget(
                         array(
                             'name' => 'sidebar',
                             'label' => esc_html__( 'Choose Sidebar', 'elementor' ),
-                            'type' => Controls_Manager::SELECT,
+                            'type' => \Elementor\Controls_Manager::SELECT,
                             'default' => $default_key,
                             'options' => $options,
                         )
