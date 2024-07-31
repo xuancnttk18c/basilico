@@ -3,6 +3,9 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 
+if ( ! is_a( $product, 'WC_Product' ) ) {
+	return;
+}
 wp_localize_script(
 	'wc-price-slider',
 	'woocommerce_price_slider_params',
