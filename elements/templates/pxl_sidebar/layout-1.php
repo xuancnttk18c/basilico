@@ -1,5 +1,5 @@
 <?php
-$sidebar = $this->get_settings_for_display( 'sidebar' );
+$sidebar = $widget->get_settings_for_display( 'sidebar' );
 if ( empty( $sidebar ) ) {
 	return;
 }
