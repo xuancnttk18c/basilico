@@ -1,6 +1,6 @@
 <?php
 $sidebar = $widget->get_settings_for_display('sidebar');
-$style   = $widget->get_settings('style');
+$style   = $widget->get_setting('style', 'style-df');
 
 if ( empty( $sidebar ) ) {
 	return;
