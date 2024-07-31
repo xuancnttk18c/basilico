@@ -903,6 +903,7 @@
 				}
 				&.quantity-up:before {
 					content: '+';
+					margin-bottom: 3px;
 				}
 				&.quantity-down:before {
 					content: '-';

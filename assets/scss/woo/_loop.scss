@@ -798,6 +798,7 @@ select.orderby{
 			border-top: 1px solid $divider_color;
 			.pxl-btn, .added_to_cart {
 				color: $heading_color;
+				font-family: $body_font_family;
 				font-size: 15px;
 				font-weight: 700;
 				letter-spacing: 0.1em;
