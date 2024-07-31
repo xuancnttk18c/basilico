@@ -865,6 +865,12 @@ if(class_exists('Woocommerce')) {
                     'title'   => esc_html__('Sale Text', 'basilico'),
                     'default' => esc_html__('Sale Off', 'basilico'),
                 ),
+                array(
+                    'id'       => 'add_to_cart_text',
+                    'type'     => 'text',
+                    'title'    => esc_html__('Add To Cart Text', 'basilico'),
+                    'default'  => esc_html__('Add To Cart', 'basilico')
+                )
             )
         )
     ));
@@ -954,12 +960,6 @@ if(class_exists('Woocommerce')) {
                     ),
                     'default' => 'btn-outline-secondary',
                 ),
-                array(
-                    'id'       => 'add_to_cart_text',
-                    'title'    => esc_html__('Add To Cart Text', 'basilico'),
-                    'type'     => 'text',
-                    'default'  => esc_html__('Add To Cart', 'basilico')
-                )
             )
         )
     ));
