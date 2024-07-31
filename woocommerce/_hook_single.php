@@ -221,7 +221,7 @@ if(!function_exists('basilico_wc_template_single_meta')){
 			echo '<span class="sku_wrapper"><span class="lbl">'.esc_html__( 'SKU:', 'basilico' ).'</span> <span class="sku">'.$sku.'</span></span>';
 		}
 
-		echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in"><span class="lbl">' . _n( 'Category: ', 'Categories:', count( $product->get_category_ids() ), 'basilico' ) . '</span>', '</span>' );
+		echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in"><span class="lbl">' . _n( 'Category: ', 'Categories: ', count( $product->get_category_ids() ), 'basilico' ) . '</span>', '</span>' );
 
 		echo wc_get_product_tag_list( $product->get_id(), ', ', '<span class="tagged_as"><span class="lbl">' . _n( 'Tag: ', 'Tags: ', count( $product->get_tag_ids() ), 'basilico' ) . '</span>', '</span>' );
 
