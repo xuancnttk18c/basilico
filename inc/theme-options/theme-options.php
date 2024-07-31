@@ -860,27 +860,6 @@ if(class_exists('Woocommerce')) {
                     'display_value' => 'text',
                 ),
                 array(
-                    'id'       => 'add_to_cart_button_style',
-                    'type'     => 'select',
-                    'title'    => esc_html__('Add To Cart Button Style', 'basilico'),
-                    'options' => array(
-                        'btn-default' => esc_html__('Default', 'basilico' ),
-                        'btn-white' => esc_html__('White', 'basilico' ),
-                        'btn-fullwidth' => esc_html__('Full Width', 'basilico' ),
-                        'btn-outline' => esc_html__('Out Line', 'basilico' ),
-                        'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
-                        'btn-additional-1' => esc_html__('Additional Button 01', 'basilico' ),
-                        'btn-additional-2' => esc_html__('Additional Button 02', 'basilico' ),
-                        'btn-additional-3' => esc_html__('Additional Button 03', 'basilico' ),
-                        'btn-additional-4' => esc_html__('Additional Button 04', 'basilico' ),
-                        'btn-additional-5' => esc_html__('Additional Button 05', 'basilico' ),
-                        'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
-                        'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
-                        'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
-                    ),
-                    'default' => 'btn-outline-secondary',
-                ),
-                array(
                     'id'      => 'onsale_text',
                     'type'    => 'text',
                     'title'   => esc_html__('Sale Text', 'basilico'),
@@ -953,6 +932,33 @@ if(class_exists('Woocommerce')) {
                         'equals',
                         '1'
                     ]
+                ),
+                array(
+                    'id'       => 'add_to_cart_button_style',
+                    'type'     => 'select',
+                    'title'    => esc_html__('Add To Cart Button Style', 'basilico'),
+                    'options' => array(
+                        'btn-default' => esc_html__('Default', 'basilico' ),
+                        'btn-white' => esc_html__('White', 'basilico' ),
+                        'btn-fullwidth' => esc_html__('Full Width', 'basilico' ),
+                        'btn-outline' => esc_html__('Out Line', 'basilico' ),
+                        'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
+                        'btn-additional-1' => esc_html__('Additional Button 01', 'basilico' ),
+                        'btn-additional-2' => esc_html__('Additional Button 02', 'basilico' ),
+                        'btn-additional-3' => esc_html__('Additional Button 03', 'basilico' ),
+                        'btn-additional-4' => esc_html__('Additional Button 04', 'basilico' ),
+                        'btn-additional-5' => esc_html__('Additional Button 05', 'basilico' ),
+                        'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
+                        'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
+                        'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
+                    ),
+                    'default' => 'btn-outline-secondary',
+                ),
+                array(
+                    'id'       => 'add_to_cart_text',
+                    'title'    => esc_html__('Add To Cart Text', 'basilico'),
+                    'type'     => 'text',
+                    'default'  => esc_html__('Add To Cart', 'basilico')
                 )
             )
         )

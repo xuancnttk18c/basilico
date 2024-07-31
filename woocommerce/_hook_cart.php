@@ -215,6 +215,6 @@ function basilico_remove_from_cart() {
 // Change Add to cart text
 add_filter('woocommerce_product_add_to_cart_text', 'woocommerce_custom_add_to_cart_text'); 
 function woocommerce_custom_add_to_cart_text() {
-	$cart_text = 'Order Now';
+	$cart_text = basilico()->get_theme_opt('add_to_cart_text', 'Add To Cart');
 	return esc_attr($cart_text);
 }
