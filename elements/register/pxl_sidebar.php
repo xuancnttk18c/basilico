@@ -3,9 +3,9 @@ global $wp_registered_sidebars;
 $options = [];
 
 if ( ! $wp_registered_sidebars ) {
-    $options[''] = esc_html__( 'No sidebars were found', 'elementor' );
+    $options[''] = esc_html__( 'No sidebars were found', 'basilico' );
 } else {
-    $options[''] = esc_html__( 'Choose Sidebar', 'elementor' );
+    $options[''] = esc_html__( 'Choose Sidebar', 'basilico' );
 
     foreach ( $wp_registered_sidebars as $sidebar_id => $sidebar ) {
         $options[ $sidebar_id ] = $sidebar['name'];
@@ -30,14 +30,14 @@ pxl_add_custom_widget(
                     'controls' => array(
                         array(
                             'name' => 'sidebar',
-                            'label' => esc_html__( 'Choose Sidebar', 'elementor' ),
+                            'label' => esc_html__( 'Choose Sidebar', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'default' => $default_key,
                             'options' => $options,
                         ),
                         array(
                             'name' => 'style',
-                            'label' => esc_html__( 'Style', 'elementor' ),
+                            'label' => esc_html__( 'Style', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => [
                                 'style-df' => esc_html__('Default', 'basilico'),
