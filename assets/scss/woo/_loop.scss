@@ -1,6 +1,6 @@
 .woocommerce-pagination {
 	@include d-flex();
-	margin-top: 50px;
+	padding-top: 50px;
 }
 
 // Top bar view
@@ -815,6 +815,7 @@ select.orderby{
 	}
 	.products {
 		margin-top: -30px;
+		margin-bottom: 30px;
 		padding: 0 15px;
 		.grid-item {
 			margin-top: 30px;
