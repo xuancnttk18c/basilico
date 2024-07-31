@@ -30,7 +30,7 @@ class PXL_Cart_Widget extends WC_Widget {
 	}
 
 	public function widget( $args, $instance ) {
-		if ( apply_filters( 'basilico_widget_cart_is_hidden', is_cart() || is_checkout() ) ) {
+		if ( apply_filters( 'woocommerce_widget_cart_is_hidden', is_cart() || is_checkout() ) ) {
 			return;
 		}
 
