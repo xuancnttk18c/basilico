@@ -45,6 +45,8 @@ class PXL_Cart_Widget extends WC_Widget {
 		if ( !\Elementor\Plugin::$instance->editor->is_edit_mode()) :
 			woocommerce_mini_cart();
 			wc_get_template( 'cart/mini-cart-totals.php' );
+		else :
+			echo esc_html('Can not show this content in Elementor Edit Mode. You can check this content in frontend shop page.', 'basilico');
 		endif;
 
 		$this->widget_end( $args );
