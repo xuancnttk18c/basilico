@@ -449,6 +449,17 @@
 			margin-bottom: 0;
 		}
 		.cart-footer-inner {
+			.total {
+				margin: 0;
+				padding: 26px 30px;
+				background-color: $divider_color;
+				.total-lbl {
+					font-family: $body_font_family;
+					font-weight: 500;
+					line-height: 1;
+					letter-spacing: 0;
+				}
+			}
 			.buttons {
 				.button {
 					width: 50%;
