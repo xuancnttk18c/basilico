@@ -276,6 +276,13 @@
 					}
 				}
 			}
+			&.layout-1 {
+				ul .cart-item-wrap .cart-item-info-inner-wrap .product-name {
+					a {
+						@include multiline-hover-underline();
+					}
+				}
+			}
 			&.layout-2 {
 				ul li {
 					border-bottom-color: $divider_color;
@@ -335,18 +342,6 @@
 						}
 					}
 				}
-			}
-		}
-	}
-}
-
-#pxl-sidebar-area.default,
-.elementor-widget-sidebar.default,
-.elementor-widget.default .e-sidebar-widget {
-	.widget_shopping_cart {
-		ul .cart-item-wrap .cart-item-info-inner-wrap .product-name {
-			a {
-				@include multiline-hover-underline();
 			}
 		}
 	}

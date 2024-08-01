@@ -22,12 +22,12 @@ class PXL_Cart_Widget extends WC_Widget {
 			),
 			'layout'        => array(
 				'type'    => 'select',
-				'std'     => '',
+				'std'     => 'layout-1',
 				'label'   => __( 'Layout', 'basilico' ),
 				'options' => array(
-					''         => __( 'Layout 1', 'basilico' ),
+					'layout-1' => __( 'Layout 1', 'basilico' ),
 					'layout-2' => __( 'Layout 2', 'basilico' ),
-					'layout-3'   => __( 'Layout 3', 'basilico' ),
+					'layout-3' => __( 'Layout 3', 'basilico' ),
 				),
 			),
 		);
