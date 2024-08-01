@@ -52,8 +52,8 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 							</div>
 						</div>
 						<div class="cart-item-info col"> 
-							<div class="cart-item-info-inner row gx-20">
-								<div class="cart-item-info-inner-wrap col">
+							<div class="cart-item-info-inner">
+								<div class="cart-item-info-inner-wrap">
 									<h5 class="product-name">
 										<?php if ( empty( $product_permalink ) ) : ?>
 											<?php echo ''.$product_name; ?>
@@ -63,11 +63,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 											</a>
 										<?php endif; ?>
 									</h5>
-
 									<?php echo wc_get_formatted_cart_item_data( $cart_item ); ?>
-									<?php echo '<div class="price">' . $product_price . '</div>'; ?>
-								</div>
-								<div class="cart-item-quantify col-auto">
 									<div class="product-quantity">
 										<?php
 										if ( $_product->is_sold_individually() ) {
@@ -91,6 +87,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 										echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );  
 										?>
 									</div>
+									<?php echo '<div class="price">' . $product_price . '</div>'; ?>
 								</div>
 							</div> 
 						</div>
