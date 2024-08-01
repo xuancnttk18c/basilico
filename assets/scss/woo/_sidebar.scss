@@ -421,67 +421,62 @@
 					}
 				}
 			}
-		}
-	}
-}
-
-#pxl-sidebar-area.style-4,
-.elementor-widget-sidebar.style-4,
-.elementor-widget.style-4 .e-sidebar-widget {
-	.widget_shopping_cart {
-		padding: 0;
-		.widget-title {
-			padding-left: 30px;
-			padding-right: 30px;
-			margin-bottom: 0;
-		}
-		ul {
-			margin: 0;
-			li {
-				padding: 30px;
-				background-color: #fff;
-				img {
-					width: 95px;
-					height: 95px;
-					background-color: #eae1d6;
-					border: 1px solid $divider_color;
+			&.layout-4 {
+				padding: 0;
+				.widget-title {
+					padding-left: 30px;
+					padding-right: 30px;
+					margin-bottom: 0;
 				}
-			}
-		}
-		.cart-footer-inner {
-			.total {
-				margin: 0;
-				padding: 26px 30px;
-				@include d-flex();
-				justify-content: space-between;
-				background-color: $divider_color;
-				.total-lbl, .total-value .amount {
-					font-family: $body_font_family;
-					font-weight: 500;
-					letter-spacing: 0;
-					color: #fff;
-				}
-			}
-			.buttons {
-				.button {
-					width: 50%;
-					background-color: $primary_color;
-					font-family: $body_font_family;
-					font-size: 15px;
-					font-weight: 700;
-					height: 60px;
-					letter-spacing: 0.1em;
-					color: #fff;
-					+ .button {
-						border-left: 1px solid $divider_color;
-					}
-					span:after,
-					&:after {
-						content: none;
-					}
-					&:hover {
+				ul {
+					margin: 0;
+					li {
+						padding: 30px;
 						background-color: #fff;
-						color: $primary_color;
+						img {
+							width: 95px;
+							height: 95px;
+							background-color: #eae1d6;
+							border: 1px solid $divider_color;
+						}
+					}
+				}
+				.cart-footer-inner {
+					.total {
+						margin: 0;
+						padding: 26px 30px;
+						@include d-flex();
+						justify-content: space-between;
+						background-color: $divider_color;
+						.total-lbl, .total-value .amount {
+							font-family: $body_font_family;
+							font-weight: 500;
+							letter-spacing: 0;
+							color: #fff;
+						}
+					}
+					.buttons {
+						.button {
+							width: 50%;
+							background-color: $primary_color;
+							font-family: $body_font_family;
+							font-size: 15px;
+							font-weight: 700;
+							height: 60px;
+							letter-spacing: 0.1em;
+							color: #fff;
+							+ .button {
+								border-left: 1px solid $divider_color;
+							}
+							span:after,
+							&:after {
+								content: none;
+							}
+							&:hover {
+								background-color: #fff;
+								color: $primary_color;
+							}
+						}
 					}
 				}
 			}
