@@ -28,6 +28,7 @@ class PXL_Cart_Widget extends WC_Widget {
 					'layout-1' => __( 'Layout 1', 'basilico' ),
 					'layout-2' => __( 'Layout 2', 'basilico' ),
 					'layout-3' => __( 'Layout 3', 'basilico' ),
+					'layout-4' => __( 'Layout 3', 'basilico' ),
 				),
 			),
 		);
@@ -58,7 +59,9 @@ class PXL_Cart_Widget extends WC_Widget {
 
 		echo '<div class="pxl-cart-widget ' . $instance['layout'] . '">' ;
 		if ( !\Elementor\Plugin::$instance->editor->is_edit_mode()) :
-			woocommerce_mini_cart();
+			woocommerce_mini_cart(array(
+				'list_class' => $instance['layout'],
+			));
 			wc_get_template( 'cart/mini-cart-totals.php' );
 		else :
 			echo esc_html('Can not show this content in Elementor Edit Mode. You can check this content in frontend shop page.', 'basilico');

@@ -1,6 +1,7 @@
 <?php
 
 defined( 'ABSPATH' ) || exit;
+var_dump($args['list_class']);
 
 do_action( 'woocommerce_before_mini_cart' ); ?> 
 
