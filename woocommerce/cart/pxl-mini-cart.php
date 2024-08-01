@@ -2,11 +2,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$cart_style = basilico()->get_theme_opt('mini_cart_style', 'style-df');
-
 do_action( 'woocommerce_before_mini_cart' ); ?> 
 
-<div class="pxl-widget-cart-content <?php echo esc_attr($cart_style); ?>">
+<div class="pxl-widget-cart-content">
 	<?php if (!WC()->cart->is_empty()) : ?>
 	<ul class="woocommerce-mini-cart cart_list product_list_widget <?php echo esc_attr( $args['list_class'] ); ?>">
 		<?php
@@ -104,17 +102,6 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 		do_action( 'woocommerce_mini_cart_contents' );
 		?>
 	</ul>
-	<div class="cart-footer-inner">
-		<div class="woocommerce-mini-cart__total total">
-			<span class="total-lbl"><?php echo esc_html__( 'Subtotal: ', 'basilico' ); ?></span>
-			<span class="total-value"><?php echo WC()->cart->get_cart_subtotal(); ?></span>
-		</div>
-		<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
-		<div class="woocommerce-mini-cart__buttons buttons">
-			<?php do_action( 'woocommerce_widget_shopping_cart_buttons' ); ?>	
-		</div>
-		<?php do_action( 'woocommerce_widget_shopping_cart_after_buttons' ); ?>
-	</div>
 <?php else : ?>
 	<?php wc_get_template( 'cart/cart-empty.php' ); ?>
 <?php endif; ?>
