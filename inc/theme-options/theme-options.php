@@ -1020,7 +1020,7 @@ if(class_exists('Woocommerce')) {
                     'description' => esc_html__('This option change the appearance of mini cart and cart dropdown.', 'basilico'),
                     'options' => [
                         'style-df' => esc_html__('Default', 'basilico'),
-                        'style-2' => esc_html__('Default', 'basilico'),
+                        'style-2' => esc_html__('Style 2', 'basilico'),
                     ],
                     'default' => 'style-df'
                 ),
