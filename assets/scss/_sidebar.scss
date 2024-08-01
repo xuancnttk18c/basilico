@@ -113,6 +113,26 @@
     }
 }
 
+#pxl-sidebar-area.style-4 .widget,
+.elementor-widget-sidebar.style-4 .widget,
+.elementor-widget.style-4 .e-sidebar-widget {
+    border: 1px solid $divider_color;
+    .widget-title,
+    &.widget_block h2,
+    .wp-block-search__label,
+    .widgettitle {
+        padding: 20px 0;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        text-transform: capitalize;
+        color: $secondary_color;
+        &:before {
+            background-color: $divider_color;
+        }
+    }
+}
+
 #pxl-sidebar-area .mc4wp-form .mailchimp-form {
     button[type="submit"] {
         font-size: 14px;
