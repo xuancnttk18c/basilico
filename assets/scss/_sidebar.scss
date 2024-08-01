@@ -121,7 +121,7 @@
     &.widget_block h2,
     .wp-block-search__label,
     .widgettitle {
-        padding: 20px 0;
+        padding: 25px 0;
         font-size: 30px;
         font-weight: 400;
         letter-spacing: 0.03em;
@@ -770,6 +770,59 @@ ul.menu {
                     }
                     &:hover {
                         margin-left: 0px;
+                    }
+                }
+                &.current-cat > a,
+                &.current-cat-parent > a,
+                &.current-menu-item > a,
+                > a:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+#pxl-main .pxl-sidebar-area.style-4,
+#pxl-main .elementor-widget-sidebar.style-4 {
+    .widget_categories,
+    .widget_product_categories,
+    .widget_nav_menu,
+    .pxl-nav-menu.e-sidebar-widget,
+    .widget_pages,
+    .widget_archive,
+    .widget_meta,
+    .widget_block {
+        .product-categories {
+            overflow: hidden;
+        }
+        ul {
+            overflow: hidden;
+            li {
+                a {
+                    font-size: 17px;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                    color: $heading_color;
+                    text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+                    padding: 20px 0;
+                    position: relative;
+                    transition: all 300ms ease 0s;
+                }
+                > a {
+                    margin-left: -25px;
+                    &:before {
+                        content: "\e9e5";
+                        font-family: $pxli_font;
+                        display: inline-flex;
+                        color: $primary_color;
+                        margin-right: 12px;
+                    }
+                    &:hover {
+                        margin-left: 0px;
+                        color: $primary_color;
                     }
                 }
                 &.current-cat > a,
