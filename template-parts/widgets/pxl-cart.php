@@ -22,7 +22,7 @@ class PXL_Cart_Widget extends WC_Widget {
 			),
 			'layout'        => array(
 				'type'    => 'select',
-				'std'     => 'layout-1',
+				'std'     => '',
 				'label'   => __( 'Layout', 'basilico' ),
 				'options' => array(
 					''         => __( 'Layout 1', 'basilico' ),
@@ -52,7 +52,7 @@ class PXL_Cart_Widget extends WC_Widget {
 
 		$this->widget_start( $args, $instance );
 
-		echo '<div class="pxl-cart-widget">';
+		echo '<div class="pxl-cart-widget ' . $instance['layout'] . '">' ;
 		if ( !\Elementor\Plugin::$instance->editor->is_edit_mode()) :
 			woocommerce_mini_cart();
 			wc_get_template( 'cart/mini-cart-totals.php' );
