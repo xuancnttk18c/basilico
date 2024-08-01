@@ -316,6 +316,11 @@
 				}
 			}
 		}
+		&:not(:has(cart-footer-inner)) {
+			ul li:last-child {
+				border-bottom: none;
+			}
+		}
 		.total {
 			margin-top: 16px;
 			margin-bottom: 5px;
