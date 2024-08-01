@@ -318,6 +318,7 @@
 		}
 		&:not(:has(.cart-footer-inner)) {
 			ul li:last-child {
+				padding-bottom: 0;
 				border-bottom: none;
 			}
 		}
