@@ -820,10 +820,10 @@ select.orderby{
 		.grid-item {
 			margin-top: 30px;
 			padding: 0;
-			border: 1px solid $divider_color;
-			margin-right: -1px;
 			@include transition();
 			.pxl-shop-item-wrap {
+				margin-right: -1px;
+				border: 1px solid $divider_color;
 				padding: 20px 20px 100px;
 				position: relative;
 				height: 100%;
