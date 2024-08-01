@@ -60,7 +60,7 @@ class PXL_Cart_Widget extends WC_Widget {
 		echo '<div class="pxl-cart-widget ' . $instance['layout'] . '">' ;
 		if ( !\Elementor\Plugin::$instance->editor->is_edit_mode()) :
 			woocommerce_mini_cart(array(
-				'list_class' => $instance['layout'],
+				'layout' => $instance['layout'],
 			));
 			wc_get_template( 'cart/mini-cart-totals.php' );
 		else :

@@ -1,7 +1,14 @@
 <?php
 
 defined( 'ABSPATH' ) || exit;
-var_dump($args['list_class']);
+
+if (isset($args['layout'])) {
+	$layout = $args['layout'];
+}
+else {
+	$layout = '';
+}
+var_dump($layout);
 
 do_action( 'woocommerce_before_mini_cart' ); ?> 
 
