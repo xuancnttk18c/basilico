@@ -448,6 +448,13 @@
 			padding-right: 30px;
 			margin-bottom: 0;
 		}
+		ul {
+			margin: 0;
+			li {
+				padding: 30px;
+				background-color: #fff;
+			}
+		}
 		.cart-footer-inner {
 			.total {
 				margin: 0;
@@ -458,7 +465,6 @@
 				.total-lbl, .total-value .amount {
 					font-family: $body_font_family;
 					font-weight: 500;
-					line-height: 1;
 					letter-spacing: 0;
 					color: #fff;
 				}
