@@ -316,7 +316,7 @@
 				}
 			}
 		}
-		&:not(:has(cart-footer-inner)) {
+		&:not(:has(.cart-footer-inner)) {
 			ul li:last-child {
 				border-bottom: none;
 			}
