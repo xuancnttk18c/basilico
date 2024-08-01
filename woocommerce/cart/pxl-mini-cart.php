@@ -8,7 +8,6 @@ if (isset($args['layout'])) {
 else {
 	$layout = '';
 }
-var_dump($layout);
 
 do_action( 'woocommerce_before_mini_cart' ); ?> 
 
@@ -71,34 +70,68 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 											</a>
 										<?php endif; ?>
 									</h5>
-
 									<?php echo wc_get_formatted_cart_item_data( $cart_item ); ?>
-									<?php echo '<div class="price">' . $product_price . '</div>'; ?>
+									<?php
+									if ($layout == 'layout-4') : ?>
+										<div class="cart-item-quantify col-auto">
+											<div class="product-quantity">
+												<?php
+												if ( $_product->is_sold_individually() ) {
+													$min_quantity = 1;
+													$max_quantity = 1;
+												} else {
+													$min_quantity = 0;
+													$max_quantity = $_product->get_max_purchase_quantity();
+												}
+												$product_quantity = woocommerce_quantity_input(
+													array(
+														'input_name'   => $cart_item_key,
+														'input_value'  => $cart_item['quantity'],
+														'max_value'    => $max_quantity,
+														'min_value'    => $min_quantity,
+														'product_name' => $_product->get_name(),
+													),
+													$_product,
+													false
+												);
+												echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );  
+												?>
+											</div>
+										</div>
+									<?php else:
+										echo '<div class="price">' . $product_price . '</div>';
+									endif; ?>
 								</div>
 								<div class="cart-item-quantify col-auto">
-									<div class="product-quantity">
-										<?php
-										if ( $_product->is_sold_individually() ) {
-											$min_quantity = 1;
-											$max_quantity = 1;
-										} else {
-											$min_quantity = 0;
-											$max_quantity = $_product->get_max_purchase_quantity();
-										}
-										$product_quantity = woocommerce_quantity_input(
-											array(
-												'input_name'   => $cart_item_key,
-												'input_value'  => $cart_item['quantity'],
-												'max_value'    => $max_quantity,
-												'min_value'    => $min_quantity,
-												'product_name' => $_product->get_name(),
-											),
-											$_product,
-											false
-										);
-										echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );  
-										?>
-									</div>
+									<?php if ($layout == 'layout-4') :
+										echo '<div class="price">' . $product_price . '</div>';
+									else: ?>
+										<div class="cart-item-quantify col-auto">
+											<div class="product-quantity">
+												<?php
+												if ( $_product->is_sold_individually() ) {
+													$min_quantity = 1;
+													$max_quantity = 1;
+												} else {
+													$min_quantity = 0;
+													$max_quantity = $_product->get_max_purchase_quantity();
+												}
+												$product_quantity = woocommerce_quantity_input(
+													array(
+														'input_name'   => $cart_item_key,
+														'input_value'  => $cart_item['quantity'],
+														'max_value'    => $max_quantity,
+														'min_value'    => $min_quantity,
+														'product_name' => $_product->get_name(),
+													),
+													$_product,
+													false
+												);
+												echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );  
+												?>
+											</div>
+										</div>
+									<?php endif; ?>
 								</div>
 							</div> 
 						</div>
