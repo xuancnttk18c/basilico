@@ -453,6 +453,11 @@
 			li {
 				padding: 30px;
 				background-color: #fff;
+				img {
+					width: 95px;
+					height: 95px;
+					border: 1px solid $divider_color;
+				}
 			}
 		}
 		.cart-footer-inner {
