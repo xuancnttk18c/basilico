@@ -50,6 +50,12 @@ class PXL_Cart_Widget extends WC_Widget {
 			$instance['title'] = __( 'Cart', 'basilico' );
 		}
 
+		// Add custom class to widget container
+        $args['before_widget'] = str_replace('class="', 'class="'.$instance['title'].' ', $args['before_widget']);
+
+        // Call the parent widget method
+        parent::widget($args, $instance);
+
 		$this->widget_start( $args, $instance );
 	
 		if ( !\Elementor\Plugin::$instance->editor->is_edit_mode()) :
