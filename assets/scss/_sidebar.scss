@@ -129,6 +129,8 @@
         color: $secondary_color;
         &:before {
             background-color: $divider_color;
+            background-image: url(../images/dirt_explosion_overlay.png);
+            background-position: center;
         }
     }
 }
