@@ -147,7 +147,7 @@
 }
 
 /* Widget Cart */
-.pxl-sidebar-area,
+#pxl-sidebar-area,
 .elementor-widget-sidebar,
 .elementor-widget .e-sidebar-widget {
 	.widget_shopping_cart {
@@ -276,7 +276,7 @@
 	}
 }
 
-.pxl-sidebar-area.default,
+#pxl-sidebar-area.default,
 .elementor-widget-sidebar.default,
 .elementor-widget.default .e-sidebar-widget {
 	.widget_shopping_cart {
@@ -288,7 +288,7 @@
 	}
 }
 
-.pxl-sidebar-area.style-2,
+#pxl-sidebar-area.style-2,
 .elementor-widget-sidebar.style-2,
 .elementor-widget.style-2 .e-sidebar-widget {
 	.widget_shopping_cart {
@@ -353,7 +353,7 @@
 	}
 }
 
-.pxl-sidebar-area.style-3,
+#pxl-sidebar-area.style-3,
 .elementor-widget-sidebar.style-3,
 .elementor-widget.style-3 .e-sidebar-widget {
 	.widget_shopping_cart {
@@ -438,7 +438,7 @@
 	}
 }
 
-.pxl-sidebar-area.style-4,
+#pxl-sidebar-area.style-4,
 .elementor-widget-sidebar.style-4,
 .elementor-widget.style-4 .e-sidebar-widget {
 	.widget_shopping_cart {
@@ -477,7 +477,11 @@
 
 /* Widget Product Category */
 #pxl-sidebar-area.sidebar-shop.default .widget_product_categories,
-#pxl-sidebar-area.sidebar-shop.style-2 .widget_product_categories {
+#pxl-sidebar-area.sidebar-shop.style-2 .widget_product_categories,
+.elementor-widget-sidebar.default,
+.elementor-widget.default .e-sidebar-widget,
+.elementor-widget-sidebar.style-2,
+.elementor-widget.style-2 .e-sidebar-widget  {
 	.product-categories {
 		li a {
 			text-transform: uppercase !important;
@@ -584,7 +588,7 @@
 	}
 }
 
-.pxl-sidebar-area.style-2 .widget_price_filter {
+#pxl-sidebar-area.style-2 .widget_price_filter {
 	.ui-widget-content:before {
 		background-color: rgba(200, 200, 200, 0.25);
 	}
@@ -606,7 +610,7 @@
 	}
 }
 
-.pxl-sidebar-area.style-3 .widget_price_filter {
+#pxl-sidebar-area.style-3 .widget_price_filter {
 	.ui-slider .ui-slider-handle {
 		background-color: transparent;
 		transform: none;
@@ -766,7 +770,7 @@
 	}
 }
 
-.pxl-sidebar-area.style-2 .widget_products {
+#pxl-sidebar-area.style-2 .widget_products {
 	ul {
 		margin: 15px 0;
 		li {
@@ -820,7 +824,7 @@
 	}
 }
 
-.pxl-sidebar-area.style-3 .widget_products {
+#pxl-sidebar-area.style-3 .widget_products {
 	ul li {
 		border-bottom-color: rgba($secondary_color_rgb, 0.1);
 		img {
