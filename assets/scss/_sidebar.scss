@@ -24,7 +24,7 @@
         padding: 0 23px 30px 30px;
         background-color: $additional01_color;
     }
-    &:has(.pxl-cart-widget, .style-4) {
+    &:has(.pxl-cart-widget.style-4) {
         padding: 0;
         .widget-title,
         &.widget_block h2,
