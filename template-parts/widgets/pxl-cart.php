@@ -28,7 +28,7 @@ class PXL_Cart_Widget extends WC_Widget {
 					'layout-1' => __( 'Layout 1', 'basilico' ),
 					'layout-2' => __( 'Layout 2', 'basilico' ),
 					'layout-3' => __( 'Layout 3', 'basilico' ),
-					'layout-4' => __( 'Layout 3', 'basilico' ),
+					'layout-4' => __( 'Layout 4', 'basilico' ),
 				),
 			),
 		);

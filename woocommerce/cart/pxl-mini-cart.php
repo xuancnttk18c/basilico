@@ -9,6 +9,7 @@ else {
 	$layout = '';
 }
 
+var_dump($layout);
 do_action( 'woocommerce_before_mini_cart' ); ?> 
 
 <div class="pxl-widget-cart-content">
