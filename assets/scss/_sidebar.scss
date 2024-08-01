@@ -723,36 +723,39 @@ ul.menu {
         .product-categories {
             overflow: hidden;
         }
-        ul li {
-            a {
-                font-size: 17px;
-                font-weight: normal;
-                letter-spacing: 0.01em;
-                color: $heading_color;
-                display: flex;
-                align-items: center;
-                padding: 20px 0;
-                position: relative;
-                transition: all 300ms ease 0s;
-            }
-            > a {
-                margin-left: -25px;
-                &:before {
-                    content: "\e9e6";
-                    font-family: $pxli_font;
-                    display: inline-flex;
-                    color: $primary_color;
-                    margin-right: 12px;
+        ul {
+            overflow: hidden;
+            li {
+                a {
+                    font-size: 17px;
+                    font-weight: normal;
+                    letter-spacing: 0.01em;
+                    color: $heading_color;
+                    display: flex;
+                    align-items: center;
+                    padding: 20px 0;
+                    position: relative;
+                    transition: all 300ms ease 0s;
                 }
-                &:hover {
-                    margin-left: 0px;
+                > a {
+                    margin-left: -25px;
+                    &:before {
+                        content: "\e9e6";
+                        font-family: $pxli_font;
+                        display: inline-flex;
+                        color: $primary_color;
+                        margin-right: 12px;
+                    }
+                    &:hover {
+                        margin-left: 0px;
+                    }
                 }
-            }
-            &.current-cat > a,
-            &.current-cat-parent > a,
-            &.current-menu-item > a,
-            > a:hover {
-                text-decoration: none;
+                &.current-cat > a,
+                &.current-cat-parent > a,
+                &.current-menu-item > a,
+                > a:hover {
+                    text-decoration: none;
+                }
             }
         }
     }
