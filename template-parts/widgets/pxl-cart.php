@@ -50,6 +50,10 @@ class PXL_Cart_Widget extends WC_Widget {
 			$instance['title'] = __( 'Cart', 'basilico' );
 		}
 
+		if ( ! isset( $instance['layout'] ) ) {
+			$instance['layout'] = 'layout-1';
+		}
+
 		$this->widget_start( $args, $instance );
 
 		echo '<div class="pxl-cart-widget ' . $instance['layout'] . '">' ;
