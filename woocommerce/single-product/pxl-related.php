@@ -74,7 +74,7 @@ if ( $related_products ) : ?>
 		<?php endif; ?>
 		<div class="pxl-product-grid pxl-product-loop-carousel">
 			<div class="pxl-swiper-slider pxl-product-carousel relative">
-				<div class="pxl-swiper-slider-inner pxl-carousel-inner overflow-hidden">
+				<div class="pxl-swiper-slider-inner pxl-carousel-inner">
 					<div <?php basilico()->print_render_attribute_string( 'carousel' ); ?>>
 						<div class="pxl-swiper-wrapper swiper-wrapper">
 							<?php foreach ( $related_products as $related_product ) : ?>
