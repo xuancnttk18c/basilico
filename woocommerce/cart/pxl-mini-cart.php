@@ -2,9 +2,11 @@
 
 defined( 'ABSPATH' ) || exit;
 
+$cart_style = basilico()->get_theme_opt('mini_cart_style', 'style-df');
+
 do_action( 'woocommerce_before_mini_cart' ); ?> 
 
-<div class="pxl-widget-cart-content">
+<div class="pxl-widget-cart-content <?php echo esc_attr($cart_style); ?>">
 	<?php if (!WC()->cart->is_empty()) : ?>
 	<ul class="woocommerce-mini-cart cart_list product_list_widget <?php echo esc_attr( $args['list_class'] ); ?>">
 		<?php
