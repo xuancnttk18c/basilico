@@ -493,7 +493,8 @@
 						content: none;
 					}
 					&:hover {
-						background-color: $divider_color;
+						background-color: $fff;
+						color: $primary_color;
 					}
 				}
 			}
