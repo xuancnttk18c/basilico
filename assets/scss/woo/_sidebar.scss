@@ -459,6 +459,9 @@
 					height: 60px;
 					letter-spacing: 0.1em;
 					color: #fff;
+					+ .button {
+						border-left: 1px solid $divider_color;
+					}
 					span:after,
 					&:after {
 						content: none;
@@ -467,9 +470,6 @@
 						background-color: $divider_color;
 					}
 				}
-			}
-			+ .button {
-				border-left: 1px solid $divider_color;
 			}
 		}
 	}
