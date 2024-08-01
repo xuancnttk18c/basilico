@@ -24,15 +24,6 @@
         padding: 0 23px 30px 30px;
         background-color: $additional01_color;
     }
-    .widget_shopping_cart:has(.style-4) {
-        padding: 0;
-        .widget-title,
-        &.widget_block h2,
-        .wp-block-search__label,
-        .widgettitle {
-            padding-left: 30px;
-        }
-    }
     .widget-title,
     &.widget_block h2,
     .wp-block-search__label,
