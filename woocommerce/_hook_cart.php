@@ -108,8 +108,9 @@ function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
 	$fragments['.mini-cart-count'] = '<span class="mini-cart-total mini-cart-count">'.WC()->cart->cart_contents_count.'</span>';
 
 	ob_start();
-		wc_get_template( 'cart/mini-cart-totals.php' );
+	wc_get_template( 'cart/mini-cart-totals.php' );
 	$mini_cart_totals = ob_get_clean();
+	
 	$fragments['.pxl-hidden-template-canvas-cart .cart-footer-inner'] = $mini_cart_totals;
 	$fragments['.pxl-cart-dropdown .cart-footer-inner'] = $mini_cart_totals;
 	$fragments['.pxl-cart-widget .cart-footer-inner'] = $mini_cart_totals;
