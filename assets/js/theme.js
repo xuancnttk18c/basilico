@@ -231,7 +231,7 @@
             if ($('body.admin-bar').length > 0)
                 $(document).find('.sidebar-sticky .sidebar-sticky-wrap').css('top', headerStickyHeight + 60 + 'px');
             else 
-                $(document).find('.sidebar-sticky .sidebar-sticky-wrap').css('top', headerStickyHeight + 30 + 'px');           
+            $(document).find('.sidebar-sticky .sidebar-sticky-wrap').css('top', headerStickyHeight + 30 + 'px');           
         }
         else if ($('body.admin-bar').length > 0)
             $(document).find('.sidebar-sticky .sidebar-sticky-wrap').css('top', 60 + 'px');
@@ -476,13 +476,13 @@
         widgetList.each(function () {
             var itemClass = '.box-item';
             jQuery(this)
-                .find(itemClass + ':first-child')
-                .addClass('active');
+            .find(itemClass + ':first-child')
+            .addClass('active');
             jQuery(this)
-                .find(itemClass)
-                .on('mouseover', function () {
-                    jQuery(this).addClass('active').siblings().removeClass('active');
-                });
+            .find(itemClass)
+            .on('mouseover', function () {
+                jQuery(this).addClass('active').siblings().removeClass('active');
+            });
         });
     }
 
@@ -492,9 +492,9 @@
             var $selector = jQuery(this);
             $(window).scroll(function() {
                 var hT = $selector.offset().top,
-                    hH = $selector.outerHeight(),
-                    wH = $(window).height(),
-                    wS = $(this).scrollTop();
+                hH = $selector.outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
                 if (wS > (hT-wH)){
                     $selector.find('.drawing').each(function () {
                         let path = $(this).get(0);
@@ -562,9 +562,9 @@
 
             document.addEventListener('mousemove', e => {
                 window.requestAnimationFrame(() => {
-                   circleStyle.top = `${ e.clientY - cursor.offsetHeight/2 }px`;
-                   circleStyle.left = `${ e.clientX - cursor.offsetWidth/2 }px`;
-               });
+                 circleStyle.top = `${ e.clientY - cursor.offsetHeight/2 }px`;
+                 circleStyle.left = `${ e.clientX - cursor.offsetWidth/2 }px`;
+             });
             });
 
             /** Hover Effect */
@@ -611,11 +611,11 @@
     function basilico_single_product_handler(){
         $(document).on('click','.quantity .quantity-button',function () {
             var $this = $(this),
-                spinner = $this.closest('.quantity'),
-                input = spinner.find('input[type="number"]'),
-                step = input.attr('step'),
-                min = input.attr('min'),
-                max = input.attr('max'),value = parseInt(input.val());
+            spinner = $this.closest('.quantity'),
+            input = spinner.find('input[type="number"]'),
+            step = input.attr('step'),
+            min = input.attr('min'),
+            max = input.attr('max'),value = parseInt(input.val());
             if(!value) value = 0;
             if(!step) step=1;
             step = parseInt(step);
@@ -623,14 +623,14 @@
             var type = $this.hasClass('quantity-up') ? 'up' : 'down' ;
             switch (type)
             {
-                case 'up':
-                    if(!(max && value >= max))
-                        input.val(value+step).change();
-                    break;
-                case 'down':
-                    if (value > min)
-                        input.val(value-step).change();
-                    break;
+            case 'up':
+                if(!(max && value >= max))
+                    input.val(value+step).change();
+                break;
+            case 'down':
+                if (value > min)
+                    input.val(value-step).change();
+                break;
             }
             if(max && (parseInt(input.val()) > max))
                 input.val(max).change();
@@ -650,7 +650,7 @@
                 basilico_mini_cart_body_caculate_height();
             } );
         }
- 
+
         $( document ).on( 'click', '.js-remove-from-cart', function( e ) {
             $(this).closest('.pxl-hidden-template-canvas-cart').addClass('loading');
             $(this).closest('.pxl-cart-dropdown').addClass('loading');
@@ -707,35 +707,31 @@
                 complete: function() {}
             } );
         } );
-        $('.widget_shopping_cart').on( 'change', '.qty', function() {
-            var item_key = $( this ).attr( 'name' );
-            var item_qty = $( this ).val();
-            console.log(main_data);
-            var data = {
-                action: 'basilico_update_product_quantity',
-                cart_item_key: item_key,
-                cart_item_qty: item_qty,
-                security: main_data.nonce,
-            };
-            $.ajax( {
-                url: main_data.ajaxurl,
-                type: 'POST',
-                cache: false,
-                dataType: 'json',
-                data: data,
-                success: function( response ) {  
-                    $( document.body ).trigger( 'wc_fragment_refresh' );
-                    $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
-                },
-                beforeSend: function() {
-                    $('body').addClass('loading');
-                },
-                complete: function(response) {
-                    console.log(response);
-                    console.log(data);
-                }
-            } );
-        });
+        // $('.widget_shopping_cart').on( 'change', '.qty', function() {
+        //     var item_key = $( this ).attr( 'name' );
+        //     var item_qty = $( this ).val();
+        //     console.log(main_data);
+        //     var data = {
+        //         action: 'basilico_update_product_quantity',
+        //         cart_item_key: item_key,
+        //         cart_item_qty: item_qty,
+        //         security: main_data.nonce,
+        //     };
+        //     $.ajax( {
+        //         url: main_data.ajaxurl,
+        //         type: 'POST',
+        //         cache: false,
+        //         dataType: 'json',
+        //         data: data,
+        //         success: function( response ) {  
+        //             $( document.body ).trigger( 'wc_fragment_refresh' );
+        //             $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
+        //         },
+        //         beforeSend: function() {
+        //             $('body').addClass('loading');
+        //         },
+        //     } );
+        // });
         $('.pxl-sticky-atc').on( 'change', '.qty', function() {
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val(); 
@@ -755,7 +751,7 @@
                     $(this).css('right', (right_offset * -1));
                 }
             });
-             
+
         }
     }
 
@@ -779,11 +775,11 @@
         if(typeof $.flexslider != 'undefined'){
             $('.wc-gallery-sync').each(function() {
                 var itemW      = parseInt($(this).attr('data-thumb-w')),
-                    itemH      = parseInt($(this).attr('data-thumb-h')),
-                    itemN      = parseInt($(this).attr('data-thumb-n')),
-                    itemMargin = parseInt($(this).attr('data-thumb-margin')),
-                    window_w = $(window).outerWidth(),
-                    itemSpace  = itemH - itemW + itemMargin;
+                itemH      = parseInt($(this).attr('data-thumb-h')),
+                itemN      = parseInt($(this).attr('data-thumb-n')),
+                itemMargin = parseInt($(this).attr('data-thumb-margin')),
+                window_w = $(window).outerWidth(),
+                itemSpace  = itemH - itemW + itemMargin;
                 var gallery_layout = window_w > 575 ? 'vertical' : 'horizontal';
 
                 if($(this).hasClass('thumbnail-vertical')){
@@ -803,8 +799,8 @@
                         move           : 1,
                         start: function(slider){
                             var asNavFor     = slider.vars.asNavFor,
-                                height       = $(asNavFor).height(),
-                                height_thumb = $(asNavFor).find('.flex-viewport').height();
+                            height       = $(asNavFor).height(),
+                            height_thumb = $(asNavFor).find('.flex-viewport').height();
                             if(window_w > 575) {
                                 slider.css({'max-height' : height_thumb, 'overflow': 'hidden'});
                                 slider.find('> .flex-viewport > *').css({'height': height, 'width': ''});
@@ -837,7 +833,7 @@
     function basilico_table_cart_content(){
         "use strict";
         var table = jQuery('.woocommerce-cart-form__contents'),
-            table_head = table.find('thead');
+        table_head = table.find('thead');
         table_head.find('.product-remove').remove();
         table_head.find('.product-thumbnail').remove();
         table_head.find('.product-name').attr('colspan',2);
@@ -861,5 +857,83 @@
             jQuery(this).attr('colspan',colspan_value);
         });
     }
+
+    //jkdjafklsdjfdfjdklsfj
+
+    function wcMiniUpdateCart( _this, new_qty) {        
+
+        var _pwrap     = _this.parents( '.cart__mini-item' ),
+            _pdata         = _pwrap.data( 'cart-item' ),
+            _cartkey       = _pdata.key,       
+            mini_cart_content = _this.parents( '.unsen-mini-cart');
+
+        $.ajax({
+            url: mini_cart_data.ajax_url,
+            type: 'POST',
+            data: {
+                action: 'wc_unsen_mini_cart_qty',
+                cart_key: _cartkey,
+                new_qty: new_qty              
+            },
+            beforeSend: function() {
+                mini_cart_content.addClass( 'updating');
+            },
+            success:function( response) {
+     
+                $( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, _this ] );     
+                mini_cart_content.removeClass( 'updating');
+            }
+        });        
+    }
+
+    $('.widget_shopping_cart').on( 'change','.qty', function( e ) {
+
+        var _this   = $( this ),
+            new_qty = parseInt( _this.val()),
+            _step   = parseInt( _this.attr( 'step' ) ),
+            _min    = parseInt( _this.attr( 'min' ) ),
+            _max    = parseInt( _this.attr( 'max' ) ),
+            invalid = false;
+       
+        if ( new_qty === 0 ) {
+            //_this.parents( '.cart__mini-item' ).find( '.cart_ac_remove' ).trigger( 'click' );
+            return;
+
+        } else if ( isNaN( new_qty ) || new_qty < 0 ) {
+
+            invalid = true;
+
+            new_qty = 1;
+
+            _this.val( new_qty);
+
+            wcMiniUpdateCart( _this, new_qty );
+
+        } else if ( new_qty > _max && _max > 0 ) {
+            alert( 'Maximum product is: ' + _max );
+            invalid = false;
+
+            new_qty = _max;
+
+            _this.val( new_qty);
+
+            wcMiniUpdateCart( _this, new_qty );
+
+        } else if ( new_qty < _min ) {
+            invalid = true;
+
+        } else if ( ( new_qty % _step ) !== 0 ) {
+            alert( 'Quantity can only be purchased in multiple of ' + _step );
+            invalid = true;
+
+        } else {
+            wcMiniUpdateCart( _this, new_qty );
+        }
+
+        if ( invalid === true ) {
+            _this.val( focus_qty );
+        }
+    });
+
 
 })(jQuery);
