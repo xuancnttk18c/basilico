@@ -862,24 +862,26 @@
 
     function wcMiniUpdateCart( _this, new_qty) {        
 
-        var _pwrap     = _this.parents( '.cart__mini-item' ),
-            _pdata         = _pwrap.data( 'cart-item' ),
+        var _pwrap     = _this.parents( '.mini_cart_item' ),
+            _pdata         = _pwrap.data('cart-item'),
             _cartkey       = _pdata.key,       
-            mini_cart_content = _this.parents( '.unsen-mini-cart');
+            mini_cart_content = _this.parents( '.pxl-widget-cart-content');
+
+            var item_key = _this.attr( 'name' );
+            var item_qty = _this.val(); 
 
         $.ajax({
             url: mini_cart_data.ajax_url,
             type: 'POST',
             data: {
                 action: 'wc_unsen_mini_cart_qty',
-                cart_key: _cartkey,
-                new_qty: new_qty              
+                cart_key: item_key,
+                new_qty: item_qty              
             },
             beforeSend: function() {
-                mini_cart_content.addClass( 'updating');
+                //mini_cart_content.addClass( 'updating');
             },
             success:function( response) {
-     
                 $( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, _this ] );     
                 mini_cart_content.removeClass( 'updating');
             }
