@@ -868,7 +868,7 @@
             var item_qty = _this.val(); 
 
         $.ajax({
-            url: mini_cart_data.ajax_url,
+            url: main_data.ajax_url,
             type: 'POST',
             data: {
                 action: 'wc_unsen_mini_cart_qty',
