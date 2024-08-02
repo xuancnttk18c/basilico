@@ -862,10 +862,7 @@
 
     function wcMiniUpdateCart( _this, new_qty) {        
 
-        var _pwrap     = _this.parents( '.mini_cart_item' ),
-            _pdata         = _pwrap.data('cart-item'),
-            _cartkey       = _pdata.key,       
-            mini_cart_content = _this.parents( '.pxl-widget-cart-content');
+        var mini_cart_content = _this.parents( '.pxl-widget-cart-content');
 
             var item_key = _this.attr( 'name' );
             var item_qty = _this.val(); 
