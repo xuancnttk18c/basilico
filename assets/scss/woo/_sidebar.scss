@@ -198,6 +198,7 @@
 					.cart-item-wrap {
 						@include d-flex();
 						align-items: center;
+						gap: 20px;
 						.cart-item-thumbnail {
 							flex-shrink: 0;
 						}
