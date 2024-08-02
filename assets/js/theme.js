@@ -706,11 +706,10 @@
                 },
                 complete: function() {}
             } );
-        } );
+        });
         $('.widget_shopping_cart').on( 'change', '.qty', function() {
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val();
-            console.log(main_data);
             var data = {
                 action: 'basilico_update_product_quantity',
                 cart_item_key: item_key,
@@ -728,7 +727,7 @@
                     $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
                 },
                 beforeSend: function() {
-                    $('body').addClass('loading');
+                    $('.widget_shopping_cart').addClass('loading');
                 },
             } );
         });
