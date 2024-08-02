@@ -508,6 +508,11 @@ table.cart {
 		width: 100%;
 		.cart-item-thumbnail {
 			flex-shrink: 0;
+			img {
+				width: 76px;
+				height: 82px;
+				object-fit: cover;
+			}
 		}
 		.cart-item-info {
 			flex-grow: 1;
