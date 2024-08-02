@@ -465,6 +465,52 @@
 								font-weight: 500;
 								margin-bottom: 0;
 							}
+							.product-quantity {
+								.quantity {
+									max-width: 123px;
+									margin-right: 4px;
+									.label {
+										display: none;
+									}
+									.qty-field .quantity-inner {
+										align-items: center;
+										input.qty[type="number"] {
+											background-color: transparent;
+											border: none;
+											padding: 0 15px;
+											width: 55px;
+											font-size: 20px;
+											color: $heading_color;
+											font-weight: 500;
+										}
+										.quantity-button {
+											cursor: pointer;
+											background-color: $primary_color;
+											width: 34px;
+											height: 34px;
+											@include border-radius(50%);
+											display: inline-flex;
+											align-items: center;
+											justify-content: center;
+											&:before {
+												font-family: 'Rowdies';
+												font-size: 23px;
+												font-weight: 400;
+												line-height: 1;
+												color: #fff;
+											}
+											&.quantity-up:before {
+												content: '+';
+												margin-bottom: 3px;
+											}
+											&.quantity-down:before {
+												content: '-';
+												margin-bottom: 5px;
+											}
+										}
+									}
+								}
+							}
 						}
 						img {
 							width: 95px;
