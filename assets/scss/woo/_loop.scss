@@ -810,9 +810,11 @@ select.orderby{
 				&.loading {
 					&:after {
 						content: "\e95b";
+						margin-left: 10px;
 						display: inline-block;
 						@include animation(pxl-spin 2s linear infinite);
 						font-family: $pxli_font;
+						font-size: 11px;
 						color: $heading_color;
 					}
 				}
@@ -875,7 +877,7 @@ select.orderby{
 					background-color: $divider_color;
 					color: #fff;
 				}
-				.add_to_cart_button.loading .pxl-icon:after {
+				.add_to_cart_button.loading:after {
 					color: #fff;
 				}
 				.pxl-clown {
