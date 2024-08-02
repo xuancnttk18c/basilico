@@ -674,6 +674,7 @@ table.cart {
 					.product-name {
 						@include text-truncate-multi-line(17px, 1.2, 2);
 						font-weight: 400;
+						letter-spacing: 0.03em;
 						text-transform: capitalize;
 					}
 					.price .amount {
