@@ -48,7 +48,7 @@ $target = '.pxl-cart-dropdown';
 		<div class="pxl-cart-dropdown">
 			<div class="pxl-cart-dropdown-inner relative">
 				<div class="cart-content-body widget_shopping_cart">
-					<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+					<div class="widget_shopping_cart_content pxl-cart-widget"><?php woocommerce_mini_cart(); ?></div>
 				</div>
 				<div class="cart-content-footer">
 					<div class="cart-footer-wrap">
