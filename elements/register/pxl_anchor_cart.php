@@ -15,13 +15,25 @@ pxl_add_custom_widget(
                     'controls' => array(
                         array(
                             'name' => 'layout_type',
-                            'label' => esc_html__('Layut Type', 'basilico'),
+                            'label' => esc_html__('Layout Type', 'basilico'),
                             'type' => 'select',
                             'options' => [
                                 'layout-df' => esc_html__('Default (Icon)', 'basilico'),
                                 'layout-text' => esc_html__('Text', 'basilico'),
                             ],
                             'default' => 'layout-df' 
+                        ),
+                        array(
+                            'name' => 'cart_style',
+                            'label' => esc_html__('Cart Style', 'basilico'),
+                            'type' => 'select',
+                            'options' => [
+                                'layout-1' => esc_html__('Layout 1', 'basilico'),
+                                'layout-2' => esc_html__('Layout 2', 'basilico'),
+                                'layout-3' => esc_html__('Layout 3', 'basilico'),
+                                'layout-4' => esc_html__('Layout 4', 'basilico'),
+                            ],
+                            'default' => 'layout-1' 
                         ),
                         array(
                             'name' => 'link_target',

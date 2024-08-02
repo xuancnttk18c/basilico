@@ -4,6 +4,7 @@ $template = (int)$widget->get_setting('template','0');
 $link_target = !empty($settings['link_target'] ) ? $settings['link_target'] : 'cart-dropdown';
 $layout_type = $widget->get_setting('layout_type','layout-df');
 $custom_cls = $widget->get_setting('custom_class','');
+$style = $widget->get_setting('cart_style', 'layout-1');
 
 $wrap_cls = [
 	'pxl-anchor-cart d-inline-flex align-items-center align-content-center relative',
@@ -46,7 +47,7 @@ $target = '.pxl-cart-dropdown';
 		</a>
 		<?php if( $link_target == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
 			<div class="pxl-cart-dropdown">
-				<div class="widget_shopping_cart_content pxl-cart-widget">
+				<div class="widget_shopping_cart_content pxl-cart-widget <?php echo esc_attr($style); ?>">
 					<?php woocommerce_mini_cart(); ?>
 					<div class="cart-content-footer">
 						<div class="cart-footer-wrap">
