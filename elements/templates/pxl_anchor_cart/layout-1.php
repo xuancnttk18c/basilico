@@ -50,7 +50,11 @@ $target = $link_target == 'cart-canvas' ? '.pxl-hidden-template-canvas-cart' : '
 				<div class="cart-content-body widget_shopping_cart">
 					<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
 				</div>
-				<div class="cart-content-footer"><div class="cart-footer-wrap"><?php wc_get_template( 'cart/mini-cart-totals.php' ); ?></div></div>
+				<div class="cart-content-footer">
+					<div class="cart-footer-wrap">
+						<?php wc_get_template( 'cart/mini-cart-totals.php' ); ?>
+					</div>
+				</div>
 			</div>
 		</div>
 	<?php endif; ?>
