@@ -45,8 +45,8 @@ $target = '.pxl-cart-dropdown';
 	<?php endif; ?>	
 	</a>
 	<?php if( $link_target == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
-		<div class="pxl-cart-dropdown">
-			<div class="widget_shopping_cart pxl-cart-widget <?php echo esc_attr($style) ?>">
+		<div class="pxl-cart-dropdown widget_shopping_cart">
+			<div class="pxl-cart-widget <?php echo esc_attr($style) ?>">
 				<?php woocommerce_mini_cart(); ?>
 				<div class="cart-content-footer">
 					<div class="cart-footer-wrap">
