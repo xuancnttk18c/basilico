@@ -297,23 +297,6 @@ table.cart {
 	ul {
 		margin: 0;
 	}
-	.pxl-cart-dropdown-inner{
-		position: relative;
-		padding: 25px 30px 30px;
-		&:before{
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			background-color: rgba(255,255,255,0.8);
-			z-index: 2;
-			opacity: 0;
-			visibility: hidden;
-			@include transition(all .3s ease);
-		}
-	}
 	.cart-content-body {
 		max-height: 360px;
 		overflow-y: auto;

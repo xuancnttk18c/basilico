@@ -151,15 +151,16 @@
 .elementor-widget-sidebar,
 .elementor-widget .e-sidebar-widget {
 	.widget_shopping_cart {
-		&:has(.pxl-cart-widget.layout-4) {
-			padding: 0;
-			.widget-title,
-			&.widget_block h2,
-			.wp-block-search__label,
-			.widgettitle {
-				padding-left: 30px;
-				margin-bottom: 0;
-			}
+		padding: 0;
+		.widget-title,
+		&.widget_block h2,
+		.wp-block-search__label,
+		.widgettitle {
+			padding-left: 30px;
+			margin-bottom: 0;
+		}
+		.pxl-widget-cart-content {
+			padding: 0 23px 30px 30px;
 		}
 	}
 }
