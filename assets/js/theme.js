@@ -680,9 +680,6 @@
                 beforeSend: function() {
                     $('body').find('.pxl-hidden-template-canvas-cart').addClass('loading'); 
                 },
-                complete: function(response) {
-                    console.log(response);
-                }
             } );
         } );
         $('.cart-list-wrapper').on( 'change', '.qty', function() {
@@ -730,7 +727,8 @@
                     $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
                 },
                 complete: function(response) {
-                    console.log(response);
+                    //console.log(response);
+                    console.log(item_key, item_qty);
                 }
             } );
         });
