@@ -226,18 +226,14 @@ function basilico_single_add_to_cart_text() {
 function wc_unsen_mini_cart_qty() {
 
     $cart_item_key = sanitize_text_field( $_POST['cart_key'] );
-
     $new_qty       = intval( sanitize_text_field( $_POST['new_qty'])); 
 
     if (  $new_qty === 0 && false !== WC()->cart->remove_cart_item( $cart_item_key )) {
-
         WC_AJAX::get_refreshed_fragments();
 
-    }elseif( false !== WC()->cart->set_quantity( $cart_item_key, $new_qty, true )){
-
+    } elseif ( false !== WC()->cart->set_quantity( $cart_item_key, $new_qty, true )) {
         WC_AJAX::get_refreshed_fragments();
-    } 
-
+    }
     wp_send_json( $data);
 }
 

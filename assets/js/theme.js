@@ -707,38 +707,38 @@
                 complete: function() {}
             } );
         } );
-        $('.widget_shopping_cart').on( 'change', '.qty', function() {
-            var item_key = $( this ).attr( 'name' );
-            var item_qty = $( this ).val();
-            console.log(main_data);
-            var data = {
-                action: 'basilico_update_product_quantity',
-                cart_item_key: item_key,
-                cart_item_qty: item_qty,
-                security: main_data.nonce,
-            };
-            $.ajax( {
-                url: main_data.ajaxurl,
-                type: 'POST',
-                cache: false,
-                dataType: 'json',
-                data: data,
-                success: function( response ) {  
-                    $( document.body ).trigger( 'wc_fragment_refresh' );
-                    $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
-                },
-                beforeSend: function() {
-                    $('body').addClass('loading');
-                },
-            } );
-        });
+        // $('.widget_shopping_cart').on( 'change', '.qty', function() {
+        //     var item_key = $( this ).attr( 'name' );
+        //     var item_qty = $( this ).val();
+        //     console.log(main_data);
+        //     var data = {
+        //         action: 'basilico_update_product_quantity',
+        //         cart_item_key: item_key,
+        //         cart_item_qty: item_qty,
+        //         security: main_data.nonce,
+        //     };
+        //     $.ajax( {
+        //         url: main_data.ajaxurl,
+        //         type: 'POST',
+        //         cache: false,
+        //         dataType: 'json',
+        //         data: data,
+        //         success: function( response ) {  
+        //             $( document.body ).trigger( 'wc_fragment_refresh' );
+        //             $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
+        //         },
+        //         beforeSend: function() {
+        //             $('body').addClass('loading');
+        //         },
+        //     } );
+        // });
         $('.pxl-sticky-atc').on( 'change', '.qty', function() {
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val(); 
             if( parseInt(item_qty) > 0){
                 $(this).closest('.pxl-sticky-atc').find('.add_to_cart_button').attr('data-quantity',item_qty);
             }
-        } );
+        });
     }
 
     function basilico_mini_cart_dropdown_offset(){
@@ -860,79 +860,79 @@
 
     //jkdjafklsdjfdfjdklsfj
 
-    // function wcMiniUpdateCart( _this, new_qty) {        
+    function wcMiniUpdateCart( _this, new_qty) {        
 
-    //     var mini_cart_content = _this.parents( '.pxl-widget-cart-content');
+        var mini_cart_content = _this.parents( '.pxl-widget-cart-content');
 
-    //     var item_key = _this.attr( 'name' );
-    //     var item_qty = _this.val(); 
+        var item_key = _this.attr( 'name' );
+        var item_qty = new_qty; 
 
-    //     $.ajax({
-    //         url: main_data.ajax_url,
-    //         type: 'POST',
-    //         data: {
-    //             action: 'wc_unsen_mini_cart_qty',
-    //             cart_key: item_key,
-    //             new_qty: item_qty              
-    //         },
-    //         beforeSend: function() {
-    //             //mini_cart_content.addClass( 'updating');
-    //         },
-    //         success:function( response) {
-    //             $( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, _this ] );     
-    //             //mini_cart_content.removeClass( 'updating');
-    //         }
-    //     });        
-    // }
+        $.ajax({
+            url: main_data.ajax_url,
+            type: 'POST',
+            data: {
+                action: 'wc_unsen_mini_cart_qty',
+                cart_key: item_key,
+                new_qty: item_qty
+            },
+            beforeSend: function() {
+                //mini_cart_content.addClass( 'updating');
+            },
+            success:function( response) {
+                $( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, _this ] );     
+                //mini_cart_content.removeClass( 'updating');
+            }
+        });        
+    }
 
-    // $('.widget_shopping_cart').on( 'change','.qty', function( e ) {
+    $('.widget_shopping_cart').on( 'change','.qty', function( e ) {
 
-    //     var _this   = $( this ),
-    //         new_qty = parseInt( _this.val()),
-    //         _step   = parseInt( _this.attr( 'step' ) ),
-    //         _min    = parseInt( _this.attr( 'min' ) ),
-    //         _max    = parseInt( _this.attr( 'max' ) ),
-    //         invalid = false;
+        var _this   = $( this ),
+            new_qty = parseInt( _this.val()),
+            _step   = parseInt( _this.attr( 'step' ) ),
+            _min    = parseInt( _this.attr( 'min' ) ),
+            _max    = parseInt( _this.attr( 'max' ) ),
+            invalid = false;
        
-    //     if ( new_qty === 0 ) {
-    //         //_this.parents( '.cart__mini-item' ).find( '.cart_ac_remove' ).trigger( 'click' );
-    //         return;
+        if ( new_qty === 0 ) {
+            //_this.parents( '.cart__mini-item' ).find( '.cart_ac_remove' ).trigger( 'click' );
+            return;
 
-    //     } else if ( isNaN( new_qty ) || new_qty < 0 ) {
+        } else if ( isNaN( new_qty ) || new_qty < 0 ) {
 
-    //         invalid = true;
+            invalid = true;
 
-    //         new_qty = 1;
+            new_qty = 1;
 
-    //         _this.val( new_qty);
+            _this.val( new_qty);
 
-    //         wcMiniUpdateCart( _this, new_qty );
+            wcMiniUpdateCart( _this, new_qty );
 
-    //     } else if ( new_qty > _max && _max > 0 ) {
-    //         alert( 'Maximum product is: ' + _max );
-    //         invalid = false;
+        } else if ( new_qty > _max && _max > 0 ) {
+            alert( 'Maximum product is: ' + _max );
+            invalid = false;
 
-    //         new_qty = _max;
+            new_qty = _max;
 
-    //         _this.val( new_qty);
+            _this.val( new_qty);
 
-    //         wcMiniUpdateCart( _this, new_qty );
+            wcMiniUpdateCart( _this, new_qty );
 
-    //     } else if ( new_qty < _min ) {
-    //         invalid = true;
+        } else if ( new_qty < _min ) {
+            invalid = true;
 
-    //     } else if ( ( new_qty % _step ) !== 0 ) {
-    //         alert( 'Quantity can only be purchased in multiple of ' + _step );
-    //         invalid = true;
+        } else if ( ( new_qty % _step ) !== 0 ) {
+            alert( 'Quantity can only be purchased in multiple of ' + _step );
+            invalid = true;
 
-    //     } else {
-    //         wcMiniUpdateCart( _this, new_qty );
-    //     }
+        } else {
+            wcMiniUpdateCart( _this, new_qty );
+        }
 
-    //     if ( invalid === true ) {
-    //         _this.val( focus_qty );
-    //     }
-    // });
+        if ( invalid === true ) {
+            _this.val( focus_qty );
+        }
+    });
 
 
 })(jQuery);
