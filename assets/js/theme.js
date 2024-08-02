@@ -726,9 +726,10 @@
                 success: function( response ) {  
                     $( document.body ).trigger( 'wc_fragment_refresh' );
                     $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
+                    console.log(response);
                 },
             } );
-        } );
+        });
         $('.pxl-sticky-atc').on( 'change', '.qty', function() {
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val(); 
