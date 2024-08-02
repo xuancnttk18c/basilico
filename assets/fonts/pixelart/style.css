@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'pxli';
   src:
-    url('fonts/pxli.ttf?7i1bc6') format('truetype'),
-    url('fonts/pxli.woff?7i1bc6') format('woff'),
-    url('fonts/pxli.svg?7i1bc6#pxli') format('svg');
+    url('fonts/pxli.ttf?f7qi6w') format('truetype'),
+    url('fonts/pxli.woff?f7qi6w') format('woff'),
+    url('fonts/pxli.svg?f7qi6w#pxli') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pxli-cart-plus:before {
+  content: "\e9ea";
+}
 .pxli-coins:before {
   content: "\e9e9";
 }
