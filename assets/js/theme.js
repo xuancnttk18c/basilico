@@ -680,7 +680,9 @@
                 beforeSend: function() {
                     $('body').find('.pxl-hidden-template-canvas-cart').addClass('loading'); 
                 },
-                complete: function() {}
+                complete: function(response) {
+                    console.log(response);
+                }
             } );
         } );
         $('.cart-list-wrapper').on( 'change', '.qty', function() {
