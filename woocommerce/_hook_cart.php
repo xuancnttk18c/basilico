@@ -220,22 +220,3 @@ function basilico_single_add_to_cart_text() {
 	$cart_text = !empty(basilico()->get_theme_opt('add_to_cart_text', 'Add To Cart')) ? basilico()->get_theme_opt('add_to_cart_text', 'Add To Cart') : esc_html__('Add To Cart', 'basilico');
 	return esc_attr($cart_text);
 }
-
-//hdjkfhjkshdfjdshfjj
-
-function wc_unsen_mini_cart_qty() {
-
-    $cart_item_key = sanitize_text_field( $_POST['cart_key'] );
-    $new_qty       = intval( sanitize_text_field( $_POST['new_qty'])); 
-
-    if (  $new_qty === 0 && false !== WC()->cart->remove_cart_item( $cart_item_key )) {
-        WC_AJAX::get_refreshed_fragments();
-
-    } elseif ( false !== WC()->cart->set_quantity( $cart_item_key, $new_qty, true )) {
-        WC_AJAX::get_refreshed_fragments();
-    }
-    wp_send_json( $data);
-}
-
-add_action( 'wp_ajax_wc_unsen_mini_cart_qty', 'wc_unsen_mini_cart_qty' );
-add_action( 'wp_ajax_nopriv_wc_unsen_mini_cart_qty', 'wc_unsen_mini_cart_qty' );
