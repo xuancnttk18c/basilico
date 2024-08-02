@@ -709,7 +709,8 @@
         } );
         $('.widget_shopping_cart').on( 'change', '.qty', function() {
             var item_key = $( this ).attr( 'name' );
-            var item_qty = $( this ).val(); 
+            var item_qty = $( this ).val();
+            console.log(main_data);
             var data = {
                 action: 'basilico_update_product_quantity',
                 cart_item_key: item_key,
@@ -730,8 +731,8 @@
                     $('body').addClass('loading');
                 },
                 complete: function(response) {
-                    console.log(response);
-                    console.log(data);
+                    // console.log(response);
+                    // console.log(data);
                 }
             } );
         });
