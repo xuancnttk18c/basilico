@@ -312,6 +312,8 @@
 								margin-bottom: 0;
 								max-height: 47px;
 							}
+						}
+						.price-wrap {
 							.price {
 								margin-bottom: 2px;
 								.amount {
@@ -367,10 +369,10 @@
 								@include text-truncate-multi-line(17px, 1.65, 2);
 								font-weight: 500;
 							}
-							.price {
-								font-weight: 500;
-								margin-bottom: 0;
-							}
+						}
+						.price {
+							font-weight: 500;
+							margin-bottom: 0;
 						}
 					}
 				}
