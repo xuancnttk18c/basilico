@@ -720,14 +720,11 @@
                 url: main_data.ajaxurl,
                 type: 'POST',
                 cache: false,
-                dataType: 'json',
+                //dataType: 'json',
                 data: data,
                 success: function( response ) {  
                     $( document.body ).trigger( 'wc_fragment_refresh' );
                     $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
-                },
-                complete: function(response) {
-                    console.log(response);
                 }
             } );
         });
