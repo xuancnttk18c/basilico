@@ -161,31 +161,33 @@
 				margin-bottom: 0;
 			}
 		}
-		&.loading {
-			position: relative;
-			&:before {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				background-color: rgba(0, 0, 0, 0.4);
-				z-index: 1;
-			}
-			&:after {
-				content: "\e95b" !important;
-				font-family: $pxli_font;
-				font-size: 20px;
-				color: $heading_color;
-				@include animation(pxl-spin 2s linear infinite);
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				@include transform(translate(-50%, -50%));
-				z-index: 2;
-			}
-		}
 		.pxl-cart-widget {
+			.pxl-widget-cart-content {
+				&.loading {
+					position: relative;
+					&:before {
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background-color: rgba(0, 0, 0, 0.4);
+						z-index: 1;
+					}
+					&:after {
+						content: "\e95b" !important;
+						font-family: $pxli_font;
+						font-size: 20px;
+						color: $heading_color;
+						@include animation(pxl-spin 2s linear infinite);
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						@include transform(translate(-50%, -50%));
+						z-index: 2;
+					}
+				}
+			}
 			ul {
 				list-style: none outside;
 				padding: 0;

@@ -727,7 +727,7 @@
                     $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
                 },
                 beforeSend: function() {
-                    $('.widget_shopping_cart').addClass('loading');
+                    $('.widget_shopping_cart .pxl-widget-cart-content').addClass('loading');
                 },
             } );
         });
