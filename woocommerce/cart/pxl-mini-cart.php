@@ -39,8 +39,8 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 						$cart_item_key
 					);
 					?>
-					<div class="cart-item-wrap row gx-20 justify-content-between">
-						<div class="cart-item-thumbnail col-auto">
+					<div class="cart-item-wrap">
+						<div class="cart-item-thumbnail">
 							<div class="product-thumbnail">
 								<?php if ( empty( $product_permalink ) ) : ?>
 									<?php echo ''.$thumbnail; ?>
@@ -51,7 +51,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 								<?php endif; ?>
 							</div>
 						</div>
-						<div class="cart-item-info col"> 
+						<div class="cart-item-info"> 
 							<div class="cart-item-info-inner">
 								<div class="price-wrap">
 									<?php echo '<div class="price">' . $product_price . '</div>'; ?>

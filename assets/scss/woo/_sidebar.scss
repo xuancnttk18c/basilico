@@ -445,6 +445,20 @@
 					li {
 						padding: 30px;
 						background-color: #fff;
+						.cart-item-wrap {
+							.cart-item-info-inner-wrap {
+								.product-name {
+									@include text-truncate-multi-line(17px, 1.2, 2);
+									font-weight: 400;
+									text-transform: capitalize;
+								}
+							}
+							.price {
+								font-size: 17px;
+								font-weight: 500;
+								margin-bottom: 0;
+							}
+						}
 						img {
 							width: 95px;
 							height: 95px;
