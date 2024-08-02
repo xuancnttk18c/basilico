@@ -53,6 +53,9 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 						</div>
 						<div class="cart-item-info col"> 
 							<div class="cart-item-info-inner">
+								<div class="price-wrap">
+									<?php echo '<div class="price">' . $product_price . '</div>'; ?>
+								</div>
 								<div class="cart-item-info-inner-wrap">
 									<h5 class="product-name">
 										<?php if ( empty( $product_permalink ) ) : ?>
@@ -87,7 +90,6 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 										echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );  
 										?>
 									</div>
-									<?php echo '<div class="price">' . $product_price . '</div>'; ?>
 								</div>
 							</div> 
 						</div>

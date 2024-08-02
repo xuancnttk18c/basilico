@@ -28,7 +28,7 @@ if( $total <= 0){
 $product_layout = $widget->get_setting('product_layout', 'layout-1');
 ?>
 
-<div id="<?php echo esc_attr($wg_id) ?>" class="pxl-product-grid <?php echo 'pxl-shop-'.esc_attr($product_layout); ?>" data-layout=".<?php echo esc_attr($grid_layout) ?>">
+<div id="<?php echo esc_attr($wg_id) ?>" class="pxl-product-grid <?php echo 'pxl-shop-'.esc_attr($product_layout); ?>">
     <div <?php pxl_print_html($widget->get_render_attribute_string('grid')); ?>>
         <?php
         while ($query->have_posts()) {

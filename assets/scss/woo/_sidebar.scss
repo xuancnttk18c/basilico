@@ -198,8 +198,6 @@
 					.cart-item-wrap {
 						align-items: center;
 						.cart-item-info-inner-wrap {
-							display: flex;
-							flex-direction: column-reverse;
 							.product-name {
 								@include text-truncate-multi-line(15px, 1.7, 2);
 								letter-spacing: 0.05em;
