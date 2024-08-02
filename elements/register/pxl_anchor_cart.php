@@ -30,7 +30,6 @@ pxl_add_custom_widget(
                             'options' => [
                                 'cart-page' => esc_html__('Cart Page', 'basilico'),
                                 'cart-dropdown' => esc_html__('Cart Dropdown', 'basilico'),
-                                'cart-canvas' => esc_html__('Cart Canvas', 'basilico'),
                             ],
                             'default' => 'cart_dropdown' 
                         ),

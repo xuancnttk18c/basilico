@@ -143,12 +143,6 @@
     right: 0;
     left: auto;
     @include transform(translate(100%,0));
-    &:not(.pxl-hidden-template-canvas-cart) .pxl-panel-header {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 1;
-    }
 }
 .pxl-hidden-template.pos-top{
     background-color: transparent;

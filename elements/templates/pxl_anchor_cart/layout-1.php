@@ -15,7 +15,7 @@ $wrap_cls = [
 $cart_page = $link_target == 'cart-page' ? true : false;
 $cart_page = (is_cart() || is_checkout()) ? true : $cart_page;
 
-$target = $link_target == 'cart-canvas' ? '.pxl-hidden-template-canvas-cart' : '.pxl-cart-dropdown';
+$target = '.pxl-cart-dropdown';
 
 ?>
 <div class="<?php echo implode(' ', $wrap_cls) ?>">

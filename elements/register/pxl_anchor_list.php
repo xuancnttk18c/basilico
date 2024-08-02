@@ -69,7 +69,7 @@ pxl_add_custom_widget(
                                     'type'  => \Elementor\Controls_Manager::SWITCHER,
                                     'default' => 'false',
                                     'condition' => [
-                                        'template' => ['cart-dropdown', 'cart-canvas', 'cart-page']
+                                        'template' => ['cart-dropdown', 'cart-page']
                                     ],
                                 ),
                             ),

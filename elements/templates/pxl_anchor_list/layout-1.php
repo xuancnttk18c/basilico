@@ -18,11 +18,6 @@ extract($settings);
 				$template = 0;
 				$anchor_link = '#';
 			}
-			else if ($selected_template == 'cart-canvas') {
-				$target = '.pxl-hidden-template-canvas-cart';
-				$template = 0;
-				$anchor_link = '#';
-			}
 			else if ($selected_template == 'cart-page') {
 				$target = '';
 				$template = 0;

@@ -110,8 +110,7 @@ function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
 	ob_start();
 	wc_get_template( 'cart/mini-cart-totals.php' );
 	$mini_cart_totals = ob_get_clean();
-	
-	$fragments['.pxl-hidden-template-canvas-cart .cart-footer-inner'] = $mini_cart_totals;
+
 	$fragments['.pxl-cart-dropdown .cart-footer-inner'] = $mini_cart_totals;
 	$fragments['.pxl-cart-widget .cart-footer-inner'] = $mini_cart_totals;
 
@@ -124,32 +123,6 @@ function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
 	$fragments['.pxl-widget-cart-content'] = $widget_cart_content;
 
 	return $fragments;
-}
-
-add_action( 'pxltheme_anchor_target', 'basilico_canvas_cart');
-function basilico_canvas_cart(){
-	if(!class_exists('WooCommerce')) return;
-	$canvas_cart = basilico()->get_theme_opt('canvas_cart_on', 'on');
-	if($canvas_cart != 'on') return;
-	wp_enqueue_script( 'wc-cart-fragments' );
-	?>
-	<div class="pxl-hidden-template pxl-hidden-template-canvas-cart pos-right">
-		<div class="pxl-hidden-template-wrap">
-			<div class="pxl-panel-header">
-				<div class="panel-header-inner d-flex justify-content-between">
-					<span class="pxl-title h4"><?php echo esc_html__( 'Shopping Cart', 'basilico' ) ?> (<span class="mini-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>)</span>
-					<span class="pxl-close lnil lnil-close" title="<?php echo esc_attr__( 'Close', 'basilico' ) ?>"></span>
-				</div>
-			</div>
-			<div class="pxl-panel-content widget_shopping_cart custom_scroll">
-				<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
-			</div>
-			<div class="pxl-panel-footer">
-				<?php wc_get_template( 'cart/mini-cart-totals.php' ); ?>
-			</div>
-		</div>
-	</div> 
-	<?php
 }
 
 add_action( 'wp_ajax_basilico_update_product_quantity', 'basilico_update_product_quantity' );
