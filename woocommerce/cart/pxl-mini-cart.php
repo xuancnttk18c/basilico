@@ -52,46 +52,44 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 							</div>
 						</div>
 						<div class="cart-item-info"> 
-							<div class="cart-item-info-inner">
-								<div class="price-wrap">
-									<?php echo '<div class="price">' . $product_price . '</div>'; ?>
+							<div class="price-wrap">
+								<?php echo '<div class="price">' . $product_price . '</div>'; ?>
+							</div>
+							<div class="product-info">
+								<h5 class="product-name">
+									<?php if ( empty( $product_permalink ) ) : ?>
+										<?php echo ''.$product_name; ?>
+									<?php else : ?>
+										<a href="<?php echo esc_url( $product_permalink ); ?>">
+											<?php echo ''.$product_name;  ?>
+										</a>
+									<?php endif; ?>
+								</h5>
+								<?php echo wc_get_formatted_cart_item_data( $cart_item ); ?>
+								<div class="product-quantity">
+									<?php
+									if ( $_product->is_sold_individually() ) {
+										$min_quantity = 1;
+										$max_quantity = 1;
+									} else {
+										$min_quantity = 0;
+										$max_quantity = $_product->get_max_purchase_quantity();
+									}
+									$product_quantity = woocommerce_quantity_input(
+										array(
+											'input_name'   => $cart_item_key,
+											'input_value'  => $cart_item['quantity'],
+											'max_value'    => $max_quantity,
+											'min_value'    => $min_quantity,
+											'product_name' => $_product->get_name(),
+										),
+										$_product,
+										false
+									);
+									echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );  
+									?>
 								</div>
-								<div class="cart-item-info-inner-wrap">
-									<h5 class="product-name">
-										<?php if ( empty( $product_permalink ) ) : ?>
-											<?php echo ''.$product_name; ?>
-										<?php else : ?>
-											<a href="<?php echo esc_url( $product_permalink ); ?>">
-												<?php echo ''.$product_name;  ?>
-											</a>
-										<?php endif; ?>
-									</h5>
-									<?php echo wc_get_formatted_cart_item_data( $cart_item ); ?>
-									<div class="product-quantity">
-										<?php
-										if ( $_product->is_sold_individually() ) {
-											$min_quantity = 1;
-											$max_quantity = 1;
-										} else {
-											$min_quantity = 0;
-											$max_quantity = $_product->get_max_purchase_quantity();
-										}
-										$product_quantity = woocommerce_quantity_input(
-											array(
-												'input_name'   => $cart_item_key,
-												'input_value'  => $cart_item['quantity'],
-												'max_value'    => $max_quantity,
-												'min_value'    => $min_quantity,
-												'product_name' => $_product->get_name(),
-											),
-											$_product,
-											false
-										);
-										echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );  
-										?>
-									</div>
-								</div>
-							</div> 
+							</div>
 						</div>
 					</div>
 				</li>
