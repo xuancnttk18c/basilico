@@ -731,8 +731,8 @@
                     $('body').addClass('loading');
                 },
                 complete: function(response) {
-                    // console.log(response);
-                    // console.log(data);
+                    console.log(response);
+                    console.log(data);
                 }
             } );
         });
