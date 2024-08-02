@@ -806,6 +806,17 @@ select.orderby{
 				line-height: 60px;
 				background-color: transparent;
 			}
+			.add_to_cart_button {
+				&.loading {
+					&:after {
+						content: "\e95b";
+						display: inline-block;
+						@include animation(pxl-spin 2s linear infinite);
+						font-family: $pxli_font;
+						color: $heading_color;
+					}
+				}
+			}
 			.pxl-add-to-cart:has(.added_to_cart) {
 				.pxl-btn {
 					display: none;
@@ -862,6 +873,9 @@ select.orderby{
 				}
 				.pxl-btn, .added_to_cart {
 					background-color: $divider_color;
+					color: #fff;
+				}
+				.add_to_cart_button.loading .pxl-icon:after {
 					color: #fff;
 				}
 				.pxl-clown {
