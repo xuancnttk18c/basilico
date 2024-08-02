@@ -196,7 +196,14 @@
 						}
 					}
 					.cart-item-wrap {
+						@include d-flex();
 						align-items: center;
+						.cart-item-thumbnail {
+							flex-shrink: 0;
+						}
+						.cart-item-info {
+							flex-grow: 1;
+						}
 						.cart-item-info-inner-wrap {
 							.product-name {
 								@include text-truncate-multi-line(15px, 1.7, 2);
