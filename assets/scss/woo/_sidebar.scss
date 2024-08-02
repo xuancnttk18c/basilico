@@ -203,6 +203,7 @@
 						display: flex;
 						align-items: center;
 						gap: 20px;
+						width: 100%;
 						.cart-item-thumbnail {
 							flex-shrink: 0;
 						}
@@ -448,12 +449,16 @@
 						padding: 30px;
 						background-color: #fff;
 						.cart-item-wrap {
-							.product-info {
-								.product-name {
-									@include text-truncate-multi-line(17px, 1.2, 2);
-									font-weight: 400;
-									text-transform: capitalize;
-								}
+							.cart-item-info {
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+								flex-direction: row-reverse;
+							}
+							.product-name {
+								@include text-truncate-multi-line(17px, 1.2, 2);
+								font-weight: 400;
+								text-transform: capitalize;
 							}
 							.price {
 								font-size: 17px;
