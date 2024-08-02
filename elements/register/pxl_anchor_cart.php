@@ -25,7 +25,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'cart_style',
-                            'label' => esc_html__('Cart Style', 'basilico'),
+                            'label' => esc_html__('Dropdown Layout', 'basilico'),
                             'type' => 'select',
                             'options' => [
                                 'layout-1' => esc_html__('Layout 1', 'basilico'),
