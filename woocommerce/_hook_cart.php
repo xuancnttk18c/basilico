@@ -63,6 +63,11 @@ if ( ! function_exists( 'woocommerce_button_proceed_to_checkout' ) ) {
 	}
 }
 
+function enqueue_wc_cart_fragments() { 
+	wp_enqueue_script( 'wc-cart-fragments' ); 
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_wc_cart_fragments' );
+
 // Cross Sell
 // Move Cross Sell to Last
 remove_action('woocommerce_cart_collaterals','woocommerce_cross_sell_display');
@@ -184,10 +189,3 @@ function basilico_single_add_to_cart_text() {
 	$cart_text = !empty(basilico()->get_theme_opt('add_to_cart_text', 'Add To Cart')) ? basilico()->get_theme_opt('add_to_cart_text', 'Add To Cart') : esc_html__('Add To Cart', 'basilico');
 	return esc_attr($cart_text);
 }
-
-
-//jdklafjksjkf
-function enqueue_wc_cart_fragments() { 
-	wp_enqueue_script( 'wc-cart-fragments' ); 
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_wc_cart_fragments' );
