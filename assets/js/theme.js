@@ -138,6 +138,7 @@
                 }
             } else {
                 $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
+                $(document).find('.pxl-header-main-sticky .pxl-cart-dropdown').removeClass('open');
                 tl.to('.pxl-header-main-sticky', {
                     y: 0
                 });
