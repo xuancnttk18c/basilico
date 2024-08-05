@@ -117,6 +117,7 @@
                 autoHeight: true,
                 breakpoints: {
                     0 : {
+                        direction: 'vertical',
                         slidesPerView: settings['slides_to_show_xs'],
                         slidesPerGroup: settings['slides_to_scroll'],
                     },
