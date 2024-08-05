@@ -145,7 +145,7 @@ pxl_add_custom_widget(
                             'default'      => 'inline-flex', 
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-cart a.cart-anchor .anchor-cart-total' => 'display: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-anchor-cart a.cart-anchor .mini-cart-total' => 'display: {{VALUE}};',
                             ],
                             'prefix_class' => 'show-cart-totals%s-',
                         ),
