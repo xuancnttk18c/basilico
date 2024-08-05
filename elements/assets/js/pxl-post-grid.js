@@ -83,7 +83,7 @@
         $(this).addClass('loading');
         if(loadmore.filter == 'true'){
             $.ajax({
-                url: main_data.ajax_url,
+                url: main_data_grid.ajax_url,
                 type: 'POST',
                 beforeSend: function () {
 
@@ -107,7 +107,7 @@
             });
         }
         $.ajax({
-            url: main_data.ajax_url,
+            url: main_data_grid.ajax_url,
             type: 'POST',
             beforeSend: function () {
 
@@ -164,7 +164,7 @@
 
         // reload pagination
         $.ajax({
-            url: main_data.ajax_url,
+            url: main_data_grid.ajax_url,
             type: 'POST',
             beforeSend: function () {
 
@@ -189,7 +189,7 @@
 
         // load post
         $.ajax({
-            url: main_data.ajax_url,
+            url: main_data_grid.ajax_url,
             type: 'POST',
             beforeSend: function () {
 
