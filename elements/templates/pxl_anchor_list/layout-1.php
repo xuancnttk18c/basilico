@@ -54,12 +54,14 @@ extract($settings);
 					<?php endif; ?>
 				</a>
 				<?php if ($selected_template == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
-					<div class="pxl-cart-dropdown">
-						<div class="pxl-cart-dropdown-inner relative">
-							<div class="cart-content-body widget_shopping_cart">
-								<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+					<div class="pxl-cart-dropdown widget_shopping_cart">
+						<div class="pxl-cart-widget <?php echo esc_attr($style) ?>">
+							<?php woocommerce_mini_cart(); ?>
+							<div class="cart-content-footer">
+								<div class="cart-footer-wrap">
+									<?php wc_get_template( 'cart/mini-cart-totals.php' ); ?>
+								</div>
 							</div>
-							<div class="cart-content-footer"><div class="cart-footer-wrap"><?php wc_get_template( 'cart/mini-cart-totals.php' ); ?></div></div>
 						</div>
 					</div>
 				<?php endif; ?>

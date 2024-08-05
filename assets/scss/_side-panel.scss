@@ -63,6 +63,7 @@
     height: 100%;
     opacity: 1;
 }
+
 .pxl-close {
     width: 28px;
     height: 28px;
@@ -95,16 +96,6 @@
         &:after{
             @include transform(rotate(0deg));
         }
-    }
-}
-.pxl-luxury .pxl-close {
-    border: none;
-    background-color: transparent;
-    width: 25px;
-    height: 25px;
-    &:before,
-    &:after {
-        height: 1px;
     }
 }
 
