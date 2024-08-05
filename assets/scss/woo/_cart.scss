@@ -361,6 +361,19 @@ table.cart {
 			}
 		}
 	}
+	.pxl-cart-empty {
+		padding: 30px;
+		gap: 22px;
+		.empty-icon {
+			i {
+				font-size: 30px;
+				color: $primary_color;
+			}
+		}
+		.empty-text {
+			max-width: 240px;
+		}
+	}
 	ul {
 		list-style: none outside;
 		margin: 0;
@@ -645,19 +658,6 @@ table.cart {
 			padding-left: 30px;
 			padding-right: 30px;
 			margin-bottom: 0;
-		}
-		.pxl-cart-empty {
-			padding: 30px;
-			gap: 22px;
-			.empty-icon {
-				i {
-					font-size: 30px;
-					color: $primary_color;
-				}
-			}
-			.empty-text {
-				max-width: 240px;
-			}
 		}
 		ul {
 			margin: 0;
