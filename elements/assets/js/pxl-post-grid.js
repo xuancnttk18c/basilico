@@ -85,9 +85,6 @@
             $.ajax({
                 url: main_data_grid.ajax_url,
                 type: 'POST',
-                beforeSend: function () {
-
-                },
                 data: {
                     action: 'basilico_get_filter_html',
                     settings: loadmore,
@@ -98,8 +95,6 @@
                     _this.find(".grid-filter-wrap").html(res.data.html);
 
                 }
-                else if(res.status == false){
-                }
             }).fail(function (res) {
                 return false;
             }).always(function () {
@@ -109,42 +104,38 @@
         $.ajax({
             url: main_data_grid.ajax_url,
             type: 'POST',
-            beforeSend: function () {
-
-            },
             data: {
                 action: 'basilico_load_more_post_grid',
                 settings: loadmore
             }
         })
-            .done(function (res) {
-                if(res.status == true) {
-                    _this.find('.btn-grid-loadmore').removeClass('loading');
-                    _this.find('.pxl-grid-inner').append(res.data.html);
-                    _this.data('start-page', res.data.paged);
-                    elementorFrontend.waypoint(_this.find('.pxl-animate'), function () {
-                        var $animate_el = $(this),
-                            data = $animate_el.data('settings');
-                        if(typeof data['animation'] != 'undefined'){
-                            setTimeout(function () {
-                                $animate_el.removeClass('pxl-invisible').addClass('animated ' + data['animation']);
-                            }, data['animation_delay']);
-                        }
-                    });
-                    sep_grid_refresh(_this);
-                    if(res.data.paged >= res.data.max){
-                        _this.find('.pxl-load-more').hide();
+        .done(function (res) {
+            if(res.status == true) {
+                _this.find('.btn-grid-loadmore').removeClass('loading');
+                _this.find('.pxl-grid-inner').append(res.data.html);
+                _this.data('start-page', res.data.paged);
+                elementorFrontend.waypoint(_this.find('.pxl-animate'), function () {
+                    var $animate_el = $(this),
+                    data = $animate_el.data('settings');
+                    if(typeof data['animation'] != 'undefined'){
+                        setTimeout(function () {
+                            $animate_el.removeClass('pxl-invisible').addClass('animated ' + data['animation']);
+                        }, data['animation_delay']);
                     }
+                });
+                sep_grid_refresh(_this);
+                if(res.data.paged >= res.data.max){
+                    _this.find('.pxl-load-more').hide();
                 }
-
-            })
-            .fail(function (res) {
-                _this.find('.pxl-load-more').hide();
-                return false;
-            })
-            .always(function () {
-                return false;
-            });
+            }
+        })
+        .fail(function (res) {
+            _this.find('.pxl-load-more').hide();
+            return false;
+        })
+        .always(function () {
+            return false;
+        });
     });
 
     $(document).on('click', '.pxl-grid-pagination .ajax a.page-numbers', function(){
@@ -166,9 +157,6 @@
         $.ajax({
             url: main_data_grid.ajax_url,
             type: 'POST',
-            beforeSend: function () {
-
-            },
             data: {
                 action: 'basilico_get_pagination_html',
                 query_vars: query_vars,
@@ -178,8 +166,6 @@
             if(res.status == true){
                 _this.find(".pxl-grid-pagination").html(res.data.html);
                 _this.find('.pxl-grid-overlay').removeClass('loader');
-            }
-            else if(res.status == false){
             }
         }).fail(function (res) {
             return false;
@@ -191,9 +177,6 @@
         $.ajax({
             url: main_data_grid.ajax_url,
             type: 'POST',
-            beforeSend: function () {
-
-            },
             data: {
                 action: 'basilico_load_more_post_grid',
                 settings: loadmore
@@ -216,8 +199,6 @@
                     }
                 });
             }
-            else if(res.status == false){
-            }
         }).fail(function (res) {
             return false;
         }).always(function () {
@@ -225,23 +206,6 @@
         });
         return false;
     });
-
-    if ($('.pxl-post-grid.layout-post-2 .grid-item').length > 0) {
-        $('.pxl-post-grid.layout-post-2 .grid-item').each(function() {
-            var excerptHeight = $(this).find('.item-excerpt').get(0).scrollHeight;
-            var imageHeight = $(this).find('.post-image').outerHeight();
-            $(this).find('.item-excerpt').css('max-height', '0px');
-            $(this).find('.post-image').css('max-height', imageHeight + 'px');
-
-            $(this).hover(function() {
-                $(this).find('.item-excerpt').css('max-height', excerptHeight + 'px');
-                $(this).find('.post-image').css('max-height', (imageHeight - (excerptHeight  + 14)) + 'px');
-            }, function() {
-                $(this).find('.item-excerpt').css('max-height', '0px');
-                $(this).find('.post-image').css('max-height', imageHeight + 'px');
-            });
-        });
-    }
 
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {
