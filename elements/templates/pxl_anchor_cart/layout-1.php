@@ -37,7 +37,7 @@ $target = '.pxl-cart-dropdown';
 	?>
 	<?php if ( !\Elementor\Plugin::$instance->editor->is_edit_mode() ): ?>
 		<?php if( $layout_type != 'layout-text'): ?>
-			<span class="anchor-cart-total"><?php echo WC()->cart->get_cart_subtotal(); ?></span>
+			<span class="mini-cart-total"><?php echo WC()->cart->get_cart_subtotal(); ?></span>
 			<span class="mini-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>
 		<?php else: ?>
 			(<span class="mini-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>)
