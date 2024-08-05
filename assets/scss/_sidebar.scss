@@ -478,15 +478,11 @@
 .pxl-sidebar-area.default,
 .pxl-sidebar-area.style-1,
 .elementor-widget-sidebar.style-1 {
-    .pxl-wg-post-title {
-        a {
-            @include multiline-hover-underline();
-        }
+    .pxl-wg-post-title a {
+        @include multiline-hover-underline();
     }
-    .post-info {
-        a {
-            @include multiline-hover-underline($body_color);
-        }
+    .post-info a {
+        @include multiline-hover-underline($body_color);
     }
 }
 
