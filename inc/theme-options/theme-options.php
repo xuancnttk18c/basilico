@@ -1007,26 +1007,6 @@ if(class_exists('Woocommerce')) {
             )
         )
     ));
-    Redux::setSection($opt_name, array(
-        'title'      => esc_html__('Mini Cart', 'basilico'),
-        'icon' => 'el el-folder-open',
-        'subsection' => true,
-        'fields'     => array_merge(
-            array(
-                array(
-                    'id'       => 'mini_cart_style',
-                    'type'     => 'select',
-                    'title'    => esc_html__('Style', 'basilico'),
-                    'description' => esc_html__('This option change the appearance of mini cart and cart dropdown.', 'basilico'),
-                    'options' => [
-                        'style-df' => esc_html__('Default', 'basilico'),
-                        'style-2' => esc_html__('Style 2', 'basilico'),
-                    ],
-                    'default' => 'style-df'
-                ),
-            )
-        )
-    ));
 }
 
 
