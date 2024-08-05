@@ -55,6 +55,7 @@ extract($settings);
 				</a>
 				<?php if ($selected_template == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
 					<div class="pxl-cart-dropdown widget_shopping_cart">
+						<?php $style = $anchor['cart_style']; ?>
 						<div class="pxl-cart-widget <?php echo esc_attr($style) ?>">
 							<?php woocommerce_mini_cart(); ?>
 							<div class="cart-content-footer">
