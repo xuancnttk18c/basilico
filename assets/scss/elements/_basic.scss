@@ -1070,7 +1070,7 @@
                 color: #fff;
                 overflow: hidden;
                 @include transition();
-                .anchor-cart-count {
+                .mini-cart-count {
                     position: absolute;
                     right: 0px;
                     top: 0px;
@@ -1643,7 +1643,7 @@
     &.layout-df {
         a.cart-anchor {
             position: relative;
-            .anchor-cart-count {
+            .mini-cart-count {
                 position: absolute;
                 right: -12px;
                 top: -12px;
