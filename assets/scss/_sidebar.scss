@@ -464,9 +464,6 @@
         max-height: 25px;
         overflow: hidden;
         text-overflow: ellipsis;
-        a {
-            //@include multiline-hover-underline($body_color);
-        }
     }
     .pxl-wg-post-title {
         margin-top: 2px;
@@ -475,8 +472,19 @@
         @include text-truncate-multi-line($font-size: 15px, $line-height: 1.66666666667, $lines-to-show: 2);
         margin-bottom: 0;
         letter-spacing: 0.02em;
+    }
+}
+
+.pxl-sidebar-area.style-1,
+.elementor-widget-sidebar.style-1 {
+    .pxl-wg-post-title {
         a {
-            //@include multiline-hover-underline();
+            @include multiline-hover-underline();
+        }
+    }
+    .post-info {
+        a {
+            @include multiline-hover-underline($body_color);
         }
     }
 }
