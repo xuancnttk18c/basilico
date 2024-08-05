@@ -65,7 +65,7 @@ if ( ! function_exists( 'woocommerce_button_proceed_to_checkout' ) ) {
 
 // Enqueue Cart Fragments
 function enqueue_wc_cart_fragments() { 
-	wp_enqueue_script( 'wc-cart-fragments' ); 
+	wp_enqueue_script( 'wc-cart-fragments' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_wc_cart_fragments' );
 
@@ -142,7 +142,7 @@ function basilico_update_product_quantity() {
 			}
 
 			WC()->cart->check_cart_coupons();
-		} else { 
+		} else {
 			$errors->add( 'cart-item-null', esc_html__( 'Cart item not exist!', 'basilico' ) );
 		}
 

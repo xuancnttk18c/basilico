@@ -7,7 +7,6 @@ if ( \Elementor\Plugin::$instance->editor->is_edit_mode() ) {
 ?>
 <div class="pxl-pt-wrap">
     <div class="sub-title">
-        <div><span class="pxl-divider"></span></div>
         <?php pxl_print_html($titles['sub_title']) ?>
     </div>
 </div>
