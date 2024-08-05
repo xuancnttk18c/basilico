@@ -1350,7 +1350,7 @@
                 right: 40px;
                 bottom: 40px;
                 padding: 50px 30px 97px;
-                transform: scaleY(0);
+                clip-path: inset(100% 0 0 0);
                 transform-origin: bottom;
                 background-color: $secondary_color;
                 @include transition(all 400ms ease-out);
@@ -1418,7 +1418,7 @@
             }
             &:hover {
                 .item-content {
-                    transform: scaleY(1);
+                    clip-path: inset(0 0 0 0);
                 }
                 .pxl-divider {
                     &:before {
