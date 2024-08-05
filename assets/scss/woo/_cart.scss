@@ -362,12 +362,12 @@ table.cart {
 		}
 	}
 	.pxl-cart-empty {
-		padding: 30px;
+		flex-wrap: nowrap;
 		gap: 22px;
 		.empty-icon {
 			i {
 				font-size: 30px;
-				color: $primary_color;
+				color: $secondary_color;
 			}
 		}
 		.empty-text {
@@ -658,6 +658,12 @@ table.cart {
 			padding-left: 30px;
 			padding-right: 30px;
 			margin-bottom: 0;
+		}
+		.pxl-cart-empty {
+			padding: 30px;
+			.empty-icon i {
+				color: $primary_color;
+			}
 		}
 		ul {
 			margin: 0;
