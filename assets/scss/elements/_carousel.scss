@@ -1393,13 +1393,6 @@
                 width: 1px;
                 overflow: hidden;
                 background-color: transparent;
-                &:before {
-                    @include transition(all 400ms ease-out 400ms);
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    height: 0px;
-                }
                 @media (max-width: $xs_max) {
                     display: none;
                 }
@@ -1419,11 +1412,6 @@
             &:hover {
                 .item-content {
                     clip-path: inset(0 0 0 0);
-                }
-                .pxl-divider {
-                    &:before {
-                        height: 30px;
-                    }
                 }
             }
         }
