@@ -16,9 +16,6 @@
 		font-size: 25px;
 		line-height: 40px;
 		margin-bottom: 0;
-		a {
-			//@include multiline-hover-underline();
-		}
 		@media (max-width: $xs_max) {
 			font-size: 20px;
 			line-height: 1.5;
@@ -213,6 +210,14 @@
 	}
 	.post-metas {
 		margin-bottom: 26px;
+	}
+}
+
+.content-archive.layout-1 .pxl-archive-post {
+	.post-title {
+		a {
+			@include multiline-hover-underline();
+		}
 	}
 }
 
