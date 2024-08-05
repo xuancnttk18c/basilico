@@ -456,12 +456,11 @@ select.orderby{
 		.product_type_external {
 			&.loading {
 				.pxl-icon{
-					display: inline-block;
+					display: inline-flex;
 					@include animation(pxl-spin 2s linear infinite);
 					&:before{
 						content: "\e95b";
 						font-family: "pxli" !important;
-						display: block;
 					}
 				}
 			}
