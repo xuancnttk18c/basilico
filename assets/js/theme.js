@@ -112,8 +112,9 @@
 
             if (scroll_status == 'up' && scroll_top > offset_top_animation) {
                 $(document).find('.pxl-header-sticky').addClass('h-fixed');
-            }else{
+            } else {
                 $(document).find('.pxl-header-sticky').removeClass('h-fixed');
+                $(document).find('.pxl-header-sticky .pxl-cart-dropdown').removeClass('open');
             }
         }
 
