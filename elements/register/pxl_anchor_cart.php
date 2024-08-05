@@ -121,7 +121,7 @@ pxl_add_custom_widget(
                             'type' => 'color',
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-cart a.cart-anchor .anchor-cart-count' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-anchor-cart a.cart-anchor .mini-cart-count' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => ['layout_type' => 'layout-df']
                         ),  
@@ -131,7 +131,7 @@ pxl_add_custom_widget(
                             'type' => 'color',
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-cart a.cart-anchor .anchor-cart-count' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-anchor-cart a.cart-anchor .mini-cart-count' => 'color: {{VALUE}};',
                             ],
                         ), 
                         array(
