@@ -151,7 +151,7 @@
 .elementor-widget-sidebar,
 .elementor-widget .e-sidebar-widget {
 	.widget.widget_shopping_cart {
-		padding: 0;
+		padding: 0 !important;
 		.widget-title,
 		&.widget_block h2,
 		.wp-block-search__label,
