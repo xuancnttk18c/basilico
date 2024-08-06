@@ -124,7 +124,6 @@ select.orderby{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	@include transition(all 300ms linear);
 }
 
 .pxl-featured + .onsale {
