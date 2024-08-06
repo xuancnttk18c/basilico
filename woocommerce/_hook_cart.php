@@ -207,5 +207,5 @@ function custom_quickview_ajax() {
 		}
 	}
 }
-add_action( 'wp_ajax_custom_quickview', 'custom_quickview' );
-add_action( 'wp_ajax_nopriv_custom_quickview', 'custom_quickview' );
+add_action( 'wp_ajax_custom_quickview', 'custom_quickview_ajax' );
+add_action( 'wp_ajax_nopriv_custom_quickview', 'custom_quickview_ajax' );
