@@ -199,7 +199,7 @@ function custom_quickview_ajax() {
 		$product_id = isset($_POST['product_id']) ? intval($_POST['product_id']) : 0;
 		if ($product_id) {
 			ob_start();
-			wc_get_template( 'cart/quickview.php', $product_id );
+			wc_get_template( 'woocommerce/quickview.php', $product_id );
 			$output = ob_get_clean();
 			wp_send_json_success($output);
 		} else {
