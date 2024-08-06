@@ -812,6 +812,8 @@
                 product_id: product_id,
                 //security: main_data.nonce
             },
+            cache: false,
+            dataType: 'json',
             success: function(response) {
                 if (response.success) {
                     $('body').append('<div class="quickview-modal">' + response.data + '</div>');
