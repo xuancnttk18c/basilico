@@ -810,9 +810,7 @@
             data: {
                 action: 'custom_quickview',
                 product_id: product_id,
-                security: main_data.nonce,
-                cache: false,
-                dataType: 'json'
+                security: main_data.nonce
             },
             success: function(response) {
                 if (response.success) {
