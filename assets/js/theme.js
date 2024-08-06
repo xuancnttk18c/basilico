@@ -805,12 +805,14 @@
         var product_id = $(this).data('product_id');
 
         $.ajax({
-            url: main_data.ajax_url,
+            url: main_data.ajaxurl,
             type: 'POST',
             data: {
                 action: 'custom_quickview',
                 product_id: product_id,
-                security: main_data.nonce
+                security: main_data.nonce,
+                cache: false,
+                dataType: 'json'
             },
             success: function(response) {
                 if (response.success) {
