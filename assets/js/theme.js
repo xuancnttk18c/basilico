@@ -798,4 +798,36 @@
         });
     }
 
+    //jkkjklsdjfkljsdfkljsdklfjsdkl
+
+    $('body').on('click', '.quickview-button', function(e) {
+        e.preventDefault();
+        var product_id = $(this).data('product_id');
+
+        $.ajax({
+            url: main_data.ajax_url,
+            type: 'POST',
+            data: {
+                action: 'custom_quickview',
+                product_id: product_id,
+                security: main_data.nonce
+            },
+            success: function(response) {
+                if (response.success) {
+                    $('body').append('<div class="quickview-modal">' + response.data + '</div>');
+                    $('.quickview-modal').fadeIn();
+                } else {
+                    alert('Unable to load Quick View');
+                }
+            }
+        });
+    });
+
+    $('body').on('click', '.quickview-modal', function() {
+        $(this).fadeOut(function() {
+            $(this).remove();
+        });
+    });
+
+
 })(jQuery);

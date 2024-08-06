@@ -108,3 +108,13 @@ function basilico_woocommerce_pagination_args($default){
     return $default;
 }
 
+
+
+
+//kljfkldsjfkdsjfkldsf
+
+add_action( 'woocommerce_after_shop_loop_item', 'custom_quickview_button', 10 );
+function custom_quickview_button() {
+    global $product;
+    echo '<a href="#" class="button quickview-button" data-product_id="' . esc_attr($product->get_id()) . '">Quick View</a>';
+}

@@ -107,9 +107,9 @@ if ( ! function_exists( 'basilico_widget_shopping_cart_proceed_to_checkout' ) ) 
 add_filter('woocommerce_add_to_cart_fragments', 'basilico_woocommerce_add_to_cart_fragments', 10, 1 );
 function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
 
-    $fragments['.mini-cart-count'] = '<span class="mini-cart-count">'.WC()->cart->cart_contents_count.'</span>';
+	$fragments['.mini-cart-count'] = '<span class="mini-cart-count">'.WC()->cart->cart_contents_count.'</span>';
 
-    ob_start();
+	ob_start();
 	wc_get_template( 'cart/mini-cart-totals.php' );
 	$fragments['.cart-footer-inner'] = ob_get_clean();
 
@@ -189,3 +189,23 @@ function basilico_single_add_to_cart_text() {
 	$cart_text = !empty(basilico()->get_theme_opt('add_to_cart_text', 'Add To Cart')) ? basilico()->get_theme_opt('add_to_cart_text', 'Add To Cart') : esc_html__('Add To Cart', 'basilico');
 	return esc_attr($cart_text);
 }
+
+// jkdfjaksdjfdsjfljdls
+
+function custom_quickview_ajax() {
+	$nonce_value = sanitize_text_field( wp_unslash($_POST['security']) ) ;
+	
+	if( wp_verify_nonce( $nonce_value, 'basilico-security' )){
+		$product_id = isset($_POST['product_id']) ? intval($_POST['product_id']) : 0;
+		if ($product_id) {
+			ob_start();
+			wc_get_template( 'quickview.php', array( 'product_id' => $product_id ), '', get_stylesheet_directory() . '/' );
+			$output = ob_get_clean();
+			wp_send_json_success($output);
+		} else {
+			wp_send_json_error();
+		}
+	}
+}
+add_action( 'wp_ajax_custom_quickview', 'custom_quickview' );
+add_action( 'wp_ajax_nopriv_custom_quickview', 'custom_quickview' );
