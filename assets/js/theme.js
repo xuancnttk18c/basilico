@@ -821,6 +821,9 @@
                 } else {
                     alert('Unable to load Quick View');
                 }
+            },
+            error: function(response) {
+                console.log(response);
             }
         });
     });
