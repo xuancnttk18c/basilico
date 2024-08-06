@@ -193,19 +193,19 @@ function basilico_single_add_to_cart_text() {
 // jkdfjaksdjfdsjfljdls
 
 function custom_quickview_ajax() {
-	//$nonce_value = sanitize_text_field( wp_unslash($_POST['security']) ) ;
+	$nonce_value = sanitize_text_field( wp_unslash($_POST['security']) ) ;
 	
-	//if( wp_verify_nonce( $nonce_value, 'basilico-security' )){
+	if( wp_verify_nonce( $nonce_value, 'basilico-security' )){
 		$product_id = isset($_POST['product_id']) ? intval($_POST['product_id']) : 0;
 		if ($product_id) {
 			ob_start();
-			wc_get_template('quickview.php', array('product_id' => $product_id) );
+			var_dump(wc_get_template('quickview.php', array('product_id' => $product_id)));
 			$output = ob_get_clean();
 			wp_send_json_success($output);
 		} else {
 			wp_send_json_error();
 		}
-	//}
+	}
 }
 add_action( 'wp_ajax_custom_quickview', 'custom_quickview_ajax' );
 add_action( 'wp_ajax_nopriv_custom_quickview', 'custom_quickview_ajax' );
