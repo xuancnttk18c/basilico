@@ -123,22 +123,6 @@ function basilico_scripts() {
         ],
     );
 
-
-
-
-
-
-    // hjkasdfhsdhfjksdhfjkdfh
-    wp_enqueue_style( 'quickview-style', get_stylesheet_directory_uri() . '/quickview.css' );
-    wp_enqueue_script( 'quickview-script', get_stylesheet_directory_uri() . '/quickview.js', array('jquery'), '1.0', true );
-
-
-
-
-
-
-
-
     /* Icons Lib */
     wp_enqueue_style( 'basilico-icon', get_template_directory_uri() . '/assets/fonts/pixelart/style.css', array(), '1.0.0');
     wp_enqueue_style( 'flaticon', get_template_directory_uri() . '/assets/fonts/flaticon/css/flaticon.css', array(), '1.0.0');
