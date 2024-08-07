@@ -45,6 +45,7 @@ pxl_add_custom_widget(
                                 'name' => 'img_height',
                                 'label' => esc_html__('Fixed Height (px)', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::NUMBER,
+                                'control_type' => 'responsive',
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-swiper-slider.pxl-image-carousel .item-inner img' => 'height: {{VALUE}}px; object-fit: cover;',
                                 ],
