@@ -42,12 +42,21 @@ pxl_add_custom_widget(
                                 'description' =>  esc_html__('Enter image size (Example: "thumbnail", "medium", "large", "full" or other sizes defined by theme). Alternatively enter size in pixels (Default: 370x300 (Width x Height)).', 'basilico')
                             ),
                             array(
+                                'name' => 'img_width',
+                                'label' => esc_html__('Fixed Width (px)', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::NUMBER,
+                                'control_type' => 'responsive',
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-swiper-slider.pxl-image-carousel .item-inner img' => 'height: {{VALUE}}px; object-fit: cover;',
+                                ],
+                            ),
+                            array(
                                 'name' => 'img_height',
                                 'label' => esc_html__('Fixed Height (px)', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::NUMBER,
                                 'control_type' => 'responsive',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-slider.pxl-image-carousel .item-inner img' => 'height: {{VALUE}}px; object-fit: cover;',
+                                    '{{WRAPPER}} .pxl-swiper-slider.pxl-image-carousel .item-inner img' => 'height: {{VALUE}}px;',
                                 ],
                             ),
                             array(
