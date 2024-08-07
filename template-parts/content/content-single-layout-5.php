@@ -59,13 +59,13 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
                 <?php
                     if ($post_tag == '1') {
                 ?>
-                <div class="post-tags-wrap col-sm-7">
+                <div class="post-tags-wrap col-md-7">
                     <?php basilico()->blog->get_post_tags(); ?>
                 </div>
                 <?php
                 }
                 if ($post_social_share == '1') { ?>
-                    <div class="post-share-wrap col-sm-5">
+                    <div class="post-share-wrap col-md-5">
                         <?php basilico()->blog->get_post_share(get_the_ID()); ?>
                     </div>
                 <?php 
