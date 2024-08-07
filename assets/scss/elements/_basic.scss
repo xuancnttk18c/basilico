@@ -1370,6 +1370,11 @@
     }
     &.layout-6 {
         .pxl-menu-item {
+            .custom-tags {
+                @media (max-width: $xs_max) {
+                    flex-direction: row;
+                }
+            }
             + .pxl-menu-item {
                 margin-top: 40px;
             }
@@ -4560,10 +4565,6 @@
             .title-wrap {
                 @include d-inline-flex();
                 gap: 50px;
-                @media (max-width: $sm_max) {
-                    flex-direction: column;
-                    gap: 12px;
-                }
             }
         }
         .tab-title {

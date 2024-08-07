@@ -663,7 +663,7 @@
                 complete: function() {}
             } );
         });
-        $('.widget_shopping_cart').on( 'change', '.qty', function() {
+        $('.widget_shopping_cart').on( 'change', '.qty', $.debounce(1000, function() {
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val();
             var data = {
@@ -686,7 +686,7 @@
                     $('.widget_shopping_cart .pxl-widget-cart-content').addClass('loading');
                 },
             } );
-        });
+        }));
         $('.pxl-sticky-atc').on( 'change', '.qty', function() {
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val(); 
