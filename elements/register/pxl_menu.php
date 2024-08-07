@@ -170,7 +170,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Typography', 'basilico' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-nav-menu .menu-menu-main-container .pxl-primary-menu > li > a, {{WRAPPER}} .pxl-nav-menu .menu-menu-main-container .pxl-mobile-menu > li > a',
+                            'selector' => '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu > li > a, {{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu > li > a',
                         ),
                         array(
                             'name'  => 'show_arrow',
@@ -199,9 +199,9 @@ pxl_add_custom_widget(
                             'control_type' => 'responsive',
                             'size_units' => [ 'px', 'em', '%', 'rem' ],
                             'selectors' => [
-                                '{{WRAPPER}} .menu-menu-main-container .pxl-primary-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                '{{WRAPPER}} .menu-menu-main-container .pxl-mobile-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-nav-menu.pxl-nav-menu-main.style-4 .pxl-primary-menu > li:not(:last-child):after' => 'right: calc(({{LEFT}}{{UNIT}} + {{RIGHT}}{{UNIT}}) / 2 * -1);',
+                                '{{WRAPPER}} .pxl-primary-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-mobile-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-nav-menu.style-4 .pxl-primary-menu > li:not(:last-child):after' => 'right: calc(({{LEFT}}{{UNIT}} + {{RIGHT}}{{UNIT}}) / 2 * -1);',
                             ],
                         ),
                     ),
@@ -278,7 +278,7 @@ pxl_add_custom_widget(
                                 'groove' => esc_html__( 'Groove', 'basilico' ),
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .menu-menu-main-container .pxl-primary-menu .sub-menu > li a' => 'border-bottom-style: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu > li a' => 'border-bottom-style: {{VALUE}};',
                             ],
 
                             'default' => 'solid',
@@ -288,7 +288,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Divider Color', 'basilico' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .menu-menu-main-container .pxl-primary-menu .sub-menu > li a' => 'border-bottom-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu > li a' => 'border-bottom-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -299,7 +299,7 @@ pxl_add_custom_widget(
                             'exclude' => [
                                 'box_shadow_position',
                             ],
-                            'selector' => '{{WRAPPER}} .pxl-nav-menu .menu-menu-main-container .pxl-primary-menu .sub-menu',
+                            'selector' => '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu',
                         ),
                         array(
                             'name' => 'border_radius',
@@ -307,7 +307,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .menu-menu-main-container .pxl-primary-menu .sub-menu' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ),
                     ),
