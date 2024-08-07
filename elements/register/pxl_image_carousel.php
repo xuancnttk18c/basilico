@@ -47,7 +47,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::NUMBER,
                                 'control_type' => 'responsive',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-slider.pxl-image-carousel .item-inner img' => 'height: {{VALUE}}px; object-fit: cover;',
+                                    '{{WRAPPER}} .pxl-swiper-slider.pxl-image-carousel .item-inner img' => 'width: {{VALUE}}px; object-fit: cover;',
                                 ],
                             ),
                             array(
