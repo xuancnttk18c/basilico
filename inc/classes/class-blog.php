@@ -440,7 +440,7 @@ if (!class_exists('Basilico_Blog')) {
             
             if ($post_author_on || $post_date_on || $post_categories_on || $post_comments_on) : ?>
                 <div class="post-metas hover-underline">
-                    <div class="meta-inner d-flex">
+                    <div class="meta-inner d-flex justify-content-center">
                         <?php if ($post_author_on) : ?>
                             <div class="post-author d-flex align-items-center">
                                 <i class="pxli pxli-user"></i>
