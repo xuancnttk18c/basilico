@@ -560,9 +560,9 @@
 
             document.addEventListener('mousemove', e => {
                 window.requestAnimationFrame(() => {
-                 circleStyle.top = `${ e.clientY - cursor.offsetHeight/2 }px`;
-                 circleStyle.left = `${ e.clientX - cursor.offsetWidth/2 }px`;
-             });
+                   circleStyle.top = `${ e.clientY - cursor.offsetHeight/2 }px`;
+                   circleStyle.left = `${ e.clientX - cursor.offsetWidth/2 }px`;
+               });
             });
 
             /** Hover Effect */
@@ -637,6 +637,20 @@
         });
     }
 
+    function debounce(fn, wait) {
+        var timeout;
+        return function() {
+            var context = this;
+            var args = arguments;
+
+            clearTimeout(timeout);
+
+            timeout = setTimeout(function() {
+                fn.apply(context, args);
+            }, wait);
+        };
+    };
+
     function basilico_update_cart_quantity(){
         $('.cart-list-wrapper').on( 'change', '.qty', function() {
             var item_key = $( this ).attr( 'name' );
@@ -663,7 +677,7 @@
                 complete: function() {}
             } );
         });
-        $('.widget_shopping_cart').on( 'change', '.qty', $.debounce(1000, function() {
+        $('.widget_shopping_cart').on( 'change', '.qty', debounce(function() {
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val();
             var data = {
@@ -686,7 +700,7 @@
                     $('.widget_shopping_cart .pxl-widget-cart-content').addClass('loading');
                 },
             } );
-        }));
+        }, 2000));
         $('.pxl-sticky-atc').on( 'change', '.qty', function() {
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val(); 
