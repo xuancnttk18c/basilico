@@ -40,7 +40,15 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Image Size', 'basilico' ),
                                 'type' => \Elementor\Controls_Manager::TEXT,
                                 'description' =>  esc_html__('Enter image size (Example: "thumbnail", "medium", "large", "full" or other sizes defined by theme). Alternatively enter size in pixels (Default: 370x300 (Width x Height)).', 'basilico')
-                            ), 
+                            ),
+                            array(
+                                'name' => 'img_height',
+                                'label' => esc_html__('Fixed Height (px)', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::NUMBER,
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-swiper-slider.pxl-image-carousel .item-inner img' => 'height: {{VALUE}}px;',
+                                ],
+                            ),
                             array(
                                 'name'        => 'space_between',
                                 'label'       => esc_html__('Space Between', 'basilico'),
@@ -120,9 +128,9 @@ pxl_add_custom_widget(
                             ),
                         )
                     ),
-                ),
-            ),
-        ),
-    ),
-    basilico_get_class_widget_path()
+),
+),
+),
+),
+basilico_get_class_widget_path()
 );
