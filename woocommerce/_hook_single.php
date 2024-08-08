@@ -273,7 +273,7 @@ function basilico_variable_add_to_cart(){
 	$btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
 	$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '. esc_attr($btn_style);
 	?>
-	
+
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo esc_attr($variations_attr); ?>">
 		<?php do_action( 'woocommerce_before_variations_form' ); ?>
@@ -309,7 +309,7 @@ function basilico_variable_add_to_cart(){
 	                        </div>
 	                    </div>
 	                </div>
-	                <div class="pxl-variations-wrap d-flex align-items-end">
+	                <div class="pxl-variations-wrap">
 	                	<div class="single_variation_wrap">
 	                		<div class="woocommerce-variation-add-to-cart variations_button">
 	                			<?php
