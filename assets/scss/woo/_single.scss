@@ -2056,12 +2056,15 @@ table.shop_attributes{
 				input {
 					display: none;
 				}
-				&:has(input:checked, input:selected) ~ .yith-wapo-addon-label {
-					&:before {
-						background-color: $primary_color;
-					}
-					&:after {
-						opacity: 1;
+				&:has(input:checked),
+				&:has(input:selected) {
+					& ~ .yith-wapo-addon-label {
+						&:before {
+							background-color: $primary_color;
+						}
+						&:after {
+							opacity: 1;
+						}
 					}
 				}
 			}
