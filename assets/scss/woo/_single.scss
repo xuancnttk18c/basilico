@@ -1995,8 +1995,13 @@ table.shop_attributes{
 		}
 		.checkbox-button-container {
 			.yith-wapo-addon-label {
+				padding-left: 40px;
 				&:before {
 					content: '';
+					position: absolute;
+					top: 50%;
+					left: 0;
+					@include transform(translateY(-50%));
 					width: 24px;
 					height: 24px;
 					margin-right: 14px;
@@ -2009,8 +2014,10 @@ table.shop_attributes{
 				&:after {
 					content: '';
 					position: absolute;
-					top: 4px;
+					top: 50%;
 					left: 8px;
+					@include transform(translateY(-50%));
+					z-index: 2;
 					display: inline-block;
 					width: 7px;
 					height: 13px;
