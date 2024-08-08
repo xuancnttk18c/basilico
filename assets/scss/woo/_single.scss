@@ -1980,6 +1980,7 @@ table.shop_attributes{
 	}
 	&.yith-wapo-addon-type-checkbox .options {
 		grid-template-columns: repeat( 2, minmax(0, 100%) ) !important;
+		gap: 20px !important;
 	}
 	.yith-wapo-option {
 		.yith-wapo-addon-label {
