@@ -659,6 +659,12 @@ table.cart {
 			padding-right: 30px;
 			margin-bottom: 0;
 		}
+		~ .variation {
+			content: 'fasdfdsfdfds';
+		}
+		.variation {
+			display: none;
+		}
 		.pxl-cart-empty {
 			padding: 30px;
 			.empty-icon i {
