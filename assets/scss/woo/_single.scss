@@ -1973,6 +1973,7 @@ table.shop_attributes{
 	}
 	.yith-wapo-option {
 		.yith-wapo-addon-label {
+			position: relative;
 			font-size: 17px;
 			font-weight: 500;
 			letter-spacing: 0;
@@ -1986,19 +1987,38 @@ table.shop_attributes{
 					content: '';
 					width: 24px;
 					height: 24px;
+					margin-right: 14px;
 					display: inline-block;
 					position: relative;
 					border: 1px solid $divider_color;
 					background-color: #fff;
 					@include border-radius(50%);
 				}
+				&:after {
+					content: '';
+					position: absolute;
+					top: 7px;
+					left: 7px;
+					display: inline-block;
+					width: 8px;
+					height: 15px;
+					border-left: 2px solid;
+					border-bottom: 2px solid;
+					border-color: #fff;
+					opacity: 0;
+				}
 			}
 			.checkboxbutton {
 				input {
 					display: none;
 				}
-				&:has(input:checked) ~ .yith-wapo-addon-label:before {
-					background-color: red;
+				&:has(input:checked) ~ .yith-wapo-addon-label {
+					&:before {
+						background-color: red;
+					}
+					&:after {
+						opacity: 1;
+					}
 				}
 			}
 		}
