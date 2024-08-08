@@ -352,7 +352,7 @@ function basilico_page_options_register( $metabox ) {
                     'default' => esc_html('220gr / 600 cal', 'basilico'),
                     'description' => esc_html('Use for Shop Layout 3', 'basilico')
                 ),
-                basilico_product_style_layout_4(),
+                basilico_product_style_layout_4()
             )
           )
        ],
