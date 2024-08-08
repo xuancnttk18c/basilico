@@ -1997,7 +1997,24 @@ table.shop_attributes{
 				font-size: 100%;
 			}
 		}
-		.checkbox-button-container {
+		.checkbox-button-container .checkboxbutton{
+			&:after {
+				content: '';
+				position: absolute;
+				top: 4px;
+				left: 8px;
+				display: inline-block;
+				width: 7px;
+				height: 13px;
+				border-right: 2px solid;
+				border-bottom: 2px solid;
+				border-color: #fff;
+				@include transform(rotate(45deg));
+				opacity: 0;
+			}
+		}
+		.checkbox-button-container,
+		.radio-button-container {
 			.yith-wapo-addon-label {
 				padding-left: 40px;
 				&:before {
@@ -2012,22 +2029,9 @@ table.shop_attributes{
 					background-color: #fff;
 					@include border-radius(50%);
 				}
-				&:after {
-					content: '';
-					position: absolute;
-					top: 4px;
-					left: 8px;
-					display: inline-block;
-					width: 7px;
-					height: 13px;
-					border-right: 2px solid;
-					border-bottom: 2px solid;
-					border-color: #fff;
-					@include transform(rotate(45deg));
-					opacity: 0;
-				}
 			}
-			.checkboxbutton {
+			.checkboxbutton,
+			.radiobutton {
 				input {
 					display: none;
 				}
