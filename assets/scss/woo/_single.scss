@@ -2057,19 +2057,7 @@ table.shop_attributes{
 					display: none;
 				}
 				&:has(input:checked) {
-					& ~ .yith-wapo-addon-label,
-					& ~ .yith-wapo-label, {
-						&:before {
-							background-color: $primary_color;
-						}
-						&:after {
-							opacity: 1;
-						}
-					}
-				}
-				&:has(input:selected) {
-					& ~ .yith-wapo-addon-label,
-					& ~ .yith-wapo-label, {
+					& ~ .yith-wapo-addon-label {
 						&:before {
 							background-color: $primary_color;
 						}
