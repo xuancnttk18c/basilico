@@ -659,8 +659,10 @@ table.cart {
 			padding-right: 30px;
 			margin-bottom: 0;
 		}
-		~ .variation {
-			content: 'fasdfdsfdfds';
+		& ~ .variation {
+			&:after {
+				content: 'fasdfdsfdfds';
+			}
 		}
 		.variation {
 			display: none;
