@@ -2,7 +2,6 @@
 
 function basilico_product_style_layout_4() {
     $product_layout = basilico()->get_theme_opt('product_layout', 'layout-1');
-    var_dump($product_layout);
     if ($product_layout == 'layout-4')
         return array(
             'id'          => 'product_layout_style',
