@@ -2016,7 +2016,7 @@ table.shop_attributes{
 				}
 			}
 		}
-		.checkbox-button-container {
+		.radio-button-container {
 			.yith-wapo-label,
 			.yith-wapo-addon-label {
 				&:after {
@@ -2056,7 +2056,8 @@ table.shop_attributes{
 				input {
 					display: none;
 				}
-				&:has(input:checked) {
+				&:has(input:checked),
+				&:has(input:selected) {
 					& ~ .yith-wapo-addon-label {
 						&:before {
 							background-color: $primary_color;
