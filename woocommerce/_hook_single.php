@@ -273,52 +273,36 @@ function basilico_variable_add_to_cart(){
 	$btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
 	$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '. esc_attr($btn_style);
 	?>
-	<div class="woocommerce-product-varitions">
-		<h4><?php echo esc_html('Choose Your Options: ', 'basilico'); ?></h4>
-		<div class="d-flex">
-			<a href="#variations_cart_modal" rel="modal:open" class="pxl-btn btn <?php echo esc_attr($btn_style); ?>">
-				<?php echo esc_html('Select Options', 'basilico'); ?>
-			</a>
-			<?php
-			$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
-			if( $product_wishlist == '1') : ?>
-				<div class="stock-wishlist">
-					<div class="pxl-shop-woosmart-wrap">
-						<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
-					</div>
-				</div>
-			<?php endif; ?>
-		</div>
-		<div id="variations_cart_modal" class="modal">
-			<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
-			<form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo esc_attr($variations_attr); ?>">
-				<?php do_action( 'woocommerce_before_variations_form' ); ?>
-				<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
-					<p class="stock out-of-stock"><?php echo esc_html( apply_filters( 'woocommerce_out_of_stock_message', esc_html__( 'This product is currently out of stock and unavailable.', 'basilico' ) ) ); ?></p>
-				<?php else : ?>
-					<div class="pxl-variation-quantity-wrap">
-						<div class="pxl-variation-wrap">
-							<div class="variations">
-								<?php foreach ( $attributes as $attribute_name => $options ) : ?>
-									<div class="pxl-variation-row row">
-										<div class="label col-12"><span for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><span class="lbl"><?php echo wc_attribute_label( $attribute_name );  ?> </span></span></div>
-										<div class="value col-12">
-											<?php
-											wc_dropdown_variation_attribute_options(
-												array(
-													'options'   => $options,
-													'attribute' => $attribute_name,
-													'product'   => $product,
-												)
-											);
-											?>
-										</div>
-									</div>
-								<?php endforeach; ?>
+	
+	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+	<form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo esc_attr($variations_attr); ?>">
+		<?php do_action( 'woocommerce_before_variations_form' ); ?>
+		<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
+			<p class="stock out-of-stock"><?php echo esc_html( apply_filters( 'woocommerce_out_of_stock_message', esc_html__( 'This product is currently out of stock and unavailable.', 'basilico' ) ) ); ?></p>
+		<?php else : ?>
+			<div class="pxl-variation-quantity-wrap">
+				<div class="pxl-variation-wrap">
+					<div class="variations">
+						<?php foreach ( $attributes as $attribute_name => $options ) : ?>
+							<div class="pxl-variation-row row">
+								<div class="label col-12"><span for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><span class="lbl"><?php echo wc_attribute_label( $attribute_name );  ?> </span></span></div>
+								<div class="value col-12">
+									<?php
+									wc_dropdown_variation_attribute_options(
+										array(
+											'options'   => $options,
+											'attribute' => $attribute_name,
+											'product'   => $product,
+										)
+									);
+									?>
+								</div>
 							</div>
-							<div class="pxl-variation-results">
-								<?php
-								do_action( 'woocommerce_before_single_variation' );
+						<?php endforeach; ?>
+					</div>
+					<div class="pxl-variation-results">
+						<?php
+						do_action( 'woocommerce_before_single_variation' );
 	                            echo '<div class="woocommerce-variation single_variation"></div>';//do_action( 'woocommerce_single_variation' );
 	                            do_action( 'woocommerce_after_single_variation' );
 	                            ?>
@@ -358,10 +342,8 @@ function basilico_variable_add_to_cart(){
 	            <?php do_action( 'woocommerce_after_variations_form' ); ?>
 	        </form>
 	        <?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
-	    </div>
-	</div>
-	<?php
-}
+	        <?php
+	    }
 
 function basilico_external_add_to_cart(){
 	global $product;
