@@ -1983,8 +1983,7 @@ table.shop_attributes{
 				font-size: 100%;
 			}
 		}
-		.options {
-			grid-template-columns: repeat( 2, minmax(0, 100%) ) !important;
+		.checkbox-button-container {
 			.yith-wapo-addon-label {
 				&:before {
 					content: '';
@@ -2011,6 +2010,9 @@ table.shop_attributes{
 					@include transform(rotate(45deg));
 					opacity: 0;
 				}
+			}
+			.options {
+				grid-template-columns: repeat( 2, minmax(0, 100%) ) !important;
 			}
 			.checkboxbutton {
 				input {
