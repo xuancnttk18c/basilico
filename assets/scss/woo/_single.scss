@@ -2078,22 +2078,23 @@ table.shop_attributes{
 }
 
 #wapo-total-price-table {
-		background-color: transparent;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		table {
-			th, td {
-				padding: 0;
-				font-size: 17px;
-				font-weight: 30px;
-				font-weight: 500;
-			}
-			th {
-				padding-right: 25px;
-				font-weight: 500;
-			}
+	background-color: transparent;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	table {
+		th, td {
+			padding: 0;
+			font-size: 17px;
+			font-weight: 30px;
+			font-weight: 500;
+			border: none;
+		}
+		th {
+			padding-right: 25px !important;
+			font-weight: 500;
 		}
 	}
+}
 
 .pxl-nutritions-wrapper {
 	padding-top: 25px;
