@@ -1973,6 +1973,8 @@ table.shop_attributes{
 	}
 	.yith-wapo-option {
 		.yith-wapo-addon-label {
+			display: inline-flex;
+			align-items: center;
 			position: relative;
 			font-size: 17px;
 			font-weight: 500;
@@ -1981,7 +1983,8 @@ table.shop_attributes{
 				font-size: 100%;
 			}
 		}
-		.checkbox-button-container {
+		.options {
+			grid-template-columns: repeat( 2, minmax(0, 100%) ) !important;
 			.yith-wapo-addon-label {
 				&:before {
 					content: '';
@@ -1997,14 +2000,15 @@ table.shop_attributes{
 				&:after {
 					content: '';
 					position: absolute;
-					top: 7px;
-					left: 7px;
+					top: 4px;
+					left: 8px;
 					display: inline-block;
-					width: 8px;
-					height: 15px;
-					border-left: 2px solid;
+					width: 7px;
+					height: 13px;
+					border-right: 2px solid;
 					border-bottom: 2px solid;
 					border-color: #fff;
+					@include transform(rotate(45deg));
 					opacity: 0;
 				}
 			}
@@ -2014,7 +2018,7 @@ table.shop_attributes{
 				}
 				&:has(input:checked) ~ .yith-wapo-addon-label {
 					&:before {
-						background-color: red;
+						background-color: $primary_color;
 					}
 					&:after {
 						opacity: 1;
