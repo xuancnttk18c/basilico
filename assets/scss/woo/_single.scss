@@ -1971,7 +1971,7 @@ table.shop_attributes{
 		letter-spacing: 0.03em;
 		text-transform: none;
 	}
-	.yith-wapo-addon-type-checkbox .options {
+	&.yith-wapo-addon-type-checkbox .options {
 		grid-template-columns: repeat( 2, minmax(0, 100%) ) !important;
 	}
 	.yith-wapo-option {
