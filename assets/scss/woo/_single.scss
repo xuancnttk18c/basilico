@@ -2056,8 +2056,7 @@ table.shop_attributes{
 				input {
 					display: none;
 				}
-				&:has(input:checked),
-				&:has(input:selected) {
+				&:has(input:checked) {
 					& ~ .yith-wapo-addon-label {
 						&:before {
 							background-color: $primary_color;
