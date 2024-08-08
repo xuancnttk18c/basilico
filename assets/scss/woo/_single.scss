@@ -1964,12 +1964,15 @@ table.shop_attributes{
 	}
 }
 
-.pxl-shop-layout-4 .yith-wapo-container .yith-wapo-block {
+.pxl-shop-layout-4 .yith-wapo-block .yith-wapo-addon{
 	.wapo-addon-title {
 		font-size: 20px;
 		font-weight: 400;
 		letter-spacing: 0.03em;
 		text-transform: none;
+	}
+	.options {
+		grid-template-columns: repeat( 2, minmax(0, 100%) ) !important;
 	}
 	.yith-wapo-option {
 		.yith-wapo-addon-label {
@@ -1982,9 +1985,6 @@ table.shop_attributes{
 			small {
 				font-size: 100%;
 			}
-		}
-		.options {
-			grid-template-columns: repeat( 2, minmax(0, 100%) ) !important;
 		}
 		.checkbox-button-container {
 			.yith-wapo-addon-label {
