@@ -2016,6 +2016,23 @@ table.shop_attributes{
 				}
 			}
 		}
+		.checkbox-button-container {
+			.yith-wapo-label,
+			.yith-wapo-addon-label {
+				&:after {
+					content: '';
+					position: absolute;
+					top: 4px;
+					left: 8px;
+					display: inline-block;
+					width: 12px;
+					height: 12px;
+					background-color: $primary_color;
+					@include border-radius(50%);
+					opacity: 0;
+				}
+			}
+		}
 		.checkbox-button-container,
 		.radio-button-container {
 			.yith-wapo-addon-label,
@@ -2039,7 +2056,7 @@ table.shop_attributes{
 				input {
 					display: none;
 				}
-				&:has(input:checked) ~ .yith-wapo-addon-label {
+				&:has(input:checked, input:selected) ~ .yith-wapo-addon-label {
 					&:before {
 						background-color: $primary_color;
 					}
