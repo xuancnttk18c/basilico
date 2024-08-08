@@ -870,7 +870,7 @@
 	}
 	.quantity {
 		max-width: 123px;
-		margin-right: 4px;
+		margin-right: 34px;
 		.label {
 			display: none;
 		}
@@ -1974,6 +1974,9 @@ table.shop_attributes{
 	form.cart:has(#yith-wapo-container .yith-wapo-block),
 	&:is(.woocommerce div.product .elementor-widget-woocommerce-product-add-to-cart) form.cart.variations_form .woocommerce-variation-add-to-cart {
 		display: flex !important;
+	}
+	.yith-wapo-container {
+		margin-bottom: 20px;
 	}
 	.yith-wapo-block .yith-wapo-addon{
 		.wapo-addon-title {
