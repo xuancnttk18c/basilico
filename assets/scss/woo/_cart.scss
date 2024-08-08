@@ -659,13 +659,18 @@ table.cart {
 			padding-right: 30px;
 			margin-bottom: 0;
 		}
-		& ~ .variation {
+		~ .variation {
 			&:after {
 				content: 'fasdfdsfdfds';
 			}
 		}
 		.variation {
-			display: none;
+			&:before {
+				content: 'With Addons';
+			}
+			dt, dd {
+				display: none;
+			}
 		}
 		.pxl-cart-empty {
 			padding: 30px;
