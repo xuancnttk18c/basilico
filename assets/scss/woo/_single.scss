@@ -1983,25 +1983,27 @@ table.shop_attributes{
 	}
 	.yith-wapo-option {
 		.yith-wapo-addon-label {
-			display: inline-flex;
-			align-items: center;
 			position: relative;
 			font-size: 17px;
+			line-height: 24px;
 			font-weight: 500;
 			letter-spacing: 0;
 			small {
+				margin-left: 5px;
 				font-size: 100%;
 			}
 		}
 		.checkbox-button-container {
 			.yith-wapo-addon-label {
+				padding-left: 40px;
 				&:before {
 					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
 					width: 24px;
 					height: 24px;
-					margin-right: 14px;
 					display: inline-block;
-					position: relative;
 					border: 1px solid $divider_color;
 					background-color: #fff;
 					@include border-radius(50%);
