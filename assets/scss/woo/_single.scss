@@ -1975,7 +1975,7 @@ table.shop_attributes{
 	}
 }
 
-.pxl-shop-layout-4 {
+.pxl-shop-layout-3 {
 	form.cart:has(#yith-wapo-container .yith-wapo-block),
 	&:is(.woocommerce div.product .elementor-widget-woocommerce-product-add-to-cart) form.cart.variations_form .woocommerce-variation-add-to-cart {
 		display: flex !important;
@@ -1985,9 +1985,9 @@ table.shop_attributes{
 	}
 	.yith-wapo-block .yith-wapo-addon{
 		.wapo-addon-title {
-			font-size: 20px;
-			font-weight: 400;
-			letter-spacing: 0.03em;
+			font-size: 25px;
+			font-weight: 600;
+			letter-spacing: 0.02em;
 		}
 		&.yith-wapo-addon-type-checkbox,
 		&.yith-wapo-addon-type-radio {
@@ -1999,12 +1999,10 @@ table.shop_attributes{
 		.yith-wapo-option {
 			.yith-wapo-addon-label, .yith-wapo-label {
 				position: relative;
-				font-size: 17px;
-				line-height: 24px;
-				font-weight: 500;
+				font-size: 15px;
+				font-weight: 400;
 				letter-spacing: 0;
 				small {
-					margin-left: 5px;
 					font-size: 100%;
 				}
 			}
@@ -2033,11 +2031,11 @@ table.shop_attributes{
 					&:after {
 						content: '';
 						position: absolute;
-						top: 6px;
-						left: 6px;
+						top: 4px;
+						left: 4px;
 						display: inline-block;
-						width: 12px;
-						height: 12px;
+						width: 10px;
+						height: 10px;
 						background-color: $primary_color;
 						@include border-radius(50%);
 						opacity: 0;
@@ -2054,8 +2052,8 @@ table.shop_attributes{
 						position: absolute;
 						left: 0;
 						top: 0;
-						width: 24px;
-						height: 24px;
+						width: 22px;
+						height: 22px;
 						display: inline-block;
 						border: 1px solid $divider_color;
 						background-color: #fff;
@@ -2089,7 +2087,7 @@ table.shop_attributes{
 	}
 }
 
-.pxl-shop-layout-3 {
+.pxl-shop-layout-4 {
 	form.cart:has(#yith-wapo-container .yith-wapo-block),
 	&:is(.woocommerce div.product .elementor-widget-woocommerce-product-add-to-cart) form.cart.variations_form .woocommerce-variation-add-to-cart {
 		display: flex !important;
