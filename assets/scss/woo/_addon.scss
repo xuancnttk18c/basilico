@@ -4,8 +4,12 @@
 }
 .yith-wapo-container {
 	margin-bottom: 20px;
+	flex-grow: 1;
 }
-.yith-wapo-block .yith-wapo-addon{
+.yith-wapo-block .yith-wapo-addon {
+	+ .yith-wapo-addon {
+		margin-top: 25px;
+	}
 	.wapo-addon-title {
 		font-size: 20px;
 		font-weight: 400;
