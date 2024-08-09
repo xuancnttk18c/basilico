@@ -1,4 +1,4 @@
-form.cart:has(#yith-wapo-container .yith-wapo-block),
+#pxl-main form.cart:has(#yith-wapo-container .yith-wapo-block),
 &:is(.woocommerce div.product .elementor-widget-woocommerce-product-add-to-cart) form.cart.variations_form .woocommerce-variation-add-to-cart {
 	display: flex !important;
 }
