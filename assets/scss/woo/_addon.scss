@@ -6,10 +6,10 @@
 	margin-bottom: 20px;
 	flex-grow: 1;
 }
+#pxl-main .yith-wapo-block .yith-wapo-addon:not(:first-child):not(.empty-title):not(.toggle-open) {
+	margin-top: 25px;
+}
 .yith-wapo-block .yith-wapo-addon {
-	+ .yith-wapo-addon {
-		margin-top: 25px;
-	}
 	.wapo-addon-title {
 		font-size: 20px;
 		font-weight: 400;
