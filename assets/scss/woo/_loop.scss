@@ -398,6 +398,7 @@ select.orderby{
 			font-size: 20px;
 			font-weight: 500;
 			margin-bottom: 10px;
+			text-transform: uppercase;
 			a {
 				@include multiline-hover-underline();
 			}
