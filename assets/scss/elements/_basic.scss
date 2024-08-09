@@ -2866,13 +2866,10 @@
         }
         .box-title {
             font-family: $heading_font_family;
-            font-size: 25px;
             letter-spacing: 0.03em;
-            text-transform: none;
             @include text-truncate-multi-line($font-size: 25px, $line-height: 1.2, $lines-to-show: 1);
             color: $heading_color;
             position: relative;
-            text-transform: none;
             margin-bottom: 19px;
         }
         .pxl-divider {
@@ -3127,7 +3124,6 @@
                 font-size: 35px;
                 font-weight: 600;
                 letter-spacing: 0.02em;
-                text-transform: none;
             }
             .box-image {
                 img {
@@ -3609,7 +3605,6 @@
             color: #fff;
             text-transform: uppercase;
             position: relative;
-            text-transform: none !important;
             cursor: pointer;
             -webkit-font-smoothing: antialiased;
             font-smoothing: antialiased;
@@ -3683,7 +3678,6 @@
             font-size: 20px;
             letter-spacing: 0.03em;
             font-weight: 400;
-            text-transform: none;
             position: relative;
             cursor: pointer;
             -webkit-font-smoothing: antialiased;
@@ -3764,7 +3758,6 @@
             letter-spacing: 0.02em;
             font-weight: 400;
             position: relative;
-            text-transform: none;
             cursor: pointer;
             -webkit-font-smoothing: antialiased;
             font-smoothing: antialiased;

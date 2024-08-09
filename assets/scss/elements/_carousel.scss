@@ -387,7 +387,6 @@
                 font-weight: 700;
                 letter-spacing: 2px;
                 font-style: italic;
-                text-transform: none;
                 margin-bottom: 35px;
                 line-height: 26px;
                 span {
@@ -647,7 +646,6 @@
             font-size: 25px;
             line-height: 28px;
             font-weight: 600;
-            text-transform: none;
             margin-bottom: 0;
             span {
                 position: relative;
@@ -733,7 +731,6 @@
                 font-weight: 700;
                 letter-spacing: 2px;
                 font-style: italic;
-                text-transform: none;
                 margin-bottom: 35px;
                 line-height: 26px;
                 span {
@@ -841,7 +838,6 @@
                 font-weight: 700;
                 letter-spacing: 2px;
                 font-style: italic;
-                text-transform: none;
                 margin-bottom: 35px;
                 line-height: 26px;
                 @media (max-width: $sm_max) {
@@ -970,7 +966,6 @@
             position: relative;
             font-size: 20px;
             font-style: italic;
-            text-transform: none;
             font-weight: 600;
             letter-spacing: 0.02em;
             margin-bottom: 3px;
@@ -1107,7 +1102,6 @@
             color: $primary_color;
             font-family: $body_font_family;
             font-size: 20px;
-            text-transform: none;
             font-weight: 700;
             letter-spacing: 0.03em;
             margin-bottom: 3px;
@@ -1197,7 +1191,6 @@
                 font-size: 25px;
                 font-weight: 400;
                 letter-spacing: 0.03em;
-                text-transform: none;
             }
             .item-title {
                 margin-top: 20px;
@@ -2181,6 +2174,7 @@
             font-size: 25px;
             font-weight: 600;
             letter-spacing: 0.05em;
+            text-transform: uppercase;
             span {
                 position: relative;
                 &:before,
@@ -2325,7 +2319,6 @@
                     font-size: 25px;
                     font-weight: 600;
                     letter-spacing: 0.02em;
-                    text-transform: none;
                     @include transition(all 500ms ease);
                     + .item-description {
                         @include transition(all 500ms ease);
@@ -3116,7 +3109,6 @@
             .item-title {
                 @include text-truncate-multi-line(22px, 1.363636363636364, 2);
                 font-weight: 600;
-                text-transform: none;
                 text-align: center;
                 letter-spacing: 0.02em;
                 margin-top: 23px;
@@ -3202,7 +3194,6 @@
             .item-title {
                 @include text-truncate-multi-line(25px, 1.28, 2);
                 font-weight: 400;
-                text-transform: none;
                 letter-spacing: 0.03em;
                 margin-top: 27px;
                 margin-bottom: 0;
