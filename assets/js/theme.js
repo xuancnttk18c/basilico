@@ -812,27 +812,4 @@
         });
     }
 
-    //
-
-
-
-    $('#store-selector').on('change', function() {
-        var storeSlug = $(this).val();
-        if (storeSlug) {
-            $.ajax({
-                url: main_data.ajaxurl,
-                type: 'POST',
-                data: {
-                    action: 'select_store',
-                    store_slug: storeSlug
-                },
-                success: function(response) {
-                    if (response.success) {
-                        window.location.href = response.data.url;
-                    }
-                }
-            });
-        }
-    });
-
 })(jQuery);
