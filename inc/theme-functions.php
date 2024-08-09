@@ -512,3 +512,19 @@ function add_store_selector() {
     echo '</select>';
 }
 add_action( 'woocommerce_before_shop_loop', 'add_store_selector' );
+
+function handle_store_selection() {
+    if ( isset( $_POST['store_slug'] ) ) {
+        $store_slug = sanitize_text_field( $_POST['store_slug'] );
+        $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
+
+        // Append the store slug as a query parameter to the shop URL
+        $redirect_url = add_query_arg( 'store', $store_slug, $shop_page_url );
+
+        wp_send_json_success( array( 'url' => $redirect_url ) );
+    } else {
+        wp_send_json_error();
+    }
+}
+add_action( 'wp_ajax_select_store', 'handle_store_selection' );
+add_action( 'wp_ajax_nopriv_select_store', 'handle_store_selection' );

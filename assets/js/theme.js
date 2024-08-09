@@ -560,9 +560,9 @@
 
             document.addEventListener('mousemove', e => {
                 window.requestAnimationFrame(() => {
-                   circleStyle.top = `${ e.clientY - cursor.offsetHeight/2 }px`;
-                   circleStyle.left = `${ e.clientX - cursor.offsetWidth/2 }px`;
-               });
+                 circleStyle.top = `${ e.clientY - cursor.offsetHeight/2 }px`;
+                 circleStyle.left = `${ e.clientX - cursor.offsetWidth/2 }px`;
+             });
             });
 
             /** Hover Effect */
@@ -811,5 +811,28 @@
             jQuery(this).attr('colspan',colspan_value);
         });
     }
+
+    //
+
+
+
+    $('#store-selector').on('change', function() {
+        var storeSlug = $(this).val();
+        if (storeSlug) {
+            $.ajax({
+                url: main_data.ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'select_store',
+                    store_slug: storeSlug
+                },
+                success: function(response) {
+                    if (response.success) {
+                        window.location.href = response.data.url;
+                    }
+                }
+            });
+        }
+    });
 
 })(jQuery);
