@@ -860,7 +860,6 @@
                 font-size: 20px;
                 line-height: 1.5;
                 letter-spacing: 0.05em;
-                text-transform: uppercase;
                 @include text-truncate-multi-line(20px, 1.5, 2);
                 a {
                     @include multiline-hover-underline();
