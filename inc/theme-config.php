@@ -59,6 +59,7 @@ if(!function_exists('basilico_configs')){
             'heading' => [
                 'font-family'       => basilico()->get_theme_opt('font_heading',['font-family' => $heading_font], 'font-family'),
                 'font-weight'       => basilico()->get_theme_opt('font_heading',['font-weight' => '700'], 'font-weight'),
+                'text-transform'    => basilico()->get_theme_opt('font_heading',['text-transform' => 'none'], 'text-transform'),
                 'line-height'       => basilico()->get_theme_opt('font_heading',['line-height' => '1.18'], 'line-height'),
                 'letter-spacing'    => basilico()->get_theme_opt('font_heading',['letter-spacing' => '0.05em'], 'letter-spacing'),
                 'color-hover'      => 'var(--primary-color)',
