@@ -659,11 +659,6 @@ table.cart {
 			padding-right: 30px;
 			margin-bottom: 0;
 		}
-		~ .variation {
-			&:after {
-				content: 'fasdfdsfdfds';
-			}
-		}
 		.variation {
 			&:before {
 				content: 'With Addons';

@@ -2,7 +2,7 @@
 // make some configs
 if(!function_exists('basilico_configs')){
     function basilico_configs($value){
-        $heading_font = '\'Audrey\', sans-serif';
+        $heading_font = '\'Cormorant Infant\', sans-serif';
         $body_font    = '\'Cerebri Sans\', sans-serif';
         $configs = [
             'theme_colors' => [
