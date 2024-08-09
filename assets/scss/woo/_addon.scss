@@ -118,18 +118,11 @@
 		}
 		.yith-wapo-addon-label, .yith-wapo-label {
 			position: relative;
-			font-size: 17px;
-			line-height: 24px;
-			font-weight: 500;
+			font-size: 15px;
+			font-weight: 400;
 			letter-spacing: 0;
 		}
 		.yith-wapo-option {
-			.yith-wapo-addon-label, .yith-wapo-label {
-				small {
-					margin-left: 5px;
-					font-size: 100%;
-				}
-			}
 			.checkbox-button-container {
 				.yith-wapo-label,
 				.yith-wapo-addon-label {
@@ -259,9 +252,6 @@ div#wapo-total-price-table {
 		th {
 			padding-right: 25px;
 			font-weight: 500;
-		}
-		.wapo-product-price {
-			display: none;
 		}
 	}
 }
