@@ -3656,6 +3656,7 @@
             letter-spacing: 0.05em;
             color: $primary_color;
             margin-bottom: 0;
+            text-transform: uppercase;
             a {
                 color: inherit;
                 position: relative;
@@ -3804,6 +3805,7 @@
                         line-height: 30px;
                         font-weight: 600;
                         letter-spacing: 0.05em;
+                        text-transform: uppercase;
                     }
                     .item-tags {
                         font-size: 15px;
@@ -3864,6 +3866,7 @@
                         line-height: 30px;
                         font-weight: 600;
                         letter-spacing: 0.05em;
+                        text-transform: uppercase;
                         margin-bottom: 0;
                         a {
                             color: inherit;
