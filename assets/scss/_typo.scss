@@ -20,7 +20,7 @@ a {
     @include transition(all 300ms linear 0ms);
 }
 h1,h2,h3,h4,h5,h6 {
-    text-transform: var(--heading-text-transform);
+    text-transform: $heading_text_transform;
     font-family: $heading_font_family;
     color: $heading_color;
     clear: both;
