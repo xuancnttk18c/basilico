@@ -265,6 +265,12 @@
 	letter-spacing: 0.05em;
 	margin-bottom: 10px;
 }
+
+.pxl-shop-layout-1 .product_title,
+.pxl-shop-layout-2 .product_title {
+	letter-spacing: uppercase;
+}
+
 .pxl-shop-layout-2 .product_title {
 	font-size: 35px;
 	font-weight: 600;
@@ -682,7 +688,6 @@
 			font-size: 17px;
 			font-weight: 400;
 			letter-spacing: 0;
-			text-transform: none;
 		}
 	}
 	.product_meta {
@@ -1777,6 +1782,7 @@ table.shop_attributes{
 		}
 	}
 	.related_title {
+		text-transform: uppercase;
 		font-weight: 600;
 		font-size: 45px;
 		line-height: 60px;
@@ -1889,7 +1895,6 @@ table.shop_attributes{
 			font-size: 25px;
 			font-weight: 600;
 			letter-spacing: 0.02em;
-			text-transform: none;
 			margin-bottom: 0;
 		}
 		.addon-description {
@@ -1983,7 +1988,6 @@ table.shop_attributes{
 			font-size: 20px;
 			font-weight: 400;
 			letter-spacing: 0.03em;
-			text-transform: none;
 		}
 		&.yith-wapo-addon-type-checkbox,
 		&.yith-wapo-addon-type-radio {
@@ -2132,7 +2136,6 @@ div#wapo-total-price-table {
 		font-size: 25px;
 		font-weight: 600;
 		letter-spacing: 0.02em;
-		text-transform: none;
 	}
 	.pxl-nutrition {
 		text-transform: uppercase;
@@ -2145,7 +2148,6 @@ div#wapo-total-price-table {
 		font-size: 20px;
 		font-weight: 400;
 		letter-spacing: 0.03em;
-		text-transform: none;
 	}
 	.pxl-nutrition {
 		text-transform: uppercase;
