@@ -448,3 +448,67 @@ function basilico_hex_rgb($color)
             //Return rgb(a) color string
     return $output;
 }
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+function register_store_taxonomy() {
+    $labels = array(
+        'name'              => _x( 'Stores', 'taxonomy general name', 'textdomain' ),
+        'singular_name'     => _x( 'Store', 'taxonomy singular name', 'textdomain' ),
+        'search_items'      => __( 'Search Stores', 'textdomain' ),
+        'all_items'         => __( 'All Stores', 'textdomain' ),
+        'edit_item'         => __( 'Edit Store', 'textdomain' ),
+        'update_item'       => __( 'Update Store', 'textdomain' ),
+        'add_new_item'      => __( 'Add New Store', 'textdomain' ),
+        'new_item_name'     => __( 'New Store Name', 'textdomain' ),
+        'menu_name'         => __( 'Store', 'textdomain' ),
+    );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'store' ),
+    );
+    register_taxonomy( 'store', array( 'product' ), $args );
+}
+add_action( 'init', 'register_store_taxonomy', 0 );
+
+function filter_products_by_store( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && is_shop() ) {
+        $store = get_query_var( 'store' );
+        if ( $store ) {
+            $tax_query = array(
+                array(
+                    'taxonomy' => 'store',
+                    'field'    => 'slug',
+                    'terms'    => $store,
+                ),
+            );
+            $query->set( 'tax_query', $tax_query );
+        }
+    }
+}
+add_action( 'pre_get_posts', 'filter_products_by_store' );
+
+function add_store_selector() {
+    $stores = get_terms( 'store' );
+    echo '<select id="store-selector">';
+    foreach ( $stores as $store ) {
+        echo '<option value="' . esc_attr( $store->slug ) . '">' . esc_html( $store->name ) . '</option>';
+    }
+    echo '</select>';
+}
+add_action( 'woocommerce_before_shop_loop', 'add_store_selector' );
