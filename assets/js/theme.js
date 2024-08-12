@@ -811,11 +811,6 @@
             jQuery(this).attr('colspan',colspan_value);
         });
     }
-
-
-
-
-
     
     $('.pxl-quickview').on('click', function(e) {
         e.preventDefault();

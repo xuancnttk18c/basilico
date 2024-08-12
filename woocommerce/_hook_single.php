@@ -677,7 +677,10 @@ function add_quickview_modal() {
 	?>
 	<div id="pxl-quickview-modal" class="custom-modal">
 		<div class="custom-modal-content">
-			<span class="close-modal">&times;</span>
+			<h2 class="modal-heading">
+				<span><?php echo esc_html('Product Options', 'basilico'); ?></span>
+				<span class="close-modal">X</span>		
+			</h2>
 			<!-- AJAX content will be injected here -->
 		</div>
 	</div>
