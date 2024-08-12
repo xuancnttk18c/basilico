@@ -662,8 +662,6 @@ function pxl_product_quickview() {
 		</div>
 	</div>
 	<?php
-	$output = ob_get_clean();
-	echo $output;
 	die();
 }
 

@@ -817,10 +817,11 @@
 
 
     
-    $('.oxl-quickview').on('click', function(e) {
+    $('.pxl-quickview').on('click', function(e) {
         e.preventDefault();
         var product_id = $(this).data('product_id');
 
+        alert("Clicked");
         $.ajax({
             url: main_data.ajaxurl,
             type: 'POST',
