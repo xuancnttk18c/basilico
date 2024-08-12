@@ -829,8 +829,8 @@
                 product_id: product_id
             },
             success: function(response) {
-                $('#quickview-modal .custom-modal-content').html(response);
-                $('#quickview-modal').fadeIn();
+                $('#pxl-quickview-modal .custom-modal-content').html(response);
+                $('#pxl-quickview-modal').fadeIn();
             }
         });
     });
