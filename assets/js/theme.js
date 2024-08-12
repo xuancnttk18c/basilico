@@ -832,13 +832,13 @@
 
     // Close the modal when clicking the close button
     $(document).on('click', '.close-modal', function() {
-        $('#quickview-modal').fadeOut();
+        $('#pxl-quickview-modal').fadeOut();
     });
 
     // Close the modal when clicking outside the modal content
     $(window).on('click', function(event) {
         if ($(event.target).is('#pxl-quickview-modal')) {
-            $('#quickview-modal').fadeOut();
+            $('#pxl-quickview-modal').fadeOut();
         }
     });
 
