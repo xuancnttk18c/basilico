@@ -817,7 +817,7 @@
 
 
     
-    $('.quickview').on('click', function(e) {
+    $('.oxl-quickview').on('click', function(e) {
         e.preventDefault();
         var product_id = $(this).data('product_id');
 
@@ -825,7 +825,7 @@
             url: main_data.ajaxurl,
             type: 'POST',
             data: {
-                action: 'load_product_quickview',
+                action: 'pxl_product_quickview',
                 product_id: product_id
             },
             success: function(response) {

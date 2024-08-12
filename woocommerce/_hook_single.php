@@ -345,174 +345,174 @@ function basilico_variable_add_to_cart(){
 	        <?php
 	    }
 
-function basilico_external_add_to_cart(){
-	global $product;
+	    function basilico_external_add_to_cart(){
+	    	global $product;
 
-	if ( ! $product->add_to_cart_url() ) {
-		return;
-	}
+	    	if ( ! $product->add_to_cart_url() ) {
+	    		return;
+	    	}
 
-	$product_url = $product->add_to_cart_url();
-	$button_text = $product->single_add_to_cart_text();
+	    	$product_url = $product->add_to_cart_url();
+	    	$button_text = $product->single_add_to_cart_text();
 
-	$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
-	$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
+	    	$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
+	    	$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
 
-	do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+	    	do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-	<form class="cart external" action="<?php echo esc_url( $product_url ); ?>" method="get">
-		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-		<div class="pxl-addtocart-btn-wrap">
-			<div class="pxl-atc-btn">
-				<button type="submit" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $button_text ); ?></span></button>
-			</div>
-		</div>
+	    	<form class="cart external" action="<?php echo esc_url( $product_url ); ?>" method="get">
+	    		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+	    		<div class="pxl-addtocart-btn-wrap">
+	    			<div class="pxl-atc-btn">
+	    				<button type="submit" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $button_text ); ?></span></button>
+	    			</div>
+	    		</div>
 
-		<?php wc_query_string_form_fields( $product_url ); ?>
+	    		<?php wc_query_string_form_fields( $product_url ); ?>
 
-		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
-	</form>
+	    		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+	    	</form>
 
-	<?php
-	do_action( 'woocommerce_after_add_to_cart_form' );
-	$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
-	if( $product_wishlist == '1') : ?>
-		<div class="stock-wishlist">
-			<div class="pxl-shop-woosmart-wrap">
-				<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
-			</div>
-		</div>
-	<?php endif;
-}
+	    	<?php
+	    	do_action( 'woocommerce_after_add_to_cart_form' );
+	    	$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
+	    	if( $product_wishlist == '1') : ?>
+	    		<div class="stock-wishlist">
+	    			<div class="pxl-shop-woosmart-wrap">
+	    				<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
+	    			</div>
+	    		</div>
+	    	<?php endif;
+	    }
 
-function basilico_grouped_add_to_cart(){
-	global $product, $post;
-	$products = array_filter( array_map( 'wc_get_product', $product->get_children() ), 'wc_products_array_filter_visible_grouped' );
+	    function basilico_grouped_add_to_cart(){
+	    	global $product, $post;
+	    	$products = array_filter( array_map( 'wc_get_product', $product->get_children() ), 'wc_products_array_filter_visible_grouped' );
 
-	$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
-	$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
-	if ( $products ) {
-		$grouped_product = $product;
-		$grouped_products = $products;
-		do_action( 'woocommerce_before_add_to_cart_form' ); ?>
-		<form class="cart grouped_form" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
-			<div class="woocommerce-grouped-product-list group_table">
-				<?php
-				$quantites_required      = false;
-				$previous_post           = $post;
-				$grouped_product_columns = apply_filters(
-					'woocommerce_grouped_product_columns',
-					array(
-						'quantity',
-						'label',
-						'price',
-					),
-					$product
-				);
-				$show_add_to_cart_button = false;
+	    	$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
+	    	$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
+	    	if ( $products ) {
+	    		$grouped_product = $product;
+	    		$grouped_products = $products;
+	    		do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+	    		<form class="cart grouped_form" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
+	    			<div class="woocommerce-grouped-product-list group_table">
+	    				<?php
+	    				$quantites_required      = false;
+	    				$previous_post           = $post;
+	    				$grouped_product_columns = apply_filters(
+	    					'woocommerce_grouped_product_columns',
+	    					array(
+	    						'quantity',
+	    						'label',
+	    						'price',
+	    					),
+	    					$product
+	    				);
+	    				$show_add_to_cart_button = false;
 
-				do_action( 'woocommerce_grouped_product_list_before', $grouped_product_columns, $quantites_required, $product );
+	    				do_action( 'woocommerce_grouped_product_list_before', $grouped_product_columns, $quantites_required, $product );
 
-				foreach ( $grouped_products as $grouped_product_child ) {
-					$post_object        = get_post( $grouped_product_child->get_id() );
-					$quantites_required = $quantites_required || ( $grouped_product_child->is_purchasable() && ! $grouped_product_child->has_options() );
-					$post               = $post_object;  
-					setup_postdata( $post );
+	    				foreach ( $grouped_products as $grouped_product_child ) {
+	    					$post_object        = get_post( $grouped_product_child->get_id() );
+	    					$quantites_required = $quantites_required || ( $grouped_product_child->is_purchasable() && ! $grouped_product_child->has_options() );
+	    					$post               = $post_object;  
+	    					setup_postdata( $post );
 
-					if ( $grouped_product_child->is_in_stock() ) {
-						$show_add_to_cart_button = true;
-					}
+	    					if ( $grouped_product_child->is_in_stock() ) {
+	    						$show_add_to_cart_button = true;
+	    					}
 
-					echo '<div id="product-' . esc_attr( $grouped_product_child->get_id() ) . '" class="woocommerce-grouped-product-list-item d-flex gx-15 ' . esc_attr( implode( ' ', wc_get_product_class( '', $grouped_product_child ) ) ) . '">';
+	    					echo '<div id="product-' . esc_attr( $grouped_product_child->get_id() ) . '" class="woocommerce-grouped-product-list-item d-flex gx-15 ' . esc_attr( implode( ' ', wc_get_product_class( '', $grouped_product_child ) ) ) . '">';
 
-					foreach ( $grouped_product_columns as $column_id ) {
-						do_action( 'woocommerce_grouped_product_list_before_' . $column_id, $grouped_product_child );
+	    					foreach ( $grouped_product_columns as $column_id ) {
+	    						do_action( 'woocommerce_grouped_product_list_before_' . $column_id, $grouped_product_child );
 
-						switch ( $column_id ) {
-							case 'quantity':
-							ob_start();
+	    						switch ( $column_id ) {
+	    							case 'quantity':
+	    							ob_start();
 
-							if ( ! $grouped_product_child->is_purchasable() || $grouped_product_child->has_options() || ! $grouped_product_child->is_in_stock() ) {
-								woocommerce_template_loop_add_to_cart();
-							} elseif ( $grouped_product_child->is_sold_individually() ) {
-								echo '<input type="checkbox" name="' . esc_attr( 'quantity[' . $grouped_product_child->get_id() . ']' ) . '" value="1" class="wc-grouped-product-add-to-cart-checkbox" />';
-							} else {
-								do_action( 'woocommerce_before_add_to_cart_quantity' );
+	    							if ( ! $grouped_product_child->is_purchasable() || $grouped_product_child->has_options() || ! $grouped_product_child->is_in_stock() ) {
+	    								woocommerce_template_loop_add_to_cart();
+	    							} elseif ( $grouped_product_child->is_sold_individually() ) {
+	    								echo '<input type="checkbox" name="' . esc_attr( 'quantity[' . $grouped_product_child->get_id() . ']' ) . '" value="1" class="wc-grouped-product-add-to-cart-checkbox" />';
+	    							} else {
+	    								do_action( 'woocommerce_before_add_to_cart_quantity' );
 
-								woocommerce_quantity_input(
-									array(
-										'input_name'  => 'quantity[' . $grouped_product_child->get_id() . ']',
-										'input_value' => isset( $_POST['quantity'][ $grouped_product_child->get_id() ] ) ? wc_stock_amount( wc_clean( sanitize_text_field( $_POST['quantity'][ $grouped_product_child->get_id() ] ) ) ) : '',  
-										'min_value'   => apply_filters( 'woocommerce_quantity_input_min', 0, $grouped_product_child ),
-										'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $grouped_product_child->get_max_purchase_quantity(), $grouped_product_child ),
-										'placeholder' => '0',
-									)
-								);
+	    								woocommerce_quantity_input(
+	    									array(
+	    										'input_name'  => 'quantity[' . $grouped_product_child->get_id() . ']',
+	    										'input_value' => isset( $_POST['quantity'][ $grouped_product_child->get_id() ] ) ? wc_stock_amount( wc_clean( sanitize_text_field( $_POST['quantity'][ $grouped_product_child->get_id() ] ) ) ) : '',  
+	    										'min_value'   => apply_filters( 'woocommerce_quantity_input_min', 0, $grouped_product_child ),
+	    										'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $grouped_product_child->get_max_purchase_quantity(), $grouped_product_child ),
+	    										'placeholder' => '0',
+	    									)
+	    								);
 
-								do_action( 'woocommerce_after_add_to_cart_quantity' );
-							}
+	    								do_action( 'woocommerce_after_add_to_cart_quantity' );
+	    							}
 
-							$value = ob_get_clean();
-							break;
-							case 'label':
-							$value  = '<label for="product-' . esc_attr( $grouped_product_child->get_id() ) . '">';
-							$value .= $grouped_product_child->is_visible() ? '<a href="' . esc_url( apply_filters( 'woocommerce_grouped_product_list_link', $grouped_product_child->get_permalink(), $grouped_product_child->get_id() ) ) . '">' . $grouped_product_child->get_name() . '</a>' : $grouped_product_child->get_name();
-							$value .= '</label>';
-							break;
-							case 'price':
-							$value = $grouped_product_child->get_price_html() . wc_get_stock_html( $grouped_product_child );
-							break;
-							default:
-							$value = '';
-							break;
-						}
+	    							$value = ob_get_clean();
+	    							break;
+	    							case 'label':
+	    							$value  = '<label for="product-' . esc_attr( $grouped_product_child->get_id() ) . '">';
+	    							$value .= $grouped_product_child->is_visible() ? '<a href="' . esc_url( apply_filters( 'woocommerce_grouped_product_list_link', $grouped_product_child->get_permalink(), $grouped_product_child->get_id() ) ) . '">' . $grouped_product_child->get_name() . '</a>' : $grouped_product_child->get_name();
+	    							$value .= '</label>';
+	    							break;
+	    							case 'price':
+	    							$value = $grouped_product_child->get_price_html() . wc_get_stock_html( $grouped_product_child );
+	    							break;
+	    							default:
+	    							$value = '';
+	    							break;
+	    						}
 
-						echo '<div class="woocommerce-grouped-product-list-item__' . esc_attr( $column_id ) . '">' . apply_filters( 'woocommerce_grouped_product_list_column_' . $column_id, $value, $grouped_product_child ) . '</div>';  
-						do_action( 'woocommerce_grouped_product_list_after_' . $column_id, $grouped_product_child );
-					}
+	    						echo '<div class="woocommerce-grouped-product-list-item__' . esc_attr( $column_id ) . '">' . apply_filters( 'woocommerce_grouped_product_list_column_' . $column_id, $value, $grouped_product_child ) . '</div>';  
+	    						do_action( 'woocommerce_grouped_product_list_after_' . $column_id, $grouped_product_child );
+	    					}
 
-					echo '</div>';
-				}
-				$post = $previous_post;  
-				setup_postdata( $post );
+	    					echo '</div>';
+	    				}
+	    				$post = $previous_post;  
+	    				setup_postdata( $post );
 
-				do_action( 'woocommerce_grouped_product_list_after', $grouped_product_columns, $quantites_required, $product );
-				?>
-			</div>
+	    				do_action( 'woocommerce_grouped_product_list_after', $grouped_product_columns, $quantites_required, $product );
+	    				?>
+	    			</div>
 
-			<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" />
+	    			<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" />
 
-			<?php if ( $quantites_required && $show_add_to_cart_button ) : ?>
+	    			<?php if ( $quantites_required && $show_add_to_cart_button ) : ?>
 
-				<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-				<div class="pxl-addtocart-btn-wrap">
-					<div class="pxl-atc-btn">
-						<button type="submit" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
-					</div>
-				</div>
-				<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+	    				<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+	    				<div class="pxl-addtocart-btn-wrap">
+	    					<div class="pxl-atc-btn">
+	    						<button type="submit" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
+	    					</div>
+	    				</div>
+	    				<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
-			<?php endif; ?>
-		</form>
-		<?php
-		do_action( 'woocommerce_after_add_to_cart_form' );
+	    			<?php endif; ?>
+	    		</form>
+	    		<?php
+	    		do_action( 'woocommerce_after_add_to_cart_form' );
 
-		$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
-		if( $product_wishlist == '1') : ?>
-			<div class="stock-wishlist">
-				<div class="pxl-shop-woosmart-wrap">
-					<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
-				</div>
-			</div>
-		<?php endif;
-	}
-}
+	    		$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
+	    		if( $product_wishlist == '1') : ?>
+	    			<div class="stock-wishlist">
+	    				<div class="pxl-shop-woosmart-wrap">
+	    					<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
+	    				</div>
+	    			</div>
+	    		<?php endif;
+	    	}
+	    }
 
-function basilico_simple_add_to_cart(){
-	global $product;
-	if ( ! $product->is_purchasable() ) {
-		return;
-	}
+	    function basilico_simple_add_to_cart(){
+	    	global $product;
+	    	if ( ! $product->is_purchasable() ) {
+	    		return;
+	    	}
     echo wc_get_stock_html( $product ); // WPCS: XSS ok.
     if ( $product->is_in_stock() ) : ?>
     	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
@@ -620,3 +620,64 @@ function basilico_woocommerce_output_related_products_args( $args ) {
 	$args['columns'] = 3;
 	return $args;
 }
+
+
+
+
+
+
+function add_quickview_button() {
+	echo '<a href="#" class="button pxl-quickview" data-product_id="' . get_the_ID() . '">' . esc_html__('Order Online') . '</a>';
+}
+add_action('woocommerce_after_shop_loop_item', 'add_quickview_button', 20);
+
+function pxl_product_quickview() {
+	$product_id = intval($_POST['product_id']);
+	$product = wc_get_product($product_id);
+
+	ob_start();
+	?>
+	<div class="woocommerce single-product woosq-product">
+		<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
+			<h1><?php echo $product->get_name(); ?></h1>
+			<div class="price"><?php echo $product->get_price_html(); ?></div>
+			<div class="description"><?php echo $product->get_description(); ?></div>
+			<div class="images"><?php echo $product->get_image(); ?></div>
+			<?php
+			switch ($product->get_type()) {
+				case 'variable':
+				basilico_variable_add_to_cart();
+				break;
+				case 'external':
+				basilico_external_add_to_cart(); 
+				break;
+				case 'grouped':
+				basilico_grouped_add_to_cart(); 
+				break;
+				default:
+				basilico_simple_add_to_cart(); 
+				break;
+			}
+			?>
+		</div>
+	</div>
+	<?php
+	$output = ob_get_clean();
+	echo $output;
+	die();
+}
+
+add_action('wp_ajax_px_load_product_quickview', 'pxl_product_quickview');
+add_action('wp_ajax_pxl_product_quickview', 'pxl_product_quickview');
+
+function add_quickview_modal() {
+	?>
+	<div id="quickview-modal" class="custom-modal">
+		<div class="custom-modal-content">
+			<span class="close-modal">&times;</span>
+			<!-- AJAX content will be injected here -->
+		</div>
+	</div>
+	<?php
+}
+add_action('wp_footer', 'add_quickview_modal');
