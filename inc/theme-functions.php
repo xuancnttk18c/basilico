@@ -469,9 +469,18 @@ function load_product_quickview() {
         <div class="price"><?php echo $product->get_price_html(); ?></div>
         <div class="description"><?php echo $product->get_description(); ?></div>
         <div class="images"><?php echo $product->get_image(); ?></div>
-        <div class="quickview-add-to-cart">
-            <?php woocommerce_template_loop_add_to_cart(array('quantity' => 1, 'product_id' => $product_id)); ?>
-        </div>
+        <?php
+        // Ensure the global product is set to this product
+        global $product;
+        $product = wc_get_product($product_id);
+
+        // Add to Cart Button for Simple Products
+        if ($product->is_type('simple')) {
+            woocommerce_simple_add_to_cart();
+        } else {
+            woocommerce_template_single_add_to_cart();
+        }
+        ?>
     </div>
     <?php
     $output = ob_get_clean();
