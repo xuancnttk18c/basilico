@@ -361,7 +361,7 @@ table.cart {
 				content: "\e95b" !important;
 				font-family: $pxli_font;
 				font-size: 20px;
-				color: $heading_color;
+				color: #fff;
 				@include animation(pxl-spin 2s linear infinite);
 				position: absolute;
 				top: 50%;
