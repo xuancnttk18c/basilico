@@ -469,7 +469,9 @@ function load_product_quickview() {
         <div class="price"><?php echo $product->get_price_html(); ?></div>
         <div class="description"><?php echo $product->get_description(); ?></div>
         <div class="images"><?php echo $product->get_image(); ?></div>
-        <a href="<?php echo $product->add_to_cart_url(); ?>" class="button add_to_cart_button"><?php _e('Add to Cart', 'woocommerce'); ?></a>
+        <div class="quickview-add-to-cart">
+            <?php woocommerce_template_loop_add_to_cart(array('quantity' => 1, 'product_id' => $product_id)); ?>
+        </div>
     </div>
     <?php
     $output = ob_get_clean();
