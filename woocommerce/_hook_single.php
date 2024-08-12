@@ -639,13 +639,13 @@ function pxl_product_quickview() {
 	<div class="woocommerce single-product woosq-product">
 		<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
 			<div class="row">
-				<div class="col-4">
+				<div class="col-5">
 					<h1><?php echo $product->get_name(); ?></h1>
 					<div class="price"><?php echo $product->get_price_html(); ?></div>		
-					<div class="description"><?php echo $product->get_description(); ?></div>		
+					<div class="description"><?php echo $product->get_short_description(); ?></div>		
 					<div class="images"><?php echo $product->get_image(); ?></div>
 				</div>
-				<div class="col-8">
+				<div class="col-7">
 					<?php
 					global $product;
 					$product = wc_get_product($product_id);
