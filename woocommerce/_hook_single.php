@@ -665,7 +665,7 @@ function pxl_product_quickview() {
 	die();
 }
 
-add_action('wp_ajax_px_load_product_quickview', 'pxl_product_quickview');
+add_action('wp_ajax_nopriv_pxl_product_quickview', 'pxl_product_quickview');
 add_action('wp_ajax_pxl_product_quickview', 'pxl_product_quickview');
 
 function add_quickview_modal() {
