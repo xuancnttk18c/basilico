@@ -639,28 +639,39 @@ function pxl_product_quickview() {
 	?>
 	<div class="woocommerce single-product woosq-product">
 		<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
-			<h1><?php echo $product->get_name(); ?></h1>
-			<div class="price"><?php echo $product->get_price_html(); ?></div>
-			<div class="description"><?php echo $product->get_description(); ?></div>
-			<div class="images"><?php echo $product->get_image(); ?></div>
-			<?php
-			global $product;
-			$product = wc_get_product($product_id);
-			switch ($product->get_type()) {
-				case 'variable':
-				basilico_variable_add_to_cart();
-				break;
-				case 'external':
-				basilico_external_add_to_cart(); 
-				break;
-				case 'grouped':
-				basilico_grouped_add_to_cart(); 
-				break;
-				default:
-				basilico_simple_add_to_cart(); 
-				break;
-			}
-			?>
+			<div class="row">
+				<div class="col-4">
+					<div class="product-content">
+						<h1><?php echo $product->get_name(); ?></h1>
+						<div class="description"><?php echo $product->get_description(); ?></div>		
+					</div>
+					<div class="product-image">
+						<div class="images"><?php echo $product->get_image(); ?></div>
+					</div>
+					<div class="price"><?php echo $product->get_price_html(); ?></div>		
+					<?php
+					global $product;
+					$product = wc_get_product($product_id);
+					switch ($product->get_type()) {
+						case 'variable':
+						basilico_variable_add_to_cart();
+						break;
+						case 'external':
+						basilico_external_add_to_cart(); 
+						break;
+						case 'grouped':
+						basilico_grouped_add_to_cart(); 
+						break;
+						default:
+						basilico_simple_add_to_cart(); 
+						break;
+					}
+					?>
+				</div>
+				<div class="col-8">
+					
+				</div>
+			</div>
 		</div>
 	</div>
 	<?php
