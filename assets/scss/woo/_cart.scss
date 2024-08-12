@@ -8,9 +8,11 @@ label[for="coupon_code"]{
 }
 
 .pxl-cart-empty {
+	gap: 30px;
 	padding: 30px;
 	.empty-icon i {
 		color: $primary_color;
+		font-size: 30px;
 	}
 }
 
