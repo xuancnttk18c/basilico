@@ -829,11 +829,22 @@
                 product_id: product_id
             },
             success: function(response) {
-                // Show the modal and insert the content
-                $('#quickview-modal .modal-content').html(response);
-                $('#quickview-modal').modal('show');
+                $('#quickview-modal .custom-modal-content').html(response);
+                $('#quickview-modal').fadeIn();
             }
         });
+    });
+
+    // Close the modal when clicking the close button
+    $(document).on('click', '.close-modal', function() {
+        $('#quickview-modal').fadeOut();
+    });
+
+    // Close the modal when clicking outside the modal content
+    $(window).on('click', function(event) {
+        if ($(event.target).is('#quickview-modal')) {
+            $('#quickview-modal').fadeOut();
+        }
     });
 
 

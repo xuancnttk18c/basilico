@@ -481,9 +481,10 @@ add_action('wp_ajax_load_product_quickview', 'load_product_quickview');
 
 function add_quickview_modal() {
     ?>
-    <div id="quickview-modal" class="modal">
-        <div class="modal-content">
-            <!-- AJAX content goes here -->
+    <div id="quickview-modal" class="custom-modal">
+        <div class="custom-modal-content">
+            <span class="close-modal">&times;</span>
+            <!-- AJAX content will be injected here -->
         </div>
     </div>
     <?php
