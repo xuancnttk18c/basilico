@@ -638,12 +638,14 @@ function pxl_product_quickview() {
 	ob_start();
 	?>
 	<div class="woocommerce single-product woosq-product">
-		<div id="product-<?php echo esc_attr( $product_id ); ?>">
+		<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
 			<h1><?php echo $product->get_name(); ?></h1>
 			<div class="price"><?php echo $product->get_price_html(); ?></div>
 			<div class="description"><?php echo $product->get_description(); ?></div>
 			<div class="images"><?php echo $product->get_image(); ?></div>
 			<?php
+			global $product;
+			$product = wc_get_product($product_id);
 			switch ($product->get_type()) {
 				case 'variable':
 				basilico_variable_add_to_cart();
