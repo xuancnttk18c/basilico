@@ -837,7 +837,7 @@
 
     // Close the modal when clicking outside the modal content
     $(window).on('click', function(event) {
-        if ($(event.target).is('#quickview-modal')) {
+        if ($(event.target).is('#pxl-quickview-modal')) {
             $('#quickview-modal').fadeOut();
         }
     });
