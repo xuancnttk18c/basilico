@@ -636,6 +636,10 @@ function pxl_product_quickview() {
 	$product = wc_get_product($product_id);
 	ob_start();
 	?>
+	<h2 class="modal-heading">
+		<span><?php echo esc_html('Product Options', 'basilico'); ?></span>
+		<span class="close-modal">X</span>		
+	</h2>
 	<div class="woocommerce single-product woosq-product">
 		<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
 			<div class="row">
@@ -678,10 +682,6 @@ add_action('wp_ajax_pxl_product_quickview', 'pxl_product_quickview');
 function add_quickview_modal() {
 	?>
 	<div id="pxl-quickview-modal" class="custom-modal">
-		<h2 class="modal-heading">
-			<span><?php echo esc_html('Product Options', 'basilico'); ?></span>
-			<span class="close-modal">X</span>		
-		</h2>
 		<div class="modal-content"></div>
 	</div>
 	<?php
