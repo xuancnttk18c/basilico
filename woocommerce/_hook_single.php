@@ -638,7 +638,7 @@ function pxl_product_quickview() {
 	ob_start();
 	?>
 	<div class="woocommerce single-product woosq-product">
-		<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
+		<div id="product-<?php echo esc_attr( $product_id ); ?>">
 			<h1><?php echo $product->get_name(); ?></h1>
 			<div class="price"><?php echo $product->get_price_html(); ?></div>
 			<div class="description"><?php echo $product->get_description(); ?></div>
