@@ -28,12 +28,12 @@ table.cart {
 		padding: 16px 24px;
 		border-left: 0;
 		border-right: 0;
-		border-top: 1px solid #E0E0E0;
+		border-top: 1px solid $divider_color;
 		&:first-child{
-			border-left: 1px solid #E0E0E0;
+			border-left: 1px solid $divider_color;
 		}
 		&:last-child{
-			border-right: 1px solid #E0E0E0;
+			border-right: 1px solid $divider_color;
 		}
 		@media (max-width: $md_max){
 			display: none;
@@ -48,10 +48,10 @@ table.cart {
 			padding: 24px 15px;
 		}
 		&:first-child{
-			border-left: 1px solid #E0E0E0;
+			border-left: 1px solid $divider_color;
 		}
 		&:last-child{
-			border-right: 1px solid #E0E0E0;
+			border-right: 1px solid $divider_color;
 		}
 		&.product-thumbnail{
 			padding-right: 0;
