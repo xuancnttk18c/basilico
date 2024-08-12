@@ -71,6 +71,7 @@
 			.yith-wapo-addon-label,
 			.yith-wapo-label {
 				padding-left: 40px;
+				line-height: 24px;
 				&:before {
 					content: '';
 					position: absolute;
@@ -154,6 +155,7 @@
 			.radio-button-container {
 				.yith-wapo-addon-label,
 				.yith-wapo-label {
+					line-height: 22px;
 					&:before {
 						left: 0;
 						top: 0;
@@ -223,6 +225,7 @@
 				.yith-wapo-addon-label,
 				.yith-wapo-label {
 					padding-left: 40px;
+					line-height: 24px;
 					&:before {
 						content: '';
 						position: absolute;
