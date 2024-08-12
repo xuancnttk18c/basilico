@@ -817,22 +817,21 @@
 
 
     
-    $('.quickview-button').on('click', function(e) {
+    $('.quickview').on('click', function(e) {
         e.preventDefault();
         var product_id = $(this).data('product_id');
 
-        alert("Button Clicked!");
         $.ajax({
             url: main_data.ajaxurl,
             type: 'POST',
             data: {
-                action: 'custom_quickview',
+                action: 'load_product_quickview',
                 product_id: product_id
             },
             success: function(response) {
-                // Show the modal with the response content
-                $('.quickview-modal .modal-content').html(response);
-                $('.quickview-modal').fadeIn();
+                // Show the modal and insert the content
+                $('#quickview-modal .modal-content').html(response);
+                $('#quickview-modal').modal('show');
             }
         });
     });

@@ -452,35 +452,40 @@ function basilico_hex_rgb($color)
 
 
 
-// Enqueue the necessary scripts
 
-// Add Quick View button
-function custom_add_quickview_button() {
-    echo '<a href="#" class="button quickview-button" data-product_id="'. get_the_ID() .'">Quick View</a>';
+function add_quickview_button() {
+    echo '<a href="#" class="button quickview" data-product_id="' . get_the_ID() . '">Quick View</a>';
 }
-add_action('woocommerce_after_shop_loop_item', 'custom_add_quickview_button', 20);
+add_action('woocommerce_after_shop_loop_item', 'add_quickview_button', 20);
 
-// AJAX handler
-function custom_ajax_quickview() {
-    $product_id = absint($_POST['product_id']);
+function load_product_quickview() {
+    $product_id = intval($_POST['product_id']);
     $product = wc_get_product($product_id);
 
-    if ($product) {
-        echo '<div class="quickview-content">';
-        echo '<h1>' . $product->get_name() . '</h1>';
-        echo '<div class="price">' . $product->get_price_html() . '</div>';
-        echo '<div class="description">' . $product->get_short_description() . '</div>';
-
-        // Add to Cart Button
-        echo '<div class="quickview-add-to-cart">';
-        woocommerce_template_loop_add_to_cart(array('quantity' => 1, 'product_id' => $product_id));
-        echo '</div>';
-
-        echo '</div>';
-    }
-
-    wp_die();
+    ob_start();
+    ?>
+    <div class="quickview-content">
+        <h1><?php echo $product->get_name(); ?></h1>
+        <div class="price"><?php echo $product->get_price_html(); ?></div>
+        <div class="description"><?php echo $product->get_description(); ?></div>
+        <div class="images"><?php echo $product->get_image(); ?></div>
+        <a href="<?php echo $product->add_to_cart_url(); ?>" class="button add_to_cart_button"><?php _e('Add to Cart', 'woocommerce'); ?></a>
+    </div>
+    <?php
+    $output = ob_get_clean();
+    echo $output;
+    die();
 }
+add_action('wp_ajax_nopriv_load_product_quickview', 'load_product_quickview');
+add_action('wp_ajax_load_product_quickview', 'load_product_quickview');
 
-add_action('wp_ajax_nopriv_custom_quickview', 'custom_ajax_quickview');
-add_action('wp_ajax_custom_quickview', 'custom_ajax_quickview');
+function add_quickview_modal() {
+    ?>
+    <div id="quickview-modal" class="modal">
+        <div class="modal-content">
+            <!-- AJAX content goes here -->
+        </div>
+    </div>
+    <?php
+}
+add_action('wp_footer', 'add_quickview_modal');
