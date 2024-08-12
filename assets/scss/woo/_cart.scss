@@ -6,6 +6,14 @@
 label[for="coupon_code"]{
 	display: none;
 }
+
+.pxl-cart-empty {
+	padding: 30px;
+	.empty-icon i {
+		color: $primary_color;
+	}
+}
+
 table.cart {
 	border: 0;
 	thead{
