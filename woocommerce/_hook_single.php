@@ -634,6 +634,7 @@ add_action('woocommerce_after_shop_loop_item', 'add_quickview_button', 20);
 function pxl_product_quickview() {
 	$product_id = intval($_POST['product_id']);
 	$product = wc_get_product($product_id);
+	ob_start();
 	?>
 	<div class="woocommerce single-product woosq-product">
 		<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
@@ -668,6 +669,7 @@ function pxl_product_quickview() {
 		</div>
 	</div>
 	<?php
+	echo ob_get_clean();
 }
 
 add_action('wp_ajax_nopriv_pxl_product_quickview', 'pxl_product_quickview');
@@ -680,9 +682,7 @@ function add_quickview_modal() {
 			<span><?php echo esc_html('Product Options', 'basilico'); ?></span>
 			<span class="close-modal">X</span>		
 		</h2>
-		<div class="modal-content">
-			<!-- AJAX content will be injected here -->
-		</div>
+		<div class="modal-content"></div>
 	</div>
 	<?php
 }
