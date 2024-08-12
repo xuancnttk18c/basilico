@@ -641,14 +641,10 @@ function pxl_product_quickview() {
 		<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
 			<div class="row">
 				<div class="col-4">
-					<div class="product-content">
-						<h1><?php echo $product->get_name(); ?></h1>
-						<div class="description"><?php echo $product->get_description(); ?></div>		
-					</div>
-					<div class="product-image">
-						<div class="images"><?php echo $product->get_image(); ?></div>
-					</div>
+					<h1><?php echo $product->get_name(); ?></h1>
 					<div class="price"><?php echo $product->get_price_html(); ?></div>		
+					<div class="description"><?php echo $product->get_description(); ?></div>		
+					<div class="images"><?php echo $product->get_image(); ?></div>
 				</div>
 				<div class="col-8">
 					<?php
