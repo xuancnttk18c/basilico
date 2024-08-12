@@ -676,11 +676,11 @@ add_action('wp_ajax_pxl_product_quickview', 'pxl_product_quickview');
 function add_quickview_modal() {
 	?>
 	<div id="pxl-quickview-modal" class="custom-modal">
-		<div class="custom-modal-content">
-			<h2 class="modal-heading">
-				<span><?php echo esc_html('Product Options', 'basilico'); ?></span>
-				<span class="close-modal">X</span>		
-			</h2>
+		<h2 class="modal-heading">
+			<span><?php echo esc_html('Product Options', 'basilico'); ?></span>
+			<span class="close-modal">X</span>		
+		</h2>
+		<div class="modal-content">
 			<!-- AJAX content will be injected here -->
 		</div>
 	</div>
