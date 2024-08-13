@@ -629,7 +629,7 @@ function basilico_woocommerce_output_related_products_args( $args ) {
 function add_quickview_button() {
 	echo '<a href="#" class="button pxl-quickview" data-product_id="' . get_the_ID() . '">' . esc_html__('Order Online') . '</a>';
 }
-add_action('woocommerce_after_shop_loop_item', 'add_quickview_button', 20);
+//add_action('woocommerce_after_shop_loop_item', 'add_quickview_button', 20);
 
 function pxl_product_quickview() {
 	$product_id = intval($_POST['product_id']);
