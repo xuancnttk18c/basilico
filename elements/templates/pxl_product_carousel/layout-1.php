@@ -42,7 +42,7 @@ $opts = [
 ];
 
 if ($product_layout == 'layout-4') {
-    $opts['slides_gutter'] = 0;
+    $opt['slides_gutter'] = 0;
 }
 
 $widget->add_render_attribute( 'carousel', [
@@ -76,9 +76,9 @@ if ( !empty( $item_animation) ) {
 ?>
 <?php if(!empty($posts) && count($posts)): ?>
 <div class="pxl-swiper-slider pxl-product-carousel pxl-shop-<?php echo esc_attr($product_layout); ?>">
-    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
+    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative products">
         <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-            <div class="pxl-swiper-wrapper swiper-wrapper products">
+            <div class="pxl-swiper-wrapper swiper-wrapper">
                 <?php
                 while ($query->have_posts()) {
                     $query->the_post();
