@@ -829,7 +829,7 @@ select.orderby{
 		margin-top: -30px;
 		margin-bottom: 30px;
 		padding: 0 15px;
-		.grid-item {
+		//.grid-item {
 			margin-top: 30px;
 			padding: 0;
 			@include transition();
@@ -884,7 +884,7 @@ select.orderby{
 					animation: pxlZoomIn 400ms forwards;
 				}
 			}
-		}
+		//}
 	}
 	.related {
 		padding: 0;
