@@ -75,7 +75,7 @@ if ( !empty( $item_animation) ) {
 <div class="pxl-swiper-slider pxl-product-carousel pxl-shop-<?php echo esc_attr($product_layout); ?>">
     <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
         <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-            <div class="pxl-swiper-wrapper swiper-wrapper">
+            <div class="pxl-swiper-wrapper swiper-wrapper products">
                 <?php
                 while ($query->have_posts()) {
                     $query->the_post();
