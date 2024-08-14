@@ -41,6 +41,9 @@ $opts = [
     'speed'                         => (int)$widget->get_setting('speed', 500)
 ];
 
+if ($product_layout == 'layout-4') {
+    $opts['slides_gutter'] = 0;
+}
 
 $widget->add_render_attribute( 'carousel', [
     'class'         => 'pxl-swiper-container',
