@@ -46,7 +46,7 @@ if ($product_layout == 'layout-4') {
 }
 
 $widget->add_render_attribute( 'carousel', [
-    'class'         => 'pxl-swiper-container',
+    'class'         => 'pxl-swiper-container products',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
