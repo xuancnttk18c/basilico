@@ -794,23 +794,23 @@
         table_head.find('tr').append('<th class="product-remove">&nbsp;</th>');
     }
 
-    function basilico_table_move_column(table, selected ,from, to, remove, colspan, colspan_value) {
-        "use strict";
-        var rows = jQuery(selected, table);
-        var cols;
-        rows.each(function() {
-            cols = jQuery(this).children('th, td');
-            cols.eq(from).detach().insertAfter(cols.eq(to));
-        });
-        var rows_remove = jQuery(remove, table);
-        rows_remove.each(function(){
-            jQuery(this).remove(remove);
-        });
-        var colspan = jQuery(colspan, table);
-        colspan.each(function(){
-            jQuery(this).attr('colspan',colspan_value);
-        });
-    }
+    // function basilico_table_move_column(table, selected ,from, to, remove, colspan, colspan_value) {
+    //     "use strict";
+    //     var rows = jQuery(selected, table);
+    //     var cols;
+    //     rows.each(function() {
+    //         cols = jQuery(this).children('th, td');
+    //         cols.eq(from).detach().insertAfter(cols.eq(to));
+    //     });
+    //     var rows_remove = jQuery(remove, table);
+    //     rows_remove.each(function(){
+    //         jQuery(this).remove(remove);
+    //     });
+    //     var colspan = jQuery(colspan, table);
+    //     colspan.each(function(){
+    //         jQuery(this).attr('colspan',colspan_value);
+    //     });
+    // }
     
     $('.pxl-quickview').on('click', function(e) {
         e.preventDefault();
