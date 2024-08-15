@@ -1045,11 +1045,6 @@ label[for="coupon_code"]{
 		letter-spacing: 0.015em;
 		color: $heading_color;
 	}
-	.woocommerce-shipping-totals{
-		padding-bottom: 30px;
-		margin-bottom: 18px;
-		border-bottom: 1px solid #d0d0d0;
-	}
 	.nice-select.shipping_method{
 		border: 1px solid #cecece;
 		background-color: #fff;
@@ -1095,6 +1090,9 @@ label[for="coupon_code"]{
 
 	}
 	.order-total{
+		padding-top: 30px;
+		margin-top: 18px;
+		border-top: 1px solid #d0d0d0;
 		margin-bottom: 10px;
 		span.lbl{
 			font-size: 18px;
