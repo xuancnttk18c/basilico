@@ -40,7 +40,7 @@
         basilico_shop_view_layout();
         basilico_single_product_handler();
         basilico_wc_single_product_gallery();
-        basilico_table_cart_content();
+        //basilico_table_cart_content();
         //basilico_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '');
         basilico_mini_cart_dropdown_offset();
         basilico_update_cart_quantity();
@@ -82,7 +82,7 @@
         basilico_sticky_position();
     });
     jQuery( document ).on( 'updated_wc_div', function() {
-        basilico_table_cart_content();
+        //asilico_table_cart_content();
         basilico_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '');
     } );
     $( document.body ).on( 'wc_fragments_loaded wc_fragments_refreshed', function() {
