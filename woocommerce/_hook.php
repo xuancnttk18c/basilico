@@ -56,6 +56,12 @@ function basilico_wc_update_get_template($template, $template_name, $args, $temp
         case 'cart/cart.php':
             $template = get_template_directory().'/'.WC()->template_path().'cart/pxl-cart.php';
             break;
+        case 'cart/cart-totals.php':
+            $template = get_template_directory().'/'.WC()->template_path().'cart/pxl-cart-totals.php';
+            break;
+        case 'cart/cart-shipping.php':
+            $template = get_template_directory().'/'.WC()->template_path().'cart/pxl-cart-shipping.php';
+            break;
     }
 
     return $template;
