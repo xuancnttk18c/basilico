@@ -824,6 +824,7 @@ label[for="coupon_code"]{
 		}
 		.select2-container.select2-container--default .select2-selection--single .select2-selection__rendered {
 			padding: 0;
+			color: $heading_color;
 		}
 		.select2-container--default .select2-selection--single .select2-selection__arrow b{
 			display: none;
