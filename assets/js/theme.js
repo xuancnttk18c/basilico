@@ -79,9 +79,6 @@
         basilico_scroll_to_top();
         basilico_sticky_position();
     });
-    jQuery( document ).on( 'updated_wc_div', function() {
-        basilico_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '');
-    } );
     $( document.body ).on( 'wc_fragments_loaded wc_fragments_refreshed', function() {
         $('body').find('.pxl-cart-dropdown').removeClass('loading');
         $('body').removeClass('loading');
