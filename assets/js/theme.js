@@ -40,8 +40,6 @@
         basilico_shop_view_layout();
         basilico_single_product_handler();
         basilico_wc_single_product_gallery();
-        //basilico_table_cart_content();
-        //basilico_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '');
         basilico_mini_cart_dropdown_offset();
         basilico_update_cart_quantity();
     });
@@ -82,7 +80,6 @@
         basilico_sticky_position();
     });
     jQuery( document ).on( 'updated_wc_div', function() {
-        //asilico_table_cart_content();
         basilico_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '');
     } );
     $( document.body ).on( 'wc_fragments_loaded wc_fragments_refreshed', function() {
@@ -653,6 +650,7 @@
 
     function basilico_update_cart_quantity(){
         $('.cart-list-wrapper').on( 'change', '.qty', function() {
+            alert('kfdjfkjkasdfdsf');
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val(); 
             var data = {
@@ -794,24 +792,6 @@
         table_head.find('tr').append('<th class="product-remove">&nbsp;</th>');
     }
 
-    // function basilico_table_move_column(table, selected ,from, to, remove, colspan, colspan_value) {
-    //     "use strict";
-    //     var rows = jQuery(selected, table);
-    //     var cols;
-    //     rows.each(function() {
-    //         cols = jQuery(this).children('th, td');
-    //         cols.eq(from).detach().insertAfter(cols.eq(to));
-    //     });
-    //     var rows_remove = jQuery(remove, table);
-    //     rows_remove.each(function(){
-    //         jQuery(this).remove(remove);
-    //     });
-    //     var colspan = jQuery(colspan, table);
-    //     colspan.each(function(){
-    //         jQuery(this).attr('colspan',colspan_value);
-    //     });
-    // }
-    
     $('.pxl-quickview').on('click', function(e) {
         e.preventDefault();
         var product_id = $(this).data('product_id');

@@ -15,7 +15,6 @@ $calculator_text          = '';
 				<?php if ( 1 < count( $available_methods ) ) : ?>
 				<select name="shipping_method" class="shipping_method nice-select" data-index="<?php echo esc_attr($index)?>">
 				<?php endif; ?>
-
 				<?php foreach ( $available_methods as $method ) : ?>
 						<?php
 						if ( 1 < count( $available_methods ) ) {
@@ -25,7 +24,6 @@ $calculator_text          = '';
 						}
 						do_action( 'woocommerce_after_shipping_rate', $method, $index );
 						?>
-					
 				<?php endforeach; ?>
 				<?php if ( 1 < count( $available_methods ) ) : ?>
 				</select>
