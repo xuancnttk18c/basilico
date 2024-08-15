@@ -5,11 +5,11 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <div class="cart_totals <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
-	<h4 class="pxl-heading"><?php esc_html_e( 'Order Summary', 'utero' ); ?></h4>
+	<h4 class="pxl-heading"><?php esc_html_e( 'Order Summary', 'basilico' ); ?></h4>
 
 	<div class="cart-total-inner">
 		<div class="sub-total cart-total-row d-flex align-items-center justify-content-between">
-			<span class="lbl"><?php esc_html_e( 'Subtotal', 'utero' ); ?></span>
+			<span class="lbl"><?php esc_html_e( 'Subtotal', 'basilico' ); ?></span>
 			<span class="value"><?php wc_cart_totals_subtotal_html(); ?></span>
 		</div>
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
 			<?php do_action( 'woocommerce_cart_totals_after_shipping' ); ?>
 		<?php elseif ( WC()->cart->needs_shipping() && 'yes' === get_option( 'woocommerce_enable_shipping_calc' ) ) : ?>
 			<div class="shipping cart-total-row d-flex align-items-center justify-content-between"> 
-				<span class="lbl"><?php esc_html_e( 'Shipping', 'utero' ); ?></span>
+				<span class="lbl"><?php esc_html_e( 'Shipping', 'basilico' ); ?></span>
 				<span class="value"><?php woocommerce_shipping_calculator(); ?></span>
 			</div>
 		<?php endif; ?>
@@ -39,7 +39,7 @@ defined( 'ABSPATH' ) || exit;
 			$taxable_address = WC()->customer->get_taxable_address();
 			$estimated_text  = '';
 			if ( WC()->customer->is_customer_outside_base() && ! WC()->customer->has_calculated_shipping() ) { 
-				$estimated_text = sprintf( ' <small>' . esc_html__( '(estimated for %s)', 'utero' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] );
+				$estimated_text = sprintf( ' <small>' . esc_html__( '(estimated for %s)', 'basilico' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] );
 			}
 			if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) {
 				foreach ( WC()->cart->get_tax_totals() as $code => $tax ) { 
@@ -62,7 +62,7 @@ defined( 'ABSPATH' ) || exit;
 		?>
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 		<div class="order-total d-flex align-items-center justify-content-between">
-			<span class="lbl"><?php esc_html_e( 'Total', 'utero' ); ?></span>
+			<span class="lbl"><?php esc_html_e( 'Total', 'basilico' ); ?></span>
 			<span class="value"><?php wc_cart_totals_order_total_html(); ?></span>
 		</div>
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
