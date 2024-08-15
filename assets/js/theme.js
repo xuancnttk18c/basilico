@@ -41,7 +41,7 @@
         basilico_single_product_handler();
         basilico_wc_single_product_gallery();
         basilico_table_cart_content();
-        basilico_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '');
+        //basilico_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '');
         basilico_mini_cart_dropdown_offset();
         basilico_update_cart_quantity();
     });
