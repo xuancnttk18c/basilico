@@ -106,11 +106,6 @@ if ( ! function_exists( 'basilico_widget_shopping_cart_proceed_to_checkout' ) ) 
 
 add_filter('woocommerce_add_to_cart_fragments', 'basilico_woocommerce_add_to_cart_fragments', 10, 1 );
 function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
-	ob_start();
-    ?>
-    <span class="header-count cart_total"><?php echo WC()->cart->cart_contents_count; ?></span>
-    <?php
-    $fragments['.cart_total'] = ob_get_clean();
 	$fragments['.mini-cart-count'] = '<span class="mini-cart-count">'.WC()->cart->cart_contents_count.'</span>';
 
 	ob_start();
@@ -120,6 +115,10 @@ function basilico_woocommerce_add_to_cart_fragments( $fragments ) {
 	ob_start();
 	woocommerce_mini_cart();
 	$fragments['.pxl-widget-cart-content'] = ob_get_clean();
+
+	ob_start();
+	wc_get_template( 'cart/pxl-cart-content.php' );
+	$fragments['.cart-list-wrapper .cart-list-content'] = ob_get_clean();
 
 	return $fragments;
 }
