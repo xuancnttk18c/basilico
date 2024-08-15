@@ -53,9 +53,10 @@ if ( ! function_exists( 'woocommerce_button_proceed_to_checkout' ) ) {
 	 * Output the proceed to checkout button.
 	 */
 	function woocommerce_button_proceed_to_checkout() {
+		$button_style = basilico()->get_theme_opt('cart_button_style', 'btn_outline_secondary');
 		?>
 		<div class="text-end pt-10">
-			<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="checkout-button btn btn-second pxl-btn">
+			<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="checkout-button btn <?php echo esc_attr($button_style); ?>">
 				<span><?php esc_html_e( 'Proceed to checkout', 'basilico' ); ?></span>
 			</a>
 		</div>

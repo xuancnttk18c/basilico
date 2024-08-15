@@ -45,7 +45,7 @@ defined( 'ABSPATH' ) || exit;
 							?>
 						</div>
 					</div>
-					<div class="cart-item-info col"> 
+					<div class="cart-item-info col">
 						<div class="cart-item-info-inner row gx-20">
 							<div class="item-name col-12 col-sm">
 								<?php
