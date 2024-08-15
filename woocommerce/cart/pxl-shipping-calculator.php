@@ -73,7 +73,7 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
 			</p>
 		<?php endif; ?>
 		<?php $button_style = basilico()->get_theme_opt('cart_button_style', 'btn_outline_secondary'); ?>
-		<p><button type="submit" name="calc_shipping" value="1" class="btn <?php echo esc_attr($button_style); ?> button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>"><?php esc_html_e( 'Update', 'woocommerce' ); ?></button></p>
+		<p><button type="submit" name="calc_shipping" value="1" class="btn <?php echo esc_attr($button_style); ?> button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>"><span><?php esc_html_e( 'Update', 'woocommerce' ); ?></span></button></p>
 		<?php wp_nonce_field( 'woocommerce-shipping-calculator', 'woocommerce-shipping-calculator-nonce' ); ?>
 	</section>
 </form>
