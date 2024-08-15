@@ -62,6 +62,9 @@ function basilico_wc_update_get_template($template, $template_name, $args, $temp
         case 'cart/cart-shipping.php':
             $template = get_template_directory().'/'.WC()->template_path().'cart/pxl-cart-shipping.php';
             break;
+        case 'cart/shipping-calculator.php':
+            $template = get_template_directory().'/'.WC()->template_path().'cart/pxl-shipping-calculator.php';
+            break;
     }
 
     return $template;
