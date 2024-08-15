@@ -730,7 +730,8 @@
 			&:before {
 				cursor: pointer;
 				position: absolute;
-				left: 46px;
+				top: 50%;
+				@include transform(translateY(-50%));
 				font-family: 'Material-Design-Iconic-Font';
 				font-size: 13px;
 				line-height: 1;
@@ -739,14 +740,14 @@
 			}
 			&.quantity-up {
 				&:before {
-					content: '\f2fc';
-					top: 10px;
+					content: '\f278';
+					right: 15px;
 				}
 			}
 			&.quantity-down {
 				&:before {
-					content: '\f2f9';
-					bottom: 10px;
+					content: '\f273';
+					left: 15px;
 				}
 			}
 		}
