@@ -589,13 +589,13 @@
 			&.quantity-up {
 				&:before {
 					content: '\f2fc';
-					top: 12px;
+					top: 10px;
 				}
 			}
 			&.quantity-down {
 				&:before {
 					content: '\f2f9';
-					bottom: 12px;
+					bottom: 10px;
 				}
 			}
 		}
