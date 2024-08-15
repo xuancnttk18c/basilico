@@ -572,6 +572,9 @@
 			text-transform: uppercase;
 			white-space: nowrap;
 		}
+		.quantity-inner {
+			position: relative;
+		}
 		.quantity-button {
 			&:before {
 				cursor: pointer;
