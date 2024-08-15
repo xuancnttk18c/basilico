@@ -860,6 +860,10 @@ label[for="coupon_code"]{
 			}
 		}
 	}
+	.calc_shipping_wrap {
+		position: relative;
+		z-index: 1;
+	}
 	.checkout-button{
 		width: 100%;
 	}
