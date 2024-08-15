@@ -788,6 +788,10 @@ label[for="coupon_code"]{
 			right: 16px;
 		}
 	}
+	.wc-proceed-to-checkout .text-end {
+		position: relative;
+		z-index: 1;
+	}
 	.woocommerce-shipping-calculator{
 		margin-top: 10px;
 		.shipping-calculator-button{
