@@ -624,7 +624,7 @@ Redux::setSection($opt_name, array(
             'mode'           => 'padding',
             'units'          => array('px'),
             'units_extended' => 'false',
-            'title'          => esc_html__('Input Padding', 'basilico'),
+            'title'          => esc_html__('Text Box Padding', 'basilico'),
             'desc'           => esc_html__('Default: Right - 20px, Left - 20px', 'basilico'),
             'default'        => array(
                 'padding-left'    => '20px',
@@ -635,35 +635,35 @@ Redux::setSection($opt_name, array(
         array(
             'id'          => 'input_bg_color',
             'type'        => 'color',
-            'title'       => esc_html__('Input Background Color', 'basilico'),
+            'title'       => esc_html__('Text Box Background Color', 'basilico'),
             'transparent' => false,
             'default'     => '#fff'
         ),
         array(
             'id'          => 'input_bg_hover',
             'type'        => 'color',
-            'title'       => esc_html__('Input Background Color (Hover)', 'basilico'),
+            'title'       => esc_html__('Text Box Background Color (Hover)', 'basilico'),
             'transparent' => false,
             'default'     => '#fff'
         ), 
         array(
             'id'          => 'input_border',
             'type'        => 'color',
-            'title'       => esc_html__('Input Border Color', 'basilico'),
+            'title'       => esc_html__('Text Box Border Color', 'basilico'),
             'transparent' => false,
             'default'     => '#e6c9a2'
         ),
         array(
             'id'          => 'input_border_hover',
             'type'        => 'color',
-            'title'       => esc_html__('Input Border Hover', 'basilico'),
+            'title'       => esc_html__('Text Box Border Hover', 'basilico'),
             'transparent' => false,
             'default'     => '#e6c9a2'
         ),
         array(
             'id'          => 'input_height',
             'type'        => 'dimensions',
-            'title'       => esc_html__('Input Height', 'basilico'),
+            'title'       => esc_html__('Text Box Height', 'basilico'),
             'width' => false,
             'unit'     => 'px',
             'default'  => array(
