@@ -13,7 +13,7 @@ $calculator_text          = '';
 		<?php if ( $available_methods ) : ?>
 			<div id="shipping_method" class="woocommerce-shipping-methods">
 				<?php if ( 1 < count( $available_methods ) ) : ?>
-				<select name="shipping_method" class="shipping_method nice-select" data-index="<?php echo esc_attr($index)?>">
+				<select name="shipping_method" class="shipping_method" data-index="<?php echo esc_attr($index)?>">
 				<?php endif; ?>
 				<?php foreach ( $available_methods as $method ) : ?>
 						<?php
