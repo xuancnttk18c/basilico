@@ -650,7 +650,6 @@
 
     function basilico_update_cart_quantity(){
         $('.cart-list-wrapper').on( 'change', '.qty', function() {
-            alert('kfdjfkjkasdfdsf');
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val(); 
             var data = {
