@@ -685,7 +685,7 @@ Redux::setSection($opt_name, array(
         array(
             'id'          => 'font_input',
             'type'        => 'typography',
-            'title'       => esc_html__('Input Typography', 'basilico'),
+            'title'       => esc_html__('Text Box Typography', 'basilico'),
             'google'      => true,
             'line-height' => true,
             'font-size'   => true,
@@ -700,6 +700,91 @@ Redux::setSection($opt_name, array(
                 '500italic' => 'Medium 500 Italic',
                 '700italic' => 'Bold 700 Italic',
             ),
+        ),
+    ),
+));
+
+Redux::setSection($opt_name, array(
+    'title'  => esc_html__('Select/Dropdown', 'basilico'),
+    'icon'   => 'el el-italic',
+    'subsection' => true,
+    'fields' => array(
+        array(
+            'id'             => 'select_padding',
+            'type'           => 'spacing',
+            'top'            => false,
+            'bottom'         => false,
+            'mode'           => 'padding',
+            'units'          => array('px'),
+            'units_extended' => 'false',
+            'title'          => esc_html__('Select Box Padding', 'basilico'),
+            'desc'           => esc_html__('Default: Right - 20px, Left - 20px', 'basilico'),
+            'default'        => array(
+                'padding-left'    => '20px',
+                'padding-right'   => '20px',
+                'units'           => 'px',
+            ),
+            'output' => array('select')
+        ),
+        array(
+            'id'          => 'select_bg_color',
+            'type'        => 'color',
+            'title'       => esc_html__('Select Box Background Color', 'basilico'),
+            'output'      => array('background-color' => 'select')
+        ),
+        array(
+            'id'          => 'select_bg_color_hover',
+            'type'        => 'color',
+            'title'       => esc_html__('Select Box Background Color (Hover)', 'basilico'),
+            'output'      => array('background-color' => 'select')
+        ), 
+        array(
+            'id'          => 'select_border',
+            'type'        => 'color',
+            'title'       => esc_html__('Select Box Border Color', 'basilico'),
+            'transparent' => false,
+            'output'      => array('border-color' => 'select')
+        ),
+        // array(
+        //     'id'          => 'input_border_hover',
+        //     'type'        => 'color',
+        //     'title'       => esc_html__('Text Box Border Hover', 'basilico'),
+        //     'transparent' => false,
+        //     'default'     => '#e6c9a2'
+        // ),
+        // array(
+        //     'id'          => 'input_height',
+        //     'type'        => 'dimensions',
+        //     'title'       => esc_html__('Text Box Height', 'basilico'),
+        //     'width'       => false,
+        //     'unit'        => 'px',
+        // ),
+        // array(
+        //     'id'          => 'input_border_radius2',
+        //     'type'        => 'dimensions',
+        //     'title'       => esc_html__('Border Radius', 'basilico'),
+        //     'height'      => false,
+        //     'unit'        => 'px',
+        // ),
+        array(
+            'id'          => 'select_input',
+            'type'        => 'typography',
+            'title'       => esc_html__('Text Box Typography', 'basilico'),
+            'google'      => true,
+            'line-height' => true,
+            'font-size'   => true,
+            'text-align'  => false,
+            'letter-spacing' => true,
+            'units'       => 'px',
+            'weights' => array(
+                '400'       => 'Normal 400',
+                '500'       => 'Medium 500',
+                '700'       => 'Bold 700',
+                '400italic' => 'Normal 400 Italic',
+                '500italic' => 'Medium 500 Italic',
+                '700italic' => 'Bold 700 Italic',
+            ),
+            'output' => array('select')
         ),
     ),
 ));
