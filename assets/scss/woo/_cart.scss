@@ -580,7 +580,7 @@ label[for="coupon_code"]{
 		}
 		.variation {
 			margin: 10px 0 0;
-			line-height: 1;
+			line-height: 1.2;
 			span {
 				margin: 0;
 				padding: 0;
@@ -599,7 +599,7 @@ label[for="coupon_code"]{
 				margin-left: 0;
 				> div {
 					&:before {
-						content: '\2022';
+						content: '\2022 ';
 						display: inline;
 					}
 				}
