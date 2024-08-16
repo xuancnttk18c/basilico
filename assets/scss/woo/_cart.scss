@@ -625,7 +625,7 @@ label[for="coupon_code"]{
 				cursor: pointer;
 				display: flex;
 				align-items: center;
-				color: #000;
+				color: $heading_color;
 				@include transition(color .3s ease);
 				&:hover{
 					color: #000;
