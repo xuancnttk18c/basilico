@@ -1101,7 +1101,7 @@ if(class_exists('Woocommerce')) {
                 array(
                     'id'          => 'total_section_text',
                     'type'        => 'color',
-                    'title'       => esc_html__('Total Section Heading Color', 'basilico'),
+                    'title'       => esc_html__('Total Section Text Color', 'basilico'),
                     'transparent' => false,
                     'output'      => array('background-color' => '.cart-collaterals .pxl-heading, .cart-collaterals .order-total span.lbl, .cart-collaterals .order-total span.value')
                 ),
