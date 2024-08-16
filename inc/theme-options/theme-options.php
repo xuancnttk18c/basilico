@@ -730,7 +730,7 @@ Redux::setSection($opt_name, array(
             'id'          => 'select_bg_color_hover',
             'type'        => 'color',
             'title'       => esc_html__('Select Box Background Color (Hover)', 'basilico'),
-            'output'      => array('background-color' => 'select')
+            'output'      => array('background-color' => 'select:hover')
         ), 
         array(
             'id'          => 'select_border',
