@@ -616,9 +616,9 @@ label[for="coupon_code"]{
 			.quantity-button{
 				position: absolute;
 				top: 0;
-				width: 35px;
-				height: 34px;
-				line-height: 32px;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
 				font-size: 11px;
 				border: 0;
 				cursor: pointer;
@@ -628,6 +628,10 @@ label[for="coupon_code"]{
 				@include transition(color .3s ease);
 				&:hover{
 					color: #000;
+				}
+				&:after {
+					content: '\f278';
+					font-family: 'Material-Design-Iconic-Font';
 				}
 			}
 			.quantity-up{
