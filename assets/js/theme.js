@@ -646,7 +646,7 @@
     };
 
     function basilico_update_cart_quantity(){
-        $('.cart-list-wrapper').on( 'change', '.qty', debounce(function() {
+        $('.cart-list-wrapper').on( 'change', '.qty', function() {
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val(); 
             var data = {
@@ -670,7 +670,7 @@
                 },
                 complete: function() {}
             } );
-        }, 1500));
+        });
         $('.widget_shopping_cart').on( 'change', '.qty', debounce(function() {
             var item_key = $( this ).attr( 'name' );
             var item_qty = $( this ).val();
