@@ -758,7 +758,7 @@ label[for="coupon_code"]{
 		font-size: 20px;
 		padding-bottom: 15px;
 		margin-bottom: 20px;
-		border-bottom: 1px solid #d0d0d0;
+		border-bottom: 1px solid $divider_color;
 	}
 	.cart-total-row{
 		margin-bottom: 15px;
@@ -829,7 +829,7 @@ label[for="coupon_code"]{
 	.order-total{
 		padding-top: 18px;
 		margin-top: 18px;
-		border-top: 1px solid #d0d0d0;
+		border-top: 1px solid $divider_color;
 		margin-bottom: 10px;
 		span.lbl{
 			font-size: 18px;
