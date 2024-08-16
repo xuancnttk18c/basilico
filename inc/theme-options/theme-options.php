@@ -1089,14 +1089,21 @@ if(class_exists('Woocommerce')) {
                     'type'        => 'color',
                     'title'       => esc_html__('Total Section Background', 'basilico'),
                     'transparent' => false,
-                    'output'      => array('background-color' => '.cart-collaterals .cart_totals')
+                    'output'      => array('background-color' => '.cart-collaterals')
+                ),
+                array(
+                    'id'          => 'total_section_border',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Total Section Border', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('border-color' => '.cart-collaterals')
                 ),
                 array(
                     'id'          => 'total_section_text',
                     'type'        => 'color',
                     'title'       => esc_html__('Total Section Heading Color', 'basilico'),
                     'transparent' => false,
-                    'output'      => array('background-color' => '.cart-collaterals .pxl-heading, .cart-collaterals .order-total')
+                    'output'      => array('background-color' => '.cart-collaterals .pxl-heading, .cart-collaterals .order-total span.lbl, .cart-collaterals .order-total span.value')
                 ),
                 array(
                     'id'       => 'cart_button_style',

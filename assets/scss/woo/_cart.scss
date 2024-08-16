@@ -746,6 +746,7 @@ label[for="coupon_code"]{
 .cart-collaterals {
 	background-color: #f0f1f4;
 	position: relative;
+	border: 1px solid $primary_color;
 	.cart_totals{
 		position: relative;
 		padding: 30px 35px 25px 35px;
