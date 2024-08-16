@@ -1006,6 +1006,26 @@ if(class_exists('Woocommerce')) {
                     ]
                 ),
                 array(
+                    'id'          => 'product_heading',
+                    'type'        => 'typography',
+                    'title'       => esc_html__('Product Heading Typography', 'basilico'),
+                    'google'      => true,
+                    'line-height' => true,
+                    'font-size'   => true,
+                    'text-align'  => false,
+                    'letter-spacing' => true,
+                    'units'       => 'px',
+                    'weights' => array(
+                        '400'       => 'Normal 400',
+                        '500'       => 'Medium 500',
+                        '700'       => 'Bold 700',
+                        '400italic' => 'Normal 400 Italic',
+                        '500italic' => 'Medium 500 Italic',
+                        '700italic' => 'Bold 700 Italic',
+                    ),
+                    'output' => array('.cart-list-wrapper .cart-list-item .item-name')
+                ),
+                array(
                     'id'       => 'cart_button_style',
                     'type'     => 'select',
                     'title'    => esc_html__('Cart Button Style', 'basilico'),
