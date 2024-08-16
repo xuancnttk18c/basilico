@@ -613,7 +613,7 @@ Redux::setSection($opt_name, array(
 
 //* Input
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('Input', 'basilico'),
+    'title'  => esc_html__('Global Input', 'basilico'),
     'icon'   => 'el el-italic',
     'fields' => array(
         array(
@@ -706,7 +706,7 @@ Redux::setSection($opt_name, array(
 
 Redux::setSection($opt_name, array(
     'title'  => esc_html__('Select/Dropdown', 'basilico'),
-    'icon'   => 'el el-italic',
+    'icon'   => 'el el-chevron-down',
     'subsection' => true,
     'fields' => array(
         array(
@@ -739,31 +739,10 @@ Redux::setSection($opt_name, array(
             'transparent' => false,
             'output'      => array('border-color' => 'select')
         ),
-        // array(
-        //     'id'          => 'input_border_hover',
-        //     'type'        => 'color',
-        //     'title'       => esc_html__('Text Box Border Hover', 'basilico'),
-        //     'transparent' => false,
-        //     'default'     => '#e6c9a2'
-        // ),
-        // array(
-        //     'id'          => 'input_height',
-        //     'type'        => 'dimensions',
-        //     'title'       => esc_html__('Text Box Height', 'basilico'),
-        //     'width'       => false,
-        //     'unit'        => 'px',
-        // ),
-        // array(
-        //     'id'          => 'input_border_radius2',
-        //     'type'        => 'dimensions',
-        //     'title'       => esc_html__('Border Radius', 'basilico'),
-        //     'height'      => false,
-        //     'unit'        => 'px',
-        // ),
         array(
             'id'          => 'select_input',
             'type'        => 'typography',
-            'title'       => esc_html__('Text Box Typography', 'basilico'),
+            'title'       => esc_html__('Select Box Typography', 'basilico'),
             'google'      => true,
             'line-height' => true,
             'font-size'   => true,
@@ -1104,6 +1083,20 @@ if(class_exists('Woocommerce')) {
                         '700italic' => 'Bold 700 Italic',
                     ),
                     'output' => array('.cart-list-wrapper .cart-list-item .item-name')
+                ),
+                array(
+                    'id'          => 'total_section',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Total Section Background', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('background-color' => '.cart-collaterals .cart_totals')
+                ),
+                array(
+                    'id'          => 'total_section_text',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Total Section Heading Color', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('background-color' => '.cart-collaterals .pxl-heading, .cart-collaterals .order-total')
                 ),
                 array(
                     'id'       => 'cart_button_style',
