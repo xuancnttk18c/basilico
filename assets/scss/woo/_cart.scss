@@ -628,19 +628,23 @@ label[for="coupon_code"]{
 				align-items: center;
 				color: $heading_color;
 				@include transition(color .3s ease);
+			}
+			.quantity-up{
+				right: 0;
+				justify-content: center;
 				&:after {
 					content: '\f278';
 					font-family: 'Material-Design-Iconic-Font';
 				}
 			}
-			.quantity-up{
-				right: 0;
-				justify-content: center;
-			}
 			.quantity-down{
 				left: 0;
 				z-index: 1;
 				justify-content: center;
+				&:after {
+					content: '\f273';
+					font-family: 'Material-Design-Iconic-Font';
+				}
 			}
 		}
 		.item-price,
