@@ -1114,6 +1114,14 @@ if(class_exists('Woocommerce')) {
                     'output'      => array('background-color' => '.cart-collaterals select, .cart-collaterals .select2-container.select2-container--default .select2-selection--single, .cart-collaterals .woocommerce-shipping-calculator .input-text')
                 ),
                 array(
+                    'id'          => 'total_section_input_border_override',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Total Section Border Color', 'basilico'),
+                    'description' => esc_html__('Override Default Input (Text Box, Select) Color In Cart Total Section', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('border-color' => '.cart-collaterals select, .cart-collaterals .select2-container.select2-container--default .select2-selection--single, .cart-collaterals .woocommerce-shipping-calculator .input-text')
+                ),
+                array(
                     'id'       => 'cart_button_style',
                     'type'     => 'select',
                     'title'    => esc_html__('Cart Button Style', 'basilico'),
