@@ -631,6 +631,28 @@
     }
 }
 
+@-webkit-keyframes progress-loading{
+    0%{width:0}
+    to{width:90%}
+}
+
+@keyframes progress-loading{
+    0%{width:0}
+    to{width:90%}
+}
+
+@-webkit-keyframes progress-loaded{
+    0%{width:90%}
+    99%{width:100%}
+    to{opacity:0}
+}
+
+@keyframes progress-loaded{
+    0%{width:90%}
+    99%{width:100%}
+    to{opacity:0}
+}
+
 @-webkit-keyframes pxlZoomIn {
     from {
         opacity: 0;
