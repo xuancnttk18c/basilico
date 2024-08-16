@@ -737,7 +737,7 @@ Redux::setSection($opt_name, array(
             'type'        => 'color',
             'title'       => esc_html__('Select Box Border Color', 'basilico'),
             'transparent' => false,
-            'output'      => array('border-color' => 'select')
+            'output'      => array('border-color' => 'select, .select2-selection')
         ),
         array(
             'id'          => 'select_input',
@@ -1104,6 +1104,14 @@ if(class_exists('Woocommerce')) {
                     'title'       => esc_html__('Total Section Text Color', 'basilico'),
                     'transparent' => false,
                     'output'      => array('color' => '.cart-collaterals .pxl-heading, .cart-collaterals .order-total span.lbl, .cart-collaterals .order-total span.value')
+                ),
+                array(
+                    'id'          => 'total_section_input_color_override',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Total Section Text Color', 'basilico'),
+                    'description' => esc_html__('Override Default Input (Text Box, Select) Color In Cart Total Section', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('background-color' => '.cart-collaterals select, .select2-selection, .cart-collaterals .woocommerce-shipping-calculator .input-text')
                 ),
                 array(
                     'id'       => 'cart_button_style',
