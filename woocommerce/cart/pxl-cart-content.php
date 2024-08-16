@@ -5,6 +5,21 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="cart-list-content">
 	<div class="cart-content-inner">
+		<div class="cart-list-head">
+			<div class="row gx-20">
+				<div class="col-thumbs col-auto"><div class="thumb-content" style="width: 70px;"></div></div>
+				<div class="col"> 
+					<div class="row gx-20">
+						<div class="col-name col"><span class="product-name"><?php esc_html_e( 'Product', 'basilico' ); ?></span></div>
+						<div class="col-price col-2"><?php esc_html_e( 'Price', 'basilico' ); ?></div>
+						<div class="col-quantity col-3"><?php esc_html_e( 'Quantity', 'basilico' ); ?></div>
+						<div class="col-subtotal col-2"><?php esc_html_e( 'Subtotal', 'basilico' ); ?></div>
+						<div class="col-remove col-auto" style="width: 44px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<div class="cart-list-body">
 			<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 			<?php foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) : ?>
@@ -17,8 +32,8 @@ defined( 'ABSPATH' ) || exit;
 				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ): 
 					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 				?>
-				<div class="cart-list-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
-					<div class="cart-item-thumbnail">
+				<div class="cart-list-item row gx-0 <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+					<div class="cart-item-thumbnail col-auto">
 						<div class="product-thumbnail">
 							<?php
 							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
@@ -30,9 +45,9 @@ defined( 'ABSPATH' ) || exit;
 							?>
 						</div>
 					</div>
-					<div class="cart-item-info">
-						<div class="cart-item-info-inner">
-							<div class="item-name">
+					<div class="cart-item-info col">
+						<div class="cart-item-info-inner row gx-20">
+							<div class="item-name col-12 col-sm">
 								<?php
 								if ( ! $product_permalink ) {
 									echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $product_name, $cart_item, $cart_item_key ) . '&nbsp;' );
@@ -50,10 +65,10 @@ defined( 'ABSPATH' ) || exit;
 								}
 								?>
 							</div>
-							<div class="item-price">
+							<div class="item-price col-auto col-sm-2">
 								<?php echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );?>
 							</div>
-							<div class="cart-item-quantify">
+							<div class="cart-item-quantify col-quantity col-auto col-sm-3">
 								<div class="product-quantity">
 									<?php
 									if ( $_product->is_sold_individually() ) {
@@ -63,6 +78,7 @@ defined( 'ABSPATH' ) || exit;
 										$min_quantity = 0;
 										$max_quantity = $_product->get_max_purchase_quantity();
 									}
+
 									$product_quantity = woocommerce_quantity_input(
 										array(
 											'input_name'   => "$cart_item_key",
@@ -74,17 +90,18 @@ defined( 'ABSPATH' ) || exit;
 										$_product,
 										false
 									);
+
 									echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); 
 									?>
 								</div>
 							</div>
-							<div class="item-subtotal">
+							<div class="item-subtotal col-12 col-sm-2">
 								<span class="lbl d-sm-none"><?php esc_html_e( 'Subtotal: ', 'basilico' ) ?></span>
 								<?php
 									echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
 								?>
 							</div>
-							<div class="col-remove">
+							<div class="col-remove col-auto" style="width: 44px;">
 								<?php
 									echo apply_filters( 
 										'woocommerce_cart_item_remove_link',
