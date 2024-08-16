@@ -718,13 +718,7 @@ Redux::setSection($opt_name, array(
             'units'          => array('px'),
             'units_extended' => 'false',
             'title'          => esc_html__('Select Box Padding', 'basilico'),
-            'desc'           => esc_html__('Default: Right - 20px, Left - 20px', 'basilico'),
-            'default'        => array(
-                'padding-left'    => '20px',
-                'padding-right'   => '20px',
-                'units'           => 'px',
-            ),
-            'output' => array('select')
+            'output'         => array('select')
         ),
         array(
             'id'          => 'select_bg_color',
