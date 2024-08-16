@@ -815,9 +815,6 @@ label[for="coupon_code"]{
 				padding-left: 30px;
 			}
 		}
-		.select2-container.select2-container--default .select2-selection--single{
-			border: 1px solid #cecece;
-		}
 		.select2-container.select2-container--default .select2-selection--single .select2-selection__rendered {
 			padding: 0;
 			color: $heading_color;
@@ -827,9 +824,7 @@ label[for="coupon_code"]{
 		}
 		.input-text{
 			padding: 0 18px;
-			border: 1px solid #cecece;
 		}
-
 	}
 	.order-total{
 		padding-top: 18px;
