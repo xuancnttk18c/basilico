@@ -1103,7 +1103,7 @@ if(class_exists('Woocommerce')) {
                     'type'        => 'color',
                     'title'       => esc_html__('Total Section Text Color', 'basilico'),
                     'transparent' => false,
-                    'output'      => array('background-color' => '.cart-collaterals .pxl-heading, .cart-collaterals .order-total span.lbl, .cart-collaterals .order-total span.value')
+                    'output'      => array('color' => '.cart-collaterals .pxl-heading, .cart-collaterals .order-total span.lbl, .cart-collaterals .order-total span.value')
                 ),
                 array(
                     'id'       => 'cart_button_style',
