@@ -1064,6 +1064,23 @@ if(class_exists('Woocommerce')) {
                     ]
                 ),
                 array(
+                    'id'       => 'image_product_border',
+                    'title'    => esc_html__('Border Image', 'basilico'),
+                    'subtitle' => esc_html__('Draw border on product image.', 'basilico'),
+                    'type'     => 'switch',
+                    'default'  => '0',
+                ),
+                array(
+                    'id'       => 'image_product_border_color',
+                    'title'    => esc_html__('Border Image Color', 'basilico'),
+                    'type'     => 'color',
+                    'transparent' => false,
+                    'output'      => array('border-color' => '.cart-list-wrapper .cart-list-item .product-thumbnail img'),
+                    'required' => [
+                        ['image_product_border', '!=', '0'],
+                    ]
+                ),
+                array(
                     'id'          => 'product_heading',
                     'type'        => 'typography',
                     'title'       => esc_html__('Product Heading Typography', 'basilico'),
