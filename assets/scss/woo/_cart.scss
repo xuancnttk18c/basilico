@@ -576,19 +576,16 @@ label[for="coupon_code"]{
 		}
 		.item-name{
 			font-size: 16px;
-			padding-top: 4px;
 			line-height: 24px;
 		}
 		.variation{
-			margin-top: 5px;
-			padding-bottom: 4px;
 			line-height: 1;
 			span{
 				margin: 0;
 				padding: 0;
 				position: relative;
 				display: inline-flex;
-				&+span{
+				& + span{
 					padding-left: 8px;
 					&:before{
 						content: ",";
@@ -655,12 +652,11 @@ label[for="coupon_code"]{
 		.item-subtotal{
 			font-size: 16px;
 			color: $heading_color;
-			padding-top: 4px;
 		}
-		.remove{
+		.remove {
 			font-size: 12px;
 			color: $gray;
-			&:hover{
+			&:hover {
 				color: $link_color;
 			}
 		}
