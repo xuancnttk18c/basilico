@@ -1014,6 +1014,7 @@ if(class_exists('Woocommerce')) {
                     'font-size'   => true,
                     'text-align'  => false,
                     'letter-spacing' => true,
+                    'text-transform' => true,
                     'units'       => 'px',
                     'weights' => array(
                         '400'       => 'Normal 400',
