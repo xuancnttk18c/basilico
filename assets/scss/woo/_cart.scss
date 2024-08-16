@@ -599,7 +599,7 @@ label[for="coupon_code"]{
 				margin-left: 0;
 				> div {
 					&:before {
-						content: '\2022 ';
+						content: '\2022\0020';
 						display: inline;
 					}
 				}
