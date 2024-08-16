@@ -1108,10 +1108,10 @@ if(class_exists('Woocommerce')) {
                 array(
                     'id'          => 'total_section_input_color_override',
                     'type'        => 'color',
-                    'title'       => esc_html__('Total Section Text Color', 'basilico'),
+                    'title'       => esc_html__('Total Section Input Color', 'basilico'),
                     'description' => esc_html__('Override Default Input (Text Box, Select) Color In Cart Total Section', 'basilico'),
                     'transparent' => false,
-                    'output'      => array('background-color' => '.cart-collaterals select, .select2-selection, .cart-collaterals .woocommerce-shipping-calculator .input-text')
+                    'output'      => array('background-color' => '.cart-collaterals select, .cart-collaterals .select2-container.select2-container--default .select2-selection--single, .cart-collaterals .woocommerce-shipping-calculator .input-text')
                 ),
                 array(
                     'id'       => 'cart_button_style',
