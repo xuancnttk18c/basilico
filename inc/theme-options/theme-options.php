@@ -1082,7 +1082,7 @@ if(class_exists('Woocommerce')) {
                         '500italic' => 'Medium 500 Italic',
                         '700italic' => 'Bold 700 Italic',
                     ),
-                    'output' => array('.cart-list-wrapper .cart-list-item .item-name')
+                    'output' => array('.cart-list-wrapper .cart-list-item .item-name a')
                 ),
                 array(
                     'id'          => 'total_section',
