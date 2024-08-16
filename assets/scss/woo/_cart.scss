@@ -628,9 +628,6 @@ label[for="coupon_code"]{
 				align-items: center;
 				color: $heading_color;
 				@include transition(color .3s ease);
-				&:hover{
-					color: #000;
-				}
 				&:after {
 					content: '\f278';
 					font-family: 'Material-Design-Iconic-Font';
