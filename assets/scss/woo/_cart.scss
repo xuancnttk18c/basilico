@@ -726,7 +726,7 @@ label[for="coupon_code"]{
 		}
 	}
 	.input-text{
-		border: 1px solid #d0d0d0;
+		border: 1px solid $divider_color;
 		height: 50px;
 		&:hover {
 			border-color: $divider_color;
