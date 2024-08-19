@@ -701,8 +701,6 @@ label[for="coupon_code"]{
 	}
 }
 .coupon{
-	border: 1px solid #d0d0d0;
-	padding: 23px 30px 35px 30px;
 	margin-top: 55px;
 	@media (max-width: $xs_screen){
 		padding: 18px 15px 24px 15px;
@@ -730,12 +728,8 @@ label[for="coupon_code"]{
 	.input-text{
 		border: 1px solid #d0d0d0;
 		height: 50px;
-		padding: 0 120px 0 50px;
-		@media (max-width: $xs_screen){
-			padding: 0 20px 0 20px;
-		}
-		&:hover{
-			border-color: #000;
+		&:hover {
+			border-color: $divider_color;
 		}
 	}
 	.button{
