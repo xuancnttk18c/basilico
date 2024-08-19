@@ -1,7 +1,7 @@
 <?php
 use Automattic\WooCommerce\Internal\ProductAttributesLookup\Filterer;
-if (!class_exists('basilico_Woo')) {
-    class basilico_Woo
+if (!class_exists('Basilico_Woo')) {
+    class Basilico_Woo
     {
     	public static $product_loop_img_size = [];
     	public function get_single_product_images($product,$args){

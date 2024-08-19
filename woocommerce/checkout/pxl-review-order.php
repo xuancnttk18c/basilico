@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 				<div class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?> row gx-15 justify-content-between">
 					<div class="product-thumbs col-auto">
 						<?php
-							//basilico()->woo->get_product_image( $_product, '270x330' );
+							basilico()->woo->get_product_image( $_product, '270x330' );
 						?>
 					</div>
 					<div class="product-name col">

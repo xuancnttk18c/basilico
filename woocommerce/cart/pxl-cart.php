@@ -36,7 +36,6 @@ $continue_shop_url = $cart_continue_shopping_url > 0 ? get_the_permalink( $cart_
 			<div id="cart-collaterals" class="cart-collaterals">
 				<?php do_action( 'woocommerce_cart_collaterals' );?>	 
 			</div>
-
 			<div class="continue-shopping text-center">
 				<a class="pxl-continue-shop" href="<?php echo esc_url( $continue_shop_url ); ?>"><?php esc_html_e( 'Continue Shopping', 'basilico' ); ?></a>
 			</div>
