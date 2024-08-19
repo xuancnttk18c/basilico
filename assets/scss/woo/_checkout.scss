@@ -393,12 +393,9 @@
 	    border-bottom: 1px solid #d0d0d0;
     }
     .checkout-review-inner{
-    	padding: 30px 50px 55px 50px;
-    	@media (max-width: $xs_max){
-    		padding: 30px 35px 55px 35px;
-    	}
+    	padding: 30px ;
     	@media (max-width: $xs_screen){
-    		padding: 25px 15px 20px 15px;
+    		padding: 20px;
     	}
     	.woocommerce-checkout-review-order-table{
     		position: static !important;
