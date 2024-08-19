@@ -89,7 +89,7 @@ if (!class_exists('Basilico_Woo')) {
 						                	$k =  0;
 						                	foreach ($gallery_ids as $ga_id) : 
 						                		$k++;
-						                		$attachment_info = basilico_Image::get_attachment_info( $ga_id );
+						                		$attachment_info = Basilico_Image::get_attachment_info( $ga_id );
 						                		if ( empty( $attachment_info ) || ! $attachment_info['src'] ) {
 													continue;
 												}
@@ -123,7 +123,7 @@ if (!class_exists('Basilico_Woo')) {
 														<?php endif; ?>
 														<?php 
 
-														basilico_Image::pxl_image_by_size( array(
+														Basilico_Image::pxl_image_by_size( array(
 															'attach_id'  => $ga_id,
 															'thumb_size' => $image_size,
 															'class'      => 'main-img-item',
@@ -191,7 +191,7 @@ if (!class_exists('Basilico_Woo')) {
 														<span class="draw-top-right"></span>
 														<span class="draw-bottom-left"></span>
 													<?php 
-													basilico_Image::pxl_image_by_size( array(
+													Basilico_Image::pxl_image_by_size( array(
 														'attach_id'  => $ga_id,
 														'thumb_size' => '270x330',
 														'class'      => 'p-img-hover-gal',
@@ -249,7 +249,7 @@ if (!class_exists('Basilico_Woo')) {
 											<span class="draw-top-right"></span>
 											<span class="draw-bottom-left"></span>
 											<?php 
-											basilico_Image::pxl_image_by_size( array(
+											Basilico_Image::pxl_image_by_size( array(
 												'attach_id'  => $ga_id,
 												'thumb_size' => '270x330',
 												'class'      => 'p-img-hover-gal',
@@ -277,7 +277,7 @@ if (!class_exists('Basilico_Woo')) {
 				                	$k =  0;
 				                	foreach ($gallery_ids as $ga_id) : 
 				                		$k++;
-				                		$attachment_info = basilico_Image::get_attachment_info( $ga_id );
+				                		$attachment_info = Basilico_Image::get_attachment_info( $ga_id );
 				                		if ( empty( $attachment_info ) || ! $attachment_info['src'] ) {
 											continue;
 										}
@@ -308,7 +308,7 @@ if (!class_exists('Basilico_Woo')) {
 													<div class="zoom-hover" style="--zoom-bg-img:url('<?php echo esc_url($data_src) ?>');">
 												<?php endif; ?>
 												<?php 
-													basilico_Image::pxl_image_by_size( array(
+													Basilico_Image::pxl_image_by_size( array(
 														'attach_id'  => $ga_id,
 														'thumb_size' => $image_size,
 														'class'      => 'main-img-item main-img-sticky',
@@ -384,7 +384,7 @@ if (!class_exists('Basilico_Woo')) {
 						                	$k =  0;
 						                	foreach ($gallery_ids as $ga_id) : 
 						                		$k++;
-						                		$attachment_info = basilico_Image::get_attachment_info( $ga_id );
+						                		$attachment_info = Basilico_Image::get_attachment_info( $ga_id );
 						                		if ( empty( $attachment_info ) || ! $attachment_info['src'] ) {
 													continue;
 												}
@@ -416,7 +416,7 @@ if (!class_exists('Basilico_Woo')) {
 														<?php endif; ?>
 														<?php 
 
-														basilico_Image::pxl_image_by_size( array(
+														Basilico_Image::pxl_image_by_size( array(
 															'attach_id'  => $ga_id,
 															'thumb_size' => $image_size,
 															'class'      => 'main-img-item',
@@ -485,7 +485,7 @@ if (!class_exists('Basilico_Woo')) {
 														<span class="draw-top-right"></span>
 														<span class="draw-bottom-left"></span>
 													<?php 
-													basilico_Image::pxl_image_by_size( array(
+													Basilico_Image::pxl_image_by_size( array(
 														'attach_id'  => $ga_id,
 														'thumb_size' => '270x330',
 														'class'      => 'p-img-hover-gal',
@@ -532,7 +532,7 @@ if (!class_exists('Basilico_Woo')) {
 				                	$k =  0;
 				                	foreach ($gallery_ids as $ga_id) : 
 				                		$k++;
-				                		$attachment_info = basilico_Image::get_attachment_info( $ga_id );
+				                		$attachment_info = Basilico_Image::get_attachment_info( $ga_id );
 				                		if ( empty( $attachment_info ) || ! $attachment_info['src'] ) {
 											continue;
 										}
@@ -562,7 +562,7 @@ if (!class_exists('Basilico_Woo')) {
 												<div class="zoom-hover" style="--zoom-bg-img:url('<?php echo esc_url($data_src) ?>');">
 												<?php endif; ?>
 												<?php 
-												basilico_Image::pxl_image_by_size( array(
+												Basilico_Image::pxl_image_by_size( array(
 													'attach_id'  => $ga_id,
 													'thumb_size' => $image_size,
 													'class'      => 'main-img-item',
@@ -630,7 +630,7 @@ if (!class_exists('Basilico_Woo')) {
 				                	$k =  0;
 				                	foreach ($gallery_ids as $ga_id) : 
 				                		$k++;
-				                		$attachment_info = basilico_Image::get_attachment_info( $ga_id );
+				                		$attachment_info = Basilico_Image::get_attachment_info( $ga_id );
 				                		if ( empty( $attachment_info ) || ! $attachment_info['src'] ) {
 											continue;
 										}
@@ -660,7 +660,7 @@ if (!class_exists('Basilico_Woo')) {
 												<div class="zoom-hover" style="--zoom-bg-img:url('<?php echo esc_url($data_src) ?>');">
 												<?php endif; ?>
 												<?php 
-												basilico_Image::pxl_image_by_size( array(
+												Basilico_Image::pxl_image_by_size( array(
 													'attach_id'  => $ga_id,
 													'thumb_size' => $image_size,
 													'class'      => 'main-img-item',
@@ -744,7 +744,7 @@ if (!class_exists('Basilico_Woo')) {
 					<div class="product-hover-img pxl-absoluted">
 						<?php if($shop_archive_hover_image == '1'): ?>
 							<?php 
-							basilico_Image::pxl_image_by_size( array(
+							Basilico_Image::pxl_image_by_size( array(
 								'attach_id'  => $gallery_ids[0],
 								'thumb_size' => $thumbnail_size,
 								'class'      => 'p-img-hover',
@@ -762,7 +762,7 @@ if (!class_exists('Basilico_Woo')) {
 											<?php foreach ($gallery_ids as $ga_id) : ?>
 												<div class="pxl-swiper-slide swiper-slide">
 													<?php 
-													basilico_Image::pxl_image_by_size( array(
+													Basilico_Image::pxl_image_by_size( array(
 														'attach_id'  => $ga_id,
 														'thumb_size' => $thumbnail_size,
 														'class'      => 'p-img-hover-gal',
@@ -808,7 +808,7 @@ if (!class_exists('Basilico_Woo')) {
 			} elseif ( $product->get_parent_id() ) {
 				$parent_product = wc_get_product( $product->get_parent_id() );
 				if ( $parent_product && $product_parent_image_id = $parent_product->get_image_id() ) {
-					return basilico_Image::pxl_image_by_size( array(
+					return Basilico_Image::pxl_image_by_size( array(
 						'attach_id'  => $product_parent_image_id,
 						'thumb_size' => $size,
 						'alt'        => $parent_product->get_name(),
@@ -823,7 +823,7 @@ if (!class_exists('Basilico_Woo')) {
 			$placeholder_image = get_option( 'woocommerce_placeholder_image', 0 );
 
 			if ( ! empty( $placeholder_image ) && is_numeric( $placeholder_image ) ) {
-				return basilico_Image::pxl_image_by_size( array(
+				return Basilico_Image::pxl_image_by_size( array(
 					'attach_id'  => $placeholder_image,
 					'thumb_size' => $size,
 					'alt'        => $product->get_name(),
