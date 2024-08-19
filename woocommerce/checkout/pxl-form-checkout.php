@@ -34,15 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						woocommerce_checkout_login_form();
 						echo '</div>';
 					}
-					?>
-					<?php 
-					if($has_coupon){
-						echo '<div class="coupon-form-col '.$col_cls.'">';
-						//woocommerce_checkout_coupon_form();
-						echo '</div>';
-					}
-					?>
-					 
+					?>					 
 				</div>
 			</div>
 		</div>
