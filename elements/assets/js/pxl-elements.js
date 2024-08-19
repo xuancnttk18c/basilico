@@ -216,7 +216,7 @@
                 scrollTrigger: {
                     trigger: els,
                     toggleActions: "play none none none", //play reset play reset 
-                    start: "top 90%",
+                    start: "top 95%",
                 },
                 duration: 0.8, 
                 stagger: 0.02,
@@ -295,7 +295,7 @@
                     scrollTrigger: {
                         trigger: el,
                         toggleActions: "play none none none",
-                        start: "top 90%",
+                        start: "top 95%",
                     },
                     rotateX: "0",
                     scale: 1,
