@@ -795,7 +795,7 @@ if (!class_exists('Basilico_Woo')) {
 			] );
 
 			if ( $product_image_id = $product->get_image_id() ) {  
-				return basilico_Image::pxl_image_by_size( array(
+				return Basilico_Image::pxl_image_by_size( array(
 					'attach_id'  => $product_image_id,
 					'thumb_size' => $size,
 					'alt'        => $product->get_name(),
