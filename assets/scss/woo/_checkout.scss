@@ -103,7 +103,9 @@
     transition-duration: 500ms;
     opacity: 0; 
     scrollbar-width: none;
-    @include d-flex-align-justify-center();
+    @include d-flex();
+    align-items: center;
+    justify-content: center;
     @media (max-width: $sm_max){
         left: 15px;
         right: 15px;
