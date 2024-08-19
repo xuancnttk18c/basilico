@@ -65,6 +65,30 @@ function basilico_wc_update_get_template($template, $template_name, $args, $temp
         case 'cart/shipping-calculator.php':
             $template = get_template_directory().'/'.WC()->template_path().'cart/pxl-shipping-calculator.php';
             break;
+        case 'checkout/form-checkout.php':
+            $template = get_template_directory().'/'.WC()->template_path().'checkout/pxl-form-checkout.php';
+            break;
+        case 'checkout/form-login.php':
+            $template = get_template_directory().'/'.WC()->template_path().'checkout/pxl-form-login.php';
+            break;
+        case 'global/form-login.php':
+            $template = get_template_directory().'/'.WC()->template_path().'global/pxl-form-login.php';
+            break;
+        case 'checkout/form-coupon.php':
+            $template = get_template_directory().'/'.WC()->template_path().'checkout/pxl-form-coupon.php';
+            break;
+        case 'checkout/form-billing.php':
+            $template = get_template_directory().'/'.WC()->template_path().'checkout/pxl-form-billing.php';
+            break;
+        case 'checkout/form-shipping.php':
+            $template = get_template_directory().'/'.WC()->template_path().'checkout/pxl-form-shipping.php';
+            break;
+        case 'checkout/review-order.php':
+            $template = get_template_directory().'/'.WC()->template_path().'checkout/pxl-review-order.php';
+            break;
+        case 'checkout/thankyou.php':
+            $template = get_template_directory().'/'.WC()->template_path().'checkout/pxl-thankyou.php';
+            break;
     }
 
     return $template;
