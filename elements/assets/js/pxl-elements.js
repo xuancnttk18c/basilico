@@ -215,8 +215,8 @@
             var settings = {
                 scrollTrigger: {
                     trigger: els,
-                    toggleActions: "play reverse play reverse", //play reset play reset 
-                    start: "top 86%",
+                    toggleActions: "play none none none", //play reset play reset 
+                    start: "top 95%",
                 },
                 duration: 0.8, 
                 stagger: 0.02,
