@@ -294,8 +294,8 @@
                 var pxl_anim = gsap.to(split_type_set, {
                     scrollTrigger: {
                         trigger: el,
-                        toggleActions: "play reverse play reverse",
-                        start: "top 86%",
+                        toggleActions: "play none none none",
+                        start: "top 95%",
                     },
                     rotateX: "0",
                     scale: 1,
