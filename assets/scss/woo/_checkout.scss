@@ -392,21 +392,6 @@
 	    margin-bottom: 20px;
 	    border-bottom: 1px solid #d0d0d0;
     }
-    select{
-    	background-color: transparent;
-    	border-color: transparent;
-    }
-    .nice-select{
-    	border-bottom: 0;
-    	margin-top: -6px;
-    	span.current{
-    		color: $body_color;
-    		@include transition(all .3s ease);
-    	}
-    	&:hover span.current{
-    		color: #000;
-    	}
-    }
     .checkout-review-inner{
     	padding: 30px 50px 55px 50px;
     	@media (max-width: $xs_max){
