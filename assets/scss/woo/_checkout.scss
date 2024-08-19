@@ -397,6 +397,9 @@
     	@media (max-width: $xs_screen){
     		padding: 20px;
     	}
+    	.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    		padding: 0 0 0 40px;
+    	}
     	.woocommerce-checkout-review-order-table{
     		position: static !important;
     	}
