@@ -21,14 +21,6 @@ if(!function_exists('basilico_woocommerce_checkout_order_review_inner_close')){
 	}
 }
 
-// add heading to order review columns
-if(!function_exists('basilico_woocommerce_checkout_order_review')){
-	add_action('woocommerce_checkout_order_review','basilico_woocommerce_checkout_order_review', 1);
-	function basilico_woocommerce_checkout_order_review(){ ?>
-		<h3 id="pxl-order-review-heading" class="order-title"><?php esc_html_e( 'Your order', 'basilico' ); ?></h3>
-	<?php }
-}
-
 // add div wrap content after order review title
 if(!function_exists('basilico_woocommerce_checkout_order_review_inner2_open'))
 {
