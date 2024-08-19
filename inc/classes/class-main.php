@@ -40,11 +40,6 @@ if (!class_exists('Basilico_Main')) {
             // Comment
             require get_template_directory() . '/inc/classes/class-comment.php';
             $this->comment = new Basilico_Comment();
-
-            if (class_exists('Woocommerce')) {
-                require get_template_directory() . '/woocommerce/class-woo.php';
-                $this->woo = new Basilico_Woo();
-            }
         }
 
 
