@@ -1176,6 +1176,20 @@ if(class_exists('Woocommerce')) {
                     'output'      => array('background-color' => '.checkout-review-wrap')
                 ),
                 array(
+                    'id'          => 'checkout_radius',
+                    'title'       => esc_html__('Review Checkout Radius', 'basilico'),
+                    'transparent' => false,
+                    'type'        => 'dimensions',
+                    'title'       => esc_html__('Border Radius', 'basilico'),
+                    'height'    => false,
+                    'unit'     => 'px',
+                    'default'  => array(
+                        'width'  => '0',
+                        'unit' => 'px'
+                    ),
+                    'output'      => array('.checkout-review-wrap')
+                ),
+                array(
                     'id'          => 'select_color',
                     'type'        => 'color',
                     'title'       => esc_html__('Select/Dropdown Color', 'basilico'),
