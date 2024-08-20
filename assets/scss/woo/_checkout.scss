@@ -253,7 +253,7 @@
 		text-align: left;
 		justify-content: flex-start;
 		height: 50px;
-		border-color: #d0d0d0;
+		border-color: $divider_color;
 	    font-size: 14px;
     	text-transform: capitalize;
     	.pxl-icon{
@@ -269,29 +269,13 @@
 	}
 	form.checkout_coupon{
 		display: block !important;
-		.pxl-icon{
-			position: absolute;
-			left: 16px;
-			top: 50%;
-			font-size: 20px;
-			margin-top: -10px;
-			color: #000;
-			@media (max-width: $xs_screen){
-				display: none;
-			}
-		}
 		.input-text{
-			border: 1px solid #d0d0d0;
-		    height: 50px;
-	    	padding: 0 120px 0 50px;
+	    	padding: 0px 90px 0 20px;
 	    	@media (max-width: $xs_screen){
 				padding: 0 20px 0 20px;
 			}
-	    	&:hover{
-	    		border-color: #000;
-	    	}
 		}
-		.button{
+		.button {
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -303,7 +287,7 @@
 			letter-spacing: 0.05em;
 			border: 0;
 			&:hover, &:active, &:focus{
-				color: $gray;
+				color: $heading_color;
 			}
 		}
 	}
@@ -381,7 +365,7 @@
 	} 
 } 
 .checkout-review-wrap{
-	margin-top: -88px;
+	margin-top: -95px;
 	background-color: #f0f1f4;
     position: relative;
     @media (max-width: $md_max){
@@ -390,7 +374,7 @@
     .order-review-heading{
 	    padding-bottom: 15px;
 	    margin-bottom: 20px;
-	    border-bottom: 1px solid #d0d0d0;
+	    border-bottom: 1px solid $divider_color;
     }
     .checkout-review-inner{
     	padding: 30px ;
@@ -399,6 +383,9 @@
     	}
     	.woocommerce-error, .woocommerce-info, .woocommerce-message {
     		padding: 0 20px 0 50px;
+    		&:before {
+    			left: 0;
+    		}
     	}
     	.woocommerce-checkout-review-order-table{
     		position: static !important;
@@ -410,7 +397,7 @@
 			right: 0;
 			bottom: 0;
 			background-color: transparent !important;
-			&:before{
+			&:before {
 				content: "";
 			    position: absolute;
 			    top: -10px;
@@ -421,7 +408,7 @@
 			    z-index: 2;
 			    @include transition(all .3s ease);
 			}
-			&:after{
+			&:after {
 				content: "\eace";;
 			    position: absolute;
 			    top: 45%;
@@ -483,15 +470,15 @@
     .review-order-subtotal-shiping{
     	margin-top: 30px;
     	padding-top: 20px;
-    	border-top: 1px solid #d0d0d0;
-    	.lbl{
+    	border-top: 1px solid $divider_color;
+    	.lbl {
     		font-size: 16px;
     	}
-    	.value{
+    	.value {
     		font-size: 16px;
     		color: #000;
     	}
-    	.nice-select span.current{
+    	.nice-select span.current {
     		font-size: 16px;
     	}
     }
@@ -499,7 +486,7 @@
     .order-total{
     	padding-top: 25px;
 	    margin-top: 12px;
-    	border-top: 1px solid #d0d0d0;
+    	border-top: 1px solid $divider_color;
 		span.lbl{
 			font-size: 18px;
 			color: #000;
@@ -519,7 +506,7 @@
 }
 .woocommerce-checkout-payment{
 	padding-top: 25px;
-	border-top: 1px solid #d0d0d0;
+	border-top: 1px solid $divider_color;
 	position: static !important;
 	.blockUI.blockOverlay {
 		position: relative !important;
@@ -567,7 +554,7 @@
 		letter-spacing: 0.015em;
 		margin-top: 30px;
 		padding-top: 25px;
-		border-top: 1px solid #d0d0d0;
+		border-top: 1px solid $divider_color;
 		a{
 			text-decoration: underline;
 			text-underline-offset: 3px;
