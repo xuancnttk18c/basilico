@@ -89,6 +89,9 @@ function basilico_wc_update_get_template($template, $template_name, $args, $temp
         case 'checkout/thankyou.php':
             $template = get_template_directory().'/'.WC()->template_path().'checkout/pxl-thankyou.php';
             break;
+        case 'checkout/payment.php':
+            $template = get_template_directory().'/'.WC()->template_path().'checkout/pxl-payment.php';
+            break;
     }
 
     return $template;
