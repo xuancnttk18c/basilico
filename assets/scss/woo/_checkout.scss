@@ -382,6 +382,7 @@
     		padding: 20px;
     	}
     	.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    		background-color: transparent;
     		padding: 0 20px 0 50px;
     		&:before {
     			left: 0;
