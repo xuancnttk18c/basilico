@@ -15,15 +15,15 @@
         line-height: 14px;
         margin-right: 13px;
         &:after{
-            content: "\eb9d";
-            //font-family: $lineicons_light;
-            font-size: 10px;
+            content: '\f26b';
+            font-family: 'Material-Design-Iconic-Font';
+            font-size: 18px;
             color: #fff;
             opacity: 0;
         }
         &:checked[type=checkbox] {
-        	background: $primary_color;
-        	border-color: $primary_color;
+        	background: $secondary_color;
+        	border-color: $secondary_color;
             &:after{
                 opacity: 1;
             }
@@ -32,7 +32,7 @@
 	input[type="radio"]{
 		width: 20px;
         height: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid $divider_color;
         background: #fff;
         cursor: pointer;
         vertical-align: top;
@@ -47,13 +47,13 @@
         &:after{
             content: '\f26b';
             font-family: 'Material-Design-Iconic-Font';
-            font-size: 10px;
+            font-size: 18px;
             color: #fff;
             opacity: 0;
         }
         &:checked[type=radio] {
-        	background: $primary_color;
-        	border-color: $primary_color;
+        	background: $secoondary_color;
+        	border-color: $secondary_color;
             &:after{
                 opacity: 1;
             }
