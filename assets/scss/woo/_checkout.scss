@@ -411,6 +411,7 @@
 			}
 			&:after {
 				content: "\e95b";
+				position: absolute;
 				font-family: $pxli_font;
 				color: $heading_color;
 				@include animation(pxl-spin 2s linear infinite);
