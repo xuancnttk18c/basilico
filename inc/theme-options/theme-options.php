@@ -1176,25 +1176,46 @@ if(class_exists('Woocommerce')) {
                     'output'      => array('background-color' => '.checkout-review-wrap')
                 ),
                 array(
-                    'id'       => 'checkout_button_style',
-                    'type'     => 'select',
-                    'title'    => esc_html__('Cart Button Style', 'basilico'),
-                    'options' => array(
-                        'btn-default' => esc_html__('Default', 'basilico' ),
-                        'btn-white' => esc_html__('White', 'basilico' ),
-                        'btn-fullwidth' => esc_html__('Full Width', 'basilico' ),
-                        'btn-outline' => esc_html__('Out Line', 'basilico' ),
-                        'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
-                        'btn-additional-1' => esc_html__('Additional Button 01', 'basilico' ),
-                        'btn-additional-2' => esc_html__('Additional Button 02', 'basilico' ),
-                        'btn-additional-3' => esc_html__('Additional Button 03', 'basilico' ),
-                        'btn-additional-4' => esc_html__('Additional Button 04', 'basilico' ),
-                        'btn-additional-5' => esc_html__('Additional Button 05', 'basilico' ),
-                        'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
-                        'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
-                        'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
-                    ),
-                    'default' => 'btn-outline-secondary',
+                    'id'          => 'button_checkout',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Button Checkout Background', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('background-color' => 'button#place_order')
+                ),
+                array(
+                    'id'          => 'button_text',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Button Checkout Text Color', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('color' => 'button#place_order')
+                ),
+                array(
+                    'id'          => 'button_border',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Button Checkout Border', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('border-color' => 'button#place_order')
+                ),
+                array(
+                    'id'          => 'button_checkout_hover',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Button Checkout Background (Hover)', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('background-color' => 'button#place_order:hover')
+                ),
+                array(
+                    'id'          => 'button_text',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Button Checkout Text Color (Hover)', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('color' => 'button#place_order:hover')
+                ),
+                array(
+                    'id'          => 'button_border',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Button Checkout Border (Hover)', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('border-color' => 'button#place_order:hover')
                 ),
             )
         )
