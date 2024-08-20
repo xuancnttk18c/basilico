@@ -1176,6 +1176,13 @@ if(class_exists('Woocommerce')) {
                     'output'      => array('background-color' => '.checkout-review-wrap')
                 ),
                 array(
+                    'id'          => 'checkbox_color',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Checkbox Color', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('background-color' => '.pxl-checkout-content-wrap input[type="radio"]:checked[type="radio"]')
+                ),
+                array(
                     'id'          => 'button_checkout',
                     'type'        => 'color',
                     'title'       => esc_html__('Button Checkout Background', 'basilico'),
