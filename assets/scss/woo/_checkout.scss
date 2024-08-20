@@ -52,7 +52,7 @@
             opacity: 0;
         }
         &:checked[type=radio] {
-        	background: $secoondary_color;
+        	background: $secondary_color;
         	border-color: $secondary_color;
             &:after{
                 opacity: 1;
