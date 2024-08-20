@@ -49,10 +49,26 @@ if(!function_exists('basilico_woocommerce_checkout_order_review_inner2_close'))
 
 add_filter('woocommerce_order_button_html', 'custom_order_button_html');
 function custom_order_button_html($button_html) {
-    // Add your custom span tag
-    $new_button_html = '<button type="submit" class="button alt btn-additional-3" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( 'Place order' ) . '" data-value="' . esc_attr( 'Place order' ) . '">' .
-                        '<span class="my-custom-span">Place order</span>' .
-                        '</button>';
+    // Use wp_kses to allow specific HTML tags
+    $allowed_html = array(
+        'button' => array(
+            'type' => array(),
+            'class' => array(),
+            'name' => array(),
+            'id' => array(),
+            'value' => array(),
+            'data-value' => array(),
+        ),
+        'span' => array(
+            'class' => array(),
+        ),
+    );
 
-    return $new_button_html;
+    // Modify the button HTML
+    $new_button_html = '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( 'Place order' ) . '" data-value="' . esc_attr( 'Place order' ) . '">' .
+                         '<span class="my-custom-span">Place order</span>' .
+                         '</button>';
+
+    // Return the filtered HTML, ensuring allowed tags
+    return wp_kses($new_button_html, $allowed_html);
 }
