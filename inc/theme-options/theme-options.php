@@ -1187,7 +1187,7 @@ if(class_exists('Woocommerce')) {
                         'width'  => '0',
                         'unit' => 'px'
                     ),
-                    'output'      => array('.checkout-review-wrap')
+                    'output'      => array('border-radius' => '.checkout-review-wrap')
                 ),
                 array(
                     'id'          => 'select_color',
