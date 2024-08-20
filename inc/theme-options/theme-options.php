@@ -1211,14 +1211,14 @@ if(class_exists('Woocommerce')) {
                     'output'      => array('background-color' => 'button#place_order:hover')
                 ),
                 array(
-                    'id'          => 'button_text',
+                    'id'          => 'button_text_hover',
                     'type'        => 'color',
                     'title'       => esc_html__('Button Checkout Text Color (Hover)', 'basilico'),
                     'transparent' => false,
                     'output'      => array('color' => 'button#place_order:hover')
                 ),
                 array(
-                    'id'          => 'button_border',
+                    'id'          => 'button_border_hover',
                     'type'        => 'color',
                     'title'       => esc_html__('Button Checkout Border (Hover)', 'basilico'),
                     'transparent' => false,
