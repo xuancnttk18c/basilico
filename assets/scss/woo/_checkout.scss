@@ -215,7 +215,7 @@
 			//font-family: $lineicons_font;
 		}
 		&:hover{
-			color: #000;
+			color: $heading_color;
 		}
 	}
 	.form-actions{
@@ -225,7 +225,7 @@
 		margin-bottom: 42px;
 		label{
 		    font-size: 16px;
-		    color: #000;
+		    color: $heading_color;
 		    letter-spacing: 0.015em;
 		    margin: 0;
 		}
@@ -279,9 +279,9 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-			height: 50px;
+			height: $input_height;
 			background-color: transparent;
-			color: #000;
+			color: $heading_color;
 			padding: 0 24px;
 			font-size: 14px;
 			letter-spacing: 0.05em;
@@ -339,7 +339,7 @@
 .woocommerce-account-fields{
 	margin-bottom: 10px;
 	label{
-		color: #000;
+		color: $heading_color;
 	    font-size: 16px;
 	    letter-spacing: 0.015em;
 	}
@@ -348,7 +348,7 @@
 	margin-bottom: 32px;
 	.ship-to-different-address{
 		label{
-			color: #000;
+			color: $heading_color;
 		    font-size: 16px;
 		    letter-spacing: 0.015em;
 		}
@@ -476,7 +476,7 @@
     	}
     	.value {
     		font-size: 16px;
-    		color: #000;
+    		color: $heading_color;
     	}
     	.nice-select span.current {
     		font-size: 16px;
@@ -485,18 +485,16 @@
     
     .order-total{
     	padding-top: 25px;
-	    margin-top: 12px;
-    	border-top: 1px solid $divider_color;
 		span.lbl{
 			font-size: 18px;
-			color: #000;
+			color: $heading_color;
 			text-transform: uppercase;
 			letter-spacing: 0.05em;
 		}
 		span.value{
 			font-size: 20px;
 			font-weight: 600;
-			color: #000;
+			color: $heading_color;
 			letter-spacing: 0.015em;
 			strong{
 				font-weight: 600;
