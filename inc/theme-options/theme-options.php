@@ -1224,6 +1224,27 @@ if(class_exists('Woocommerce')) {
                     'transparent' => false,
                     'output'      => array('border-color' => 'button#place_order:hover')
                 ),
+                array(
+                    'id'          => 'button_text',
+                    'type'        => 'typography',
+                    'title'       => esc_html__('Button Typography', 'basilico'),
+                    'google'      => true,
+                    'line-height' => true,
+                    'font-size'   => true,
+                    'text-align'  => false,
+                    'letter-spacing' => true,
+                    'text-transform' => true,
+                    'units'       => 'px',
+                    'weights' => array(
+                        '400'       => 'Normal 400',
+                        '500'       => 'Medium 500',
+                        '700'       => 'Bold 700',
+                        '400italic' => 'Normal 400 Italic',
+                        '500italic' => 'Medium 500 Italic',
+                        '700italic' => 'Bold 700 Italic',
+                    ),
+                    'output' => array('button#place_order')
+                ),
             )
         )
     ));
