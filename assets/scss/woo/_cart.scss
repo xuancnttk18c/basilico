@@ -595,18 +595,6 @@ label[for="coupon_code"]{
 					}
 				}
 			}
-			dt:not(.first-child) {
-				margin-top: 5px;
-			}
-			dd {
-				margin-left: 0;
-				> div {
-					&:before {
-						content: '\2022\0020';
-						display: inline;
-					}
-				}
-			}
 		}
 		.col-quantity{
 			width: 20%;

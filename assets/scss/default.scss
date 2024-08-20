@@ -42,8 +42,8 @@ hr {
     height: 0;
     overflow: visible; 
 }
- 
- 
+
+
 abbr[title] {
     border-bottom: none; 
     text-decoration: underline;
@@ -54,7 +54,7 @@ b,
 strong {
     font-weight: bolder;
 }
- 
+
 small {
     font-size: 80%;
 }
@@ -88,7 +88,7 @@ em,
 i {
     font-style: italic;
 }
- 
+
 pre {
     font-size: 14px;
     overflow: auto;
@@ -125,7 +125,7 @@ abbr, acronym {
     border-bottom: 1px dotted #666;
     cursor: help;
 }
- 
+
 mark,
 ins {
     text-decoration: none;
@@ -220,7 +220,7 @@ button::-moz-focus-inner,
     border-style: none;
     padding: 0;
 }
-  
+
 fieldset {
     padding: 0.35em 0.75em 0.625em;
 }
@@ -367,3 +367,17 @@ body .mfp-bottom-bar {
     vertical-align: middle;
 }
 
+dl {
+    dt:not(.first-child) {
+        margin-top: 5px;
+    }
+    dd {
+        margin-left: 0;
+        > div {
+            &:before {
+                content: '\2022\0020';
+                display: inline;
+            }
+        }
+    }
+}
