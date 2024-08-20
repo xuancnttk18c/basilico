@@ -1158,12 +1158,11 @@
             .link-text {
                 max-width: none;
                 margin: 0 auto;
-                font-family: $heading_font_family;
                 font-size: 25px;
                 font-weight: 600;
                 letter-spacing: 0.05em;
                 font-style: italic;
-                font-size: 25px;
+                text-transform: none;
                 line-height: 1.6;
                 @media (min-width: $xl_min) {
                     max-width: 85%;
