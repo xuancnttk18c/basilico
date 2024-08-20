@@ -1180,7 +1180,7 @@ if(class_exists('Woocommerce')) {
                     'type'        => 'color',
                     'title'       => esc_html__('Select/Dropdown Color', 'basilico'),
                     'transparent' => false,
-                    'output'      => array('background-color' => '..checkout-review-wrap select, .checkout-review-wrap .select2-container.select2-container--default .select2-selection--single')
+                    'output'      => array('background-color' => '.checkout-review-wrap select, .checkout-review-wrap .select2-container.select2-container--default .select2-selection--single')
                 ),
                 array(
                     'id'          => 'select_border',
