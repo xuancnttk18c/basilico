@@ -366,6 +366,8 @@
 .checkout-review-wrap{
 	margin-top: -95px;
 	background-color: #f0f1f4;
+	border: 1px solid;
+	border-color: $divider_color;
     position: relative;
     @media (max-width: $md_max){
     	margin-top: 0;
