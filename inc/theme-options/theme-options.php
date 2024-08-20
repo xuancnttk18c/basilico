@@ -1176,6 +1176,20 @@ if(class_exists('Woocommerce')) {
                     'output'      => array('background-color' => '.checkout-review-wrap')
                 ),
                 array(
+                    'id'          => 'select_color',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Select/Dropdown Color', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('background-color' => '..checkout-review-wrap select, .checkout-review-wrap .select2-container.select2-container--default .select2-selection--single')
+                ),
+                array(
+                    'id'          => 'select_border',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Select/Dropdown Border', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('border-color' => '.checkout-review-wrap select, .checkout-review-wrap .select2-container.select2-container--default .select2-selection--single')
+                ),
+                array(
                     'id'          => 'checkbox_color',
                     'type'        => 'color',
                     'title'       => esc_html__('Checkbox Color', 'basilico'),
