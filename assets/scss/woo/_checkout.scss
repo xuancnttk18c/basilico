@@ -413,7 +413,7 @@
 				content: "\e95b";
 				position: absolute;
 				font-family: $pxli_font;
-				color: $heading_color;
+				color: #000;
 				@include animation(pxl-spin 2s linear infinite);
 			    top: 50%;
 				left: 50%;
