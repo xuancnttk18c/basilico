@@ -23,7 +23,6 @@
         }
         &:checked[type=checkbox] {
         	background: $secondary_color;
-        	border-color: $secondary_color;
             &:after{
                 opacity: 1;
             }
