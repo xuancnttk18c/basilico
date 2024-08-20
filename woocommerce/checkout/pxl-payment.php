@@ -37,7 +37,7 @@ if ( ! wp_doing_ajax() ) {
 			$checkout_btn_style = basilico()->get_theme_opt('checkout_button_style', 'btn-outline');
 		?>
 
-		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="' . esc_attr($checkout_btn_style) . ' button alt' . esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ) . '" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '"></span>' . esc_html( $order_button_text ) . '</span></button>' ); // @codingStandardsIgnoreLine ?>
+		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="' . esc_attr($checkout_btn_style) . ' button alt' . esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ) . '" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( 'dfasdfsf' ) . '" data-value="' . esc_attr( $order_button_text ) . '"></span>' . esc_html( $order_button_text ) . '</span></button>' ); // @codingStandardsIgnoreLine ?>
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 
