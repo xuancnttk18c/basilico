@@ -1173,7 +1173,7 @@ if(class_exists('Woocommerce')) {
                     'type'        => 'color',
                     'title'       => esc_html__('Review Checkout Background', 'basilico'),
                     'transparent' => false,
-                    'output'      => array('background-color' => '..checkout-review-wrap')
+                    'output'      => array('background-color' => '.checkout-review-wrap')
                 ),
                 array(
                     'id'       => 'checkout_button_style',
