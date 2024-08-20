@@ -1162,8 +1162,8 @@ if(class_exists('Woocommerce')) {
             )
         )
     ));
-Redux::setSection($opt_name, array(
-        'title'      => esc_html__('Cart Page', 'basilico'),
+    Redux::setSection($opt_name, array(
+        'title'      => esc_html__('Checkout Page', 'basilico'),
         'icon'       => 'el el-shopping-cart-sign',
         'subsection' => true,
         'fields'     => array_merge(
