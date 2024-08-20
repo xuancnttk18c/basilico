@@ -1162,6 +1162,43 @@ if(class_exists('Woocommerce')) {
             )
         )
     ));
+Redux::setSection($opt_name, array(
+        'title'      => esc_html__('Cart Page', 'basilico'),
+        'icon'       => 'el el-shopping-cart-sign',
+        'subsection' => true,
+        'fields'     => array_merge(
+            array(
+                array(
+                    'id'          => 'checkout_section',
+                    'type'        => 'color',
+                    'title'       => esc_html__('Review Checkout Background', 'basilico'),
+                    'transparent' => false,
+                    'output'      => array('background-color' => '..checkout-review-wrap')
+                ),
+                array(
+                    'id'       => 'checkout_button_style',
+                    'type'     => 'select',
+                    'title'    => esc_html__('Cart Button Style', 'basilico'),
+                    'options' => array(
+                        'btn-default' => esc_html__('Default', 'basilico' ),
+                        'btn-white' => esc_html__('White', 'basilico' ),
+                        'btn-fullwidth' => esc_html__('Full Width', 'basilico' ),
+                        'btn-outline' => esc_html__('Out Line', 'basilico' ),
+                        'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
+                        'btn-additional-1' => esc_html__('Additional Button 01', 'basilico' ),
+                        'btn-additional-2' => esc_html__('Additional Button 02', 'basilico' ),
+                        'btn-additional-3' => esc_html__('Additional Button 03', 'basilico' ),
+                        'btn-additional-4' => esc_html__('Additional Button 04', 'basilico' ),
+                        'btn-additional-5' => esc_html__('Additional Button 05', 'basilico' ),
+                        'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
+                        'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
+                        'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
+                    ),
+                    'default' => 'btn-outline-secondary',
+                ),
+            )
+        )
+    ));
 }
 
 //* Typography

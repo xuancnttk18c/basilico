@@ -41,7 +41,8 @@ if(!function_exists('basilico_woocommerce_checkout_order_review_inner2_close'))
 if(!function_exists('basilico_woocommerce_order_button_html')){
 	add_filter('woocommerce_order_button_html', 'basilico_woocommerce_order_button_html');
 	function basilico_woocommerce_order_button_html(){
+		$checkout_btn_style = basilico()->get_theme_opt('pxl-checkout-place-order', 'btn-outline');
 		$order_button_text = apply_filters( 'woocommerce_order_button_text', esc_html__( 'Place order', 'basilico' ) );
-		return '<div class="pxl-checkout-place-order"><button type="submit" class="button" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button></div>';
+		return '<div class="pxl-checkout-place-order"><button type="submit" class="button' . esc_attr($checkout_btn_style) . '" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button></div>';
 	}
 }
