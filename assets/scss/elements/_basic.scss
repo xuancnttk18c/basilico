@@ -2511,55 +2511,53 @@
 
 .pxl-store-list {
     &.layout-1 {
-        .pxl-item-store {
-            .pxl-store {
-                padding: 24px 32px;
-                border: 1px solid $divider_color;
-                + .pxl-store {
-                    margin-top: 20px;
-                }
-                .pxl-store-content {
-                    gap: 20px;
-                    .pxl-store-icon {
-                        font-size: 15px;
-                        font-weight: 700;
-                        color: #fff;
-                        width: 42px;
-                        height: 42px;
-                        @include d-flex();
-                        align-items: center;
-                        justify-content: center;
-                        @include border-radius(50%);
-                        background-color: $primary_color;
-                    }
-                    .pxl-store-title {
-                        font-size: 17px;
-                        letter-spacing: 0.03em;
-                        margin-bottom: 7px;
-                    }
-                }
-                .pxl-store-btn {
-                    width: 49px;
-                    height: 49px;
-                    @include border-radius(5px);
+        .pxl-store {
+            padding: 24px 32px;
+            border: 1px solid $divider_color;
+            + .pxl-store {
+                margin-top: 20px;
+            }
+            .pxl-store-content {
+                gap: 20px;
+                .pxl-store-icon {
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: #fff;
+                    width: 42px;
+                    height: 42px;
                     @include d-flex();
                     align-items: center;
                     justify-content: center;
-                    border: 1px solid $divider_color;
-                    border-radius: 5px;
-                    i {
-                        font-size: 20px;
-                        font-weight: 700;
-                        color: $heading_color;
-                    }
+                    @include border-radius(50%);
+                    background-color: $primary_color;
                 }
-                &:hover {
-                    background-color: #f2f2f2;
-                    .pxl-store-btn {
-                        background-color: #56ce66;
-                        i {
-                            color: #fff;
-                        }
+                .pxl-store-title {
+                    font-size: 17px;
+                    letter-spacing: 0.03em;
+                    margin-bottom: 7px;
+                }
+            }
+            .pxl-store-btn {
+                width: 49px;
+                height: 49px;
+                @include border-radius(5px);
+                @include d-flex();
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $divider_color;
+                border-radius: 5px;
+                i {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: $heading_color;
+                }
+            }
+            &:hover {
+                background-color: #f2f2f2;
+                .pxl-store-btn {
+                    background-color: #56ce66;
+                    i {
+                        color: #fff;
                     }
                 }
             }
