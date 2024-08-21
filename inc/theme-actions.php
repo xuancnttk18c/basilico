@@ -292,28 +292,28 @@ function basilico_hook_anchor_templates_hidden_panel(){
     }
 }
 
-function basilico_hook_anchor_hidden_panel($args){
+function basilico_hook_anchor_hidden_panel($args){  
     ?>
     <div class="pxl-hidden-template pxl-hidden-template-<?php echo esc_attr($args['post_id'])?> pos-<?php echo esc_attr($args['position']) ?>">
         <div class="pxl-hidden-template-wrap">
-            <div class="pxl-panel-header">
-                <div class="panel-header-inner">
-                    <a href="#" class="pxl-close" title="<?php echo esc_attr__( 'Close', 'basilico' ) ?>"></a>
-                </div>
-            </div>
             <div class="pxl-panel-content custom_scroll">
-                <?php echo Elementor\Plugin::$instance->frontend->get_builder_content_for_display( (int)$args['post_id']); ?>
+                <?php if($args['position'] == 'center'): ?>
+                    <span class="pxl-close" title="Close"></span>
+                <?php else: ?>
+                    <span class="pxl-close" title="<?php echo esc_attr__( 'Close', 'utero' ) ?>"><span class="x-icon"></span><span class="x-text"><?php echo esc_attr__( 'Close', 'utero' ) ?></span></span>
+                <?php endif; ?>
+               <?php echo Elementor\Plugin::$instance->frontend->get_builder_content_for_display( (int)$args['post_id']); ?>
             </div>
         </div>
-    </div>
-    <?php
+    </div> 
+    <?php    
 }
 
 function basilico_hook_anchor_custom(){
     return;
 }
 
-add_action( 'pxltheme_anchor_target', 'basilico_output_popup' );
+add_action( 'pxltheme_anchor_target', 'basilico_output_popup_newsletter' );
 function basilico_output_popup(){
     $enable_popup = basilico()->get_page_opt('enable_popup', 'off');
     if ($enable_popup == 'on'){
