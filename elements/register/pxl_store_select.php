@@ -1,0 +1,85 @@
+<?php
+pxl_add_custom_widget(
+    array(
+        'name' => 'pxl_store_list',
+        'title' => esc_html__('PXL Store List', 'basilico' ),
+        'icon' => 'eicon-bullet-list',
+        'categories' => array('pxltheme-core'),
+        'scripts'    => array(),
+        'params' => array(
+            'sections' => array(
+                array(
+                    'name'     => 'layout_section',
+                    'label'    => esc_html__( 'Layout', 'basilico' ),
+                    'tab'      => 'layout',
+                    'controls' => array(
+                        array(
+                            'name'    => 'layout',
+                            'label'   => esc_html__( 'Templates', 'basilico' ),
+                            'type'    => 'layoutcontrol',
+                            'default' => '1',
+                            'options' => [
+                                '1' => [
+                                    'label' => esc_html__( 'Layout 1', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-1.jpg'
+                                ],
+                            ],
+                        )
+                    )
+                ),
+                array(
+                    'name' => 'tab_content',
+                    'label' => esc_html__( 'Content', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                    'controls' => array(
+                        array(
+                            'name' => 'list',
+                            'label' => esc_html__('Items', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::REPEATER,
+                            'controls' => array(
+                                array(
+                                    'name' => 'store_icon',
+                                    'label' => esc_html__('Store Icon', 'basilico' ),
+                                    'type' => \Elementor\Controls_Manager::ICONS,
+                                    'fa4compatibility' => 'icon',
+                                    'default' => [
+                                        'value' => 'fas fa-store',
+                                        'library' => 'fa-solid',
+                                    ],
+                                ),
+                                array(
+                                    'name' => 'title',
+                                    'label' => esc_html__('Title', 'basilico'),
+                                    'type' => \Elementor\Controls_Manager::TEXT,
+                                    'label_block' => true,
+                                ),
+                                array(
+                                    'name' => 'desc',
+                                    'label' => esc_html__('Description', 'basilico'),
+                                    'type' => \Elementor\Controls_Manager::TEXT,
+                                    'label_block' => true,
+                                ),
+                                array(
+                                    'name' => 'link',
+                                    'label' => esc_html__('Button Link', 'basilico'),
+                                    'type' => \Elementor\Controls_Manager::URL,
+                                    'label_block' => true,
+                                ),
+                            ),
+                            'title_field' => '{{{ content }}}',
+                        ),
+                    ),
+                ),
+                array(
+                    'name' => 'tab_style',
+                    'label' => esc_html__('Style', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+                    'controls' => array(
+                        
+                    ),
+                ),
+            ),
+        ),
+    ),
+    basilico_get_class_widget_path()
+);
