@@ -297,11 +297,7 @@ function basilico_hook_anchor_hidden_panel($args){
     <div class="pxl-hidden-template pxl-hidden-template-<?php echo esc_attr($args['post_id'])?> pos-<?php echo esc_attr($args['position']) ?>">
         <div class="pxl-hidden-template-wrap">
             <div class="pxl-panel-content custom_scroll">
-                <?php if($args['position'] == 'center'): ?>
-                    <span class="pxl-close" title="Close"></span>
-                <?php else: ?>
-                    <span class="pxl-close" title="<?php echo esc_attr__( 'Close', 'utero' ) ?>"><span class="x-icon"></span><span class="x-text"><?php echo esc_attr__( 'Close', 'utero' ) ?></span></span>
-                <?php endif; ?>
+                <span class="pxl-close" title="Close"></span>
                <?php echo Elementor\Plugin::$instance->frontend->get_builder_content_for_display( (int)$args['post_id']); ?>
             </div>
         </div>
