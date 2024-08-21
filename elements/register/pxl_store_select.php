@@ -5,7 +5,7 @@ pxl_add_custom_widget(
         'title' => esc_html__('PXL Store List', 'basilico' ),
         'icon' => 'eicon-bullet-list',
         'categories' => array('pxltheme-core'),
-        'scripts'    => array(),
+        'scripts'    => array('basilico-storelist'),
         'params' => array(
             'sections' => array(
                 array(
