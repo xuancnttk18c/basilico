@@ -2,7 +2,7 @@
 	input[type="checkbox"]{
 		width: 20px;
         height: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid $divider_color;
         background: #fff;
         cursor: pointer;
         vertical-align: top;
@@ -13,7 +13,7 @@
         position: relative;
         text-align: center;
         line-height: 14px;
-        margin-right: 13px;
+        margin-right: 16px;
         &:after{
             content: '\f26b';
             font-family: 'Material-Design-Iconic-Font';
