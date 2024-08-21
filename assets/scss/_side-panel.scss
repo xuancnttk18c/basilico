@@ -162,6 +162,7 @@
     @include d-flex();
     align-items: center;
     justify-content: center;
+    background-color: transparent;
     height: 100%;
     .pxl-hidden-template-wrap{
         max-width: 870px;
