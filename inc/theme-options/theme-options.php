@@ -1229,6 +1229,17 @@ if(class_exists('Woocommerce')) {
                     'output'      => array('border-color' => 'button#place_order')
                 ),
                 array(
+                    'id'          => 'checkout_button_radius',
+                    'type'        => 'dimensions',
+                    'title'       => esc_html__('Review Checkout Border Radius', 'basilico'),
+                    'height'      =>  false,
+                    'unit'     => 'px',
+                    'default'  => array(
+                        'width'  => '0',
+                    ),
+                    'output_variables' => true,
+                ),
+                array(
                     'id'          => 'button_checkout_hover',
                     'type'        => 'color',
                     'title'       => esc_html__('Button Checkout Background (Hover)', 'basilico'),
