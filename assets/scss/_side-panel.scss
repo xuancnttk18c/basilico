@@ -256,7 +256,9 @@
     }
 }
 .pxl-hidden-template.pos-center{
-    @include d-flex-align-justify-center();
+    @include d-flex();
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
     @media (max-width: $sm_max){
         left: 15px;
