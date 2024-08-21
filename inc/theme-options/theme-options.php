@@ -1183,7 +1183,6 @@ if(class_exists('Woocommerce')) {
                     'unit'     => 'px',
                     'default'  => array(
                         'width'  => '0',
-                        'unit' => 'px'
                     ),
                     'output_variables' => true,
                 ),
