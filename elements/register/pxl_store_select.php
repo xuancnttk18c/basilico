@@ -66,7 +66,7 @@ pxl_add_custom_widget(
                                     'label_block' => true,
                                 ),
                             ),
-                            'title_field' => '{{{ content }}}',
+                            'title_field' => '{{{ title }}}',
                         ),
                     ),
                 ),
