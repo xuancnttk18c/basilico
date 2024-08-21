@@ -552,7 +552,7 @@
 	right: 0;
 	width: 0;
 	height: 0;
-	background: rgba($secondary_color_rgb, 0.4);
+	background: rgba(22, 26, 27, 0.6);
 	opacity: 0;
 	@include transition(opacity .45s cubic-bezier(.25,.46,.45,.94));
 }

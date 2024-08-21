@@ -308,8 +308,38 @@ function basilico_hook_anchor_hidden_panel($args){
     </div>
     <?php
 }
+
 function basilico_hook_anchor_custom(){
     return;
+}
+
+add_action( 'pxltheme_anchor_target', 'basilico_output_popup' );
+function basilico_output_popup(){
+    $enable_popup = basilico()->get_page_opt('enable_popup', 'off');
+    if ($enable_popup == 'on'){
+        $popup_template = (int)basilico()->get_page_opt('popup_template', '');
+        ?>
+        <?php if ($popup_template > 0): 
+            $template_position = get_post_meta( $popup_newsletter_template, 'template_position', true);
+            $template_custom_style = get_post_meta( $popup_newsletter_template, 'template_custom_style', true );
+            $popup_nsl_times = (int)basilico()->get_theme_opt('popup_nsl_times', '1');
+            $popup_nsl_time_out = (int)basilico()->get_theme_opt('popup_nsl_time_out', '1000');
+            ?>
+            <div class="pxl-hidden-template page-popup pxl-hidden-template-<?php echo esc_attr($popup_newsletter_template)?> el-builder pos-<?php echo esc_attr($template_position) ?> <?php echo esc_attr($template_custom_style) ?>" data-nsl_times = "<?php echo esc_attr($popup_nsl_times) ?>" data-nsl_time_out = "<?php echo esc_attr($popup_nsl_time_out) ?>">
+                <div class="pxl-hidden-template-wrap">
+                    <div class="pxl-panel-content custom_scroll">
+                        <?php if($template_position == 'center'): ?>
+                            <span class="pxl-close lnil lnil-close" title="Close">x</span>
+                        <?php else: ?>
+                            <span class="pxl-close" title="<?php echo esc_attr__( 'Close', 'basilico' ) ?>"><span class="x-icon"></span><span class="x-text"><?php echo esc_attr__( 'Close', 'basilico' ) ?></span></span>
+                        <?php endif; ?>
+                       <?php echo Elementor\Plugin::$instance->frontend->get_builder_content_for_display( $popup_newsletter_template); ?>
+                    </div>
+                </div>
+            </div> 
+        <?php endif; ?>
+        <?php 
+    }
 }
 
 add_action( 'pxltheme_anchor_target', 'basilico_header_popup_cart');
