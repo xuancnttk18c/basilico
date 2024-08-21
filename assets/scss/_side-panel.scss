@@ -464,10 +464,6 @@
         position: relative;
         border-radius: 0;
         cursor: default;
-        border-radius: 10px;
-        @include box-shadow( 0 3px 21px rgba(#000, 0.3));
-        @include transition(all .3s ease);
-        @include transform(scale(0.6));
         overflow: hidden;
         @media (max-width: $xxl_max){
             max-width: 90%;
