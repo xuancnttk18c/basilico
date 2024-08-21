@@ -1,8 +1,8 @@
 ( function( $ ) {
     var PXLStoreListHander = function( $scope, $ ) {
         $scope.find('.pxl-store').on('click', function() {
-            console.log($(this));
-            $(this).addClass('active').siblings().removeClass('active');
+            $(this).addClass('selected').siblings().removeClass('selected');
+            console.log($(this).data('url'));
             $scope.find('store-submit').attr('href', $(this).data('url'));
         })
     };
