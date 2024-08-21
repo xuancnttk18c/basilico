@@ -232,17 +232,13 @@
 
 .pxl-hidden-template.pos-right{
     width: 100%;
-    max-width: 500px;
+    max-width: 601px;
     right: 0;
     left: auto;
+    z-index: 604;
     @include transform(translate(100%,0));
-    @media (max-width: $xs_max){
-        width: 90%;
-    }
     .pxl-hidden-template-wrap{
         position: relative;
-        padding: 30px;
-
     }    
 }
 .pxl-hidden-template.pos-top{
@@ -253,11 +249,13 @@
     right: 0;
     @include transform(translate(0,-100%));
     .pxl-panel-header {
-        padding: 0;
         position: absolute;
-        top: 30px;
-        right: 30px;
+        top: 20px;
+        right: 20px;
         z-index: 1;
+    }
+    .pxl-panel-content{
+        padding: 0;
     }
 }
 .admin-bar .pxl-hidden-template.pos-top{
