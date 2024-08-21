@@ -23,8 +23,9 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
             }
         }
         $link_attributes = $widget->get_render_attribute_string( $link_key );
+        $first = true;
         ?>
-        <div class="pxl-store <?php echo esc_attr($key) == 1 ? 'selected' : '' ?> d-flex align-items-center justify-content-between" data-url="<?php echo esc_url($value['link']['url']); ?>">
+        <div class="pxl-store d-flex align-items-center justify-content-between" data-url="<?php echo esc_url($value['link']['url']); ?>">
             <div class="pxl-store-content d-flex align-items-center">
                 <?php
                 if ($has_icon){
