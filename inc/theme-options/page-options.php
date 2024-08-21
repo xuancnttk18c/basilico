@@ -550,6 +550,7 @@ function basilico_page_options_register( $metabox ) {
                                 'left'   => esc_html__('Left Position', 'basilico'),
                                 'right'  => esc_html__('Right Position', 'basilico'),
                                 'center'  => esc_html__('Center Position', 'basilico'),
+                                'center-large'  => esc_html__('Center Large Position', 'basilico'),
                             ],
                             'default'  => 'full',
                             'required' => [ 'template_type', '=', 'hidden-panel']
