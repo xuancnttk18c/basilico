@@ -2512,8 +2512,13 @@
 .pxl-store-list {
     &.layout-1 {
         .pxl-item-store {
-            padding: 24px 32px;
-            border: 1px solid $divider_color;
+            .pxl-store {
+                padding: 24px 32px;
+                border: 1px solid $divider_color;
+                + .pxl-store {
+                    margin-top: 20px;
+                }
+            }
             .pxl-store-content {
                 gap: 20px;
                 .pxl-store-icon {
