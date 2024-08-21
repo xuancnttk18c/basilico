@@ -6,6 +6,31 @@
     }
 }
 
+.pxl-page-overlay{  
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#000000, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    cursor: none;
+    @include transition(all .3s cubic-bezier(0.52, 0.51, 0.66, 0.65));
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    } 
+    @media (max-width: $md_max){
+        &.active-mobile{
+            opacity: 1;
+            visibility: visible;
+        } 
+    } 
+}
+
+
 //* Panel Default
 .pxl-hidden-template{
     display: flex;
