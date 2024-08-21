@@ -150,11 +150,11 @@
             }
             &:before,
             &:after{
-                background-color: $second_color;
+                background-color: $secondary_color;
             }
         }
         .pxl-mobile-menu .main-menu-toggle{
-            color: $second_color;
+            color: $secondary_color;
         }
     }
     &.mobile-panel-df .pxl-logo{
@@ -169,7 +169,7 @@
             }
             &:before,
             &:after{
-                background-color: $second_color;
+                background-color: $secondary_color;
             }
         }
     }
