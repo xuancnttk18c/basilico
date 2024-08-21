@@ -2552,7 +2552,7 @@
                     color: $heading_color;
                 }
             }
-            &:hover, .selected {
+            &:hover, &.selected {
                 background-color: #f2f2f2;
                 .pxl-store-btn {
                     background-color: #56ce66;
