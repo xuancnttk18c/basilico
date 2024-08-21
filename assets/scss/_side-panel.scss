@@ -435,12 +435,11 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    cursor: none;
+    cursor: not-allowed;
     padding: 30px 0;
     flex-direction: row;
     overflow-y: inherit;
     .pxl-hidden-template-wrap{
-        width: 100%;
         max-width: 1560px;
         position: relative;
         border-radius: 0;
