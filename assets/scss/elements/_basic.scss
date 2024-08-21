@@ -2531,6 +2531,7 @@
                 .pxl-store-title {
                     font-size: 17px;
                     letter-spacing: 0.03em;
+                    margin-bottom: 12px;
                 }
             }
             .pxl-store-btn {
@@ -2540,7 +2541,8 @@
                 @include d-flex();
                 align-items: center;
                 justify-content: center;
-                border-radius: 1px solid $divider_color;
+                border: 1px solid $divider_color;
+                border-radius: 5px;
                 i {
                     font-size: 20px;
                     font-weight: 700;
