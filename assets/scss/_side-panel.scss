@@ -6,30 +6,11 @@
     }
 }
 
-.pxl-page-overlay{  
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(#000000, 0.6);
-    opacity: 0;
-    visibility: hidden;
-    cursor: none;
-    @include transition(all .3s cubic-bezier(0.52, 0.51, 0.66, 0.65));
-    &.active{
-        opacity: 1;
-        visibility: visible;
-    } 
-    @media (max-width: $md_max){
-        &.active-mobile{
-            opacity: 1;
-            visibility: visible;
-        } 
-    } 
+.pxl-page-overlay.active{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
 }
-
 
 //* Panel Default
 .pxl-hidden-template{
@@ -73,7 +54,7 @@
     &::-webkit-scrollbar-track{
         border-radius: 0;
     }
-     
+
     &::-webkit-scrollbar-thumb{
         border-radius: 0;
         background-color: transparent;
@@ -89,7 +70,7 @@
         background-color: rgba(48, 48, 48, 0.1);
     }
 }
- 
+
 .pxl-close{
     @include d-flex(); 
     align-items: center;
@@ -191,7 +172,7 @@
                 margin-left: 0;
             }
         }
-         
+
     }
     &.mobile-panel-df .pxl-logo{
         max-width: 105px;
@@ -200,7 +181,7 @@
         }
     }
 }
- 
+
 .pxl-hidden-template.pos-left{
     width: 100%;
     max-width: 364px;
@@ -261,7 +242,7 @@
     .pxl-hidden-template-wrap{
         position: relative;
         padding: 30px;
-      
+
     }    
 }
 .pxl-hidden-template.pos-top{
@@ -301,7 +282,7 @@
             visibility: hidden;
             cursor: progress;
         }
-         
+
     }
     &.loading{
         .pxl-hidden-template-wrap{
@@ -309,7 +290,7 @@
                 opacity: 1;
                 visibility: visible;
             }
-             
+
         }
     }
 }
@@ -408,7 +389,7 @@
         &::-webkit-scrollbar-track{
             border-radius: 0;
         }
-         
+
         &::-webkit-scrollbar-thumb{
             border-radius: 0;
             background-color: transparent;
@@ -487,7 +468,7 @@
         &::-webkit-scrollbar-track{
             border-radius: 0;
         }
-         
+
         &::-webkit-scrollbar-thumb{
             border-radius: 0;
             background-color: transparent;
