@@ -42,13 +42,9 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
                     <span class="pxl-store-desc"><?php echo esc_attr($value['desc']); ?></span>
                 </div>
             </div>
-            <?php if (!empty( $value['link']['url'] ) ) : ?>
-                <a class="pxl-store-btn" <?php echo implode( ' ', [ $link_attributes ] ); ?>>
-                <?php endif; ?>
+            <div class="pxl-store-btn">
                 <i class="zmdi zmdi-check"></i>
-                <?php if (!empty( $value['link']['url'] ) ) : ?>
-                </a>
-            <?php endif; ?>
+            </div>
         </div>
     <?php endforeach; ?>
 </div>
