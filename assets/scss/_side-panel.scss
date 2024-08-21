@@ -463,7 +463,6 @@
         max-width: 1560px;
         position: relative;
         border-radius: 0;
-        background-color: #fff;
         cursor: default;
         border-radius: 10px;
         @include box-shadow( 0 3px 21px rgba(#000, 0.3));
@@ -512,7 +511,6 @@
         top: 10px;
         right: 10px;
         color: #000;
-        background: #fff;
         padding: 15px;
         border-radius: 50%;
         @media (max-width: $sm_max){
