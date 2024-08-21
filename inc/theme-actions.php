@@ -313,7 +313,7 @@ function basilico_hook_anchor_custom(){
     return;
 }
 
-add_action( 'pxltheme_anchor_target', 'basilico_output_popup_newsletter' );
+add_action( 'pxltheme_anchor_target', 'basilico_output_popup' );
 function basilico_output_popup(){
     $enable_popup = basilico()->get_page_opt('enable_popup', 'off');
     if ($enable_popup == 'on'){
