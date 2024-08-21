@@ -73,7 +73,6 @@ function basilico_add_posttype( $postypes ) {
             'edit_item' => esc_html__('Edit Portfolio', 'basilico'),
             'view_item' => esc_html__('View Portfolio', 'basilico'),
         )
-
     );
 
     $service_slug = basilico()->get_theme_opt('pxl_service_slug', 'service');
@@ -170,15 +169,15 @@ add_filter( 'pxl_template_type_support', 'basilico_template_type_support' );
 function basilico_template_type_support($type){
     //default ['header','footer','mega-menu']
     $extra_type = [
-        'header-mobile'   => esc_html__('Header Mobile', 'basilico'),
-        'page-title'   => esc_html__('Page Title', 'basilico'),
-        'hidden-panel' => esc_html__('Hidden Panel', 'basilico'),
-        'default'      => esc_html__('Default', 'basilico'),
+        'header-mobile' => esc_html__('Header Mobile', 'basilico'),
+        'page-title'    => esc_html__('Page Title', 'basilico'),
+        'hidden-panel'  => esc_html__('Hidden Panel', 'basilico'),
+        'popup'         => esc_html__('Popup', 'basilico'),
+        'default'       => esc_html__('Default', 'basilico'),
     ];
-    $template_type = array_merge($type,$extra_type);
+    $template_type = array_merge($type, $extra_type);
     return $template_type;
 }
-
  
 add_filter( 'get_the_archive_title', 'basilico_archive_title_remove_label' );
 function basilico_archive_title_remove_label( $title ) {
@@ -219,7 +218,7 @@ add_filter( 'pxl_support_awesome_pro', 'basilico_support_awesome_pro' );
 function basilico_support_awesome_pro() {
 	return false;
 }
- 
+
 add_filter( 'redux_pxl_iconpicker_field/get_icons', 'basilico_add_icons_to_pxl_iconpicker_field' );
 function basilico_add_icons_to_pxl_iconpicker_field($icons){
 	$custom_icons = []; //'Flaticon' => array(array('flaticon-marker' => 'flaticon-marker')),

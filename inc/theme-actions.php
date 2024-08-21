@@ -286,7 +286,7 @@ function basilico_hook_anchor_templates_hidden_panel(){
             'post_id' => $values['post_id'],
             'position' => !empty($values['position']) ? $values['position'] : 'custom-pos'
         ];
-        if( did_action('pxl_anchor_target_hidden_panel_'.$values['post_id']) <= 0){
+        if (did_action('pxl_anchor_target_hidden_panel_'.$values['post_id']) <= 0){
             do_action( 'pxl_anchor_target_hidden_panel_'.$values['post_id'], $args );
         }
     }
