@@ -162,10 +162,9 @@
     @include d-flex();
     align-items: center;
     justify-content: center;
-    background-color: transparent;
+    height: 100%;
     .pxl-hidden-template-wrap{
-        max-width: 570px;
-        background-color: #fff;
+        max-width: 870px;
         position: relative;
         overflow: hidden;
         @include box-shadow( 0 3px 21px rgba(#ffffff, 0.3));
