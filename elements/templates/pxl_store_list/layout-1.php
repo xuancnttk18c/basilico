@@ -26,7 +26,7 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
             $link_attributes = $widget->get_render_attribute_string( $link_key );
             ?>
             <div class="pxl-store d-flex align-items-center justify-content-between">
-                <div class="pxl-store-content">
+                <div class="pxl-store-content d-flex align-items-center">
                     <?php
                     if ($has_icon){
                         echo '<div class="pxl-store-icon">';

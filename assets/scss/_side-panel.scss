@@ -168,12 +168,8 @@
         max-width: 870px;
         position: relative;
         overflow: hidden;
-        @include box-shadow( 0 3px 21px rgba(#ffffff, 0.3));
         @include transition(all .3s linear);
         @include transform(scale(0.6));
-        &:hover{
-            @include box-shadow( 0 8px 30px rgba(#ffffff, 0.3));
-        }
     }
     .pxl-panel-header {
         position: absolute;

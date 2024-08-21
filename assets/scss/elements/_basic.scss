@@ -2509,6 +2509,28 @@
     }
 }
 
+.pxl-store-list {
+    &.layout-1 {
+        .pxl-item-store {
+            .pxl-store-content {
+                gap: 20px;
+                .pxl-store-icon {
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: #fff;
+                    width: 42px;
+                    height: 42px;
+                    @include d-flex();
+                    align-items: center;
+                    justify-content: center;
+                    @include border-radius(50%);
+                    background-color: $primary_color;
+                }
+            }
+        }
+    }
+}
+
 //* Social Icons
 .pxl-social-icons.layout-1{
     margin-left: -6px;
