@@ -79,7 +79,7 @@ pxl_add_custom_widget(
                             'name' => 'button_style',
                             'label' => esc_html__('Button Styles', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SELECT,
-                            'default' => 'btn-default',
+                            'default' => 'btn-additional-8',
                             'options' => [
                                 'btn-default' => esc_html__('Default', 'basilico' ),
                                 'btn-white' => esc_html__('White', 'basilico' ),
