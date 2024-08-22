@@ -103,6 +103,17 @@
             }
         }
     }
+    &.style-2 {
+        width: 36px;
+        height: 36px;
+        background-color: $primary_color;
+        @include border-radius(50%);
+        &:before {
+            content: 'x';
+            font-size: 13px;
+            color: #fff;
+        }
+    }
 }
 
 .pxl-panel-content{
