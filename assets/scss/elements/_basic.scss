@@ -2555,6 +2555,8 @@
             }
             &:hover, &.selected {
                 background-color: #f2f2f2;
+            }
+            &.selected {
                 .pxl-store-btn {
                     background-color: #56ce66;
                     i {
