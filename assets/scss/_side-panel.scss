@@ -111,10 +111,26 @@
         background-color: $primary_color;
         @include border-radius(50%);
         justify-content: center;
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 2px;
+            background-color: #fff;
+            z-index: 2;
+            transform-origin: center;
+            @include transition(all 0.3s ease);
+        }
         &:before {
-            content: '\f136';
-            font-size: 13px;
-            color: #fff;
+            @include transform(rotate(45deg));
+        }
+        &:after {
+            @include transform(rotate(-45deg));
+        }
+        &:hover {
+            &:before, &:after {
+                @include transform(rotate(0deg));
+            }
         }
     }
 }
