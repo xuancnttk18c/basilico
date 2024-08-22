@@ -2514,6 +2514,7 @@
         .pxl-store {
             padding: 24px 32px;
             border: 1px solid $divider_color;
+            cursor: pointer;
             + .pxl-store {
                 margin-top: 20px;
             }
@@ -2560,6 +2561,9 @@
                         color: #fff;
                     }
                 }
+            }
+            .btn.store-submit {
+                cursor: not-allowed;
             }
         }
     }
