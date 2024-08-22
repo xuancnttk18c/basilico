@@ -175,7 +175,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name'         => 'dropdown_pos_offset_top',
-                            'label'        => esc_html__( 'Dropdown offset Top', 'basilico' ).' (50px) px,%,vh,auto',
+                            'label'        => esc_html__( 'Dropdown Offset Top', 'basilico' ).' (50px) px,%,vh,auto',
                             'type'         => 'text',
                             'default'      => '',
                             'control_type' => 'responsive',
@@ -183,7 +183,18 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-cart-dropdown' => 'top: {{VALUE}}',
                             ],
                             'condition' => ['link_target' => 'cart-dropdown'] 
-                        ), 
+                        ),
+                        array(
+                            'name'         => 'dropdown_pos_offset_right',
+                            'label'        => esc_html__( 'Dropdown Offset Right', 'basilico' ).' (50px) px,%,vh,auto',
+                            'type'         => 'text',
+                            'default'      => '',
+                            'control_type' => 'responsive',
+                            'selectors'    => [
+                                '{{WRAPPER}} .pxl-cart-dropdown' => 'right: {{VALUE}}',
+                            ],
+                            'condition' => ['link_target' => 'cart-dropdown'] 
+                        ),
                         array(
                             'name'        => 'custom_class',
                             'label'       => esc_html__( 'Custom class', 'basilico' ),
