@@ -156,23 +156,7 @@
     @include transform(translate(-100%, 0));
     .pxl-close {
         top: 41px;
-        right: 42px;
-    }
-}
-.pxl-hidden-template.pxl-canvas-menu{
-    max-width: 445px;
-    overflow: visible;
-    .pxl-panel-content{
-        padding: 0;
-    }
-    .pxl-close {
-        top: 55px;
-        right: auto;
-        left: 80px;
-        @media (max-width: $xxl_max){
-            top: 25px;
-            left: 50px;
-        }
+        left: 42px;
     }
 }
 
@@ -183,10 +167,12 @@
     left: auto;
     z-index: 604;
     @include transform(translate(100%,0));
-    .pxl-hidden-template-wrap{
-        position: relative;
-    }    
+    .pxl-close {
+        top: 41px;
+        right: 42px;
+    }  
 }
+
 .pxl-hidden-template.pos-top{
     width: 100%;
     height: auto;
