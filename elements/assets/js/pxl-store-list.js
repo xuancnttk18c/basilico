@@ -5,8 +5,8 @@
             $scope.find('.btn.store-submit').attr('href', $(this).data('url'));
             $scope.find('.btn.store-submit').css('cursor', 'pointer');
         });
-        $scope.find('.btn.store-submit').on('click', function() {
-            if ($(this).data('url') != undefined) {
+        $scope.find('.btn.store-submit').on('click', function() {   
+            if ($(this).attr('href') != 'javascript:void(0)') {
                 $scope.find('.pxl-store-list').addClass('loading');
             }
         });
