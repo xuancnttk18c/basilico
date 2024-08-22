@@ -369,8 +369,7 @@
         @media (max-width: $lg_max){
             max-width: calc(100% - 40px);
         }
-        
-    } 
+    }
     .pxl-panel-content{
         padding: 0;
         position: static;
@@ -402,15 +401,8 @@
         }
     }
     .pxl-close{
-        top: 10px;
-        right: 10px;
-        color: #000;
-        padding: 15px;
-        border-radius: 50%;
-        @media (max-width: $sm_max){
-            padding: 10px;
-            font-size: 14px;
-        }
+        top: 20px;
+        right: 30px;
         &:hover{
             color: $gray;
         }
