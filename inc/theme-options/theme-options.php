@@ -764,7 +764,7 @@ Redux::setSection($opt_name, array(
 
 //* Sidebar
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('Sidebar', 'basilico'),
+    'title'  => esc_html__('Sidebar/Hidden Template', 'basilico'),
     'icon'   => 'el el-indent-right',
     'fields' => array(
         array(
@@ -778,6 +778,18 @@ Redux::setSection($opt_name, array(
                 'style-4' => esc_html__('Style 4', 'basilico'),
             ),
             'default'     => 'default',
+        ),
+        array(
+            'id'      => 'template_close_button',
+            'type'    => 'image_select',
+            'title'   => esc_html__('Close Button Style', 'basilico'),
+            'options'  => array(
+                'style-df' => get_template_directory_uri() . '/assets/images/tabs_layout/t1.jpg',
+                'style-2'  => get_template_directory_uri() . '/assets/images/tabs_layout/t2.jpg',
+                'style-3'  => get_template_directory_uri() . '/assets/images/tabs_layout/t3.jpg',
+                'style-4'  => get_template_directory_uri() . '/assets/images/tabs_layout/t4.jpg',
+            ),
+            'default' => 'style-df'
         ),
     ),
 ));

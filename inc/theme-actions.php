@@ -293,11 +293,12 @@ function basilico_hook_anchor_templates_hidden_panel(){
 }
 
 function basilico_hook_anchor_hidden_panel($args){
+    $close_btn_style = basilico()->get_theme_opt('close_button_style', 'style-df');
     ?>
     <div class="pxl-hidden-template pxl-hidden-template-<?php echo esc_attr($args['post_id'])?> pos-<?php echo esc_attr($args['position']) ?>">
         <div class="pxl-hidden-template-wrap">
             <div class="pxl-panel-content custom_scroll">
-                <span class="pxl-close" title="Close"></span>
+                <span class="pxl-close <?php echo esc_attr($close_btn_style); ?>" title="Close"></span>
                <?php echo Elementor\Plugin::$instance->frontend->get_builder_content_for_display( (int)$args['post_id']); ?>
             </div>
         </div>
@@ -312,6 +313,7 @@ function basilico_hook_anchor_custom(){
 add_action( 'pxltheme_anchor_target', 'basilico_output_popup' );
 function basilico_output_popup(){
     $enable_popup = basilico()->get_page_opt('enable_popup', 'off');
+    $close_btn_style = basilico()->get_theme_opt('close_button_style', 'style-df');
     if ($enable_popup == 'on'){
         $popup_template = (int)basilico()->get_page_opt('popup_template', '');
         ?>
@@ -324,11 +326,7 @@ function basilico_output_popup(){
             <div class="pxl-hidden-template page-popup pxl-hidden-template-<?php echo esc_attr($popup_newsletter_template)?> el-builder pos-<?php echo esc_attr($template_position) ?> <?php echo esc_attr($template_custom_style) ?>" data-nsl_times = "<?php echo esc_attr($popup_nsl_times) ?>" data-nsl_time_out = "<?php echo esc_attr($popup_nsl_time_out) ?>">
                 <div class="pxl-hidden-template-wrap">
                     <div class="pxl-panel-content custom_scroll">
-                        <?php if($template_position == 'center'): ?>
-                            <span class="pxl-close lnil lnil-close" title="Close">x</span>
-                        <?php else: ?>
-                            <span class="pxl-close" title="<?php echo esc_attr__( 'Close', 'basilico' ) ?>"><span class="x-icon"></span><span class="x-text"><?php echo esc_attr__( 'Close', 'basilico' ) ?></span></span>
-                        <?php endif; ?>
+                        <span class="pxl-close <?php echo esc_attr($close_btn_style); ?>" title="Close">x</span>
                        <?php echo Elementor\Plugin::$instance->frontend->get_builder_content_for_display( $popup_newsletter_template); ?>
                     </div>
                 </div>
@@ -341,12 +339,13 @@ function basilico_output_popup(){
 add_action( 'pxltheme_anchor_target', 'basilico_header_popup_cart');
 function basilico_header_popup_cart(){  
     if(!class_exists('Woocommerce')) return;
+    $close_btn_style = basilico()->get_theme_opt('close_button_style', 'style-df');
     ?>
     <div class="pxl-hidden-template pxl-side-cart">
         <div class="pxl-hidden-template-wrap">
             <div class="pxl-panel-header">
                 <div class="panel-header-inner">
-                    <a href="#" class="pxl-close" title="<?php echo esc_attr__( 'Close', 'basilico' ) ?>"></a>
+                    <a href="#" class="pxl-close <?php echo esc_attr($close_btn_style); ?>" title="<?php echo esc_attr__( 'Close', 'basilico' ) ?>"></a>
                 </div>
             </div>
             <div class="pxl-side-panel-content widget_shopping_cart custom_scroll">

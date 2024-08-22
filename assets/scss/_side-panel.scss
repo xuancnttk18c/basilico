@@ -78,60 +78,24 @@
     cursor: pointer;
     z-index: 1;
     @include transition(all .3s ease);
-    .x-icon{
-        width: 40px;
-        height: 40px;
-        display: inline-flex;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        @include transition(all .3s ease);
-        @media (max-width: $sm_max){
-            width: 30px;
-            height: 30px;
-        }
-        &:before,
-        &:after{
+    &.style-df {
+        &:before, &:after {
             content: '';
             position: absolute;
-            height: 2px;
-            width: 100%;
-            top: 50%;
-            left: 0;
-            margin-top: -1px;
-            background-color: #112257;
-            transform-origin: 50% 50%;
-            opacity: 1;
-            @include transition(transform ease 0.25s);
+            width: 30px;
+            height: 1px;
+            background-color: $secondary_color;
         }
-        &:before{
+        &:before {
             @include transform(rotate(45deg));
         }
-        &:after{
+        &:after {
             @include transform(rotate(-45deg));
         }
-    }
-    .x-text{
-        margin-left: 20px;
-        font-size: 16px;
-        line-height: 1;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        @media (max-width: $sm_max){
-            margin-left: 15px;
-            font-size: 14px;
-        }
-    }
-    &:hover{
-        .x-icon{
-            @include transition(all .3s ease);
-            &:before,
-            &:after{
+        &:before {
+            &:before, &:after {
                 @include transform(rotate(0deg));
             }
-        }
-        .x-text{
-            color: #000;
         }
     }
 }
