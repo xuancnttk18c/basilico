@@ -1242,7 +1242,7 @@ if(class_exists('Woocommerce')) {
                 array(
                     'id'          => 'checkout_button_radius',
                     'type'        => 'dimensions',
-                    'title'       => esc_html__('Review Checkout Border Radius', 'basilico'),
+                    'title'       => esc_html__('Button Radius', 'basilico'),
                     'height'      =>  false,
                     'unit'     => 'px',
                     'default'  => array(
