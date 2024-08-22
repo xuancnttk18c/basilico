@@ -6,10 +6,9 @@
             $scope.find('.btn.store-submit').css('cursor', 'pointer');
         });
         $scope.find('.btn.store-submit').on('click', function() {
-            console.log($(this).data('url'));
-            // if ($(this).data('url') != 'javascript:void(0)') {
-            //     $scope.find('.pxl-store-list').addClass('loading');
-            // }
+            if ($(this).data('url') != undefined) {
+                $scope.find('.pxl-store-list').addClass('loading');
+            }
         });
     };
     // Make sure you run this code under Elementor.
