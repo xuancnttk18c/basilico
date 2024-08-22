@@ -555,6 +555,28 @@ function basilico_page_options_register( $metabox ) {
                             'default'  => 'full',
                             'required' => [ 'template_type', '=', 'hidden-panel']
                         ),
+                        array(
+                            'id'      => 'template_close_select',
+                            'type'    => 'select',
+                            'title'   => esc_html__('Close Button Style', 'basilico'),
+                            'options'  => array(
+                                'theme-opt'         => esc_html('Inherit From Theme Options', 'basilico'),
+                                'custom'      => esc_html('Custom Style', 'basilico'),
+                            ),
+                            'default' => 'style-df'
+                        ),
+                        array(
+                            'id'      => 'template_close_style',
+                            'type'    => 'image_select',
+                            'title'   => esc_html__('Close Button Style', 'basilico'),
+                            'options'  => array(
+                                'style-df' => get_template_directory_uri() . '/assets/images/close_layout/close-1.jpg',
+                                'style-2'  => get_template_directory_uri() . '/assets/images/close_layout/close-2.jpg',
+                                'style-3'  => get_template_directory_uri() . '/assets/images/close_layout/close-3.jpg',
+                            ),
+                            'default' => 'style-df',
+                            'required' => [ 'template_close_select', '=', 'custom']
+                        ),
                     ),
                 ],
             ]

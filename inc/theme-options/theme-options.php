@@ -786,8 +786,7 @@ Redux::setSection($opt_name, array(
             'options'  => array(
                 'style-df' => get_template_directory_uri() . '/assets/images/close_layout/close-1.jpg',
                 'style-2'  => get_template_directory_uri() . '/assets/images/close_layout/close-2.jpg',
-                'style-3'  => get_template_directory_uri() . '/assets/images/close_layout/close-1.jpg',
-                'style-4'  => get_template_directory_uri() . '/assets/images/close_layout/close-1.jpg',
+                'style-3'  => get_template_directory_uri() . '/assets/images/close_layout/close-3.jpg',
             ),
             'default' => 'style-df'
         ),
