@@ -107,10 +107,12 @@
     &.style-2 {
         width: 36px;
         height: 36px;
+        font-family: 'Material-Design-Iconic-Font';
         background-color: $primary_color;
         @include border-radius(50%);
+        justify-content: center;
         &:before {
-            content: 'x';
+            content: '\f136';
             font-size: 13px;
             color: #fff;
         }
