@@ -79,6 +79,8 @@
     z-index: 1;
     @include transition(all .3s ease);
     &.style-df {
+        width: 30px;
+        height: 30px;
         &:before, &:after {
             content: '';
             position: absolute;
