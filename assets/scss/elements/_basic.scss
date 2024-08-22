@@ -2591,6 +2591,89 @@
             }
         }
     }
+    &.layout-2 {
+        position: relative;
+        text-align: center;
+        padding: 30px;
+        &.loading {
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(255, 255, 255, 0.6);
+                z-index: 2;
+            }
+        }
+        .pxl-store {
+            padding: 24px 32px;
+            border: 1px solid $divider_color;
+            cursor: pointer;
+            text-align: left;
+            @include border-radius(20px);
+            + .pxl-store {
+                margin-top: 20px;
+            }
+            .pxl-store-content {
+                gap: 20px;
+                .pxl-store-icon {
+                    font-size: 25px;
+                    font-weight: 700;
+                    color: #fff;
+                    width: 64px;
+                    height: 64px;
+                    @include d-flex();
+                    align-items: center;
+                    justify-content: center;
+                    @include border-radius(50%);
+                    background-color: $primary_color;
+                }
+                .pxl-store-title {
+                    font-size: 20px;
+                    font-weight: 600
+                    letter-spacing: 0.03em;
+                    margin-bottom: 7px;
+                }
+            }
+            .pxl-store-btn {
+                width: 49px;
+                height: 49px;
+                @include border-radius(50%);
+                @include d-flex();
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $divider_color;
+                border-radius: 5px;
+                i {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: $heading_color;
+                }
+            }
+            &:hover, &.selected {
+                background-color: #f9f9f9;
+            }
+            &.selected {
+                .pxl-store-btn {
+                    background-color: #56ce66;
+                    border-color: #56ce66;
+                    i {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .btn-wrapper {
+            position: relative;
+            z-index: 1;
+            .btn.store-submit {
+                margin-top: 40px;
+                cursor: not-allowed;
+            }
+        }
+    }
 }
 
 //* Social Icons
