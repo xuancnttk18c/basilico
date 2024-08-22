@@ -330,7 +330,7 @@
                 $('.pxl-page-overlay').removeClass('active');
             }
 
-            if ( $('.pxl-hidden-template.pos-center-large').length > 0 && $('.pxl-hidden-template.pos-center-large').hasClass('open') && target.closest('.pxl-hidden-template.pos-center-large .pxl-hidden-template-wrap').length <= 0 ) {  
+            if ( $('.pxl-hidden-template.pos-center').length > 0 && $('.pxl-hidden-template.pos-center').hasClass('open') && target.closest('.pxl-hidden-template.pos-center .pxl-hidden-template-wrap').length <= 0 ) {  
                 $('.pxl-hidden-template').removeClass('open');
                 $('.pxl-page-overlay').removeClass('active');
             }

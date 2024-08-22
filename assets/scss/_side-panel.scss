@@ -363,6 +363,7 @@
         border-radius: 0;
         cursor: default;
         overflow: hidden;
+        background-color: #fff;
         @media (max-width: $xxl_max){
             max-width: 90%;
         }
