@@ -2,10 +2,14 @@
     var PXLStoreListHander = function( $scope, $ ) {
         $scope.find('.pxl-store').on('click', function() {
             $(this).addClass('selected').siblings().removeClass('selected');
-            console.log($(this).data('url'));
             $scope.find('.btn.store-submit').attr('href', $(this).data('url'));
-            $scope.find('.btn.store-submit').css('cursor', 'wait');
-        })
+            $scope.find('.btn.store-submit').css('cursor', 'pointer');
+        });
+        $scope.find('.btn.store-submit').on('click', function() {
+            if ($this.data('url') != 'javascript:void(0)') {
+                $scope.find('.pxl-store-list').addClass('loading');
+            }
+        });
     };
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {
