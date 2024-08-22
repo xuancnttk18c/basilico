@@ -293,10 +293,10 @@ function basilico_hook_anchor_templates_hidden_panel(){
 }
 
 function basilico_hook_anchor_hidden_panel($args){
-    if (get_post_meta($args['post_id'], 'template_close_select', true) == 'custom-opt')
-        $close_btn_style = basilico()->get_theme_opt('template_close_button', 'style-df');
-    else
+    if (get_post_meta($args['post_id'], 'template_close_select', true) == 'custom')
         $close_btn_style = get_post_meta($args['post_id'], 'template_close_style', true);
+    else
+        $close_btn_style = basilico()->get_theme_opt('template_close_button', 'style-df');
     ?>
     <div class="pxl-hidden-template pxl-hidden-template-<?php echo esc_attr($args['post_id'])?> pos-<?php echo esc_attr($args['position']) ?>">
         <div class="pxl-hidden-template-wrap">
