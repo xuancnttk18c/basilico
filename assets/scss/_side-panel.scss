@@ -29,6 +29,7 @@
     overflow-y: auto;
     scrollbar-width: none;
     @include transition(all .3s ease);
+    background-color: #fff;
     .pxl-panel-header {
         .panel-header-inner{
             @include d-flex();
