@@ -89,6 +89,7 @@
             background-color: $primary_color;
             z-index: 2;
             transform-origin: center;
+            @include transition();
         }
         &:before {
             @include transform(rotate(45deg));
