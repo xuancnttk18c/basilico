@@ -75,7 +75,26 @@ pxl_add_custom_widget(
                     'label' => esc_html__('Style', 'basilico' ),
                     'tab' => \Elementor\Controls_Manager::TAB_STYLE,
                     'controls' => array(
-                        
+                        array(
+                            'name' => 'button_style',
+                            'label' => esc_html__('Button Styles', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'default' => 'btn-default',
+                            'options' => [
+                                'btn-default' => esc_html__('Default', 'basilico' ),
+                                'btn-white' => esc_html__('White', 'basilico' ),
+                                'btn-outline' => esc_html__('Out Line', 'basilico' ),
+                                'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
+                                'btn-additional-1' => esc_html__('Additional Button 01', 'basilico' ),
+                                'btn-additional-2' => esc_html__('Additional Button 02', 'basilico' ),
+                                'btn-additional-3' => esc_html__('Additional Button 03', 'basilico' ),
+                                'btn-additional-4' => esc_html__('Additional Button 04', 'basilico' ),
+                                'btn-additional-5' => esc_html__('Additional Button 05', 'basilico' ),
+                                'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
+                                'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
+                                'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
+                            ],
+                        ),
                     ),
                 ),
             ),

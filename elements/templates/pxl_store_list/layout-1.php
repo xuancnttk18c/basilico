@@ -3,6 +3,7 @@ $default_settings = [
     'list' => '',
 ];
 $settings = array_merge($default_settings, $settings);
+$btn_style = $widget->get_settings('button_style', 'btn-additional-8');
 extract($settings);
 $is_new = \Elementor\Icons_Manager::is_migration_allowed();
 ?>
@@ -48,6 +49,6 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
             </div>
         </div>
     <?php endforeach; ?>
-    <a href="#" class="btn store-submit"><?php echo esc_html('Start Order', 'basilico'); ?></a>
+    <a href="javascript:void(0)" class="btn store-submit <?php echo esc_attr($btn_style); ?>"><?php echo esc_html('Start Order', 'basilico'); ?></a>
 </div>
 <?php endif; ?>

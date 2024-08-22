@@ -2511,10 +2511,12 @@
 
 .pxl-store-list {
     &.layout-1 {
+        text-align: center;
         .pxl-store {
             padding: 24px 32px;
             border: 1px solid $divider_color;
             cursor: pointer;
+            text-align: left;
             + .pxl-store {
                 margin-top: 20px;
             }
