@@ -2567,9 +2567,13 @@
                 }
             }
         }
-        .btn.store-submit {
-            margin-top: 40px;
-            cursor: not-allowed;
+        .btn-wrapper {
+            position: relative;
+            z-index: 1;
+            .btn.store-submit {
+                margin-top: 40px;
+                cursor: not-allowed;
+            }
         }
     }
 }

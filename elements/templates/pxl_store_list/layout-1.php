@@ -49,6 +49,8 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
             </div>
         </div>
     <?php endforeach; ?>
-    <a href="javascript:void(0)" class="btn store-submit <?php echo esc_attr($btn_style); ?>"><?php echo esc_html('Start Order', 'basilico'); ?></a>
+    <div class="btn-wrapper">
+        <a href="javascript:void(0)" class="btn store-submit <?php echo esc_attr($btn_style); ?>"><?php echo esc_html('Start Order', 'basilico'); ?></a>
+    </div>
 </div>
 <?php endif; ?>
