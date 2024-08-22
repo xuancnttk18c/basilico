@@ -1363,7 +1363,7 @@
 }
 
 .pxl-close-custom-pos-1 {
-	.pxl-close {
+	&.pxl-hidden-template .pxl-panel-content .pxl-close {
 		top: 45px;
   		right: 50px;
 	}
