@@ -563,7 +563,7 @@ function basilico_page_options_register( $metabox ) {
                                 'theme-opt'         => esc_html('Inherit From Theme Options', 'basilico'),
                                 'custom'      => esc_html('Custom Style', 'basilico'),
                             ),
-                            'default' => 'style-df'
+                            'default' => 'theme-opt'
                         ),
                         array(
                             'id'      => 'template_close_style',
