@@ -576,6 +576,11 @@ function basilico_page_options_register( $metabox ) {
                             'default' => 'style-df',
                             'required' => [ 'template_close_select', '=', 'custom']
                         ),
+                        array(
+                            'id'      => 'custom_cls',
+                            'type'    => 'text',
+                            'title'   => esc_html__('Custom Class', 'basilico'),
+                        ),
                     ),
                 ],
             ]

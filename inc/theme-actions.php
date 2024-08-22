@@ -297,8 +297,10 @@ function basilico_hook_anchor_hidden_panel($args){
         $close_btn_style = get_post_meta($args['post_id'], 'template_close_style', true);
     else
         $close_btn_style = basilico()->get_theme_opt('template_close_button', 'style-df');
+
+    $custom_cls = get_post_meta($args['post_id'], 'custom_cls', true);
     ?>
-    <div class="pxl-hidden-template pxl-hidden-template-<?php echo esc_attr($args['post_id'])?> pos-<?php echo esc_attr($args['position']) ?>">
+    <div class="pxl-hidden-template pxl-hidden-template-<?php echo esc_attr($args['post_id'])?> pos-<?php echo esc_attr($args['position']) ?> <?php echo esc_attr($custom_cls); ?>">
         <div class="pxl-hidden-template-wrap">
             <div class="pxl-panel-content custom_scroll">
                 <span class="pxl-close <?php echo esc_attr($close_btn_style); ?>" title="Close"></span>
