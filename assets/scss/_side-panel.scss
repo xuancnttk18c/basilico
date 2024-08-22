@@ -146,7 +146,7 @@
             position: absolute;
             width: 16px;
             height: 2px;
-            background-color: #fff;
+            background-color: $divider_color;
             z-index: 2;
             transform-origin: center;
             @include transition(all 0.3s ease);
