@@ -293,7 +293,7 @@ function basilico_hook_anchor_templates_hidden_panel(){
 }
 
 function basilico_hook_anchor_hidden_panel($args){
-    $close_btn_style = basilico()->get_theme_opt('close_button_style', 'style-df');
+    $close_btn_style = basilico()->get_theme_opt('template_close_button', 'style-df');
     ?>
     <div class="pxl-hidden-template pxl-hidden-template-<?php echo esc_attr($args['post_id'])?> pos-<?php echo esc_attr($args['position']) ?>">
         <div class="pxl-hidden-template-wrap">
@@ -313,7 +313,7 @@ function basilico_hook_anchor_custom(){
 add_action( 'pxltheme_anchor_target', 'basilico_output_popup' );
 function basilico_output_popup(){
     $enable_popup = basilico()->get_page_opt('enable_popup', 'off');
-    $close_btn_style = basilico()->get_theme_opt('close_button_style', 'style-df');
+    $close_btn_style = basilico()->get_theme_opt('template_close_button', 'style-df');
     if ($enable_popup == 'on'){
         $popup_template = (int)basilico()->get_page_opt('popup_template', '');
         ?>
@@ -339,7 +339,7 @@ function basilico_output_popup(){
 add_action( 'pxltheme_anchor_target', 'basilico_header_popup_cart');
 function basilico_header_popup_cart(){  
     if(!class_exists('Woocommerce')) return;
-    $close_btn_style = basilico()->get_theme_opt('close_button_style', 'style-df');
+    $close_btn_style = basilico()->get_theme_opt('template_close_button', 'style-df');
     ?>
     <div class="pxl-hidden-template pxl-side-cart">
         <div class="pxl-hidden-template-wrap">
