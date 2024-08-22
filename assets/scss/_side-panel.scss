@@ -74,7 +74,7 @@
 .pxl-close{
     @include d-flex(); 
     align-items: center;
-    position: relative;
+    position: absolute;
     cursor: pointer;
     z-index: 1;
     @include transition(all .3s ease);
@@ -148,34 +148,15 @@
 }
 
 .pxl-hidden-template.pos-left{
-    width: 100%;
-    max-width: 364px;
+    width: 90%;
+    max-width: 601px;
+    z-index: 604;
     right: auto;
     left: 0;
-    @include transform(translate(-100%,0));
-    @media (max-width: $sm_max){
-        max-width: 320px;
-    }
-    @media (max-width: $xs_max){
-        width: 90%;
-    }  
-    .pxl-panel-header {
-        padding: 30px 30px 10px 30px;
-        @media (max-width: $xs_screen){
-            padding: 30px 20px 10px 20px;
-        }
-    }
-    .pxl-panel-content{
-        padding: 30px 40px;
-        @media (max-width: $sm_max){
-            padding: 30px 30px;
-        }
-        @media (max-width: $xs_max){
-            padding: 30px 30px;
-        }
-        @media (max-width: $xs_screen){
-            padding: 30px 20px;
-        }
+    @include transform(translate(-100%, 0));
+    .pxl-close {
+        top: 41px;
+        right: 42px;
     }
 }
 .pxl-hidden-template.pxl-canvas-menu{
