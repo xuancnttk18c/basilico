@@ -673,6 +673,7 @@ function basilico_variable_add_to_cart(){
 				</div>
 			</div>
 			<?php
+			wp_die();
 			echo ob_get_clean();
 		}
 
