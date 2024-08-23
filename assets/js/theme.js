@@ -43,7 +43,7 @@
         basilico_mini_cart_dropdown_offset();
         basilico_update_cart_quantity();
 
-        basilico_quickview_html();
+        basilico_quickview_handler();
     });
     $(window).on('load', function () {
         setTimeout(function() {
@@ -796,11 +796,36 @@
         table_head.find('tr').append('<th class="product-remove">&nbsp;</th>');
     }
 
-    function basilico_quickview_html() {
-        $('.woosq-product').each(function() {
-            $title = $(this).find('product_title');
-            $('.woosq-product').find('.thumbnail .images').before($title);
-        })
+    function basilico_quickview_handler() {
+        $('.quickview').on('click', function(e) {
+            e.preventDefault();
+            var product_id = $(this).data('product_id');
+
+            $.ajax({
+                url: main_data.ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'load_product_quickview',
+                    product_id: product_id
+                },
+                success: function(response) {
+                    $('#quickview-modal .custom-modal-content').html(response);
+                    $('#quickview-modal').fadeIn();
+                }
+            });
+        });
+
+        // Close the modal when clicking the close button
+        $(document).on('click', '.close-modal', function() {
+            $('#quickview-modal').fadeOut();
+        });
+
+        // Close the modal when clicking outside the modal content
+        $(window).on('click', function(event) {
+            if ($(event.target).is('#quickview-modal')) {
+                $('#quickview-modal').fadeOut();
+            }
+        });
     }
 
 
