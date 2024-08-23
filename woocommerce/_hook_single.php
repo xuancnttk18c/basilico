@@ -638,40 +638,7 @@ function basilico_variable_add_to_cart(){
 				<span><?php echo esc_html('Product Options', 'basilico'); ?></span>
 				<span class="close-modal">X</span>		
 			</h3>
-			<div class="single-product">
-				<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
-					<div class="row gx-0">
-						<div class="col-4 content-left">
-							<div class="product-content">
-								<h3 class="product-title"><?php echo $product->get_name(); ?></h3>
-								<div class="product-price"><?php echo $product->get_price_html(); ?></div>		
-								<div class="product-description"><?php echo $product->get_short_description(); ?></div>		
-							</div>
-							<div class="product-images"><?php echo $product->get_image(); ?></div>
-						</div>
-						<div class="col-8 content-right">
-							<?php
-							global $product;
-							$product = wc_get_product($product_id);
-							switch ($product->get_type()) {
-								case 'variable':
-								basilico_variable_add_to_cart();
-								break;
-								case 'external':
-								basilico_external_add_to_cart(); 
-								break;
-								case 'grouped':
-								basilico_grouped_add_to_cart(); 
-								break;
-								default:
-								basilico_simple_add_to_cart(); 
-								break;
-							}
-							?>
-						</div>
-					</div>
-				</div>
-			</div>
+			
 			<?php
 			echo ob_get_clean();
 		}
