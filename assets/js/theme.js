@@ -562,9 +562,9 @@
 
             document.addEventListener('mousemove', e => {
                 window.requestAnimationFrame(() => {
-                 circleStyle.top = `${ e.clientY - cursor.offsetHeight/2 }px`;
-                 circleStyle.left = `${ e.clientX - cursor.offsetWidth/2 }px`;
-             });
+                   circleStyle.top = `${ e.clientY - cursor.offsetHeight/2 }px`;
+                   circleStyle.left = `${ e.clientX - cursor.offsetWidth/2 }px`;
+               });
             });
 
             /** Hover Effect */
@@ -810,13 +810,12 @@
                 },
                 success: function(response) {
                     $('#pxl-quickview-modal .modal-content').html(response);
+                    var addon_container = $('#pxl-quickview-modal').find('.yith-wapo-container');
+                    $('#pxl-quickview-modal').find('.col-7').append(addon_container);
+                    $(addon_container).remove();
                     $('#pxl-quickview-modal').fadeIn();
                 }
             });
-
-            var addon_container = $('#pxl-quickview-modal').find('.yith-wapo-container');
-            $('#pxl-quickview-modal').find('.col-7').append(addon_container);
-            $(addon_container).remove();
         });
         // Close the modal when clicking the close button
         $(document).on('click', '.close-modal', function() {
