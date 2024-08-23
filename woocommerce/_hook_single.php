@@ -518,7 +518,7 @@ function basilico_variable_add_to_cart(){
 		    	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		    	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 		    		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-		    		<div class="d-flex">
+		    		<div class="d-flex align-items-center">
 		    		<?php
 		    		do_action( 'woocommerce_before_add_to_cart_quantity' );
 		    		woocommerce_quantity_input(
