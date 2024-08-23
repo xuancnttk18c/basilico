@@ -809,22 +809,21 @@
                     product_id: product_id
                 },
                 success: function(response) {
-                    console.log('success');
-                    $('#quickview-modal .custom-modal-content').html(response);
-                    $('#quickview-modal').fadeIn();
+                    $('#pxl-quickview-modal .custom-modal-content').html(response);
+                    $('#pxl-quickview-modal').fadeIn();
                 }
             });
         });
 
         // Close the modal when clicking the close button
         $(document).on('click', '.close-modal', function() {
-            $('#quickview-modal').fadeOut();
+            $('#pxl-quickview-modal').fadeOut();
         });
 
         // Close the modal when clicking outside the modal content
         $(window).on('click', function(event) {
-            if ($(event.target).is('#quickview-modal')) {
-                $('#quickview-modal').fadeOut();
+            if ($(event.target).is('#pxl-quickview-modal')) {
+                $('#pxl-quickview-modal').fadeOut();
             }
         });
     }
