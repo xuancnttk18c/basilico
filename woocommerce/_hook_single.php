@@ -627,9 +627,9 @@ function basilico_variable_add_to_cart(){
 		// hfjkdhfjkhasdjkfhjdshfjk
 
 		function add_quickview_button() {
-			echo '<a href="#" class="button pxl-quickview" data-product_id="' . get_the_ID() . '">' . esc_html__('Order Online') . '</a>';
+			echo '<a href="#" class="pxl-btn button pxl-quickview" data-product_id="' . get_the_ID() . '">' . esc_html__('Order Online') . '</a>';
 		}
-		add_action('woocommerce_after_add_to_cart_button', 'add_quickview_button');
+		add_action('woocommerce_loop_add_to_cart_link', 'add_quickview_button');
 
 		function pxl_product_quickview() {
 			$product_id = intval($_POST['product_id']);
