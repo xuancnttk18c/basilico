@@ -634,10 +634,10 @@ function basilico_variable_add_to_cart(){
 			$product = wc_get_product($product_id);
 			ob_start();
 			?>
-			<h2 class="modal-heading">
+			<h3 class="modal-heading">
 				<span><?php echo esc_html('Product Options', 'basilico'); ?></span>
 				<span class="close-modal">X</span>		
-			</h2>
+			</h3>
 			<div class="woocommerce single-product">
 				<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
 					<div class="row">
