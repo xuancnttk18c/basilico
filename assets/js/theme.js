@@ -814,12 +814,10 @@
                 }
             });
         });
-
         // Close the modal when clicking the close button
         $(document).on('click', '.close-modal', function() {
             $('#pxl-quickview-modal').fadeOut();
         });
-
         // Close the modal when clicking outside the modal content
         $(window).on('click', function(event) {
             if ($(event.target).is('#pxl-quickview-modal')) {
@@ -827,6 +825,5 @@
             }
         });
     }
-
 
 })(jQuery);

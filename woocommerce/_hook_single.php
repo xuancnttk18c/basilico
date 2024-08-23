@@ -648,8 +648,6 @@ function pxl_product_quickview() {
 					<div class="price"><?php echo $product->get_price_html(); ?></div>		
 					<div class="description"><?php echo $product->get_short_description(); ?></div>		
 					<div class="images"><?php echo $product->get_image(); ?></div>
-				</div>
-				<div class="col-7">
 					<?php
 					global $product;
 					$product = wc_get_product($product_id);
@@ -668,6 +666,8 @@ function pxl_product_quickview() {
 						break;
 					}
 					?>
+				</div>
+				<div class="col-7">		
 				</div>
 			</div>
 		</div>
