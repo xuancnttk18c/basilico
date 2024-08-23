@@ -121,6 +121,7 @@
     }
     .qty-btn-wrap {
         align-items: center;
+        z-index: 1;
     }
     @media (min-width: $lg_min) {
         .product-images {
