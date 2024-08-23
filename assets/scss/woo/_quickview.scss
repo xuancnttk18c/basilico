@@ -167,8 +167,8 @@
 }
 
 .close-modal {
-    width: 36px;
-    height: 36px;
+    width: 50px;
+    height: 50px;
     font-family: 'Material-Design-Iconic-Font';
     background-color: $primary_color;
     @include border-radius(50%);
@@ -181,7 +181,7 @@
     &:before, &:after {
         content: '';
         position: absolute;
-        width: 16px;
+        width: 20px;
         height: 2px;
         background-color: #fff;
         z-index: 2;
