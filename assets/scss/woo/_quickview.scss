@@ -78,7 +78,6 @@
         }
     }
     .product-images {
-        padding-bottom: 250px;
         border-top: 1px solid $divider_color;
         border-bottom: 1px solid $divider_color;
         img {
@@ -86,6 +85,7 @@
         }
     }
     .single-product {
+        position: relative;
         .content-right {
             padding: 50px;
             border-left: 1px solid $divider_color;
@@ -117,6 +117,16 @@
             line-height: 24px;
             font-weight: 500;
             letter-spacing: 0;
+        }
+    }
+    @media (max-width: $$lg_max) {
+        .product-images {
+            padding-bottom: 250px;
+        }
+        .qty-btn-wrap  {
+            position: absolute;
+            left: 40px;
+            bottom: 40px;
         }
     }
     .quantity {
