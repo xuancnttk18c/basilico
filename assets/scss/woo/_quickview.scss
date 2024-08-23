@@ -9,6 +9,17 @@
     background-color: rgba(0, 0, 0, 0.6);
     overflow: auto;
     padding: 30px 15px;
+    overflow-y: inherit;
+    @include transition();
+    opacity: 0;
+    &.open {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        opacity: 1;
+    }
 }
 
 .modal-content {

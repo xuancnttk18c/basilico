@@ -810,18 +810,18 @@
                 },
                 success: function(response) {
                     $('#pxl-quickview-modal .modal-content').html(response);
-                    $('#pxl-quickview-modal').fadeIn();
+                    $('#pxl-quickview-modal').addClass('open');
                 }
             });
         });
         // Close the modal when clicking the close button
         $(document).on('click', '.close-modal', function() {
-            $('#pxl-quickview-modal').fadeOut();
+            $('#pxl-quickview-modal').removeClass('open');
         });
         // Close the modal when clicking outside the modal content
         $(window).on('click', function(event) {
             if ($(event.target).is('#pxl-quickview-modal')) {
-                $('#pxl-quickview-modal').fadeOut();
+                $('#pxl-quickview-modal').removeClass('open');
             }
         });
     }
