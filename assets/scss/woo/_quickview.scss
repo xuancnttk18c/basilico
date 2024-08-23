@@ -57,13 +57,31 @@
         border: 1px solid $divider_color;
     }
     .modal-heading {
-        padding: 27px 43px;
+        padding: 21px 43px;
         margin-bottom: 0;
         line-height: 55px;
         letter-spacing: 0.03em;
         font-weight: 400;
         border-bottom: 1px solid $divider_color;
         background-color: $secondary_color;
+    }
+    .product-content {
+        padding: 40px;
+        .product-title {
+            font-family: 25px;
+            color: $primary_color;
+            letter-spacing: 0.03em;
+        }
+        .product-price {
+            display: none;
+        }
+    }
+    .product-image {
+        border-top: 1px solid $divider_color;
+        border-bottom: 1px solid $divider_color;
+        img {
+            background-color: $primary_color;
+        }
     }
     .single-product {
         .content-right {
