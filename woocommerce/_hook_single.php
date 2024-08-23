@@ -642,10 +642,12 @@ function basilico_variable_add_to_cart(){
 				<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
 					<div class="row">
 						<div class="col-6">
-							<h3><?php echo $product->get_name(); ?></h3>
-							<div class="price"><?php echo $product->get_price_html(); ?></div>		
-							<div class="description"><?php echo $product->get_short_description(); ?></div>		
-							<div class="images"><?php echo $product->get_image(); ?></div>
+							<div class="product-content">
+								<h3 class="product-title"><?php echo $product->get_name(); ?></h3>
+								<div class="product-price"><?php echo $product->get_price_html(); ?></div>		
+								<div class="product-description"><?php echo $product->get_short_description(); ?></div>		
+							</div>
+							<div class="product-images"><?php echo $product->get_image(); ?></div>
 						</div>
 						<div class="col-6">
 							<?php
