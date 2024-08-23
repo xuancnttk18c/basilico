@@ -513,177 +513,175 @@ function basilico_variable_add_to_cart(){
 	    	if ( ! $product->is_purchasable() ) {
 	    		return;
 	    	}
-    echo wc_get_stock_html( $product ); // WPCS: XSS ok.
-    if ( $product->is_in_stock() ) : ?>
-    	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
-    	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
-    		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-    		<?php
-    		do_action( 'woocommerce_before_add_to_cart_quantity' );
-    		woocommerce_quantity_input(
-    			array(
-    				'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
-    				'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
-                    'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( sanitize_text_field( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
-                )
-    		);
-    		do_action( 'woocommerce_after_add_to_cart_quantity' );
-    		?>
-    		<div class="pxl-addtocart-btn-wrap">
-    			<div class="pxl-atc-btn">
-    				<?php
-    				$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
-    				$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
-    				?>
-    				<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
-    			</div>
-    		</div>
-    		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
-    	</form>
-    	<?php
-    	$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
-    	if( $product_wishlist == '1') : ?>
-    		<div class="stock-wishlist">
-    			<div class="pxl-shop-woosmart-wrap">
-    				<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
-    			</div>
-    		</div>
-    	<?php endif;
-    endif;
-}
-
-/* Social Sharing */
-if(!function_exists('basilico_woocommerce_template_single_sharing')){
-	add_action('woocommerce_share', 'basilico_woocommerce_template_single_sharing');
-	function basilico_woocommerce_template_single_sharing(){
-		$product_social_share_on = basilico()->get_theme_opt('product_social_share_on', '0');
-		if($product_social_share_on != '1') return;
-		basilico()->blog->get_post_share();
-	}
-}
-
-/* Custom Details Tab */
-if(!function_exists('basilico_woocommerce_rename_tabs')){
-	add_filter( 'woocommerce_product_tabs', 'basilico_woocommerce_rename_tabs', 98 );
-	function basilico_woocommerce_rename_tabs( $tabs ) {
-		if(!empty($tabs['additional_information']['title']))
-			$tabs['additional_information']['title'] = esc_html__( 'Additional information','basilico' );	// Rename the additional information tab
-
-		return $tabs;
-	}
-}
-
-/* Change added to cart message */
-if(!function_exists('basilico_wc_add_to_cart_message_html')){
-	add_filter('wc_add_to_cart_message_html', 'basilico_wc_add_to_cart_message_html', 10, 3);
-	function basilico_wc_add_to_cart_message_html($message, $products, $show_qty){
-		$titles = array();
-		$count  = 0;
-
-		if ( ! is_array( $products ) ) {
-			$products = array( $products => 1 );
-			$show_qty = false;
+		    echo wc_get_stock_html( $product ); // WPCS: XSS ok.
+		    if ( $product->is_in_stock() ) : ?>
+		    	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+		    	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
+		    		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+		    		<?php
+		    		do_action( 'woocommerce_before_add_to_cart_quantity' );
+		    		woocommerce_quantity_input(
+		    			array(
+		    				'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
+		    				'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
+		                    'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( sanitize_text_field( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
+		                )
+		    		);
+		    		do_action( 'woocommerce_after_add_to_cart_quantity' );
+		    		?>
+		    		<div class="pxl-addtocart-btn-wrap">
+		    			<div class="pxl-atc-btn">
+		    				<?php
+		    				$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
+		    				$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
+		    				?>
+		    				<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
+		    			</div>
+		    		</div>
+		    		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+		    	</form>
+		    	<?php
+		    	$product_wishlist = basilico()->get_theme_opt('product_wishlist', '0');
+		    	if( $product_wishlist == '1') : ?>
+		    		<div class="stock-wishlist">
+		    			<div class="pxl-shop-woosmart-wrap">
+		    				<?php do_action( 'woosw_button_position_single_woosmart' ); ?>
+		    			</div>
+		    		</div>
+		    	<?php endif;
+		    endif;
 		}
 
-		if ( ! $show_qty ) {
-			$products = array_fill_keys( array_keys( $products ), 1 );
+		/* Social Sharing */
+		if(!function_exists('basilico_woocommerce_template_single_sharing')){
+			add_action('woocommerce_share', 'basilico_woocommerce_template_single_sharing');
+			function basilico_woocommerce_template_single_sharing(){
+				$product_social_share_on = basilico()->get_theme_opt('product_social_share_on', '0');
+				if($product_social_share_on != '1') return;
+				basilico()->blog->get_post_share();
+			}
 		}
 
-		foreach ( $products as $product_id => $qty ) {
-			/* translators: %s: product name */
-			$titles[] = apply_filters( 'woocommerce_add_to_cart_qty_html', ( $qty > 1 ? absint( $qty ) . ' &times; ' : '' ), $product_id ) . apply_filters( 'woocommerce_add_to_cart_item_name_in_quotes', sprintf( _x( '&ldquo;%s&rdquo;', 'Item name in quotes', 'basilico' ), strip_tags( get_the_title( $product_id ) ) ), $product_id );
-			$count   += $qty;
+		/* Custom Details Tab */
+		if(!function_exists('basilico_woocommerce_rename_tabs')){
+			add_filter( 'woocommerce_product_tabs', 'basilico_woocommerce_rename_tabs', 98 );
+			function basilico_woocommerce_rename_tabs( $tabs ) {
+				if(!empty($tabs['additional_information']['title']))
+					$tabs['additional_information']['title'] = esc_html__( 'Additional information','basilico' );	// Rename the additional information tab
+
+				return $tabs;
+			}
 		}
 
-		$titles = array_filter( $titles );
-		/* translators: %s: product name */
-		$added_text = sprintf( _n( '%s has been added to your cart.', '%s have been added to your cart.', $count, 'basilico' ), wc_format_list_of_items( $titles ) );
+		/* Change added to cart message */
+		if(!function_exists('basilico_wc_add_to_cart_message_html')){
+			add_filter('wc_add_to_cart_message_html', 'basilico_wc_add_to_cart_message_html', 10, 3);
+			function basilico_wc_add_to_cart_message_html($message, $products, $show_qty){
+				$titles = array();
+				$count  = 0;
 
-		// Output success messages.
-		if ( 'yes' === get_option( 'woocommerce_cart_redirect_after_add' ) ) {
-			$return_to = apply_filters( 'woocommerce_continue_shopping_redirect', wc_get_raw_referer() ? wp_validate_redirect( wc_get_raw_referer(), false ) : wc_get_page_permalink( 'shop' ) );
-			$message   = sprintf( '<span class="pxl-added-to-cart-msg">%s</span> <a href="%s" tabindex="1">%s</a>', esc_html( $added_text ), esc_url( $return_to ), esc_html__( 'Continue shopping', 'basilico' ) );
-		} else {
-			$message = sprintf( '<span class="pxl-added-to-cart-msg">%s</span> <a href="%s" tabindex="1">%s</a>',esc_html( $added_text ), esc_url( wc_get_cart_url() ), esc_html__( 'View cart', 'basilico' ) );
+				if ( ! is_array( $products ) ) {
+					$products = array( $products => 1 );
+					$show_qty = false;
+				}
+
+				if ( ! $show_qty ) {
+					$products = array_fill_keys( array_keys( $products ), 1 );
+				}
+
+				foreach ( $products as $product_id => $qty ) {
+					/* translators: %s: product name */
+					$titles[] = apply_filters( 'woocommerce_add_to_cart_qty_html', ( $qty > 1 ? absint( $qty ) . ' &times; ' : '' ), $product_id ) . apply_filters( 'woocommerce_add_to_cart_item_name_in_quotes', sprintf( _x( '&ldquo;%s&rdquo;', 'Item name in quotes', 'basilico' ), strip_tags( get_the_title( $product_id ) ) ), $product_id );
+					$count   += $qty;
+				}
+
+				$titles = array_filter( $titles );
+				/* translators: %s: product name */
+				$added_text = sprintf( _n( '%s has been added to your cart.', '%s have been added to your cart.', $count, 'basilico' ), wc_format_list_of_items( $titles ) );
+
+				// Output success messages.
+				if ( 'yes' === get_option( 'woocommerce_cart_redirect_after_add' ) ) {
+					$return_to = apply_filters( 'woocommerce_continue_shopping_redirect', wc_get_raw_referer() ? wp_validate_redirect( wc_get_raw_referer(), false ) : wc_get_page_permalink( 'shop' ) );
+					$message   = sprintf( '<span class="pxl-added-to-cart-msg">%s</span> <a href="%s" tabindex="1">%s</a>', esc_html( $added_text ), esc_url( $return_to ), esc_html__( 'Continue shopping', 'basilico' ) );
+				} else {
+					$message = sprintf( '<span class="pxl-added-to-cart-msg">%s</span> <a href="%s" tabindex="1">%s</a>',esc_html( $added_text ), esc_url( wc_get_cart_url() ), esc_html__( 'View cart', 'basilico' ) );
+				}
+				return $message;
+			}
 		}
-		return $message;
-	}
-}
 
-/* Relate Products */
-if (basilico()->get_theme_opt('product_related', '1') === '0' ){
-	remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
-}
-add_filter( 'woocommerce_output_related_products_args', 'basilico_woocommerce_output_related_products_args',20 );
-function basilico_woocommerce_output_related_products_args( $args ) {
-	$args['posts_per_page'] = 6;
-	$args['columns'] = 3;
-	return $args;
-}
+		/* Relate Products */
+		if (basilico()->get_theme_opt('product_related', '1') === '0' ){
+			remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+		}
+		add_filter( 'woocommerce_output_related_products_args', 'basilico_woocommerce_output_related_products_args',20 );
+		function basilico_woocommerce_output_related_products_args( $args ) {
+			$args['posts_per_page'] = 6;
+			$args['columns'] = 3;
+			return $args;
+		}
 
 
+		// hfjkdhfjkhasdjkfhjdshfjk
 
+		function add_quickview_button() {
+			echo '<a href="#" class="button pxl-quickview" data-product_id="' . get_the_ID() . '">' . esc_html__('Order Online') . '</a>';
+		}
+		add_action('woocommerce_after_shop_loop_item', 'add_quickview_button', 20);
 
-// hfjkdhfjkhasdjkfhjdshfjk
-
-function add_quickview_button() {
-	echo '<a href="#" class="button pxl-quickview" data-product_id="' . get_the_ID() . '">' . esc_html__('Order Online') . '</a>';
-}
-add_action('woocommerce_after_shop_loop_item', 'add_quickview_button', 20);
-
-function pxl_product_quickview() {
-	$product_id = intval($_POST['product_id']);
-	$product = wc_get_product($product_id);
-	ob_start();
-	?>
-	<h2 class="modal-heading">
-		<span><?php echo esc_html('Product Options', 'basilico'); ?></span>
-		<span class="close-modal">X</span>		
-	</h2>
-	<div class="woocommerce single-product woosq-product">
-		<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
-			<div class="row">
-				<div class="col-5">
-					<h1><?php echo $product->get_name(); ?></h1>
-					<div class="price"><?php echo $product->get_price_html(); ?></div>		
-					<div class="description"><?php echo $product->get_short_description(); ?></div>		
-					<div class="images"><?php echo $product->get_image(); ?></div>
-				</div>
-				<div class="col-7">
-					<?php
-					global $product;
-					$product = wc_get_product($product_id);
-					switch ($product->get_type()) {
-						case 'variable':
-						basilico_variable_add_to_cart();
-						break;
-						case 'external':
-						basilico_external_add_to_cart(); 
-						break;
-						case 'grouped':
-						basilico_grouped_add_to_cart(); 
-						break;
-						default:
-						basilico_simple_add_to_cart(); 
-						break;
-					}
-					?>
+		function pxl_product_quickview() {
+			$product_id = intval($_POST['product_id']);
+			$product = wc_get_product($product_id);
+			ob_start();
+			?>
+			<h2 class="modal-heading">
+				<span><?php echo esc_html('Product Options', 'basilico'); ?></span>
+				<span class="close-modal">X</span>		
+			</h2>
+			<div class="woocommerce single-product">
+				<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
+					<div class="row">
+						<div class="col-5">
+							<h1><?php echo $product->get_name(); ?></h1>
+							<div class="price"><?php echo $product->get_price_html(); ?></div>		
+							<div class="description"><?php echo $product->get_short_description(); ?></div>		
+							<div class="images"><?php echo $product->get_image(); ?></div>
+						</div>
+						<div class="col-7">
+							<?php
+							global $product;
+							$product = wc_get_product($product_id);
+							switch ($product->get_type()) {
+								case 'variable':
+								basilico_variable_add_to_cart();
+								break;
+								case 'external':
+								basilico_external_add_to_cart(); 
+								break;
+								case 'grouped':
+								basilico_grouped_add_to_cart(); 
+								break;
+								default:
+								basilico_simple_add_to_cart(); 
+								break;
+							}
+							?>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<?php
-	echo ob_get_clean();
-}
+			<?php
+			echo ob_get_clean();
+		}
 
-add_action('wp_ajax_nopriv_pxl_product_quickview', 'pxl_product_quickview');
-add_action('wp_ajax_pxl_product_quickview', 'pxl_product_quickview');
+		add_action('wp_ajax_nopriv_pxl_product_quickview', 'pxl_product_quickview');
+		add_action('wp_ajax_pxl_product_quickview', 'pxl_product_quickview');
 
-function add_quickview_modal() {
-	?>
-	<div id="pxl-quickview-modal" class="custom-modal">
-		<div class="modal-content"></div>
-	</div>
-	<?php
-}
-add_action('wp_footer', 'add_quickview_modal');
+		function add_quickview_modal() {
+			?>
+			<div id="pxl-quickview-modal" class="custom-modal">
+				<div class="modal-content"></div>
+			</div>
+			<?php
+		}
+		add_action('wp_footer', 'add_quickview_modal');

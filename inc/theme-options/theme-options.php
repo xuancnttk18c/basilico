@@ -266,7 +266,7 @@ Redux::setSection($opt_name, array(
             'type'     => 'color_rgba',
             'title'    => esc_html__('Background Color', 'basilico'),
             'subtitle' => esc_html__('Content background color.', 'basilico'),
-            'output'   => array('background-color' => '.pxl-main')
+            'output_variables' => true,
         ),
         array(
             'id'             => 'content_padding',

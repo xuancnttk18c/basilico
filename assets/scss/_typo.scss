@@ -53,6 +53,10 @@ body {
     }
 }
 
+#pxl-main {
+    background-color: var(--test);
+}
+
 a {
     text-decoration: none;
     @include transition(all 300ms linear 0ms);
