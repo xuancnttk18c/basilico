@@ -105,6 +105,9 @@
                 display: none;
             }
         }
+        #wapo-total-price-table:has(#wapo-total-order-price:empty) {
+            display: none;
+        }
     }
 }
 

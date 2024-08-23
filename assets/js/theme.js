@@ -800,7 +800,6 @@
         $('.pxl-quickview').on('click', function(e) {
             e.preventDefault();
             var product_id = $(this).data('product_id');
-
             $.ajax({
                 url: main_data.ajaxurl,
                 type: 'POST',
