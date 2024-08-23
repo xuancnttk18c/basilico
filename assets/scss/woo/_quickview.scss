@@ -108,6 +108,13 @@
         #wapo-total-price-table:has(#wapo-total-order-price:empty) {
             display: none;
         }
+        .yith-wapo-addon-label {
+            position: relative;
+            font-size: 17px;
+            line-height: 24px;
+            font-weight: 500;
+            letter-spacing: 0;
+        }
     }
     .quantity {
         max-width: 123px;
