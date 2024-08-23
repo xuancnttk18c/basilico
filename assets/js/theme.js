@@ -814,9 +814,9 @@
                 }
             });
 
-            $addon_container = $('#pxl-quickview-modal').find('#yith-wapo-container');
-            $('#pxl-quickview-modal').find('.col-7').append($addon_container);
-            $addon_container.remove();
+            var addon_container = $('#pxl-quickview-modal').find('#yith-wapo-container');
+            $('#pxl-quickview-modal').find('.col-7').append(addon_container);
+            $(addon_container).remove();
         });
         // Close the modal when clicking the close button
         $(document).on('click', '.close-modal', function() {
