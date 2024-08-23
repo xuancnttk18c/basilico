@@ -119,6 +119,9 @@
             letter-spacing: 0;
         }
     }
+    .qty-btn-wrap {
+        align-items: center;
+    }
     @media (min-width: $lg_min) {
         .product-images {
             padding-bottom: 140px;
