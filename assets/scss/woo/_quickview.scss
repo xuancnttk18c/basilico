@@ -8,13 +8,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     overflow: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     padding: 30px 15px;
-    flex-direction: row;
-    overflow-y: inherit;
 }
 
 .modal-content {
