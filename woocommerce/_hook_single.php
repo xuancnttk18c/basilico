@@ -624,12 +624,11 @@ function basilico_woocommerce_output_related_products_args( $args ) {
 
 
 
-
+// hfjkdhfjkhasdjkfhjdshfjk
 
 function add_quickview_button() {
 	echo '<a href="#" class="button pxl-quickview" data-product_id="' . get_the_ID() . '">' . esc_html__('Order Online') . '</a>';
 }
-
 add_action('woocommerce_after_shop_loop_item', 'add_quickview_button', 20);
 
 function pxl_product_quickview() {
@@ -641,11 +640,12 @@ function pxl_product_quickview() {
 		<span><?php echo esc_html('Product Options', 'basilico'); ?></span>
 		<span class="close-modal">X</span>		
 	</h2>
-	<div class="woocommerce single-product pxl-product">
+	<div class="woocommerce single-product woosq-product">
 		<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
 			<div class="row">
 				<div class="col-5">
 					<h1><?php echo $product->get_name(); ?></h1>
+					<div class="price"><?php echo $product->get_price_html(); ?></div>		
 					<div class="description"><?php echo $product->get_short_description(); ?></div>		
 					<div class="images"><?php echo $product->get_image(); ?></div>
 				</div>
@@ -675,3 +675,15 @@ function pxl_product_quickview() {
 	<?php
 	echo ob_get_clean();
 }
+
+add_action('wp_ajax_nopriv_pxl_product_quickview', 'pxl_product_quickview');
+add_action('wp_ajax_pxl_product_quickview', 'pxl_product_quickview');
+
+function add_quickview_modal() {
+	?>
+	<div id="pxl-quickview-modal" class="custom-modal">
+		<div class="modal-content"></div>
+	</div>
+	<?php
+}
+add_action('wp_footer', 'add_quickview_modal');
