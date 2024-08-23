@@ -133,6 +133,9 @@
         }
     }
     @media (max-width: $lg_max) {
+        .product-images {
+            padding-bottom: 180px;
+        }
         .qty-btn-wrap {
             flex-direction: column;
         }   
