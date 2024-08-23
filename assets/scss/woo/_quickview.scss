@@ -100,9 +100,9 @@
                 line-height: 1.2;
                 font-weight: 400;
                 color: $secondary_color;
-                span:empty {
-                    display: none;
-                }
+            }
+            &:has(h3 > span:empty) {
+                display: none;
             }
         }
     }
