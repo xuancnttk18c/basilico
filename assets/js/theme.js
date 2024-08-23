@@ -42,6 +42,8 @@
         basilico_wc_single_product_gallery();
         basilico_mini_cart_dropdown_offset();
         basilico_update_cart_quantity();
+
+        basilico_quickview_html();
     });
     $(window).on('load', function () {
         setTimeout(function() {
@@ -794,35 +796,12 @@
         table_head.find('tr').append('<th class="product-remove">&nbsp;</th>');
     }
 
-    $('.pxl-quickview').on('click', function(e) {
-        e.preventDefault();
-        var product_id = $(this).data('product_id');
-
-        $.ajax({
-            url: main_data.ajaxurl,
-            type: 'POST',
-            data: {
-                action: 'pxl_product_quickview',
-                product_id: product_id
-            },
-            success: function(response) {
-                $('#pxl-quickview-modal .modal-content').html(response);
-                $('#pxl-quickview-modal').fadeIn();
-            }
-        });
-    });
-
-    // Close the modal when clicking the close button
-    $(document).on('click', '.close-modal', function() {
-        $('#pxl-quickview-modal').fadeOut();
-    });
-
-    // Close the modal when clicking outside the modal content
-    $(window).on('click', function(event) {
-        if ($(event.target).is('#pxl-quickview-modal')) {
-            $('#pxl-quickview-modal').fadeOut();
-        }
-    });
+    function basilico_quickview_html() {
+        $('.woosq-product').each(function() {
+            $title = $(this).find('product_title');
+            $('.woosq-product').find('.thumbnail .images').before($title);
+        })
+    }
 
 
 })(jQuery);
