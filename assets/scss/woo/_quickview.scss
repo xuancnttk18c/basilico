@@ -132,7 +132,7 @@
             bottom: 40px;
         }
     }
-    @media (min-width: $xl_min) {
+    @media (max-width: $lg_max) {
         .qty-btn-wrap {
             flex-direction: column;
         }   
