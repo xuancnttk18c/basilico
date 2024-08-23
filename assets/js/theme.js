@@ -809,6 +809,7 @@
                     product_id: product_id
                 },
                 success: function(response) {
+                    console.log('success');
                     $('#quickview-modal .custom-modal-content').html(response);
                     $('#quickview-modal').fadeIn();
                 }
