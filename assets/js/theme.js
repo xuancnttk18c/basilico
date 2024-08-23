@@ -806,7 +806,7 @@
                 url: main_data.ajaxurl,
                 type: 'POST',
                 data: {
-                    action: 'load_product_quickview',
+                    action: 'pxl_product_quickview',
                     product_id: product_id
                 },
                 success: function(response) {
