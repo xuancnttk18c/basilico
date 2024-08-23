@@ -129,6 +129,11 @@
             bottom: 40px;
         }
     }
+    @media (min-width: $xl_min) {
+        .qty-btn-wrap {
+            flex-direction: column;
+        }   
+    }
     .quantity {
         max-width: 123px;
         margin-right: 34px;
