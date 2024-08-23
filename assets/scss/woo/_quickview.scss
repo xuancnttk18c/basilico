@@ -89,6 +89,19 @@
             border-left: 1px solid $divider_color;
         }
     }
+    .yith-wapo-form-style-theme {
+        .addon-header {
+            h3 {
+                font-size: 20px;
+                margin-bottom: 0;
+                line-height: 1.2;
+                padding: 10px 30px;
+                background-color: $divider_color;
+                font-weight: 400;
+                color: $secondary_color;
+            }
+        }
+    }
 }
 
 .close-modal {
