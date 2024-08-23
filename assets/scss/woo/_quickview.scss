@@ -100,6 +100,9 @@
                 line-height: 1.2;
                 font-weight: 400;
                 color: $secondary_color;
+                &:empty {
+                    display: none;
+                }
             }
         }
     }
