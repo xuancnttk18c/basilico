@@ -167,10 +167,33 @@
 }
 
 .close-modal {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    width: 36px;
+    height: 36px;
+    font-family: 'Material-Design-Iconic-Font';
+    background-color: $primary_color;
+    @include border-radius(50%);
+    justify-content: center;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        background-color: #fff;
+        z-index: 2;
+        transform-origin: center;
+        @include transition(all 0.3s ease);
+    }
+    &:before {
+        @include transform(rotate(45deg));
+    }
+    &:after {
+        @include transform(rotate(-45deg));
+    }
+    &:hover {
+        &:before, &:after {
+            @include transform(rotate(0deg));
+        }
+    }
 }
 
 .close-modal:hover,
