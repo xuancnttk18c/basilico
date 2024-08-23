@@ -53,12 +53,23 @@
 }
 
 #pxl-quickview-modal {
+    .modal-content {
+        border: 1px solid $divider_color;
+    }
     .modal-heading {
+        padding: 27px 0;
+        margin-bottom: 0;
         line-height: 55px;
         letter-spacing: 0.03em;
         font-weight: 400;
         border-bottom: 1px solid $divider_color;
         background-color: $secondary_color;
+    }
+    .single-product {
+        .content-right {
+            padding: 50px;
+            border-left: 1px solid $divider_color;
+        }
     }
 }
 
