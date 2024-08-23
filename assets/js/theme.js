@@ -798,7 +798,6 @@
 
     function basilico_quickview_handler() {
         $('.pxl-quickview').on('click', function(e) {
-            alert('Clicked!');
             e.preventDefault();
             var product_id = $(this).data('product_id');
 
