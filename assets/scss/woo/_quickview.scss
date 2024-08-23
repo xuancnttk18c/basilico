@@ -119,11 +119,11 @@
             letter-spacing: 0;
         }
     }
-    @media (min-width: $lg_max) {
+    @media (min-width: $lg_min) {
         .product-images {
-            padding-bottom: 250px;
+            padding-bottom: 140px;
         }
-        .qty-btn-wrap  {
+        .qty-btn-wrap {
             position: absolute;
             left: 35px;
             bottom: 40px;
