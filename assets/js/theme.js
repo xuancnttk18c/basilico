@@ -814,7 +814,7 @@
                 }
             });
 
-            var addon_container = $('#pxl-quickview-modal').find('#yith-wapo-container');
+            var addon_container = $('#pxl-quickview-modal').find('.yith-wapo-container');
             $('#pxl-quickview-modal').find('.col-7').append(addon_container);
             $(addon_container).remove();
         });
