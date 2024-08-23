@@ -6,16 +6,48 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    flex-direction: row;
+    overflow-y: inherit;
 }
 
 .modal-content {
-    background-color: #fff;
-    margin: 0 auto;
-    border: 1px solid $divider_color;
+    background-color: var(--content_bg_color-color);
+    padding: 0;
+    position: static;
     max-width: 1170px;
-    overflow-y: hidden;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        height: 0;
+        width: 0;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track{
+        border-radius: 0;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        border-radius: 0;
+        background-color: transparent;
+    }
+
+    &:hover::-webkit-scrollbar {
+        width: 0;
+        height: auto;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 0
+    }
+    &:hover::-webkit-scrollbar-thumb{
+        background-color: rgba(48, 48, 48, 0.1);
+    }
 }
 
 .close-modal {
