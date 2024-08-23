@@ -354,7 +354,7 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    padding: 30px 0;
+    padding: 30px 15px;
     flex-direction: row;
     overflow-y: inherit;
     .pxl-hidden-template-wrap{
@@ -363,6 +363,12 @@
         border-radius: 0;
         cursor: default;
         overflow: hidden;
+    }
+    .pxl-panel-content {
+        padding: 0;
+        position: static;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
     }
     .pxl-close{
         top: 20px;
