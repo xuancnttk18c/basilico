@@ -1296,6 +1296,20 @@ if(class_exists('Woocommerce')) {
             )
         )
     ));
+    Redux::setSection($opt_name, array(
+        'title'      => esc_html__('Quick View', 'basilico'),
+        'icon'       => 'el el-file-edit',
+        'subsection' => true,
+        'fields'     => array(
+            array(
+                'id'       => 'enable_quick_view',
+                'title'    => esc_html__('Enable Quick View', 'basilico'),
+                'subtitle' => esc_html__('Replace default Add To Cart button by button Quick View.', 'basilico'),
+                'type'     => 'switch',
+                'default'  => '0',
+            ),
+        )
+    ));
 }
 
 //* Typography

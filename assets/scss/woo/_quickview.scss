@@ -125,7 +125,7 @@
     }
     @media (min-width: $lg_min) {
         .product-images {
-            padding-bottom: 140px;
+            margin-bottom: 140px;
         }
         .qty-btn-wrap {
             position: absolute;
@@ -135,7 +135,7 @@
     }
     @media (max-width: $lg_max) {
         .product-images {
-            padding-bottom: 180px;
+            margin-bottom: 180px;
         }
         .qty-btn-wrap {
             flex-direction: column;
