@@ -317,7 +317,6 @@ function basilico_set_post_views($postID)
 {
     $countKey = 'post_views_count';
     $count    = get_post_meta($postID, $countKey, true);
-    var_dump($countKey);
     if ($count == '') {
         $count = 0;
         delete_post_meta($postID, $countKey);
