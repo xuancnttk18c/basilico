@@ -225,10 +225,17 @@
     }
     .product-content {
         .pxl-divider {
-            
+            width: 60px;
+            height: 4px;
+            @include border-radius(2px);
+            overflow: hidden;
+            &:before {
+                width: 100%;
+                background-color: $secondary_color;
+            }
         }
         .product-price {
-            display: none;
+            font-weight: 500;
         }
     }
     .product-images {
