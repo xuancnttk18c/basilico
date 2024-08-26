@@ -226,8 +226,9 @@
             font-weight: 600;
             color: $heading_color;
             letter-spacing: 0.02em;
-            &:before {
+            &:after {
                 content: '';
+                display: inline-block;
                 background-color: $secondary_color;
                 width: 60px;
                 height: 4px;
@@ -292,24 +293,6 @@
     .qty-btn-wrap {
         align-items: center;
         z-index: 1;
-    }
-    @media (min-width: $lg_min) {
-        .product-images {
-            margin-bottom: 140px;
-        }
-        .qty-btn-wrap {
-            position: absolute;
-            left: 35px;
-            bottom: 40px;
-        }
-    }
-    @media (max-width: $lg_max) {
-        .product-images {
-            margin-bottom: 180px;
-        }
-        .qty-btn-wrap {
-            flex-direction: column;
-        }   
     }
     .quantity {
         max-width: 123px;
