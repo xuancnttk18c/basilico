@@ -77,6 +77,11 @@ if(!function_exists('basilico_woocommerce_catalog_result')){
 /* Cart Button */
 add_filter('woocommerce_loop_add_to_cart_link', 'basilico_woocommerce_loop_add_to_cart_link', 10, 3);
 function basilico_woocommerce_loop_add_to_cart_link($button, $product, $args){
+
+    if (!class_exists( 'YITH_WAPO' ) && is_yith_addons_active()) {
+        return '<a href="#" class="pxl-btn button pxl-quickview" data-product_id="' . get_the_ID() . '">' . esc_html__('Order Online') . '</a>';
+    }
+
     $product_layout = basilico()->get_theme_opt('product_layout', 'layout-1');
     $btn_icon = '<span class="pxl-icon pxli-shopping-bag-2"></span>';
     if ($product_layout == 'layout-3' || $product_layout == 'layout-4') {
@@ -107,3 +112,66 @@ function basilico_woocommerce_pagination_args($default){
     ]);
     return $default;
 }
+
+
+// JHFKASDHFJHSDKFHKDJFHK
+
+function pxl_product_quickview() {
+    $product_id = intval($_POST['product_id']);
+    $product = wc_get_product($product_id);
+    ob_start();
+    ?>
+    <h3 class="modal-heading">
+        <span><?php echo esc_html('Product Options', 'basilico'); ?></span>
+        <span class="close-modal"></span>       
+    </h3>
+    <div class="woocommerce single-product">
+        <div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
+            <div class="content-left">
+                <div class="product-content">
+                    <h3 class="product-title"><?php echo $product->get_name(); ?></h3>
+                    <div class="pxl-divider"></div>
+                    <div class="product-price"><?php echo $product->get_price_html(); ?></div>
+                    <div class="product-description"><?php echo $product->get_short_description(); ?></div>     
+                </div>
+                <div class="product-images"><?php echo $product->get_image(); ?></div>
+            </div>
+            <div class="content-right">
+                <?php
+                global $product;
+                $product = wc_get_product($product_id);
+                switch ($product->get_type()) {
+                    case 'variable':
+                    basilico_variable_add_to_cart();
+                    break;
+                    case 'external':
+                    basilico_external_add_to_cart(); 
+                    break;
+                    case 'grouped':
+                    basilico_grouped_add_to_cart(); 
+                    break;
+                    default:
+                    basilico_simple_add_to_cart(); 
+                    break;
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+    <?php
+    wp_die();
+    echo ob_get_clean();
+}
+
+add_action('wp_ajax_nopriv_pxl_product_quickview', 'pxl_product_quickview');
+add_action('wp_ajax_pxl_product_quickview', 'pxl_product_quickview');
+
+function add_quickview_modal() {
+    $quickview_style = basilico()->get_theme_opt('quick_view_style', 'style-1');
+    ?>
+    <div id="pxl-quickview-modal" class="custom-modal <?php echo esc_attr($quickview_style); ?>">
+        <div class="modal-content"></div>
+    </div>
+    <?php
+}
+add_action('wp_footer', 'add_quickview_modal');
