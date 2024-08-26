@@ -1316,6 +1316,7 @@ if(class_exists('Woocommerce')) {
                     'style-1' => esc_html__('Style 1'),
                     'style-2' => esc_html__('Style 2'),
                 ),
+                'default' => 'style-1'
             ),
         )
     ));
