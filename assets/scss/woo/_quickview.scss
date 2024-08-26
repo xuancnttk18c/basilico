@@ -213,9 +213,6 @@
         position: relative;
         @include border-radius(30px);
     }
-    .woocommerce.single-product {
-        padding: 35px 40px 30px;
-    }
     .product-content {
         .product-title {
             font-family: 25px;
@@ -232,9 +229,10 @@
     }
     .single-product {
         position: relative;
+        padding: 35px 40px 30px;
         .content-right {
-            padding: 50px;
-            border-left: 1px solid $divider_color;
+            padding-left: 40px;
+            border-left: 1px dashed $divider_color;
         }
     }
     .yith-wapo-form-style-theme {
