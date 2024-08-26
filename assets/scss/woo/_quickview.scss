@@ -86,10 +86,17 @@
     }
     .single-product {
         position: relative;
-        .content-right {
-            padding: 50px;
-            border-left: 1px solid $divider_color;
-        }
+    }
+    .product {
+        @include d-flex();
+    }
+    .content-left {
+        width: 33.33333333%;
+    }
+    .content-right {
+        width: 66.66666667%;
+        padding: 50px;
+        border-left: 1px solid $divider_color;
     }
     .yith-wapo-form-style-theme {
         .addon-header {
@@ -230,10 +237,20 @@
     .single-product {
         position: relative;
         padding: 35px 40px 30px;
-        .content-right {
-            padding-left: 40px;
-            border-left: 1px dashed $divider_color;
-        }
+    }
+    .single-product {
+        position: relative;
+    }
+    .product {
+        @include d-flex();
+    }
+    .content-left {
+        width: 33.33333333%;
+    }
+    .content-right {
+        width: 66.66666667%;
+        padding-left: 40px;
+        border-left: 1px dashed $divider_color;
     }
     .yith-wapo-form-style-theme {
         .addon-header {

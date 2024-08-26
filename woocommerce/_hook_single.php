@@ -519,27 +519,27 @@ function basilico_variable_add_to_cart(){
 		    	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 		    		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 		    		<div class="qty-btn-wrap d-flex">
-		    		<?php
-		    		do_action( 'woocommerce_before_add_to_cart_quantity' );
-		    		woocommerce_quantity_input(
-		    			array(
-		    				'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
-		    				'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
+		    			<?php
+		    			do_action( 'woocommerce_before_add_to_cart_quantity' );
+		    			woocommerce_quantity_input(
+		    				array(
+		    					'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
+		    					'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
 		                    'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( sanitize_text_field( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
 		                )
-		    		);
-		    		do_action( 'woocommerce_after_add_to_cart_quantity' );
-		    		?>
-		    		<div class="pxl-addtocart-btn-wrap">
-		    			<div class="pxl-atc-btn">
-		    				<?php
-		    				$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
-		    				$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
-		    				?>
-		    				<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
+		    			);
+		    			do_action( 'woocommerce_after_add_to_cart_quantity' );
+		    			?>
+		    			<div class="pxl-addtocart-btn-wrap">
+		    				<div class="pxl-atc-btn">
+		    					<?php
+		    					$add_to_cart_btn_style = basilico()->get_theme_opt('add_to_cart_button_style', 'btn-outline-secondary');
+		    					$single_btn_cls = 'pxl-btn single_add_to_cart_button button alt '.esc_attr($add_to_cart_btn_style);
+		    					?>
+		    					<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="<?php echo esc_attr($single_btn_cls); ?>"><span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
+		    				</div>
 		    			</div>
-		    		</div>
-		    		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+		    			<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 		    		</div>
 		    	</form>
 		    	<?php
@@ -645,35 +645,33 @@ function basilico_variable_add_to_cart(){
 			</h3>
 			<div class="woocommerce single-product">
 				<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
-					<div class="row gx-0">
-						<div class="col-lg-5 col-12 content-left">
-							<div class="product-content">
-								<h3 class="product-title"><?php echo $product->get_name(); ?></h3>
-								<div class="product-price"><?php echo $product->get_price_html(); ?></div>		
-								<div class="product-description"><?php echo $product->get_short_description(); ?></div>		
-							</div>
-							<div class="product-images"><?php echo $product->get_image(); ?></div>
+					<div class="content-left">
+						<div class="product-content">
+							<h3 class="product-title"><?php echo $product->get_name(); ?></h3>
+							<div class="product-price"><?php echo $product->get_price_html(); ?></div>		
+							<div class="product-description"><?php echo $product->get_short_description(); ?></div>		
 						</div>
-						<div class="col-lg-7 col-12 content-right">
-							<?php
-							global $product;
-							$product = wc_get_product($product_id);
-							switch ($product->get_type()) {
-								case 'variable':
-								basilico_variable_add_to_cart();
-								break;
-								case 'external':
-								basilico_external_add_to_cart(); 
-								break;
-								case 'grouped':
-								basilico_grouped_add_to_cart(); 
-								break;
-								default:
-								basilico_simple_add_to_cart(); 
-								break;
-							}
-							?>
-						</div>
+						<div class="product-images"><?php echo $product->get_image(); ?></div>
+					</div>
+					<div class="content-right">
+						<?php
+						global $product;
+						$product = wc_get_product($product_id);
+						switch ($product->get_type()) {
+							case 'variable':
+							basilico_variable_add_to_cart();
+							break;
+							case 'external':
+							basilico_external_add_to_cart(); 
+							break;
+							case 'grouped':
+							basilico_grouped_add_to_cart(); 
+							break;
+							default:
+							basilico_simple_add_to_cart(); 
+							break;
+						}
+						?>
 					</div>
 				</div>
 			</div>
