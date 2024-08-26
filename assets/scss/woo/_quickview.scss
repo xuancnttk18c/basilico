@@ -229,13 +229,14 @@
             height: 4px;
             @include border-radius(2px);
             overflow: hidden;
+            margin-bottom: 24px;
             &:before {
                 width: 100%;
                 background-color: $secondary_color;
             }
         }
         .product-price {
-            font-weight: 500;
+            display: none;
         }
     }
     .product-images {
@@ -263,15 +264,12 @@
     }
     .yith-wapo-form-style-theme {
         .addon-header {
-            padding: 16px 30px;
-            background-color: $divider_color;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             h3 {
                 font-size: 25px;
                 margin-bottom: 0;
-                line-height: 1.2;
-                font-weight: 400;
-                color: $secondary_color;
+                line-height: 1.4;
+                font-weight: 600;
             }
             &:has(h3 > span:empty) {
                 display: none;
@@ -283,9 +281,9 @@
         .yith-wapo-label,
         .yith-wapo-addon-label{
             position: relative;
-            font-size: 17px;
-            line-height: 24px;
-            font-weight: 500;
+            font-size: 15px;
+            line-height: 25px;
+            font-weight: 400;
             letter-spacing: 0;
         }
     }
@@ -293,48 +291,37 @@
         align-items: center;
         z-index: 1;
     }
-    .quantity {
-        max-width: 123px;
-        margin-right: 34px;
-        .label {
-            display: none;
+    input.qty[type="number"] {
+        background-color: transparent;
+        border: none;
+        padding: 0 15px;
+        width: 55px;
+        font-size: 20px;
+        color: $heading_color;
+        font-weight: 500;
+    }
+    .quantity-button {
+        cursor: pointer;
+        background-color: $primary_color;
+        width: 28px;
+        height: 28px;
+        @include border-radius(50%);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        &:before {
+            font-family: 'Cerebri Sans';
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 1;
+            color: #fff;
         }
-        .qty-field .quantity-inner {
-            align-items: center;
-            input.qty[type="number"] {
-                background-color: transparent;
-                border: none;
-                padding: 0 15px;
-                width: 55px;
-                font-size: 20px;
-                color: $heading_color;
-                font-weight: 500;
-            }
-            .quantity-button {
-                cursor: pointer;
-                background-color: $primary_color;
-                width: 34px;
-                height: 34px;
-                @include border-radius(50%);
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                &:before {
-                    font-family: 'Rowdies';
-                    font-size: 23px;
-                    font-weight: 400;
-                    line-height: 1;
-                    color: #fff;
-                }
-                &.quantity-up:before {
-                    content: '+';
-                    margin-bottom: 3px;
-                }
-                &.quantity-down:before {
-                    content: '-';
-                    margin-bottom: 5px;
-                }
-            }
+        &.quantity-up:before {
+            content: '+';
+        }
+        &.quantity-down:before {
+            content: '-';
+            margin-bottom: 2px;
         }
     }
     .stock-wishlist {
