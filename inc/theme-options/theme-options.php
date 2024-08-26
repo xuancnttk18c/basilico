@@ -1296,33 +1296,35 @@ if(class_exists('Woocommerce')) {
             )
         )
     ));
-    Redux::setSection($opt_name, array(
-        'title'      => esc_html__('Quick View', 'basilico'),
-        'icon'       => 'el el-file-edit',
-        'subsection' => true,
-        'fields'     => array(
-            array(
-                'id'       => 'enable_quick_view',
-                'title'    => esc_html__('Enable Quick View', 'basilico'),
-                'subtitle' => esc_html__('Replace default Add To Cart button by button Quick View.', 'basilico'),
-                'type'     => 'switch',
-                'default'  => '0',
-            ),
-            array(
-                'id'       => 'quick_view_style',
-                'title'    => esc_html__('Quick View Style', 'basilico'),
-                'type'     => 'select',
-                'options' => array(
-                    'style-1' => esc_html__('Style 1'),
-                    'style-2' => esc_html__('Style 2'),
+    if (class_exists( 'YITH_WAPO' )) {
+        Redux::setSection($opt_name, array(
+            'title'      => esc_html__('Addons Quick View', 'basilico'),
+            'icon'       => 'el el-file-edit',
+            'subsection' => true,
+            'fields'     => array(
+                array(
+                    'id'       => 'enable_quick_view',
+                    'title'    => esc_html__('Enable Quick View', 'basilico'),
+                    'subtitle' => esc_html__('Replace default Add To Cart button by button Quick View.', 'basilico'),
+                    'type'     => 'switch',
+                    'default'  => '0',
                 ),
-                'default' => 'style-1',
-                'required' => [
-                    ['enable_quick_view', '!=', '0'],
-                ]
-            ),
-        )
-    ));
+                array(
+                    'id'       => 'quick_view_style',
+                    'title'    => esc_html__('Quick View Style', 'basilico'),
+                    'type'     => 'select',
+                    'options' => array(
+                        'style-1' => esc_html__('Style 1'),
+                        'style-2' => esc_html__('Style 2'),
+                    ),
+                    'default' => 'style-1',
+                    'required' => [
+                        ['enable_quick_view', '!=', '0'],
+                    ]
+                ),
+            )
+        ));
+    }
 }
 
 //* Typography
