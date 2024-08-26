@@ -244,14 +244,9 @@
     left: 0;
     right: 0;
     @include transform(translate(0,-100%));
-    .pxl-panel-header {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 1;
-    }
-    .pxl-panel-content{
-        padding: 0;
+    .pxl-close {
+        top: 30px;
+        right: 30px;
     }
 }
 .admin-bar .pxl-hidden-template.pos-top{
