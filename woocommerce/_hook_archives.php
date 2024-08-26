@@ -78,7 +78,7 @@ if(!function_exists('basilico_woocommerce_catalog_result')){
 add_filter('woocommerce_loop_add_to_cart_link', 'basilico_woocommerce_loop_add_to_cart_link', 10, 3);
 function basilico_woocommerce_loop_add_to_cart_link($button, $product, $args){
 
-    if (!class_exists( 'YITH_WAPO' ) && is_yith_addons_active()) {
+    if (class_exists( 'YITH_WAPO' ) && is_yith_addons_active()) {
         return '<a href="#" class="pxl-btn button pxl-quickview" data-product_id="' . get_the_ID() . '">' . esc_html__('Order Online') . '</a>';
     }
 
