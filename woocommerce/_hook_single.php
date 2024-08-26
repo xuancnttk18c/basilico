@@ -646,7 +646,7 @@ function basilico_variable_add_to_cart(){
 			<div class="woocommerce single-product">
 				<div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
 					<div class="row gx-0">
-						<div class="col-lg-4 col-12 content-left">
+						<div class="col-lg-5 col-12 content-left">
 							<div class="product-content">
 								<h3 class="product-title"><?php echo $product->get_name(); ?></h3>
 								<div class="product-price"><?php echo $product->get_price_html(); ?></div>		
@@ -654,7 +654,7 @@ function basilico_variable_add_to_cart(){
 							</div>
 							<div class="product-images"><?php echo $product->get_image(); ?></div>
 						</div>
-						<div class="col-lg-8 col-12 content-right">
+						<div class="col-lg-7 col-12 content-right">
 							<?php
 							global $product;
 							$product = wc_get_product($product_id);
