@@ -686,8 +686,9 @@ function basilico_variable_add_to_cart(){
 		add_action('wp_ajax_pxl_product_quickview', 'pxl_product_quickview');
 
 		function add_quickview_modal() {
+			$quickview_style = basilico()->get_theme_opt('quick_view_style', 'style-1');
 			?>
-			<div id="pxl-quickview-modal" class="custom-modal">
+			<div id="pxl-quickview-modal" class="custom-modal <?php echo esc_attr($quickview_style); ?>">
 				<div class="modal-content"></div>
 			</div>
 			<?php

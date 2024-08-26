@@ -1308,6 +1308,15 @@ if(class_exists('Woocommerce')) {
                 'type'     => 'switch',
                 'default'  => '0',
             ),
+            array(
+                'id'       => 'quick_view_style',
+                'title'    => esc_html__('Quick View Style', 'basilico'),
+                'type'     => 'select',
+                'options' => array(
+                    'style-1' => esc_html__('Style 1'),
+                    'style-2' => esc_html__('Style 2'),
+                ),
+            ),
         )
     ));
 }
