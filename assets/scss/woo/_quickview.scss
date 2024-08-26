@@ -195,17 +195,23 @@
 
 #pxl-quickview-modal.style-2 {
     .modal-content {
+        background-color: #fff;
         border: 1px solid $divider_color;
+        padding: 20px;
+        @include border-radius(35px);
     }
     .modal-heading {
         padding: 21px 43px;
         margin-bottom: 0;
         line-height: 55px;
-        letter-spacing: 0.03em;
-        font-weight: 400;
-        border-bottom: 1px solid $divider_color;
-        background-color: $secondary_color;
+        letter-spacing: 0.02em;
+        font-weight: 600;
+        background-image: -moz-linear-gradient( -90deg, rgb(54,53,53) 0%, rgb(18,18,18) 100%);
+        background-image: -webkit-linear-gradient( -90deg, rgb(54,53,53) 0%, rgb(18,18,18) 100%);
+        background-image: -ms-linear-gradient( -90deg, rgb(54,53,53) 0%, rgb(18,18,18) 100%);
+        color: #fff;
         position: relative;
+        @include border-radius(30px);
     }
     .product-content {
         padding: 40px;
