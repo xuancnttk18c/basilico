@@ -291,37 +291,47 @@
         align-items: center;
         z-index: 1;
     }
-    input.qty[type="number"] {
-        background-color: transparent;
-        border: none;
-        padding: 0 15px;
-        width: 55px;
-        font-size: 20px;
-        color: $heading_color;
-        font-weight: 500;
-    }
-    .quantity-button {
-        cursor: pointer;
-        background-color: $primary_color;
-        width: 28px;
-        height: 28px;
-        @include border-radius(50%);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        &:before {
-            font-family: 'Cerebri Sans';
-            font-size: 17px;
-            font-weight: 400;
-            line-height: 1;
-            color: #fff;
+    .quantity {
+        max-width: 123px;
+        margin-right: 30px;
+        .label {
+            display: none;
         }
-        &.quantity-up:before {
-            content: '+';
-        }
-        &.quantity-down:before {
-            content: '-';
-            margin-bottom: 2px;
+        .qty-field .quantity-inner {
+            align-items: center;
+            input.qty[type="number"] {
+                background-color: transparent;
+                border: none;
+                padding: 0 15px;
+                width: 55px;
+                font-size: 20px;
+                color: $heading_color;
+                font-weight: 500;
+            }
+            .quantity-button {
+                cursor: pointer;
+                background-color: $primary_color;
+                width: 28px;
+                height: 28px;
+                @include border-radius(50%);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                &:before {
+                    font-family: 'Cerebri Sans';
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 1;
+                    color: #fff;
+                }
+                &.quantity-up:before {
+                    content: '+';
+                }
+                &.quantity-down:before {
+                    content: '-';
+                    margin-bottom: 2px;
+                }
+            }
         }
     }
     .stock-wishlist {
