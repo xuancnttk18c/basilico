@@ -201,7 +201,7 @@
         @include border-radius(35px);
     }
     .modal-heading {
-        padding: 21px 43px;
+        padding: 17px 43px;
         margin-bottom: 0;
         line-height: 55px;
         letter-spacing: 0.02em;
@@ -213,8 +213,10 @@
         position: relative;
         @include border-radius(30px);
     }
+    .woocommerce.single-product {
+        padding: 35px 40px 30px;
+    }
     .product-content {
-        padding: 40px;
         .product-title {
             font-family: 25px;
             color: $primary_color;
@@ -225,11 +227,8 @@
         }
     }
     .product-images {
-        border-top: 1px solid $divider_color;
-        border-bottom: 1px solid $divider_color;
-        img {
-            background-color: $primary_color;
-        }
+        @include border-radius(20px);
+        overflow: hidden;
     }
     .single-product {
         position: relative;
