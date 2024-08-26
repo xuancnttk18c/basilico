@@ -76,6 +76,9 @@
         .product-price {
             display: none;
         }
+        .pxl-divider {
+            display: none;
+        }
     }
     .product-images {
         border-top: 1px solid $divider_color;
@@ -221,19 +224,8 @@
         @include border-radius(30px);
     }
     .product-content {
-        .product-title {
-            font-size: 25px;
-            font-weight: 600;
-            color: $heading_color;
-            letter-spacing: 0.02em;
-            &:after {
-                content: '';
-                display: inline-block;
-                background-color: $secondary_color;
-                width: 60px;
-                height: 4px;
-                @include border-radius(2px);
-            }
+        .pxl-divider {
+            
         }
         .product-price {
             display: none;
