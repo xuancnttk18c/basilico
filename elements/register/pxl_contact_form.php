@@ -216,9 +216,13 @@ if(class_exists('WPCF7')) {
                                             ),
                                             array(
                                                 'name' => 'input_hover_shadow',
-                                                'label' => esc_html_x( 'Box Shadow', 'Box Shadow Control', 'elementor' ),
-                                                'type' => \Elementor\Controls_Manager::BOX_SHADOW,
-                                                'selectors' => [
+                                                'label'        => esc_html__( 'Box Shadow', 'basilico' ),
+                                                'type'         => \Elementor\Group_Control_Box_Shadow::get_type(),
+                                                'control_type' => 'group',
+                                                'exclude' => [
+                                                    'box_shadow_position',
+                                                ],
+                                                'selector' => 
                                                     '{{WRAPPER}} .pxl-contact-form7 input[type="text"]:hover,
                                                      {{WRAPPER}} .pxl-contact-form7 input[type="password"]:hover,
                                                      {{WRAPPER}} .pxl-contact-form7 input[type="email"]:hover,
@@ -243,8 +247,7 @@ if(class_exists('WPCF7')) {
                                                      {{WRAPPER}} .pxl-contact-form7 input:focus + input[type="submit"],
                                                      {{WRAPPER}} .pxl-contact-form7 input:hover + input[type="submit"],
                                                      {{WRAPPER}} .pxl-contact-form7 input:focus + button,
-                                                     {{WRAPPER}} .pxl-contact-form7 input:hover + button' => 'box-shadow: {{HORIZONTAL}}px {{VERTICAL}}px {{BLUR}}px {{SPREAD}}px {{COLOR}} {{box_shadow_position.VALUE}};',
-                                                ],
+                                                     {{WRAPPER}} .pxl-contact-form7 input:hover + button'
                                             ),
                                         ),
                                     ),
