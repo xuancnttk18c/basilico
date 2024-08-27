@@ -1800,6 +1800,9 @@ table.shop_attributes{
 		line-height: 1.5;
 		margin: 0 0 62px 0;
 		text-align: center;
+		@media (max-width: $sm_max) {
+			font-size: 30px;
+		}
 		@media (max-width: $xs_max) {
 			text-align: left;
 		}
