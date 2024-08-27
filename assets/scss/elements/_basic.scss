@@ -4324,7 +4324,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @media (max-width: $xs_max) {
+        @media (max-width: $md_max) {
             flex-direction: column;
         }
         .tabs-title {
@@ -4333,7 +4333,7 @@
             align-items: center;
             background-color: $secondary_color;
             padding: 46px 92px 55px;
-            @media (max-width: $xs_max) {
+            @media (max-width: $md_max) {
                 width: 100%;
             }
             .sub-title {
