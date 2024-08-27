@@ -1449,8 +1449,10 @@ table.shop_attributes{
 			border-left: none;
 			border-radius: 0;
 			position: relative;
-			+ li {
-				margin-left: 55px;
+			@media (min-width: $md_min) {
+				+ li {
+					margin-left: 55px;
+				}
 			}
 			a {
 				font-family: $heading_font_family;
