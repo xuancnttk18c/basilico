@@ -1422,22 +1422,6 @@ table.shop_attributes{
 			margin-bottom: 25px;
 			border: 1px solid $divider_color;
 			border-bottom: none;
-			li {
-				border: none !important;
-				border-bottom: 1px solid $divider_color !important;
-				text-align: center;
-				a {
-					width: 100%;
-				}
-				&.active {
-					&:after {
-						display: none !important;
-					}
-					a {
-						color: $secondary_color !important;
-					}
-				}
-			}
 		}
 		&:before, &:after {
 			display: none;
@@ -1449,11 +1433,6 @@ table.shop_attributes{
 			border-left: none;
 			border-radius: 0;
 			position: relative;
-			@media (min-width: $md_min) {
-				+ li {
-					margin-left: 55px;
-				}
-			}
 			a {
 				font-family: $heading_font_family;
 				font-size: 17px;
@@ -1485,6 +1464,27 @@ table.shop_attributes{
 				background-color: transparent;
 				&:after {
 					width: 100%;
+				}
+			}
+			@media (min-width: $md_min) {
+				+ li {
+					margin-left: 55px;
+				}
+			}
+			@media (max-width: $sm_max) {
+				border: none !important;
+				border-bottom: 1px solid $divider_color !important;
+				padding: 0 30px;
+				a {
+					width: 100%;
+				}
+				&.active {
+					&:after {
+						display: none !important;
+					}
+					a {
+						color: $secondary_color !important;
+					}
 				}
 			}
 		}
