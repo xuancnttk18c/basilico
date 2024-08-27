@@ -1788,6 +1788,9 @@ table.shop_attributes{
 		color: $heading_color;
 		text-align: center;
 		margin-bottom: 13px;
+		@media (max-width: $xs_max) {
+			text-align: left;
+		}
 	}
 	.related_title {
 		position: relative;
@@ -1797,6 +1800,9 @@ table.shop_attributes{
 		line-height: 1.5;
 		margin: 0 0 62px 0;
 		text-align: center;
+		@media (max-width: $xs_max) {
+			text-align: left;
+		}
 	}
 	.pxl-divider {
 		display: none;
