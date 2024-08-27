@@ -217,7 +217,7 @@ if(class_exists('WPCF7')) {
                                             array(
                                                 'name' => 'input_hover_shadow',
                                                 'label' => esc_html_x( 'Box Shadow', 'Box Shadow Control', 'elementor' ),
-                                                'type' => Controls_Manager::BOX_SHADOW,
+                                                'type' => \Elementor\Controls_Manager::BOX_SHADOW,
                                                 'selectors' => [
                                                     '{{WRAPPER}} .pxl-contact-form7 input[type="text"]:hover,
                                                      {{WRAPPER}} .pxl-contact-form7 input[type="password"]:hover,
