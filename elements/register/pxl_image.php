@@ -568,7 +568,6 @@ pxl_add_custom_widget(
                             'name' => 'custom_style',
                             'label' => esc_html__( 'Style', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::SELECT,
-                            'control_type' => 'responsive',
                             'options' => [
                                 ''           => esc_html__( 'None', 'basilico' ),
                                 'pxl-transition' => esc_html__( 'Transition', 'basilico' ),

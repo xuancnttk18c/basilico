@@ -4324,12 +4324,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: $xs_max) {
+            flex-direction: column;
+        }
         .tabs-title {
             display: flex;
             flex-direction: column;
             align-items: center;
             background-color: $secondary_color;
             padding: 46px 92px 55px;
+            @media (max-width: $xs_max) {
+                width: 100%;
+            }
             .sub-title {
                 color: $primary_color;
                 font-size: 17px;
