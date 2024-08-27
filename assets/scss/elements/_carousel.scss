@@ -3497,7 +3497,7 @@
                 padding: 73px 15px 75px;
                 text-align: center;
                 background-color: $secondary_color;
-                clip-path: inset(100% 0 100% 0);
+                clip-path: inset(0 0 100% 0);
                 @include transition(0.5s cubic-bezier(0.63, 0.25, 0.25, 1));
             }
             &:hover {
