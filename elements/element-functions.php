@@ -1675,6 +1675,7 @@ function basilico_split_text_option($name=''){
         'name' => $name.'split_text_anm',
         'label' => ucfirst( str_replace('_', ' ', $name) ).' '.esc_html__('Split Text Animation', 'basilico' ),
         'type' => 'select',
+        'control_type' => 'responsive',
         'options' => [
             ''               => esc_html__( 'None', 'basilico' ),
             'split-in-fade' => esc_html__( 'In Fade', 'basilico' ),
