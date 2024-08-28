@@ -4049,8 +4049,7 @@
             }
         }
         .item-excerpt {
-            font-size: 15px;
-            line-height: 25px;
+            @include text-truncate-multi-line(15px, 1.666666666666667, 3);
             color: #dedede;
             letter-spacing: 0.02em;
             margin-top: 20px;
@@ -4082,6 +4081,10 @@
             overflow: hidden;
             .item-featured {
                 position: relative;
+                img {
+                    min-height: 400px;
+                    object-fit: cover;
+                }
                 &:after {
                     content: '';
                     position: absolute;
