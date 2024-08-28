@@ -24,7 +24,7 @@ extract($settings);
                     <div class="search-button-group">
                         <a href="#" class="search-clear remove" title="Clear"></a>
                         <span class="search-icon"><span class="pxli-search-400"></span></span>
-                        <input type="search" class="pxl-search-field" placeholder="<?php echo esc_attr( $settings['placeholder']); ?>" value="<?php echo get_search_query(); ?>" name="s" autocomplete="off"/>
+                        <input type="search" class="pxl-search-field" placeholder="<?php echo esc_attr( $settings['placeholder']); ?>" value="<?php echo get_search_query(); ?>" name="s" autocomplete="off" autofocus="true"/>
                         <button type="submit" class="pxl-search-submit" value="<?php echo esc_attr__( 'Search', 'basilico' ); ?>"><span class="pxli-search-400"></span></button>
                     </div>
                     <input type="hidden" name="post_type" value="product">
