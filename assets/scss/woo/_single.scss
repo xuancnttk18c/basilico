@@ -1483,7 +1483,7 @@ table.shop_attributes{
 						display: none !important;
 					}
 					a {
-						color: $secondary_color !important;
+						color: $secondary_color;
 					}
 				}
 			}
@@ -1607,6 +1607,9 @@ table.shop_attributes{
 				font-weight: 600;
 				line-height: 60px;
 				letter-spacing: 0.05em;
+			}
+			&.active a {
+				color: $primary_color;
 			}
 		}
 	}
