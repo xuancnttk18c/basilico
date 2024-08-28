@@ -3862,11 +3862,14 @@
                     background-color: #182125;
                     margin: 0 auto;
                     padding: 52px 60px 51px;
-                    min-width: 853px;
+                    min-width: 75%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     text-align: center;
+                    @media (max-width: $sm_max) {
+                        min-width: 90%; 
+                    }
                     &:after {
                         content: '';
                         position: absolute;
@@ -3916,6 +3919,9 @@
         }
         .pxl-swiper-arrows {
             padding-top: 0;
+            @media (max-width: $md_max) {
+                display: none;
+            }
             &.nav-vertical-in {
                 .pxl-swiper-arrow {
                     opacity: 1;
