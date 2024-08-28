@@ -3699,10 +3699,8 @@
             }
         }
         .item-excerpt {
-            font-size: 15px;
-            line-height: 25px;
             color: $body_color;
-            @include text-truncate-multi-line(15px, 1.666666666666667, 2);
+            @include text-truncate-multi-line(15px, 1.666666666666667, 3);
             letter-spacing: 0;
             + .item-readmore {
                 margin-top: 48px;
