@@ -79,6 +79,9 @@
     cursor: pointer;
     z-index: 99;
     @include transition(all .3s ease);
+    &.none {
+        display: none !important;
+    }
     &.style-df {
         width: 30px;
         height: 30px;

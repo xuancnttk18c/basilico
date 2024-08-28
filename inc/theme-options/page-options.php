@@ -560,6 +560,7 @@ function basilico_page_options_register( $metabox ) {
                             'title'   => esc_html__('Close Button Style', 'basilico'),
                             'options'  => array(
                                 'theme-opt'         => esc_html('Inherit From Theme Options', 'basilico'),
+                                'none'      => esc_html('Hidden', 'basilico'),
                                 'custom'      => esc_html('Custom Style', 'basilico'),
                             ),
                             'default' => 'theme-opt'
