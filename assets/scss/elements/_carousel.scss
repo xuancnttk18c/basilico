@@ -3710,6 +3710,12 @@
         }
         .item-inner {
             position: relative;
+            .item-featured {
+                img {
+                    min-height: 400px;
+                    object-fit: cover;
+                }
+            }
             .item-content {
                 position: absolute;
                 z-index: 2;
