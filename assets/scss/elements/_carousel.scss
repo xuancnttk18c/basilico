@@ -3499,6 +3499,12 @@
                 background-color: $secondary_color;
                 clip-path: inset(0 0 100% 0);
                 @include transition(0.5s cubic-bezier(0.63, 0.25, 0.25, 1));
+                @media (max-width: 1200px) {
+                    top: 15px;
+                    left: 15px;
+                    right: 15px;
+                    bottom: 15px;
+                }
             }
             &:hover {
                 .item-content {
@@ -3594,6 +3600,9 @@
                     right: 20px;
                     bottom: 20px;
                     padding: 20px 35px;
+                    .item-excerpt {
+                        @include text-truncate-multi-line(15px, 1.666666666666667, 2);
+                    }
                 }
             }
             .item-readmore {
