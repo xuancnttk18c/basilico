@@ -264,6 +264,7 @@
 
                 $('.swiper-wrapper, .swiper-slide').css({ height : newHeight })
                 that.update();
+                alert('kdfjksdfjk');
             }
 
             $this.find(".swiper-filter-wrap .filter-item").on("click", function(){
