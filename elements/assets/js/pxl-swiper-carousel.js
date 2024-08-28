@@ -114,7 +114,6 @@
                 watchSlidesVisibility: true,
                 observer: true,
                 observeParents: true,
-                autoHeight: true,
                 breakpoints: {
                     0 : {
                         slidesPerView: settings['slides_to_show_xs'],
@@ -264,7 +263,6 @@
 
                 $('.swiper-wrapper, .swiper-slide').css({ height : newHeight })
                 that.update();
-                alert('kdfjksdfjk');
             }
 
             $this.find(".swiper-filter-wrap .filter-item").on("click", function(){
