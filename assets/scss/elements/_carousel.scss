@@ -4427,6 +4427,9 @@
         .pxl-swiper-container {
             width: calc(100% - 200px);
         }
+        .pxl-swiper-slider-wrap {
+            @include d-flex();
+        }
         .pxl-swiper-arrow {
             cursor: pointer;
             width: 101px;
