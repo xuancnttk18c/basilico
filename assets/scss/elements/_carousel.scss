@@ -1174,7 +1174,8 @@
                     @media (max-width: $sm_max) {
                         width: 100%;
                         min-height: 400px;
-                        object-fit: cover;
+                        background-size: cover;
+                        border-bottom: 1px solid;
                     }
                 }
                 .item-content {
@@ -1196,7 +1197,9 @@
                 padding: 61px 30px 55px;
                 .content-wrapper {
                     margin: 0 auto;
-                    max-width: 435px;
+                    @media (min-width: $sm_max) {
+                        max-width: 435px;
+                    }
                 }
             }
             .testimonial-title {
