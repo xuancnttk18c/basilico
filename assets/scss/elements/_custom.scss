@@ -109,6 +109,12 @@ body:has(.pxl-header-sticky.h-fixed) {
     }
 }
 
+.hide-under-1700px {
+    @media (max-width: 1699px) {
+        display: none;
+    }   
+}
+
 .hide-below-1650px {
     @media (max-width: 1649px) {
         display: none;
