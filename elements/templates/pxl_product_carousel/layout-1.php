@@ -73,7 +73,7 @@ if ( !empty( $item_animation) ) {
 <?php if(!empty($posts) && count($posts)): ?>
 <div class="pxl-swiper-slider pxl-product-carousel pxl-shop-<?php echo esc_attr($product_layout); ?>">
     <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
-        <?php if ($product_layout === 'layout-4') : ?>
+        <?php if ($product_layout == 'layout-4') : ?>
             <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><?php echo esc_html('Previous', 'basilico'); ?></div>
         <?php endif; ?>
         <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
@@ -89,10 +89,10 @@ if ( !empty( $item_animation) ) {
                 ?>
             </div>
         </div>
-        <?php if ($product_layout === 'layout-4') : ?>
+        <?php if ($product_layout == 'layout-4') : ?>
             <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><?php echo esc_html('Next', 'basilico'); ?></div>
         <?php endif; ?>
-        <?php if($arrows !== 'false' && $product_layout !== 'layout-4'): ?>
+        <?php if($arrows !== 'false' && $product_layout != 'layout-4'): ?>
             <div class="pxl-swiper-arrows <?php echo esc_attr($arrows_style);?>">
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
                     <?php 
