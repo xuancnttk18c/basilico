@@ -4430,12 +4430,6 @@
         .pxl-swiper-slider-wrap {
             @include d-flex();
         }
-        .swiper-slide {
-            border: 1px solid $divider_color;
-            &:not(:first-child) {
-                border-left: none;
-            }
-        }
         .pxl-swiper-arrow {
             cursor: pointer;
             width: 101px;
