@@ -1154,7 +1154,7 @@
         }
     }
     &.layout-12 {
-        @media (min-width: $sm_min) {
+        @media (min-width: $md_min) {
             width: 100%;
         }
         .pxl-swiper-container {
@@ -1189,7 +1189,7 @@
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
-                @media (min-width: $sm_min) {
+                @media (min-width: $md_min) {
                     border-right: 1px solid $divider_color;
                 }
             }
