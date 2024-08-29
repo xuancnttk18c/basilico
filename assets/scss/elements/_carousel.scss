@@ -4432,6 +4432,9 @@
         }
         .products {
             margin: 0;
+            .grid-item {
+                margin-top: 0;
+            }
         }
         .pxl-swiper-arrow {
             cursor: pointer;
