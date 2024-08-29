@@ -4427,6 +4427,9 @@
         .pxl-swiper-container {
             width: calc(100% - 200px);
             overflow: hidden;
+            @media (max-width: $sm_max) {
+                width: auto;
+            }
         }
         .pxl-swiper-slider-wrap {
             @include d-flex();
@@ -4460,6 +4463,9 @@
             }
             &:hover {
                 background-color: $secondary_color;
+            }
+            @media (max-width: $sm_max) {
+                display: none;
             }
         }
     }
