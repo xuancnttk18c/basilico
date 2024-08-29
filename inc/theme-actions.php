@@ -295,7 +295,7 @@ function basilico_hook_anchor_templates_hidden_panel(){
 function basilico_hook_anchor_hidden_panel($args){
     if (get_post_meta($args['post_id'], 'template_close_select', true) == 'custom')
         $close_btn_style = get_post_meta($args['post_id'], 'template_close_style', true);
-    else if (get_post_meta($args['post_id'], 'template_close_select', true) == 'custom')
+    else if (get_post_meta($args['post_id'], 'template_close_select', true) == 'none')
         $close_btn_style = 'none';
     else
         $close_btn_style = basilico()->get_theme_opt('template_close_button', 'style-df');
