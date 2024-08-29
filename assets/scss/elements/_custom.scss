@@ -109,8 +109,8 @@ body:has(.pxl-header-sticky.h-fixed) {
     }
 }
 
-.hide-under-1700px {
-    @media (max-width: 1699px) {
+.hide-under-1900px {
+    @media (max-width: 1899px) {
         display: none;
     }   
 }
