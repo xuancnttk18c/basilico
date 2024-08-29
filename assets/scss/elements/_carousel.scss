@@ -4423,7 +4423,7 @@
 
 //* PXL Product Carousel
 .pxl-product-carousel {
-    .pxl-shop-layout-4 {
+    &.pxl-shop-layout-4 {
         .pxl-swiper-container {
             width: calc(100% - 200px);
         }
