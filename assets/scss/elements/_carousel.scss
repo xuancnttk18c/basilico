@@ -4430,6 +4430,9 @@
         .pxl-swiper-slider-wrap {
             @include d-flex();
         }
+        .products {
+            margin: 0;
+        }
         .pxl-swiper-arrow {
             cursor: pointer;
             width: 101px;
