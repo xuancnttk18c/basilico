@@ -1155,10 +1155,9 @@
     }
     &.layout-12 {
         @media (min-width: $md_min) {
-            width: 100%;
-        }
-        .pxl-swiper-container {
-            width: calc(100% - 200px);
+            .pxl-swiper-container {
+                width: calc(100% - 200px);
+            }
         }
         .swiper-slide {
             border: 1px solid $divider_color;
