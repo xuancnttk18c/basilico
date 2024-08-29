@@ -1169,9 +1169,15 @@
             &:has(.item-image) {
                 .item-image {
                     width: 39%;
+                    @media (max-width: $sm_max) {
+                        width: 100%;
+                    }
                 }
                 .item-content {
                     width: 61%;
+                    @media (max-width: $sm_max) {
+                        width: 100%;
+                    }
                 }
             }
             .item-image {
