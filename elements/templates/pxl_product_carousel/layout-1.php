@@ -4,7 +4,6 @@ if (!class_exists('Woocommerce')){
     return true;
 }
 extract($settings);
-$product_layout = $widget->get_setting('product_layout', 'layout-1');
 $query_type = $widget->get_setting('query_type', 'recent_product');
 $post_per_page = $widget->get_setting('post_per_page', 8);
 $product_ids = $widget->get_setting('product_ids', '');
@@ -16,6 +15,7 @@ extract($posts);
 $arrows = $widget->get_setting('arrows','false');
 $arrows_style = $widget->get_setting('arrows_style', 'style-1');
 $dots = $widget->get_setting('dots','false');
+$product_layout = $widget->get_setting('product_layout', 'layout-1');
 
 $opts = [
     'slide_direction'               => 'horizontal',
