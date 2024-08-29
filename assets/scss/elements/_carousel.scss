@@ -4426,6 +4426,7 @@
     &.pxl-shop-layout-4 {
         .pxl-swiper-container {
             width: calc(100% - 200px);
+            overflow: hidden;
         }
         .pxl-swiper-slider-wrap {
             @include d-flex();
