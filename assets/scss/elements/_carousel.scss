@@ -4166,6 +4166,10 @@
     &.layout-pxl-portfolio-11 {
         .pxl-swiper-container {
             width: calc(100% - 200px);
+            overflow: hidden;
+            @media (max-width: $sm_max) {
+                width: auto;
+            }
         }
         .swiper-slide {
             padding: 25px;
@@ -4285,6 +4289,9 @@
             }
             &:hover {
                 background-color: $secondary_color;
+            }
+            @media (max-width: $sm_max) {
+                display: none;
             }
         }
     }
