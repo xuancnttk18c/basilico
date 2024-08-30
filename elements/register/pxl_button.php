@@ -282,8 +282,7 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'border-color: {{VALUE}};',
                                     '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-6:hover, {{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-7:hover, {{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-5:hover' => 'background-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn:before' => 'background-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-7:hover' => 'box-shadow: 0px 0px 0px 0px {{VALUE}};'
+                                    '{{WRAPPER}} .pxl-button-wrapper .btn:before' => 'background-color: {{VALUE}};'
                                 ],
                             ),
                         ),
@@ -319,7 +318,8 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'default' => '',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-color: {{VALUE}};'
+                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-7:hover' => 'box-shadow: 0px 0px 0px 0px {{VALUE}};'
                                 ],
                                 'condition' => [
                                     'border_type!' => '',
