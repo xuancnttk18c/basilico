@@ -178,7 +178,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'ba
                             </div>
                             <?php if ($show_button == 'true') : ?>
                                 <div class="item-readmore pxl-button-wrapper">
-                                    <a class="btn btn-additional-7" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                    <a class="btn btn-additional-7 no-shadow" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
                                         <span><?php echo pxl_print_html($button_text); ?></span>
                                         <i class="pxl-button-icon zmdi zmdi-arrow-right"></i>
                                     </a>
