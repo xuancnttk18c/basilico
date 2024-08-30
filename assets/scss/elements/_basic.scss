@@ -4605,8 +4605,7 @@
                 @include d-inline-flex();
                 gap: 62px;
                 @media (max-width: $sm_max) {
-                    flex-direction: column;
-                    gap: 12px;
+                    gap: 30px;
                 }
             }
         }
