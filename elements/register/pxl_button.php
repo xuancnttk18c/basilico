@@ -319,6 +319,7 @@ pxl_add_custom_widget(
                                 'default' => '',
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-color: {{VALUE}};',
+                                    '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-7' => 'box-shadow: 3px 3px 0px 0px {{VALUE}};',
                                     '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-7:hover' => 'box-shadow: 0px 0px 0px 0px {{VALUE}};'
                                 ],
                                 'condition' => [
