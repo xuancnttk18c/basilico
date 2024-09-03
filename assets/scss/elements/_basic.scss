@@ -1758,6 +1758,7 @@
             @include border-radius(50%);
             background-color: $secondary_color;
             font-size: 15px;
+            height: auto;
             span {
                 color: #fff;
             }
