@@ -20,6 +20,9 @@
 		.options {
 			grid-template-columns: repeat( 2, minmax(0, 100%) ) !important;
 			gap: 20px !important;
+			@media (max-width: $md_max) {
+				grid-template-columns: repeat( 1, minmax(0, 100%) ) !important;
+			}
 		}
 	}
 	.yith-wapo-option {

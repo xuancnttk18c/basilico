@@ -96,11 +96,19 @@
     }
     .content-left {
         width: 33.33333333%;
+        @media (max-width: $sm_max) {
+            width: 100%;
+        }
     }
     .content-right {
         width: 66.66666667%;
         padding: 50px;
         border-left: 1px solid $divider_color;
+        @media (max-width: $sm_max) {
+            width: 100%;
+            padding: 30px;
+            border-left: none;
+        }
     }
     .yith-wapo-form-style-theme {
         .addon-header {

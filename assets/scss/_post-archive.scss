@@ -394,6 +394,10 @@
 	}
 	.main-content {
 		padding: 41px 85px 52px 43px;
+		@media (max-width: $sm_max) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
 	}
 	.post-metas {
 		max-width: none;
