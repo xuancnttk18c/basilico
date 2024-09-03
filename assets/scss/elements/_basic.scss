@@ -4605,7 +4605,7 @@
                 @include d-inline-flex();
                 gap: 62px;
                 @media (max-width: $sm_max) {
-                    gap: 15px 58px;
+                    gap: 15px 40px;
                     flex-wrap: wrap;
                 }
             }
