@@ -154,11 +154,8 @@
     }
     @media (max-width: $lg_max) {
         .product-images {
-            margin-bottom: 180px;
+            margin-bottom: 0px;
         }
-        .qty-btn-wrap {
-            flex-direction: column;
-        }   
     }
     .quantity {
         max-width: 123px;
