@@ -65,9 +65,16 @@
         border-bottom: 1px solid $divider_color;
         background-color: $secondary_color;
         position: relative;
+        @media (max-width: $sm_max) {
+            padding: 21px 25px;
+            font-size: 24px;
+        }
     }
     .product-content {
         padding: 40px;
+        @media (max-width: $sm_max) {
+            padding: 40px 25px;
+        }
         .product-title {
             font-size: 25px;
             color: $primary_color;
@@ -106,7 +113,7 @@
         border-left: 1px solid $divider_color;
         @media (max-width: $sm_max) {
             width: 100%;
-            padding: 30px;
+            padding: 25px;
             border-left: none;
         }
     }
