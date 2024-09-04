@@ -51,7 +51,7 @@ $widget->add_render_attribute( 'carousel', [
                             <div class="overlay-1"></div>
                             <div class="overlay-2"></div>
                             <div class="overlay-3"></div>
-                            <div class="item-content col-6">
+                            <div class="item-content <?php echo !empty( $box['selected_img']['id']) ? 'col-md-6' : '' ?> col-12">
                                 <?php
                                 if (!empty($box['title_text'])){
                                     ?>
@@ -100,7 +100,7 @@ $widget->add_render_attribute( 'carousel', [
                                 ) );
                                 $thumbnail = $img['thumbnail'];
                                 ?>
-                                <div class="item-image col-6">
+                                <div class="item-image col-md-6 col-12">
                                     <?php echo wp_kses_post($thumbnail); ?>
                                 </div>
                                 <?php
