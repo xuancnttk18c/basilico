@@ -730,17 +730,6 @@ function basilico_arrow_settings(){
             ]
         ),
         array(
-            'name' => 'arrows_hide',
-            'label' => esc_html__('Hide Under (px)', 'basilico'),
-            'type' => \Elementor\Controls_Manager::NUMBER,
-            'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-arrows' => '@media (max-width: {{VALUE}}) { display: none; }',
-            ],
-            'condition' => [
-                'arrows' => 'true'
-            ]
-        ),
-        array(
             'name' => 'arrow_icon_previous',
             'label' => esc_html__('Icon Previous', 'basilico' ),
             'type' => 'icons',
