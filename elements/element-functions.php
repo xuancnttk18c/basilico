@@ -734,7 +734,7 @@ function basilico_arrow_settings(){
             'label' => esc_html__('Hide Under (px)', 'basilico'),
             'type' => \Elementor\Controls_Manager::NUMBER,
             'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-arrows' => '@media screen (max-width: {{VALUE}}) { display: none; }',
+                '{{WRAPPER}} .pxl-swiper-arrows' => '@media (max-width: {{VALUE}}) { display: none; }',
             ],
             'condition' => [
                 'arrows' => 'true'
