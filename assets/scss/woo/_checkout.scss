@@ -21,6 +21,7 @@
             opacity: 0;
         }
         &:checked[type=checkbox] {
+        	background: $secondary_color;
             &:after{
                 opacity: 1;
             }
@@ -48,6 +49,7 @@
             opacity: 0;
         }
         &:checked[type=radio] {
+        	background: $secondary_color;
             &:after{
                 opacity: 1;
             }
