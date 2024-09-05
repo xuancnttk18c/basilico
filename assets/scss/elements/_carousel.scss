@@ -2294,6 +2294,9 @@
             box-shadow: 0px 8px 38px 0px rgba(0, 0, 0, 0.09);
             overflow: hidden;
             @include border-radius(20px);
+            @media (max-width: $sm_max) {
+                padding: 45px 15px;
+            }
             .overlay-1 {
                 position: absolute;
                 z-index: 1;
@@ -2305,6 +2308,9 @@
                 background-color: $primary_color;
                 border-radius: 50%;
                 @include transition(all 500ms ease);
+                @media (max-width: $sm_max) {
+                    left: 100%;
+                }
             }
             .overlay-2 {
                 position: absolute;
@@ -2329,6 +2335,10 @@
                 opacity: 0;
                 visibility: hidden;
                 @include transition();
+                background-repeat: no-repeat;
+                @media (max-width: $sm_max) {
+                    display: none;
+                }
             }
             .item-content {
                 position: relative;
@@ -2370,6 +2380,12 @@
                 z-index: 2;
                 img {
                     object-fit: contain;
+                }
+                @media (max-width: $sm_max) {
+                    margin-top: 30px;
+                    img {
+                        max-width: 350px;
+                    }
                 }
             }
             &:hover {
