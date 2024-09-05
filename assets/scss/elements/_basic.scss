@@ -3289,6 +3289,7 @@
             overflow: hidden;
             padding: 43px 70px 181px 40px;
             @include border-radius(20px);
+            background-size: cover;
             .box-title {
                 font-size: 35px;
                 font-weight: 600;
