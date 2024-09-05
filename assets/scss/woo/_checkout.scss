@@ -3,7 +3,6 @@
 		width: 20px;
         height: 20px;
         border: 1px solid $divider_color;
-        background: #fff;
         cursor: pointer;
         vertical-align: top;
         -webkit-appearance: none;
@@ -22,7 +21,6 @@
             opacity: 0;
         }
         &:checked[type=checkbox] {
-        	background: $secondary_color;
             &:after{
                 opacity: 1;
             }
