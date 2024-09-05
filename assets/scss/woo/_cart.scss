@@ -331,6 +331,9 @@ label[for="coupon_code"]{
 				}
 			}
 		}
+		.pxl-cart-empty {
+			padding: 0;
+		}
 		.woocommerce-mini-cart__total {
 			@include d-flex();
 			background-color: $secondary_color;
