@@ -3383,19 +3383,19 @@
     }
 }
 
-.elementor-widget-pxl_fancy_box + .elementor-widget-pxl_fancy_box {
-    position: relative;
-    &:before {
-        content: "";
-        display: block;
-        width: 1px;
-        background-color: $divider_color;
-        position: absolute;
-        top: -60px;
-        bottom: 30px;
-        left: 36px;
-    }
-}
+// .elementor-widget-pxl_fancy_box + .elementor-widget-pxl_fancy_box {
+//     position: relative;
+//     &:before {
+//         content: "";
+//         display: block;
+//         width: 1px;
+//         background-color: $divider_color;
+//         position: absolute;
+//         top: -60px;
+//         bottom: 30px;
+//         left: 36px;
+//     }
+// }
 
 //* Fancy Box Accordion
 .pxl-fancy-box-accordion {
