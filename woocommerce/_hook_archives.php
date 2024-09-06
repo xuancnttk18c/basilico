@@ -123,7 +123,7 @@ function pxl_product_quickview() {
     ?>
     <h3 class="modal-heading">
         <span><?php echo esc_html('Product Options', 'basilico'); ?></span>
-        <span class="close-modal"></span>       
+        <span class="close-modal"></span>
     </h3>
     <div class="woocommerce single-product">
         <div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>
