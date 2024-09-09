@@ -713,7 +713,7 @@ Redux::setSection($opt_name, array(
         array(
             'id'      => 'select_style',
             'type'    => 'image_select',
-            'title'   => esc_html__('Select Box Style', 'basilico'),
+            'title'   => esc_html__('Dropdown Icon Style', 'basilico'),
             'options' => array(
                 ''          => get_template_directory_uri() . '/assets/images/select_layout/select-style-1.jpg',
                 'select-2'  => get_template_directory_uri() . '/assets/images/select_layout/select-style-2.jpg',
