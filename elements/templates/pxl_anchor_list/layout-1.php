@@ -26,7 +26,7 @@ extract($settings);
 			else if ($selected_template == 'url') {
 				$target = '';
 				$template = 0;
-				$anchor_link = esc_url($anchor_url);	
+				$anchor_link = esc_url($anchor['anchor_url']);
 			}
 			else {
 				$template = (int)$anchor['template'];
