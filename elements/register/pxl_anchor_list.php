@@ -86,15 +86,6 @@ pxl_add_custom_widget(
                                     ],
                                 ),
                                 array(
-                                    'name'  => 'cart_count',
-                                    'label' => esc_html__('Show Cart Count', 'basilico'),
-                                    'type'  => \Elementor\Controls_Manager::SWITCHER,
-                                    'default' => 'false',
-                                    'condition' => [
-                                        'template' => ['cart-dropdown', 'cart-page']
-                                    ],
-                                ),
-                                array(
                                     'name'  => 'anchor_url',
                                     'label' => esc_html__('URL' ,'basilico'),
                                     'type'  => \Elementor\Controls_Manager::URL,
