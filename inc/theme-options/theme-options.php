@@ -713,10 +713,10 @@ Redux::setSection($opt_name, array(
         array(
             'id'      => 'select_style',
             'type'    => 'image_select',
-            'title'   => esc_html__('Select Style', 'basilico'),
+            'title'   => esc_html__('Select Box Style', 'basilico'),
             'options' => array(
                 ''          => get_template_directory_uri() . '/assets/images/select_layout/select-style-1.jpg',
-                'select-2'  => get_template_directory_uri() . '/assets/images/select_layout/select-style-1.jpg',
+                'select-2'  => get_template_directory_uri() . '/assets/images/select_layout/select-style-2.jpg',
                 'select-3'  => get_template_directory_uri() . '/assets/images/select_layout/select-style-1.jpg',
             ),
             'default' => ''
