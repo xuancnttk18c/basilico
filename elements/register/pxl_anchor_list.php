@@ -88,7 +88,7 @@ pxl_add_custom_widget(
                                 array(
                                     'name'  => 'anchor_url',
                                     'label' => esc_html__('URL' ,'basilico'),
-                                    'type'  => \Elementor\Controls_Manager::URL,
+                                    'type'  => \Elementor\Controls_Manager::TEXT,
                                     'condition' => [
                                         'template' => ['url']
                                     ],
