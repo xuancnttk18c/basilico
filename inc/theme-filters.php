@@ -238,6 +238,7 @@ add_filter( 'body_class', 'basilico_body_classes' );
 function basilico_body_classes( $classes )
 {
     $header_sticky_layout = (int)basilico()->get_opt('header_sticky_layout');
+    $select_style = basilico()->get_opt('select_style', '');
     $footer_fixed = basilico()->get_opt('footer_fixed', '0');
 
     if (class_exists('ReduxFramework')) {
