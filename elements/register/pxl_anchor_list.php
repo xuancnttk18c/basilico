@@ -2,7 +2,8 @@
 $templates_df = [
     0 => esc_html__('None', 'basilico'),
     'cart-dropdown' => esc_html__('Cart Dropdown', 'basilico'),
-    'cart-page' => esc_html__('Cart Page', 'basilico')
+    'cart-page' => esc_html__('Cart Page', 'basilico'),
+    'url' => esc_html__('URL', 'basilico')
 ];
 $templates = $templates_df + basilico_get_templates_option('hidden-panel');
 
@@ -82,6 +83,23 @@ pxl_add_custom_widget(
                                     'default' => 'false',
                                     'condition' => [
                                         'template' => ['cart-dropdown', 'cart-page']
+                                    ],
+                                ),
+                                array(
+                                    'name'  => 'cart_count',
+                                    'label' => esc_html__('Show Cart Count', 'basilico'),
+                                    'type'  => \Elementor\Controls_Manager::SWITCHER,
+                                    'default' => 'false',
+                                    'condition' => [
+                                        'template' => ['cart-dropdown', 'cart-page']
+                                    ],
+                                ),
+                                array(
+                                    'name'  => 'anchor_url',
+                                    'label' => esc_html__('URL' ,'basilico'),
+                                    'type'  => \Elementor\Controls_Manager::URL,
+                                    'condition' => [
+                                        'template' => ['url']
                                     ],
                                 ),
                             ),
