@@ -175,7 +175,7 @@
             transition-delay: 0.15s;
         }
         &:hover {
-            color: #fff !important;
+            color: #fff;
             transition-delay: 0.25s;
             &:before {
                 height: calc(100% + 2px);
