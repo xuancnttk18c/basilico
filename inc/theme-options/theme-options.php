@@ -711,6 +711,17 @@ Redux::setSection($opt_name, array(
     'subsection' => true,
     'fields' => array(
         array(
+            'id'      => 'select_style',
+            'type'    => 'image_select',
+            'title'   => esc_html__('Select Style', 'basilico'),
+            'options' => array(
+                ''          => get_template_directory_uri() . '/assets/images/close_layout/close-1.jpg',
+                'select-2'  => get_template_directory_uri() . '/assets/images/close_layout/close-2.jpg',
+                'select-3'  => get_template_directory_uri() . '/assets/images/close_layout/close-3.jpg',
+            ),
+            'default' => ''
+        ),
+        array(
             'id'             => 'select_padding',
             'type'           => 'spacing',
             'top'            => false,
