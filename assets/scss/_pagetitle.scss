@@ -160,4 +160,7 @@
 	margin: 0 30px;
 	@include border-radius(35px);
 	overflow: hidden;
+	@media (max-width: $lg_max) {
+		margin: 15px 15px 0;
+	}
 }
