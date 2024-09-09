@@ -24,6 +24,8 @@ extract($settings);
 				$anchor_link = wc_get_cart_url();
 			}
 			else if ($selected_template == 'url') {
+				$target = '';
+				$template = 0;
 				$anchor_link = esc_url($anchor_url);	
 			}
 			else {
