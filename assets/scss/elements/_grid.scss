@@ -1484,7 +1484,7 @@
                 text-align: center;
                 padding: 20px 30px 22px;
                 overflow: hidden;
-                transform: scaleY(0);
+                clip-path: inset(0 0 100% 0);
                 transform-origin: top;
                 @include transition(350ms cubic-bezier(.48,.57,.33,.89));
                 @media (max-width: $xs_max) {
@@ -1496,7 +1496,7 @@
             }
             &:hover {
                 .item-content {
-                    transform: scaleY(1);
+                    clip-path: inset(0 0 0 0);
                 }
                 .content-inner > * {
                     opacity: 1;
