@@ -1831,6 +1831,10 @@
             .item-featured {
                 @include border-radius(20px);
                 overflow: hidden;
+                img {
+                    min-height: 450px;
+                    object-fit: cover;
+                }
             }
             .item-content {
                 @include border-radius(20px);
@@ -1851,9 +1855,8 @@
                 z-index: 2;
             }
             .item-title {
-                font-size: 25px;
+                @include text-truncate-multi-line(25px, calc(30 / 25), 3);
                 font-weight: 600;
-                line-height: calc(30 / 25);
                 letter-spacing: 0.02em;
                 text-transform: capitalize;
                 color: #fff;
