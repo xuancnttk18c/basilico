@@ -609,6 +609,10 @@
                 overflow: hidden;
                 transition: all 200ms ease 0s;
                 flex: none;
+                @media (max-width: $sm_max) {
+                    width: 90px;
+                    height: 90px;
+                }
             }
             img{
                 width: 100%;
