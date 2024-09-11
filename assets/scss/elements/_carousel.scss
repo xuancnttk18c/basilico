@@ -685,6 +685,9 @@
             @media (max-width: $sm_max) {
                 width: 500px;
             }
+            @media (max-width: $xs_max) {
+                width: 350px;
+            }
         }
         .pxl-thumbs-wrapper {
             .thumb-item {

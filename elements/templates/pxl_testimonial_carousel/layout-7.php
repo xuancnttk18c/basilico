@@ -73,7 +73,7 @@ $widget->add_render_attribute( 'carousel', [
         'slides_to_show_lg'             => 6, 
         'slides_to_show_md'             => 6,
         'slides_to_show_sm'             => 5, 
-        'slides_to_show_xs'             => 4, 
+        'slides_to_show_xs'             => 2, 
         'slides_to_scroll'              => 1, 
         'slides_gutter'                 => 35,
         'arrow'                         => false,
