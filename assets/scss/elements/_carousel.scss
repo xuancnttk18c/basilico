@@ -609,7 +609,7 @@
                 overflow: hidden;
                 transition: all 200ms ease 0s;
                 flex: none;
-                @media (max-width: $sm_max) {
+                @media (max-width: $md_max) {
                     width: 90px;
                     height: 90px;
                 }
@@ -679,6 +679,9 @@
         }
         .pxl-swiper-thumbs {
             width: 1020px;
+            @media (max-width: $md_max) {
+                width: 715px;
+            }
         }
         .pxl-thumbs-wrapper {
             .thumb-item {
