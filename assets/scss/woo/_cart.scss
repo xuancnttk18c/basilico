@@ -66,6 +66,9 @@ label[for="coupon_code"]{
 			background-color: rgba(48, 48, 48, 0.1);
 		}    
 	}
+	&:has(.pxl-cart-widget.layout-3) {
+		border-radius: 10px;
+	}
 }
 
 .pxl-cart-widget {
