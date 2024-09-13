@@ -70,14 +70,9 @@
      
 }
 
-.pxl-header-main-sticky{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+.pxl-header-main-sticky{ 
     z-index: 1;
     @include transition( all .3s ease-out !important);
-    @include transform(translateY(-100%));
     &.h-fixed{
         position: fixed;
         left: 0;
@@ -85,7 +80,6 @@
         right: 0;
         z-index: 99;
         background-color: #fff;
-        @include transform(translateY(0%));
         @include box-shadow(0 3px 18px rgba(#02154e, 0.09));
     }
 }
