@@ -590,12 +590,14 @@ function basilico_add_custom_columns_controls( \Elementor\Element_Base $element)
     $element->add_control(
         'pxl_col_fullwidth_desktop',
         [
-            'label' => esc_html__('Column Full Width On Desktop', 'basilico'),
-            'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => esc_html__( 'Yes', 'basilico' ),
-            'label_off' => esc_html__( 'No', 'basilico' ),
-            'return_value' => 'yes',
-            'default' => 'no',
+            'label' => esc_html__('Column Full Width On Desktop (> 1500px)', 'basilico'),
+            'type'    => \Elementor\Controls_Manager::SELECT,
+            'options' => array(
+                'off'  => esc_html__( 'Off', 'basilico' ),
+                'on'     => esc_html__( 'On', 'basilico' ),
+            ),
+            'prefix_class' => 'pxl-column-fullwidth-',
+
         ]
     ); 
     $element->add_control(
@@ -658,9 +660,6 @@ function basilico_custom_el_attributes($el){
     if( 'column' == $el->get_name() ) {
         if ( isset( $settings['pxl_border_animated'] ) && $settings['pxl_border_animated'] == 'yes'  ) {
             $el->add_render_attribute( '_wrapper', 'class', 'pxl-border-column-anm');
-        }
-        if ( isset( $settings['pxl_col_fullwidth_desktop'] ) && $settings['pxl_col_fullwidth_desktop'] == 'yes'  ) {
-            $el->add_render_attribute( '_wrapper', 'class', 'pxl-col-fullwidth-desktop');
         }
         if(!empty($settings['pxl_column_parallax']) && !empty($settings['pxl_column_parallax_value'])){
             $parallax_settings = json_encode([
