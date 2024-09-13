@@ -126,12 +126,12 @@
                 if ( scroll_status == 'up'){
                     $(document).find('.pxl-header-main-sticky').addClass('h-fixed');
                 } else {
+                    tl.to('.pxl-header-main-sticky', {
+                        y: (main_sticky_height * -1)
+                    });
                     $(document).find('.pxl-header-main-sticky .pxl-cart-dropdown').removeClass('open');
                 }
             } else {
-                tl.to('.pxl-header-main-sticky', {
-                    y: (main_sticky_height * -1)
-                });
                 $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
             }
         }
@@ -556,9 +556,9 @@
 
             document.addEventListener('mousemove', e => {
                 window.requestAnimationFrame(() => {
-                   circleStyle.top = `${ e.clientY - cursor.offsetHeight/2 }px`;
-                   circleStyle.left = `${ e.clientX - cursor.offsetWidth/2 }px`;
-               });
+                 circleStyle.top = `${ e.clientY - cursor.offsetHeight/2 }px`;
+                 circleStyle.left = `${ e.clientX - cursor.offsetWidth/2 }px`;
+             });
             });
 
             /** Hover Effect */
