@@ -573,7 +573,7 @@ function basilico_add_custom_columns_controls( \Elementor\Element_Base $element)
             'tab' => \Elementor\Controls_Manager::TAB_LAYOUT,
         ]
     );
-    $element->add_responsive_control(
+    $element->add_control(
         'pxl_col_auto',
         [
             'label'   => esc_html__( 'Element Auto Width', 'basilico' ),
