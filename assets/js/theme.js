@@ -132,6 +132,7 @@
                     // tl.to('.pxl-header-main-sticky', {
                     //     y: (main_sticky_height * -1)
                     // });
+                    $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
                     $(document).find('.pxl-header-main-sticky .pxl-cart-dropdown').removeClass('open');
                 }
             } else {
