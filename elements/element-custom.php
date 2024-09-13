@@ -658,16 +658,14 @@ function basilico_custom_el_attributes($el){
         if ( isset( $settings['pxl_border_animated'] ) && $settings['pxl_border_animated'] == 'yes'  ) {
             $el->add_render_attribute( '_wrapper', 'class', 'pxl-border-column-anm');
         }
+        if ( isset( $settings['pxl_col_fullwidth_desktop'] ) && $settings['pxl_col_fullwidth_desktop'] == 'yes'  ) {
+            $el->add_render_attribute( '_wrapper', 'class', 'pxl-col-fullwidth-desktop');
+        }
         if(!empty($settings['pxl_column_parallax']) && !empty($settings['pxl_column_parallax_value'])){
             $parallax_settings = json_encode([
                 $settings['pxl_column_parallax'] => $settings['pxl_column_parallax_value']
             ]);
             $el->add_render_attribute( '_widget_wrapper', 'data-parallax', $parallax_settings );
-        }
-    }
-    if( 'column' == $el->get_name() ) {
-        if ( isset( $settings['pxl_col_fullwidth_desktop'] ) && $settings['pxl_col_fullwidth_desktop'] == 'yes'  ) {
-            $el->add_render_attribute( '_wrapper', 'class', 'pxl-col-fullwidth-desktop');
         }
     }
     if( 'image' == $el->get_name() ) {
