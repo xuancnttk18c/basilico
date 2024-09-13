@@ -672,6 +672,7 @@
                 success: function( response ) {  
                     $( document.body ).trigger( 'wc_fragment_refresh' );
                     $( document.body ).trigger( 'basilico_update_qty', [ item_key, item_qty ] );
+                    $( document.body ).trigger( 'update_checkout' );
                 },
                 beforeSend: function() {
                     $('body').addClass('loading');
