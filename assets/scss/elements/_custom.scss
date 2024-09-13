@@ -161,11 +161,11 @@ body:has(.pxl-header-sticky.h-fixed) {
 
 .link-flicker {
     a {
-        animation: link-flicker 3s linear 2;
+        animation: linkFlicker 3s linear 2;
     }
 }
 
-@keyframes link-flicker {
+@keyframes linkFlicker {
     0% {
         a {
             color: $primary_color;
