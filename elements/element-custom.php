@@ -978,7 +978,7 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
 
 add_filter( 'pxl-custom-section/before-render', 'basilico_custom_section_before_render', 10, 3 );
 function basilico_custom_section_before_render($html, $settings, $el){  
-    if( isset($settings['pxl_section_border_animated']) && $settings['pxl_section_border_animated'] == 'yes' ){
+    if( isset($settings['pxl_section_border_animated']) && $settings['pxl_section_border_animated'] == 'yes' && isset($settings['border_width'])){
         $unit = $settings['border_width']['unit'];
         $border_num = 0;
         $bd_top_style = 'style="border-width: '.$settings['border_width']['top'].$unit.' 0 0 0; border-style: '.$settings['border_border'].'; border-color: '.$settings['border_color'].';"';
