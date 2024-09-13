@@ -70,7 +70,11 @@
      
 }
 
-.pxl-header-main-sticky{ 
+.pxl-header-main-sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 1;
     @include transition( all .3s ease-out !important);
     @include transform(translateY(-100%));
