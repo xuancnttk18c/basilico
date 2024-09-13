@@ -594,7 +594,8 @@ function basilico_add_custom_columns_controls( \Elementor\Element_Base $element)
             'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => esc_html__( 'Yes', 'basilico' ),
             'label_off' => esc_html__( 'No', 'basilico' ),
-            'return_value' => 'no',
+            'return_value' => 'yes',
+            'default' => 'no',
         ]
     ); 
     $element->add_control(
