@@ -136,9 +136,6 @@
                 }
             } else {
                 $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
-                tl.to('.pxl-header-main-sticky', {
-                    y: 0
-                });
             }
         }
 
