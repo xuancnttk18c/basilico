@@ -590,14 +590,14 @@ function basilico_add_custom_columns_controls( \Elementor\Element_Base $element)
     $element->add_control(
         'pxl_col_fullwidth_desktop',
         [
-            'label' => esc_html__('Column Full Width On Desktop (> 1500px)', 'basilico'),
+            'label' => esc_html__('Desktop Full Width (> 1500px)', 'basilico'),
             'type'    => \Elementor\Controls_Manager::SELECT,
             'options' => array(
                 'off'  => esc_html__( 'Off', 'basilico' ),
                 'on'     => esc_html__( 'On', 'basilico' ),
             ),
             'prefix_class' => 'pxl-column-fullwidth-',
-
+            'default' => 'off'
         ]
     ); 
     $element->add_control(
