@@ -148,7 +148,7 @@
         align-items: center;
         z-index: 1;
     }
-    @media (min-width: $lg_min) {
+    @media (min-width: $lg_max) {
         .product-images {
             margin-bottom: 140px;
         }
