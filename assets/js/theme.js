@@ -125,6 +125,9 @@
             if( scroll_top > (header_height + main_sticky_height) ){    
                 if ( scroll_status == 'up'){
                     $(document).find('.pxl-header-main-sticky').addClass('h-fixed');
+                    tl.to('.pxl-header-main-sticky', {
+                        y: 0
+                    });
                 } else {
                     tl.to('.pxl-header-main-sticky', {
                         y: (main_sticky_height * -1)
@@ -133,6 +136,9 @@
                 }
             } else {
                 $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
+                // tl.to('.pxl-header-main-sticky', {
+                //     y: 0
+                // });
             }
         }
 
@@ -556,9 +562,9 @@
 
             document.addEventListener('mousemove', e => {
                 window.requestAnimationFrame(() => {
-                 circleStyle.top = `${ e.clientY - cursor.offsetHeight/2 }px`;
-                 circleStyle.left = `${ e.clientX - cursor.offsetWidth/2 }px`;
-             });
+                   circleStyle.top = `${ e.clientY - cursor.offsetHeight/2 }px`;
+                   circleStyle.left = `${ e.clientX - cursor.offsetWidth/2 }px`;
+               });
             });
 
             /** Hover Effect */
