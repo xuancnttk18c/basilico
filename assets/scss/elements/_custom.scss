@@ -158,3 +158,32 @@ body:has(.pxl-header-sticky.h-fixed) {
         overflow: hidden;
     }
 }
+
+.link-flicker {
+    a {
+        animation: link-flicker 3s linear 2;
+    }
+}
+
+@keyframes link-flicker {
+    0% {
+        a {
+            color: $primary_color;
+        }
+    }
+    25% {
+        a {
+            color: $secondary_color;
+        }
+    }
+    50% {
+        a {
+            color: $primary_color;
+        }
+    }
+    75% {
+        a {
+            color: $secondary_color;
+        }
+    }
+}
