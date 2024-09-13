@@ -203,6 +203,13 @@
 		@include flex-auto();
 	}
 }
+
+@media (min-width: $xxl_min) {
+	.elementor-column.pxl-col-fullwidth-desktop {
+		width: 100% !important;
+	}
+}
+
 .color-primary{
     color: $primary_color;
 }
