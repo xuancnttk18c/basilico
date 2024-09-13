@@ -167,23 +167,15 @@ body:has(.pxl-header-sticky.h-fixed) {
 
 @keyframes linkFlicker {
     0% {
-        a {
-            color: $primary_color;
-        }
+        color: $primary_color;
     }
     25% {
-        a {
-            color: $secondary_color;
-        }
+        color: $secondary_color;
     }
     50% {
-        a {
-            color: $primary_color;
-        }
+        color: $primary_color;
     }
     75% {
-        a {
-            color: $secondary_color;
-        }
+        color: $secondary_color;
     }
 }
