@@ -115,6 +115,11 @@
         }
 
         if($(document).find('.pxl-header-main-sticky').length > 0 && window_width >= 1200){
+            let tl = gsap.timeline({
+                defaults: {
+                    duration: 0.2
+                }
+            });
             var header_height = $('.pxl-header-desktop').outerHeight();
             var main_sticky_height = $('.pxl-header-main-sticky').outerHeight();
             if( scroll_top > (header_height + main_sticky_height) ){    
@@ -122,9 +127,11 @@
                     $(document).find('.pxl-header-main-sticky').addClass('h-fixed');
                 } else {
                     $(document).find('.pxl-header-main-sticky .pxl-cart-dropdown').removeClass('open');
-                    $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
                 }
             } else {
+                tl.to('.pxl-header-main-sticky', {
+                    y: (main_sticky_height * -1)
+                });
                 $(document).find('.pxl-header-main-sticky').removeClass('h-fixed');
             }
         }
