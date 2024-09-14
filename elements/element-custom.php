@@ -591,13 +591,12 @@ function basilico_add_custom_columns_controls( \Elementor\Element_Base $element)
         'pxl_col_fullwidth_desktop',
         [
             'label' => esc_html__('Desktop Full Width (> 1500px)', 'basilico'),
-            'type'    => \Elementor\Controls_Manager::SELECT,
-            'options' => array(
-                'off'  => esc_html__( 'Off', 'basilico' ),
-                'on'     => esc_html__( 'On', 'basilico' ),
-            ),
+            'type'    => \Elementor\Controls_Manager::SWITCHER,
+            'label_on' => esc_html__( 'Yes', 'basilico' ),
+            'label_off' => esc_html__( 'No', 'basilico' ),
+            'return_value' => 'yes',
+            'default' => 'no',
             'prefix_class' => 'pxl-column-fullwidth-',
-            'default' => 'off'
         ]
     ); 
     $element->add_control(
