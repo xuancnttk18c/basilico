@@ -105,10 +105,10 @@ $slider-outer-space: 0;
             cursor: not-allowed;
         }
         &.absolute {
-            position: absolute;
+            position: absolute !important;
         }
         &.center-vertical {
-            position: absolute;
+            position: absolute !important;
             top: 50% !important;
             @include transform(translateY(-50%) !important);
         }
