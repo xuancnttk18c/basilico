@@ -17,6 +17,14 @@
                 return '<span class="pxl-swiper-pagination-bullet ' + settings['dots_style'] + '"></span>';
             },
         });
+        function checkWidth() {
+            var hideBelowWidth = $scope.find('.pxl-swiper-arrows').data('hide-below');
+            if ($(window).width() < hideBelowWidth) {
+                $scope.hide();
+            } else {
+                $(this).show();
+            }
+        }
     };
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {

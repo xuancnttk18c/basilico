@@ -716,6 +716,11 @@ function basilico_arrow_settings(){
             'type' => \Elementor\Controls_Manager::SWITCHER,
         ),
         array(
+            'name' => 'arrows_hide_below',
+            'label' => esc_html__('Hide Below (px)', 'basilico'),
+            'type' => \Elementor\Controls_Manager::NUMBER,
+        ),
+        array(
             'name' => 'arrows_style',
             'label' => esc_html__('Arrows Style', 'basilico'),
             'type' => \Elementor\Controls_Manager::SELECT,
