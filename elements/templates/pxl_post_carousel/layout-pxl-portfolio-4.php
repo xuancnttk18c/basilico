@@ -185,7 +185,7 @@ if ( !empty( $item_animation) ) {
             </div>
         </div>
         <?php if($arrows !== 'false'): ?>
-            <div class="pxl-swiper-arrows nav-horizontal <?php echo esc_attr($arrows_style);?>">
+            <div class="pxl-swiper-arrows nav-horizontal <?php echo esc_attr($arrows_style); ?>">
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-next <?php echo esc_attr($arrow_next_position); ?>">
                     <?php 
                     if ( $settings['arrow_icon_next']['value'] ) 
