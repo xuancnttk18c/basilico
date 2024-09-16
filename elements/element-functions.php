@@ -825,6 +825,7 @@ function basilico_arrow_settings(){
             'label_block' => true,
             'options' => [
                 'default' => esc_html('Default', 'basilico'),
+                'center-vertical' => esc_html('Center Vertical', 'basilico'),
                 'absolute' => esc_html('Custom', 'basilico'),
             ],
             'condition' => [
@@ -887,7 +888,7 @@ function basilico_arrow_settings(){
             'condition' => [
                 'arrows' => 'true',
                 'arrow_prev_offset_orientation_h!' => 'right',
-                'arrow_prev_position' => 'absolute',
+                'arrow_prev_position' => ['absolute', 'center-vertical']
             ],
         ),
         array(
@@ -923,9 +924,9 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; right: {{SIZE}}{{UNIT}}; left: auto;',
             ],
             'condition' => [
-                'arrows' => 'true',
+                'arrows' => 'true', 
                 'arrow_prev_offset_orientation_h' => 'right',
-                'arrow_prev_position' => 'absolute',
+                'arrow_prev_position' => ['absolute', 'center-vertical'],
             ],
         ),
         array(
@@ -946,7 +947,7 @@ function basilico_arrow_settings(){
             'render_type' => 'ui',
             'condition' => [
                 'arrows' => 'true',
-                'arrow_prev_position' => 'absolute'
+                'arrow_prev_position' => 'absolute',
             ]
         ),
         array(
