@@ -1995,8 +1995,8 @@ function basilico_get_post_grid_pxl_portfolio3($posts = [], $settings = [], $arg
 }
 
 function basilico_arrow_template($settings = []) {
-    $hide_below = $settings['arrows_hide_below'] ? 'data-hide-below=' . $setting[$hide_under_width] : ''; ?>
-    <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style); ?>" <?php echo $hide_below; ?>>
+    $hide_below = $settings['arrows_hide_below'] ? 'data-hide-below=' . $setting['arrows_hide_below'] : ''; ?>
+    <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($settings['arrows_style']); ?>" <?php echo $hide_below; ?>>
         <div class="pxl-swiper-arrow pxl-swiper-arrow-prev <?php echo esc_attr($setting['arrow_prev_position']); ?>">
             <?php 
             if ( $settings['arrow_icon_previous']['value'] ) 
