@@ -31,6 +31,8 @@ $dots = $widget->get_setting('dots','false');
 $cursor = $widget->get_setting('show_custom_cursor', 'false');
 $cursor_text = $widget->get_setting('custom_cursor_text', '');
 
+$pagination_style = basilico()->get_theme_opt('swiper_pagination_style', 'style-df');
+
 $opts = [
     'slide_direction'               => 'horizontal',
     'slide_percolumn'               => 1, 
@@ -202,7 +204,7 @@ if ( !empty( $item_animation) ) {
             </div>
         <?php endif; ?>
         <?php if($dots !== 'false'): ?>
-            <div class="pxl-swiper-dots"></div>
+            <div class="pxl-swiper-dots <?php echo esc_attr($pagination_style); ?>"></div>
         <?php endif; ?>
     </div>
 </div>
