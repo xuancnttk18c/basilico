@@ -719,6 +719,9 @@ function basilico_arrow_settings(){
             'name' => 'arrows_hide_below',
             'label' => esc_html__('Hide Below (px)', 'basilico'),
             'type' => \Elementor\Controls_Manager::NUMBER,
+            'condition' => [
+                'arrows' => 'true'
+            ]
         ),
         array(
             'name' => 'arrows_style',
