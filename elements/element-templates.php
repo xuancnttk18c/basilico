@@ -1994,8 +1994,8 @@ function basilico_get_post_grid_pxl_portfolio3($posts = [], $settings = [], $arg
     endforeach;
 }
 
-function basilico_arrow_template($settings = [], $arrow_icon_prev_cls = 'pxli pxli-arrow-prev', $arrow_icon_next_cls = 'pxli pxli-arrow-next') {
-    $hide_below = $settings['arrows_hide_below'] ? 'data-hide-below=' . $setting['arrows_hide_below'] : ''; ?>
+function basilico_arrow_template($settings = [], $arrow_icon_prev_cls = 'pxli pxli-arrow-left', $arrow_icon_next_cls = 'pxli pxli-arrow-right') {
+    $hide_below = $settings['arrows_hide_below'] ? 'data-hide-below=' . esc_attr($setting['arrows_hide_below']) : ''; ?>
     <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($settings['arrows_style']); ?>" <?php echo $hide_below; ?>>
         <div class="pxl-swiper-arrow pxl-swiper-arrow-prev <?php echo esc_attr($setting['arrow_prev_position']); ?>">
             <?php 
