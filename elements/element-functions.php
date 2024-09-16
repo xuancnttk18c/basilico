@@ -849,7 +849,7 @@ function basilico_arrow_settings(){
             'render_type' => 'ui',
             'condition' => [
                 'arrows' => 'true',
-                'arrow_prev_position' => 'absolute'
+                'arrow_prev_position' => ['absolute', 'center-vertical']
             ]
         ),
         array(
