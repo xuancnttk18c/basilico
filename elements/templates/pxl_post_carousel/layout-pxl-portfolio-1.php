@@ -193,7 +193,7 @@ if ( !empty( $item_animation) ) {
         </div>
         <?php if ($arrows !== 'false') : ?>
             <?php $hide_below = $arrows_hide_below ? 'data-hide-below=' . esc_attr($arrows_hide_below) : ''; ?>
-            <div class="pxl-swiper-arrows nav-vertical-in <?php echo esc_attr($arrows_style); ?>" <?php echo $hide_below ?>>
+            <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style); ?>" <?php echo $hide_below ?>>
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-next <?php echo esc_attr($arrow_next_position); ?>">
                     <?php
                     if ( $settings['arrow_icon_next']['value'] ) 
