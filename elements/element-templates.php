@@ -1994,7 +1994,7 @@ function basilico_get_post_grid_pxl_portfolio3($posts = [], $settings = [], $arg
     endforeach;
 }
 
-function basilico_arrow_template($settings = []) {
+function basilico_arrow_template($settings = [], $arrow_icon_prev_cls = 'pxli pxli-arrow-prev', $arrow_icon_next_cls = 'pxli pxli-arrow-next') {
     $hide_below = $settings['arrows_hide_below'] ? 'data-hide-below=' . $setting['arrows_hide_below'] : ''; ?>
     <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($settings['arrows_style']); ?>" <?php echo $hide_below; ?>>
         <div class="pxl-swiper-arrow pxl-swiper-arrow-prev <?php echo esc_attr($setting['arrow_prev_position']); ?>">
@@ -2002,7 +2002,7 @@ function basilico_arrow_template($settings = []) {
             if ( $settings['arrow_icon_previous']['value'] ) 
                 \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
             else
-                echo '<span class="pxl-icon ' . $setting['arrow_icon_prev_cls'] . '"></span>';
+                echo '<span class="pxl-icon ' . $arrow_icon_prev_cls . '"></span>';
             ?>
         </div>
         <div class="pxl-swiper-arrow pxl-swiper-arrow-next <?php echo esc_attr($settings['arrow_next_position']); ?>">
@@ -2010,7 +2010,7 @@ function basilico_arrow_template($settings = []) {
             if ( $settings['arrow_icon_next']['value'] ) 
                 \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_next'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
             else
-                echo '<span class="pxl-icon ' . $setting['arrow_icon_next_cls'] . '"></span>';
+                echo '<span class="pxl-icon ' . $arrow_icon_next_cls . '"></span>';
             ?>
         </div>
     </div>
