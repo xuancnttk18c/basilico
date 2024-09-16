@@ -113,9 +113,6 @@ $slider-outer-space: 0;
             @include transform(translateY(-50%) !important);
         }
     }
-    @media (max-width: $sm_max){
-        display: none;
-    }
     &.style-1 {
         .pxl-swiper-arrow {
             .pxl-icon {
