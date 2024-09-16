@@ -1057,7 +1057,7 @@ function basilico_arrow_settings(){
             'render_type' => 'ui',
             'condition' => [
                 'arrows' => 'true',
-                'arrow_next_position' => 'absolute'
+                'arrow_next_position' => ['absolute', 'center-vertical']
             ]
         ),
         array(
@@ -1095,7 +1095,7 @@ function basilico_arrow_settings(){
             'condition' => [
                 'arrows' => 'true',
                 'arrow_next_offset_orientation_h!' => 'right',
-                'arrow_next_position' => 'absolute',
+                'arrow_next_position' => ['absolute', 'center-vertical'],
             ],
         ),
         array(
@@ -1133,7 +1133,7 @@ function basilico_arrow_settings(){
             'condition' => [
                 'arrows' => 'true',
                 'arrow_next_offset_orientation_h' => 'right',
-                'arrow_next_position' => 'absolute',
+                'arrow_next_position' => ['absolute', 'center-vertical'],
             ],
         ),
         array(
