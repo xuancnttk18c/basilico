@@ -6,7 +6,8 @@ $default_settings = [
 $settings = array_merge($default_settings, $settings);
 extract($settings);
 
-$arrows = $widget->get_setting('arrows','false');  
+$arrows = $widget->get_setting('arrows','false');
+$arrows_style = $widget->get_setting('arrows_style', 'style-1');
 $dots = $widget->get_setting('dots','false');  
 
 $opts = [
