@@ -20,9 +20,9 @@
         function checkWidth() {
             var hideBelowWidth = $scope.find('.pxl-swiper-arrows').data('hide-below');
             if ($(window).width() < hideBelowWidth) {
-                $scope.hide();
+                $scope.find('.pxl-swiper-arrows').hide();
             } else {
-                $(this).show();
+                $scope.find('.pxl-swiper-arrows').show();
             }
         }
     };
