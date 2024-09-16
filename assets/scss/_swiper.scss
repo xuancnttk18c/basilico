@@ -106,8 +106,8 @@ $slider-outer-space: 0;
         }
         &.center-vertical {
             position: absolute;
-            top: 50%;
-            @include transform(translateY(-50%));
+            top: 50% !important;
+            @include transform(translateY(-50%) !important);
         }
     }
     @media (max-width: $sm_max){
