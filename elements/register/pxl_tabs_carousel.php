@@ -69,7 +69,6 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
                                 'default' => 'false',
                             ),
-                            basilico_arrow_settings(),
                             array(
                                 'name' => 'dots',
                                 'label' => esc_html__('Show Dots', 'basilico'),
@@ -119,6 +118,14 @@ pxl_add_custom_widget(
                                 'default' => 'true',
                             ),
                         ),
+                    ),
+                ),
+                array(
+                    'name' => 'arrow_settings',
+                    'label' => esc_html__('Arrow Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
+                    'controls' => array_merge(
+                        basilico_arrow_settings(),
                     ),
                 ),
             ),
