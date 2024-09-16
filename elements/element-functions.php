@@ -1090,7 +1090,7 @@ function basilico_arrow_settings(){
             ],
             'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
             'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'position: absolute !important; left: {{SIZE}}{{UNIT}}; right: auto;',
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
             ],
             'condition' => [
                 'arrows' => 'true',
@@ -1128,7 +1128,7 @@ function basilico_arrow_settings(){
                 'unit' => 'px'
             ],
             'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'position: absolute !important; right: {{SIZE}}{{UNIT}}; left: auto;',
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
             ],
             'condition' => [
                 'arrows' => 'true',
@@ -1187,7 +1187,7 @@ function basilico_arrow_settings(){
             ],
             'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
             'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'position: absolute !important; top: {{SIZE}}{{UNIT}}; bottom: auto;',
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
             ],
             'condition' => [
                 'arrows' => 'true',
@@ -1225,7 +1225,7 @@ function basilico_arrow_settings(){
                 'unit' => 'px'
             ],
             'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'position: absolute !important; bottom: {{SIZE}}{{UNIT}}; top: auto;',
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
             ],
             'condition' => [
                 'arrows' => 'true',

@@ -104,6 +104,9 @@ $slider-outer-space: 0;
         &.swiper-button-disabled {
             cursor: not-allowed;
         }
+        &.absolute {
+            position: absolute;
+        }
         &.center-vertical {
             position: absolute;
             top: 50% !important;
