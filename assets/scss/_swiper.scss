@@ -104,6 +104,11 @@ $slider-outer-space: 0;
         &.swiper-button-disabled {
             cursor: not-allowed;
         }
+        &.center-vertical {
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+        }
     }
     @media (max-width: $sm_max){
         display: none;

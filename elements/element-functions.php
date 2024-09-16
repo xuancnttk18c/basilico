@@ -1032,6 +1032,7 @@ function basilico_arrow_settings(){
             'default' => 'default',
             'options' => [
                 'default' => esc_html('Default', 'basilico'),
+                'center-vertical' => esc_html('Center Vertical', 'basilico'),
                 'absolute' => esc_html('Custom', 'basilico'),
             ],
             'condition' => [
