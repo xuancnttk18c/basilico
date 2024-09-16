@@ -19,6 +19,7 @@ $num_words = $widget->get_setting('num_words', 30);
 $settings['layout']    = $settings['layout_'.$settings['post_type']];
 
 $tab_style = basilico()->get_theme_opt('tab_style', 'style-df');
+$pagination_style = basilico()->get_theme_opt('swiper_pagination_style', 'style-df');
 
 extract(pxl_get_posts_of_grid(
     'pxl-portfolio',
@@ -185,7 +186,7 @@ if ( !empty( $item_animation) ) {
             basilico_arrow_template($settings);
         endif; ?>
         <?php if($dots !== 'false'): ?>
-            <div class="pxl-swiper-dots"></div>
+            <div class="pxl-swiper-dots <?php echo esc_attr($pagination_style); ?>"></div>
         <?php endif; ?>
     </div>
 </div>
