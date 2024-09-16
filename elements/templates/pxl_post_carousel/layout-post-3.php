@@ -185,7 +185,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'ba
         </div>
         <?php if($arrows !== 'false'): ?>
             <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style);?>">
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next <?php echo esc_attr($arrow_next_position); ?>">
                     <?php 
                     if ( $settings['arrow_icon_next']['value'] ) 
                         \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_next'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
@@ -193,7 +193,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'ba
                         echo '<span class="pxl-icon zmdi zmdi-arrow-right"></span>';
                     ?>
                 </div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev">
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev <?php echo esc_attr($arrow_prev_position); ?>">
                     <?php 
                     if ( $settings['arrow_icon_previous']['value'] ) 
                         \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
