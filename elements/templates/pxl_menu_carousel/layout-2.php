@@ -136,12 +136,9 @@ $widget->add_render_attribute( 'carousel', [
                 <?php endforeach; ?>
                 </div>
             </div>
-            <?php if($arrows !== 'false') : ?>
-                <div class="pxl-swiper-arrows style-default nav-vertical-out">
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon pxli-arrow-next"></span></div>
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
-                </div>
-            <?php endif; ?>
+            <?php if ($arrows !== 'false') :
+                basilico_arrow_template($settings);
+            endif; ?>
             <?php if($dots !== 'false') : ?>
                 <div class="pxl-swiper-dots"></div>
             <?php endif; ?>

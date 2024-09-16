@@ -92,27 +92,9 @@ if ( !empty( $item_animation) ) {
         <?php if ($product_layout == 'layout-4') : ?>
             <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><?php echo esc_html('Next', 'basilico'); ?></div>
         <?php endif; ?>
-        <?php if($arrows !== 'false' && $product_layout != 'layout-4'): ?>            
-            <?php $hide_below = $arrows_hide_below ? 'data-hide-below=' . esc_attr($arrows_hide_below) : ''; ?>
-            <div class="pxl-swiper-arrows nav-vertical-in <?php echo esc_attr($arrows_style); ?>" <?php echo $hide_below ?>>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next <?php echo esc_attr($arrow_next_position); ?>">
-                    <?php
-                    if ( $settings['arrow_icon_next']['value'] ) 
-                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_next'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
-                    else
-                        echo '<span class="pxl-icon pxli-arrow-right"></span>';
-                    ?>
-                </div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev <?php echo esc_attr($arrow_prev_position); ?>">
-                    <?php 
-                    if ( $settings['arrow_icon_previous']['value'] ) 
-                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
-                    else
-                        echo '<span class="pxl-icon pxli-arrow-left"></span>';
-                    ?>
-                </div>
-            </div>
-        <?php endif; ?>
+        <?php if($arrows !== 'false' && $product_layout != 'layout-4' && function_exists('basilico_arrow_template')):
+            basilico_arrow_template($settings, 'pxli pxli-arrow-left', 'pxli pxli-arrow-right');
+        endif; ?>
         <?php if($dots !== 'false'): ?>
             <div class="pxl-swiper-dots"></div>
         <?php endif; ?>

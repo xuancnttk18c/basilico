@@ -169,7 +169,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('READ MORE', 'ba
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php if ($arrows !== 'false' && function_exists('basilico_arrow_template')) :
+        <?php if ($arrows !== 'false') :
             basilico_arrow_template($settings, 'zmdi zmdi-arrow-left', 'zmdi zmdi-arrow-right');
         endif; ?>
         <?php if ($dots !== 'false') : ?>

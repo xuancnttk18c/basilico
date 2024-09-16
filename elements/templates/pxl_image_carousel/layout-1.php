@@ -62,12 +62,9 @@ $dots = $widget->get_setting('dots', 'false');
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php if($arrows !== 'false'): ?>
-            <div class="pxl-swiper-arrows <?php echo esc_attr($arrows_style);?>">
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"></div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"></div>
-            </div>
-        <?php endif; ?>
+        <?php if ($arrows !== 'false') :
+            basilico_arrow_template($settings);
+        endif; ?>
         <?php if($dots !== 'false'): ?>
             <div class="pxl-swiper-dots"></div>
         <?php endif; ?>
