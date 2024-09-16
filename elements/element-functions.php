@@ -822,7 +822,6 @@ function basilico_arrow_settings(){
             'label' => esc_html__('Arrow Previous Position', 'basilico'),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'default',
-            'label_block' => true,
             'options' => [
                 'default' => esc_html('Default', 'basilico'),
                 'center-vertical' => esc_html('Center Vertical', 'basilico'),
@@ -1031,7 +1030,6 @@ function basilico_arrow_settings(){
             'label' => esc_html__('Arrow Next Position', 'basilico'),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'default',
-            'label_block' => true,
             'options' => [
                 'default' => esc_html('Default', 'basilico'),
                 'absolute' => esc_html('Custom', 'basilico'),
