@@ -187,7 +187,7 @@ if ( !empty( $item_animation) ) {
                     if ( $settings['arrow_icon_next']['value'] ) 
                         \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_next'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
                     else
-                        echo '<span class="pxl-icon pxli-arrow-next"></span>';
+                        echo '<span class="pxl-icon pxli pxli-arrow-next"></span>';
                     ?>
                 </div>
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-prev <?php echo esc_attr($arrow_prev_position); ?>">
@@ -195,7 +195,7 @@ if ( !empty( $item_animation) ) {
                     if ( $settings['arrow_icon_previous']['value'] ) 
                         \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
                     else
-                        echo '<span class="pxl-icon pxli-arrow-prev"></span>';
+                        echo '<span class="pxl-icon pxli pxli-arrow-prev"></span>';
                     ?>
                 </div>
             </div>

@@ -490,119 +490,119 @@ function basilico_get_post_list_layout1($posts = [], $settings = [], $args_m = [
                         ?>
                         <div class="item-featured">
                             <div class="post-image">
-                            <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
-                            <?php
-                            if ($show_date == 'true') : ?>
-                                <div class="post-date">
-                                    <div class="post-day">
-                                        <?php echo get_the_date('d', $post->ID); ?>
+                                <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
+                                <?php
+                                if ($show_date == 'true') : ?>
+                                    <div class="post-date">
+                                        <div class="post-day">
+                                            <?php echo get_the_date('d', $post->ID); ?>
+                                        </div>
+                                        <div class="post-month-year">
+                                            <?php echo get_the_date('M y', $post->ID); ?>
+                                        </div>
                                     </div>
-                                    <div class="post-month-year">
-                                        <?php echo get_the_date('M y', $post->ID); ?>
+                                <?php endif;
+                                if (has_post_format('video', $post->ID) && !empty($featured_video)) : ?>
+                                    <div class="pxl-media-popup featured-video">
+                                        <div class="content-inner">
+                                            <a class="media-play-button video-default style-2" href="<?php echo esc_url($featured_video); ?>">
+                                                <i class="pxli-play-2"></i>
+                                            </a>
+                                        </div>
                                     </div>
+                                <?php endif;
+                                if (has_post_format('audio', $post->ID) && !empty($audio_url)) :
+                                    $filetype = wp_check_filetype($audio_url)['type'];
+                                if ($filetype == 'audio/mpeg') : ?>
+                                    <div class="pxl-media-popup featured-audio">
+                                        <div class="content-inner">
+                                            <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
+                                                <i class="pxli-volume"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <?php endif ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
+                <div class="item-content row">
+                    <div class="item-left col-md-7 col-xl-8">
+                        <h3 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
+                        <?php if ($show_excerpt == 'true') : ?>
+                            <div class="pxl-divider"></div>
+                            <div class="item-excerpt">
+                                <?php
+                                if (!empty($post->post_excerpt)) {
+                                    echo wp_trim_words($post->post_excerpt, $num_words, null);
+                                } else {
+                                    $content = strip_shortcodes($post->post_content);
+                                    $content = apply_filters('the_content', $content);
+                                    $content = str_replace(']]>', ']]&gt;', $content);
+                                    echo wp_trim_words($content, $num_words, null);
+                                }
+                                ?>
+                            </div>
+                            <?php if ($show_button == 'true') : ?>
+                                <div class="item-readmore pxl-button-wrapper">
+                                    <a class="btn btn-outline-secondary" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                        <span><?php echo pxl_print_html($button_text); ?></span>
+                                    </a>
                                 </div>
-                            <?php endif;
-                            if (has_post_format('video', $post->ID) && !empty($featured_video)) : ?>
-                                <div class="pxl-media-popup featured-video">
-                                    <div class="content-inner">
-                                        <a class="media-play-button video-default style-2" href="<?php echo esc_url($featured_video); ?>">
-                                            <i class="pxli-play-2"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            <?php endif;
-                            if (has_post_format('audio', $post->ID) && !empty($audio_url)) :
-                                $filetype = wp_check_filetype($audio_url)['type'];
-                            if ($filetype == 'audio/mpeg') : ?>
-                                <div class="pxl-media-popup featured-audio">
-                                    <div class="content-inner">
-                                        <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
-                                            <i class="pxli-volume"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            <?php endif ?>
+                            <?php endif; ?>
                         <?php endif; ?>
+                    </div>
+                    <div class="item-right col-md-5 col-xl-4">
+                        <?php
+                        if ($show_author == 'true' || $show_comment == 'true') {
+                            ?>
+                            <div class="post-metas">
+                                <div class="meta-inner">
+                                    <?php if ($show_author == 'true') : ?>
+                                        <span class="post-author">
+                                            <span class="label"><?php echo esc_html__('Written By', 'basilico'); ?>&nbsp;<a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->display_name); ?></a></span>
+                                        </span>
+                                    <?php endif; ?>
+                                    <?php
+                                    $posttags = get_the_tags($post->ID);
+                                    ?>
+                                    <span class="post-tags">
+                                        <span class="label"><?php echo esc_html('TAGS:', 'basilico'); ?></span>
+                                        <?php if ($posttags) {
+                                            foreach ($posttags as $tag) {
+                                                echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                                            }
+                                        }; ?>
+                                    </span>
+                                    <?php if ($show_comment == 'true') : ?>
+                                        <span class="post-comments">
+                                            <span class="label"><?php echo esc_html('COMMENTS:', 'basilico'); ?></span>
+                                            <a href="<?php echo get_comments_link($post->ID); ?>">
+                                                <span><?php comments_number(esc_html__('No Comments', 'basilico'), esc_html__(' 1 Comment', 'basilico'), esc_html__(' % Comments', 'basilico'), $post->ID); ?></span>
+                                            </a>
+                                        </span>
+                                    <?php endif; ?>
+                                    <?php ?>
+                                    <span class="post-share">
+                                        <span class="label"><?php echo esc_html('SHARE:', 'basilico'); ?></span>
+                                        <?php basilico()->blog->get_post_share($post->ID); ?>
+                                    </span>
+                                    <?php ?>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
                 <?php
             }
             ?>
-            <div class="item-content row">
-                <div class="item-left col-md-7 col-xl-8">
-                    <h3 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
-                    <?php if ($show_excerpt == 'true') : ?>
-                        <div class="pxl-divider"></div>
-                        <div class="item-excerpt">
-                            <?php
-                            if (!empty($post->post_excerpt)) {
-                                echo wp_trim_words($post->post_excerpt, $num_words, null);
-                            } else {
-                                $content = strip_shortcodes($post->post_content);
-                                $content = apply_filters('the_content', $content);
-                                $content = str_replace(']]>', ']]&gt;', $content);
-                                echo wp_trim_words($content, $num_words, null);
-                            }
-                            ?>
-                        </div>
-                        <?php if ($show_button == 'true') : ?>
-                            <div class="item-readmore pxl-button-wrapper">
-                                <a class="btn btn-outline-secondary" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                    <span><?php echo pxl_print_html($button_text); ?></span>
-                                </a>
-                            </div>
-                        <?php endif; ?>
-                    <?php endif; ?>
-                </div>
-                <div class="item-right col-md-5 col-xl-4">
-                    <?php
-                    if ($show_author == 'true' || $show_comment == 'true') {
-                        ?>
-                        <div class="post-metas">
-                            <div class="meta-inner">
-                                <?php if ($show_author == 'true') : ?>
-                                    <span class="post-author">
-                                        <span class="label"><?php echo esc_html__('Written By', 'basilico'); ?>&nbsp;<a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->display_name); ?></a></span>
-                                    </span>
-                                <?php endif; ?>
-                                <?php
-                                $posttags = get_the_tags($post->ID);
-                                ?>
-                                <span class="post-tags">
-                                    <span class="label"><?php echo esc_html('TAGS:', 'basilico'); ?></span>
-                                    <?php if ($posttags) {
-                                        foreach ($posttags as $tag) {
-                                            echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
-                                        }
-                                    }; ?>
-                                </span>
-                                <?php if ($show_comment == 'true') : ?>
-                                    <span class="post-comments">
-                                        <span class="label"><?php echo esc_html('COMMENTS:', 'basilico'); ?></span>
-                                        <a href="<?php echo get_comments_link($post->ID); ?>">
-                                            <span><?php comments_number(esc_html__('No Comments', 'basilico'), esc_html__(' 1 Comment', 'basilico'), esc_html__(' % Comments', 'basilico'), $post->ID); ?></span>
-                                        </a>
-                                    </span>
-                                <?php endif; ?>
-                                <?php ?>
-                                <span class="post-share">
-                                    <span class="label"><?php echo esc_html('SHARE:', 'basilico'); ?></span>
-                                    <?php basilico()->blog->get_post_share($post->ID); ?>
-                                </span>
-                                <?php ?>
-                            </div>
-                        </div>
-                        <?php
-                    }
-                    ?>
-                </div>
-            </div>
-            <?php
-        }
-        ?>
+        </div>
     </div>
-</div>
-<?php
+    <?php
 endforeach;
 }
 
@@ -706,90 +706,90 @@ function basilico_get_post_list_layout2($posts = [], $settings = [], $args_m = [
                         ?>
                         <div class="item-featured col-md-6 col-12">
                             <div class="post-image">
-                            <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
-                            <?php
-                            if (has_post_format('video', $post->ID) && !empty($featured_video)) : ?>
-                                <div class="pxl-media-popup featured-video">
-                                    <div class="content-inner">
-                                        <a class="media-play-button video-default style-2" href="<?php echo esc_url($featured_video); ?>">
-                                            <i class="pxli-play-2"></i>
-                                        </a>
+                                <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
+                                <?php
+                                if (has_post_format('video', $post->ID) && !empty($featured_video)) : ?>
+                                    <div class="pxl-media-popup featured-video">
+                                        <div class="content-inner">
+                                            <a class="media-play-button video-default style-2" href="<?php echo esc_url($featured_video); ?>">
+                                                <i class="pxli-play-2"></i>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
+                                <?php endif;
+                                if (has_post_format('audio', $post->ID) && !empty($audio_url)) :
+                                    $filetype = wp_check_filetype($audio_url)['type'];
+                                if ($filetype == 'audio/mpeg') : ?>
+                                    <div class="pxl-media-popup featured-audio">
+                                        <div class="content-inner">
+                                            <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
+                                                <i class="pxli-volume"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <?php endif ?>
                             <?php endif;
-                            if (has_post_format('audio', $post->ID) && !empty($audio_url)) :
-                                $filetype = wp_check_filetype($audio_url)['type'];
-                            if ($filetype == 'audio/mpeg') : ?>
-                                <div class="pxl-media-popup featured-audio">
-                                    <div class="content-inner">
-                                        <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
-                                            <i class="pxli-volume"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            <?php endif ?>
-                        <?php endif;
-                        ?>
-                    </div>
-                </div>
-                <?php
-            }
-            ?>
-            <div class="item-content col-md-6 col-12">
-                <?php if ($show_category == 'true') : ?>
-                    <span class="post-category">
-                        <span><?php the_terms($post->ID, 'category', '', ', ', ''); ?></span>
-                    </span>
-                <?php endif; ?>
-                <h3 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
-                <?php if ($show_excerpt == 'true') : ?>
-                    <div class="item-excerpt">
-                        <?php
-                        if (!empty($post->post_excerpt)) {
-                            echo wp_trim_words($post->post_excerpt, $num_words, null);
-                        } else {
-                            $content = strip_shortcodes($post->post_content);
-                            $content = apply_filters('the_content', $content);
-                            $content = str_replace(']]>', ']]&gt;', $content);
-                            echo wp_trim_words($content, $num_words, null);
-                        }
-                        ?>
-                    </div>
-                <?php endif; ?>
-                <?php
-                if ($show_author == 'true' || $show_comment == 'true' || $show_date == 'true') {
-                    ?>
-                    <div class="post-metas">
-                        <div class="meta-inner d-flex">
-                            <?php if ($show_author == 'true') : ?>
-                                <div class="post-author">
-                                    <span class="label"><?php echo esc_html__('by', 'basilico'); ?>&nbsp;<a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->display_name); ?></a></span>
-                                </div>
-                            <?php endif; ?>
-                            <?php if ($show_date == 'true') : ?>
-                                <div class="post-date">
-                                    <?php echo get_the_date('', $post->ID); ?>
-                                </div>
-                            <?php endif; ?>
-                            <?php if ($show_comment == 'true') : ?>
-                                <div class="post-comments">
-                                    <a href="<?php echo get_comments_link($post->ID); ?>">
-                                        <span><?php comments_number(esc_html__('No Comments', 'basilico'), esc_html__(' 1 Comment', 'basilico'), esc_html__(' % Comments', 'basilico'), $post->ID); ?></span>
-                                    </a>
-                                </div>
-                            <?php endif; ?>
+                            ?>
                         </div>
                     </div>
                     <?php
                 }
                 ?>
-            </div>
-            <?php
-        }
-        ?>
+                <div class="item-content col-md-6 col-12">
+                    <?php if ($show_category == 'true') : ?>
+                        <span class="post-category">
+                            <span><?php the_terms($post->ID, 'category', '', ', ', ''); ?></span>
+                        </span>
+                    <?php endif; ?>
+                    <h3 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
+                    <?php if ($show_excerpt == 'true') : ?>
+                        <div class="item-excerpt">
+                            <?php
+                            if (!empty($post->post_excerpt)) {
+                                echo wp_trim_words($post->post_excerpt, $num_words, null);
+                            } else {
+                                $content = strip_shortcodes($post->post_content);
+                                $content = apply_filters('the_content', $content);
+                                $content = str_replace(']]>', ']]&gt;', $content);
+                                echo wp_trim_words($content, $num_words, null);
+                            }
+                            ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php
+                    if ($show_author == 'true' || $show_comment == 'true' || $show_date == 'true') {
+                        ?>
+                        <div class="post-metas">
+                            <div class="meta-inner d-flex">
+                                <?php if ($show_author == 'true') : ?>
+                                    <div class="post-author">
+                                        <span class="label"><?php echo esc_html__('by', 'basilico'); ?>&nbsp;<a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->display_name); ?></a></span>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($show_date == 'true') : ?>
+                                    <div class="post-date">
+                                        <?php echo get_the_date('', $post->ID); ?>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($show_comment == 'true') : ?>
+                                    <div class="post-comments">
+                                        <a href="<?php echo get_comments_link($post->ID); ?>">
+                                            <span><?php comments_number(esc_html__('No Comments', 'basilico'), esc_html__(' 1 Comment', 'basilico'), esc_html__(' % Comments', 'basilico'), $post->ID); ?></span>
+                                        </a>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                </div>
+                <?php
+            }
+            ?>
+        </div>
     </div>
-</div>
-<?php
+    <?php
 endforeach;
 }
 
@@ -899,120 +899,120 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
                         ?>
                         <div class="item-featured">
                             <div class="post-image">
-                            <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
-                            <?php
-                            if ($show_date == 'true') : ?>
-                                <div class="post-date">
-                                    <div class="post-day">
-                                        <?php echo get_the_date('d', $post->ID); ?>
+                                <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
+                                <?php
+                                if ($show_date == 'true') : ?>
+                                    <div class="post-date">
+                                        <div class="post-day">
+                                            <?php echo get_the_date('d', $post->ID); ?>
+                                        </div>
+                                        <div class="post-month-year">
+                                            <?php echo get_the_date('M y', $post->ID); ?>
+                                        </div>
                                     </div>
-                                    <div class="post-month-year">
-                                        <?php echo get_the_date('M y', $post->ID); ?>
+                                <?php endif;
+                                if (has_post_format('video', $post->ID) && !empty($featured_video)) : ?>
+                                    <div class="pxl-media-popup featured-video">
+                                        <div class="content-inner">
+                                            <a class="media-play-button video-default style-2" href="<?php echo esc_url($featured_video); ?>">
+                                                <i class="pxli-play-2"></i>
+                                            </a>
+                                        </div>
                                     </div>
+                                <?php endif;
+                                if (has_post_format('audio', $post->ID) && !empty($audio_url)) :
+                                    $filetype = wp_check_filetype($audio_url)['type'];
+                                if ($filetype == 'audio/mpeg') : ?>
+                                    <div class="pxl-media-popup featured-audio">
+                                        <div class="content-inner">
+                                            <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
+                                                <i class="pxli-volume"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <?php endif ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
+                <div class="item-content row">
+                    <div class="item-left col-md-7 col-xl-8">
+                        <h3 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
+                        <?php if ($show_excerpt == 'true') : ?>
+                            <div class="pxl-divider"></div>
+                            <div class="item-excerpt">
+                                <?php
+                                if (!empty($post->post_excerpt)) {
+                                    echo wp_trim_words($post->post_excerpt, $num_words, null);
+                                } else {
+                                    $content = strip_shortcodes($post->post_content);
+                                    $content = apply_filters('the_content', $content);
+                                    $content = str_replace(']]>', ']]&gt;', $content);
+                                    echo wp_trim_words($content, $num_words, null);
+                                }
+                                ?>
+                            </div>
+                            <?php if ($show_button == 'true') : ?>
+                                <div class="item-readmore pxl-button-wrapper">
+                                    <a class="btn-more style-2" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                        <span><?php echo pxl_print_html($button_text); ?></span>
+                                        <i class="zmdi zmdi-long-arrow-right"></i>
+                                    </a>
                                 </div>
-                            <?php endif;
-                            if (has_post_format('video', $post->ID) && !empty($featured_video)) : ?>
-                                <div class="pxl-media-popup featured-video">
-                                    <div class="content-inner">
-                                        <a class="media-play-button video-default style-2" href="<?php echo esc_url($featured_video); ?>">
-                                            <i class="pxli-play-2"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            <?php endif;
-                            if (has_post_format('audio', $post->ID) && !empty($audio_url)) :
-                                $filetype = wp_check_filetype($audio_url)['type'];
-                            if ($filetype == 'audio/mpeg') : ?>
-                                <div class="pxl-media-popup featured-audio">
-                                    <div class="content-inner">
-                                        <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
-                                            <i class="pxli-volume"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            <?php endif ?>
+                            <?php endif; ?>
                         <?php endif; ?>
+                    </div>
+                    <div class="item-right col-md-5 col-xl-4">
+                        <?php
+                        if ($show_author == 'true' || $show_comment == 'true') {
+                            ?>
+                            <div class="post-metas">
+                                <div class="meta-inner">
+                                    <?php if ($show_author == 'true') : ?>
+                                        <span class="post-author">
+                                            <span class="label"><?php echo esc_html__('Written By', 'basilico'); ?>&nbsp;<a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->display_name); ?></a></span>
+                                        </span>
+                                    <?php endif; ?>
+                                    <?php
+                                    $posttags = get_the_tags($post->ID);
+                                    ?>
+                                    <span class="post-tags">
+                                        <span class="label"><?php echo esc_html('TAGS:', 'basilico'); ?></span>
+                                        <?php if ($posttags) {
+                                            foreach ($posttags as $tag) {
+                                                echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                                            }
+                                        }; ?>
+                                    </span>
+                                    <?php if ($show_comment == 'true') : ?>
+                                        <span class="post-comments">
+                                            <span class="label"><?php echo esc_html('COMMENTS:', 'basilico'); ?></span>
+                                            <a href="<?php echo get_comments_link($post->ID); ?>">
+                                                <span><?php comments_number(esc_html__('No Comments', 'basilico'), esc_html__(' 1 Comment', 'basilico'), esc_html__(' % Comments', 'basilico'), $post->ID); ?></span>
+                                            </a>
+                                        </span>
+                                    <?php endif; ?>
+                                    <?php ?>
+                                    <span class="post-share">
+                                        <span class="label"><?php echo esc_html('SHARE POST:', 'basilico'); ?></span>
+                                        <?php basilico()->blog->get_post_share($post->ID); ?>
+                                    </span>
+                                    <?php ?>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
                 <?php
             }
             ?>
-            <div class="item-content row">
-                <div class="item-left col-md-7 col-xl-8">
-                    <h3 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
-                    <?php if ($show_excerpt == 'true') : ?>
-                        <div class="pxl-divider"></div>
-                        <div class="item-excerpt">
-                            <?php
-                            if (!empty($post->post_excerpt)) {
-                                echo wp_trim_words($post->post_excerpt, $num_words, null);
-                            } else {
-                                $content = strip_shortcodes($post->post_content);
-                                $content = apply_filters('the_content', $content);
-                                $content = str_replace(']]>', ']]&gt;', $content);
-                                echo wp_trim_words($content, $num_words, null);
-                            }
-                            ?>
-                        </div>
-                        <?php if ($show_button == 'true') : ?>
-                            <div class="item-readmore pxl-button-wrapper">
-                                <a class="btn-more style-2" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                    <span><?php echo pxl_print_html($button_text); ?></span>
-                                    <i class="zmdi zmdi-long-arrow-right"></i>
-                                </a>
-                            </div>
-                        <?php endif; ?>
-                    <?php endif; ?>
-                </div>
-                <div class="item-right col-md-5 col-xl-4">
-                    <?php
-                    if ($show_author == 'true' || $show_comment == 'true') {
-                        ?>
-                        <div class="post-metas">
-                            <div class="meta-inner">
-                                <?php if ($show_author == 'true') : ?>
-                                    <span class="post-author">
-                                        <span class="label"><?php echo esc_html__('Written By', 'basilico'); ?>&nbsp;<a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->display_name); ?></a></span>
-                                    </span>
-                                <?php endif; ?>
-                                <?php
-                                $posttags = get_the_tags($post->ID);
-                                ?>
-                                <span class="post-tags">
-                                    <span class="label"><?php echo esc_html('TAGS:', 'basilico'); ?></span>
-                                    <?php if ($posttags) {
-                                        foreach ($posttags as $tag) {
-                                            echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
-                                        }
-                                    }; ?>
-                                </span>
-                                <?php if ($show_comment == 'true') : ?>
-                                    <span class="post-comments">
-                                        <span class="label"><?php echo esc_html('COMMENTS:', 'basilico'); ?></span>
-                                        <a href="<?php echo get_comments_link($post->ID); ?>">
-                                            <span><?php comments_number(esc_html__('No Comments', 'basilico'), esc_html__(' 1 Comment', 'basilico'), esc_html__(' % Comments', 'basilico'), $post->ID); ?></span>
-                                        </a>
-                                    </span>
-                                <?php endif; ?>
-                                <?php ?>
-                                <span class="post-share">
-                                    <span class="label"><?php echo esc_html('SHARE POST:', 'basilico'); ?></span>
-                                    <?php basilico()->blog->get_post_share($post->ID); ?>
-                                </span>
-                                <?php ?>
-                            </div>
-                        </div>
-                        <?php
-                    }
-                    ?>
-                </div>
-            </div>
-            <?php
-        }
-        ?>
+        </div>
     </div>
-</div>
-<?php
+    <?php
 endforeach;
 }
 
@@ -1132,23 +1132,23 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                     if (isset($thumbnail)) { ?>
                         <div class="post-image">
                             <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
-                            <?php }
-                            if (!empty($audio_url)) {
-                                $filetype = wp_check_filetype($audio_url)['type'];
-                                if ($filetype == 'audio/mpeg') { ?>
-                                    <div class="pxl-media-popup">
-                                        <div class="content-inner">
-                                            <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
-                                                <i class="pxli-volume"></i>
-                                            </a>
-                                        </div>
+                        <?php }
+                        if (!empty($audio_url)) {
+                            $filetype = wp_check_filetype($audio_url)['type'];
+                            if ($filetype == 'audio/mpeg') { ?>
+                                <div class="pxl-media-popup">
+                                    <div class="content-inner">
+                                        <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
+                                            <i class="pxli-volume"></i>
+                                        </a>
                                     </div>
-                                <?php }
-                            } else {
-                                global $wp_embed;
-                                pxl_print_html($wp_embed->run_shortcode('[embed]' . $audio_url . '[/embed]'));
-                            } ?>
-                        </div>
+                                </div>
+                            <?php }
+                        } else {
+                            global $wp_embed;
+                            pxl_print_html($wp_embed->run_shortcode('[embed]' . $audio_url . '[/embed]'));
+                        } ?>
+                    </div>
                     <?php
                 } elseif (isset($thumbnail)) { ?>
                     <div class="item-featured">
@@ -1232,7 +1232,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                 <?php } ?>
             </div>
         </div>
-    <?php
+        <?php
     endforeach;
 }
 
@@ -1483,8 +1483,8 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                 </div>
             </div>
         </div>
-<?php
-endforeach;
+        <?php
+    endforeach;
 }
 
 function basilico_get_post_grid_layout3($posts = [], $settings = [], $args_m = [])
@@ -1589,8 +1589,8 @@ function basilico_get_post_grid_layout3($posts = [], $settings = [], $args_m = [
                 </div>
             </div>
         </div>
-<?php
-endforeach;
+        <?php
+    endforeach;
 }
 
 function basilico_get_pxl_portfolio_list_layout1($posts = [], $settings = [], $args_m = [])
@@ -1992,4 +1992,27 @@ function basilico_get_post_grid_pxl_portfolio3($posts = [], $settings = [], $arg
         </div>
         <?php
     endforeach;
+}
+
+function basilico_arrow_template($arrow_icon_prev_cls = 'pxli pxli-arrow-prev', $arrow_icon_next_cls = 'pxli pxli-arrow-next', $hide_under_width) {
+    $hide_below = $hide_under_width ? 'data-hide-below=' . esc_attr($hide_under_width) : ''; ?>
+    <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style); ?>" <?php echo $hide_below ?>>
+        <div class="pxl-swiper-arrow pxl-swiper-arrow-prev <?php echo esc_attr($arrow_prev_position); ?>">
+            <?php 
+            if ( $settings['arrow_icon_previous']['value'] ) 
+                \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+            else
+                echo '<span class="pxl-icon ' . $arrow_icon_prev_cls . '"></span>';
+            ?>
+        </div>
+        <div class="pxl-swiper-arrow pxl-swiper-arrow-next <?php echo esc_attr($arrow_next_position); ?>">
+            <?php
+            if ( $settings['arrow_icon_next']['value'] ) 
+                \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_next'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+            else
+                echo '<span class="pxl-icon ' . $arrow_icon_next_cls . '"></span>';
+            ?>
+        </div>
+    </div>
+    <?php
 }
