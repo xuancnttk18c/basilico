@@ -539,11 +539,20 @@ label[for="coupon_code"]{
 	}
 }
 
+.pxl-widget-cart-content .pxl-cart-empty {
+	padding: 0;
+}
+
+.pxl-shop-layout-2 .pxl-cart-widget .pxl-cart-empty .empty-icon i {
+	color: $primary_color;
+}
+
 .cart-content-left {
 	@media (min-width: $lg_min){
 		padding-right: 45px;
 	}
 }
+
 .cart-list-wrapper{
 	.cart-list-head{
 		font-size: 14px;
