@@ -8,13 +8,14 @@ add_filter( 'woosw_button_position_single', function() {
 
 add_filter( 'woosw_button_html', 'basilico_change_wishlist_button_html', 10, 3 );
 function basilico_change_wishlist_button_html($output, $id, $attrs){
-
 	$key = isset( $_COOKIE['woosw_key'] ) ? $_COOKIE['woosw_key'] : '#';
 	$added_products = [];
+	$btn_style = basilico()->get_theme_opt('wishlist_button_style', 'btn-default');
+
 	if ( get_option( 'woosw_list_' . $key ) ) {
 		$added_products = get_option( 'woosw_list_' . $key );
 	}
-	$class = 'woosw-btn woosw-btn-' . esc_attr( $attrs['id'] ) . ' ' . basilico()->get_theme_opt('wishlist_button_style', 'btn-default');
+	$class = 'woosw-btn woosw-btn-' . esc_attr( $attrs['id'] ) . ' ' . $btn_style;
 	$text = esc_html__( 'Add to wishlist', 'basilico' );
 	if ( array_key_exists( $id, $added_products ) ) {
 		$class .= ' woosw-added';
