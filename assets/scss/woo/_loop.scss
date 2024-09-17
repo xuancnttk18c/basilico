@@ -1157,5 +1157,10 @@ select.orderby{
 				color: #fff;
 			}
 		}
+		.added_to_cart {
+			&:before {
+				margin-right: 8px;
+			}
+		}
 	}
 }
