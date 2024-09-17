@@ -1004,9 +1004,6 @@ select.orderby{
 					background-color: $secondary_color;
 					padding: 0;
 					&:before {
-						display: none;
-					}
-					&:after {
 						content: "\e985";
 						color: #fff;
 						font-family: $pxli_font;
@@ -1014,16 +1011,11 @@ select.orderby{
 					}
 					&.woosw-adding {
 						&:before {
-							content: "\e95b" !important;
-							@include animation(pxl-spin 2s linear infinite);
-						}
-						&:after {
-							content: "\e95b" !important;
-							@include animation(pxl-spin 2s linear infinite);
+							content: "\e95b";
 						}
 					}
 					&.woosw-added {
-						&:after {
+						&:before {
 							content: "\e90c";
 						}
 					}
