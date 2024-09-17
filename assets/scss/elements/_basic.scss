@@ -2930,6 +2930,9 @@
             color: $heading_color;
             position: relative;
             margin-bottom: 7px;
+            @media (max-width: $sm_max) {
+                font-size: 25px;
+            }
         }
         .box-button {
             margin-top: 33px;
