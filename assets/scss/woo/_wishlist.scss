@@ -185,6 +185,10 @@
 }
 
 .pxl-page:has(.pxl-shop-layout-5) ~ #woosw_wishlist {
+	.woosw-popup-inner .woosw-popup-content .woosw-popup-content-top,
+	.woosw-popup-inner .woosw-popup-content .woosw-popup-content-bot {
+		background-color: $primary_colorl
+	}
 	.pxl-btn {
         font-family: $heading_font_family;
         background-color: $primary_color;

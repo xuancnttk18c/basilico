@@ -1013,9 +1013,8 @@ select.orderby{
 						font-size: 15px;
 					}
 					&.woosw-adding {
-						&:before {
-							content: "\e95b";
-							font-family: $pxli_font;
+						&:after {
+							content: "\e95b" !important;
 							@include animation(pxl-spin 2s linear infinite);
 						}
 					}
