@@ -723,14 +723,6 @@ function basilico_arrow_settings(){
             'prefix_class' => 'pxl-swiper-arrows%s-',
         ),
         array(
-            'name' => 'arrows_hide_below',
-            'label' => esc_html__('Hide Below (px)', 'basilico'),
-            'type' => \Elementor\Controls_Manager::NUMBER,
-            'condition' => [
-                'arrows' => 'true'
-            ]
-        ),
-        array(
             'name' => 'arrows_style',
             'label' => esc_html__('Arrows Style', 'basilico'),
             'type' => \Elementor\Controls_Manager::SELECT,
