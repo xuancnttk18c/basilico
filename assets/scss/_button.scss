@@ -29,11 +29,10 @@
     font-weight: $button_font_weight;
     letter-spacing: $button_letter_spacing;
     padding: $button_padding;
+    line-height: $button_line_height;
     @include border-radius($button_radius);
     background-color: $secondary_color;
     color: #fff;
-    line-height: $input_height;
-    height: $input_height;
     text-transform: uppercase;
     white-space: nowrap;
     outline: none;
@@ -44,6 +43,10 @@
     overflow: hidden;
     @include box-shadow(none);
     @include transition(all 250ms linear 0s);
+    @media (max-width: $md_max){
+        padding: 8px 25px 8px 25px;
+        font-size: 12px;
+    }
     &:before {
         z-index: 1;
     }

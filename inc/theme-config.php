@@ -132,9 +132,10 @@ if(!function_exists('basilico_configs')){
                 'font-size'          => '13px',
                 'font-weight'        => '400',
                 'letter-spacing'     => '0.15em',
-                'padding'            => '0 32.75px',
+                'padding'            => '10px 32px',
                 'radius'             => '0',
                 'radius-rtl'         => '0',
+                'line-height'        => '24px',
             ],
             //* Input
             'input' => [
