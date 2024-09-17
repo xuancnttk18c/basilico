@@ -89,3 +89,12 @@
 		}
 	}
 }
+
+.woosw-copy-btn {
+	margin-left: 10px;
+}
+
+.woosw-copy > code {
+	@include d-flex();
+	align-items: center;
+}
