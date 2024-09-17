@@ -101,15 +101,27 @@
 
 .pxl-page:has(.pxl-shop-layout-1) ~ #woosw_wishlist {
 	.pxl-btn {
-		background-color: $default_color;
-        border-color: $default_color;
-        color: #fff;
-        &:active,&:hover, &:focus {
-            background-color: $second_color;
-            border-color: $second_color;
-            color: #fff;
+        border: 1px solid $secondary_color;
+        &:before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            bottom: -1px;
+            right: -1px;
+            height: 0;
+            background-color: #fff;
+            @include transition(all 250ms linear 0s);
         }
-	}
+        &:hover {
+            color: $heading_color;
+            i, .pxl-button-icon {
+                color: $heading_color;
+            }
+            &:before {
+                height: calc(100% + 2px);
+            }
+        }
+    }
 }
 
 .pxl-page:has(.pxl-shop-layout-2) ~ #woosw_wishlist {
