@@ -54,3 +54,33 @@
 		margin-top: 10px;
 	}
 }
+
+.woosw-list, .woosw-action {
+	code, kbd, tt, var {
+		font-family: $body_font_family;
+	}
+}
+
+#woosw_copy_btn {
+	font-family: $heading_font_family;
+	background-color: $primary_color;
+	line-height: 50px;
+	height: 50px;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 0.15em;
+	overflow: visible;
+	@include border-radius(5px);
+	span + i, i + span {
+		margin-left: 13px;
+	}
+	i {
+		font-size: 13px;
+	}
+	.pxl-button-icon {
+		color: #fff;
+	}
+	&:hover {
+		background-color: $secondary_color;
+	}
+}
