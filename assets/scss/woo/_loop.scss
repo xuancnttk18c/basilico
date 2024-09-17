@@ -483,6 +483,33 @@ select.orderby{
 	}
 }
 
+.pxl-shop-layout-1 {
+	.pxl-products-content-list-view {
+		.pxl-btn {
+			border: 1px solid $secondary_color;
+			&:before {
+				content: '';
+				position: absolute;
+				left: -1px;
+				bottom: -1px;
+				right: -1px;
+				height: 0;
+				background-color: #fff;
+				@include transition(all 250ms linear 0s);
+			}
+			&:hover {
+				color: $heading_color;
+				i, .pxl-button-icon {
+					color: $heading_color;
+				}
+				&:before {
+					height: calc(100% + 2px);
+				}
+			}
+		}
+	}
+}
+
 .pxl-shop-layout-2 {
 	.pxl-view-layout {
 		li {
