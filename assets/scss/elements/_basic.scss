@@ -227,6 +227,9 @@
         span {
             position: relative;
         }
+        @media (max-width: $sm_max) {
+            font-size: 14px;
+        }
         &.style-1 {
             &.highlighted {
                 span {
