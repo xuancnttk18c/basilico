@@ -714,6 +714,8 @@ function basilico_arrow_settings(){
             'name' => 'arrows',
             'label' => esc_html__('Show Arrows', 'basilico'),
             'type' => \Elementor\Controls_Manager::SWITCHER,
+            'control_type' => 'responsive',
+            'prefix_class' => 'pxl-swiper-arrows%s-',
         ),
         array(
             'name' => 'arrows_hide_below',
