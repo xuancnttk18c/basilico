@@ -45,9 +45,7 @@
 			}
 		}
 		&.added {
-			+ .added_to_cart {
-				opacity: 1;
-			}
+			display: none;
 		}
 	}
 	.pxl-btn + .added_to_cart {
