@@ -50,8 +50,8 @@
 			}
 		}
 	}
-	.added_to_cart {
-		margin-top: 10px;
+	.pxl-btn + .added_to_cart {
+		display: none;
 	}
 }
 
@@ -100,7 +100,7 @@
 }
 
 .pxl-page:has(.pxl-shop-layout-1) ~ #woosw_wishlist {
-	.pxl-btn {
+	.pxl-btn, .added_to_cart {
         border: 1px solid $secondary_color;
         &:before {
             content: '';
@@ -132,7 +132,7 @@
 		border-top: 1px solid $divider_color;
 		border-bottom: 1px solid $divider_color;
 	}
-	.pxl-btn {
+	.pxl-btn, .added_to_cart {
         color: $heading_color;
         border: 1px solid $primary_color;
         background-color: transparent;
@@ -185,7 +185,7 @@
 }
 
 .pxl-page:has(.pxl-shop-layout-5) ~ #woosw_wishlist {
-	.pxl-btn {
+	.pxl-btn, .added_to_cart {
         font-family: $heading_font_family;
         background-color: $secondary_color;
         line-height: 50px;
