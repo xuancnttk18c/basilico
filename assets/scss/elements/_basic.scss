@@ -372,14 +372,13 @@
         h2 {
             font-size: 40px;
             @media (max-width: $sm_max) {
-                font-size: 32px;
-                line-height: 1.2;
+                font-size: 25px;
             }
         }
         h3 {
             font-size: 30px;
             @media (max-width: $sm_max) {
-                font-size: 28px;
+                font-size: 20px;
             }
         }
     }
