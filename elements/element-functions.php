@@ -711,9 +711,14 @@ function basilico_carousel_column_settings(){
 function basilico_arrow_settings(){
     return array(
         array(
-            'name' => 'arrows',
-            'label' => esc_html__('Show Arrows', 'basilico'),
-            'type' => \Elementor\Controls_Manager::SWITCHER,
+            'name'         => 'arrows',
+            'label'        => esc_html__('Show Arrows', 'basilico'),
+            'type'         => 'select',
+            'options'      => [
+                'true'  => esc_html__('Yes', 'basilico'),
+                'false' => esc_html__('No', 'basilico')
+            ], 
+            'default'      => 'false',
             'control_type' => 'responsive',
             'prefix_class' => 'pxl-swiper-arrows%s-',
         ),

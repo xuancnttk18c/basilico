@@ -128,7 +128,7 @@ $spacers: (
 
 @each $breakpoint, $max_width in $screen_breakpoints {
     @media (max-width: $max_width){
-        .pxl-swiper-arrows-#{$breakpoint}-no{
+        .pxl-swiper-arrows-#{$breakpoint}-false{
             .pxl-slider-arrow-wrap{
                 display: none;
             }
@@ -136,7 +136,7 @@ $spacers: (
                 display: none;
             }
         }
-        .pxl-swiper-arrows-#{$breakpoint}-yes{
+        .pxl-swiper-arrows-#{$breakpoint}-true{
             .pxl-slider-arrow-wrap{
                 display: flex;
             }
