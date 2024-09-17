@@ -301,21 +301,6 @@
                     });
                 });
             }
-
-            function hideArrowUnderWidth() {
-                var hideBelowWidth = $scope.find('.pxl-swiper-arrows').data('hide-below');
-                if ($(window).width() < hideBelowWidth) {
-                    $scope.find('.pxl-swiper-arrows').hide();
-                } else {
-                    $scope.find('.pxl-swiper-arrows').show();
-                }
-            }
-
-            hideArrowUnderWidth();
-
-            $(window).resize(function() {
-                hideArrowUnderWidth();
-            });
         });
     }
 
