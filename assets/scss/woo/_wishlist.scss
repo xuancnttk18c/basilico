@@ -99,6 +99,19 @@
 	align-items: center;
 }
 
+.pxl-page:has(.pxl-shop-layout-1) ~ #woosw_wishlist {
+	.pxl-btn {
+		background-color: $default_color;
+        border-color: $default_color;
+        color: #fff;
+        &:active,&:hover, &:focus {
+            background-color: $second_color;
+            border-color: $second_color;
+            color: #fff;
+        }
+	}
+}
+
 .pxl-page:has(.pxl-shop-layout-2) ~ #woosw_wishlist {
 	.woosw-popup-content-mid {
 		background-color: var(--content_bg_color-color);
