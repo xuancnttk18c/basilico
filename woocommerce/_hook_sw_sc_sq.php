@@ -14,7 +14,7 @@ function basilico_change_wishlist_button_html($output, $id, $attrs){
 	if ( get_option( 'woosw_list_' . $key ) ) {
 		$added_products = get_option( 'woosw_list_' . $key );
 	}
-	$class = 'woosw-btn woosw-btn-' . esc_attr( $attrs['id'] );
+	$class = 'woosw-btn woosw-btn-' . esc_attr( $attrs['id'] ) . ' ' . basilico()->get_option('wishlist_button_style', 'btn-default');
 	$text = esc_html__( 'Add to wishlist', 'basilico' );
 	if ( array_key_exists( $id, $added_products ) ) {
 		$class .= ' woosw-added';
