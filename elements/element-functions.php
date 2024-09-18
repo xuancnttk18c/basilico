@@ -732,9 +732,6 @@ function basilico_arrow_settings(){
                 'style-3' => esc_html__('Style 3'),
             ],
             'default' => 'style-1',
-            'condition' => [
-                'arrows' => 'true'
-            ]
         ),
         array(
             'name' => 'arrow_icon_previous',
@@ -742,9 +739,6 @@ function basilico_arrow_settings(){
             'type' => 'icons',
             'label_block' => true,
             'fa4compatibility' => 'icon',
-            'condition' => [
-                'arrows' => 'true'
-            ]
         ),
         array(
             'name' => 'arrow_icon_next',
@@ -752,9 +746,6 @@ function basilico_arrow_settings(){
             'type' => 'icons',
             'label_block' => true,
             'fa4compatibility' => 'icon',
-            'condition' => [
-                'arrows' => 'true'
-            ]
         ),
         array(
             'name' => 'arrows_bg',
@@ -764,7 +755,6 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow' => 'background-color: {{VALUE}};',
             ],
             'condition' => [
-                'arrows' => 'true',
                 'arrows_style' => 'style-2'
             ]
         ),
@@ -776,7 +766,6 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow:hover' => 'background-color: {{VALUE}};',
             ],
             'condition' => [
-                'arrows' => 'true',
                 'arrows_style' => 'style-2'
             ]
         ),
@@ -796,9 +785,6 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'font-size: {{SIZE}}{{UNIT}};',
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow svg' => 'width: {{SIZE}}{{UNIT}};',
             ],
-            'condition' => [
-                'arrows' => 'true'
-            ]
         ),
         array(
             'name' => 'arrows_icon_color',
@@ -808,9 +794,6 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow .pxl-icon' => 'color: {{VALUE}};',
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow svg' => 'fill: {{VALUE}};'
             ],
-            'condition' => [
-                'arrows' => 'true'
-            ]
         ),
         array(
             'name' => 'arrows_icon_hover',
@@ -820,9 +803,6 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow:hover .pxl-icon' => 'color: {{VALUE}};',
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow:hover svg' => 'fill: {{VALUE}};',
             ],
-            'condition' => [
-                'arrows' => 'true'
-            ]
         ),
         array(
             'name' => 'arrow_prev_position',
@@ -834,9 +814,6 @@ function basilico_arrow_settings(){
                 'center-vertical' => esc_html('Center Vertical', 'basilico'),
                 'absolute' => esc_html('Custom', 'basilico'),
             ],
-            'condition' => [
-                'arrows' => 'true'
-            ]
         ),
         array(
             'name' => 'arrow_prev_offset_orientation_h',
@@ -855,7 +832,6 @@ function basilico_arrow_settings(){
             ],
             'render_type' => 'ui',
             'condition' => [
-                'arrows' => 'true',
                 'arrow_prev_position' => ['absolute', 'center-vertical']
             ]
         ),
@@ -892,7 +868,6 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; left: {{SIZE}}{{UNIT}}; right: auto;',
             ],
             'condition' => [
-                'arrows' => 'true',
                 'arrow_prev_offset_orientation_h!' => 'right',
                 'arrow_prev_position' => ['absolute', 'center-vertical']
             ],
@@ -930,7 +905,6 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; right: {{SIZE}}{{UNIT}}; left: auto;',
             ],
             'condition' => [
-                'arrows' => 'true', 
                 'arrow_prev_offset_orientation_h' => 'right',
                 'arrow_prev_position' => ['absolute', 'center-vertical'],
             ],
@@ -952,7 +926,6 @@ function basilico_arrow_settings(){
             ],
             'render_type' => 'ui',
             'condition' => [
-                'arrows' => 'true',
                 'arrow_prev_position' => 'absolute',
             ]
         ),
@@ -989,7 +962,6 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; top: {{SIZE}}{{UNIT}}; bottom: auto;',
             ],
             'condition' => [
-                'arrows' => 'true',
                 'arrow_prev_offset_orientation_v!' => 'bottom',
                 'arrow_prev_position' => 'absolute',
             ],
@@ -1027,7 +999,6 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; bottom: {{SIZE}}{{UNIT}}; top: auto;',
             ],
             'condition' => [
-                'arrows' => 'true',
                 'arrow_prev_offset_orientation_v' => 'bottom',
                 'arrow_prev_position' => 'absolute',
             ],
@@ -1042,9 +1013,6 @@ function basilico_arrow_settings(){
                 'center-vertical' => esc_html('Center Vertical', 'basilico'),
                 'absolute' => esc_html('Custom', 'basilico'),
             ],
-            'condition' => [
-                'arrows' => 'true'
-            ]
         ),
         array(
             'name' => 'arrow_next_offset_orientation_h',
@@ -1063,7 +1031,6 @@ function basilico_arrow_settings(){
             ],
             'render_type' => 'ui',
             'condition' => [
-                'arrows' => 'true',
                 'arrow_next_position' => ['absolute', 'center-vertical']
             ]
         ),
@@ -1100,7 +1067,6 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
             ],
             'condition' => [
-                'arrows' => 'true',
                 'arrow_next_offset_orientation_h!' => 'right',
                 'arrow_next_position' => ['absolute', 'center-vertical'],
             ],
@@ -1138,7 +1104,6 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
             ],
             'condition' => [
-                'arrows' => 'true',
                 'arrow_next_offset_orientation_h' => 'right',
                 'arrow_next_position' => ['absolute', 'center-vertical'],
             ],
@@ -1160,7 +1125,6 @@ function basilico_arrow_settings(){
             ],
             'render_type' => 'ui',
             'condition' => [
-                'arrows' => 'true',
                 'arrow_next_position' => 'absolute'
             ]
         ),
@@ -1197,7 +1161,6 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
             ],
             'condition' => [
-                'arrows' => 'true',
                 'arrow_next_offset_orientation_v!' => 'bottom',
                 'arrow_next_position' => 'absolute',
             ],
@@ -1235,7 +1198,6 @@ function basilico_arrow_settings(){
                 '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-next' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
             ],
             'condition' => [
-                'arrows' => 'true',
                 'arrow_next_offset_orientation_v' => 'bottom',
                 'arrow_next_position' => 'absolute',
             ]
