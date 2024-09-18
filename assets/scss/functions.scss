@@ -146,3 +146,33 @@ $spacers: (
         } 
     }
 }
+
+.pxl-swiper-dots-false{
+    .pxl-slider-dots{
+        display: none;
+    }
+    .pxl-swiper-dots{
+        display: none;
+    }
+}
+
+@each $breakpoint, $max_width in $screen_breakpoints {
+    @media (max-width: $max_width){
+        .pxl-swiper-dots-#{$breakpoint}-false{
+            .pxl-slider-dots{
+                display: none;
+            }
+            .pxl-swiper-dots{
+                display: none;
+            }
+        }
+        .pxl-swiper-dots-#{$breakpoint}-true{
+            .pxl-slider-dots{
+                display: flex;
+            }
+            .pxl-swiper-dots{
+                display: flex;
+            }
+        }
+    }
+}

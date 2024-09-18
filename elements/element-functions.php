@@ -1205,6 +1205,39 @@ function basilico_arrow_settings(){
     );
 }
 
+function basilico_dots_settings(){
+    return array(
+        array(
+            'name'         => 'dots',
+            'label'        => esc_html__('Show Dots', 'donalfarm'),
+            'type'         => 'select',
+            'options'      => [
+                'true'  => esc_html__('Yes', 'donalfarm'),
+                'false' => esc_html__('No','donalfarm')
+            ], 
+            'default'      => 'false',
+            'control_type' => 'responsive',
+            'prefix_class' => 'pxl-swiper-dots%s-'
+        ),
+        array(
+            'name' => 'dots_color',
+            'label' => esc_html__('Dots Color', 'basilico'),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:before' => 'background-color: {{VALUE}};',
+            ],
+        ),
+        array(
+            'name' => 'dots_color_active',
+            'label' => esc_html__('Active Color', 'basilico'),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet.swiper-pagination-bullet-active:before' => 'background-color: {{VALUE}};',
+            ],
+        ),
+    );
+}
+
 function basilico_elementor_animation_opts($args = []){
     $args = wp_parse_args($args, [
         'name'   => '',

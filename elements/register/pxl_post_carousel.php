@@ -248,14 +248,6 @@ pxl_add_custom_widget(
                     ),
                 ),
                 array(
-                    'name' => 'arrow_settings',
-                    'label' => esc_html__('Arrow Settings', 'basilico' ),
-                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
-                    'controls' => array_merge(
-                        basilico_arrow_settings(),
-                    ),
-                ),
-                array(
                     'name' => 'display_section',
                     'label' => esc_html__('Display Items Options', 'basilico' ),
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
@@ -324,7 +316,22 @@ pxl_add_custom_widget(
                         ),
                     ),
                 ),
-
+                array(
+                    'name' => 'arrow_settings',
+                    'label' => esc_html__('Arrow Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
+                    'controls' => array_merge(
+                        basilico_arrow_settings(),
+                    ),
+                ),
+                array(
+                    'name' => 'dots_settings',
+                    'label' => esc_html__('Dots Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
+                    'controls' => array_merge(
+                        basilico_dots_settings(),
+                    ),
+                ),
             ),
         ),
     ),

@@ -192,12 +192,10 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'ba
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php if ($arrows !== 'false') :
+        <?php
             basilico_arrow_template($settings);
-        endif; ?>
-        <?php if($dots !== 'false'): ?>
-            <div class="pxl-swiper-dots"></div>
-        <?php endif; ?>
+        ?>
+        <div class="pxl-swiper-dots"></div>
     </div>
 </div>
 <?php endif; ?>
