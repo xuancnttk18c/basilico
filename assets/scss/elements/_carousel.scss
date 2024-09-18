@@ -3328,6 +3328,10 @@
                 bottom: -55px;
                 @include transition(0.5s cubic-bezier(0.63, 0.25, 0.25, 1));
                 clip-path: inset(100% 0 0 0);
+                @media (max-width: $sm_max) {
+                    left: 20px;
+                    right: 20px;
+                }
                 .content-inner {
                     background-color: $secondary_color;
                     padding: 66px 25px 68px;
@@ -3347,6 +3351,10 @@
             left: 38px;
             right: 38px;
             bottom: -55px;
+            @media (max-width: $sm_max) {
+                left: 20px;
+                right: 20px;
+            }
             .title-wrap {
                 padding: 33px 15px 26px;
                 background-color: $secondary_color;
