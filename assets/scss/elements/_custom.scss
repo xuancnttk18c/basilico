@@ -187,6 +187,8 @@ body:has(.pxl-header-sticky.h-fixed) {
         @include transition();
     }
     &:hover {
-        backdrop-filter: blur(5px);
+        &:before {
+            backdrop-filter: blur(5px);
+        }
     }
 }
