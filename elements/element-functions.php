@@ -1209,11 +1209,11 @@ function basilico_dots_settings(){
     return array(
         array(
             'name'         => 'dots',
-            'label'        => esc_html__('Show Dots', 'donalfarm'),
+            'label'        => esc_html__('Show Dots', 'basilico'),
             'type'         => 'select',
             'options'      => [
-                'true'  => esc_html__('Yes', 'donalfarm'),
-                'false' => esc_html__('No','donalfarm')
+                'true'  => esc_html__('Yes', 'basilico'),
+                'false' => esc_html__('No', 'basilico')
             ], 
             'default'      => 'false',
             'control_type' => 'responsive',
