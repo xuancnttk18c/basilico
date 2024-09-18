@@ -119,8 +119,8 @@ if(class_exists('WPCF7')) {
                                             ),
                                             array(
                                                 'name'      => 'select_style',
-                                                'type'      => 'select',
-                                                'title'     => esc_html__('Select Dropdown Icon Style', 'basilico'),
+                                                'type'      => \Elementor\Controls_Manager::SELECT,
+                                                'label'     => esc_html__('Select Dropdown Icon Style', 'basilico'),
                                                 'options'   => array(
                                                     ''          => esc_html__('Default', 'basilico'),
                                                     'select-2'  => esc_html__('Style 2', 'basilico'),
