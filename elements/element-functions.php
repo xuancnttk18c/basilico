@@ -1236,6 +1236,29 @@ function basilico_dots_settings(){
             ],
         ),
         array(
+            'name' => 'dots_align',
+            'label' => esc_html__('Alignment', 'basilico' ),
+            'type' => 'choose',
+            'control_type' => 'responsive',
+            'options' => [
+                'start' => [
+                    'title' => esc_html__( 'Start', 'basilico' ),
+                    'icon' => 'eicon-text-align-left',
+                ],
+                'center' => [
+                    'title' => esc_html__( 'Center', 'basilico' ),
+                    'icon' => 'eicon-text-align-center',
+                ],
+                'end' => [
+                    'title' => esc_html__( 'End', 'basilico' ),
+                    'icon' => 'eicon-text-align-right',
+                ]
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-dots, {{WRAPPER}} .slick-dots' => 'justify-content: {{VALUE}};'
+            ],
+        ),
+        array(
             'name' => 'dots_color',
             'label' => esc_html__('Dots Color', 'basilico'),
             'type' => \Elementor\Controls_Manager::COLOR,
