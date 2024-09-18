@@ -174,10 +174,11 @@ body:has(.pxl-header-sticky.h-fixed) {
     }
 }
 
-.column-hover-blur .elementor-widget-wrap {
+.column-hover-blur:hover .elementor-widget-wrap {
     position: relative;
     &:before {
         content: '';
+        position: absolute;
         top: 0;
         left: 0;
         right: 0;
