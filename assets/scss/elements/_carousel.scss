@@ -3313,8 +3313,7 @@
         }
         .item-excerpt {
             padding: 0 10px;
-            font-size: 15px;
-            line-height: 25px;
+            @include text-truncate-multi-line($font-size: 15px, $line-height: 1.6, $lines-to-show: 3);
             color: #dedede;
             letter-spacing: 0.02em;
             margin-bottom: 48px;
