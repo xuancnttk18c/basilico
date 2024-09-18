@@ -1274,6 +1274,22 @@ function basilico_dots_settings(){
                 '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet.swiper-pagination-bullet-active:before' => 'background-color: {{VALUE}};',
             ],
         ),
+        array(
+            'name' => 'border_color',
+            'label' => esc_html__('Border Color', 'basilico'),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:after' => 'border-color: {{VALUE}};',
+            ],
+        ),
+        array(
+            'name' => 'border_color_active',
+            'label' => esc_html__('Border Color Active', 'basilico'),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:after' => 'border-color: {{VALUE}};',
+            ],
+        ),
     );
 }
 
