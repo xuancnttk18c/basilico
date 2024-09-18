@@ -4269,6 +4269,9 @@
                 @include d-inline-flex();
                 column-gap: 42px;
                 row-gap: 30px;
+                @media (max-width: $sm_max) {
+                    flex-wrap: wrap;
+                }
             }
         }
         .tab-title {

@@ -192,7 +192,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tabs-title .title-wrap' => 'gap: {{SIZE}}{{UNIT}};'
+                                '{{WRAPPER}} .pxl-tabs .tabs-title .title-wrap' => 'column-gap: {{SIZE}}{{UNIT}};'
                             ],
                         ),
                         array(
