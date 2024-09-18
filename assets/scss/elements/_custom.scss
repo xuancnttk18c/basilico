@@ -174,7 +174,7 @@ body:has(.pxl-header-sticky.h-fixed) {
     }
 }
 
-.column-hover-blur:hover .elementor-widget-wrap {
+.column-hover-blur .elementor-widget-wrap {
     position: relative;
     &:before {
         content: '';
@@ -183,6 +183,10 @@ body:has(.pxl-header-sticky.h-fixed) {
         left: 0;
         right: 0;
         bottom: 0;
+        backdrop-filter: blur(0px);
+        @include transition();
+    }
+    &:hover {
         backdrop-filter: blur(5px);
     }
 }
