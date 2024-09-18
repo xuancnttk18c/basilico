@@ -26,8 +26,6 @@ extract(pxl_get_posts_of_grid(
     $tax
 ));
 
-$arrows = $widget->get_setting('arrows','false');  
-$dots = $widget->get_setting('dots','false');
 $cursor = $widget->get_setting('show_custom_cursor', 'false');
 $cursor_text = $widget->get_setting('custom_cursor_text', '');
 
@@ -191,12 +189,8 @@ if ( !empty( $item_animation) ) {
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php if ($arrows !== 'false') :
-            basilico_arrow_template($settings);
-        endif; ?>
-        <?php if($dots !== 'false'): ?>
-            <div class="pxl-swiper-dots"></div>
-        <?php endif; ?>
+        <?php basilico_arrow_template($settings); ?>
+        <div class="pxl-swiper-dots"></div>
     </div>
 </div>
 <?php endif; ?>
