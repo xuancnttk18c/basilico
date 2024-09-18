@@ -176,7 +176,7 @@ body:has(.pxl-header-sticky.h-fixed) {
 
 .column-hover-blur .elementor-widget-wrap {
     position: relative;
-    :before {
+    &:before {
         content: '';
         top: 0;
         left: 0;
