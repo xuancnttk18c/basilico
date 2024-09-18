@@ -3033,13 +3033,13 @@
         }
         .pxl-swiper-arrows {
             .pxl-swiper-arrow {
-                opacity: 1;
+                position: absolute;
                 top: 42%;
             }
-            &.nav-vertical-out .pxl-swiper-arrow-prev {
+            &.pxl-swiper-arrow-prev {
                 left: -90px;
             }
-            &.nav-vertical-out .pxl-swiper-arrow-next {
+            &.pxl-swiper-arrow-next {
                 right: -90px;
             }
         }

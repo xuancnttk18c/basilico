@@ -1020,7 +1020,7 @@ function basilico_arrow_settings(){
             'name' => 'arrow_next_offset_orientation_h',
             'label' => esc_html__('Horizontal Orientation', 'basilico'),
             'type' => \Elementor\Controls_Manager::CHOOSE,
-            'default' => 'left',
+            'default' => 'right',
             'options' => [
                 'left' => [
                     'title' => 'Start',
