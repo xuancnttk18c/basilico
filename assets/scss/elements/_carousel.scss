@@ -172,6 +172,18 @@
                 color: #6d6c79;
             }
         }
+        .pxl-swiper-arrows .pxl-swiper-arrow {
+            &.default {
+                position: absolute;
+                top: 50%;
+                &.pxl-swiper-arrow-prev {
+                    left: -90px;
+                }
+                &.pxl-swiper-arrow-next {
+                    right: -90px;
+                }
+            }
+        }
         .pxl-swiper-dots {
             justify-content: center;
             margin-top: 20px;
