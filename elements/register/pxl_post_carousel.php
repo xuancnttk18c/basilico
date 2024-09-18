@@ -244,33 +244,6 @@ pxl_add_custom_widget(
                                 ],
                             ),
                             array(
-                                'name' => 'dots',
-                                'label' => esc_html__('Show Dots', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::SWITCHER,
-                            ),
-                            array(
-                                'name' => 'dots_color',
-                                'label' => esc_html__('Dots Color', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::COLOR,
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:before' => 'background-color: {{VALUE}};',
-                                ],
-                                'condition' => [
-                                    'dots' => "true",
-                                ],
-                            ),
-                            array(
-                                'name' => 'dots_color_active',
-                                'label' => esc_html__('Active Color', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::COLOR,
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet.swiper-pagination-bullet-active:before' => 'background-color: {{VALUE}};',
-                                ],
-                                'condition' => [
-                                    'dots' => "true",
-                                ],
-                            ),
-                            array(
                                 'name' => 'pause_on_hover',
                                 'label' => esc_html__('Pause on Hover', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
