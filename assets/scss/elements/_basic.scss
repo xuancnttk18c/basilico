@@ -4343,6 +4343,7 @@
             padding: 46px 92px 55px;
             @media (max-width: $md_max) {
                 width: 100%;
+                padding: 30px 15px;
             }
             .sub-title {
                 color: $primary_color;
@@ -4351,6 +4352,9 @@
                 letter-spacing: 0.15em;
                 text-transform: uppercase;
                 margin-bottom: 10px;
+                @media (max-width: $sm_max) {
+                    font-size: 15px;
+                }
             }
             .title-wrap {
                 display: flex;
@@ -4369,6 +4373,10 @@
                 letter-spacing: 0.05em;
                 cursor: pointer;
                 @include transition(all 300ms linear 0ms);
+                @media (max-width: $sm_max) {
+                    font-size: 18px;
+                    line-height: 50px;
+                }
                 span {
                     position: relative;
                     &:before,
