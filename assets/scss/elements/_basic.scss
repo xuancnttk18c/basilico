@@ -4271,6 +4271,7 @@
                 row-gap: 30px;
                 @media (max-width: $sm_max) {
                     flex-wrap: wrap;
+                    flex-direction: column;
                 }
             }
         }
