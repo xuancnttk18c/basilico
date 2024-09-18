@@ -4267,12 +4267,8 @@
             margin-bottom: 4px;
             .title-wrap {
                 @include d-inline-flex();
-                gap: 42px;
-                @media (max-width: $sm_max) {
-                    column-gap: 30px;
-                    row-gap: 10px;
-                    flex-wrap: wrap;
-                }
+                column-gap: 42px;
+                row-gap: 30px;
             }
         }
         .tab-title {

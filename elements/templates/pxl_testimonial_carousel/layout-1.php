@@ -6,9 +6,6 @@ $default_settings = [
 $settings = array_merge($default_settings, $settings);
 extract($settings);
 
-$arrows = $widget->get_setting('arrows', 'false');
-$show_arrow = ($arrows == 'true' || (isset($settings['arrows_laptop']) && $settings['arrows_laptop'] == 'true') || (isset($settings['arrows_tablet_extra']) && $settings['arrows_tablet_extra'] == 'true') || $settings['arrows_tablet'] == 'true' || (isset($settings['arrows_mobile_extra']) && $settings['arrows_mobile_extra'] == 'true') || $settings['arrows_mobile'] == 'true') ? true : false;
-
 $arrows_style = $widget->get_setting('arrows_style', 'style-1');
 $dots = $widget->get_setting('dots', 'false');
 $quote_icon_type = $widget->get_setting('quote_icon_type', 'text');
@@ -110,26 +107,7 @@ $widget->add_render_attribute('carousel', [
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php //if ($show_arrow) : ?>
-            <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style);?>">
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
-                    <?php 
-                    if ( $settings['arrow_icon_next']['value'] ) 
-                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_next'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
-                    else
-                        echo '<span class="pxl-icon pxli-arrow-next"></span>';
-                    ?>
-                </div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev">
-                    <?php 
-                    if ( $settings['arrow_icon_previous']['value'] ) 
-                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
-                    else
-                        echo '<span class="pxl-icon pxli-arrow-prev"></span>';
-                    ?>
-                </div>
-            </div>
-        <?php //endif; ?>
+        <?php basilico_arrow_template($settings); ?>
         <?php if ($dots !== 'false') : ?>
             <div class="pxl-swiper-dots <?php echo esc_attr($pagination_style); ?>"></div>
         <?php endif; ?>
