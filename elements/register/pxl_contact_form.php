@@ -117,6 +117,18 @@ if(class_exists('WPCF7')) {
                                                      {{WRAPPER}} .pxl-contact-form7 textarea' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                                 ],
                                             ),
+                                            array(
+                                                'name'      => 'select_style',
+                                                'type'      => 'select',
+                                                'title'     => esc_html__('Select Dropdown Icon Style', 'basilico'),
+                                                'options'   => array(
+                                                    ''          => esc_html__('Default', 'basilico'),
+                                                    'select-2'  => esc_html__('Style 2', 'basilico'),
+                                                    'select-3'  => esc_html__('Style 3', 'basilico'),
+                                                    'select-4'  => esc_html__('Style 4', 'basilico'),
+                                                ),
+                                                'default' => ''
+                                            ),
                                         )
                                     ),
                                     array(
