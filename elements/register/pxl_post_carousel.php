@@ -154,6 +154,75 @@ pxl_add_custom_widget(
                     )
                 ),
                 array(
+                    'name' => 'display_section',
+                    'label' => esc_html__('Display Items Options', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                    'controls' => array(
+                        array(
+                            'name'      => 'show_date',
+                            'label'     => esc_html__('Show Date', 'basilico' ),
+                            'type'      => \Elementor\Controls_Manager::SWITCHER,
+                            'default'   => 'true',
+                            'condition' => ['post_type' => 'post']
+                        ),
+                        array(
+                            'name'      => 'show_category',
+                            'label'     => esc_html__('Show Category', 'basilico' ),
+                            'type'      => \Elementor\Controls_Manager::SWITCHER,
+                            'default'   => 'true',
+                        ),
+                        array(
+                            'name'      => 'show_divider',
+                            'label'     => esc_html__('Show Divider', 'basilico' ),
+                            'type'      => \Elementor\Controls_Manager::SWITCHER,
+                            'default'   => 'true',
+                        ),
+                        array(
+                            'name'      => 'show_author',
+                            'label'     => esc_html__('Show Author', 'basilico' ),
+                            'type'      => \Elementor\Controls_Manager::SWITCHER,
+                            'default'   => 'true',
+                            'condition' => ['post_type' => 'post']
+                        ),
+                        array(
+                            'name'      => 'show_comment',
+                            'label'     => esc_html__('Show Comment', 'basilico' ),
+                            'type'      => \Elementor\Controls_Manager::SWITCHER,
+                            'default'   => 'true',
+                            'condition' => ['post_type' => 'post']
+                        ),
+                        array(
+                            'name' => 'show_excerpt',
+                            'label' => esc_html__('Show Excerpt', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                            'default' => 'true',
+                        ),
+                        array(
+                            'name' => 'num_words',
+                            'label' => esc_html__('Number of Words', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::NUMBER,
+                            'default' => '',
+                            'condition' => [
+                                'show_excerpt' => 'true',
+                            ],
+                        ),
+                        array(
+                            'name'      => 'show_button',
+                            'label'     => esc_html__('Show Button Readmore', 'basilico' ),
+                            'type'      => \Elementor\Controls_Manager::SWITCHER,
+                            'default'   => 'true',
+                        ),
+                        array(
+                            'name'      => 'button_text',
+                            'label'     => esc_html__('Button Text', 'basilico' ),
+                            'type'      => \Elementor\Controls_Manager::TEXT,
+                            'condition' => [
+                                'show_button'      => 'true',
+                            ],
+                        ),
+                    ),
+                ),
+                array(
                     'name' => 'carousel_setting',
                     'label' => esc_html__('Carousel Settings', 'basilico' ),
                     'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
@@ -245,75 +314,6 @@ pxl_add_custom_widget(
                                 'default' => 400,
                             ),
                         )
-                    ),
-                ),
-                array(
-                    'name' => 'display_section',
-                    'label' => esc_html__('Display Items Options', 'basilico' ),
-                    'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-                    'controls' => array(
-                        array(
-                            'name'      => 'show_date',
-                            'label'     => esc_html__('Show Date', 'basilico' ),
-                            'type'      => \Elementor\Controls_Manager::SWITCHER,
-                            'default'   => 'true',
-                            'condition' => ['post_type' => 'post']
-                        ),
-                        array(
-                            'name'      => 'show_category',
-                            'label'     => esc_html__('Show Category', 'basilico' ),
-                            'type'      => \Elementor\Controls_Manager::SWITCHER,
-                            'default'   => 'true',
-                        ),
-                        array(
-                            'name'      => 'show_divider',
-                            'label'     => esc_html__('Show Divider', 'basilico' ),
-                            'type'      => \Elementor\Controls_Manager::SWITCHER,
-                            'default'   => 'true',
-                        ),
-                        array(
-                            'name'      => 'show_author',
-                            'label'     => esc_html__('Show Author', 'basilico' ),
-                            'type'      => \Elementor\Controls_Manager::SWITCHER,
-                            'default'   => 'true',
-                            'condition' => ['post_type' => 'post']
-                        ),
-                        array(
-                            'name'      => 'show_comment',
-                            'label'     => esc_html__('Show Comment', 'basilico' ),
-                            'type'      => \Elementor\Controls_Manager::SWITCHER,
-                            'default'   => 'true',
-                            'condition' => ['post_type' => 'post']
-                        ),
-                        array(
-                            'name' => 'show_excerpt',
-                            'label' => esc_html__('Show Excerpt', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::SWITCHER,
-                            'default' => 'true',
-                        ),
-                        array(
-                            'name' => 'num_words',
-                            'label' => esc_html__('Number of Words', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::NUMBER,
-                            'default' => '',
-                            'condition' => [
-                                'show_excerpt' => 'true',
-                            ],
-                        ),
-                        array(
-                            'name'      => 'show_button',
-                            'label'     => esc_html__('Show Button Readmore', 'basilico' ),
-                            'type'      => \Elementor\Controls_Manager::SWITCHER,
-                            'default'   => 'true',
-                        ),
-                        array(
-                            'name'      => 'button_text',
-                            'label'     => esc_html__('Button Text', 'basilico' ),
-                            'type'      => \Elementor\Controls_Manager::TEXT,
-                            'condition' => [
-                                'show_button'      => 'true',
-                            ],
-                        ),
                     ),
                 ),
                 array(
