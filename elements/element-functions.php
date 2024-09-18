@@ -715,12 +715,14 @@ function basilico_arrow_settings(){
             'label'        => esc_html__('Show Arrows', 'basilico'),
             'type'         => 'select',
             'options'      => [
-                'true'  => esc_html__('Yes', 'basilico'),
-                'false' => esc_html__('No', 'basilico')
+                'flex'  => esc_html__('Yes', 'basilico'),
+                'none' => esc_html__('No', 'basilico')
             ], 
-            'default'      => 'false',
+            'default'      => 'none',
             'control_type' => 'responsive',
-            'prefix_class' => 'pxl-swiper-arrows%s-',
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows' => 'display: {{VALUE}};',
+            ],
         ),
         array(
             'name' => 'arrows_style',
@@ -865,7 +867,7 @@ function basilico_arrow_settings(){
             ],
             'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
             'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; left: {{SIZE}}{{UNIT}}; right: auto;',
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
             ],
             'condition' => [
                 'arrow_prev_offset_orientation_h!' => 'right',
@@ -902,7 +904,7 @@ function basilico_arrow_settings(){
                 'unit' => 'px'
             ],
             'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; right: {{SIZE}}{{UNIT}}; left: auto;',
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
             ],
             'condition' => [
                 'arrow_prev_offset_orientation_h' => 'right',
@@ -959,7 +961,7 @@ function basilico_arrow_settings(){
             ],
             'size_units' => ['px', '%', 'vw', 'vh', 'custom'],
             'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; top: {{SIZE}}{{UNIT}}; bottom: auto;',
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
             ],
             'condition' => [
                 'arrow_prev_offset_orientation_v!' => 'bottom',
@@ -996,7 +998,7 @@ function basilico_arrow_settings(){
                 'unit' => 'px'
             ],
             'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'position: absolute !important; bottom: {{SIZE}}{{UNIT}}; top: auto;',
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow-prev' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
             ],
             'condition' => [
                 'arrow_prev_offset_orientation_v' => 'bottom',
@@ -1272,14 +1274,6 @@ function basilico_dots_settings(){
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet.swiper-pagination-bullet-active:before' => 'background-color: {{VALUE}};',
-            ],
-        ),
-        array(
-            'name' => 'border_color',
-            'label' => esc_html__('Border Color', 'basilico'),
-            'type' => \Elementor\Controls_Manager::COLOR,
-            'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:after' => 'border-color: {{VALUE}};',
             ],
         ),
         array(
