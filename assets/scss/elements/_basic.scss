@@ -4268,7 +4268,7 @@
             .title-wrap {
                 @include d-inline-flex();
                 column-gap: 42px;
-                row-gap: 30px;
+                row-gap: 20px;
                 @media (max-width: $sm_max) {
                     flex-wrap: wrap;
                     flex-direction: column;
