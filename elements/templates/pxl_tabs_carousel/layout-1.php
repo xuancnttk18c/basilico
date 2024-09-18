@@ -50,6 +50,6 @@ $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
         </div>
     </div>
     <?php if ($show_arrow) :
-        basilico_arrow_template($setting, 'pxl-icon zmdi zmdi-arrow-left', 'zmdi zmdi-arrow-right');
+        basilico_arrow_template($settings, 'pxl-icon zmdi zmdi-arrow-left', 'zmdi zmdi-arrow-right');
     endif; ?>
 </div>
