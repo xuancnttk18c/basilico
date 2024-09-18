@@ -1206,35 +1206,37 @@ function basilico_arrow_settings(){
 }
 
 function basilico_dots_settings(){
-    return array(
+    return array_merge(
         array(
-            'name'         => 'dots',
-            'label'        => esc_html__('Show Dots', 'basilico'),
-            'type'         => 'select',
-            'options'      => [
-                'true'  => esc_html__('Yes', 'basilico'),
-                'false' => esc_html__('No', 'basilico')
-            ], 
-            'default'      => 'false',
-            'control_type' => 'responsive',
-            'prefix_class' => 'pxl-swiper-dots%s-'
-        ),
-        array(
-            'name' => 'dots_color',
-            'label' => esc_html__('Dots Color', 'basilico'),
-            'type' => \Elementor\Controls_Manager::COLOR,
-            'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:before' => 'background-color: {{VALUE}};',
-            ],
-        ),
-        array(
-            'name' => 'dots_color_active',
-            'label' => esc_html__('Active Color', 'basilico'),
-            'type' => \Elementor\Controls_Manager::COLOR,
-            'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet.swiper-pagination-bullet-active:before' => 'background-color: {{VALUE}};',
-            ],
-        ),
+            array(
+                'name'         => 'dots',
+                'label'        => esc_html__('Show Dots', 'basilico'),
+                'type'         => 'select',
+                'options'      => [
+                    'true'  => esc_html__('Yes', 'basilico'),
+                    'false' => esc_html__('No', 'basilico')
+                ], 
+                'default'      => 'false',
+                'control_type' => 'responsive',
+                'prefix_class' => 'pxl-swiper-dots%s-'
+            ),
+            array(
+                'name' => 'dots_color',
+                'label' => esc_html__('Dots Color', 'basilico'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:before' => 'background-color: {{VALUE}};',
+                ],
+            ),
+            array(
+                'name' => 'dots_color_active',
+                'label' => esc_html__('Active Color', 'basilico'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet.swiper-pagination-bullet-active:before' => 'background-color: {{VALUE}};',
+                ],
+            ),
+        )
     );
 }
 
