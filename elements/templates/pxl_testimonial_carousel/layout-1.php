@@ -108,9 +108,7 @@ $widget->add_render_attribute('carousel', [
             </div>
         </div>
         <?php basilico_arrow_template($settings); ?>
-        <?php if ($dots !== 'false') : ?>
-            <div class="pxl-swiper-dots <?php echo esc_attr($pagination_style); ?>"></div>
-        <?php endif; ?>
+        <div class="pxl-swiper-dots <?php echo esc_attr($pagination_style); ?>"></div>
     </div>
 </div>
 <?php endif; ?>
