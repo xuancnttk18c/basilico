@@ -1220,6 +1220,22 @@ function basilico_dots_settings(){
             'prefix_class' => 'pxl-swiper-dots%s-'
         ),
         array(
+            'name' => 'dots_scape',
+            'label' => esc_html__('Dots Space Top', 'basilico' ),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'control_type' => 'responsive',
+            'size_units' => [ 'px', 'em' ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 300,
+                ],
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-dots, {{WRAPPER}} .slick-dots' => 'margin-top: {{SIZE}}{{UNIT}};',
+            ],
+        ),
+        array(
             'name' => 'dots_color',
             'label' => esc_html__('Dots Color', 'basilico'),
             'type' => \Elementor\Controls_Manager::COLOR,
