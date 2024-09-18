@@ -2896,13 +2896,6 @@
         .box-inner:hover {
             .box-icon {
                 transform: translateY(-5px);
-                i,
-                svg {
-                    animation-name: elementor-animation-wobble-top;
-                    animation-duration: 1s;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;
-                }
             }
         }
     }
