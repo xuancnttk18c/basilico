@@ -196,12 +196,8 @@ if ( !empty( $item_animation) ) {
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php if ($arrows !== 'false') :
-            basilico_arrow_template($settings, 'zmdi zmdi-arrow-left', 'zmdi zmdi-arrow-right');
-        endif; ?>
-        <?php if($dots !== 'false'): ?>
-            <div class="pxl-swiper-dots"></div>
-        <?php endif; ?>
+        <?php basilico_arrow_template($settings, 'zmdi zmdi-arrow-left', 'zmdi zmdi-arrow-right'); ?>
+        <div class="pxl-swiper-dots"></div>
     </div>
 </div>
 <?php endif; ?>
