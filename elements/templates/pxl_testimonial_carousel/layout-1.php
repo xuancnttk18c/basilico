@@ -110,7 +110,7 @@ $widget->add_render_attribute('carousel', [
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php if ($show_arrow) : ?>
+        <?php //if ($show_arrow) : ?>
             <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style);?>">
                 <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
                     <?php 
@@ -129,7 +129,7 @@ $widget->add_render_attribute('carousel', [
                     ?>
                 </div>
             </div>
-        <?php endif; ?>
+        <?php //endif; ?>
         <?php if ($dots !== 'false') : ?>
             <div class="pxl-swiper-dots <?php echo esc_attr($pagination_style); ?>"></div>
         <?php endif; ?>
