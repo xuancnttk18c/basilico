@@ -168,7 +168,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('READ MORE', 'ba
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php basilico_arrow_template($settings, 'zmdi zmdi-arrow-left', 'zmdi zmdi-arrow-right'); ?>
+        <?php basilico_arrow_template($settings); ?>
         <?php if ($dots !== 'false') : ?>
             <div class="pxl-swiper-dots"></div>
         <?php endif; ?>
