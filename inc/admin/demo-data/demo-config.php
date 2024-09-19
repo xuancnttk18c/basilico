@@ -10,5 +10,5 @@ $demos = array(
 		'description' => '',
 		'screenshot'  => $uri . 'basilico.jpg',
 		'preview'     => $pxl_server_info['demo_url'],
-	),	 
+	),
 );
