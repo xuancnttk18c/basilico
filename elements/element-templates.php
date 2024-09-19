@@ -1996,7 +1996,7 @@ function basilico_get_post_grid_pxl_portfolio3($posts = [], $settings = [], $arg
 
 function basilico_arrow_template($settings = [], $arrow_icon_prev_cls = 'pxli pxli-arrow-prev', $arrow_icon_next_cls = 'pxli pxli-arrow-next') {
     ?>
-    <div class="pxl-swiper-arrows <?php echo esc_attr($settings['arrows_style']); ?>" <?php echo $hide_below; ?>>
+    <div class="pxl-swiper-arrows <?php echo esc_attr($settings['arrows_style']); ?>">
         <div class="pxl-swiper-arrow pxl-swiper-arrow-prev <?php echo esc_attr($settings['arrow_prev_position']); ?>">
             <?php 
             if ( $settings['arrow_icon_previous']['value'] ) 
