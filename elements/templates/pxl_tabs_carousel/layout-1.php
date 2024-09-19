@@ -13,7 +13,6 @@ $widget->add_render_attribute('opts', [
     ])
 ]);
 $fade = $widget->get_setting("fade", "false");
-$arrows = $widget->get_setting("arrows", "false");
 
 $arrows_style = $widget->get_setting("arrows_style", "style-df");
 $dots_style = basilico()->get_theme_opt('swiper_pagination_style', 'style-df');
@@ -48,7 +47,5 @@ $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
             <?php endforeach; ?>
         </div>
     </div>
-    <?php if ($show_arrow) :
-        basilico_arrow_template($settings, 'pxl-icon zmdi zmdi-arrow-left', 'zmdi zmdi-arrow-right');
-    endif; ?>
+    <?php basilico_arrow_template($settings, 'pxl-icon zmdi zmdi-arrow-left', 'zmdi zmdi-arrow-right'); ?>
 </div>
