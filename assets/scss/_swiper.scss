@@ -104,23 +104,18 @@ $slider-outer-space: 0;
         &.swiper-button-disabled {
             cursor: not-allowed;
         }
-        &.absolute {
-            position: absolute !important;
-        }
-        &.default {
+        &.default, &.center-vertical {
             position: absolute;
             top: 50%;
+            @include transform(translateY(-50%));
+        }
+        &.default {
             &.pxl-swiper-arrow-prev {
                 left: -150px;
             }
             &.pxl-swiper-arrow-next {
                 right: -150px;
             }
-        }
-        &.center-vertical {
-            position: absolute !important;
-            top: 50% !important;
-            @include transform(translateY(-50%) !important);
         }
     }
     &.style-1 {
