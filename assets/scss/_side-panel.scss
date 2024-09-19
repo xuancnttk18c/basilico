@@ -244,10 +244,13 @@
     .pxl-close {
         top: 41px;
         right: 42px;
-        @media (max-width: $sm_max) {
+    }
+    @media (max-width: $sm_max) {
+        max-width: 300px;
+        .pxl-close {
             right: 25px;
         }
-    }  
+    }
 }
 
 .pxl-hidden-template.pos-top{
