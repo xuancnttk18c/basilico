@@ -107,6 +107,16 @@ $slider-outer-space: 0;
         &.absolute {
             position: absolute !important;
         }
+        &.default {
+            position: absolute;
+            top: 50%;
+            &.pxl-swiper-arrow-prev {
+                left: -150px;
+            }
+            &.pxl-swiper-arrow-next {
+                right: -150px;
+            }
+        }
         &.center-vertical {
             position: absolute !important;
             top: 50% !important;
