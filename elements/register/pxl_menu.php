@@ -246,8 +246,12 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Color Hover/Active', 'basilico' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu li .sub-menu a:hover, {{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu > li.current-menu-item a' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu li .sub-menu a:hover' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu li .sub-menu a:hover,
+                                 {{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu > li.current-menu-item a,
+                                 {{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu li .sub-menu a:hover,
+                                 {{WRAPPER}} .pxl-mobile-menu .sub-menu .menu-item:hover > a,
+                                 {{WRAPPER}} .pxl-mobile-menu .sub-menu .current-menu-item > a,
+                                 {{WRAPPER}} .pxl-mobile-menu .sub-menu .current-menu-ancestor > a' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
