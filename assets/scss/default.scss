@@ -200,6 +200,7 @@ input {
 select option {
     color: #000;
     background-color: #fff;
+    @include border-radius(0px);
 }
 
 button,
