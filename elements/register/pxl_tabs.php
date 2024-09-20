@@ -262,7 +262,7 @@ pxl_add_custom_widget(
                             'type' => 'color',
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-tabs .tab-title.active' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-tabs.layout-1 .tab-title span' => 'linear-gradient(transparent calc(100% - 1px), {{VALUE}} 1px)'
+                                '{{WRAPPER}} .pxl-tabs.layout-1 .tab-title span' => 'background-image: linear-gradient(transparent calc(100% - 1px), {{VALUE}} 1px)'
                             ],
                         ),
                         array(
