@@ -1313,6 +1313,11 @@
                 margin-top: 33px;
             }
         }
+        @media (max-width: $xs_max) {
+            .menu-title {
+                max-width: 100%;
+            }
+        }
         .menu-price {
             display: flex;
             align-items: center;
