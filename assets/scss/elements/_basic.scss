@@ -4306,31 +4306,12 @@
             flex-grow: 1;
             cursor: pointer;
             @include transition(all 300ms linear 0ms);
-            span {
-                position: relative;
-                &:after {
-                    content: '';
-                    display: block;
-                    position: relative;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    height: 1px;
-                    background-color: $primary_color;
-                    opacity: 0;
-                    transform: scaleX(0);
-                    transform-origin: center;
-                    @include transition(all 300ms ease 0ms);
-                }
-            }
+            background-image: linear-gradient(transparent calc(100% - 1px), var(--heading-color) 1px);
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            transition: background-size 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
             &.active {
-                color: $primary_color;
-                span {
-                    &:after {
-                        transform: scaleX(1);
-                        opacity: 1;
-                    }
-                }
+                background-size: 0% 100%;
             }
             &:last-child {
                 border-right: none;
