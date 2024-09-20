@@ -6,9 +6,7 @@ $default_settings = [
 $settings = array_merge($default_settings, $settings);
 extract($settings);
 
-$arrows = $widget->get_setting('arrows','false');
 $arrows_style = $widget->get_setting('arrows_style', 'style-1');
-$dots = $widget->get_setting('dots','false');  
 
 $opts = [
     'slide_direction'               => 'horizontal',
@@ -110,12 +108,8 @@ $widget->add_render_attribute( 'carousel', [
                 <?php endforeach; ?>
                 </div>
             </div>
-            <?php if ($arrows !== 'false') :
-                basilico_arrow_template($settings);
-            endif; ?>
-            <?php if($dots !== 'false') : ?>
-                <div class="pxl-swiper-dots"></div>
-            <?php endif; ?>
+            <?php basilico_arrow_template($settings); ?>
+            <div class="pxl-swiper-dots"></div>
         </div>
     </div>
 <?php endif; ?>
