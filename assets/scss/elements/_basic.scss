@@ -1272,10 +1272,6 @@
                 border-radius: 13px;
                 + .custom-tag {
                     margin-left: 8px;
-                    @media (max-width: $xs_max) {
-                        margin-top: 8px;
-                        margin-left: 0px;
-                    }
                 }
             }
         }
@@ -1384,6 +1380,9 @@
                     right: -15px;
                     @include transform(translate(100%, -50%));
                 }
+            }
+            @media (max-width: $xs_max) {
+                max-width: 100%;
             }
         }
     }
