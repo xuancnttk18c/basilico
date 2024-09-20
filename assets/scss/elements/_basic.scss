@@ -1198,10 +1198,6 @@
             border-radius: 50%;
             overflow: hidden;
             margin-right: 20px;
-            @media (max-width: $xs_max) {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
             img {
                 width: 65px;
                 height: 65px;
