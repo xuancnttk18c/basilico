@@ -4295,14 +4295,13 @@
             }
         }
         .tab-title {
-            display: inline;
             font-family: $heading_font_family;
             font-size: 15px;
             font-weight: 700;
             color: $heading_color;
             text-transform: uppercase;
             line-height: 2;
-            display: inline-flex;
+            display: inline;
             letter-spacing: 0.05em;
             flex-grow: 1;
             cursor: pointer;
