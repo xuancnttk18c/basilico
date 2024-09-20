@@ -1175,7 +1175,7 @@
         + .pxl-menu-item {
             margin-top: 27px;
         }
-        > .div:not(.custom-tags) {
+        > div:not(.custom-tags) {
             @media (max-width: $xs_max) {
                 flex-direction: column;
                 align-items: start;
