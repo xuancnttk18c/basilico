@@ -1243,7 +1243,7 @@
                 font-size: 15px;
             }
             @media (max-width: $xs_max) {
-                max-width: 85%;
+                max-width: 80%;
             }
         }
         .menu-price {
@@ -1254,6 +1254,7 @@
             color: $heading_color;
             @media (max-width: $sm_max) {
                 font-size: 17px;
+                line-height: 24px;
             }
         }
         .menu-sub-title {
