@@ -1188,11 +1188,6 @@
                 flex: 1;
                 margin: 0 12px;
             }
-            @media (max-width: $xs_max) {
-                > div {
-                    align-items: start;
-                }
-            }
         }
         .menu-icon {
             border-radius: 50%;
