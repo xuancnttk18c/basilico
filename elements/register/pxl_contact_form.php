@@ -319,7 +319,6 @@ if(class_exists('WPCF7')) {
                                                 'types'             => [ 'classic' , 'gradient' ],
                                                 'selector' => '{{WRAPPER}} .wpcf7-form input[type="submit"], {{WRAPPER}} .wpcf7-form button',
                                             ),
-
                                         )
                                     ),
                                     array(
@@ -337,10 +336,14 @@ if(class_exists('WPCF7')) {
                                             ),
                                             array(
                                                 'name' => 'button_background_hover',
-                                                'type' => \Elementor\Group_Control_Background::get_type(),
-                                                'control_type' => 'group',
-                                                'types'             => [ 'classic' , 'gradient' ],
-                                                'selector' => '{{WRAPPER}} .wpcf7-form input[type="submit"]:hover, {{WRAPPER}} .wpcf7-form button:hover',
+                                                'label' => esc_html__('Background Color', 'basilico'),
+                                                'type' => \Elementor\Controls_Manager::COLOR,
+                                                'selectors' => [
+                                                    '{{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'border-color: {{VALUE}};',
+                                                    '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-6:hover, {{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-7:hover,
+                                                     {{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-5:hover' => 'background-color: {{VALUE}};',
+                                                    '{{WRAPPER}} .pxl-button-wrapper .btn:before' => 'background-color: {{VALUE}};'
+                                                ],
                                             ),
                                         )
                                     ),
