@@ -261,8 +261,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Active Color', 'basilico' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .tab-title.active' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .tab-title span:after' => 'background-color: {{VALUE}};'
+                                '{{WRAPPER}} .pxl-tabs .tab-title.active' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-tabs.layout-1 .tab-title span:after' => 'linear-gradient(transparent calc(100% - 1px), {{VALUE}} 1px)'
                             ],
                         ),
                         array(
