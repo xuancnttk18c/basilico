@@ -262,7 +262,7 @@ pxl_add_custom_widget(
                             'type' => 'color',
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-tabs .tab-title.active' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-tabs.layout-1 .tab-title:after' => 'background-color: {{VALUE}};'
+                                '{{WRAPPER}} .pxl-tabs.layout-1 .tab-title:after' => 'border-bottom-color: {{VALUE}};'
                             ],
                         ),
                         array(
