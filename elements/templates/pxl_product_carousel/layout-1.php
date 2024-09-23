@@ -15,7 +15,6 @@ extract($posts);
 $arrows = $widget->get_setting('arrows','false');
 $arrows_style = $widget->get_setting('arrows_style', 'style-1');
 $dots = $widget->get_setting('dots','false');
-$product_layout = $widget->get_setting('product_layout', 'layout-1');
 
 $opts = [
     'slide_direction'               => 'horizontal',
