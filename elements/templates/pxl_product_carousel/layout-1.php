@@ -81,7 +81,7 @@ if ( !empty( $item_animation) ) {
                 while ($query->have_posts()) {
                     $query->the_post();
                     echo '<div class="pxl-swiper-slide swiper-slide">';
-                    wc_get_template_part( 'pxl-content-product-'.$product_layout.'php', $settings );
+                    wc_get_template( 'pxl-content-product-'.$product_layout.'php', $settings );
                     echo '</div>';
                 }
                 wp_reset_postdata();
