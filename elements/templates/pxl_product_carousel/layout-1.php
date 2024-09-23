@@ -15,6 +15,7 @@ extract($posts);
 $arrows = $widget->get_setting('arrows','false');
 $arrows_style = $widget->get_setting('arrows_style', 'style-1');
 $dots = $widget->get_setting('dots','false');
+$product_layout = $widget->get_setting('product_layout', 'layout-1');
 
 $opts = [
     'slide_direction'               => 'horizontal',
@@ -81,7 +82,7 @@ if ( !empty( $item_animation) ) {
                 while ($query->have_posts()) {
                     $query->the_post();
                     echo '<div class="pxl-swiper-slide swiper-slide">';
-                    wc_get_template( 'pxl-content-product-'.$product_layout.'php', $settings );
+                    wc_get_template_part( 'pxl-content-product', esc_attr($product_layout) );
                     echo '</div>';
                 }
                 wp_reset_postdata();
