@@ -78,8 +78,8 @@ if(!function_exists('basilico_woocommerce_catalog_result')){
 add_filter('woocommerce_loop_add_to_cart_link', 'basilico_woocommerce_loop_add_to_cart_link', 10, 3);
 add_filter( 'woocommerce_add_to_cart_form_action', '__return_empty_string' );
 function basilico_woocommerce_loop_add_to_cart_link($button, $product, $args){
-    if (class_exists( 'YITH_WAPO' ) && !empty(YITH_WAPO_DB()->yith_wapo_get_blocks_by_product($product->id))) {
-        return '<a href="#" class="pxl-btn button pxl-quickview" data-product_id="' . get_the_ID() . '">' . esc_html__('Order Online') . '</a>';
+    if (class_exists( 'YITH_WAPO' ) && !empty(YITH_WAPO_DB()->yith_wapo_get_blocks_by_product($product->id()))) {
+        return '<a href="#" class="pxl-btn button pxl-quickview" data-product_id="' . $product->id() . '">' . esc_html__('Order Online') . '</a>';
     }
 
     $product_layout = basilico()->get_theme_opt('product_layout', 'layout-1');
