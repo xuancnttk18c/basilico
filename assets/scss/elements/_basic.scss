@@ -3720,7 +3720,7 @@
             overflow-wrap: break-word;
             padding: 44px 105px 43px 35px;
             background-color: rgba(#c8c8c8, 0.15);
-            @media (max-width: $xs_max) {
+            @media (max-width: $sm_max) {
                 padding: 24px 20px 38px;
             }
             p:last-child {
