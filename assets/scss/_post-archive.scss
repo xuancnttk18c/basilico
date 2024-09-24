@@ -165,6 +165,8 @@
 			background-color: $secondary_color;
 		}
 		.link-inner {
+			@include d-flex();
+			flex-direction: column;
 			position: relative;
 			z-index: 1;
 			.link-icon {
