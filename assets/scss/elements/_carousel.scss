@@ -2018,11 +2018,13 @@
             width: 42.75%;
             @media (max-width: $sm_max) {
                 width: 100%;
+                animation: none !important;
             }
         }
         .item-image-wrap {
             @media (max-width: $sm_max) {
                 margin-top: 30px;
+                animation: none !important;
             }
         }
         .item-wrap:nth-child(2n + 1) {
