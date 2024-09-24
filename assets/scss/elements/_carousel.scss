@@ -3335,6 +3335,10 @@
         }
         .item-inner {
             position: relative;
+            .item-featured img {
+                min-height: 450px;
+                object-fit: cover;
+            }
             .item-content {
                 position: absolute;
                 z-index: 2;
@@ -3388,6 +3392,8 @@
             overflow: hidden;
             img {
                 transition: all 200ms ease 0s;
+                min-height: 450px;
+                object-fit: cover;
             }
         }
         .item-title {
@@ -3486,7 +3492,7 @@
         .item-featured {
             img {
                 transition: all 200ms ease 0s;
-                min-height: 400px;
+                min-height: 450px;
                 object-fit: cover;
             }
         }
@@ -3600,8 +3606,10 @@
             .item-featured {
                 position: relative;
                 overflow: hidden;
-                img{
+                img {
                     @include transition(all .5s ease);
+                    min-height: 450px;
+                    object-fit: cover;
                 }
             }
             .item-title {
