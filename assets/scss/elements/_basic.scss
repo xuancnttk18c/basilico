@@ -3612,7 +3612,7 @@
         border-radius: inherit;
         .pxl-ac-title {
             @include transition(all 250ms linear 0ms);
-            padding: 23px 0 19px;
+            padding: 23px 0 19px 30px;
             font-family: $heading_font_family;
             font-size: 17px;
             letter-spacing: 0.1em;
@@ -3718,7 +3718,6 @@
         }
         .pxl-ac-content {
             overflow-wrap: break-word;
-            hyphens: auto;
             padding: 44px 105px 43px 35px;
             background-color: rgba(#c8c8c8, 0.15);
             @media (max-width: $xs_max) {
@@ -3759,6 +3758,7 @@
             -moz-osx-font-smoothing: grayscale;
             @media (max-width: $sm_max) {
                 font-size: 15px;
+                padding: 25px 20px 18px;
             }
             .pxl-ac-title-text {
                 transition: none;
@@ -3786,10 +3786,9 @@
         }
         .pxl-ac-content {
             overflow-wrap: break-word;
-            hyphens: auto;
             padding: 32px 105px 13px 35px;
             @media (max-width: $xs_max) {
-                padding: 24px 30px 38px;
+                padding: 24px 20px 38px;
             }
             p:last-child {
                 margin-bottom: 0;
