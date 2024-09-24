@@ -3406,6 +3406,9 @@
                 color: inherit;
                 @include multiline-hover-underline($primary_color);
             }
+            @media (max-width: $sm_max) {
+                line-height: 1.6;
+            }
         }
         .item-tags {
             font-size: 15px;
