@@ -3026,6 +3026,7 @@
             max-width: 230px;
             @media (max-width: $sm_max) {
                 font-size: 14px;
+                margin-top: 9px;
             }
         }
         .box-button {
@@ -3627,6 +3628,9 @@
             .pxl-ac-title-text {
                 transition: none;
             }
+            @media (max-width: $sm_max) {
+                font-size: 15px;
+            }
             &:before {
                 content: "\f2f9";
                 font-family: "Material-Design-Iconic-Font";
@@ -3680,6 +3684,9 @@
             -webkit-font-smoothing: antialiased;
             font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            @media (max-width: $sm_max) {
+                font-size: 15px;
+            }
             .pxl-ac-title-text {
                 transition: none;
             }
@@ -3745,6 +3752,9 @@
             -webkit-font-smoothing: antialiased;
             font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            @media (max-width: $sm_max) {
+                font-size: 15px;
+            }
             .pxl-ac-title-text {
                 transition: none;
             }
