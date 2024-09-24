@@ -5025,7 +5025,7 @@
             position: relative;
             @media (max-width: $xs_max) {
                 width: 50%;
-                padding: 30px 15px;
+                padding: 15px;
                 &:nth-child(2) .inner-number:before {
                     content: none;
                 }
