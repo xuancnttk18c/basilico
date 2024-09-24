@@ -4,6 +4,7 @@ $default_settings = [
 ];
 $settings = array_merge($default_settings, $settings);
 extract($settings);
+$count = 0;
 ?>
 
 <?php if (isset($history_items) && !empty($history_items) && count($history_items)) : ?>
@@ -47,8 +48,13 @@ extract($settings);
                 }
                 $link_attributes = $widget->get_render_attribute_string($link_key);
                 $animate_cls = ' pxl-animate pxl-invisible animated-normal';
+
+                if ($count % 2 == 0) $animation = 'slideInLeft';
+                else $animation = 'slideInRight';
+                $count++;
+
                 $data_animation =  json_encode([
-                    'animation'      => 'slideInLeft',
+                    'animation'      => $animation,
                     'animation_delay' => 0
                 ]);
                 $data_settings = 'data-settings="' . esc_attr($data_animation) . '"';
