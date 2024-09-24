@@ -3686,6 +3686,8 @@
             -moz-osx-font-smoothing: grayscale;
             @media (max-width: $sm_max) {
                 font-size: 15px;
+                padding-left: 20px;
+                padding-right: 20px;
             }
             .pxl-ac-title-text {
                 transition: none;
@@ -3700,6 +3702,9 @@
                 @include transform(translate(0, -50%));
                 @include transition();
                 color: $primary_color;
+                @media (max-width: $sm_max) {
+                    right: 20px;
+                }
             }
             &.active {
                 background-color: $primary_color;
@@ -3717,7 +3722,7 @@
             padding: 44px 105px 43px 35px;
             background-color: rgba(#c8c8c8, 0.15);
             @media (max-width: $xs_max) {
-                padding: 24px 30px 38px;
+                padding: 24px 20px 38px;
             }
             p:last-child {
                 margin-bottom: 0;
