@@ -46,8 +46,9 @@ extract($settings);
                     }
                 }
                 $link_attributes = $widget->get_render_attribute_string($link_key);
+                $animate_cls = ' pxl-animate pxl-invisible animated-' . $item_animation_duration;
             ?>
-                <div class="item-wrap elementor-repeater-item-<?php echo esc_attr($value['_id']); ?>">
+                <div class="item-wrap <?php echo esc_attr($animate_cls); ?> elementor-repeater-item-<?php echo esc_attr($value['_id']); ?>" data-settings="{'animation':'fadeIn', 'animation_delay':300}">
                     <div class="item-inner relative">
                         <div class="item-info">
                             <?php if (!empty($year)) : ?>
