@@ -46,9 +46,14 @@ extract($settings);
                     }
                 }
                 $link_attributes = $widget->get_render_attribute_string($link_key);
-                $animate_cls = ' pxl-animate pxl-invisible animated-' . $item_animation_duration;
+                $animate_cls = ' pxl-animate pxl-invisible animated-normal';
+                $data_animation =  json_encode([
+                    'animation'      => 'fadeIn',
+                    'animation_delay' => 0
+                ]);
+                $data_settings = 'data-settings="' . esc_attr($data_animation) . '"';
             ?>
-                <div class="item-wrap <?php echo esc_attr($animate_cls); ?> elementor-repeater-item-<?php echo esc_attr($value['_id']); ?>" data-settings="{'animation':'fadeIn', 'animation_delay':300}">
+                <div class="item-wrap <?php echo esc_attr($animate_cls); ?> elementor-repeater-item-<?php echo esc_attr($value['_id']); ?>" <?php pxl_print_html($data_settings); ?>>
                     <div class="item-inner relative">
                         <div class="item-info">
                             <?php if (!empty($year)) : ?>
