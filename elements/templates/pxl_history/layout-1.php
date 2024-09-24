@@ -48,7 +48,7 @@ extract($settings);
                 $link_attributes = $widget->get_render_attribute_string($link_key);
                 $animate_cls = ' pxl-animate pxl-invisible animated-normal';
                 $data_animation =  json_encode([
-                    'animation'      => 'fadeIn',
+                    'animation'      => 'slideInLeft',
                     'animation_delay' => 0
                 ]);
                 $data_settings = 'data-settings="' . esc_attr($data_animation) . '"';
