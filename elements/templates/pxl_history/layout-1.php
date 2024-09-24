@@ -49,7 +49,7 @@ $count = 0;
                 $link_attributes = $widget->get_render_attribute_string($link_key);
                 $animate_cls = ' pxl-animate pxl-invisible animated-normal';
             ?>
-                <div class="item-wrap <?php echo esc_attr($animate_cls); ?> elementor-repeater-item-<?php echo esc_attr($value['_id']); ?>" <?php pxl_print_html($data_settings); ?>>
+                <div class="item-wrap elementor-repeater-item-<?php echo esc_attr($value['_id']); ?>">
                     <div class="item-inner relative">
                         <?php
                             if ($count % 2 == 0) $animation = 'slideInRight';
