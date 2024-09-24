@@ -3006,6 +3006,13 @@
                 color: $primary_color;
                 transition: all 300ms linear 0s;
             }
+            @media (max-width: $sm_max) {
+                width: 100px;
+                height: 100px;
+                i, > svg {
+                    font-size: 50px;
+                }
+            }
         }
         .box-title {
             font-family: $heading_font_family;
@@ -3017,10 +3024,16 @@
             position: relative;
             margin-bottom: 7px;
             width: 100%;
+            @media (max-width: $sm_max) {
+                font-size: 17px;
+            }
         }
         .box-description {
             margin-top: 19px;
             max-width: 230px;
+            @media (max-width: $sm_max) {
+                font-size: 14px;
+            }
         }
         .box-button {
             margin-top: 33px;
