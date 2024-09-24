@@ -3006,13 +3006,6 @@
                 color: $primary_color;
                 transition: all 300ms linear 0s;
             }
-            @media (max-width: $sm_max) {
-                width: 100px;
-                height: 100px;
-                i, > svg {
-                    font-size: 50px;
-                }
-            }
         }
         .box-title {
             font-family: $heading_font_family;
