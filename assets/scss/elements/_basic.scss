@@ -3612,7 +3612,7 @@
         border-radius: inherit;
         .pxl-ac-title {
             @include transition(all 250ms linear 0ms);
-            padding: 23px 0 19px 30px;
+            padding: 23px 30px 19px 0;
             font-family: $heading_font_family;
             font-size: 17px;
             letter-spacing: 0.1em;
