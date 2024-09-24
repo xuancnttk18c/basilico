@@ -3454,6 +3454,10 @@
                     padding: 66px 25px 68px;
                     text-align: center;
                 }
+                @media (max-width: $sm_max) {
+                    left: 20px;
+                    right: 20px;
+                }
             }
             &:hover {
                 .item-content {
