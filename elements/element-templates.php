@@ -1094,9 +1094,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                                 <div class="link-icon">
                                     <a target="_blank" href="<?php echo esc_url($link_url); ?>"><span class="pxli-link"></span></a>
                                 </div>
-                                <div class="link-text">
-                                    <a class="link-text" target="_blank" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_text); ?></a>
-                                </div>
+                                <a class="link-text" target="_blank" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_text); ?></a>
                                 <?php if (!empty($link_cite)) : ?>
                                     <div class="pxl-divider"></div>
                                     <p class="link-cite">
