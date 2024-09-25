@@ -152,6 +152,14 @@ pxl_add_custom_widget(
                             ]
                         ),
                         array(
+                            'name'     => 'subtitle',
+                            'label'    => esc_html__('Sub Title', 'basilico'),
+                            'type'     => 'text',
+                            'condition' => [
+                                'layout'    => ['9']
+                            ]
+                        ),
+                        array(
                             'name'     => 'title',
                             'label'    => esc_html__('Title', 'basilico'),
                             'type'     => 'textarea',

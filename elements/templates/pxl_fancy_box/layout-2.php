@@ -28,7 +28,7 @@ if( ! empty( $settings['selected_img']['id'] ) ){
 }
 ?>
  
-<div class="pxl-fancy-box layout-2">
+<div class="pxl-fancy-box layout-9">
     <div class="box-inner">
         <div class="box-icon">
             <?php if(! empty( $settings['selected_icon']['value'] )): ?>
@@ -36,6 +36,11 @@ if( ! empty( $settings['selected_img']['id'] ) ){
             <?php endif; ?>
         </div> 
         <div class="box-content">
+            <?php if(!empty($widget->get_setting('title'))): ?>
+                <h3 class="box-subtitle">
+                    <?php pxl_print_html( nl2br($widget->get_setting('subtitle'))); ?>
+                </h3>
+            <?php endif; ?>
             <?php if(!empty($widget->get_setting('title'))): ?>
                 <h3 class="box-title">
                     <?php pxl_print_html( nl2br($widget->get_setting('title'))); ?>
