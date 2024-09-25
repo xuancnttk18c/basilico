@@ -1220,7 +1220,7 @@ function basilico_dots_settings(){
             'default'      => 'none',
             'control_type' => 'responsive',
             'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-dots, {{WRAPPER}} .slick-dots' => 'display: {{VALUE}};',
+                '{{WRAPPER}} .pxl-swiper-dots, {{WRAPPER}} .slick-dots' => 'display: {{VALUE}} !important;',
             ],
         ),
         array(
