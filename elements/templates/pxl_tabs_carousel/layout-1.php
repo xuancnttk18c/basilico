@@ -5,11 +5,13 @@ $default_settings = [
 
 $settings = array_merge($default_settings, $settings);
 $widget->add_render_attribute('opts', [
-    'data-settings' => wp_json_encode([
-        'fade' => $widget->get_setting("fade", "false"),
-        'dots' => $widget->get_setting("dots", "false"),
-        'dots_style' => basilico()->get_theme_opt('swiper_pagination_style', 'style-df'),
-        'swipe' => $widget->get_setting("swipe", "false")
+    'data-settings'  => wp_json_encode([
+        'fade'       => (bool)$widget->get_setting("fade", false),
+        'dots'       => (bool)$widget->get_setting("dots", false),
+        'swipe'      => (bool)$widget->get_setting("swipe", false),
+        'infinite'   => (bool)$widget->get_setting("infinite", false),
+        'autoplay'   => (bool)$widget->get_setting("autoplay", false),
+        'dots_style' => basilico()->get_theme_opt('swiper_pagination_style', 'style-df')
     ])
 ]);
 $fade = $widget->get_setting("fade", "false");

@@ -3,15 +3,16 @@
         var settings = $scope.find(".pxl-tabs-carousel").first().data("settings");
         $scope.find(".pxl-tabs-carousel").first().slick({
             infinite: false,
-            fade: (settings["fade"] === "true"),
+            fade: settings["fade"],
             slidesToShow: 1,
             slidesToScroll: 1,
             adaptiveHeight: true,
             nextArrow: $scope.find(".pxl-swiper-arrow-next"),
             prevArrow: $scope.find(".pxl-swiper-arrow-prev"),
-            autoplay: false,
-            swipe: (settings["swipe"] === "true"),
-            dots: (settings["dots"] === "true"),
+            swipe: settings["swipe"],
+            dots: settings["dots"],
+            infinite: settings["infinite"],
+            autoplay: settings["autoplay"],
             waitForAnimate: false,
             customPaging : function(slider, i) {
                 return '<span class="pxl-swiper-pagination-bullet ' + settings['dots_style'] + '"></span>';

@@ -118,10 +118,16 @@ pxl_add_custom_widget(
                                 'default' => 'true',
                             ),
                             array(
-                                'name' => 'gap',
-                                'label' => esc_html__('Gap (px)', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::NUMBER,
-                                'default' => 'true',
+                                'name' => 'autoplay',
+                                'label' => esc_html__('Autoplay', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                                'default' => 'false',
+                            ),
+                            array(
+                                'name' => 'infinite',
+                                'label' => esc_html__('Infinite', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                                'default' => 'false',
                             )
                         ),
                     ),
