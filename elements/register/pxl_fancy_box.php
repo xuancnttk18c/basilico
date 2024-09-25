@@ -219,6 +219,22 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'subtitle_color',
+                            'label' => esc_html__( 'Sub Title Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'default' => '',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box .box-subtitle' => 'color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'subtitle_typography',
+                            'label' => esc_html__('Sub Title Typography', 'basilico' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}} .pxl-fancy-box .box-subtitle',
+                        ),
+                        array(
                             'name' => 'title_color',
                             'label' => esc_html__( 'Title Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
