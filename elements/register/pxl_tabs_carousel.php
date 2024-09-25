@@ -70,48 +70,6 @@ pxl_add_custom_widget(
                                 'default' => 'false',
                             ),
                             array(
-                                'name' => 'dots',
-                                'label' => esc_html__('Show Dots', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::SWITCHER,
-                                'default' => 'false',
-                            ),
-                            array(
-                                'name' => 'dots_space',
-                                'label' => esc_html__('Dots Space (px)', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::NUMBER,
-                                'control_type' => 'responsive',
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-dots, {{WRAPPER}} .slick-dots' => 'margin-top: {{VALUE}}px;',
-                                ],
-                                'condition' => [
-                                    'dots' => "true",
-                                ],
-                            ),
-                            array(
-                                'name' => 'dots_color',
-                                'label' => esc_html__('Dots Color', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::COLOR,
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-pagination-bullet:before' => 'background-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-swiper-pagination-bullet:after' => 'border-color: {{VALUE}};',
-                                ],
-                                'condition' => [
-                                    'dots' => "true",
-                                ],
-                            ),
-                            array(
-                                'name' => 'dots_color_active',
-                                'label' => esc_html__('Active Color', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::COLOR,
-                                'selectors' => [
-                                    '{{WRAPPER}} .slick-active .pxl-swiper-pagination-bullet:before' => 'background-color: {{VALUE}};',
-                                    '{{WRAPPER}} .slick-active .pxl-swiper-pagination-bullet:after' => 'border-color: {{VALUE}};',
-                                ],
-                                'condition' => [
-                                    'dots' => "true",
-                                ],
-                            ),
-                            array(
                                 'name' => 'swipe',
                                 'label' => esc_html__('Allow Swipe', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
@@ -138,6 +96,14 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
                     'controls' => array_merge(
                         basilico_arrow_settings(),
+                    ),
+                ),
+                array(
+                    'name' => 'dots_settings',
+                    'label' => esc_html__('Dot Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
+                    'controls' => array_merge(
+                        basilico_dots_settings(),
                     ),
                 ),
             ),
