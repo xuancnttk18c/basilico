@@ -1214,12 +1214,14 @@ function basilico_dots_settings(){
             'label'        => esc_html__('Show Dots', 'basilico'),
             'type'         => 'select',
             'options'      => [
-                'true'  => esc_html__('Yes', 'basilico'),
-                'false' => esc_html__('No', 'basilico')
+                'flex'  => esc_html__('Yes', 'basilico'),
+                'none' => esc_html__('No', 'basilico')
             ], 
-            'default'      => 'false',
+            'default'      => 'none',
             'control_type' => 'responsive',
-            'prefix_class' => 'pxl-swiper-dots%s-'
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-dots, {{WRAPPER}} .slick-dots' => 'display: {{VALUE}};',
+            ],
         ),
         array(
             'name' => 'dots_scape',
@@ -1265,7 +1267,7 @@ function basilico_dots_settings(){
             'label' => esc_html__('Dots Color', 'basilico'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:before' => 'background-color: {{VALUE}};',
+                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:before, {{WRAPPER}} .slick-slider .slick-dots .pxl-swiper-pagination-bullet:before' => 'background-color: {{VALUE}};',
             ],
         ),
         array(
@@ -1273,7 +1275,7 @@ function basilico_dots_settings(){
             'label' => esc_html__('Active Color', 'basilico'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet.swiper-pagination-bullet-active:before' => 'background-color: {{VALUE}};',
+                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet.swiper-pagination-bullet-active:before, {{WRAPPER}} .slick-slider .slick-dots .slick-active .pxl-swiper-pagination-bullet:before' => 'background-color: {{VALUE}};',
             ],
         ),
         array(
@@ -1281,7 +1283,7 @@ function basilico_dots_settings(){
             'label' => esc_html__('Border Color Active', 'basilico'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:after' => 'border-color: {{VALUE}};',
+                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:after, {{WRAPPER}} .slick-slider .slick-dots .pxl-swiper-pagination-bullet:after' => 'border-color: {{VALUE}};',
             ],
         ),
     );
