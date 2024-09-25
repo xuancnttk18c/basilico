@@ -46,16 +46,20 @@ if( ! empty( $settings['selected_img']['id'] ) ){
                     <?php pxl_print_html( nl2br($widget->get_setting('title'))); ?>
                 </h3>
             <?php endif; ?>
-            <?php if(!empty($widget->get_setting('description'))): ?>
-                <span class="box-description">
-                    <?php pxl_print_html($widget->get_setting('description')); ?>
-                </span>
-            <?php endif; ?>
-            <?php if (!empty($widget->get_setting('button_text'))) : ?>
-                <div class="box-button">
-                    <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
-                    <span><?php pxl_print_html( nl2br($widget->get_setting('button_text'))); ?></span>
-                    <?php if ( $link_attributes ) echo '</a>'; ?> 
+            <?php if(!empty($widget->get_setting('description')) || !empty($widget->get_setting('button_text'))): ?>
+                <div class="box-description-button-wrapper">
+                    <?php if(!empty($widget->get_setting('description'))): ?>
+                        <span class="box-description">
+                            <?php pxl_print_html($widget->get_setting('description')); ?>
+                        </span>
+                    <?php endif; ?>
+                    <?php if (!empty($widget->get_setting('button_text'))) : ?>
+                        <div class="box-button">
+                            <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
+                            <span><?php pxl_print_html( nl2br($widget->get_setting('button_text'))); ?></span>
+                            <?php if ( $link_attributes ) echo '</a>'; ?> 
+                        </div>
+                    <?php endif; ?>
                 </div>
             <?php endif; ?>
         </div>

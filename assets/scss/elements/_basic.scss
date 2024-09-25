@@ -3472,9 +3472,14 @@
                 font-size: 25px;
             }
         }
+        .box-description-button-wrapper {
+            max-height: 0%;
+            transition: height 0.3s ease;
+        }
         .box-description {
             display: inline-block;
             color: #fff;
+            margin-top: 15px;
         }
         .box-button {
             margin-top: 43px;
@@ -3486,6 +3491,9 @@
             .box-icon svg,
             .box-icon i {
                 @include transform(rotateY(360deg));
+            }
+            .box-description-button-wrapper {
+                max-height: 100%;
             }
         }
     }
