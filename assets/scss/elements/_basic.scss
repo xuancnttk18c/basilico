@@ -3437,6 +3437,7 @@
             letter-spacing: 0.15em;
             text-transform: uppercase;
             margin-bottom: 17px;
+            color: #fff;
         }
         .box-title {
             font-family: $heading_font_family;
@@ -3444,12 +3445,15 @@
             line-height: 1.5;
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            color: $heading_color;
+            color: #fff;
             position: relative;
             margin-bottom: 7px;
             @media (max-width: $sm_max) {
                 font-size: 25px;
             }
+        }
+        .box-description {
+            color: #fff;
         }
         .box-button {
             margin-top: 43px;
