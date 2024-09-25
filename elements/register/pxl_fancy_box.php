@@ -51,7 +51,11 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 8', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-8.jpg'
                                 ],
-                            ],
+                                '9' => [
+                                    'label' => esc_html__( 'Layout 9', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-9.jpg'
+                                ]
+                            ]
                         )
                     )
                 ),
@@ -165,7 +169,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'label_block' => true,
                             'condition' => [
-                                'layout'    => ['2']
+                                'layout'    => ['2', '9']
                             ]
                         ),
                         array(
