@@ -128,7 +128,7 @@ pxl_add_custom_widget(
                                 'layout'    => ['7', '9']
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box.layout-9 .box-inner' => 'background-image: url( {{URL}} );',
+                                '{{WRAPPER}} .pxl-fancy-box.layout-9' => 'background-image: url( {{URL}} );',
                             ],
                         ),
                         array(
