@@ -5,6 +5,14 @@
     @include transition();
 }
 
+.position-sticky-center-vertical {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+    @include transform(translateY(-50%));
+    @include transition();
+}
+
 body:has(.pxl-header-sticky.h-fixed) {
     .position-sticky {
         top: 200px;
