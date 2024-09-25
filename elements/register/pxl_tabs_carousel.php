@@ -117,6 +117,12 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
                                 'default' => 'true',
                             ),
+                            array(
+                                'name' => 'gap',
+                                'label' => esc_html__('Gap (px)', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::NUMBER,
+                                'default' => 'true',
+                            )
                         ),
                     ),
                 ),
