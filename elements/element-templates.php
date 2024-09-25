@@ -505,7 +505,7 @@ function basilico_get_post_list_layout1($posts = [], $settings = [], $args_m = [
                                 if (has_post_format('video', $post->ID) && !empty($featured_video)) : ?>
                                     <div class="pxl-media-popup featured-video">
                                         <div class="content-inner">
-                                            <a class="media-play-button video-default style-2" href="<?php echo esc_url($featured_video); ?>">
+                                            <a class="media-play-button media-default style-2" href="<?php echo esc_url($featured_video); ?>">
                                                 <i class="pxli-play-2"></i>
                                             </a>
                                         </div>
@@ -516,7 +516,7 @@ function basilico_get_post_list_layout1($posts = [], $settings = [], $args_m = [
                                 if ($filetype == 'audio/mpeg') : ?>
                                     <div class="pxl-media-popup featured-audio">
                                         <div class="content-inner">
-                                            <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
+                                            <a class="media-play-button media-default" href="<?php echo esc_url($audio_url); ?>">
                                                 <i class="pxli-volume"></i>
                                             </a>
                                         </div>
@@ -711,7 +711,7 @@ function basilico_get_post_list_layout2($posts = [], $settings = [], $args_m = [
                                 if (has_post_format('video', $post->ID) && !empty($featured_video)) : ?>
                                     <div class="pxl-media-popup featured-video">
                                         <div class="content-inner">
-                                            <a class="media-play-button video-default style-2" href="<?php echo esc_url($featured_video); ?>">
+                                            <a class="media-play-button media-default style-2" href="<?php echo esc_url($featured_video); ?>">
                                                 <i class="pxli-play-2"></i>
                                             </a>
                                         </div>
@@ -722,7 +722,7 @@ function basilico_get_post_list_layout2($posts = [], $settings = [], $args_m = [
                                 if ($filetype == 'audio/mpeg') : ?>
                                     <div class="pxl-media-popup featured-audio">
                                         <div class="content-inner">
-                                            <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
+                                            <a class="media-play-button media-default" href="<?php echo esc_url($audio_url); ?>">
                                                 <i class="pxli-volume"></i>
                                             </a>
                                         </div>
@@ -914,7 +914,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
                                 if (has_post_format('video', $post->ID) && !empty($featured_video)) : ?>
                                     <div class="pxl-media-popup featured-video">
                                         <div class="content-inner">
-                                            <a class="media-play-button video-default style-2" href="<?php echo esc_url($featured_video); ?>">
+                                            <a class="media-play-button media-default style-2" href="<?php echo esc_url($featured_video); ?>">
                                                 <i class="pxli-play-2"></i>
                                             </a>
                                         </div>
@@ -925,7 +925,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
                                 if ($filetype == 'audio/mpeg') : ?>
                                     <div class="pxl-media-popup featured-audio">
                                         <div class="content-inner">
-                                            <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
+                                            <a class="media-play-button media-default" href="<?php echo esc_url($audio_url); ?>">
                                                 <i class="pxli-volume"></i>
                                             </a>
                                         </div>
@@ -1115,7 +1115,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                             if (!empty($featured_video)) { ?>
                                 <div class="pxl-media-popup">
                                     <div class="content-inner">
-                                        <a class="media-play-button video-default" href="<?php echo esc_url($featured_video); ?>">
+                                        <a class="media-play-button media-default" href="<?php echo esc_url($featured_video); ?>">
                                             <i class="pxli-play-2 pxl-icon-outline"></i>
                                         </a>
                                     </div>
@@ -1136,7 +1136,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                             if ($filetype == 'audio/mpeg') { ?>
                                 <div class="pxl-media-popup">
                                     <div class="content-inner">
-                                        <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
+                                        <a class="media-play-button media-default" href="<?php echo esc_url($audio_url); ?>">
                                             <i class="pxli-volume"></i>
                                         </a>
                                     </div>
@@ -1302,7 +1302,7 @@ function basilico_get_post_grid_layout1($posts = [], $settings = [], $args_m = [
                             <?php if (has_post_format('video', $post->ID) && !empty($featured_video)) : ?>
                             <div class="pxl-media-popup">
                                 <div class="content-inner">
-                                    <a class="media-play-button video-default style-2" href="<?php echo esc_url($featured_video); ?>">
+                                    <a class="media-play-button media-default style-2" href="<?php echo esc_url($featured_video); ?>">
                                         <i class="pxli-play-2"></i>
                                     </a>
                                 </div>
@@ -1313,7 +1313,7 @@ function basilico_get_post_grid_layout1($posts = [], $settings = [], $args_m = [
                         if ($filetype == 'audio/mpeg') : ?>
                             <div class="pxl-media-popup featured-audio">
                                 <div class="content-inner">
-                                    <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
+                                    <a class="media-play-button media-default" href="<?php echo esc_url($audio_url); ?>">
                                         <i class="zmdi zmdi-volume-up"></i>
                                     </a>
                                 </div>

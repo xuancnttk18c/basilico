@@ -72,7 +72,7 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
                     ?>
                         <div class="pxl-media-popup">
                             <div class="content-inner">
-                                <a class="media-play-button video-default" href="<?php echo esc_url($featured_video); ?>">
+                                <a class="media-play-button media-default" href="<?php echo esc_url($featured_video); ?>">
                                     <i class="pxli-play-2"></i>
                                 </a>
                             </div>
@@ -93,7 +93,7 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
                     if ($filetype == 'audio/mpeg') { ?>
                         <div class="pxl-media-popup">
                             <div class="content-inner">
-                                <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
+                                <a class="media-play-button media-default" href="<?php echo esc_url($audio_url); ?>">
                                     <i class="pxli-volume"></i>
                                 </a>
                             </div>
