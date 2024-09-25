@@ -4379,13 +4379,13 @@
             }
             .sub-title {
                 color: $primary_color;
-                font-size: 17px;
+                font-size: 14px;
                 line-height: 32px;
                 letter-spacing: 0.15em;
                 text-transform: uppercase;
                 margin-bottom: 10px;
                 @media (max-width: $sm_max) {
-                    font-size: 15px;
+                    font-size: 13px;
                 }
             }
             .title-wrap {
@@ -4397,7 +4397,7 @@
             }
             .tab-title {
                 font-family: $heading_font_family;
-                font-size: 22px;
+                font-size: 18px;
                 font-weight: 500;
                 color: #fff;
                 text-transform: uppercase;
@@ -4406,7 +4406,6 @@
                 cursor: pointer;
                 @include transition(all 300ms linear 0ms);
                 @media (max-width: $sm_max) {
-                    font-size: 18px;
                     line-height: 50px;
                 }
                 span {
