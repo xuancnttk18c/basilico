@@ -3419,6 +3419,11 @@
         @include d-flex();
         flex-direction: column;
         align-items: center;
+        .box-inner {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
         .box-icon {
             margin-bottom: 25px;
             i {
