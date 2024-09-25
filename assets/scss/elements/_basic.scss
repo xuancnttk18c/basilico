@@ -3414,7 +3414,7 @@
     }
     &.layout-9 {
         .box-icon {
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             i {
                 font-size: 60px;
                 color: $primary_color;
@@ -3430,6 +3430,7 @@
         .box-subtitle {
             letter-spacing: 0.15em;
             text-transform: uppercase;
+            margin-bottom: 17px;
         }
         .box-title {
             font-family: $heading_font_family;
@@ -3445,7 +3446,7 @@
             }
         }
         .box-button {
-            margin-top: 33px;
+            margin-top: 43px;
         }
         .box-inner:hover {
             .box-icon svg,

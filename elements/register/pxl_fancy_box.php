@@ -125,8 +125,11 @@ pxl_add_custom_widget(
                                 'url' => \Elementor\Utils::get_placeholder_image_src()
                             ],
                             'condition' => [
-                                'layout'    => ['7']
-                            ]
+                                'layout'    => ['7', '9']
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box.layout-9 .box-inner' => 'background-image: url( {{URL}} );',
+                            ],
                         ),
                         array(
                             'name' => 'selected_img',
