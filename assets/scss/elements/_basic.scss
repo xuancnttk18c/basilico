@@ -3413,14 +3413,12 @@
         }
     }
     &.layout-9 {
-        .box-inner {
-            min-height: 627px;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            @include d-flex();
-            flex-direction: column;
-            align-items: center;
-        }
+        min-height: 627px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        @include d-flex();
+        flex-direction: column;
+        align-items: center;
         .box-icon {
             margin-bottom: 25px;
             i {
