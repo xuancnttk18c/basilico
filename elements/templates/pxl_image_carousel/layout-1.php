@@ -32,13 +32,7 @@ $widget->add_render_attribute( 'carousel', [
 ]);
 
 $img_size = !empty($img_size) ? $img_size : 'full';
-
-$arrows = $widget->get_setting('arrows', 'false');
-$show_arrow = ($arrows == 'true' || (isset($settings['arrows_laptop']) && $settings['arrows_laptop'] == 'true') || (isset($settings['arrows_tablet_extra']) && $settings['arrows_tablet_extra'] == 'true') || $settings['arrows_tablet'] == 'true' || (isset($settings['arrows_mobile_extra']) && $settings['arrows_mobile_extra'] == 'true') || $settings['arrows_mobile'] == 'true') ? true : false;
-
 $arrows_style = $widget->get_setting('arrows_style', 'style-1');
-
-$dots = $widget->get_setting('dots', 'false');
 ?>
 
 <div class="pxl-swiper-slider pxl-image-carousel layout-1">
