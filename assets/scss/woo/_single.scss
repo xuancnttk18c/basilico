@@ -261,6 +261,9 @@
 	font-weight: 500;
 	letter-spacing: 0.05em;
 	margin-bottom: 10px;
+	@media (max-width: $sm_max) {
+		font-size: 25px;
+	}
 }
 
 .pxl-shop-layout-1 .product_title,
@@ -1800,6 +1803,7 @@ table.shop_attributes{
 		margin-bottom: 13px;
 		@media (max-width: $sm_max) {
 			font-size: 14px;
+			margin-bottom: 7px;
 		}
 		@media (max-width: $xs_max) {
 			text-align: left;
@@ -1815,6 +1819,7 @@ table.shop_attributes{
 		text-align: center;
 		@media (max-width: $sm_max) {
 			font-size: 25px;
+			margin-bottom: 18px;
 		}
 		@media (max-width: $xs_max) {
 			text-align: left;
