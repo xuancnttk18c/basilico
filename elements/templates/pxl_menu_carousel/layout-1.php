@@ -61,7 +61,7 @@ $widget->add_render_attribute( 'carousel', [
                     $link_attributes = $widget->get_render_attribute_string( $link_key );
                     ?>
                     <div class="pxl-swiper-slide swiper-slide">
-                        <div class="item-inner">
+                        <div class="item-inner scale-hover-x">
                             <?php if (!empty( $value['selected_img']['id'])) :
                                 $thumbnail = '';
                                 $img  = pxl_get_image_by_size(array(
