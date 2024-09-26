@@ -288,6 +288,10 @@
 	letter-spacing: 0.03em;
 	font-weight: 400;
 	text-transform: capitalize;
+	@media (max-width: $sm_max){
+		font-size: 25px;
+		line-height: 35px;
+	}
 }
 .pxl-shop-layout-5 .product_title {
 	font-size: 35px;
@@ -534,6 +538,9 @@
 		padding-top: 23px;
 		margin-top: 23px;
 		border-top: 1px solid rgba(#c8c8c8, 0.6);
+		@media (max-width: $sm_max) {
+			font-size: 14px;
+		}
 	}
 	.lbl {
 		font-weight: 500;
