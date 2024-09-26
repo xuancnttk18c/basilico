@@ -8,7 +8,7 @@
 .position-sticky-center-vertical {
     position: -webkit-sticky;
     position: sticky;
-    @media (max-width: 1200px) {
+    @media (min-width: 1200px) {
         top: 50%;
         @include transform(translateY(-50%));
         @include transition();
