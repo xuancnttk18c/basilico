@@ -28,7 +28,7 @@ if( ! empty( $settings['selected_img']['id'] ) ){
 }
 ?>
  
-<div class="pxl-fancy-box layout-9">
+<div class="pxl-fancy-box layout-2">
     <div class="box-inner">
         <div class="box-icon">
             <?php if(! empty( $settings['selected_icon']['value'] )): ?>
