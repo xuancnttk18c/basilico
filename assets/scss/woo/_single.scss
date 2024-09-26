@@ -1798,6 +1798,9 @@ table.shop_attributes{
 		color: $heading_color;
 		text-align: center;
 		margin-bottom: 13px;
+		@media (max-width: $sm_max) {
+			font-size: 14px;
+		}
 		@media (max-width: $xs_max) {
 			text-align: left;
 		}
@@ -1811,7 +1814,7 @@ table.shop_attributes{
 		margin: 0 0 62px 0;
 		text-align: center;
 		@media (max-width: $sm_max) {
-			font-size: 30px;
+			font-size: 25px;
 		}
 		@media (max-width: $xs_max) {
 			text-align: left;
