@@ -488,7 +488,7 @@
 .pxl-single-product-summary-wrap {
 	margin-top: 40px;
 	@media (max-width: $sm_max) {
-		margin-top: 40px;
+		margin-top: 20px;
 	}
 	.price {
 		@include d-flex();
