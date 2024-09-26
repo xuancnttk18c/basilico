@@ -1531,25 +1531,6 @@
         .pxl-swiper-container {
             overflow-x: clip;
         }
-        .pxl-swiper-arrows .pxl-swiper-arrow {
-            font-size: 24px;
-            color: #fff;
-            @include border-radius(50%);
-            width: 57px;
-            height: 57px;
-            background-color: $primary_color;
-            @include d-flex();
-            justify-content: center;
-            align-items: center;
-        }
-        .nav-vertical-out .pxl-swiper-arrow-prev {
-            opacity: 1;
-            left: -120px;
-        }
-        .nav-vertical-out .pxl-swiper-arrow-next {
-            opacity: 1;
-            right: -120px;
-        }
     }
     &.layout-4 {
         .item-inner {
