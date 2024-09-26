@@ -487,6 +487,9 @@
 }
 .pxl-single-product-summary-wrap {
 	margin-top: 40px;
+	@media (max-width: $sm_max) {
+		margin-top: 40px;
+	}
 	.price {
 		@include d-flex();
 		color: $heading_color;
@@ -1797,6 +1800,9 @@ table.shop_attributes{
 .products.upsells,
 .cross-sells {
 	padding-top: 95px;
+	@media (max-width: $sm_max) {
+		padding-top: 70px;
+	}
 	.related_subtitle {
 		font-size: 15px;
 		line-height: 32px;
@@ -1823,7 +1829,7 @@ table.shop_attributes{
 		text-align: center;
 		@media (max-width: $sm_max) {
 			font-size: 25px;
-			margin-bottom: 18px;
+			margin-bottom: 25px;
 		}
 		@media (max-width: $xs_max) {
 			text-align: left;
