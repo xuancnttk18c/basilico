@@ -1047,6 +1047,42 @@ if(class_exists('Woocommerce')) {
         )
     ));
     Redux::setSection($opt_name, array(
+        'title'      => esc_html__('Related Product', 'basilico'),
+        'icon'       => 'el el-file-edit',
+        'subsection' => true,
+        'fields'     => array(
+            array(
+                'id'       => 'product_related',
+                'title'    => esc_html__('Product Related', 'basilico'),
+                'subtitle' => esc_html__('Show/Hide related product', 'basilico'),
+                'type'     => 'switch',
+                'default'  => '1',
+            ),
+            array(
+                'id'      => 'related_title',
+                'type'    => 'text',
+                'title'   => esc_html__('Related Title', 'basilico'),
+                'default' => '',
+                'required' => [
+                    'product_related',
+                    'equals',
+                    '1'
+                ]
+            ),
+            array(
+                'id'      => 'related_sub_title',
+                'type'    => 'text',
+                'title'   => esc_html__('Relate Subtitle', 'basilico'),
+                'default' => '',
+                'required' => [
+                    'product_related',
+                    'equals',
+                    '1'
+                ]
+            ),
+        )
+    ));
+    Redux::setSection($opt_name, array(
         'title'      => esc_html__('Cart Page', 'basilico'),
         'icon'       => 'el el-shopping-cart-sign',
         'subsection' => true,
