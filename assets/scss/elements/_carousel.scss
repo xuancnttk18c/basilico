@@ -1588,40 +1588,6 @@
     }
 }
 
-//* Image Carousel
-.pxl-image-carousel {
-    .pxl-swiper-arrows {
-        &.style-1 {
-            padding: 6px 18px;
-            position: absolute;
-            left: 50%;
-            bottom: 25px;
-            @include transform(translatex(-50%));
-            @include d-flex();
-            background-color: #2d2723;
-            @include border-radius(18px);
-            .pxl-swiper-arrow {
-                cursor: pointer;
-                + .pxl-swiper-arrow {
-                    margin-left: 47px;
-                }
-                &:before {
-                    font-family: 'Material-Design-Iconic-Font';
-                    font-size: 15px;
-                    font-weight: 700;
-                    color: rgba(255, 255, 255, 0.5);
-                }
-                &.pxl-swiper-arrow-next:before {
-                    content: '\f2ee';
-                }
-                &.pxl-swiper-arrow-prev:before {
-                    content: '\f2ea';
-                }
-            }
-        }
-    }
-}
-
 //* Team Carousel
 .pxl-team-carousel.layout-1 {
     .item-inner {
