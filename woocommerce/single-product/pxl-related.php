@@ -90,8 +90,8 @@ if ( $related_products ) : ?>
                     </div>
                 </div>
                 <div class="pxl-swiper-arrows style-1">
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon pxli pxli-arrow-prev"></span></div>
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon pxli pxli-arrow-next"></span></div>
+                    <div class="pxl-swiper-arrow pxl-swiper-arrow-prev default"><span class="pxl-icon pxli pxli-arrow-prev"></span></div>
+                    <div class="pxl-swiper-arrow pxl-swiper-arrow-next default"><span class="pxl-icon pxli pxli-arrow-next"></span></div>
                 </div>
             </div>
         </div>
