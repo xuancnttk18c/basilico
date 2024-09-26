@@ -8,9 +8,11 @@
 .position-sticky-center-vertical {
     position: -webkit-sticky;
     position: sticky;
-    top: 50%;
-    @include transform(translateY(-50%));
-    @include transition();
+    @media (min-width: 1200px) {
+        top: 50%;
+        @include transform(translateY(-50%));
+        @include transition();
+    }
 }
 
 body:has(.pxl-header-sticky.h-fixed) {
