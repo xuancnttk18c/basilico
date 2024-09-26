@@ -106,7 +106,7 @@ $widget->add_render_attribute( 'carousel', [
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php basilico_arrow_template($settings, 'pxli pxli-arrow-left', 'pxli pxli-arrow-right'); ?>
+        <?php basilico_arrow_template($settings, 'zmdi zmdi-arrow-left', 'zmdi zmdi-arrow-right'); ?>
         <div class="pxl-swiper-dots"></div>
     </div>
 </div>
