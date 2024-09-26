@@ -772,6 +772,28 @@ function basilico_arrow_settings(){
             ]
         ),
         array(
+            'name' => 'arrows_border',
+            'label' => esc_html__('Arrows Border', 'basilico'),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow' => 'border: 1px solid {{VALUE}};',
+            ],
+            'condition' => [
+                'arrows_style' => 'style-2'
+            ]
+        ),
+        array(
+            'name' => 'arrows_border_hover',
+            'label' => esc_html__('Arrows Border Hover', 'basilico'),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .pxl-swiper-arrows .pxl-swiper-arrow:hover' => 'border: 1px solid {{VALUE}};',
+            ],
+            'condition' => [
+                'arrows_style' => 'style-2'
+            ]
+        ),
+        array(
             'name' => 'arrow_icon_size',
             'label' => esc_html__('Arrow Icon Size', 'basilico' ),
             'type' => \Elementor\Controls_Manager::SLIDER,
