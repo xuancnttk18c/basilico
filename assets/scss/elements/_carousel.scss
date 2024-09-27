@@ -2016,6 +2016,10 @@
         }
         .item-wrap {
             padding: 30px;
+            @media (max-width: $sm_max) {
+                padding-left: 0;
+                padding-right: 0;
+            }
             .item-inner{
                 text-align: center;
                 margin-left: -15px;
