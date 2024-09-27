@@ -2135,6 +2135,9 @@
                 @include border-radius(50%);
                 color: rgba($primary_color_rgb, 0.45);
                 opacity: 1;
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
                 &.pxl-swiper-arrow-prev {
                     left: 0;
                 }
