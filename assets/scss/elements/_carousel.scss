@@ -2078,6 +2078,9 @@
                 letter-spacing: 0;
                 color: $heading_color;
                 text-align: center;
+                @media (max-width: $sm_max) {
+                    @include text-truncate-multi-line(14px, 1.66666666667, 3);
+                }
             }
             .item-year {
                 position: relative;
