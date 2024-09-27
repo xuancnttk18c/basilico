@@ -2149,6 +2149,9 @@
                     border-color: $primary_color;
                 }
             }
+            @media (max-width: $sm_max) {
+                display: none;
+            }
         }
     }
 }
