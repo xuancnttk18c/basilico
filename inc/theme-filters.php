@@ -238,8 +238,9 @@ add_filter( 'body_class', 'basilico_body_classes' );
 function basilico_body_classes( $classes )
 {
     $header_sticky_layout = (int)basilico()->get_opt('header_sticky_layout');
-    $select_style = basilico()->get_opt('select_style', '');
     $footer_fixed = basilico()->get_opt('footer_fixed', '0');
+
+    $shop_style = basilico()->get_theme_opt('shop_style', 'default');
 
     if (class_exists('ReduxFramework')) {
         $classes[] = 'redux-page';
@@ -250,8 +251,6 @@ function basilico_body_classes( $classes )
     }
 
     if($footer_fixed == '1') $classes[] = 'pxl-footer-fixed';
-
-    if(!empty($select_style)) $classes[] = $select_style;
 
     if(get_option( 'woosw_page_id', 0) == get_the_ID())
         $classes[] = 'pxl-wishlist-page';
@@ -315,7 +314,8 @@ function basilico_custom_fonts($fonts){
         'Custom Fonts' => [
             'Audrey' => 'Audrey',
             'Cerebri Sans' => 'Cerebri Sans',
-            'PS Demo' => 'PS Demo'
+            'PS Demo' => 'PS Demo',
+            'Souvenir' => 'Souvenir',
         ]
     ];
     return $fonts;
@@ -340,5 +340,6 @@ function basilico_update_elementor_font_control($additional_fonts){
     $additional_fonts['Cormorant Infant'] = 'pxlfonts';
     $additional_fonts['PS Demo'] = 'pxlfonts';
     $additional_fonts['Cirka'] = 'pxlfonts';
+    $additional_fonts['Souvenir'] = 'pxlfonts';
     return $additional_fonts;
 }

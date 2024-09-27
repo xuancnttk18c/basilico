@@ -419,6 +419,7 @@ Redux::setSection($opt_name, array(
                     'layout-3' => esc_html__('Layout 3', 'basilico'),
                     'layout-4' => esc_html__('Layout 4', 'basilico'),
                     'layout-5' => esc_html__('Layout 5', 'basilico'),
+                    'layout-6' => esc_html__('Layout 6', 'basilico'),
                 ),
                 'default'  => 'layout-1'
             ),
@@ -501,6 +502,7 @@ Redux::setSection($opt_name, array(
                     'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
                     'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
                     'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
+                    'btn-additional-9' => esc_html__('Additional Button 09', 'basilico' ),
                 ),
                 'default' => 'btn-outline',
                 'required' => [
@@ -541,8 +543,9 @@ Redux::setSection($opt_name, array(
                     'twitter'   => esc_html__('Twitter', 'basilico'),
                     'linkedin'  => esc_html__('Linkedin', 'basilico'),
                     'pinterest' => esc_html__('Pinterest', 'basilico'),
+                    'instagram' => esc_html__('Instagram', 'basilico'),
                 ), 
-                'default' => array('facebook', 'twitter', 'linkedin', 'pinterest'),
+                'default' => array('facebook', 'twitter', 'linkedin', 'pinterest','instagram'),
                 'required' => [
                    'post_social_share',
                    'equals',
@@ -711,18 +714,6 @@ Redux::setSection($opt_name, array(
     'subsection' => true,
     'fields' => array(
         array(
-            'id'      => 'select_style',
-            'type'    => 'image_select',
-            'title'   => esc_html__('Dropdown Icon Style', 'basilico'),
-            'options' => array(
-                ''          => get_template_directory_uri() . '/assets/images/select_layout/select-style-1.jpg',
-                'select-2'  => get_template_directory_uri() . '/assets/images/select_layout/select-style-2.jpg',
-                'select-3'  => get_template_directory_uri() . '/assets/images/select_layout/select-style-3.jpg',
-                'select-4'  => get_template_directory_uri() . '/assets/images/select_layout/select-style-4.jpg',
-            ),
-            'default' => ''
-        ),
-        array(
             'id'             => 'select_padding',
             'type'           => 'spacing',
             'top'            => false,
@@ -858,6 +849,7 @@ if(class_exists('Woocommerce')) {
                         'layout-3'       => esc_html__('Layout 3', 'basilico'),
                         'layout-4'       => esc_html__('Layout 4', 'basilico'),
                         'layout-5'       => esc_html__('Layout 5', 'basilico'),
+                        'layout-6'       => esc_html__('Layout 6', 'basilico'),
                     ],
                     'default'  => 'layout-1',
                 ),
@@ -982,8 +974,9 @@ if(class_exists('Woocommerce')) {
                         'twitter'   => esc_html__('Twitter', 'basilico'),
                         'linkedin'  => esc_html__('Linkedin', 'basilico'),
                         'pinterest' => esc_html__('Pinterest', 'basilico'),
+                        'instagram' => esc_html__('Instagram', 'basilico'),
                     ),
-                    'default' => array('facebook', 'twitter', 'linkedin', 'pinterest'),
+                    'default' => array('facebook', 'twitter', 'linkedin', 'pinterest', 'instagram'),
                     'required' => [
                         'product_social_share_on',
                         'equals',
@@ -1040,46 +1033,11 @@ if(class_exists('Woocommerce')) {
                         'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
                         'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
                         'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
+                        'btn-additional-9' => esc_html__('Additional Button 09', 'basilico' ),
                     ),
                     'default' => 'btn-outline-secondary',
                 ),
             )
-        )
-    ));
-    Redux::setSection($opt_name, array(
-        'title'      => esc_html__('Related Product', 'basilico'),
-        'icon'       => 'el el-file-edit',
-        'subsection' => true,
-        'fields'     => array(
-            array(
-                'id'       => 'product_related',
-                'title'    => esc_html__('Product Related', 'basilico'),
-                'subtitle' => esc_html__('Show/Hide related product', 'basilico'),
-                'type'     => 'switch',
-                'default'  => '1',
-            ),
-            array(
-                'id'      => 'related_title',
-                'type'    => 'text',
-                'title'   => esc_html__('Related Title', 'basilico'),
-                'default' => '',
-                'required' => [
-                    'product_related',
-                    'equals',
-                    '1'
-                ]
-            ),
-            array(
-                'id'      => 'related_sub_title',
-                'type'    => 'text',
-                'title'   => esc_html__('Relate Subtitle', 'basilico'),
-                'default' => '',
-                'required' => [
-                    'product_related',
-                    'equals',
-                    '1'
-                ]
-            ),
         )
     ));
     Redux::setSection($opt_name, array(

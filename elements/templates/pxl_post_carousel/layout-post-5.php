@@ -189,9 +189,26 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'ba
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php if ($arrows !== 'false') :
-            basilico_arrow_template($settings, 'pxli pxli-angle-left1', 'pxli pxli-angle-right1');
-        endif; ?>
+        <?php if($arrows !== 'false'): ?>
+            <div class="pxl-swiper-arrows nav-vertical-out <?php echo esc_attr($arrows_style);?>">
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
+                    <?php 
+                    if ( $settings['arrow_icon_next']['value'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_next'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon pxli pxli-angle-right1"></span>';
+                    ?>
+                </div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev">
+                    <?php 
+                    if ( $settings['arrow_icon_previous']['value'] ) 
+                        \Elementor\Icons_Manager::render_icon( $settings['arrow_icon_previous'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon'], 'span' );
+                    else
+                        echo '<span class="pxl-icon pxli pxli-angle-left1"></span>';
+                    ?>
+                </div>
+            </div>
+        <?php endif; ?>
         <?php if($dots !== 'false'): ?>
             <div class="pxl-swiper-dots"></div>
         <?php endif; ?>

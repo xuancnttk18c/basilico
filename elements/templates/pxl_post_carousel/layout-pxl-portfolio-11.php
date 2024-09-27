@@ -182,7 +182,7 @@ if ( !empty( $item_animation) ) {
                                     <?php endif; ?>
                                     <?php if ($show_button == 'true') : ?>
                                         <div class="item-readmore">
-                                            <a class="btn btn-additional-7 style-2" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                            <a class="btn btn-additional-7" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
                                                 <span><?php echo esc_attr($button_text); ?></span>
                                             </a>
                                         </div>

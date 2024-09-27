@@ -180,9 +180,12 @@ if ( !empty( $item_animation) ) {
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php if ($arrows !== 'false') :
-            basilico_arrow_template($settings);
-        endif; ?>
+        <?php if($arrows !== 'false'): ?>
+            <div class="pxl-swiper-arrows style-default nav-horizontal">
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxli pxli-arrow-prev"></span></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxli pxli-arrow-next"></span></div>
+            </div>
+        <?php endif; ?>
         <?php if($dots !== 'false'): ?>
             <div class="pxl-swiper-dots"></div>
         <?php endif; ?>

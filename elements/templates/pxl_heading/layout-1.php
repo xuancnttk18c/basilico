@@ -12,6 +12,12 @@ $default_settings = [
 $settings = array_merge($default_settings, $settings);
 $widget->add_render_attribute( 'wrap-heading', 'class', 'pxl-heading-wrap d-flex layout1');
 
+$widget->add_render_attribute( 'large-icecream', 'class', 'none');
+if ( $settings['highlighted_cream'] == "true") {
+    $widget->add_render_attribute( 'large-icecream', 'class', 'icecream-heading');
+    $widget->add_render_attribute( 'large-icecream', 'class', $settings['highlighted_cream_style']);
+}
+
 $widget->add_render_attribute( 'large-title', 'class', 'heading-title');
 if ( $settings['title_highlighted_line'] == "true") {
     $widget->add_render_attribute( 'large-title', 'class', 'highlighted');
@@ -86,6 +92,7 @@ extract($settings);
 ?>
 <div <?php pxl_print_html($widget->get_render_attribute_string( 'wrap-heading' )); ?>>
     <div class="pxl-heading-inner">
+        <span <?php pxl_print_html($widget->get_render_attribute_string( 'large-icecream' )); ?>></span>
         <?php if(!empty($sub_title)) : ?>
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'sub-title' )); ?>>
                 <span <?php pxl_print_html($widget->get_render_attribute_string( 'sub-title-text' )); ?>><?php pxl_print_html(nl2br($sub_title)); ?></span>

@@ -36,12 +36,6 @@ pxl_add_custom_widget(
                     'tab'      => 'content',
                     'controls' => array(
                         array(
-                            'name'        => 'center_background',
-                            'label'       => esc_html__('Center Background', 'basilico'),
-                            'type'        => 'media',
-                            'label_block' => true,
-                        ),
-                        array(
                             'name'     => 'items',
                             'label'    => esc_html__('Add Item', 'basilico'),
                             'type'     => 'repeater',
@@ -51,6 +45,39 @@ pxl_add_custom_widget(
                                     'label'       => esc_html__('Item Image', 'basilico'),
                                     'type'        => 'media',
                                     'label_block' => true,
+                                ),
+                                array(
+                                    'name' => 'link_type',
+                                    'label' => esc_html__('Link Type', 'basilico'),
+                                    'type' => \Elementor\Controls_Manager::SELECT,
+                                    'options'       => [
+                                        'url'   => esc_html__('URL', 'basilico'),
+                                        'page'  => esc_html__('Existing Page', 'basilico'),
+                                    ],
+                                    'default'       => 'url',
+                                ),
+                                array(
+                                    'name' => 'link',
+                                    'label' => esc_html__('Link', 'basilico'),
+                                    'type' => \Elementor\Controls_Manager::URL,
+                                    'placeholder' => esc_html__('https://your-link.com', 'basilico' ),
+                                    'condition'     => [
+                                        'link_type'     => 'url',
+                                    ],
+                                    'default' => [
+                                        'url' => '#',
+                                    ],
+                                ),
+                                array(
+                                    'name' => 'page_link',
+                                    'label' => esc_html__('Existing Page', 'basilico'),
+                                    'type' => \Elementor\Controls_Manager::SELECT2,
+                                    'options'       => pxl_get_all_page(),
+                                    'condition'     => [
+                                        'link_type'     => 'page',
+                                    ],
+                                    'multiple'      => false,
+                                    'label_block'   => true,
                                 ),
                             ),
                             'default' => [],

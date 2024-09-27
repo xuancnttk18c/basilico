@@ -78,7 +78,7 @@ if(!function_exists('basilico_woocommerce_catalog_result')){
 add_filter('woocommerce_loop_add_to_cart_link', 'basilico_woocommerce_loop_add_to_cart_link', 10, 3);
 add_filter( 'woocommerce_add_to_cart_form_action', '__return_empty_string' );
 function basilico_woocommerce_loop_add_to_cart_link($button, $product, $args){
-    if (class_exists( 'YITH_WAPO' ) && !empty(YITH_WAPO_DB()->yith_wapo_get_blocks_by_product($product->get_id()))) {
+    if (class_exists( 'YITH_WAPO' ) && !empty(YITH_WAPO_DB()->yith_wapo_get_blocks_by_product($product->id))) {
         return '<a href="#" class="pxl-btn button pxl-quickview" data-product_id="' . get_the_ID() . '">' . esc_html__('Order Online') . '</a>';
     }
 
@@ -90,11 +90,15 @@ function basilico_woocommerce_loop_add_to_cart_link($button, $product, $args){
     else if ($product_layout == 'layout-5') {
         $btn_icon = '<span class="pxl-icon pxli pxli-shopping-cart-plus"></span>';
     }
+    else if ($product_layout == 'layout-6') {
+        $btn_icon = '<span class="pxl-icon pxli pxli-shopping-cart"></span>';
+    }
     return sprintf(
         '<a href="%s" data-quantity="%s" class="pxl-btn %s" %s><span class="pxl-btn-text">%s</span>%s</a>',
         esc_url( $product->add_to_cart_url() ),
         esc_attr( isset( $args['quantity'] ) ? $args['quantity'] : 1 ),
         esc_attr( isset( $args['class'] ) ? $args['class'] : 'button' ),
+        //$add_to_cart_btn_style,
         isset( $args['attributes'] ) ? wc_implode_html_attributes( $args['attributes'] ) : '',
         esc_html( $product->add_to_cart_text() ),
         $btn_icon
@@ -122,7 +126,7 @@ function pxl_product_quickview() {
     ?>
     <h3 class="modal-heading">
         <span><?php echo esc_html('Product Options', 'basilico'); ?></span>
-        <span class="close-modal"></span>
+        <span class="close-modal"></span>       
     </h3>
     <div class="woocommerce single-product">
         <div id="product-<?php echo esc_attr( $product_id ); ?>" <?php wc_product_class( '', $product ); ?>>

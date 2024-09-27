@@ -49,7 +49,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Media URL', 'basilico'),
                             'type' => Controls_Manager::URL,
                             'default' => [
-                                'url' => 'https://www.youtube.com/watch?v=MLpWrANjFbI',
+                                'url' => 'https://www.youtube.com/watch?v=75Co4wHh96w',
                                 'is_external' => 'on'
                             ]
                         ),

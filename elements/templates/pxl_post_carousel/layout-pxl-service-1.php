@@ -179,9 +179,12 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('READ MORE', 'po
                 </div>
             </div>
         </div>
-        <?php if ($arrows !== 'false') :
-            basilico_arrow_template($settings);
-        endif; ?>
+        <?php if($arrows !== 'false'): ?>
+            <div class="pxl-swiper-arrows nav-in-vertical">
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxl-icon pxli-arrow-next"></span></div>
+            </div>
+        <?php endif; ?>
         <?php if($dots !== 'false'): ?>
             <div class="pxl-swiper-dots"></div>
         <?php endif; ?>

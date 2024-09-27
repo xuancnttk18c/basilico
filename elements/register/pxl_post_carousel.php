@@ -154,6 +154,108 @@ pxl_add_custom_widget(
                     )
                 ),
                 array(
+                    'name' => 'carousel_setting',
+                    'label' => esc_html__('Carousel Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
+                    'controls' => array_merge(
+                        basilico_carousel_column_settings(),
+                        array(
+                            array(
+                                'name' => 'slides_to_scroll',
+                                'label' => esc_html__('Slides to scroll', 'basilico' ),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'default' => '1',
+                                'options' => [
+                                    '1' => '1',
+                                    '2' => '2',
+                                    '3' => '3',
+                                    '4' => '4',
+                                    '5' => '5',
+                                    '6' => '6',
+                                ],
+                            ),
+                            array(
+                                'name' => 'dots',
+                                'label' => esc_html__('Show Dots', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                            ),
+                            array(
+                                'name' => 'dots_color',
+                                'label' => esc_html__('Dots Color', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::COLOR,
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:before' => 'background-color: {{VALUE}};',
+                                ],
+                                'condition' => [
+                                    'dots' => "true",
+                                ],
+                            ),
+                            array(
+                                'name' => 'dots_color_active',
+                                'label' => esc_html__('Active Color', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::COLOR,
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet.swiper-pagination-bullet-active:before' => 'background-color: {{VALUE}};',
+                                ],
+                                'condition' => [
+                                    'dots' => "true",
+                                ],
+                            ),
+                            array(
+                                'name' => 'pause_on_hover',
+                                'label' => esc_html__('Pause on Hover', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                            ),
+                            array(
+                                'name' => 'autoplay',
+                                'label' => esc_html__('Autoplay', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                            ),
+                            array(
+                                'name' => 'autoplay_speed',
+                                'label' => esc_html__('Autoplay Speed', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::NUMBER,
+                                'default' => 5000,
+                                'condition' => [
+                                    'autoplay' => 'true'
+                                ]
+                            ),
+                            array(
+                                'name'         => 'gutter',
+                                'label'        => esc_html__('Gutter', 'basilico' ),
+                                'type'         => 'number',
+                                'control_type' => 'responsive',
+                                'default'      => 30,
+                            ),
+                            array(
+                                'name' => 'center_slide',
+                                'label' => esc_html__('Center Slider', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                                'default' => false
+                            ),
+                            array(
+                                'name' => 'infinite',
+                                'label' => esc_html__('Infinite Loop', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                            ),
+                            array(
+                                'name' => 'speed',
+                                'label' => esc_html__('Animation Speed', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::NUMBER,
+                                'default' => 400,
+                            ),
+                        )
+                    ),
+                ),
+                array(
+                    'name' => 'arrow_settings',
+                    'label' => esc_html__('Arrow Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
+                    'controls' => array_merge(
+                        basilico_arrow_settings(),
+                    ),
+                ),
+                array(
                     'name' => 'display_section',
                     'label' => esc_html__('Display Items Options', 'basilico' ),
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
@@ -222,89 +324,7 @@ pxl_add_custom_widget(
                         ),
                     ),
                 ),
-                array(
-                    'name' => 'carousel_setting',
-                    'label' => esc_html__('Carousel Settings', 'basilico' ),
-                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
-                    'controls' => array_merge(
-                        basilico_carousel_column_settings(),
-                        array(
-                            array(
-                                'name' => 'slides_to_scroll',
-                                'label' => esc_html__('Slides to scroll', 'basilico' ),
-                                'type' => \Elementor\Controls_Manager::SELECT,
-                                'default' => '1',
-                                'options' => [
-                                    '1' => '1',
-                                    '2' => '2',
-                                    '3' => '3',
-                                    '4' => '4',
-                                    '5' => '5',
-                                    '6' => '6',
-                                ],
-                            ),
-                            array(
-                                'name' => 'pause_on_hover',
-                                'label' => esc_html__('Pause on Hover', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::SWITCHER,
-                            ),
-                            array(
-                                'name' => 'autoplay',
-                                'label' => esc_html__('Autoplay', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::SWITCHER,
-                            ),
-                            array(
-                                'name' => 'autoplay_speed',
-                                'label' => esc_html__('Autoplay Speed', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::NUMBER,
-                                'default' => 5000,
-                                'condition' => [
-                                    'autoplay' => 'true'
-                                ]
-                            ),
-                            array(
-                                'name'         => 'gutter',
-                                'label'        => esc_html__('Gutter', 'basilico' ),
-                                'type'         => 'number',
-                                'control_type' => 'responsive',
-                                'default'      => 30,
-                            ),
-                            array(
-                                'name' => 'center_slide',
-                                'label' => esc_html__('Center Slider', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::SWITCHER,
-                                'default' => false
-                            ),
-                            array(
-                                'name' => 'infinite',
-                                'label' => esc_html__('Infinite Loop', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::SWITCHER,
-                            ),
-                            array(
-                                'name' => 'speed',
-                                'label' => esc_html__('Animation Speed', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::NUMBER,
-                                'default' => 400,
-                            ),
-                        )
-                    ),
-                ),
-                array(
-                    'name' => 'arrow_settings',
-                    'label' => esc_html__('Arrow Settings', 'basilico' ),
-                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
-                    'controls' => array_merge(
-                        basilico_arrow_settings(),
-                    ),
-                ),
-                array(
-                    'name' => 'dots_settings',
-                    'label' => esc_html__('Dots Settings', 'basilico' ),
-                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
-                    'controls' => array_merge(
-                        basilico_dots_settings(),
-                    ),
-                ),
+
             ),
         ),
     ),

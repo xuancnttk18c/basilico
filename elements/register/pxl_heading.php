@@ -119,6 +119,25 @@ pxl_add_custom_widget(
                                 ],
                             ),
                             array(
+                                'name' => 'highlighted_cream',
+                                'label' => esc_html__('Highlighted Cream', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                                'default' => 'false',
+                            ),
+                            array(
+                                'name' => 'highlighted_cream_style',
+                                'label' => esc_html__('Highlighted Cream Style', 'basilico'),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'label_block' => true,
+                                'options' => [
+                                    'style-1' => esc_html__('Ice Cream'),
+                                ],
+                                'default' => 'style-1',
+                                'condition' => [
+                                    'highlighted_cream' => "true"
+                                ],
+                            ),
+                            array(
                                 'name' => 'title_highlighted_size',
                                 'label' => esc_html__('Highlighted Size (px)', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::NUMBER,
