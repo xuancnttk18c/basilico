@@ -2036,6 +2036,10 @@
         .diamond-icon {
             padding: 50px;
             position: relative;
+            @media (max-width: $sm_max) {
+                padding-left: 0;
+                padding-right: 0;
+            }
             &:before,
             &:after {
                 content: '';
