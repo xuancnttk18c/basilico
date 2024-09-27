@@ -131,7 +131,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Description Typography', 'basilico' ),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
                                 'control_type' => 'group',
-                                'selector' => '{{WRAPPER}} .pxl-accordion .pxl-ac-item .pxl-ac-content.elementor-inline-editing',
+                                'selector' => '{{WRAPPER}} .pxl-accordion .pxl-ac-item .pxl-ac-content',
                             ),
                             array(
                                 'name' => 'icon_color',
